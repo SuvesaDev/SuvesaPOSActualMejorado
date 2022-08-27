@@ -1,0 +1,5 @@
+el archivo dev.zip
+
+contiene los instaladores de las librerias devexpress
+sin eso no puedes programar 
+dentro estan los instaladores y las claves(todo lo que se necesita para que trabaje bien).
