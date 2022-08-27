@@ -1,0 +1,37 @@
+<?xml version="1.0" standalone="yes"?>
+<xs:schema id="DsEtiquetasArticulos" targetNamespace="http://www.tempuri.org/DsEtiquetasArticulos.xsd" xmlns:mstns="http://www.tempuri.org/DsEtiquetasArticulos.xsd" xmlns="http://www.tempuri.org/DsEtiquetasArticulos.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:element name="DsEtiquetasArticulos" msdata:IsDataSet="true" msdata:Locale="es-MX">
+    <xs:complexType>
+      <xs:choice maxOccurs="unbounded">
+        <xs:element name="Articulos_x0020_x_x0020_Proveedor">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CodigoArticulo" type="xs:long" />
+              <xs:element name="CodigoProveedor" type="xs:int" />
+              <xs:element name="Nombre" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Inventario">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Codigo" type="xs:long" />
+              <xs:element name="Barras" type="xs:string" />
+              <xs:element name="Descripcion" type="xs:string" />
+              <xs:element name="Inhabilitado" type="xs:boolean" />
+              <xs:element name="Servicio" type="xs:boolean" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Inventario" />
+      <xs:field xpath="mstns:Codigo" />
+    </xs:unique>
+    <xs:keyref name="InventarioArticulos_x005F_x0020_x_x005F_x0020_Proveedor" refer="Constraint1">
+      <xs:selector xpath=".//mstns:Articulos_x0020_x_x0020_Proveedor" />
+      <xs:field xpath="mstns:CodigoArticulo" />
+    </xs:keyref>
+  </xs:element>
+</xs:schema>

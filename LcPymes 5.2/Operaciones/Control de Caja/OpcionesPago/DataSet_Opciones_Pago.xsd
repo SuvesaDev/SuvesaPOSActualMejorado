@@ -1,0 +1,96 @@
+<?xml version="1.0" standalone="yes" ?>
+<xs:schema id="DataSet_Opciones_Pago" targetNamespace="http://www.tempuri.org/DataSet_Opciones_Pago.xsd"
+	xmlns:mstns="http://www.tempuri.org/DataSet_Opciones_Pago.xsd" xmlns="http://www.tempuri.org/DataSet_Opciones_Pago.xsd"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata"
+	attributeFormDefault="qualified" elementFormDefault="qualified">
+	<xs:element name="DataSet_Opciones_Pago" msdata:IsDataSet="true" msdata:Locale="es-MX">
+		<xs:complexType>
+			<xs:choice maxOccurs="unbounded">
+				<xs:element name="Moneda">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="CodMoneda" type="xs:int" />
+							<xs:element name="MonedaNombre" type="xs:string" />
+							<xs:element name="ValorCompra" type="xs:double" />
+							<xs:element name="ValorVenta" type="xs:double" />
+							<xs:element name="Simbolo" type="xs:string" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="OpcionesDePago">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="id" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:long" />
+							<xs:element name="Documento" type="xs:double" />
+							<xs:element name="TipoDocumento" type="xs:string" />
+							<xs:element name="MontoPago" type="xs:double" />
+							<xs:element name="FormaPago" type="xs:string" />
+							<xs:element name="Denominacion" type="xs:double" />
+							<xs:element name="Usuario" type="xs:string" />
+							<xs:element name="Nombre" type="xs:string" />
+							<xs:element name="CodMoneda" type="xs:int" />
+							<xs:element name="Nombremoneda" type="xs:string" />
+							<xs:element name="TipoCambio" type="xs:double" />
+							<xs:element name="Fecha" type="xs:dateTime" />
+							<xs:element name="Numapertura" type="xs:long" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="aperturacaja">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="NApertura" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:int" />
+							<xs:element name="Fecha" type="xs:dateTime" />
+							<xs:element name="Nombre" type="xs:string" />
+							<xs:element name="Estado" type="xs:string" />
+							<xs:element name="Observaciones" type="xs:string" />
+							<xs:element name="Anulado" type="xs:boolean" />
+							<xs:element name="Cedula" type="xs:string" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="Detalle_pago_caja">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="NumeroFactura" type="xs:double" />
+							<xs:element name="TipoFactura" type="xs:string" />
+							<xs:element name="FormaPago" type="xs:string" />
+							<xs:element name="Referencia" type="xs:string" />
+							<xs:element name="Documento" type="xs:string" />
+							<xs:element name="ReferenciaTipo" type="xs:string" />
+							<xs:element name="ReferenciaDoc" type="xs:string" />
+							<xs:element name="Moneda" type="xs:int" />
+							<xs:element name="TipoCambio" type="xs:double" />
+							<xs:element name="Id" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:long" />
+							<xs:element name="Id_ODP" type="xs:long" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:choice>
+		</xs:complexType>
+		<xs:unique name="Constraint1" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:Moneda" />
+			<xs:field xpath="mstns:CodMoneda" />
+		</xs:unique>
+		<xs:unique name="OpcionesDePago_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:OpcionesDePago" />
+			<xs:field xpath="mstns:id" />
+		</xs:unique>
+		<xs:unique name="aperturacaja_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:aperturacaja" />
+			<xs:field xpath="mstns:NApertura" />
+		</xs:unique>
+		<xs:unique name="Detalle_pago_caja_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:Detalle_pago_caja" />
+			<xs:field xpath="mstns:Id" />
+		</xs:unique>
+		<xs:keyref name="OpcionesDePagoDetalle_pago_caja" refer="OpcionesDePago_Constraint1">
+			<xs:selector xpath=".//mstns:Detalle_pago_caja" />
+			<xs:field xpath="mstns:Id_ODP" />
+		</xs:keyref>
+		<xs:keyref name="MonedaOpcionesDePago" refer="Constraint1">
+			<xs:selector xpath=".//mstns:OpcionesDePago" />
+			<xs:field xpath="mstns:CodMoneda" />
+		</xs:keyref>
+	</xs:element>
+</xs:schema>

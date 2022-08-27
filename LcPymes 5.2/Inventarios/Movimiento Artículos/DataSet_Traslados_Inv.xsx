@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Este archivo lo genera de forma automática el diseñador de esquemas XML. Contiene información de diseño para componentes de la superficie de diseño.-->
+<XSDDesignerLayout layoutVersion="2" viewPortLeft="0" viewPortTop="0" zoom="100">
+    <Moneda_XmlElement left="212" top="306" width="5292" height="2805" selected="0" zOrder="1" index="0" expanded="1" />
+    <Traslado_Inv_Detalle_XmlElement left="16350" top="1639" width="5292" height="5186" selected="0" zOrder="2" index="1" expanded="1" />
+    <Usuarios_XmlElement left="22276" top="1000" width="5292" height="3281" selected="0" zOrder="6" index="2" expanded="1" />
+    <Traslado_Inventario_XmlElement left="7674" top="688" width="5291" height="6138" selected="0" zOrder="4" index="3" expanded="1" />
+    <Traslado_InventarioTraslado_Inv_Detalle_XmlKeyref left="14182" top="3400" width="503" height="503" selected="0" zOrder="8" />
+</XSDDesignerLayout>

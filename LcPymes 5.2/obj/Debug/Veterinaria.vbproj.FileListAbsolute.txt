@@ -1,0 +1,1175 @@
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\bin\Veterinaria.exe.config
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\bin\Veterinaria.exe.manifest
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\bin\Veterinaria.application
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\bin\Veterinaria.exe
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\bin\Veterinaria.pdb
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\bin\Veterinaria.xml
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\bin\es-CR\Veterinaria.resources.dll
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\bin\es\Veterinaria.resources.dll
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\bin\CSP.EMV.InteropStream.dll
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\bin\GenCode128.dll
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\bin\itextsharp.dll
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\bin\MenuExtender.dll
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\bin\Newtonsoft.Json.dll
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\bin\ValidText.dll
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\Interop.Shell32.dll
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\Veterinaria.vbproj.ResolveComReference.cache
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmArticulosPromocion.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmBuscarUltimasVentas.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmCambio.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmDefinirColoresBuscadorInventario.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmAumentarOtro.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmAplicarCambiosInventario.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmMovimientoInventario.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmConsultaPedidosBodega.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmMarcarEstado.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmNuevoPedido.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmRegistrarPedido.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.Prestamos.frmPrestamosBodega.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.Prestamos.frm_buscar_devolucion.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.Prestamos.frm_devolucion.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.Prestamos.frm_buscar_prestamo.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.Prestamos.frm_buscar_producto.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.Prestamos.frm_empresa.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.Prestamos.frm_presentacion.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.Prestamos.frm_prestamos.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.Prestamos.frm_reportes.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.Prestamos.frm_reporte.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.Prestamos.frm_reporte_general_debe.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.Prestamos.frm_visor.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmIngresoTemperaturaRapido.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmReporteTemperaturaCamara.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmTemperaturaCamara.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmBuscarPretomaGeneral.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmBuscarTomaGeneral.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmCargarPreTomaGeneral.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmEncargadoPretoma.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmPreTomaFisicaGeneral.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmTomaFisicaGeneral.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmBuscarTomaProveedor.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmPretomaProveedor.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmTomaProveedor.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.FrmBuscarArticulo3.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmBuscarTrasladoPuntoVenta.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmTrasladosDepartamentos.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmAgregarUnificar.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmUnirCodigosPuntoVenta.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmClientesClinica.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmConsultaClienteClinica.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmPrincipalClinica.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmTiposVisita.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmVisitaClinica.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmSeleccionaCaja.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmBuscarAdelantoPendiente.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmFacturarAdelantosPendientes.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmBuscarApartados.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmGenerarApartado.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmRegistrarAbonoApartado.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmReporteAbonosApartados.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmArchivarCredito.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmReporteFacturassinArchivar.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmAgregarDeposito.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmReporteDepositosdeCaja.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmArqueoCaja.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmBuscarArqueo.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmResumenCaja.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmAbonoReintegro.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmBuscarFacturaPendiente.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmControlAbono.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmFirmadoContadoViejo.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmPagarVariasJuntas.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmReimprimirRecibo.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmEstadoFirmadoContado.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmPrincipalCaja.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmBuscarFichasActivas.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmFormaPagoTranferencia.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmIngresarNumerodeFicha.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmLogsProcesando.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmMontoAbonoApartado.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmTipoCambio.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmIniciodeSeccion.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmPD.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.Abono_Apartados.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.Apartados.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmapartado.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.main.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frm_reportes.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmCartaExoneracion.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmContactoCotizacion.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmCambiarEstadoCotizacion.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmSegimientoCotizaciones.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmDescuentosporCasaComercial.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmListaDescuentosAutomaticos.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmSaldoFirmadoContado.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmDevolucionesSencillas.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmCambiarCorreo.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmExonerarLineaFactura.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmFirmaNuevaCedula.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmReenvioCorreo.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmReintegroFacturaPendiente.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmReporteFacturasPendientes.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmDatosPreVenta.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmFacturaPendiente.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmIngresarFomasdePago.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmIngresarMontoPago.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmNumeroFicha.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmVueltoCaja.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmBuscarSolicitudBodega.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmPedidosBodega.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmNuevaActualizacion.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmVersionCompleta.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmMovimientoCompra.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmArticulosActualizados.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmReporteInventarioxProveedor.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmReporteDescuentosxProveedor.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmVentasxProveedor.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmMargenInventario.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmReporteQuimicos.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.Conecta_Frm.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.Credomatic.Configuracion.frmConfiguracionTerminal.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.Credomatic.Operaciones.frmAdvertenciaCredomatic.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.Credomatic.Operaciones.frmConsultaVoucher.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.Modulos.FE.frmBuscarListaActividad.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmFacturaElectronicaCompra.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmAgregarRespuestaReceptor.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmConsultasComprobantesReceptor.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmMensajeReceptor.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmMensajeReceptorPDF.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmVisorHTML.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmEditarPrecioVenta_FacturaElectronica.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmImportarFacturaElectronica.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frm_actualizador.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmCambiarPuntodeVenta.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.ConfiguracionMoneda.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.FrmConfiguracion.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.FrmMoneda.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.AgregarPerfil.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frm_accion.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frm_buscar_accion.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frm_buscar_categoria.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frm_categoria_accion.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frm_buscar_empleado.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frm_empleados.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frm_reportes_planilla.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.TipoTarjeta.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.Frmusuario.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.UsuariosHabilitarVentas.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmEtiquetar.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.AperturaCaja.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.FrmDatos_Cajeros.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.ArqueoCaja.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmBloquearBodega.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.BuscarCierreCaja.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.CierreCaja.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.MovimientoCaja.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmMovimientoCajaPago.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmMovimientoCajaPagoAbono.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.vuelto.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.AjusteInventario.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.FrmPermisoAjusteB.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmAumento.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmBloqueaBodega.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.FrmBodegas.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmEtiquetasProductos.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.Familia.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.FrmInventario.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmInventarioGRID.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmpermiso.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.FrmLotes.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.FrmMarca.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frm_mortalidad.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.Frm_Traslados.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frm_traslados_inventario.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.FrmAjusteBodega.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmValidaRegistrarSalida.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frm_reportar_muertes_peces.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.FrmPresentaciones.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.FrmRedondeoInventario.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frm_productos_patrocinadores.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmSincronizaDatos.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmUbicacion.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.Resources.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.MainForm.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmReportesdeVenta.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frm_reporte_agentes.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.reporte_bonificacion.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frm_reporte_cierre_cajas.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.FrmReporte_clinica.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frm_reporte_apartado.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmReporteArmamento.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmencargado_inventario.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frm_reporte_maquinaria.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmReporte_Mascotas.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frm_reporte_peces.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frm_reporteprestamos.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frm_reporte_taller.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frm_reporteTienda.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frm_reporte_ventasXarticulo.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.reporteEmpaquetado.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frm_reporte_producto_cliente.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frm_reporte_productos_organicos.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frm_reporte_ventas_mensuales.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frm_reporte_grafico_productos.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frm_ventas_unificadas.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmReciboAbonos.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.FrmReportesCajas.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frm_mejores_compradores.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frm_productos_menos_vendidos.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frm_productos_top.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frm_top_clientes.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmReporteVentas.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.reporte_ventas_diarias.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frm_reporteventas_grafico.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmReporteCompras.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.reporte_compra_peces.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmReportesCXP.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frm_reporte_mascotas_vet_liberia.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmReporteGastos.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frm_reporte_costo_real.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmgasto_inventario.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frm_reporte_listado_productos.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmReporte_ABC.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.Reporte_AjustesInventario.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frm_bitacora.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmVisualizacionLotes.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.MovimientoArticulos.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frm_reporte_muertes.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frm_reporte_subfamilia.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmOpcionesVisualizacion.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.FrmKardex.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.Abonos_Proveedor.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmAjustePagar.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmCompra.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.Devoluciones_Compras.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmEstado_CXP.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.fmrBuscarMayorizacionAsiento.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmGasto.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmOrdenCompraAutomatica.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmOrdenCompra.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmProveedores.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frm_agente_venta.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmAjustecCobrar.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmCliente_frecuente.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.Frmcliente.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frm_buscar_cotizacion.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.Frm_AjustarDescuento.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.Frm_Cotizacion.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.FrmDevolucionesVentas.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmOpcionCaja.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.Monto_Transporte.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.Opciones_Devolucion.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmEstado_CXC.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.Ajuste_Descuento_Factura.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.Anular_Factura.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.Facturacion.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.Firma.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmNota.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmValidaConsignacionNegativa.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frm_buscar_cliente.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frm_cliente_rapido.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frm_leyenda.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.ModificaFacturacion.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmCambiaCaja.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.Monto_Transporte_Ventas.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.Reporte_Anulados.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frm_prestamos.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frm_historial.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.FormaPago.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.FrmBuscador5C.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmOpcionCajaRecibo.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmOpcionCajaRecibos.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmReciboDinero.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frm_rifas.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.FrmBuscarArticulo2.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.FrmBuscadorN.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.Buscar.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.BuscarCliente.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.FrmPlantilla.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.FrmRespaldo.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmCambioContrasena.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.Frm_login.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.FrmBuscador.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.FrmBuscador2.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmVisorReportes.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.FrmInventario.es-CR.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.FrmInventario.es.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.FrmRedondeoInventario.es.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\Veterinaria.vbproj.GenerateResource.Cache
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\Veterinaria.exe.licenses
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\es-CR\Veterinaria.resources.dll
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\es\Veterinaria.resources.dll
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\Veterinaria.exe.manifest
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\Veterinaria.application
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\Veterinaria.exe
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\Veterinaria.xml
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\Veterinaria.pdb
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmPaneldeControl.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmPuntosporEmpleado.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmPuntosxProductos.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\bin\System.Net.Http.dll
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmGenerarCuponDescuento.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmBuscarCupones.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmAplicarCupon.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\Veterinaria.vbprojResolveAssemblyReference.cache
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmBuscarFacturaRemplazar.resources
+D:\TIOBS\Codigo\suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmFacturasRemplazadas.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\bin\Veterinaria.exe.config
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\bin\Veterinaria.exe.manifest
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\bin\Veterinaria.application
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\bin\Veterinaria.exe
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\bin\Veterinaria.pdb
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\bin\Veterinaria.xml
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\bin\es-CR\Veterinaria.resources.dll
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\bin\es\Veterinaria.resources.dll
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\bin\GenCode128.dll
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\bin\itextsharp.dll
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\bin\MySql.Data.dll
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\bin\Newtonsoft.Json.dll
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\bin\System.Net.Http.dll
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\bin\MySql.Data.xml
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\Interop.Shell32.dll
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\Veterinaria.vbproj.ResolveComReference.cache
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmBuscarArticuloMigrador.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmMigradorCabys.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmReporteAjuste.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmAreasme.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmArticulosPromocion.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmBuscarUltimasVentas.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmAsignarCabys.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmBuscadorCabysMH.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmBuscadorCodigoCabys.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmCargarCabys.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmCambio.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmDefinirColoresBuscadorInventario.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmConsultaLotes.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmControlLote.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmCrearLote.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmImprimirLoteGeneral.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmReporteLotes.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmAumentarOtro.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmEtiquetarLiberia.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmAplicarCambiosInventario.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmAgregarGarantiaSerie.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmAsigarCodigoBarras.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmBloqueoxProveedor.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmBuscarSerie.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmHistoricoSerie.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmInventarioSinCodigoBarras.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmReporteMovimietoBodega.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmListadoMag.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmSeleccioneImpuesto.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmAgregarSeries.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmSeleccinarSerie_Salida.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmMovimientoInventario.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmConsultaPedidosBodega.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmMarcarEstado.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmNuevoPedido.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmRegistrarPedido.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.Prestamos.frmPrestamosBodega.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.Prestamos.frm_buscar_devolucion.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.Prestamos.frm_devolucion.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmMostrarSolicitudes.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmRelacionarProductos.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.Prestamos.frm_buscar_prestamo.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.Prestamos.frm_buscar_producto.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.Prestamos.frm_empresa.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.Prestamos.frm_presentacion.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.Prestamos.frm_prestamos.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.Prestamos.frm_reportes.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.Prestamos.frm_reporte.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.Prestamos.frm_reporte_general_debe.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.Prestamos.frm_visor.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmIngresoTemperaturaRapido.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmReporteTemperaturaCamara.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmTemperaturaCamara.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmBuscarPretomaGeneral.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmBuscarTomaGeneral.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmCargarPreTomaGeneral.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmEncargadoPretoma.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmPreTomaFisicaGeneral.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmTomaFisicaGeneral.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmBuscarTomaProveedor.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmPretomaProveedor.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmTomaProveedor.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.FrmBuscarArticulo3.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmBuscarTrasladoPuntoVenta.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmTrasladosDepartamentos.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmAgregarUnificar.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmUnirCodigosPuntoVenta.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmClientesClinica.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmConsultaClienteClinica.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmPrincipalClinica.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmTiposVisita.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmVisitaClinica.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmAsignarCabysCompra.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmNumeroProveedor.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmBUSCAR_PROVEEDOR.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmCONTROL_PROVEEDOR_META.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmGUARDAR_PROVEEDOR_META.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmMetasGeneral.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmSeleccionaCaja.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmBuscarAdelantoPendiente.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmFacturarAdelantosPendientes.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmBuscarApartados.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmGenerarApartado.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmRegistrarAbonoApartado.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmReporteAbonosApartados.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmArchivarCredito.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmReporteFacturassinArchivar.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmAgregarDeposito.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmEditarDepositos.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmReporteDepositosdeCaja.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmArqueoCaja.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmBuscarArqueo.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmResumenCaja.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmAbonoReintegro.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmBuscarFacturaPendiente.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmControlAbono.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmFirmadoContadoViejo.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmPagarVariasJuntas.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmReimprimirRecibo.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmAsignarFichaUsuario.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmFichasporUsuario.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmEstadoFirmadoContado.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmPrincipalCaja.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmBuscarFichasActivas.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmFormaPagoTranferencia.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmIngresarNumerodeFicha.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmLogsProcesando.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmMontoAbonoApartado.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmTCCompra.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmTipoCambio.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmIniciodeSeccion.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmConsultarToken.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmConfiguracionGestionCobro.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmEnviarCobroJudicial.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmGestionCobro.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmConfirmarGenerarFacturas.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmConsultaAlbaran.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmEditarAlbaran.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmMovitoEliminacion.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmComprasPrepagadas.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmPrepagoCxP.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmAsistenteCierre.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmCierreOrden.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmOrdendeTrabajo.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmRegistrarOrdenTrabajo.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmReportesOT.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmPuntosporEmpleado.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmPuntosxProductos.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmSolicitudesPendientes.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmSolicitudPrestamo.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmPD.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.Abono_Apartados.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.Apartados.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmapartado.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.main.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frm_reportes.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmCartaExoneracion.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmCartaExoneracionSoloLectura.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmMotivoInactivarCliente.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmValidarCartaExoneracion.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmContactoCotizacion.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmEligeCosto.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmCambiarEstadoCotizacion.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmSegimientoCotizaciones.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmAplicarCupon.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmBuscarCupones.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmGenerarCuponDescuento.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmDescuentosporCasaComercial.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmListaDescuentosAutomaticos.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmSaldoFirmadoContado.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmDevolucionesSencillas.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmSeleccionarEncargadoDevolucion.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmFacturasRemplazadas.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmAdvertenciaTipodeCambio.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmBuscarFacturaRemplazar.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmCambiarCorreo.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmDocumentosRelacionados.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmEligeTuFicha.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmExonerarLineaFactura.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmFirmaNuevaCedula.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmIngreseTokenValidacion.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmMensajeClienteMoroso.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmNoMAG.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmReenvioCorreo.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmReintegroFacturaPendiente.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmReporteFacturasPendientes.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmDatosPreVenta.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmFacturaPendiente.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmIngresarFomasdePago.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmIngresarMontoPago.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmNumeroFicha.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmVueltoCaja.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmSaldoPendiente.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmSeleccionarSerie.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmUsaGalon.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmValidarRegistroMAG.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmGUARDAR_VALIDA_FIRMADOCONTADO.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmMaxDescuentoVenta.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmBuscarSolicitudBodega.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmPedidosBodega.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmVentasSinCabys.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmBuscarConexion.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmCambiarConexion.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmNuevaActualizacion.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmOpcionTomaFisicaGeneral.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmVersionCompleta.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmComprasxProveedor.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmMovimientoCompra.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmPaneldeControl.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmDiferenciasCaja.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmReporteSinVenta.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmArticulosxVencer.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmCxCVencer.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmCxPVencer.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmArticulosActualizados.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmReporteInventarioxProveedor.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmCrecimientoCompras.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmGraficoVentasAnuales.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmMovimientoCompras.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmMovimientoxCodigo.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmReporteAbonoIncobrable.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmReporteCompravsVentas.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmReporteContadoRecuperacion.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmReporteCxCMeses.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmReporteDescuentosxProveedor.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmReporteDevoluciones.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmReportePorcentajeVenta.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmVentasxProveedor.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmMargenInventario.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmReporteQuimicos.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmUtilidadVentasxRangoFechas.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmUtilidadxFactura.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.Conecta_Frm.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.Credomatic.Configuracion.frmConfiguracionTerminal.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.Credomatic.Operaciones.frmAdvertenciaCredomatic.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.Credomatic.Operaciones.frmConsultaVoucher.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.Modulos.FE.frmBuscarListaActividad.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmFacturaElectronicaCompra.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmAgregarRespuestaReceptor.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmConsultasComprobantesReceptor.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmMensajeReceptor.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmMensajeReceptorPDF.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmVisorHTML.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmEditarPrecioVenta_FacturaElectronica.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmImportarFacturaElectronica.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frm_actualizador.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmCambiarPuntodeVenta.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.ConfiguracionMoneda.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.FrmConfiguracion.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.FrmMoneda.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.AgregarPerfil.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frm_accion.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frm_buscar_accion.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frm_buscar_categoria.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frm_categoria_accion.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frm_buscar_empleado.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frm_empleados.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frm_reportes_planilla.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.TipoTarjeta.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.Frmusuario.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.UsuariosHabilitarVentas.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmEtiquetarGuanavet.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.AperturaCaja.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.FrmDatos_Cajeros.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.ArqueoCaja.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmBloquearBodega.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.BuscarCierreCaja.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.CierreCaja.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.MovimientoCaja.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmMovimientoCajaPago.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmMovimientoCajaPagoAbono.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.vuelto.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.AjusteInventario.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.FrmPermisoAjusteB.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmAumento.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmBloqueaBodega.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.FrmBodegas.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmEtiquetasProductos.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.Familia.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.FrmInventario.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmInventarioGRID.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmpermiso.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.FrmLotes.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.FrmMarca.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frm_mortalidad.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.Frm_Traslados.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frm_traslados_inventario.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.FrmAjusteBodega.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmValidaRegistrarSalida.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frm_reportar_muertes_peces.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.FrmPresentaciones.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.FrmRedondeoInventario.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frm_productos_patrocinadores.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmSincronizaDatos.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmUbicacion.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.Resources.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.MainForm.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmReportesdeVenta.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frm_reporte_agentes.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.reporte_bonificacion.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frm_reporte_cierre_cajas.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.FrmReporte_clinica.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frm_reporte_apartado.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmReporteArmamento.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmencargado_inventario.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frm_reporte_maquinaria.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmReporte_Mascotas.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frm_reporte_peces.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frm_reporteprestamos.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frm_reporte_taller.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frm_reporteTienda.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frm_reporte_ventasXarticulo.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.reporteEmpaquetado.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frm_reporte_producto_cliente.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frm_reporte_productos_organicos.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frm_reporte_ventas_mensuales.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frm_reporte_grafico_productos.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frm_ventas_unificadas.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmReciboAbonos.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.FrmReportesCajas.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frm_mejores_compradores.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frm_productos_menos_vendidos.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frm_productos_top.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frm_top_clientes.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmReporteVentas.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.reporte_ventas_diarias.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frm_reporteventas_grafico.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmReporteCompras.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.reporte_compra_peces.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmReportesCXP.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frm_reporte_mascotas_vet_liberia.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmReporteGastos.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frm_reporte_costo_real.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmgasto_inventario.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frm_reporte_listado_productos.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmReporte_ABC.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.Reporte_AjustesInventario.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frm_bitacora.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmVisualizacionLotes.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.MovimientoArticulos.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frm_reporte_muertes.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frm_reporte_subfamilia.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmOpcionesVisualizacion.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.FrmKardex.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.Abonos_Proveedor.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmAjustePagar.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmCompra.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.Devoluciones_Compras.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmEstado_CXP.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.fmrBuscarMayorizacionAsiento.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmGasto.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmOrdenCompraAutomatica.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmOrdenCompra.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmProveedores.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frm_agente_venta.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmAjustecCobrar.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmCliente_frecuente.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.Frmcliente.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frm_buscar_cotizacion.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.Frm_AjustarDescuento.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.Frm_Cotizacion.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.FrmDevolucionesVentas.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmOpcionCaja.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.Monto_Transporte.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.Opciones_Devolucion.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmEstado_CXC.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.Ajuste_Descuento_Factura.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.Anular_Factura.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.Facturacion.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.Firma.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmNota.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmValidaConsignacionNegativa.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frm_buscar_cliente.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frm_cliente_rapido.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frm_leyenda.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.ModificaFacturacion.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmCambiaCaja.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.Monto_Transporte_Ventas.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.Reporte_Anulados.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frm_prestamos.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frm_historial.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.FormaPago.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.FrmBuscador5C.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmOpcionCajaRecibo.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmOpcionCajaRecibos.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmReciboDinero.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frm_rifas.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.FrmBuscarArticulo2.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.FrmBuscadorN.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.Buscar.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.BuscarCliente.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.FrmPlantilla.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.FrmRespaldo.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmCambioContrasena.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.Frm_login.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.FrmBuscador.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.FrmBuscador2.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmVisorReportes.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.FrmInventario.es-CR.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.FrmInventario.es.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.FrmRedondeoInventario.es.resources
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\Veterinaria.vbproj.GenerateResource.Cache
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\Veterinaria.exe.licenses
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\es-CR\Veterinaria.resources.dll
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\es\Veterinaria.resources.dll
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\Veterinaria.exe.manifest
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\Veterinaria.application
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\Veterinaria.exe
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\Veterinaria.xml
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\Veterinaria.pdb
+C:\TIOBSoluciones\Codigo\Suvelisa\LcPymes 5.2\obj\Debug\Veterinaria.vbprojResolveAssemblyReference.cache
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\bin\Veterinaria.exe.config
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\bin\Veterinaria.exe.manifest
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\bin\Veterinaria.application
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\bin\Veterinaria.exe
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\bin\Veterinaria.pdb
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\bin\Veterinaria.xml
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\bin\es-CR\Veterinaria.resources.dll
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\bin\es\Veterinaria.resources.dll
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\bin\CrystalDecisions.CrystalReports.Engine.dll
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\bin\CrystalDecisions.ReportSource.dll
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\bin\CrystalDecisions.Shared.dll
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\bin\CrystalDecisions.Windows.Forms.dll
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\bin\CSP.EMV.InteropStream.dll
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\bin\DevExpress.Data.dll
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\bin\DevExpress.Utils.dll
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\bin\DevExpress.XtraBars.Design.dll
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\bin\DevExpress.XtraBars.dll
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\bin\DevExpress.XtraEditors.Design.dll
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\bin\DevExpress.XtraEditors.dll
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\bin\DevExpress.XtraGrid.Design.dll
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\bin\DevExpress.XtraGrid.dll
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\bin\DevExpress.XtraGridMenus.dll
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\bin\DevExpress.XtraNavBar.Design.dll
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\bin\DevExpress.XtraNavBar.dll
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\bin\DevExpress.XtraPrinting.Design.dll
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\bin\DevExpress.XtraPrinting.dll
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\bin\DevExpress.XtraSideBar.dll
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\bin\DevExpress.XtraTreeList.Design.dll
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\bin\DevExpress.XtraTreeList.dll
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\bin\GenCode128.dll
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\bin\itextsharp.dll
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\bin\MenuExtender.dll
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\bin\Newtonsoft.Json.dll
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\bin\System.Net.Http.dll
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\bin\ValidText.dll
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\bin\CrystalDecisions.ReportAppServer.DataDefModel.dll
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\bin\CrystalDecisions.ReportAppServer.ClientDoc.dll
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\bin\CrystalDecisions.ReportAppServer.ReportDefModel.dll
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\bin\CrystalDecisions.ReportAppServer.Controllers.dll
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\bin\CrystalDecisions.ReportAppServer.CommLayer.dll
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\bin\CrystalDecisions.ReportAppServer.DataSetConversion.dll
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\bin\CrystalDecisions.ReportAppServer.Prompting.dll
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\bin\CrystalDecisions.ReportAppServer.XmlSerialize.dll
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\bin\CrystalDecisions.ReportAppServer.CubeDefModel.dll
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\bin\CrystalDecisions.ReportAppServer.CommonObjectModel.dll
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\bin\CrystalDecisions.ReportAppServer.ObjectFactory.dll
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\bin\CrystalDecisions.ReportAppServer.CommonControls.dll
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\bin\stdole.dll
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\bin\DevExpress.Data.xml
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\bin\DevExpress.Utils.xml
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\bin\DevExpress.XtraBars.xml
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\bin\DevExpress.XtraEditors.xml
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\bin\DevExpress.XtraGrid.xml
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\bin\DevExpress.XtraNavBar.xml
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\bin\DevExpress.XtraPrinting.xml
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\bin\DevExpress.XtraSideBar.xml
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\bin\DevExpress.XtraTreeList.xml
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\Interop.Shell32.dll
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\Veterinaria.vbproj.ResolveComReference.cache
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmBuscarArticuloMigrador.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmMigradorCabys.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmReporteAjuste.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmAreasme.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmArticulosPromocion.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmBuscarUltimasVentas.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmAsignarCabys.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmBuscadorCabysMH.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmBuscadorCodigoCabys.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmCargarCabys.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmCambio.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmDefinirColoresBuscadorInventario.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmConsultaLotes.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmControlLote.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmCrearLote.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmImprimirLoteGeneral.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmReporteLotes.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmAumentarOtro.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmEtiquetarLiberia.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmAplicarCambiosInventario.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmAgregarGarantiaSerie.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmAsigarCodigoBarras.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmBloqueoxProveedor.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmBuscarSerie.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmHistoricoSerie.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmInventarioSinCodigoBarras.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmReporteMovimietoBodega.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmListadoMag.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmSeleccioneImpuesto.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmAgregarSeries.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmSeleccinarSerie_Salida.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmMovimientoInventario.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmConsultaPedidosBodega.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmMarcarEstado.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmNuevoPedido.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmRegistrarPedido.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.Prestamos.frmPrestamosBodega.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.Prestamos.frm_buscar_devolucion.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.Prestamos.frm_devolucion.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmMostrarSolicitudes.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmRelacionarProductos.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.Prestamos.frm_buscar_prestamo.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.Prestamos.frm_buscar_producto.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.Prestamos.frm_empresa.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.Prestamos.frm_presentacion.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.Prestamos.frm_prestamos.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.Prestamos.frm_reportes.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.Prestamos.frm_reporte.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.Prestamos.frm_reporte_general_debe.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.Prestamos.frm_visor.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmIngresoTemperaturaRapido.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmReporteTemperaturaCamara.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmTemperaturaCamara.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmBuscarPretomaGeneral.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmBuscarTomaGeneral.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmCargarPreTomaGeneral.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmEncargadoPretoma.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmPreTomaFisicaGeneral.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmTomaFisicaGeneral.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmBuscarTomaProveedor.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmPretomaProveedor.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmTomaProveedor.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.FrmBuscarArticulo3.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmBuscarTrasladoPuntoVenta.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmTrasladosDepartamentos.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmAgregarUnificar.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmUnirCodigosPuntoVenta.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmClientesClinica.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmConsultaClienteClinica.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmPrincipalClinica.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmTiposVisita.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmVisitaClinica.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmAsignarCabysCompra.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmNumeroProveedor.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmBUSCAR_PROVEEDOR.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmCONTROL_PROVEEDOR_META.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmGUARDAR_PROVEEDOR_META.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmMetasGeneral.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmSeleccionaCaja.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmBuscarAdelantoPendiente.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmFacturarAdelantosPendientes.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmBuscarApartados.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmGenerarApartado.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmRegistrarAbonoApartado.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmReporteAbonosApartados.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmArchivarCredito.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmReporteFacturassinArchivar.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmAgregarDeposito.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmEditarDepositos.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmReporteDepositosdeCaja.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmArqueoCaja.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmBuscarArqueo.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmResumenCaja.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmAbonoReintegro.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmBuscarFacturaPendiente.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmControlAbono.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmFirmadoContadoViejo.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmPagarVariasJuntas.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmReimprimirRecibo.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmAsignarFichaUsuario.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmFichasporUsuario.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmEstadoFirmadoContado.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmPrincipalCaja.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmBuscarFichasActivas.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmFormaPagoTranferencia.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmIngresarNumerodeFicha.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmLogsProcesando.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmMontoAbonoApartado.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmTCCompra.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmTipoCambio.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmIniciodeSeccion.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmConsultarToken.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmConfiguracionGestionCobro.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmEnviarCobroJudicial.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmGestionCobro.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmConfirmarGenerarFacturas.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmConsultaAlbaran.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmEditarAlbaran.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmMovitoEliminacion.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmComprasPrepagadas.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmPrepagoCxP.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmAsistenteCierre.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmCierreOrden.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmOrdendeTrabajo.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmRegistrarOrdenTrabajo.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmReportesOT.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmPuntosporEmpleado.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmPuntosxProductos.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmSolicitudesPendientes.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmSolicitudPrestamo.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmPD.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.Abono_Apartados.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.Apartados.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmapartado.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.main.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frm_reportes.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmCartaExoneracion.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmCartaExoneracionSoloLectura.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmMotivoInactivarCliente.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmValidarCartaExoneracion.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmContactoCotizacion.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmEligeCosto.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmCambiarEstadoCotizacion.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmSegimientoCotizaciones.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmAplicarCupon.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmBuscarCupones.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmGenerarCuponDescuento.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmDescuentosporCasaComercial.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmListaDescuentosAutomaticos.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmSaldoFirmadoContado.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmDevolucionesSencillas.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmSeleccionarEncargadoDevolucion.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmFacturasRemplazadas.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmAdvertenciaTipodeCambio.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmBuscarFacturaRemplazar.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmCambiarCorreo.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmDocumentosRelacionados.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmEligeTuFicha.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmExonerarLineaFactura.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmFirmaNuevaCedula.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmIngreseTokenValidacion.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmMensajeClienteMoroso.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmNoMAG.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmReenvioCorreo.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmReintegroFacturaPendiente.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmReporteFacturasPendientes.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmDatosPreVenta.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmFacturaPendiente.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmIngresarFomasdePago.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmIngresarMontoPago.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmNumeroFicha.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmVueltoCaja.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmSaldoPendiente.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmSeleccionarSerie.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmUsaGalon.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmValidarRegistroMAG.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmGUARDAR_VALIDA_FIRMADOCONTADO.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmMaxDescuentoVenta.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmBuscarSolicitudBodega.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmPedidosBodega.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmVentasSinCabys.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmBuscarConexion.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmCambiarConexion.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmNuevaActualizacion.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmOpcionTomaFisicaGeneral.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmVersionCompleta.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmComprasxProveedor.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmMovimientoCompra.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmPaneldeControl.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmDiferenciasCaja.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmReporteSinVenta.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmArticulosxVencer.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmCxCVencer.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmCxPVencer.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmArticulosActualizados.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmReporteInventarioxProveedor.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmCrecimientoCompras.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmGraficoVentasAnuales.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmMovimientoCompras.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmMovimientoxCodigo.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmReporteAbonoIncobrable.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmReporteCompravsVentas.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmReporteContadoRecuperacion.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmReporteCxCMeses.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmReporteDescuentosxProveedor.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmReporteDevoluciones.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmReportePorcentajeVenta.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmVentasxProveedor.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmMargenInventario.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmReporteQuimicos.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmUtilidadVentasxRangoFechas.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmUtilidadxFactura.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.Conecta_Frm.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.Credomatic.Configuracion.frmConfiguracionTerminal.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.Credomatic.Operaciones.frmAdvertenciaCredomatic.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.Credomatic.Operaciones.frmConsultaVoucher.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.Modulos.FE.frmBuscarListaActividad.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmFacturaElectronicaCompra.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmAgregarRespuestaReceptor.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmConsultasComprobantesReceptor.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmMensajeReceptor.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmMensajeReceptorPDF.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmVisorHTML.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmEditarPrecioVenta_FacturaElectronica.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmImportarFacturaElectronica.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frm_actualizador.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmCambiarPuntodeVenta.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.ConfiguracionMoneda.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.FrmConfiguracion.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.FrmMoneda.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.AgregarPerfil.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frm_accion.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frm_buscar_accion.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frm_buscar_categoria.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frm_categoria_accion.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frm_buscar_empleado.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frm_empleados.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frm_reportes_planilla.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.TipoTarjeta.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.Frmusuario.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.UsuariosHabilitarVentas.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmEtiquetarGuanavet.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.AperturaCaja.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.FrmDatos_Cajeros.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.ArqueoCaja.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmBloquearBodega.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.BuscarCierreCaja.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.CierreCaja.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.MovimientoCaja.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmMovimientoCajaPago.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmMovimientoCajaPagoAbono.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.vuelto.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.AjusteInventario.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.FrmPermisoAjusteB.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmAumento.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmBloqueaBodega.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.FrmBodegas.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmEtiquetasProductos.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.Familia.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.FrmInventario.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmInventarioGRID.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmpermiso.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.FrmLotes.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.FrmMarca.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frm_mortalidad.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.Frm_Traslados.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frm_traslados_inventario.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.FrmAjusteBodega.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmValidaRegistrarSalida.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frm_reportar_muertes_peces.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.FrmPresentaciones.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.FrmRedondeoInventario.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frm_productos_patrocinadores.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmSincronizaDatos.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmUbicacion.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.Resources.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.MainForm.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmReportesdeVenta.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frm_reporte_agentes.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.reporte_bonificacion.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frm_reporte_cierre_cajas.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.FrmReporte_clinica.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frm_reporte_apartado.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmReporteArmamento.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmencargado_inventario.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frm_reporte_maquinaria.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmReporte_Mascotas.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frm_reporte_peces.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frm_reporteprestamos.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frm_reporte_taller.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frm_reporteTienda.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frm_reporte_ventasXarticulo.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.reporteEmpaquetado.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frm_reporte_producto_cliente.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frm_reporte_productos_organicos.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frm_reporte_ventas_mensuales.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frm_reporte_grafico_productos.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frm_ventas_unificadas.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmReciboAbonos.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.FrmReportesCajas.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frm_mejores_compradores.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frm_productos_menos_vendidos.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frm_productos_top.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frm_top_clientes.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmReporteVentas.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.reporte_ventas_diarias.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frm_reporteventas_grafico.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmReporteCompras.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.reporte_compra_peces.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmReportesCXP.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frm_reporte_mascotas_vet_liberia.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmReporteGastos.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frm_reporte_costo_real.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmgasto_inventario.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frm_reporte_listado_productos.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmReporte_ABC.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.Reporte_AjustesInventario.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frm_bitacora.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmVisualizacionLotes.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.MovimientoArticulos.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frm_reporte_muertes.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frm_reporte_subfamilia.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmOpcionesVisualizacion.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.FrmKardex.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.Abonos_Proveedor.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmAjustePagar.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmCompra.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.Devoluciones_Compras.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmEstado_CXP.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.fmrBuscarMayorizacionAsiento.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmGasto.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmOrdenCompraAutomatica.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmOrdenCompra.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmProveedores.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frm_agente_venta.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmAjustecCobrar.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmCliente_frecuente.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.Frmcliente.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frm_buscar_cotizacion.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.Frm_AjustarDescuento.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.Frm_Cotizacion.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.FrmDevolucionesVentas.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmOpcionCaja.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.Monto_Transporte.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.Opciones_Devolucion.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmEstado_CXC.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.Ajuste_Descuento_Factura.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.Anular_Factura.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.Facturacion.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.Firma.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmNota.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmValidaConsignacionNegativa.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frm_buscar_cliente.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frm_cliente_rapido.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frm_leyenda.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.ModificaFacturacion.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmCambiaCaja.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.Monto_Transporte_Ventas.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.Reporte_Anulados.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frm_prestamos.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frm_historial.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.FormaPago.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.FrmBuscador5C.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmOpcionCajaRecibo.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmOpcionCajaRecibos.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmReciboDinero.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frm_rifas.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.FrmBuscarArticulo2.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.FrmBuscadorN.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.Buscar.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.BuscarCliente.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.FrmPlantilla.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.FrmRespaldo.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmCambioContrasena.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.Frm_login.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.FrmBuscador.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.FrmBuscador2.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmVisorReportes.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.FrmInventario.es-CR.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.FrmInventario.es.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.FrmRedondeoInventario.es.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\Veterinaria.vbproj.GenerateResource.cache
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\Veterinaria.vbproj.CoreCompileInputs.cache
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\es-CR\Veterinaria.resources.dll
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\es\Veterinaria.resources.dll
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\Veterinaria.exe.manifest
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\Veterinaria.application
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\Veterinaria.vbproj.CopyComplete
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\Veterinaria.exe
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\Veterinaria.xml
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\Veterinaria.pdb
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\Veterinaria.exe.licenses
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmPrepagos.resources
+C:\Users\Juan Diego\Desktop\SUVESACR\Codigo Fuente\Suvelisa\LcPymes 5.2\obj\Debug\Veterinaria.vbproj.AssemblyReference.cache

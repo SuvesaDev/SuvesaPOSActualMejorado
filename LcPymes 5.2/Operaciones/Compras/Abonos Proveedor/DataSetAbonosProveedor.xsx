@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Este archivo lo genera de forma automática el diseñador de esquemas XML. Contiene información de diseño para componentes de la superficie de diseño.-->
+<XSDDesignerLayout layoutVersion="2" viewPortLeft="-835" viewPortTop="-2876" zoom="90">
+    <Moneda_XmlElement left="-716" top="10818" width="5379" height="3410" selected="0" zOrder="25" index="0" expanded="1" />
+    <Bancos_XmlElement left="6645" top="9847" width="7115" height="3411" selected="0" zOrder="9" index="1" expanded="1" />
+    <Cuentas_bancarias_XmlElement left="15492" top="8232" width="6468" height="4733" selected="0" zOrder="2" index="2" expanded="1" />
+    <Cuentas_Bancarias_Proveedor_XmlElement left="22665" top="8584" width="7408" height="4734" selected="0" zOrder="14" index="3" expanded="1" />
+    <Monedas_XmlElement left="30707" top="1000" width="5292" height="2963" selected="0" zOrder="27" index="4" expanded="1" />
+    <Proveedores_XmlElement left="21408" top="-1294" width="7703" height="9142" selected="0" zOrder="3" index="5" expanded="1" />
+    <abonocpagar_XmlElement left="4292" top="-2088" width="6027" height="8701" selected="0" zOrder="5" index="6" expanded="1" />
+    <detalle_abonocpagar_XmlElement left="12996" top="-2028" width="7055" height="5614" selected="0" zOrder="7" index="7" expanded="1" />
+    <ProveedoresCuentas_Bancarias_Proveedor_XmlKeyref left="29657" top="7603" width="503" height="503" selected="0" zOrder="15" />
+    <Bancosabonocpagar_XmlKeyref left="972" top="6132" width="503" height="503" selected="0" zOrder="10" />
+    <abonocpagardetalle_abonocpagar_XmlKeyref left="11406" top="1269" width="503" height="503" selected="0" zOrder="28" />
+    <BancosCuentas_bancarias_XmlKeyref left="14011" top="9426" width="503" height="503" selected="0" zOrder="19" />
+</XSDDesignerLayout>

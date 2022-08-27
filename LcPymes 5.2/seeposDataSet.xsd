@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="seeposDataSet" targetNamespace="http://tempuri.org/seeposDataSet.xsd" xmlns:mstns="http://tempuri.org/seeposDataSet.xsd" xmlns="http://tempuri.org/seeposDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="seeposConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="seeposConnectionString (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.LcPymes_5._2.My.MySettings.GlobalReference.Default.seeposConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="viewTomaGeneralTableAdapter" GeneratorDataComponentClassName="viewTomaGeneralTableAdapter" Name="viewTomaGeneral" UserDataComponentName="viewTomaGeneralTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="seeposConnectionString (MySettings)" DbObjectName="SeePOS.dbo.viewTomaGeneral" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT Codigo, Cod_Articulo, Barras, Descripcion, Costo, Existencia, Toma, Diferencia, Contado FROM dbo.viewTomaGeneral</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Codigo" DataSetColumn="Codigo" />
+              <Mapping SourceColumn="Cod_Articulo" DataSetColumn="Cod_Articulo" />
+              <Mapping SourceColumn="Barras" DataSetColumn="Barras" />
+              <Mapping SourceColumn="Descripcion" DataSetColumn="Descripcion" />
+              <Mapping SourceColumn="Costo" DataSetColumn="Costo" />
+              <Mapping SourceColumn="Existencia" DataSetColumn="Existencia" />
+              <Mapping SourceColumn="Toma" DataSetColumn="Toma" />
+              <Mapping SourceColumn="Diferencia" DataSetColumn="Diferencia" />
+              <Mapping SourceColumn="Contado" DataSetColumn="Contado" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="seeposDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="seeposDataSet" msprop:Generator_UserDSName="seeposDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="viewTomaGeneral" msprop:Generator_TableClassName="viewTomaGeneralDataTable" msprop:Generator_TableVarName="tableviewTomaGeneral" msprop:Generator_TablePropName="viewTomaGeneral" msprop:Generator_RowDeletingName="viewTomaGeneralRowDeleting" msprop:Generator_RowChangingName="viewTomaGeneralRowChanging" msprop:Generator_RowEvHandlerName="viewTomaGeneralRowChangeEventHandler" msprop:Generator_RowDeletedName="viewTomaGeneralRowDeleted" msprop:Generator_UserTableName="viewTomaGeneral" msprop:Generator_RowChangedName="viewTomaGeneralRowChanged" msprop:Generator_RowEvArgName="viewTomaGeneralRowChangeEvent" msprop:Generator_RowClassName="viewTomaGeneralRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Codigo" msprop:Generator_ColumnVarNameInTable="columnCodigo" msprop:Generator_ColumnPropNameInRow="Codigo" msprop:Generator_ColumnPropNameInTable="CodigoColumn" msprop:Generator_UserColumnName="Codigo" type="xs:long" />
+              <xs:element name="Cod_Articulo" msprop:Generator_ColumnVarNameInTable="columnCod_Articulo" msprop:Generator_ColumnPropNameInRow="Cod_Articulo" msprop:Generator_ColumnPropNameInTable="Cod_ArticuloColumn" msprop:Generator_UserColumnName="Cod_Articulo">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Barras" msprop:Generator_ColumnVarNameInTable="columnBarras" msprop:Generator_ColumnPropNameInRow="Barras" msprop:Generator_ColumnPropNameInTable="BarrasColumn" msprop:Generator_UserColumnName="Barras">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Descripcion" msprop:Generator_ColumnVarNameInTable="columnDescripcion" msprop:Generator_ColumnPropNameInRow="Descripcion" msprop:Generator_ColumnPropNameInTable="DescripcionColumn" msprop:Generator_UserColumnName="Descripcion">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Costo" msprop:Generator_ColumnVarNameInTable="columnCosto" msprop:Generator_ColumnPropNameInRow="Costo" msprop:Generator_ColumnPropNameInTable="CostoColumn" msprop:Generator_UserColumnName="Costo" type="xs:double" />
+              <xs:element name="Existencia" msprop:Generator_ColumnVarNameInTable="columnExistencia" msprop:Generator_ColumnPropNameInRow="Existencia" msprop:Generator_ColumnPropNameInTable="ExistenciaColumn" msprop:Generator_UserColumnName="Existencia" type="xs:double" />
+              <xs:element name="Toma" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnToma" msprop:Generator_ColumnPropNameInRow="Toma" msprop:Generator_ColumnPropNameInTable="TomaColumn" msprop:Generator_UserColumnName="Toma" type="xs:int" minOccurs="0" />
+              <xs:element name="Diferencia" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnDiferencia" msprop:Generator_ColumnPropNameInRow="Diferencia" msprop:Generator_ColumnPropNameInTable="DiferenciaColumn" msprop:Generator_UserColumnName="Diferencia" type="xs:int" minOccurs="0" />
+              <xs:element name="Contado" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnContado" msprop:Generator_ColumnPropNameInRow="Contado" msprop:Generator_ColumnPropNameInTable="ContadoColumn" msprop:Generator_UserColumnName="Contado" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:viewTomaGeneral" />
+      <xs:field xpath="mstns:Codigo" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

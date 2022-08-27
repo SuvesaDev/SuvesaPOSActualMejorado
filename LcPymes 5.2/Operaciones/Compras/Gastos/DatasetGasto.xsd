@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<xs:schema id="DatasetGasto" targetNamespace="http://tempuri.org/DatasetGasto.xsd" elementFormDefault="qualified"
+	attributeFormDefault="qualified" xmlns="http://tempuri.org/DatasetGasto.xsd" xmlns:mstns="http://tempuri.org/DatasetGasto.xsd"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+	<xs:element name="DatasetGasto" msdata:IsDataSet="true">
+		<xs:complexType>
+			<xs:choice maxOccurs="unbounded">
+				<xs:element name="GastoDetalle">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Cantidad" type="xs:string" minOccurs="0" />
+							<xs:element name="IdCompra" type="xs:double" minOccurs="0" />
+							<xs:element name="Gravado" type="xs:double" minOccurs="0" />
+							<xs:element name="Exento" type="xs:double" minOccurs="0" />
+							<xs:element name="Descuento" type="xs:double" minOccurs="0" />
+							<xs:element name="Impuesto" type="xs:double" minOccurs="0" />
+							<xs:element name="Total" type="xs:double" minOccurs="0" />
+							<xs:element name="CuentaContable" type="xs:string" />
+							<xs:element name="Impuesto_p" type="xs:double" minOccurs="0" />
+							<xs:element name="NuevoCostoBase" type="xs:double" minOccurs="0" />
+							<xs:element name="Costo" type="xs:double" minOccurs="0" />
+							<xs:element name="Descripcion" type="xs:string" minOccurs="0" />
+							<xs:element name="CuentaContableDescripcion" type="xs:string" minOccurs="0" />
+							<xs:element name="Descuento_P" type="xs:double" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:choice>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

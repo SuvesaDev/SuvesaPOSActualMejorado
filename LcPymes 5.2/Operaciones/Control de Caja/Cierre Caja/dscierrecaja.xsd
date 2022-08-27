@@ -1,0 +1,212 @@
+<?xml version="1.0" standalone="yes" ?>
+<xs:schema id="Dscierrecaja" targetNamespace="http://www.tempuri.org/Dscierrecaja.xsd" xmlns:mstns="http://www.tempuri.org/Dscierrecaja.xsd"
+	xmlns="http://www.tempuri.org/Dscierrecaja.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" attributeFormDefault="qualified" elementFormDefault="qualified">
+	<xs:element name="Dscierrecaja" msdata:IsDataSet="true" msdata:Locale="es-CR">
+		<xs:complexType>
+			<xs:choice maxOccurs="unbounded">
+				<xs:element name="Usuarios">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Perfil" type="xs:string" />
+							<xs:element name="Iniciales" type="xs:string" minOccurs="0" />
+							<xs:element name="Clave_Interna" type="xs:string" />
+							<xs:element name="Clave_Entrada" type="xs:string" />
+							<xs:element name="Nombre" type="xs:string" />
+							<xs:element name="Cedula" type="xs:string" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="Apertura_Total_Tope">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="id_total_tope" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:int" />
+							<xs:element name="NApertura" type="xs:int" />
+							<xs:element name="CodMoneda" type="xs:int" />
+							<xs:element name="Monto_Tope" type="xs:double" />
+							<xs:element name="MonedaNombre" type="xs:string" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="OpcionesDePago">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="id" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:long" />
+							<xs:element name="Documento" type="xs:double" minOccurs="0" />
+							<xs:element name="TipoDocumento" type="xs:string" minOccurs="0" />
+							<xs:element name="MontoPago" type="xs:double" minOccurs="0" />
+							<xs:element name="FormaPago" type="xs:string" minOccurs="0" />
+							<xs:element name="Denominacion" type="xs:double" minOccurs="0" />
+							<xs:element name="Usuario" type="xs:string" minOccurs="0" />
+							<xs:element name="Nombre" type="xs:string" minOccurs="0" />
+							<xs:element name="CodMoneda" type="xs:double" minOccurs="0" />
+							<xs:element name="Nombremoneda" type="xs:string" minOccurs="0" />
+							<xs:element name="TipoCambio" type="xs:double" minOccurs="0" />
+							<xs:element name="Fecha" type="xs:dateTime" minOccurs="0" />
+							<xs:element name="Numapertura" type="xs:int" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="denominacionesapertura">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Denominacion" type="xs:string" />
+							<xs:element name="Cantidad" type="xs:int" />
+							<xs:element name="Valor" type="xs:double" />
+							<xs:element name="id_denominacion" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:int" />
+							<xs:element name="id_total_tope" type="xs:int" />
+							<xs:element name="Monto_Total" type="xs:double" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="Moneda">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="CodMoneda" type="xs:int" />
+							<xs:element name="MonedaNombre" type="xs:string" />
+							<xs:element name="ValorCompra" type="xs:double" />
+							<xs:element name="ValorVenta" type="xs:double" />
+							<xs:element name="Simbolo" type="xs:string" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="Ventas">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Id" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:long" />
+							<xs:element name="Num_Factura" type="xs:double" />
+							<xs:element name="Tipo" type="xs:string" />
+							<xs:element name="Cod_Cliente" type="xs:int" />
+							<xs:element name="Nombre_Cliente" type="xs:string" />
+							<xs:element name="Orden" type="xs:long" />
+							<xs:element name="Cedula_Usuario" type="xs:string" />
+							<xs:element name="Pago_Comision" type="xs:boolean" />
+							<xs:element name="SubTotal" type="xs:double" />
+							<xs:element name="Descuento" type="xs:double" />
+							<xs:element name="Imp_Venta" type="xs:double" />
+							<xs:element name="Total" type="xs:double" />
+							<xs:element name="Fecha" type="xs:dateTime" />
+							<xs:element name="Vence" type="xs:dateTime" />
+							<xs:element name="Cod_Encargado_Compra" type="xs:string" />
+							<xs:element name="Contabilizado" type="xs:boolean" />
+							<xs:element name="AsientoVenta" type="xs:long" />
+							<xs:element name="ContabilizadoCVenta" type="xs:boolean" />
+							<xs:element name="AsientoCosto" type="xs:long" />
+							<xs:element name="Anulado" type="xs:boolean" />
+							<xs:element name="PagoImpuesto" type="xs:int" />
+							<xs:element name="FacturaCancelado" type="xs:boolean" />
+							<xs:element name="Num_Apertura" type="xs:long" />
+							<xs:element name="Entregado" type="xs:boolean" />
+							<xs:element name="Cod_Moneda" type="xs:int" />
+							<xs:element name="Moneda_Nombre" type="xs:string" />
+							<xs:element name="Direccion" type="xs:string" />
+							<xs:element name="Telefono" type="xs:string" />
+							<xs:element name="SubTotalGravada" type="xs:double" />
+							<xs:element name="SubTotalExento" type="xs:double" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="Detalle_Cierrecaja">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="id" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:int" />
+							<xs:element name="Num_cierre" type="xs:int" />
+							<xs:element name="Moneda" type="xs:string" />
+							<xs:element name="Efectivo" type="xs:double" />
+							<xs:element name="Tarjeta" type="xs:double" />
+							<xs:element name="Cheque" type="xs:double" />
+							<xs:element name="Transferencia" type="xs:double" />
+							<xs:element name="Total" type="xs:double" />
+							<xs:element name="Devoluciones" type="xs:double" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="cierrecaja">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="NumeroCierre" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:int" />
+							<xs:element name="Cajera" type="xs:string" />
+							<xs:element name="Nombre" type="xs:string" />
+							<xs:element name="Apertura" type="xs:int" />
+							<xs:element name="Usuario" type="xs:string" />
+							<xs:element name="Fecha" type="xs:dateTime" />
+							<xs:element name="NombreUsuario" type="xs:string" />
+							<xs:element name="Anulado" type="xs:boolean" />
+							<xs:element name="Devoluciones" type="xs:double" />
+							<xs:element name="Subtotal" type="xs:double" />
+							<xs:element name="TotalSistema" type="xs:double" />
+							<xs:element name="Equivalencia" type="xs:double" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="aperturacaja">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="NApertura" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:int" />
+							<xs:element name="Fecha" type="xs:dateTime" />
+							<xs:element name="Nombre" type="xs:string" />
+							<xs:element name="Estado" type="xs:string" />
+							<xs:element name="Observaciones" type="xs:string" />
+							<xs:element name="Anulado" type="xs:boolean" />
+							<xs:element name="Cedula" type="xs:string" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="DenominacionesAperturas">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Denominacion" type="xs:string" />
+							<xs:element name="Cantidad" type="xs:int" />
+							<xs:element name="Valor" type="xs:double" />
+							<xs:element name="Monto_Total" type="xs:double" />
+							<xs:element name="CodMoneda" type="xs:int" />
+							<xs:element name="MonedaNombre" type="xs:string" />
+							<xs:element name="Id" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:long" />
+							<xs:element name="NApertura" type="xs:int" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:choice>
+		</xs:complexType>
+		<xs:unique name="Constraint1" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:Usuarios" />
+			<xs:field xpath="mstns:Cedula" />
+		</xs:unique>
+		<xs:unique name="Apertura_Total_Tope_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:Apertura_Total_Tope" />
+			<xs:field xpath="mstns:id_total_tope" />
+		</xs:unique>
+		<xs:unique name="OpcionesDePago_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:OpcionesDePago" />
+			<xs:field xpath="mstns:id" />
+		</xs:unique>
+		<xs:unique name="denominacionesapertura_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:denominacionesapertura" />
+			<xs:field xpath="mstns:id_denominacion" />
+		</xs:unique>
+		<xs:unique name="Moneda_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:Moneda" />
+			<xs:field xpath="mstns:CodMoneda" />
+		</xs:unique>
+		<xs:unique name="Ventas_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:Ventas" />
+			<xs:field xpath="mstns:Id" />
+		</xs:unique>
+		<xs:unique name="Detalle_Cierrecaja_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:Detalle_Cierrecaja" />
+			<xs:field xpath="mstns:id" />
+		</xs:unique>
+		<xs:unique name="cierrecaja_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:cierrecaja" />
+			<xs:field xpath="mstns:NumeroCierre" />
+		</xs:unique>
+		<xs:unique name="aperturacaja_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:aperturacaja" />
+			<xs:field xpath="mstns:NApertura" />
+		</xs:unique>
+		<xs:unique name="DenominacionesAperturas_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:DenominacionesAperturas" />
+			<xs:field xpath="mstns:Id" />
+		</xs:unique>
+	</xs:element>
+</xs:schema>

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="AjusteCxC" targetNamespace="http://www.tempuri.org/AjusteCxC.xsd" xmlns:mstns="http://www.tempuri.org/AjusteCxC.xsd" xmlns="http://www.tempuri.org/AjusteCxC.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="AjusteCxC" msdata:IsDataSet="true" msdata:Locale="es-CR" msprop:Generator_DataSetName="AjusteCxC" msprop:Generator_UserDSName="AjusteCxC">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Moneda" msprop:Generator_TableClassName="MonedaDataTable" msprop:Generator_TableVarName="tableMoneda" msprop:Generator_RowChangedName="MonedaRowChanged" msprop:Generator_TablePropName="Moneda" msprop:Generator_RowDeletingName="MonedaRowDeleting" msprop:Generator_RowChangingName="MonedaRowChanging" msprop:Generator_RowEvHandlerName="MonedaRowChangeEventHandler" msprop:Generator_RowDeletedName="MonedaRowDeleted" msprop:Generator_RowClassName="MonedaRow" msprop:Generator_UserTableName="Moneda" msprop:Generator_RowEvArgName="MonedaRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CodMoneda" msprop:Generator_ColumnVarNameInTable="columnCodMoneda" msprop:Generator_ColumnPropNameInRow="CodMoneda" msprop:Generator_ColumnPropNameInTable="CodMonedaColumn" msprop:Generator_UserColumnName="CodMoneda" type="xs:int" />
+              <xs:element name="MonedaNombre" msprop:Generator_ColumnVarNameInTable="columnMonedaNombre" msprop:Generator_ColumnPropNameInRow="MonedaNombre" msprop:Generator_ColumnPropNameInTable="MonedaNombreColumn" msprop:Generator_UserColumnName="MonedaNombre" type="xs:string" />
+              <xs:element name="ValorCompra" msprop:Generator_ColumnVarNameInTable="columnValorCompra" msprop:Generator_ColumnPropNameInRow="ValorCompra" msprop:Generator_ColumnPropNameInTable="ValorCompraColumn" msprop:Generator_UserColumnName="ValorCompra" type="xs:double" />
+              <xs:element name="ValorVenta" msprop:Generator_ColumnVarNameInTable="columnValorVenta" msprop:Generator_ColumnPropNameInRow="ValorVenta" msprop:Generator_ColumnPropNameInTable="ValorVentaColumn" msprop:Generator_UserColumnName="ValorVenta" type="xs:double" />
+              <xs:element name="Simbolo" msprop:Generator_ColumnVarNameInTable="columnSimbolo" msprop:Generator_ColumnPropNameInRow="Simbolo" msprop:Generator_ColumnPropNameInTable="SimboloColumn" msprop:Generator_UserColumnName="Simbolo" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ajustesccobrar" msprop:Generator_TableClassName="ajustesccobrarDataTable" msprop:Generator_TableVarName="tableajustesccobrar" msprop:Generator_RowChangedName="ajustesccobrarRowChanged" msprop:Generator_TablePropName="ajustesccobrar" msprop:Generator_RowDeletingName="ajustesccobrarRowDeleting" msprop:Generator_RowChangingName="ajustesccobrarRowChanging" msprop:Generator_RowEvHandlerName="ajustesccobrarRowChangeEventHandler" msprop:Generator_RowDeletedName="ajustesccobrarRowDeleted" msprop:Generator_RowClassName="ajustesccobrarRow" msprop:Generator_UserTableName="ajustesccobrar" msprop:Generator_RowEvArgName="ajustesccobrarRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID_Ajuste" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:Generator_ColumnVarNameInTable="columnID_Ajuste" msprop:Generator_ColumnPropNameInRow="ID_Ajuste" msprop:Generator_ColumnPropNameInTable="ID_AjusteColumn" msprop:Generator_UserColumnName="ID_Ajuste" type="xs:long" />
+              <xs:element name="AjusteNo" msprop:Generator_ColumnVarNameInTable="columnAjusteNo" msprop:Generator_ColumnPropNameInRow="AjusteNo" msprop:Generator_ColumnPropNameInTable="AjusteNoColumn" msprop:Generator_UserColumnName="AjusteNo" type="xs:long" />
+              <xs:element name="Tipo" msprop:Generator_ColumnVarNameInTable="columnTipo" msprop:Generator_ColumnPropNameInRow="Tipo" msprop:Generator_ColumnPropNameInTable="TipoColumn" msprop:Generator_UserColumnName="Tipo" type="xs:string" />
+              <xs:element name="Cod_Cliente" msprop:Generator_ColumnVarNameInTable="columnCod_Cliente" msprop:Generator_ColumnPropNameInRow="Cod_Cliente" msprop:Generator_ColumnPropNameInTable="Cod_ClienteColumn" msprop:Generator_UserColumnName="Cod_Cliente" type="xs:long" />
+              <xs:element name="Fecha" msprop:Generator_ColumnVarNameInTable="columnFecha" msprop:Generator_ColumnPropNameInRow="Fecha" msprop:Generator_ColumnPropNameInTable="FechaColumn" msprop:Generator_UserColumnName="Fecha" type="xs:dateTime" />
+              <xs:element name="Saldo_Prev" msprop:Generator_ColumnVarNameInTable="columnSaldo_Prev" msprop:Generator_ColumnPropNameInRow="Saldo_Prev" msprop:Generator_ColumnPropNameInTable="Saldo_PrevColumn" msprop:Generator_UserColumnName="Saldo_Prev" type="xs:double" />
+              <xs:element name="Monto" msprop:Generator_ColumnVarNameInTable="columnMonto" msprop:Generator_ColumnPropNameInRow="Monto" msprop:Generator_ColumnPropNameInTable="MontoColumn" msprop:Generator_UserColumnName="Monto" type="xs:double" />
+              <xs:element name="Saldo_Act" msprop:Generator_ColumnVarNameInTable="columnSaldo_Act" msprop:Generator_ColumnPropNameInRow="Saldo_Act" msprop:Generator_ColumnPropNameInTable="Saldo_ActColumn" msprop:Generator_UserColumnName="Saldo_Act" type="xs:double" />
+              <xs:element name="Observaciones" msprop:Generator_ColumnVarNameInTable="columnObservaciones" msprop:Generator_ColumnPropNameInRow="Observaciones" msprop:Generator_ColumnPropNameInTable="ObservacionesColumn" msprop:Generator_UserColumnName="Observaciones" type="xs:string" />
+              <xs:element name="Anula" msprop:Generator_ColumnVarNameInTable="columnAnula" msprop:Generator_ColumnPropNameInRow="Anula" msprop:Generator_ColumnPropNameInTable="AnulaColumn" msprop:Generator_UserColumnName="Anula" type="xs:boolean" />
+              <xs:element name="Cod_Usuario" msprop:Generator_ColumnVarNameInTable="columnCod_Usuario" msprop:Generator_ColumnPropNameInRow="Cod_Usuario" msprop:Generator_ColumnPropNameInTable="Cod_UsuarioColumn" msprop:Generator_UserColumnName="Cod_Usuario" type="xs:string" />
+              <xs:element name="Contabilizado" msprop:Generator_ColumnVarNameInTable="columnContabilizado" msprop:Generator_ColumnPropNameInRow="Contabilizado" msprop:Generator_ColumnPropNameInTable="ContabilizadoColumn" msprop:Generator_UserColumnName="Contabilizado" type="xs:boolean" />
+              <xs:element name="Cod_Moneda" msprop:Generator_ColumnVarNameInTable="columnCod_Moneda" msprop:Generator_ColumnPropNameInRow="Cod_Moneda" msprop:Generator_ColumnPropNameInTable="Cod_MonedaColumn" msprop:Generator_UserColumnName="Cod_Moneda" type="xs:int" />
+              <xs:element name="Asiento" msprop:Generator_ColumnVarNameInTable="columnAsiento" msprop:Generator_ColumnPropNameInRow="Asiento" msprop:Generator_ColumnPropNameInTable="AsientoColumn" msprop:Generator_UserColumnName="Asiento" type="xs:long" />
+              <xs:element name="Nombre_Cliente" msprop:Generator_ColumnVarNameInTable="columnNombre_Cliente" msprop:Generator_ColumnPropNameInRow="Nombre_Cliente" msprop:Generator_ColumnPropNameInTable="Nombre_ClienteColumn" msprop:Generator_UserColumnName="Nombre_Cliente" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="detalle_ajustesccobrar" msprop:Generator_TableClassName="detalle_ajustesccobrarDataTable" msprop:Generator_TableVarName="tabledetalle_ajustesccobrar" msprop:Generator_RowChangedName="detalle_ajustesccobrarRowChanged" msprop:Generator_TablePropName="detalle_ajustesccobrar" msprop:Generator_RowDeletingName="detalle_ajustesccobrarRowDeleting" msprop:Generator_RowChangingName="detalle_ajustesccobrarRowChanging" msprop:Generator_RowEvHandlerName="detalle_ajustesccobrarRowChangeEventHandler" msprop:Generator_RowDeletedName="detalle_ajustesccobrarRowDeleted" msprop:Generator_RowClassName="detalle_ajustesccobrarRow" msprop:Generator_UserTableName="detalle_ajustesccobrar" msprop:Generator_RowEvArgName="detalle_ajustesccobrarRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Id_DetalleAjustecCobrar" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:Generator_ColumnVarNameInTable="columnId_DetalleAjustecCobrar" msprop:Generator_ColumnPropNameInRow="Id_DetalleAjustecCobrar" msprop:Generator_ColumnPropNameInTable="Id_DetalleAjustecCobrarColumn" msprop:Generator_UserColumnName="Id_DetalleAjustecCobrar" type="xs:long" />
+              <xs:element name="Id_AjustecCobrar" msprop:Generator_ColumnVarNameInTable="columnId_AjustecCobrar" msprop:Generator_ColumnPropNameInRow="Id_AjustecCobrar" msprop:Generator_ColumnPropNameInTable="Id_AjustecCobrarColumn" msprop:Generator_UserColumnName="Id_AjustecCobrar" type="xs:long" />
+              <xs:element name="Factura" msprop:Generator_ColumnVarNameInTable="columnFactura" msprop:Generator_ColumnPropNameInRow="Factura" msprop:Generator_ColumnPropNameInTable="FacturaColumn" msprop:Generator_UserColumnName="Factura" type="xs:double" />
+              <xs:element name="Tipo" msprop:Generator_ColumnVarNameInTable="columnTipo" msprop:Generator_ColumnPropNameInRow="Tipo" msprop:Generator_ColumnPropNameInTable="TipoColumn" msprop:Generator_UserColumnName="Tipo" type="xs:string" />
+              <xs:element name="Monto" msprop:Generator_ColumnVarNameInTable="columnMonto" msprop:Generator_ColumnPropNameInRow="Monto" msprop:Generator_ColumnPropNameInTable="MontoColumn" msprop:Generator_UserColumnName="Monto" type="xs:double" />
+              <xs:element name="Saldo_Ant" msprop:Generator_ColumnVarNameInTable="columnSaldo_Ant" msprop:Generator_ColumnPropNameInRow="Saldo_Ant" msprop:Generator_ColumnPropNameInTable="Saldo_AntColumn" msprop:Generator_UserColumnName="Saldo_Ant" type="xs:double" />
+              <xs:element name="Ajuste" msprop:Generator_ColumnVarNameInTable="columnAjuste" msprop:Generator_ColumnPropNameInRow="Ajuste" msprop:Generator_ColumnPropNameInTable="AjusteColumn" msprop:Generator_UserColumnName="Ajuste" type="xs:double" />
+              <xs:element name="Ajuste_SuMoneda" msprop:Generator_ColumnVarNameInTable="columnAjuste_SuMoneda" msprop:Generator_ColumnPropNameInRow="Ajuste_SuMoneda" msprop:Generator_ColumnPropNameInTable="Ajuste_SuMonedaColumn" msprop:Generator_UserColumnName="Ajuste_SuMoneda" type="xs:double" />
+              <xs:element name="Saldo_Ajustado" msprop:Generator_ColumnVarNameInTable="columnSaldo_Ajustado" msprop:Generator_ColumnPropNameInRow="Saldo_Ajustado" msprop:Generator_ColumnPropNameInTable="Saldo_AjustadoColumn" msprop:Generator_UserColumnName="Saldo_Ajustado" type="xs:double" />
+              <xs:element name="Observaciones" msprop:Generator_ColumnVarNameInTable="columnObservaciones" msprop:Generator_ColumnPropNameInRow="Observaciones" msprop:Generator_ColumnPropNameInTable="ObservacionesColumn" msprop:Generator_UserColumnName="Observaciones" type="xs:string" />
+              <xs:element name="TipoNota" msprop:Generator_ColumnVarNameInTable="columnTipoNota" msprop:Generator_ColumnPropNameInRow="TipoNota" msprop:Generator_ColumnPropNameInTable="TipoNotaColumn" msprop:Generator_UserColumnName="TipoNota" type="xs:string" />
+              <xs:element name="CuentaContable" msprop:Generator_ColumnVarNameInTable="columnCuentaContable" msprop:Generator_ColumnPropNameInRow="CuentaContable" msprop:Generator_ColumnPropNameInTable="CuentaContableColumn" msprop:Generator_UserColumnName="CuentaContable" type="xs:string" minOccurs="0" />
+              <xs:element name="IdCuentaC" msprop:Generator_ColumnVarNameInTable="columnIdCuentaC" msprop:Generator_ColumnPropNameInRow="IdCuentaC" msprop:Generator_ColumnPropNameInTable="IdCuentaCColumn" msprop:Generator_UserColumnName="IdCuentaC" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Moneda" />
+      <xs:field xpath="mstns:CodMoneda" />
+    </xs:unique>
+    <xs:unique name="ajustesccobrar_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:ajustesccobrar" />
+      <xs:field xpath="mstns:ID_Ajuste" />
+    </xs:unique>
+    <xs:unique name="detalle_ajustesccobrar_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:detalle_ajustesccobrar" />
+      <xs:field xpath="mstns:Id_DetalleAjustecCobrar" />
+    </xs:unique>
+    <xs:keyref name="ajustesccobrardetalle_ajustesccobrar" refer="ajustesccobrar_Constraint1" msprop:rel_Generator_UserChildTable="detalle_ajustesccobrar" msprop:rel_Generator_ChildPropName="Getdetalle_ajustesccobrarRows" msprop:rel_Generator_UserRelationName="ajustesccobrardetalle_ajustesccobrar" msprop:rel_Generator_RelationVarName="relationajustesccobrardetalle_ajustesccobrar" msprop:rel_Generator_UserParentTable="ajustesccobrar" msprop:rel_Generator_ParentPropName="ajustesccobrarRow">
+      <xs:selector xpath=".//mstns:detalle_ajustesccobrar" />
+      <xs:field xpath="mstns:Id_AjustecCobrar" />
+    </xs:keyref>
+    <xs:keyref name="Monedaajustesccobrar" refer="Constraint1" msprop:rel_Generator_UserChildTable="ajustesccobrar" msprop:rel_Generator_ChildPropName="GetajustesccobrarRows" msprop:rel_Generator_UserRelationName="Monedaajustesccobrar" msprop:rel_Generator_RelationVarName="relationMonedaajustesccobrar" msprop:rel_Generator_UserParentTable="Moneda" msprop:rel_Generator_ParentPropName="MonedaRow">
+      <xs:selector xpath=".//mstns:ajustesccobrar" />
+      <xs:field xpath="mstns:Cod_Moneda" />
+    </xs:keyref>
+  </xs:element>
+</xs:schema>

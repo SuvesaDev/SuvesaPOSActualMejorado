@@ -1,0 +1,183 @@
+<?xml version="1.0" standalone="yes"?>
+<xs:schema id="DataSet_DevCompras" targetNamespace="http://www.tempuri.org/DataSet_DevCompras.xsd" xmlns:mstns="http://www.tempuri.org/DataSet_DevCompras.xsd" xmlns="http://www.tempuri.org/DataSet_DevCompras.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:element name="DataSet_DevCompras" msdata:IsDataSet="true" msdata:Locale="es">
+    <xs:complexType>
+      <xs:choice maxOccurs="unbounded">
+        <xs:element name="Usuarios">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Cedula" type="xs:string" />
+              <xs:element name="Nombre" type="xs:string" />
+              <xs:element name="Clave_Entrada" type="xs:string" />
+              <xs:element name="Clave_Interna" type="xs:string" />
+              <xs:element name="Perfil" type="xs:int" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Moneda">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CodMoneda" type="xs:int" />
+              <xs:element name="MonedaNombre" type="xs:string" />
+              <xs:element name="ValorCompra" type="xs:double" />
+              <xs:element name="ValorVenta" type="xs:double" />
+              <xs:element name="Simbolo" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="compras">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Id_Compra" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:long" />
+              <xs:element name="Factura" type="xs:double" />
+              <xs:element name="CodigoProv" type="xs:int" />
+              <xs:element name="SubTotalGravado" type="xs:double" />
+              <xs:element name="SubTotalExento" type="xs:double" />
+              <xs:element name="Descuento" type="xs:double" />
+              <xs:element name="Impuesto" type="xs:double" />
+              <xs:element name="TotalFactura" type="xs:double" />
+              <xs:element name="Fecha" type="xs:dateTime" />
+              <xs:element name="Vence" type="xs:dateTime" />
+              <xs:element name="FechaIngreso" type="xs:dateTime" />
+              <xs:element name="MotivoGasto" type="xs:string" />
+              <xs:element name="Compra" type="xs:boolean" />
+              <xs:element name="Contabilizado" type="xs:boolean" />
+              <xs:element name="Consignacion" type="xs:boolean" />
+              <xs:element name="Asiento" type="xs:double" />
+              <xs:element name="ContaInve" type="xs:boolean" />
+              <xs:element name="AsientoInve" type="xs:double" />
+              <xs:element name="TipoCompra" type="xs:string" />
+              <xs:element name="CedulaUsuario" type="xs:string" />
+              <xs:element name="Cod_MonedaCompra" type="xs:int" />
+              <xs:element name="FacturaCancelado" type="xs:boolean" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="articulos_comprados">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Id_ArticuloComprados" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:long" />
+              <xs:element name="IdCompra" type="xs:long" />
+              <xs:element name="Codigo" type="xs:long" />
+              <xs:element name="Descripcion" type="xs:string" />
+              <xs:element name="Base" type="xs:double" />
+              <xs:element name="Monto_Flete" type="xs:double" />
+              <xs:element name="OtrosCargos" type="xs:double" />
+              <xs:element name="Costo" type="xs:double" />
+              <xs:element name="Cantidad" type="xs:double" />
+              <xs:element name="Gravado" type="xs:double" />
+              <xs:element name="Exento" type="xs:double" />
+              <xs:element name="Descuento_P" type="xs:double" />
+              <xs:element name="Descuento" type="xs:double" />
+              <xs:element name="Impuesto_P" type="xs:double" />
+              <xs:element name="Impuesto" type="xs:double" />
+              <xs:element name="Total" type="xs:double" />
+              <xs:element name="Devoluciones" type="xs:double" />
+              <xs:element name="NuevoCostoBase" type="xs:double" />
+              <xs:element name="Lote" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="articulos_Compras_devueltos">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Consecutivo" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:long" />
+              <xs:element name="Devolucion" type="xs:long" />
+              <xs:element name="Codigo" type="xs:long" />
+              <xs:element name="Descripcion" type="xs:string" />
+              <xs:element name="Cantidad" type="xs:double" />
+              <xs:element name="Precio_Costo" type="xs:double" />
+              <xs:element name="Precio_Base" type="xs:double" />
+              <xs:element name="Precio_Flete" type="xs:double" />
+              <xs:element name="Precio_Otros" type="xs:double" />
+              <xs:element name="Descuento" type="xs:double" />
+              <xs:element name="Monto_Descuento" type="xs:double" />
+              <xs:element name="Impuesto" type="xs:double" />
+              <xs:element name="Monto_Impuesto" type="xs:double" />
+              <xs:element name="SubtotalGravado" type="xs:double" />
+              <xs:element name="SubTotalExcento" type="xs:double" />
+              <xs:element name="SubTotal" type="xs:double" />
+              <xs:element name="Numero" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Lotes">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Id" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:long" />
+              <xs:element name="Numero" type="xs:string" />
+              <xs:element name="Vencimiento" type="xs:dateTime" />
+              <xs:element name="Cant_Inicial" type="xs:double" />
+              <xs:element name="Cant_Actual" type="xs:double" />
+              <xs:element name="Fecha_Entrada" type="xs:dateTime" />
+              <xs:element name="Cod_Articulo" type="xs:long" />
+              <xs:element name="Documento" type="xs:long" />
+              <xs:element name="Tipo" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="devoluciones_Compras">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Devolucion" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:long" />
+              <xs:element name="Id_Factura_Compra" type="xs:long" />
+              <xs:element name="SaldoAnt_Fact" type="xs:double" />
+              <xs:element name="SubTotalGravado" type="xs:double" />
+              <xs:element name="SubTotalExcento" type="xs:double" />
+              <xs:element name="Descuento" type="xs:double" />
+              <xs:element name="Impuesto" type="xs:double" />
+              <xs:element name="Monto" type="xs:double" />
+              <xs:element name="Fecha" type="xs:dateTime" />
+              <xs:element name="Contabilizado" type="xs:boolean" />
+              <xs:element name="Anulado" type="xs:boolean" />
+              <xs:element name="Cedula_Usuario" type="xs:string" />
+              <xs:element name="Cod_Moneda" type="xs:int" />
+              <xs:element name="NombrePro" type="xs:string" />
+              <xs:element name="FechaEntrada" type="xs:dateTime" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Usuarios" />
+      <xs:field xpath="mstns:Cedula" />
+    </xs:unique>
+    <xs:unique name="Moneda_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Moneda" />
+      <xs:field xpath="mstns:CodMoneda" />
+    </xs:unique>
+    <xs:unique name="compras_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:compras" />
+      <xs:field xpath="mstns:Id_Compra" />
+    </xs:unique>
+    <xs:unique name="articulos_comprados_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:articulos_comprados" />
+      <xs:field xpath="mstns:Id_ArticuloComprados" />
+    </xs:unique>
+    <xs:unique name="articulos_Compras_devueltos_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:articulos_Compras_devueltos" />
+      <xs:field xpath="mstns:Consecutivo" />
+    </xs:unique>
+    <xs:unique name="Lotes_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Lotes" />
+      <xs:field xpath="mstns:Id" />
+    </xs:unique>
+    <xs:unique name="devoluciones_Compras_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:devoluciones_Compras" />
+      <xs:field xpath="mstns:Devolucion" />
+    </xs:unique>
+    <xs:keyref name="Monedadevoluciones_Compras" refer="Moneda_Constraint1">
+      <xs:selector xpath=".//mstns:devoluciones_Compras" />
+      <xs:field xpath="mstns:Cod_Moneda" />
+    </xs:keyref>
+    <xs:keyref name="devoluciones_Comprasarticulos_Compras_devueltos" refer="devoluciones_Compras_Constraint1">
+      <xs:selector xpath=".//mstns:articulos_Compras_devueltos" />
+      <xs:field xpath="mstns:Devolucion" />
+    </xs:keyref>
+    <xs:keyref name="comprasarticulos_comprados" refer="compras_Constraint1">
+      <xs:selector xpath=".//mstns:articulos_comprados" />
+      <xs:field xpath="mstns:IdCompra" />
+    </xs:keyref>
+  </xs:element>
+</xs:schema>

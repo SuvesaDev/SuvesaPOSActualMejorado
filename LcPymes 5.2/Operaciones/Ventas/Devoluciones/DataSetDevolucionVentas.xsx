@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Este archivo lo genera de forma automática el diseñador de esquemas XML. Contiene información de diseño para componentes de la superficie de diseño.-->
+<XSDDesignerLayout layoutVersion="2" viewPortLeft="-682" viewPortTop="-1582" zoom="100">
+    <Moneda_XmlElement left="6243" top="254" width="5292" height="2805" selected="0" zOrder="1" index="0" expanded="1" />
+    <Usuarios_XmlElement left="318" top="265" width="5291" height="2805" selected="0" zOrder="2" index="1" expanded="1" />
+    <Kardex_XmlElement left="-185" top="4736" width="7938" height="6773" selected="0" zOrder="4" index="2" expanded="1" />
+    <devoluciones_ventas_XmlElement left="13334" top="7752" width="8996" height="6377" selected="0" zOrder="6" index="3" expanded="1" />
+    <OpcionesDePago_XmlElement left="24395" top="-556" width="5291" height="6774" selected="0" zOrder="7" index="4" expanded="1" />
+    <Ventas_XmlElement left="34687" top="423" width="9684" height="13970" selected="0" zOrder="21" index="5" expanded="1" />
+    <Ventas_Detalle_XmlElement left="24289" top="10432" width="9154" height="10742" selected="0" zOrder="9" index="6" expanded="1" />
+    <articulos_ventas_devueltos_XmlElement left="12118" top="-582" width="12595" height="8361" selected="0" zOrder="11" index="7" expanded="1" />
+    <devoluciones_ventasarticulos_ventas_devueltos_XmlKeyref left="10063" top="5024" width="503" height="503" selected="0" zOrder="13" />
+    <devoluciones_ventasKardex_XmlKeyref left="9548" top="8042" width="503" height="503" selected="0" zOrder="17" />
+</XSDDesignerLayout>

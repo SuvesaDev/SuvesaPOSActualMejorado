@@ -1,0 +1,70 @@
+<?xml version="1.0" standalone="yes"?>
+<xs:schema id="DataSetUsuario_logging" targetNamespace="http://www.tempuri.org/DataSetUsuario_logging.xsd" xmlns:mstns="http://www.tempuri.org/DataSetUsuario_logging.xsd" xmlns="http://www.tempuri.org/DataSetUsuario_logging.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:element name="DataSetUsuario_logging" msdata:IsDataSet="true" msdata:Locale="es-MX">
+    <xs:complexType>
+      <xs:choice maxOccurs="unbounded">
+        <xs:element name="Usuarios">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Cedula" type="xs:string" />
+              <xs:element name="Nombre" type="xs:string" />
+              <xs:element name="Clave_Entrada" type="xs:string" />
+              <xs:element name="Clave_Interna" type="xs:string" />
+              <xs:element name="Foto" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="CambiarPrecio" type="xs:boolean" />
+              <xs:element name="Porc_Precio" type="xs:double" />
+              <xs:element name="Aplicar_Desc" type="xs:boolean" />
+              <xs:element name="Porc_Desc" type="xs:double" />
+              <xs:element name="Exist_Negativa" type="xs:boolean" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="configuraciones">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Cedula" type="xs:string" />
+              <xs:element name="Empresa" type="xs:string" />
+              <xs:element name="Tel_01" type="xs:string" />
+              <xs:element name="Tel_02" type="xs:string" />
+              <xs:element name="Fax_01" type="xs:string" />
+              <xs:element name="Fax_02" type="xs:string" />
+              <xs:element name="Direccion" type="xs:string" />
+              <xs:element name="Imp_Venta" type="xs:double" />
+              <xs:element name="Frase" type="xs:string" />
+              <xs:element name="Cajeros" type="xs:int" />
+              <xs:element name="Logo" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="Intereses" type="xs:int" />
+              <xs:element name="UnicoConsecutivo" type="xs:boolean" />
+              <xs:element name="NumeroConsecutivo" type="xs:long" />
+              <xs:element name="ConsContado" type="xs:boolean" />
+              <xs:element name="NumeroContado" type="xs:long" />
+              <xs:element name="ConsCredito" type="xs:boolean" />
+              <xs:element name="NumeroCredito" type="xs:long" />
+              <xs:element name="ConsPuntoVenta" type="xs:boolean" />
+              <xs:element name="NumeroPuntoVenta" type="xs:long" />
+              <xs:element name="Taller" type="xs:boolean" />
+              <xs:element name="TallerContado" type="xs:long" />
+              <xs:element name="TallerCredito" type="xs:long" />
+              <xs:element name="Imprimir_en_Factura_Personalizada" type="xs:boolean" />
+              <xs:element name="FormatoCheck" type="xs:boolean" />
+              <xs:element name="Contabilidad" type="xs:boolean" />
+              <xs:element name="CambiaPrecioCredito" type="xs:boolean" />
+              <xs:element name="Mascotas" type="xs:boolean" />
+              <xs:element name="MascotasContado" type="xs:long" />
+              <xs:element name="MascotasCredito" type="xs:long" />
+              <xs:element name="regalias" type="xs:boolean" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Usuarios" />
+      <xs:field xpath="mstns:Cedula" />
+    </xs:unique>
+    <xs:unique name="configuraciones_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:configuraciones" />
+      <xs:field xpath="mstns:Cedula" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

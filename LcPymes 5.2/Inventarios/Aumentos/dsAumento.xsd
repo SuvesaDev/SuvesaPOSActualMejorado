@@ -1,0 +1,70 @@
+<?xml version="1.0" standalone="yes"?>
+<xs:schema id="dsAumento" targetNamespace="http://www.tempuri.org/dsAumento.xsd" xmlns:mstns="http://www.tempuri.org/dsAumento.xsd" xmlns="http://www.tempuri.org/dsAumento.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:element name="dsAumento" msdata:IsDataSet="true" msdata:Locale="es-CR">
+    <xs:complexType>
+      <xs:choice maxOccurs="unbounded">
+        <xs:element name="Familia">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Codigo" type="xs:int" />
+              <xs:element name="Descripcion" type="xs:string" />
+              <xs:element name="Observaciones" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Inventario">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Codigo" type="xs:long" />
+              <xs:element name="Costo" type="xs:double" />
+              <xs:element name="Precio_A" type="xs:double" />
+              <xs:element name="Precio_B" type="xs:double" />
+              <xs:element name="Precio_C" type="xs:double" />
+              <xs:element name="Precio_D" type="xs:double" />
+              <xs:element name="PrecioBase" type="xs:double" />
+              <xs:element name="Descripcion" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="SubFamilias">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CodigoFamilia" type="xs:int" />
+              <xs:element name="SubCodigo" type="xs:int" />
+              <xs:element name="Codigo" type="xs:string" />
+              <xs:element name="Descripcion" type="xs:string" />
+              <xs:element name="Observaciones" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Moneda">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CodMoneda" type="xs:int" />
+              <xs:element name="MonedaNombre" type="xs:string" />
+              <xs:element name="ValorCompra" type="xs:double" />
+              <xs:element name="ValorVenta" type="xs:double" />
+              <xs:element name="Simbolo" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Familia" />
+      <xs:field xpath="mstns:Codigo" />
+    </xs:unique>
+    <xs:unique name="Inventario_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Inventario" />
+      <xs:field xpath="mstns:Codigo" />
+    </xs:unique>
+    <xs:unique name="SubFamilias_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:SubFamilias" />
+      <xs:field xpath="mstns:Codigo" />
+    </xs:unique>
+    <xs:unique name="Moneda_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Moneda" />
+      <xs:field xpath="mstns:CodMoneda" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

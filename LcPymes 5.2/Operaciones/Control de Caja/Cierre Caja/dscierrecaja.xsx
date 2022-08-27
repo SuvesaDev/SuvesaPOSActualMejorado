@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Este archivo lo genera de forma automática el diseñador de esquemas XML. Contiene información de diseño para componentes de la superficie de diseño.-->
+<XSDDesignerLayout layoutVersion="2" viewPortLeft="-683" viewPortTop="-411" zoom="100">
+    <Usuarios_XmlElement left="317" top="254" width="5292" height="2805" selected="0" zOrder="10" index="0" expanded="1" />
+    <Apertura_Total_Tope_XmlElement left="12171" top="265" width="5292" height="3281" selected="0" zOrder="11" index="1" expanded="1" />
+    <OpcionesDePago_XmlElement left="18098" top="265" width="5291" height="6138" selected="0" zOrder="12" index="2" expanded="1" />
+    <denominacionesapertura_XmlElement left="24021" top="254" width="5292" height="2805" selected="0" zOrder="1" index="3" expanded="1" />
+    <Moneda_XmlElement left="29947" top="254" width="5292" height="2805" selected="0" zOrder="2" index="4" expanded="1" />
+    <Ventas_XmlElement left="41799" top="254" width="5292" height="2805" selected="0" zOrder="4" index="5" expanded="1" />
+    <Detalle_Cierrecaja_XmlElement left="41937" top="4763" width="13599" height="5186" selected="0" zOrder="6" index="6" expanded="1" />
+    <cierrecaja_XmlElement left="26061" top="4075" width="11748" height="6138" selected="0" zOrder="8" index="7" expanded="1" />
+    <aperturacaja_XmlElement left="6243" top="254" width="5292" height="2805" selected="0" zOrder="13" index="8" expanded="1" />
+    <DenominacionesAperturas_XmlElement left="56170" top="1000" width="5292" height="2963" selected="0" zOrder="14" index="9" expanded="1" />
+</XSDDesignerLayout>

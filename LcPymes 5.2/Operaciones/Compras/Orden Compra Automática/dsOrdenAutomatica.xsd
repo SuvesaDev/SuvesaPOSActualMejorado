@@ -1,0 +1,242 @@
+<?xml version="1.0" standalone="yes" ?>
+<xs:schema id="dsOrdenAutomatica" targetNamespace="http://www.tempuri.org/dsOrdenAutomatica.xsd"
+	xmlns:mstns="http://www.tempuri.org/dsOrdenAutomatica.xsd" xmlns="http://www.tempuri.org/dsOrdenAutomatica.xsd"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata"
+	attributeFormDefault="qualified" elementFormDefault="qualified">
+	<xs:element name="dsOrdenAutomatica" msdata:IsDataSet="true" msdata:Locale="es">
+		<xs:complexType>
+			<xs:choice maxOccurs="unbounded">
+				<xs:element name="detalle_ordencompra">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Id" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:int" />
+							<xs:element name="Orden" type="xs:long" />
+							<xs:element name="Codigo" type="xs:long" />
+							<xs:element name="Descripcion" type="xs:string" />
+							<xs:element name="CostoUnitario" type="xs:double" />
+							<xs:element name="Cantidad" type="xs:double" />
+							<xs:element name="TotalCompra" type="xs:double" />
+							<xs:element name="Porc_Descuento" type="xs:double" />
+							<xs:element name="Descuento" type="xs:double" />
+							<xs:element name="Porc_Impuesto" type="xs:double" />
+							<xs:element name="impuesto" type="xs:double" />
+							<xs:element name="OtrosCargos" type="xs:double" />
+							<xs:element name="Monto_Flete" type="xs:double" />
+							<xs:element name="Costo" type="xs:double" />
+							<xs:element name="Gravado" type="xs:double" />
+							<xs:element name="Exento" type="xs:double" />
+							<xs:element name="Vendidos" type="xs:double" />
+							<xs:element name="Exist_Actual" type="xs:double" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="Moneda">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="CodMoneda" type="xs:int" />
+							<xs:element name="MonedaNombre" type="xs:string" />
+							<xs:element name="ValorCompra" type="xs:double" />
+							<xs:element name="ValorVenta" type="xs:double" />
+							<xs:element name="Simbolo" type="xs:string" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="ordencompra">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Orden" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:long" />
+							<xs:element name="Proveedor" type="xs:int" />
+							<xs:element name="Nombre" type="xs:string" />
+							<xs:element name="Fecha" type="xs:dateTime" />
+							<xs:element name="contado" type="xs:boolean" />
+							<xs:element name="credito" type="xs:boolean" />
+							<xs:element name="diascredito" type="xs:double" />
+							<xs:element name="Plazo" type="xs:int" />
+							<xs:element name="Descuento" type="xs:double" />
+							<xs:element name="Impuesto" type="xs:double" />
+							<xs:element name="Total" type="xs:double" />
+							<xs:element name="Observaciones" type="xs:string" />
+							<xs:element name="Usuario" type="xs:string" />
+							<xs:element name="NombreUsuario" type="xs:string" />
+							<xs:element name="entregar" type="xs:string" />
+							<xs:element name="Cod_Moneda" type="xs:int" />
+							<xs:element name="SubTotalGravado" type="xs:double" />
+							<xs:element name="SubTotalExento" type="xs:double" />
+							<xs:element name="SubTotal" type="xs:double" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="SubUbicacion">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Codigo" type="xs:string" />
+							<xs:element name="Ubicaciones" msdata:ReadOnly="true" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="Ubicaciones">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Codigo" type="xs:int" />
+							<xs:element name="Descripcion" type="xs:string" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="Usuarios">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Cedula" type="xs:string" />
+							<xs:element name="Nombre" type="xs:string" />
+							<xs:element name="Clave_Entrada" type="xs:string" />
+							<xs:element name="Clave_Interna" type="xs:string" />
+							<xs:element name="Perfil" type="xs:string" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="Vista_OrdenC_Auto_X_Proveedor">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="CodigoProveedor" type="xs:int" minOccurs="0" />
+							<xs:element name="Nombre" type="xs:string" minOccurs="0" />
+							<xs:element name="Id" type="xs:int" />
+							<xs:element name="Orden" type="xs:int" />
+							<xs:element name="Codigo" type="xs:long" />
+							<xs:element name="Descripcion" type="xs:string" />
+							<xs:element name="CostoUnitario" type="xs:double" />
+							<xs:element name="Exist_Actual" type="xs:double" />
+							<xs:element name="Vendidos" type="xs:double" minOccurs="0" />
+							<xs:element name="TotalCompra" type="xs:int" />
+							<xs:element name="Porc_Descuento" type="xs:int" />
+							<xs:element name="Descuento" type="xs:int" />
+							<xs:element name="Porc_Impuesto" type="xs:double" />
+							<xs:element name="Impuesto" type="xs:int" />
+							<xs:element name="OtrosCargos" type="xs:int" />
+							<xs:element name="Monto_Flete" type="xs:int" />
+							<xs:element name="Costo" type="xs:double" />
+							<xs:element name="Gravado" type="xs:int" />
+							<xs:element name="Excento" type="xs:int" />
+							<xs:element name="Fecha" type="xs:dateTime" minOccurs="0" />
+							<xs:element name="Cantidad" type="xs:double" minOccurs="0" />
+							<xs:element name="Anulado" type="xs:boolean" />
+							<xs:element name="SubUbicacion" type="xs:string" />
+							<xs:element name="Codigo_Ubicacion" type="xs:int" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="Orden_Compras_Automaticas">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Codigo" type="xs:long" />
+							<xs:element name="Descripcion" type="xs:string" />
+							<xs:element name="CostoUnitario" type="xs:double" />
+							<xs:element name="Vendidos" msdata:ReadOnly="true" type="xs:int" minOccurs="0" />
+							<xs:element name="Exist_Actual" type="xs:double" />
+							<xs:element name="Porc_Impuesto" type="xs:double" />
+							<xs:element name="Costo" type="xs:double" />
+							<xs:element name="MonedaCosto" type="xs:int" />
+							<xs:element name="Cod_Pro" msdata:ReadOnly="true" type="xs:int" minOccurs="0" />
+							<xs:element name="Cod_Sububucacion" type="xs:string" />
+							<xs:element name="Cod_Ubicacion" type="xs:int" />
+							<xs:element name="Movimiento" msdata:ReadOnly="true" type="xs:int" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="Table1">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Codigo" type="xs:long" />
+							<xs:element name="Descripcion" type="xs:string" />
+							<xs:element name="CostoUnitario" type="xs:double" />
+							<xs:element name="Vendidos" msdata:ReadOnly="true" type="xs:int" minOccurs="0" />
+							<xs:element name="Exist_Actual" type="xs:double" />
+							<xs:element name="Porc_Impuesto" type="xs:double" />
+							<xs:element name="Costo" type="xs:double" />
+							<xs:element name="MonedaCosto" type="xs:int" />
+							<xs:element name="Cod_Sububucacion" type="xs:string" />
+							<xs:element name="Cod_Ubicacion" type="xs:int" />
+							<xs:element name="Movimiento" msdata:ReadOnly="true" type="xs:int" minOccurs="0" />
+							<xs:element name="Cod_Pro" msdata:ReadOnly="true" type="xs:int" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="Table2">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Codigo" type="xs:long" />
+							<xs:element name="Descripcion" type="xs:string" />
+							<xs:element name="CostoUnitario" type="xs:double" />
+							<xs:element name="Vendidos" msdata:ReadOnly="true" type="xs:int" minOccurs="0" />
+							<xs:element name="Exist_Actual" type="xs:double" />
+							<xs:element name="Porc_Impuesto" type="xs:double" />
+							<xs:element name="Costo" type="xs:double" />
+							<xs:element name="MonedaCosto" type="xs:int" />
+							<xs:element name="Cod_Sububucacion" type="xs:string" />
+							<xs:element name="Cod_Ubicacion" type="xs:int" />
+							<xs:element name="Movimiento" msdata:ReadOnly="true" type="xs:int" minOccurs="0" />
+							<xs:element name="Cod_Pro" msdata:ReadOnly="true" type="xs:int" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="Proveedores">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="CodigoProv" type="xs:int" />
+							<xs:element name="Nombre" type="xs:string" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:choice>
+		</xs:complexType>
+		<xs:unique name="Constraint1" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:detalle_ordencompra" />
+			<xs:field xpath="mstns:Id" />
+		</xs:unique>
+		<xs:unique name="Moneda_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:Moneda" />
+			<xs:field xpath="mstns:CodMoneda" />
+		</xs:unique>
+		<xs:unique name="ordencompra_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:ordencompra" />
+			<xs:field xpath="mstns:Orden" />
+		</xs:unique>
+		<xs:unique name="Ubicaciones_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:Ubicaciones" />
+			<xs:field xpath="mstns:Codigo" />
+		</xs:unique>
+		<xs:unique name="Usuarios_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:Usuarios" />
+			<xs:field xpath="mstns:Cedula" />
+		</xs:unique>
+		<xs:unique name="Orden_Compras_Automaticas_Constraint1" msdata:ConstraintName="Constraint1"
+			msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:Orden_Compras_Automaticas" />
+			<xs:field xpath="mstns:Codigo" />
+			<xs:field xpath="mstns:Cod_Sububucacion" />
+			<xs:field xpath="mstns:Cod_Ubicacion" />
+		</xs:unique>
+		<xs:unique name="Table1_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:Table1" />
+			<xs:field xpath="mstns:Codigo" />
+			<xs:field xpath="mstns:Cod_Sububucacion" />
+			<xs:field xpath="mstns:Cod_Ubicacion" />
+		</xs:unique>
+		<xs:unique name="Table2_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:Table2" />
+			<xs:field xpath="mstns:Codigo" />
+			<xs:field xpath="mstns:Cod_Sububucacion" />
+			<xs:field xpath="mstns:Cod_Ubicacion" />
+		</xs:unique>
+		<xs:unique name="Proveedores_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:Proveedores" />
+			<xs:field xpath="mstns:CodigoProv" />
+		</xs:unique>
+		<xs:keyref name="Monedaordencompra" refer="Moneda_Constraint1">
+			<xs:selector xpath=".//mstns:ordencompra" />
+			<xs:field xpath="mstns:Cod_Moneda" />
+		</xs:keyref>
+		<xs:keyref name="ordencompradetalle_ordencompra" refer="ordencompra_Constraint1">
+			<xs:selector xpath=".//mstns:detalle_ordencompra" />
+			<xs:field xpath="mstns:Orden" />
+		</xs:keyref>
+	</xs:element>
+</xs:schema>

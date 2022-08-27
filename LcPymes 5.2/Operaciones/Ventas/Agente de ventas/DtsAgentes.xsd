@@ -1,0 +1,40 @@
+<?xml version="1.0" standalone="yes"?>
+<xs:schema id="DtsAgentes" targetNamespace="http://www.tempuri.org/DtsAgentes.xsd" xmlns:mstns="http://www.tempuri.org/DtsAgentes.xsd" xmlns="http://www.tempuri.org/DtsAgentes.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:element name="DtsAgentes" msdata:IsDataSet="true" msdata:Locale="es-ES">
+    <xs:complexType>
+      <xs:choice maxOccurs="unbounded">
+        <xs:element name="Usuarios">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Nombre" type="xs:string" />
+              <xs:element name="Clave_Interna" type="xs:string" />
+              <xs:element name="cedula" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="agente_ventas">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="cedula" type="xs:string" />
+              <xs:element name="nombre" type="xs:string" />
+              <xs:element name="telefono" type="xs:string" />
+              <xs:element name="direccion" type="xs:string" minOccurs="0" />
+              <xs:element name="correo" type="xs:string" minOccurs="0" />
+              <xs:element name="activo" type="xs:boolean" minOccurs="0" />
+              <xs:element name="anulado" type="xs:boolean" minOccurs="0" />
+              <xs:element name="id" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:long" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Usuarios" />
+      <xs:field xpath="mstns:cedula" />
+    </xs:unique>
+    <xs:unique name="agente_ventas_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:agente_ventas" />
+      <xs:field xpath="mstns:id" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,66 @@
+<?xml version="1.0" standalone="yes" ?>
+<xs:schema id="DataSetRedondeoInventario" targetNamespace="http://www.tempuri.org/DataSetRedondeoInventario.xsd"
+	xmlns:mstns="http://www.tempuri.org/DataSetRedondeoInventario.xsd" xmlns="http://www.tempuri.org/DataSetRedondeoInventario.xsd"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata"
+	attributeFormDefault="qualified" elementFormDefault="qualified">
+	<xs:element name="DataSetRedondeoInventario" msdata:IsDataSet="true" msdata:Locale="es-MX">
+		<xs:complexType>
+			<xs:choice maxOccurs="unbounded">
+				<xs:element name="Inventario">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Codigo" type="xs:long" />
+							<xs:element name="Barras" type="xs:string" />
+							<xs:element name="Descripcion" type="xs:string" />
+							<xs:element name="MonedaVenta" type="xs:int" />
+							<xs:element name="IVenta" type="xs:double" />
+							<xs:element name="Precio_A" type="xs:double" />
+							<xs:element name="Precio_B" type="xs:double" />
+							<xs:element name="Precio_C" type="xs:double" />
+							<xs:element name="Precio_D" type="xs:double" />
+							<xs:element name="Precio_D_IVI" msdata:ReadOnly="true" msdata:Expression="Precio_D*(1+(IVenta/100))"
+								type="xs:double" minOccurs="0" />
+							<xs:element name="Precio_C_IVI" msdata:ReadOnly="true" msdata:Expression="Precio_C*(1+(IVenta/100))"
+								type="xs:double" minOccurs="0" />
+							<xs:element name="Precio_B_IVI" msdata:ReadOnly="true" msdata:Expression="Precio_B*(1+(IVenta/100))"
+								type="xs:double" minOccurs="0" />
+							<xs:element name="Precio_A_IVI" msdata:ReadOnly="true" msdata:Expression="Precio_A*(1+(IVenta/100))"
+								type="xs:double" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="Inventario1">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Codigo" type="xs:long" />
+							<xs:element name="Barras" type="xs:string" />
+							<xs:element name="Descripcion" type="xs:string" />
+							<xs:element name="MonedaVenta" type="xs:int" />
+							<xs:element name="IVenta" type="xs:double" />
+							<xs:element name="Precio_A" type="xs:double" />
+							<xs:element name="Precio_B" type="xs:double" />
+							<xs:element name="Precio_C" type="xs:double" />
+							<xs:element name="Precio_D" type="xs:double" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="Moneda">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="CodMoneda" type="xs:int" />
+							<xs:element name="MonedaNombre" type="xs:string" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:choice>
+		</xs:complexType>
+		<xs:unique name="Constraint1" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:Inventario" />
+			<xs:field xpath="mstns:Codigo" />
+		</xs:unique>
+		<xs:unique name="Moneda_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:Moneda" />
+			<xs:field xpath="mstns:CodMoneda" />
+		</xs:unique>
+	</xs:element>
+</xs:schema>

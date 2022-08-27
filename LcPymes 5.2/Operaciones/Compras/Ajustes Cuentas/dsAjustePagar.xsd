@@ -1,0 +1,93 @@
+<?xml version="1.0" standalone="yes"?>
+<xs:schema id="dsAjustePagar" targetNamespace="http://www.tempuri.org/dsAjustePagar.xsd" xmlns:mstns="http://www.tempuri.org/dsAjustePagar.xsd" xmlns="http://www.tempuri.org/dsAjustePagar.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:element name="dsAjustePagar" msdata:IsDataSet="true" msdata:Locale="es-CR">
+    <xs:complexType>
+      <xs:choice maxOccurs="unbounded">
+        <xs:element name="Moneda">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CodMoneda" type="xs:int" />
+              <xs:element name="MonedaNombre" type="xs:string" />
+              <xs:element name="ValorCompra" type="xs:double" />
+              <xs:element name="ValorVenta" type="xs:double" />
+              <xs:element name="Simbolo" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Detalle_AjustescPagar">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Id_DetalleAjustecPagar" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:long" />
+              <xs:element name="Id_AjustecPagar" type="xs:long" />
+              <xs:element name="Factura" type="xs:double" />
+              <xs:element name="Tipo" type="xs:string" />
+              <xs:element name="Monto" type="xs:double" />
+              <xs:element name="Saldo_Ant" type="xs:double" />
+              <xs:element name="Ajuste" type="xs:double" />
+              <xs:element name="Ajuste_SuMoneda" type="xs:double" />
+              <xs:element name="Saldo_Ajustado" type="xs:double" />
+              <xs:element name="Observaciones" type="xs:string" />
+              <xs:element name="TipoNota" type="xs:string" />
+              <xs:element name="ID_Compra" type="xs:long" />
+              <xs:element name="CuentaContable" type="xs:string" />
+              <xs:element name="DescripcionCuentaContable" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Monedas">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CodMoneda" type="xs:int" />
+              <xs:element name="MonedaNombre" type="xs:string" />
+              <xs:element name="ValorCompra" type="xs:double" />
+              <xs:element name="ValorVenta" type="xs:double" />
+              <xs:element name="Simbolo" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Ajustescpagar">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID_Ajuste" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:long" />
+              <xs:element name="AjusteNo" type="xs:long" minOccurs="0" />
+              <xs:element name="Tipo" type="xs:string" minOccurs="0" />
+              <xs:element name="Cod_Proveedor" type="xs:int" minOccurs="0" />
+              <xs:element name="Nombre_Proveedor" type="xs:string" minOccurs="0" />
+              <xs:element name="Fecha" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Saldo_Prev" type="xs:double" minOccurs="0" />
+              <xs:element name="Monto" type="xs:double" minOccurs="0" />
+              <xs:element name="Saldo_Act" type="xs:double" minOccurs="0" />
+              <xs:element name="Observaciones" type="xs:string" minOccurs="0" />
+              <xs:element name="Anula" type="xs:boolean" minOccurs="0" />
+              <xs:element name="Cod_Usuario" type="xs:string" minOccurs="0" />
+              <xs:element name="Contabilizado" type="xs:boolean" minOccurs="0" />
+              <xs:element name="Cod_Moneda" type="xs:int" minOccurs="0" />
+              <xs:element name="Asiento" type="xs:long" minOccurs="0" />
+              <xs:element name="FechaEntrada" type="xs:dateTime" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Moneda" />
+      <xs:field xpath="mstns:CodMoneda" />
+    </xs:unique>
+    <xs:unique name="Detalle_AjustescPagar_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Detalle_AjustescPagar" />
+      <xs:field xpath="mstns:Id_DetalleAjustecPagar" />
+    </xs:unique>
+    <xs:unique name="Monedas_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Monedas" />
+      <xs:field xpath="mstns:CodMoneda" />
+    </xs:unique>
+    <xs:unique name="Ajustescpagar_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Ajustescpagar" />
+      <xs:field xpath="mstns:ID_Ajuste" />
+    </xs:unique>
+    <xs:keyref name="AjustescpagarDetalle_AjustescPagar" refer="Ajustescpagar_Constraint1">
+      <xs:selector xpath=".//mstns:Detalle_AjustescPagar" />
+      <xs:field xpath="mstns:Id_AjustecPagar" />
+    </xs:keyref>
+  </xs:element>
+</xs:schema>

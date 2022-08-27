@@ -1,0 +1,74 @@
+<?xml version="1.0" standalone="yes" ?>
+<xs:schema id="DsAbonosapartados" targetNamespace="http://www.tempuri.org/DsAbonosapartados.xsd"
+	xmlns:mstns="http://www.tempuri.org/DsAbonosapartados.xsd" xmlns="http://www.tempuri.org/DsAbonosapartados.xsd"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata"
+	attributeFormDefault="qualified" elementFormDefault="qualified">
+	<xs:element name="DsAbonosapartados" msdata:IsDataSet="true" msdata:Locale="es-CR">
+		<xs:complexType>
+			<xs:choice maxOccurs="unbounded">
+				<xs:element name="Moneda">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="CodMoneda" type="xs:int" />
+							<xs:element name="MonedaNombre" type="xs:string" />
+							<xs:element name="ValorCompra" type="xs:double" />
+							<xs:element name="ValorVenta" type="xs:double" />
+							<xs:element name="Simbolo" type="xs:string" />
+							<xs:element name="cuentacontable" type="xs:string" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="Abono_Apartados">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Id_abonoapartado" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:long" />
+							<xs:element name="Cod_Cliente" type="xs:int" />
+							<xs:element name="Nombre_Cliente" type="xs:string" />
+							<xs:element name="Saldo_Cuenta" type="xs:double" />
+							<xs:element name="Monto" type="xs:double" />
+							<xs:element name="Saldo_Actual" type="xs:double" />
+							<xs:element name="Fecha" type="xs:dateTime" />
+							<xs:element name="Observaciones" type="xs:string" />
+							<xs:element name="Anula" type="xs:boolean" />
+							<xs:element name="Ced_Usuario" type="xs:string" />
+							<xs:element name="Cod_Moneda" type="xs:int" />
+							<xs:element name="Num_Recibo" type="xs:long" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="Abono_apartadosdetalle">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="id_detalleabono" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:long" />
+							<xs:element name="Id_abonoapartado" type="xs:long" />
+							<xs:element name="apartado" type="xs:long" />
+							<xs:element name="Monto" type="xs:double" />
+							<xs:element name="Saldo_Ant" type="xs:double" />
+							<xs:element name="Intereses" type="xs:double" />
+							<xs:element name="Abono" type="xs:double" />
+							<xs:element name="Abono_SuMoneda" type="xs:double" />
+							<xs:element name="Saldo" type="xs:double" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:choice>
+		</xs:complexType>
+		<xs:unique name="Constraint1" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:Moneda" />
+			<xs:field xpath="mstns:CodMoneda" />
+		</xs:unique>
+		<xs:unique name="Abono_Apartados_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:Abono_Apartados" />
+			<xs:field xpath="mstns:Id_abonoapartado" />
+		</xs:unique>
+		<xs:unique name="Abono_apartadosdetalle_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:Abono_apartadosdetalle" />
+			<xs:field xpath="mstns:id_detalleabono" />
+		</xs:unique>
+		<xs:keyref name="Abono_Apartados_Abono_apartadosdetalle" refer="mstns:Abono_Apartados_Constraint1"
+			msdata:DeleteRule="Cascade" msdata:UpdateRule="Cascade">
+			<xs:selector xpath=".//mstns:Abono_apartadosdetalle" />
+			<xs:field xpath="mstns:Id_abonoapartado" />
+		</xs:keyref>
+	</xs:element>
+</xs:schema>

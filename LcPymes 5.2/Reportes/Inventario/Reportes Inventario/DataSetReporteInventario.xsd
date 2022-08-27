@@ -1,0 +1,46 @@
+<?xml version="1.0" standalone="yes"?>
+<xs:schema id="DataSetReporteInventario" targetNamespace="http://www.tempuri.org/DataSetReporteInventario.xsd" xmlns:mstns="http://www.tempuri.org/DataSetReporteInventario.xsd" xmlns="http://www.tempuri.org/DataSetReporteInventario.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:element name="DataSetReporteInventario" msdata:IsDataSet="true" msdata:Locale="es-CR">
+    <xs:complexType>
+      <xs:choice maxOccurs="unbounded">
+        <xs:element name="Moneda">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="MonedaNombre" type="xs:string" />
+              <xs:element name="ValorCompra" type="xs:double" />
+              <xs:element name="CodMoneda" type="xs:int" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Proveedores">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CodigoProv" type="xs:int" />
+              <xs:element name="Nombre" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Bodegas">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID_Bodega" type="xs:int" />
+              <xs:element name="Nombre_Bodega" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Moneda" />
+      <xs:field xpath="mstns:CodMoneda" />
+    </xs:unique>
+    <xs:unique name="Proveedores_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Proveedores" />
+      <xs:field xpath="mstns:CodigoProv" />
+    </xs:unique>
+    <xs:unique name="Bodegas_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Bodegas" />
+      <xs:field xpath="mstns:ID_Bodega" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

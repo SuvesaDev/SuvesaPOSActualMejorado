@@ -1,0 +1,184 @@
+<?xml version="1.0" standalone="yes" ?>
+<xs:schema id="DataSetAbonosProveedor" targetNamespace="http://www.tempuri.org/DataSetAbonosProveedor.xsd"
+	xmlns:mstns="http://www.tempuri.org/DataSetAbonosProveedor.xsd" xmlns="http://www.tempuri.org/DataSetAbonosProveedor.xsd"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata"
+	attributeFormDefault="qualified" elementFormDefault="qualified">
+	<xs:element name="DataSetAbonosProveedor" msdata:IsDataSet="true" msdata:Locale="es-MX">
+		<xs:complexType>
+			<xs:choice maxOccurs="unbounded">
+				<xs:element name="Moneda">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="CodMoneda" type="xs:int" />
+							<xs:element name="MonedaNombre" type="xs:string" />
+							<xs:element name="ValorCompra" type="xs:double" />
+							<xs:element name="ValorVenta" type="xs:double" />
+							<xs:element name="Simbolo" type="xs:string" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="Bancos">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Codigo_banco" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:long" />
+							<xs:element name="Descripcion" type="xs:string" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="Cuentas_bancarias">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Cuenta" type="xs:string" />
+							<xs:element name="Codigo_banco" type="xs:long" />
+							<xs:element name="tipoCuenta" type="xs:string" />
+							<xs:element name="NombreCuenta" type="xs:string" />
+							<xs:element name="Cod_Moneda" type="xs:int" />
+							<xs:element name="Id_CuentaBancaria" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:int" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="Cuentas_Bancarias_Proveedor">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Id_Cuenta" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:int" />
+							<xs:element name="CodigoProv" type="xs:int" />
+							<xs:element name="TipoCuenta" type="xs:string" />
+							<xs:element name="Banco" type="xs:string" />
+							<xs:element name="CodMoneda" type="xs:int" />
+							<xs:element name="Num_Cuenta" type="xs:string" />
+							<xs:element name="MonedaNombre" type="xs:string" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="Monedas">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="CodMoneda" type="xs:int" />
+							<xs:element name="MonedaNombre" type="xs:string" />
+							<xs:element name="ValorCompra" type="xs:double" />
+							<xs:element name="ValorVenta" type="xs:double" />
+							<xs:element name="Simbolo" type="xs:string" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="Proveedores">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="CodigoProv" type="xs:int" />
+							<xs:element name="Cedula" type="xs:string" />
+							<xs:element name="Nombre" type="xs:string" />
+							<xs:element name="Contacto" type="xs:string" />
+							<xs:element name="Telefono_Cont" type="xs:string" />
+							<xs:element name="Observaciones" type="xs:string" />
+							<xs:element name="Telefono1" type="xs:string" />
+							<xs:element name="Telefono2" type="xs:string" />
+							<xs:element name="Fax1" type="xs:string" />
+							<xs:element name="Fax2" type="xs:string" />
+							<xs:element name="Email" type="xs:string" />
+							<xs:element name="Direccion" type="xs:string" />
+							<xs:element name="MontoCredito" type="xs:double" />
+							<xs:element name="Plazo" type="xs:int" />
+							<xs:element name="CostoTotal" type="xs:boolean" />
+							<xs:element name="ImpIncluido" type="xs:boolean" />
+							<xs:element name="PedidosMes" type="xs:int" />
+							<xs:element name="Utilidad_Inventario" type="xs:double" />
+							<xs:element name="Utilidad_Fija" type="xs:boolean" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="abonocpagar">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Id_Abonocpagar" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:long" />
+							<xs:element name="Documento" type="xs:long" />
+							<xs:element name="TipoDocumento" type="xs:string" />
+							<xs:element name="CuentaBancaria" type="xs:string" />
+							<xs:element name="Codigo_banco" type="xs:long" />
+							<xs:element name="Saldo_Cuenta" type="xs:double" />
+							<xs:element name="Monto" type="xs:double" />
+							<xs:element name="Saldo_Actual" type="xs:double" />
+							<xs:element name="Fecha" type="xs:dateTime" />
+							<xs:element name="Contabilizado" type="xs:boolean" />
+							<xs:element name="Recibo" type="xs:string" />
+							<xs:element name="Cedula_Usuario" type="xs:string" />
+							<xs:element name="Cod_Proveedor" type="xs:int" />
+							<xs:element name="Anulado" type="xs:boolean" />
+							<xs:element name="cod_Moneda" type="xs:int" />
+							<xs:element name="TipoCambio" type="xs:double" />
+							<xs:element name="MontoLetras" type="xs:string" />
+							<xs:element name="CuentaDestino" type="xs:long" />
+							<xs:element name="FechaEntrada" type="xs:dateTime" />
+							<xs:element name="Observaciones" type="xs:string" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="detalle_abonocpagar">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Id_Detalle_abonocpagar" msdata:ReadOnly="true" msdata:AutoIncrement="true"
+								type="xs:int" />
+							<xs:element name="Factura" type="xs:double" />
+							<xs:element name="Cod_Proveedor" type="xs:int" />
+							<xs:element name="MontoFactura" type="xs:double" />
+							<xs:element name="Saldo_Ant" type="xs:double" />
+							<xs:element name="Abono" type="xs:double" />
+							<xs:element name="Abono_SuMoneda" type="xs:double" />
+							<xs:element name="Saldo_Actual" type="xs:double" />
+							<xs:element name="Id_Abonocpagar" type="xs:long" />
+							<xs:element name="Id_Compra" type="xs:double" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:choice>
+		</xs:complexType>
+		<xs:unique name="Constraint1" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:Moneda" />
+			<xs:field xpath="mstns:CodMoneda" />
+		</xs:unique>
+		<xs:unique name="Bancos_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:Bancos" />
+			<xs:field xpath="mstns:Codigo_banco" />
+		</xs:unique>
+		<xs:unique name="Cuentas_bancarias_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:Cuentas_bancarias" />
+			<xs:field xpath="mstns:Id_CuentaBancaria" />
+		</xs:unique>
+		<xs:unique name="Cuentas_Bancarias_Proveedor_Constraint1" msdata:ConstraintName="Constraint1"
+			msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:Cuentas_Bancarias_Proveedor" />
+			<xs:field xpath="mstns:Id_Cuenta" />
+		</xs:unique>
+		<xs:unique name="Monedas_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:Monedas" />
+			<xs:field xpath="mstns:CodMoneda" />
+		</xs:unique>
+		<xs:unique name="Proveedores_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:Proveedores" />
+			<xs:field xpath="mstns:CodigoProv" />
+		</xs:unique>
+		<xs:unique name="abonocpagar_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:abonocpagar" />
+			<xs:field xpath="mstns:Id_Abonocpagar" />
+		</xs:unique>
+		<xs:unique name="detalle_abonocpagar_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:detalle_abonocpagar" />
+			<xs:field xpath="mstns:Id_Detalle_abonocpagar" />
+		</xs:unique>
+		<xs:keyref name="Bancosabonocpagar" refer="Bancos_Constraint1">
+			<xs:selector xpath=".//mstns:abonocpagar" />
+			<xs:field xpath="mstns:Codigo_banco" />
+		</xs:keyref>
+		<xs:keyref name="ProveedoresCuentas_Bancarias_Proveedor" refer="Proveedores_Constraint1">
+			<xs:selector xpath=".//mstns:Cuentas_Bancarias_Proveedor" />
+			<xs:field xpath="mstns:CodigoProv" />
+		</xs:keyref>
+		<xs:keyref name="BancosCuentas_bancarias" refer="Bancos_Constraint1">
+			<xs:selector xpath=".//mstns:Cuentas_bancarias" />
+			<xs:field xpath="mstns:Codigo_banco" />
+		</xs:keyref>
+		<xs:keyref name="abonocpagardetalle_abonocpagar" refer="mstns:abonocpagar_Constraint1">
+			<xs:selector xpath=".//mstns:detalle_abonocpagar" />
+			<xs:field xpath="mstns:Id_Abonocpagar" />
+		</xs:keyref>
+	</xs:element>
+</xs:schema>

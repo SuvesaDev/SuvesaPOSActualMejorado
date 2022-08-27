@@ -1,0 +1,3 @@
+﻿Public Class frmAgregarCartaExoneracionAutomatica
+
+End Class

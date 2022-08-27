@@ -1,0 +1,52 @@
+<?xml version="1.0" standalone="yes"?>
+<xs:schema id="DataSetActualizaLotes" targetNamespace="http://www.tempuri.org/DataSetActualizaLotes.xsd" xmlns:mstns="http://www.tempuri.org/DataSetActualizaLotes.xsd" xmlns="http://www.tempuri.org/DataSetActualizaLotes.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:element name="DataSetActualizaLotes" msdata:IsDataSet="true" msdata:Locale="es-CR">
+    <xs:complexType>
+      <xs:choice maxOccurs="unbounded">
+        <xs:element name="articulos_comprados">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Codigo" type="xs:long" />
+              <xs:element name="CodArticulo" type="xs:string" />
+              <xs:element name="Descripcion" type="xs:string" />
+              <xs:element name="Lote" type="xs:string" />
+              <xs:element name="Id_ArticuloComprados" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:long" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="CatalogoInventario">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Codigo" type="xs:long" />
+              <xs:element name="Cod_Articulo" type="xs:string" />
+              <xs:element name="Descripcion" msdata:ReadOnly="true" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Lotes">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Id" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:long" />
+              <xs:element name="Numero" type="xs:string" />
+              <xs:element name="Vencimiento" type="xs:dateTime" />
+              <xs:element name="Cant_Inicial" type="xs:double" />
+              <xs:element name="Cant_Actual" type="xs:double" />
+              <xs:element name="Fecha_Entrada" type="xs:dateTime" />
+              <xs:element name="Cod_Articulo" type="xs:long" />
+              <xs:element name="Documento" type="xs:long" />
+              <xs:element name="Tipo" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:articulos_comprados" />
+      <xs:field xpath="mstns:Id_ArticuloComprados" />
+    </xs:unique>
+    <xs:unique name="Lotes_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Lotes" />
+      <xs:field xpath="mstns:Id" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

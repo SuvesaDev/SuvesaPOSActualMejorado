@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dsrifa" targetNamespace="http://tempuri.org/dsrifa.xsd" xmlns:mstns="http://tempuri.org/dsrifa.xsd" xmlns="http://tempuri.org/dsrifa.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dsrifa" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="dsrifa" msprop:Generator_DataSetName="dsrifa">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="rifa" msprop:Generator_UserTableName="rifa" msprop:Generator_RowDeletedName="rifaRowDeleted" msprop:Generator_RowChangedName="rifaRowChanged" msprop:Generator_RowClassName="rifaRow" msprop:Generator_RowChangingName="rifaRowChanging" msprop:Generator_RowEvArgName="rifaRowChangeEvent" msprop:Generator_RowEvHandlerName="rifaRowChangeEventHandler" msprop:Generator_TableClassName="rifaDataTable" msprop:Generator_TableVarName="tablerifa" msprop:Generator_RowDeletingName="rifaRowDeleting" msprop:Generator_TablePropName="rifa">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:Generator_UserColumnName="id" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" type="xs:long" />
+              <xs:element name="descripcion" msprop:Generator_UserColumnName="descripcion" msprop:Generator_ColumnVarNameInTable="columndescripcion" msprop:Generator_ColumnPropNameInRow="descripcion" msprop:Generator_ColumnPropNameInTable="descripcionColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="fecha_inicio" msprop:Generator_UserColumnName="fecha_inicio" msprop:Generator_ColumnVarNameInTable="columnfecha_inicio" msprop:Generator_ColumnPropNameInRow="fecha_inicio" msprop:Generator_ColumnPropNameInTable="fecha_inicioColumn" type="xs:dateTime" />
+              <xs:element name="fecha_fin" msprop:Generator_UserColumnName="fecha_fin" msprop:Generator_ColumnVarNameInTable="columnfecha_fin" msprop:Generator_ColumnPropNameInRow="fecha_fin" msprop:Generator_ColumnPropNameInTable="fecha_finColumn" type="xs:dateTime" />
+              <xs:element name="finalizada" msprop:Generator_UserColumnName="finalizada" msprop:Generator_ColumnVarNameInTable="columnfinalizada" msprop:Generator_ColumnPropNameInRow="finalizada" msprop:Generator_ColumnPropNameInTable="finalizadaColumn" type="xs:boolean" />
+              <xs:element name="anulada" msprop:Generator_UserColumnName="anulada" msprop:Generator_ColumnVarNameInTable="columnanulada" msprop:Generator_ColumnPropNameInRow="anulada" msprop:Generator_ColumnPropNameInTable="anuladaColumn" type="xs:boolean" />
+              <xs:element name="cant_min" msprop:Generator_UserColumnName="cant_min" msprop:Generator_ColumnPropNameInRow="cant_min" msprop:Generator_ColumnVarNameInTable="columncant_min" msprop:Generator_ColumnPropNameInTable="cant_minColumn" type="xs:int" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:rifa" />
+      <xs:field xpath="mstns:id" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

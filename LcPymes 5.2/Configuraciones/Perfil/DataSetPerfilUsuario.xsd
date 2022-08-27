@@ -1,0 +1,87 @@
+<?xml version="1.0" standalone="yes" ?>
+<xs:schema id="DataSetPerfilUsuario" targetNamespace="http://www.tempuri.org/DataSetPerfilUsuario.xsd"
+	xmlns:mstns="http://www.tempuri.org/DataSetPerfilUsuario.xsd" xmlns="http://www.tempuri.org/DataSetPerfilUsuario.xsd"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata"
+	attributeFormDefault="qualified" elementFormDefault="qualified">
+	<xs:element name="DataSetPerfilUsuario" msdata:IsDataSet="true" msdata:Locale="es-CR">
+		<xs:complexType>
+			<xs:choice maxOccurs="unbounded">
+				<xs:element name="Perfil_x_Usuario">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Id_Perfil" type="xs:int" />
+							<xs:element name="Id_Usuario" type="xs:string" />
+							<xs:element name="Id_PerUser" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:int" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="Perfil">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Id_Perfil" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:int" />
+							<xs:element name="Nombre_Perfil" type="xs:string" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="Modulos">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Id_modulo" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:int" />
+							<xs:element name="Modulo_Nombre_Interno" type="xs:string" />
+							<xs:element name="Modulo_Nombre" type="xs:string" />
+							<xs:element name="Software" type="xs:int" />
+							<xs:element name="Grupo" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="Perfil_x_Modulo">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Id_Perfil" type="xs:int" />
+							<xs:element name="Id_Modulo" type="xs:int" />
+							<xs:element name="Accion_Ejecucion" type="xs:boolean" />
+							<xs:element name="Accion_Actualizacion" type="xs:boolean" />
+							<xs:element name="Accion_Eliminacion" type="xs:boolean" />
+							<xs:element name="Accion_Busqueda" type="xs:boolean" />
+							<xs:element name="Accion_Impresion" type="xs:boolean" />
+							<xs:element name="Accion_Opcion" type="xs:boolean" />
+							<xs:element name="Id_Modulo_Perfil" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:int" />
+							<xs:element name="Menu" type="xs:string" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="Modulos1">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Id_modulo" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:int" />
+							<xs:element name="Modulo_Nombre_Interno" type="xs:string" />
+							<xs:element name="Modulo_Nombre" type="xs:string" />
+							<xs:element name="Software" type="xs:int" />
+							<xs:element name="Grupo" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:choice>
+		</xs:complexType>
+		<xs:unique name="Constraint1" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:Perfil_x_Usuario" />
+			<xs:field xpath="mstns:Id_PerUser" />
+		</xs:unique>
+		<xs:unique name="Perfil_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:Perfil" />
+			<xs:field xpath="mstns:Id_Perfil" />
+		</xs:unique>
+		<xs:unique name="Modulos_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:Modulos" />
+			<xs:field xpath="mstns:Id_modulo" />
+		</xs:unique>
+		<xs:unique name="Perfil_x_Modulo_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:Perfil_x_Modulo" />
+			<xs:field xpath="mstns:Id_Modulo_Perfil" />
+		</xs:unique>
+		<xs:keyref name="PerfilPerfil_x_Modulo" refer="Perfil_Constraint1">
+			<xs:selector xpath=".//mstns:Perfil_x_Modulo" />
+			<xs:field xpath="mstns:Id_Perfil" />
+		</xs:keyref>
+	</xs:element>
+</xs:schema>

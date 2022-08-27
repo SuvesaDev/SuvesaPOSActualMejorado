@@ -1,0 +1,45 @@
+<?xml version="1.0" standalone="yes" ?>
+<xs:schema id="DataSet_Ubicaciones" targetNamespace="http://www.tempuri.org/DataSet_Ubicaciones.xsd"
+	xmlns:mstns="http://www.tempuri.org/DataSet_Ubicaciones.xsd" xmlns="http://www.tempuri.org/DataSet_Ubicaciones.xsd"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata"
+	attributeFormDefault="qualified" elementFormDefault="qualified">
+	<xs:element name="DataSet_Ubicaciones" msdata:IsDataSet="true" msdata:Locale="es-MX">
+		<xs:complexType>
+			<xs:choice maxOccurs="unbounded">
+				<xs:element name="SubUbicacion">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Cod_Ubicacion" type="xs:int" />
+							<xs:element name="Cod_SubUbicacion" type="xs:int" />
+							<xs:element name="Codigo" type="xs:string" />
+							<xs:element name="DescripcionD" type="xs:string" />
+							<xs:element name="Observaciones" type="xs:string" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="Ubicaciones">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Codigo" type="xs:int" />
+							<xs:element name="Descripcion" type="xs:string" />
+							<xs:element name="Observaciones" type="xs:string" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:choice>
+		</xs:complexType>
+		<xs:unique name="Constraint1" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:SubUbicacion" />
+			<xs:field xpath="mstns:Codigo" />
+		</xs:unique>
+		<xs:unique name="Ubicaciones_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:Ubicaciones" />
+			<xs:field xpath="mstns:Codigo" />
+		</xs:unique>
+		<xs:keyref name="UbicacionesSubUbicacion" refer="mstns:Ubicaciones_Constraint1" msdata:AcceptRejectRule="Cascade"
+			msdata:DeleteRule="Cascade" msdata:UpdateRule="Cascade">
+			<xs:selector xpath=".//mstns:SubUbicacion" />
+			<xs:field xpath="mstns:Cod_Ubicacion" />
+		</xs:keyref>
+	</xs:element>
+</xs:schema>

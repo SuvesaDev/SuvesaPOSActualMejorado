@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Este archivo lo genera de forma automática el diseñador de esquemas XML. Contiene información de diseño para componentes de la superficie de diseño.-->
+<XSDDesignerLayout layoutVersion="2" viewPortLeft="-1680" viewPortTop="-6630" zoom="100">
+    <Usuarios_XmlElement left="10158" top="6394" width="5292" height="2963" selected="0" zOrder="1" index="0" expanded="1" />
+    <devoluciones_Compras_XmlElement left="-106" top="-5504" width="5292" height="7620" selected="0" zOrder="2" index="1" expanded="1" />
+    <articulos_Compras_devueltos_XmlElement left="6960" top="-5630" width="7514" height="8467" selected="0" zOrder="3" index="2" expanded="1" />
+    <Moneda_XmlElement left="-929" top="5260" width="5292" height="2963" selected="0" zOrder="4" index="3" expanded="1" />
+    <compras_XmlElement left="14763" top="-2814" width="5292" height="6773" selected="0" zOrder="6" index="4" expanded="1" />
+    <articulos_comprados_XmlElement left="20744" top="-2778" width="8943" height="6773" selected="0" zOrder="7" index="5" expanded="1" />
+    <devoluciones_Comprasarticulos_Compras_devueltos_XmlKeyref left="6496" top="-330" width="503" height="503" selected="0" zOrder="12" />
+    <Monedadevoluciones_Compras_XmlKeyref left="-1442" top="2787" width="503" height="503" selected="0" zOrder="16" />
+    <comprasarticulos_comprados_XmlKeyref left="20029" top="489" width="503" height="503" selected="0" zOrder="8" />
+</XSDDesignerLayout>

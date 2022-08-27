@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Este archivo lo genera de forma automática el diseñador de esquemas XML. Contiene información de diseño para componentes de la superficie de diseño.-->
+<XSDDesignerLayout layoutVersion="2" viewPortLeft="-1081" viewPortTop="-1619" zoom="100">
+    <Moneda_XmlElement left="16481" top="-250" width="5292" height="2805" selected="0" zOrder="1" index="0" expanded="1" />
+    <referenciabancaria_XmlElement left="16720" top="5916" width="5292" height="2805" selected="0" zOrder="2" index="1" expanded="1" />
+    <Table_XmlElement left="24180" top="-428" width="5292" height="2805" selected="0" zOrder="28" index="2" expanded="1" />
+    <Bitacora_XmlElement left="30106" top="1000" width="5292" height="2805" selected="0" zOrder="29" index="3" expanded="1" />
+    <encargadocompras_XmlElement left="16587" top="2927" width="5292" height="2805" selected="0" zOrder="4" index="4" expanded="1" />
+    <referenciacomercial_XmlElement left="16878" top="9038" width="5292" height="2805" selected="0" zOrder="6" index="5" expanded="1" />
+    <Usuarios_XmlElement left="-81" top="69" width="5292" height="2805" selected="0" zOrder="8" index="6" expanded="1" />
+    <Clientes_XmlElement left="6112" top="-27" width="5291" height="10901" selected="0" zOrder="10" index="7" expanded="1" />
+    <Clientesreferenciacomercial_XmlKeyref left="12976" top="7852" width="503" height="503" selected="0" zOrder="16" />
+    <Clientesencargadocompras_XmlKeyref left="12910" top="4770" width="503" height="503" selected="0" zOrder="20" />
+    <Clientesreferenciabancaria_XmlKeyref left="13810" top="6185" width="503" height="503" selected="0" zOrder="24" />
+    <MonedaClientes_XmlKeyref left="11759" top="1819" width="503" height="503" selected="0" zOrder="12" />
+</XSDDesignerLayout>

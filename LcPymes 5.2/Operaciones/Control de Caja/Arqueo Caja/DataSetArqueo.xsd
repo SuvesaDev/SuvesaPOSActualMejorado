@@ -1,0 +1,134 @@
+<?xml version="1.0" standalone="yes"?>
+<xs:schema id="DataSetArqueo" targetNamespace="http://www.tempuri.org/DataSetArqueo.xsd" xmlns:mstns="http://www.tempuri.org/DataSetArqueo.xsd" xmlns="http://www.tempuri.org/DataSetArqueo.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:element name="DataSetArqueo" msdata:IsDataSet="true" msdata:Locale="es-MX">
+    <xs:complexType>
+      <xs:choice maxOccurs="unbounded">
+        <xs:element name="aperturacaja">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="NApertura" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:int" />
+              <xs:element name="Fecha" type="xs:dateTime" />
+              <xs:element name="Nombre" type="xs:string" />
+              <xs:element name="Estado" type="xs:string" />
+              <xs:element name="Observaciones" type="xs:string" />
+              <xs:element name="Anulado" type="xs:boolean" />
+              <xs:element name="Cedula" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ArqueoEfectivo">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Id" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:int" />
+              <xs:element name="Id_Arqueo" type="xs:long" />
+              <xs:element name="Id_Denominacion" type="xs:long" />
+              <xs:element name="Monto" type="xs:double" />
+              <xs:element name="Cantidad" type="xs:int" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ArqueoTarjeta">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Id" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:int" />
+              <xs:element name="Id_Arqueo" type="xs:long" />
+              <xs:element name="Id_Tarjeta" type="xs:int" />
+              <xs:element name="Monto" type="xs:double" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Denominacion_Moneda">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Id" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:long" />
+              <xs:element name="CodMoneda" type="xs:int" />
+              <xs:element name="Denominacion" type="xs:int" />
+              <xs:element name="Tipo" type="xs:string" />
+              <xs:element name="Total" type="xs:double" minOccurs="0" />
+              <xs:element name="Moneda" type="xs:string" minOccurs="0" />
+              <xs:element name="Cantidad" type="xs:double" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Moneda">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CodMoneda" type="xs:int" />
+              <xs:element name="MonedaNombre" type="xs:string" />
+              <xs:element name="ValorCompra" type="xs:double" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="TipoTarjeta">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Id" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:int" />
+              <xs:element name="Nombre" type="xs:string" />
+              <xs:element name="Moneda" type="xs:int" />
+              <xs:element name="Total" type="xs:double" minOccurs="0" />
+              <xs:element name="Monedas" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ArqueoCajas">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Id" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:long" />
+              <xs:element name="EfectivoColones" type="xs:double" />
+              <xs:element name="EfectivoDolares" type="xs:double" />
+              <xs:element name="TarjetaColones" type="xs:double" />
+              <xs:element name="TarjetaDolares" type="xs:double" />
+              <xs:element name="Total" type="xs:double" />
+              <xs:element name="IdApertura" type="xs:int" />
+              <xs:element name="Fecha" type="xs:dateTime" />
+              <xs:element name="Cajero" type="xs:string" />
+              <xs:element name="Anulado" type="xs:boolean" />
+              <xs:element name="TipoCambioD" type="xs:double" />
+              <xs:element name="Observaciones" type="xs:string" minOccurs="0" />
+              <xs:element name="Cheques" type="xs:double" />
+              <xs:element name="ChequesDol" type="xs:double" />
+              <xs:element name="DepositoCol" type="xs:double" />
+              <xs:element name="DepositoDol" type="xs:double" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:aperturacaja" />
+      <xs:field xpath="mstns:NApertura" />
+    </xs:unique>
+    <xs:unique name="ArqueoEfectivo_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:ArqueoEfectivo" />
+      <xs:field xpath="mstns:Id" />
+    </xs:unique>
+    <xs:unique name="ArqueoTarjeta_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:ArqueoTarjeta" />
+      <xs:field xpath="mstns:Id" />
+    </xs:unique>
+    <xs:unique name="Denominacion_Moneda_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Denominacion_Moneda" />
+      <xs:field xpath="mstns:Id" />
+    </xs:unique>
+    <xs:unique name="Moneda_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Moneda" />
+      <xs:field xpath="mstns:CodMoneda" />
+    </xs:unique>
+    <xs:unique name="TipoTarjeta_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:TipoTarjeta" />
+      <xs:field xpath="mstns:Id" />
+    </xs:unique>
+    <xs:unique name="ArqueoCajas_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:ArqueoCajas" />
+      <xs:field xpath="mstns:Id" />
+    </xs:unique>
+    <xs:keyref name="ArqueoCajasArqueoTarjeta" refer="ArqueoCajas_Constraint1">
+      <xs:selector xpath=".//mstns:ArqueoTarjeta" />
+      <xs:field xpath="mstns:Id_Arqueo" />
+    </xs:keyref>
+    <xs:keyref name="ArqueoCajasArqueoEfectivo" refer="ArqueoCajas_Constraint1">
+      <xs:selector xpath=".//mstns:ArqueoEfectivo" />
+      <xs:field xpath="mstns:Id_Arqueo" />
+    </xs:keyref>
+  </xs:element>
+</xs:schema>

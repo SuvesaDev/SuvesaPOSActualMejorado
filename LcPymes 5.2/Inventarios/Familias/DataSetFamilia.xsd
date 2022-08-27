@@ -1,0 +1,54 @@
+<?xml version="1.0" standalone="yes"?>
+<xs:schema id="DataSetFamilia" targetNamespace="http://www.tempuri.org/DataSetFamilia.xsd" xmlns:mstns="http://www.tempuri.org/DataSetFamilia.xsd" xmlns="http://www.tempuri.org/DataSetFamilia.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:element name="DataSetFamilia" msdata:IsDataSet="true" msdata:Locale="es-MX">
+    <xs:complexType>
+      <xs:choice maxOccurs="unbounded">
+        <xs:element name="Familia1">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Codigo" type="xs:int" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="SubFamilias">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CodigoFamilia" type="xs:int" />
+              <xs:element name="SubCodigo" type="xs:int" />
+              <xs:element name="Codigo" type="xs:string" />
+              <xs:element name="Descripcion" type="xs:string" />
+              <xs:element name="Observaciones" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Familia">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Codigo" type="xs:int" />
+              <xs:element name="Descripcion" type="xs:string" />
+              <xs:element name="Observaciones" type="xs:string" />
+              <xs:element name="CuentaGra" type="xs:string" />
+              <xs:element name="DescripcionGra" type="xs:string" />
+              <xs:element name="CuentaExe" type="xs:string" />
+              <xs:element name="DescripcionExe" type="xs:string" />
+              <xs:element name="CuentaCosto" type="xs:string" />
+              <xs:element name="DescripcionCosto" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:SubFamilias" />
+      <xs:field xpath="mstns:Codigo" />
+    </xs:unique>
+    <xs:unique name="Familia_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Familia" />
+      <xs:field xpath="mstns:Codigo" />
+    </xs:unique>
+    <xs:keyref name="FamiliaSubFamilias" refer="Familia_Constraint1">
+      <xs:selector xpath=".//mstns:SubFamilias" />
+      <xs:field xpath="mstns:CodigoFamilia" />
+    </xs:keyref>
+  </xs:element>
+</xs:schema>

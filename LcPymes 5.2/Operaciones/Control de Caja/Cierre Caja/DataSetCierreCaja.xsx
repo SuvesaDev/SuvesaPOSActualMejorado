@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Este archivo lo genera de forma automática el diseñador de esquemas XML. Contiene información de diseño para componentes de la superficie de diseño.-->
+<XSDDesignerLayout layoutVersion="2" viewPortLeft="-1053" viewPortTop="9311" zoom="100">
+    <Imprimir_XmlElement left="6434" top="15900" width="5292" height="2805" selected="0" zOrder="35" index="0" expanded="1" />
+    <configuraciones_XmlElement left="6246" top="12646" width="5292" height="2805" selected="0" zOrder="1" index="1" expanded="1" />
+    <Usuarios_XmlElement left="317" top="254" width="5292" height="2805" selected="0" zOrder="2" index="2" expanded="1" />
+    <Apertura_Total_Tope_XmlElement left="6426" top="6418" width="5292" height="2805" selected="0" zOrder="4" index="3" expanded="1" />
+    <aperturacaja_XmlElement left="263" top="3164" width="5292" height="2805" selected="0" zOrder="6" index="4" expanded="1" />
+    <Moneda_XmlElement left="340" top="9224" width="5292" height="2805" selected="0" zOrder="8" index="5" expanded="1" />
+    <OpcionesDePago_XmlElement left="289" top="6206" width="5292" height="2805" selected="0" zOrder="10" index="6" expanded="1" />
+    <ArqueoTarjeta_XmlElement left="6371" top="9515" width="5292" height="2805" selected="0" zOrder="12" index="7" expanded="1" />
+    <TipoTarjeta_XmlElement left="6378" top="3350" width="5292" height="2805" selected="0" zOrder="14" index="8" expanded="1" />
+    <Detalle_pago_caja_XmlElement left="6293" top="232" width="5292" height="2805" selected="0" zOrder="16" index="9" expanded="1" />
+    <VentasContado_XmlElement left="12145" top="73" width="5292" height="2963" selected="0" zOrder="36" index="10" expanded="1" />
+    <VentasCredito_XmlElement left="12143" top="3275" width="5292" height="2805" selected="0" zOrder="18" index="11" expanded="1" />
+    <CierreCaja_DetMon_XmlElement left="12091" top="16510" width="7197" height="2805" selected="0" zOrder="30" index="12" expanded="1" />
+    <CierreCaja_DetTarj_XmlElement left="13301" top="13169" width="5292" height="2805" selected="0" zOrder="20" index="13" expanded="1" />
+    <ArqueoCajas_XmlElement left="-53" top="12409" width="5980" height="6138" selected="0" zOrder="22" index="14" expanded="1" />
+    <cierrecaja_XmlElement left="12778" top="9699" width="5292" height="2805" selected="0" zOrder="24" index="15" expanded="1" />
+    <cierrecajaCierreCaja_DetTarj_XmlKeyref left="12132" top="13104" width="503" height="503" selected="0" zOrder="26" />
+    <cierrecajaCierreCaja_DetMon_XmlKeyref left="12496" top="15151" width="503" height="503" selected="0" zOrder="31" />
+</XSDDesignerLayout>

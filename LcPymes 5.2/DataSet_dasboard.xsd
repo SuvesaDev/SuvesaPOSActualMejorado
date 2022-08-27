@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DataSet_dasboard" targetNamespace="http://tempuri.org/DataSet_dasboard.xsd" xmlns:mstns="http://tempuri.org/DataSet_dasboard.xsd" xmlns="http://tempuri.org/DataSet_dasboard.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DataSet_dasboard" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="DataSet_dasboard" msprop:Generator_DataSetName="DataSet_dasboard">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="dasboard_aperturas" msprop:Generator_UserTableName="dasboard_aperturas" msprop:Generator_RowDeletedName="dasboard_aperturasRowDeleted" msprop:Generator_TableClassName="dasboard_aperturasDataTable" msprop:Generator_RowChangedName="dasboard_aperturasRowChanged" msprop:Generator_RowClassName="dasboard_aperturasRow" msprop:Generator_RowChangingName="dasboard_aperturasRowChanging" msprop:Generator_RowEvArgName="dasboard_aperturasRowChangeEvent" msprop:Generator_RowEvHandlerName="dasboard_aperturasRowChangeEventHandler" msprop:Generator_TablePropName="dasboard_aperturas" msprop:Generator_TableVarName="tabledasboard_aperturas" msprop:Generator_RowDeletingName="dasboard_aperturasRowDeleting">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Estado" msprop:Generator_UserColumnName="Estado" msprop:Generator_ColumnPropNameInRow="Estado" msprop:Generator_ColumnVarNameInTable="columnEstado" msprop:Generator_ColumnPropNameInTable="EstadoColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="total" msprop:Generator_UserColumnName="total" msprop:Generator_ColumnPropNameInRow="total" msprop:Generator_ColumnVarNameInTable="columntotal" msprop:Generator_ColumnPropNameInTable="totalColumn" type="xs:double" minOccurs="0" />
+              <xs:element name="NApertura" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:Generator_UserColumnName="NApertura" msprop:Generator_ColumnPropNameInRow="NApertura" msprop:Generator_ColumnVarNameInTable="columnNApertura" msprop:Generator_ColumnPropNameInTable="NAperturaColumn" type="xs:int" />
+              <xs:element name="Num_Caja" msprop:Generator_UserColumnName="Num_Caja" msprop:Generator_ColumnPropNameInRow="Num_Caja" msprop:Generator_ColumnVarNameInTable="columnNum_Caja" msprop:Generator_ColumnPropNameInTable="Num_CajaColumn" type="xs:long" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:dasboard_aperturas" />
+      <xs:field xpath="mstns:NApertura" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,99 @@
+<?xml version="1.0" standalone="yes"?>
+<xs:schema id="dsPrestamos" targetNamespace="http://www.tempuri.org/dsPrestamos.xsd" xmlns:mstns="http://www.tempuri.org/dsPrestamos.xsd" xmlns="http://www.tempuri.org/dsPrestamos.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:element name="dsPrestamos" msdata:IsDataSet="true" msdata:Locale="es-CR">
+    <xs:complexType>
+      <xs:choice maxOccurs="unbounded">
+        <xs:element name="Clientes_frecuentes">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="identificacion" type="xs:int" />
+              <xs:element name="cedula" type="xs:string" />
+              <xs:element name="nombre" type="xs:string" />
+              <xs:element name="observaciones" type="xs:string" />
+              <xs:element name="Telefono_01" type="xs:string" />
+              <xs:element name="telefono_02" type="xs:string" />
+              <xs:element name="fax_01" type="xs:string" />
+              <xs:element name="fax_02" type="xs:string" />
+              <xs:element name="e_mail" type="xs:string" />
+              <xs:element name="direccion" type="xs:string" />
+              <xs:element name="tipoprecio" type="xs:short" />
+              <xs:element name="usuario" type="xs:string" />
+              <xs:element name="nombreusuario" type="xs:string" />
+              <xs:element name="Anulado" type="xs:boolean" />
+              <xs:element name="esempresa" type="xs:boolean" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Usuarios">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Cedula" type="xs:string" />
+              <xs:element name="Nombre" type="xs:string" />
+              <xs:element name="Clave_Entrada" type="xs:string" />
+              <xs:element name="Clave_Interna" type="xs:string" />
+              <xs:element name="CambiarPrecio" type="xs:boolean" />
+              <xs:element name="Aplicar_Desc" type="xs:boolean" />
+              <xs:element name="Exist_Negativa" type="xs:boolean" />
+              <xs:element name="Porc_Desc" type="xs:double" />
+              <xs:element name="Porc_Precio" type="xs:double" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="detalle_prestamo">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:long" />
+              <xs:element name="ID_prestamo" type="xs:long" />
+              <xs:element name="codigo" type="xs:long" />
+              <xs:element name="cod_articulo" type="xs:string" />
+              <xs:element name="descripcion" type="xs:string" />
+              <xs:element name="cantidad" type="xs:double" />
+              <xs:element name="precio" type="xs:double" />
+              <xs:element name="entregado" type="xs:boolean" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Prestamo">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:long" />
+              <xs:element name="cod_empresa" type="xs:string" />
+              <xs:element name="nombre_empresa" type="xs:string" />
+              <xs:element name="fecha" type="xs:dateTime" />
+              <xs:element name="usuario" type="xs:string" />
+              <xs:element name="fecha_entrega" type="xs:dateTime" />
+              <xs:element name="anulado" type="xs:boolean" />
+              <xs:element name="estado" type="xs:boolean" />
+              <xs:element name="Salida" type="xs:boolean" minOccurs="0" />
+              <xs:element name="Entrada" type="xs:boolean" minOccurs="0" />
+              <xs:element name="nombre_destino" type="xs:string" minOccurs="0" />
+              <xs:element name="cod_destino" type="xs:string" minOccurs="0" />
+              <xs:element name="observacion" type="xs:string" minOccurs="0" />
+              <xs:element name="nota" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Clientes_frecuentes" />
+      <xs:field xpath="mstns:identificacion" />
+    </xs:unique>
+    <xs:unique name="Usuarios_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Usuarios" />
+      <xs:field xpath="mstns:Cedula" />
+    </xs:unique>
+    <xs:unique name="detalle_prestamo_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:detalle_prestamo" />
+      <xs:field xpath="mstns:ID" />
+    </xs:unique>
+    <xs:unique name="Prestamo_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Prestamo" />
+      <xs:field xpath="mstns:ID" />
+    </xs:unique>
+    <xs:keyref name="Prestamodetalle_prestamo" refer="Prestamo_Constraint1">
+      <xs:selector xpath=".//mstns:detalle_prestamo" />
+      <xs:field xpath="mstns:ID_prestamo" />
+    </xs:keyref>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,100 @@
+<?xml version="1.0" standalone="yes"?>
+<xs:schema id="DataSet_MovimientoCaja" targetNamespace="http://www.tempuri.org/DataSet_MovimientoCaja.xsd" xmlns:mstns="http://www.tempuri.org/DataSet_MovimientoCaja.xsd" xmlns="http://www.tempuri.org/DataSet_MovimientoCaja.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:element name="DataSet_MovimientoCaja" msdata:IsDataSet="true" msdata:Locale="es-MX">
+    <xs:complexType>
+      <xs:choice maxOccurs="unbounded">
+        <xs:element name="aperturacaja">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="NApertura" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:int" />
+              <xs:element name="Fecha" type="xs:dateTime" />
+              <xs:element name="Nombre" type="xs:string" />
+              <xs:element name="Estado" type="xs:string" />
+              <xs:element name="Observaciones" type="xs:string" />
+              <xs:element name="Anulado" type="xs:boolean" />
+              <xs:element name="Cedula" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Moneda">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CodMoneda" type="xs:int" />
+              <xs:element name="MonedaNombre" type="xs:string" />
+              <xs:element name="ValorCompra" type="xs:double" />
+              <xs:element name="ValorVenta" type="xs:double" />
+              <xs:element name="Simbolo" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Movimiento_Caja">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Id" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:long" />
+              <xs:element name="Entrada" type="xs:boolean" />
+              <xs:element name="Salida" type="xs:boolean" />
+              <xs:element name="Monto" type="xs:double" />
+              <xs:element name="CodMoneda" type="xs:int" />
+              <xs:element name="Usuario" type="xs:string" />
+              <xs:element name="Fecha" type="xs:dateTime" />
+              <xs:element name="Observaciones" type="xs:string" />
+              <xs:element name="Anulado" type="xs:boolean" />
+              <xs:element name="NumApertura" type="xs:long" />
+              <xs:element name="TipoCambio" type="xs:double" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="encargadocompras">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Identificacion" type="xs:string" />
+              <xs:element name="Cliente" type="xs:int" />
+              <xs:element name="Nombre" type="xs:string" />
+              <xs:element name="Telefono" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="MovimientosBodega_Detalle">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Id_Detalle" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:int" />
+              <xs:element name="Boleta_Movimiento" type="xs:long" />
+              <xs:element name="Codigo" type="xs:string" />
+              <xs:element name="Descripcion" type="xs:string" />
+              <xs:element name="Cantidad" type="xs:double" />
+              <xs:element name="Tipo_Entrada" type="xs:boolean" />
+              <xs:element name="Tipo_Salida" type="xs:boolean" />
+              <xs:element name="Numero" type="xs:string" />
+              <xs:element name="CodArticulo" type="xs:string" />
+              <xs:element name="ExistenciaForzada" type="xs:double" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:aperturacaja" />
+      <xs:field xpath="mstns:NApertura" />
+    </xs:unique>
+    <xs:unique name="Moneda_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Moneda" />
+      <xs:field xpath="mstns:CodMoneda" />
+    </xs:unique>
+    <xs:unique name="Movimiento_Caja_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Movimiento_Caja" />
+      <xs:field xpath="mstns:Id" />
+    </xs:unique>
+    <xs:unique name="encargadocompras_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:encargadocompras" />
+      <xs:field xpath="mstns:Identificacion" />
+    </xs:unique>
+    <xs:unique name="MovimientosBodega_Detalle_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:MovimientosBodega_Detalle" />
+      <xs:field xpath="mstns:Id_Detalle" />
+    </xs:unique>
+    <xs:keyref name="MonedaMovimiento_Caja" refer="Moneda_Constraint1">
+      <xs:selector xpath=".//mstns:Movimiento_Caja" />
+      <xs:field xpath="mstns:CodMoneda" />
+    </xs:keyref>
+  </xs:element>
+</xs:schema>
