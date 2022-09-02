@@ -2700,7 +2700,7 @@ Public Class MainForm
         Me.StatusBar1.Name = "StatusBar1"
         Me.StatusBar1.Panels.AddRange(New System.Windows.Forms.StatusBarPanel() {Me.StatusBarPanel1, Me.StatusBarPanel4, Me.StatusBarPanel2, Me.StatusBarPanel3, Me.StatusBarPanel5, Me.sbpTCCompra, Me.sbpTCVenta, Me.sbpVersion})
         Me.StatusBar1.ShowPanels = True
-        Me.StatusBar1.Size = New System.Drawing.Size(1136, 15)
+        Me.StatusBar1.Size = New System.Drawing.Size(1541, 15)
         Me.StatusBar1.TabIndex = 9
         '
         'StatusBarPanel1
@@ -2737,7 +2737,7 @@ Public Class MainForm
         '
         Me.StatusBarPanel5.AutoSize = System.Windows.Forms.StatusBarPanelAutoSize.Spring
         Me.StatusBarPanel5.Name = "StatusBarPanel5"
-        Me.StatusBarPanel5.Width = 548
+        Me.StatusBarPanel5.Width = 953
         '
         'sbpTCCompra
         '
@@ -2754,7 +2754,7 @@ Public Class MainForm
         'sbpVersion
         '
         Me.sbpVersion.Name = "sbpVersion"
-        Me.sbpVersion.Text = "*26Ago2022"
+        Me.sbpVersion.Text = "*2Sep2022"
         Me.sbpVersion.Width = 150
         '
         'ImageList1
@@ -2888,7 +2888,7 @@ Public Class MainForm
         Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.btnInventario, Me.ToolStripSeparator1, Me.btnProveedores, Me.ToolStripSeparator2, Me.btnClientesCredito, Me.ToolStripSeparator3, Me.btnCompras, Me.ToolStripSeparator4, Me.btnFacturacion, Me.ToolStripSeparator5, Me.btnPuntoVenta, Me.lblempresa, Me.ToolStripSeparator9, Me.btnNegativo, Me.ToolStripSeparator8, Me.btnCambio, Me.ToolStripSeparator6, Me.btnAlbaran, Me.ToolStripSeparator7, Me.ToolStripButton1, Me.ToolStripSeparator10, Me.ToolStripButton2})
         Me.ToolStrip1.Location = New System.Drawing.Point(0, 0)
         Me.ToolStrip1.Name = "ToolStrip1"
-        Me.ToolStrip1.Size = New System.Drawing.Size(1136, 48)
+        Me.ToolStrip1.Size = New System.Drawing.Size(1541, 48)
         Me.ToolStrip1.TabIndex = 23
         Me.ToolStrip1.Text = "ToolStrip1"
         '
@@ -3059,7 +3059,7 @@ Public Class MainForm
         '
         Me.AutoScaleBaseSize = New System.Drawing.Size(5, 13)
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(1136, 428)
+        Me.ClientSize = New System.Drawing.Size(1541, 428)
         Me.Controls.Add(Me.ToolStrip1)
         Me.Controls.Add(Me.PictureBoxFondo)
         Me.Controls.Add(Me.StatusBar1)
@@ -3428,6 +3428,20 @@ Contador:
         Me.CargarCedulaEmisor()
         Me.TimerSolicitudes.Start()
         'Me.CargarTipoCambio()
+
+        If IsClinica() Then
+            Me.btnAlbaran.Visible = True
+            Me.ToolStripSeparator7.Visible = True
+            Me.ToolStripButton1.Visible = True
+            Me.ToolStripSeparator10.Visible = True
+            Me.ToolStripButton2.Visible = True
+        Else
+            Me.btnAlbaran.Visible = False
+            Me.ToolStripSeparator7.Visible = False
+            Me.ToolStripButton1.Visible = False
+            Me.ToolStripSeparator10.Visible = False
+            Me.ToolStripButton2.Visible = False
+        End If
     End Sub
 
     Private Function Obtener_BasedeDatos() As String

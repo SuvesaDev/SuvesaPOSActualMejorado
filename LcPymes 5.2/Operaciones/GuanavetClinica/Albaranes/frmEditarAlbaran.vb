@@ -2,6 +2,8 @@
 Public Class frmEditarAlbaran
 
     Public IdAlbaran As Long
+    Public MaxDescuento As Decimal = 0
+    Public CambiarPrecio As Decimal = 0
     Private CodigoArticulo As Long
     Private Index As Integer = 0
 
@@ -88,7 +90,7 @@ Public Class frmEditarAlbaran
             Me.txtCliente.Text = dtEncabezado.Rows(0).Item("Cliente")
             Me.txtMascota.Text = dtEncabezado.Rows(0).Item("Mascota")
             Me.txtFecha.Text = CDate(dtEncabezado.Rows(0).Item("Fecha")).ToShortDateString
-            cFunciones.Llenar_Tabla_Generico("select id, id_albaran as IdEncabezado, descripcion, codarticulo as CodigoInternoQvet, Cantidad, Impuestos as IVA, Descuento, Precio_Unit as PrecioVenta, ((Precio_Unit * Cantidad) - Monto_Descuento + Monto_Impuestos) as Total, '' as Unidad  from viewAlbaranDetalle where id_albaran = " & Me.IdAlbaran, dtDetalle, CadenaConexionSeePOS)
+            cFunciones.Llenar_Tabla_Generico("select id, id_albaran as IdEncabezado, descripcion, codarticulo as CodigoInternoQvet, Cantidad, Impuestos as IVA, Descuento, Precio_Unit as PrecioVenta, (subtotal - Monto_Descuento + Monto_Impuestos) as Total, '' as Unidad  from viewAlbaranDetalle where id_albaran = " & Me.IdAlbaran, dtDetalle, CadenaConexionSeePOS)
 
             Me.Index = 0
             Me.viewDatos.Rows.Clear()
@@ -103,25 +105,46 @@ Public Class frmEditarAlbaran
     End Sub
 
     Private Sub MeteralDetalle()
-        If Me.CodigoArticulo > 0 And _
-            IsNumeric(Me.txtPrecio.Text) And _
-            IsNumeric(Me.txtCantidad.Text) And _
-            IsNumeric(Me.txtDescuento.Text) And _
-            IsNumeric(Me.txtIVA.Text) Then
-            Dim Subtotal As Decimal = CDec(Me.txtCantidad.Text) * CDec(Me.txtPrecio.Text)
-            Dim Descuento As Decimal = Subtotal * (CDec(Me.txtDescuento.Text) / 100)
-            Dim Impuestos As Decimal = (Subtotal - Descuento) * (CDec(Me.txtIVA.Text) / 100)
-            Dim Total As Decimal = Subtotal - Descuento + Impuestos
-            Me.AgregarLinea(0, Me.IdAlbaran, Me.CodigoArticulo, Me.lblDescripcion.Text, Me.txtCantidad.Text, Me.txtPrecio.Text, Me.txtIVA.Text, Me.txtDescuento.Text, "UNIDAD", Total)
+        Try
 
-            Me.CodigoArticulo = 0
-            Me.txtCodigo.Text = ""
-            Me.lblDescripcion.Text = ""
-            Me.txtCantidad.Text = "1"
-            Me.txtIVA.Text = "13"
-            Me.txtDescuento.Text = "0"
-            Me.txtCodigo.Focus()
-        End If
+            If Me.CodigoArticulo > 0 And
+                IsNumeric(Me.txtPrecio.Text) And
+                IsNumeric(Me.txtCantidad.Text) And
+                IsNumeric(Me.txtDescuento.Text) And
+                IsNumeric(Me.txtIVA.Text) Then
+
+                If CDec(Me.txtDescuento.Text) > Me.MaxDescuento Then
+                    MsgBox("No puede aplicar este descuento," & vbCrLf _
+                       & "Maximo descuento " & Me.MaxDescuento & "%", MsgBoxStyle.Exclamation, "No se puede procesar la operacion.")
+                    Exit Sub
+                End If
+
+                Dim Subtotal As Decimal = CDec(Me.txtCantidad.Text) * CDec(Me.txtPrecio.Text)
+                Dim Descuento As Decimal = Subtotal * (CDec(Me.txtDescuento.Text) / 100)
+                Dim Impuestos As Decimal = (Subtotal - Descuento) * (CDec(Me.txtIVA.Text) / 100)
+                Dim Total As Decimal = Subtotal - Descuento + Impuestos
+
+                Me.AgregarLinea(0,
+                                Me.IdAlbaran,
+                                Me.CodigoArticulo,
+                                Me.lblDescripcion.Text,
+                                Me.txtCantidad.Text,
+                                (Total / CDec(Me.txtCantidad.Text)),
+                                Me.txtIVA.Text,
+                                Me.txtDescuento.Text,
+                                "UNIDAD",
+                                Total)
+
+                Me.CodigoArticulo = 0
+                Me.txtCodigo.Text = ""
+                Me.lblDescripcion.Text = ""
+                Me.txtCantidad.Text = "1"
+                Me.txtIVA.Text = "13"
+                Me.txtDescuento.Text = "0"
+                Me.txtCodigo.Focus()
+            End If
+        Catch ex As Exception
+        End Try
     End Sub
 
     Private Sub CargarArticulo(_CodArticulo As String)
@@ -142,6 +165,9 @@ Public Class frmEditarAlbaran
     End Sub
 
     Private Sub frmEditarAlbaran_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Me.txtPrecio.ReadOnly = IIf(Me.CambiarPrecio, False, True)
+        Me.txtDescuento.ReadOnly = IIf(Me.MaxDescuento > 0, False, True)
+        Me.txtIVA.ReadOnly = True
         Me.CargarAlbaran()
     End Sub
 

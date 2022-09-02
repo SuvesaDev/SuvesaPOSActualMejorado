@@ -223,24 +223,16 @@ Public Class FrmPermisoAjusteB
             Me.txt_observacion.Enabled = True
             btn_Reg.Enabled = True
         Else
-
             MsgBox("Usted no tiene permisos para Ajustar Inventario!", MsgBoxStyle.OKOnly)
             Me.resultado = False
-
             Exit Sub
-
         End If
-
-
     End Sub
 
     Private Sub btn_Reg_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btn_Reg.Click
-
         If txt_observacion.Text = "" Then
-
             MsgBox("Debes registrar una observacion", MsgBoxStyle.Information)
         Else
-
             Me.resultado = True
             Me.Close()
         End If

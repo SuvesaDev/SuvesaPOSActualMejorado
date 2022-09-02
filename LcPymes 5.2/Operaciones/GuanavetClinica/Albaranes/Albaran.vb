@@ -51,7 +51,10 @@ Public Class Albaran
                     End If
                 Next
 
-                If parteNumerica <> "" Then Me.Cod_Cliente = parteNumerica
+                If parteNumerica <> "" Then
+                    Me.Cod_Cliente = parteNumerica
+                    Me.Cedula = parteNumerica
+                End If
             End If
 
             'Obtener los detalles del albaran
@@ -90,31 +93,35 @@ Public Class Albaran
     End Sub
 
     Private Function ValidarCliente() As Boolean
-        Dim dt As New DataTable
-        cFunciones.Llenar_Tabla_Generico("select * from Clientes where identificacion = " & Me.Cod_Cliente, dt, CadenaConexionSeePOS)
-        If dt.Rows.Count > 0 Then
-            'El cliente existe
+        Return True
 
-            'podria actualizar? pero por ahora creo que mejor no
-            Return True
-        Else
-            'El cliente no existe
-            Dim db As New OBSoluciones.SQL.Transaccion(CadenaConexionSeePOS)
-            Try
-                db.SetParametro("@cedula", Me.Cedula)
-                db.SetParametro("@nombre", Me.Nombre_Cliente)
-                db.SetParametro("@Telefono_01", Me.Telefono)
-                db.SetParametro("@e_mail", Me.Correo)
-                db.SetParametro("@direccion", Me.Direccion)
-                db.SetParametro("@tipo", Me.TipoCedula)
-                db.Ejecutar("Insertar_Cliente_rapido", CommandType.StoredProcedure)
-                db.Commit()
-                Return True
-            Catch ex As Exception
-                db.Rollback()
-                Return False
-            End Try
-        End If
+        'antes guardaba el cliente pero no ingresan la info correcta.
+
+        'Dim dt As New DataTable
+        'cFunciones.Llenar_Tabla_Generico("select * from Clientes where identificacion = " & Me.Cod_Cliente, dt, CadenaConexionSeePOS)
+        'If dt.Rows.Count > 0 Then
+        '    'El cliente existe
+
+        '    'podria actualizar? pero por ahora creo que mejor no
+        '    Return True
+        'Else
+        '    'El cliente no existe
+        '    Dim db As New OBSoluciones.SQL.Transaccion(CadenaConexionSeePOS)
+        '    Try
+        '        db.SetParametro("@cedula", Me.Cod_Cliente)
+        '        db.SetParametro("@nombre", Me.Nombre_Cliente)
+        '        db.SetParametro("@Telefono_01", Me.Telefono)
+        '        db.SetParametro("@e_mail", Me.Correo)
+        '        db.SetParametro("@direccion", Me.Direccion)
+        '        db.SetParametro("@tipo", Me.TipoCedula)
+        '        db.Ejecutar("Insertar_Cliente_rapido", CommandType.StoredProcedure)
+        '        db.Commit()
+        '        Return True
+        '    Catch ex As Exception
+        '        db.Rollback()
+        '        Return False
+        '    End Try
+        'End If
     End Function
 
     Public Function GenerarFactura(_IdUsuario As String,
@@ -131,6 +138,7 @@ Public Class Albaran
             Case "TIQUETE" : Tipo = "PVE"
             Case Else : Tipo = "PVE"
         End Select
+
 
         If _Cod_Cliente = "" Then _Cod_Cliente = Me.Cod_Cliente
 

@@ -2814,7 +2814,7 @@ Public Class Frmcliente
 
         Try
             Dim dt As New DataTable
-            cFunciones.Llenar_Tabla_Generico("Select Cliente_Moroso, Anulado, OrdenCompra, CorreoComprobante, Actualizado, DescuentoEspecial, MAG, EnviarRecibo, CorreoRecibo from Clientes where identificacion = " & Cod_Cliente_Buscar, dt, CadenaConexionSeePOS)
+            cFunciones.Llenar_Tabla_Generico("Select Cliente_Moroso, Anulado, OrdenCompra, CorreoComprobante, Actualizado, DescuentoEspecial, MAG, EnviarRecibo, CorreoRecibo, Fallecido from Clientes where identificacion = " & Cod_Cliente_Buscar, dt, CadenaConexionSeePOS)
             If dt.Rows.Count > 0 Then
                 Me.ckMAG.Checked = CBool(dt.Rows(0).Item("MAG"))
                 Me.ckOrdendeCompra.Checked = CBool(dt.Rows(0).Item("OrdenCompra"))

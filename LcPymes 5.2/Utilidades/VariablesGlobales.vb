@@ -3,6 +3,28 @@
     'Public CadenaConexionSeePOS As String = GetSetting("SeeSOFT", "SeePOS", "Conexion")
     'Public CadenaConexionSeguridad As String = GetSetting("SeeSOFT", "Seguridad", "Conexion")
 
+    Public Function IsClinica() As Boolean
+
+        'cambiar por una consulta a la base de datos
+
+        Return True
+    End Function
+
+    Public Function ImpresoraCredito() As String
+        'deveria sacarlo de un configuracion.
+
+        Dim PrintDocument1 As New System.Drawing.Printing.PrintDocument
+        Dim PrinterDialog As New System.Windows.Forms.PrintDialog
+        Dim DocPrint As New System.Drawing.Printing.PrintDocument
+        PrinterDialog.Document = DocPrint
+        If PrinterDialog.ShowDialog() = DialogResult.OK Then
+            Return PrinterDialog.PrinterSettings.PrinterName 'DEVUELVE LA IMPRESORA  SELECCIONADA
+        Else
+            Return ""
+        End If
+        Return ""
+    End Function
+
     Public Function GetRegistroSeePOS(_Registro As String, Optional ByVal _Crear As Boolean = True, Optional ByVal _ValorDefecto As String = "0") As String
         Dim resultado As String = GetSetting("SeeSOFT", "SeePOS", _Registro)
         If resultado = "" And _Crear = True Then

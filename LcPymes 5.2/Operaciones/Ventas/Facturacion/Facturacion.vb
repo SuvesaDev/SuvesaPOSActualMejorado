@@ -7122,8 +7122,29 @@ Fin:
 
     Private Sub Imprimir(ByVal Id_Factura As Double, ByVal PVE As Boolean, Optional ByVal Caja As Integer = 1) 'MOD SAJ 01092006
 
-        Caja = 1 'solo para guanavet clinica
-        PVE = True 'solo para guanavet clinica
+        If IsClinica() Then
+            'solo para guanavet clinica
+            If Me.BindingContext(Me.DataSet_Facturaciones, "Ventas").Current("Tipo") = "CRE" Then
+                Dim rptGenerica As New Factura_Generica
+                Dim Impresora As String = ImpresoraCredito()
+
+                If Impresora <> "" Then
+                    CrystalReportsConexion.LoadReportViewer(Nothing, rptGenerica, True)
+
+                    Dim PrinterSettings1 As New Printing.PrinterSettings
+                    Dim PageSettings1 As New Printing.PageSettings
+                    PrinterSettings1.PrinterName = Impresora
+
+                    rptGenerica.SetParameterValue(0, Id_Factura)
+                    rptGenerica.PrintToPrinter(PrinterSettings1, PageSettings1, False)
+                    rptGenerica.PrintToPrinter(PrinterSettings1, PageSettings1, False)
+                End If
+                Exit Sub
+            Else
+                Caja = 1
+                PVE = True
+            End If
+        End If
 
         Try
 
@@ -12067,8 +12088,12 @@ Contador:
     Private Sub Timer2_Tick(sender As Object, e As EventArgs) Handles Timer2.Tick
         If IsNumeric(Me.txtTotal.Text) And Me.txtNombreUsuario.Text <> "" Then
             If CDec(Me.txtTotal.Text) = 0 Then
-                Me.NuevaEntrada()
-                Me.DetenerTiempo()
+                If IsClinica() = False Then
+                    Me.NuevaEntrada()
+                    Me.DetenerTiempo()
+                Else
+                    'para clinica no hay tiempo limite.
+                End If
             End If
         End If
     End Sub
@@ -12200,12 +12225,16 @@ Contador:
     End Sub
 
     Private Sub DetenerTiempo()
-        Me.Timer2.Stop()
+        If IsClinica() = False Then
+            Me.Timer2.Stop()
+        End If
     End Sub
 
     Private Sub IniciaTiempo()
-        Me.Timer2.Stop()
-        Me.Timer2.Start()
+        If IsClinica() = False Then
+            Me.Timer2.Stop()
+            Me.Timer2.Start()
+        End If
     End Sub
 
 End Class

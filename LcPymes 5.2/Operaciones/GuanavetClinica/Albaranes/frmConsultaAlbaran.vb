@@ -8,19 +8,25 @@ Public Class frmConsultaAlbaran
     Inherits FrmPlantilla
 
     Private IdUsuario As String = ""
+    Private MaxDescuento As Decimal = 0
+    Private CambiarPrecios As Boolean = False
 
     Private Sub Login(_Clave As String)
         Dim dt As New DataTable
-        cFunciones.Llenar_Tabla_Generico("select Id_Usuario, Nombre from Usuarios where Clave_Interna = '" & _Clave & "'", dt, CadenaConexionSeePOS)
+        cFunciones.Llenar_Tabla_Generico("select Id_Usuario, Nombre, Porc_Desc, CambiarPrecio from Usuarios where Clave_Interna = '" & _Clave & "'", dt, CadenaConexionSeePOS)
         If dt.Rows.Count > 0 Then
             Me.txtNombreUsuario.Text = dt.Rows(0).Item("Nombre")
             Me.IdUsuario = dt.Rows(0).Item("Id_Usuario")
             Me.Panel1.Enabled = True
             Me.txtClave.Enabled = False
+            Me.MaxDescuento = dt.Rows(0).Item("Porc_Desc")
+            Me.CambiarPrecios = dt.Rows(0).Item("CambiarPrecio")
         Else
             Me.txtNombreUsuario.Text = ""
             Me.IdUsuario = ""
             Me.Panel1.Enabled = False
+            Me.MaxDescuento = 0
+            Me.CambiarPrecios = False
         End If
     End Sub
 
@@ -80,7 +86,7 @@ Public Class frmConsultaAlbaran
             strWhere += " And Mascota like '%" & Me.txtMascota.Text & "%'"
         End If
 
-        cFunciones.Llenar_Tabla_Generico(strSQL & strWhere, dt, CadenaConexionSeePOS)
+        cFunciones.Llenar_Tabla_Generico(strSQL & strWhere & " Order By Fecha Desc", dt, CadenaConexionSeePOS)
         Try
             Me.viewDatos.DataSource = dt
             Me.ckTodos.Checked = False
@@ -167,7 +173,8 @@ Public Class frmConsultaAlbaran
                                            Clientes.Cells("cCaja").Value,
                                            Clientes.Cells("cIdentificacion2").Value,
                                            Clientes.Cells("cCliente").Value)
-                    'If IdFactura > 0 Then Me.ImprimirFactura(IdFactura, Clientes.Cells("cCaja").Value)
+
+                    If IdFactura > 0 And Clientes.Cells("cTipo").Value = "CREDITO" Then Me.ImprimirFactura(IdFactura, Clientes.Cells("cCaja").Value)
                 Next
                 Me.CargarAlbaranes()
             End If
@@ -241,35 +248,21 @@ Public Class frmConsultaAlbaran
         End If
     End Function
 
+
     Private Sub ImprimirFactura(_Id As Long, _Caja As Integer)
-        Dim facturaPVE As New Reporte_FacturaPVEs
-        CrystalReportsConexion.LoadReportViewer(Nothing, facturaPVE, True)
+        Dim rptGenerica As New Factura_Generica
+        Dim Impresora As String = ImpresoraCredito()
 
-        If _Caja = 1 Or _Caja = 11 Then
+        If Impresora <> "" Then
+            CrystalReportsConexion.LoadReportViewer(Nothing, rptGenerica, True)
+
             Dim PrinterSettings1 As New Printing.PrinterSettings
             Dim PageSettings1 As New Printing.PageSettings
-            PrinterSettings1.PrinterName = Automatic_Printer_Dialog(3)
+            PrinterSettings1.PrinterName = Impresora
 
-            facturaPVE.SetParameterValue(0, False)
-            facturaPVE.SetParameterValue(1, False)
-            facturaPVE.SetParameterValue(2, _Id)
-            facturaPVE.PrintToPrinter(PrinterSettings1, PageSettings1, False)
-            If esTermica = True Then
-                facturaPVE.PrintToPrinter(PrinterSettings1, PageSettings1, False)
-            End If
-        End If
-        If _Caja = 2 Or _Caja = 12 Then
-            Dim PrinterSettings1 As New Printing.PrinterSettings
-            Dim PageSettings1 As New Printing.PageSettings
-            PrinterSettings1.PrinterName = Automatic_Printer_Dialog(5)
-
-            facturaPVE.SetParameterValue(0, False)
-            facturaPVE.SetParameterValue(1, False)
-            facturaPVE.SetParameterValue(2, _Id)
-            facturaPVE.PrintToPrinter(PrinterSettings1, PageSettings1, False)
-            If esTermica = True Then
-                facturaPVE.PrintToPrinter(PrinterSettings1, PageSettings1, False)
-            End If
+            rptGenerica.SetParameterValue(0, _Id)
+            rptGenerica.PrintToPrinter(PrinterSettings1, PageSettings1, False)
+            rptGenerica.PrintToPrinter(PrinterSettings1, PageSettings1, False)
         End If
     End Sub
 
@@ -312,6 +305,8 @@ Public Class frmConsultaAlbaran
     Private Sub viewDatos_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles viewDatos.CellDoubleClick
         Dim IdAlbaran As Long = Me.viewDatos.Item("Id", Me.viewDatos.CurrentRow.Index).Value
         Dim frm As New frmEditarAlbaran
+        frm.MaxDescuento = Me.MaxDescuento
+        frm.CambiarPrecio = Me.CambiarPrecios
         frm.IdAlbaran = IdAlbaran
         If frm.ShowDialog() = Windows.Forms.DialogResult.OK Then
             Dim db As New OBSoluciones.SQL.Transaccion(CadenaConexionSeePOS)
