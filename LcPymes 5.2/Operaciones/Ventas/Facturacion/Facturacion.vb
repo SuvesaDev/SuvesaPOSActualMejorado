@@ -70,6 +70,7 @@ Public Class Facturacion
     'SELECCION DEL TIPO DE FACTURA.
     Dim Factura_reporte As New Factura_Personalizada  'FACTURA PERSONALIZADA
     Dim facturaPVE As New Reporte_FacturaPVEs
+    Private rptGenerica As New Factura_Generica
     Dim rptTiquete As New rptTiqueteRifa2
     Dim cliente_normal As Boolean
     'Dim Factura As New CrystalDecisions.CrystalReports.Engine.ReportDocument
@@ -3569,6 +3570,7 @@ Public Class Facturacion
 
             CrystalReportsConexion.LoadReportViewer(Nothing, facturaPVE, True)
             CrystalReportsConexion.LoadReportViewer(Nothing, rptTiquete, True)
+            CrystalReportsConexion.LoadReportViewer(Nothing, rptGenerica, True)
 
             Me.Ck_Taller.Enabled = False
             Me.Ck_Mascotas.Enabled = False
@@ -7125,16 +7127,15 @@ Fin:
         If IsClinica() Then
             'solo para guanavet clinica
             If Me.BindingContext(Me.DataSet_Facturaciones, "Ventas").Current("Tipo") = "CRE" Then
-                Dim rptGenerica As New Factura_Generica
+
                 Dim Impresora As String = ImpresoraCredito()
 
                 If Impresora <> "" Then
-                    CrystalReportsConexion.LoadReportViewer(Nothing, rptGenerica, True)
-
                     Dim PrinterSettings1 As New Printing.PrinterSettings
                     Dim PageSettings1 As New Printing.PageSettings
                     PrinterSettings1.PrinterName = Impresora
 
+                    rptGenerica.Refresh()
                     rptGenerica.SetParameterValue(0, Id_Factura)
                     rptGenerica.PrintToPrinter(PrinterSettings1, PageSettings1, False)
                     rptGenerica.PrintToPrinter(PrinterSettings1, PageSettings1, False)

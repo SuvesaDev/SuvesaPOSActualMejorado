@@ -123,6 +123,8 @@ Public Class frmConsultaAlbaran
                 Me.viewDatos.Columns("Facturar").Visible = False
             End If
 
+            Me.viewDatos.Columns("Responsable").ReadOnly = True
+
         Catch ex As Exception
         End Try
     End Sub
