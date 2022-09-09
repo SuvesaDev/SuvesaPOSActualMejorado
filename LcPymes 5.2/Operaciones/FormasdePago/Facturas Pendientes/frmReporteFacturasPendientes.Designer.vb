@@ -28,6 +28,8 @@ Partial Class frmReporteFacturasPendientes
         Me.FechaInicio = New System.Windows.Forms.DateTimePicker()
         Me.ButtonMostrar = New DevExpress.XtraEditors.SimpleButton()
         Me.VisorReporte = New CrystalDecisions.Windows.Forms.CrystalReportViewer()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.cboOpcion = New System.Windows.Forms.ComboBox()
         Me.SuspendLayout()
         '
         'Label4
@@ -72,7 +74,7 @@ Partial Class frmReporteFacturasPendientes
         '
         'ButtonMostrar
         '
-        Me.ButtonMostrar.Location = New System.Drawing.Point(223, 21)
+        Me.ButtonMostrar.Location = New System.Drawing.Point(410, 21)
         Me.ButtonMostrar.Name = "ButtonMostrar"
         Me.ButtonMostrar.Size = New System.Drawing.Size(88, 24)
         Me.ButtonMostrar.TabIndex = 116
@@ -95,11 +97,34 @@ Partial Class frmReporteFacturasPendientes
         Me.VisorReporte.TabIndex = 113
         Me.VisorReporte.ViewTimeSelectionFormula = ""
         '
+        'Label1
+        '
+        Me.Label1.BackColor = System.Drawing.SystemColors.ControlLight
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.Color.RoyalBlue
+        Me.Label1.Location = New System.Drawing.Point(223, 7)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(181, 16)
+        Me.Label1.TabIndex = 119
+        Me.Label1.Text = "Opcion"
+        '
+        'cboOpcion
+        '
+        Me.cboOpcion.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cboOpcion.FormattingEnabled = True
+        Me.cboOpcion.Items.AddRange(New Object() {"Mostrar solo pendientes", "Mostrar solo canceladas", "Mostrar Todas"})
+        Me.cboOpcion.Location = New System.Drawing.Point(223, 23)
+        Me.cboOpcion.Name = "cboOpcion"
+        Me.cboOpcion.Size = New System.Drawing.Size(181, 21)
+        Me.cboOpcion.TabIndex = 120
+        '
         'frmReporteFacturasPendientes
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(831, 483)
+        Me.Controls.Add(Me.cboOpcion)
+        Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.FechaFinal)
@@ -118,4 +143,6 @@ Partial Class frmReporteFacturasPendientes
     Friend WithEvents FechaInicio As System.Windows.Forms.DateTimePicker
     Friend WithEvents ButtonMostrar As DevExpress.XtraEditors.SimpleButton
     Friend WithEvents VisorReporte As CrystalDecisions.Windows.Forms.CrystalReportViewer
+    Friend WithEvents Label1 As System.Windows.Forms.Label
+    Friend WithEvents cboOpcion As System.Windows.Forms.ComboBox
 End Class

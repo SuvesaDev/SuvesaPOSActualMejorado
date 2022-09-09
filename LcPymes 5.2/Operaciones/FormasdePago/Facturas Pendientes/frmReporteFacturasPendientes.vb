@@ -4,9 +4,11 @@
         Dim rpt As New rptReporteFacturasPendientes
         rpt.SetParameterValue(0, Me.FechaInicio.Value)
         rpt.SetParameterValue(1, Me.FechaFinal.Value)
+        rpt.SetParameterValue(2, Me.cboOpcion.SelectedIndex)
         CrystalReportsConexion.LoadReportViewer(VisorReporte, rpt, , CadenaConexionSeePOS)
         VisorReporte.Show()
     End Sub
+
 
     Private Sub frmReporteTemperaturaCamara_Load(sender As Object, e As EventArgs) Handles Me.Load
         Me.WindowState = Windows.Forms.FormWindowState.Maximized

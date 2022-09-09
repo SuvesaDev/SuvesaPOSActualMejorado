@@ -7,6 +7,7 @@ Imports System.Drawing
 Public Class frmConsultaAlbaran
     Inherits FrmPlantilla
 
+    Public Usuario As Usuario_Logeado
     Private IdUsuario As String = ""
     Private MaxDescuento As Decimal = 0
     Private CambiarPrecios As Boolean = False

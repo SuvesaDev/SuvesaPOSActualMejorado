@@ -5193,6 +5193,7 @@ Contador:
 
     Private Sub btnAlbaran_Click(sender As Object, e As EventArgs) Handles btnAlbaran.Click
         Dim frm As New frmConsultaAlbaran
+        frm.Usuario = Me.usua
         frm.MdiParent = Me
         frm.Show()
     End Sub
@@ -5207,7 +5208,7 @@ Contador:
     End Sub
 
     Private Sub ToolStripButton2_Click(sender As Object, e As EventArgs) Handles ToolStripButton2.Click
-        Dim frm As New frmPrepagos
+        Dim frm As New frmPrepagos        
         frm.MdiParent = Me
         frm.Show()
     End Sub

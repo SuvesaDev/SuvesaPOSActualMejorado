@@ -687,7 +687,6 @@ Public Class Frm_login
             End If
         End If
 
-
         If Not Me.PuntosdeVenta.Rows.Count > 1 Then
             Me.cboPuntoVenta.Enabled = False
         End If
