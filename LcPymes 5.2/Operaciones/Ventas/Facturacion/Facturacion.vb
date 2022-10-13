@@ -6404,11 +6404,12 @@ Fin:
         'que determine si se piden formas de pago o no
         'ademas modificar el desencadenador de venta para que depende de esta columna, guarde o no las formas de pago
         '************************************************************************************************************
-        If GetRegistroSeePOS("PideFormaPago") = 1 Then
-            Return True
-        Else
-            Return False
-        End If
+        'If GetRegistroSeePOS("PideFormaPago") = 1 Then
+        '    Return True
+        'Else
+        '    Return False
+        'End If
+        Return IsClinica()
     End Function
 
     Function RegistraOpcionesDePago()
@@ -6781,7 +6782,6 @@ Fin:
                 Me.ToolBar1.Buttons(4).Enabled = True
                 Me.ToolBar1.Buttons(1).Enabled = True
 
-
                 Me.SimpleButton1.Enabled = False
                 Me.SimpleButton2.Enabled = False
 
@@ -6816,9 +6816,16 @@ Fin:
                 Me.Label41.Visible = False
                 Me.txtEncargado.Visible = False
 
-                If Me.IngresarFormasdePago() And Me.AplicaCambioenCaja = False And Me.opCredito.Checked = False Then
+                If Me.IngresarFormasdePago() And Me.opCredito.Checked = False Then
                     'si ocupa pedir las formas de pago
-                    Me.RegistraOpcionesDePago()
+                    If AplicaCambioenCaja() = True Then
+                        Dim frm As New frmBuscarFichasActivas
+                        frm.CargarPrimerUsuario(Me.Cedula_usuario)
+                        frm.MdiParent = Me.MdiParent
+                        frm.Show()
+                    Else
+                        Me.RegistraOpcionesDePago()
+                    End If
                 End If
                 MsgBox("Datos Guardados Satisfactoriamente", MsgBoxStyle.Information)
                 txt_cedula.Text = ""
@@ -11830,6 +11837,7 @@ Contador:
                 Return CDec(dt.Rows(0).Item("Precio_A"))
             End If
         End If
+
         Return 0
     End Function
 
@@ -11948,6 +11956,7 @@ Contador:
                 End Select
                 Me.BanderaPuedeCambiarTipoCliente = False
                 Me.txtNombre.Text = ObtenerDatosCliente.nombre
+
                 IngresoIdentificacion = True
             Else
                 Me.cbo_tipo_cliente.SelectedIndex = 0

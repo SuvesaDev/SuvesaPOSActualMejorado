@@ -101,12 +101,14 @@ Public Class frmUtilidadVentasxRangoFechas
                 CrystalReportsConexion.LoadReportViewer(CrystalReportViewer1, rpt, , CadenaConexionSeePOS)
                 'Me.CrystalReportViewer1.SelectionFormula = Formula
                 CrystalReportViewer1.Show()
+
             Else
                 'normal
                 Dim Formula As String = Me.FormulaSeleccion
                 Dim rpt As New rptUlitidadesRangoFecha
                 rpt.SetParameterValue(0, Me.dtpDesde.Value)
                 rpt.SetParameterValue(1, Me.dtpHasta.Value)
+                rpt.SetParameterValue(2, Me.ckSoloServicios.Checked)
                 'rpt.SetParameterValue(2, huber)
                 rpt.RecordSelectionFormula = Formula
                 CrystalReportsConexion.LoadReportViewer(CrystalReportViewer1, rpt, , CadenaConexionSeePOS)

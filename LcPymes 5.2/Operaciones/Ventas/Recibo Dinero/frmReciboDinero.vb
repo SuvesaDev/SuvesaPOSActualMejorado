@@ -329,8 +329,8 @@ Public Class frmReciboDinero
         '
         'ToolBar1
         '
-        Me.ToolBar1.Location = New System.Drawing.Point(0, 391)
-        Me.ToolBar1.Size = New System.Drawing.Size(712, 52)
+        Me.ToolBar1.Location = New System.Drawing.Point(0, 449)
+        Me.ToolBar1.Size = New System.Drawing.Size(856, 60)
         '
         'DataNavigator
         '
@@ -338,12 +338,13 @@ Public Class frmReciboDinero
         Me.DataNavigator.Buttons.CancelEdit.Visible = False
         Me.DataNavigator.Buttons.EndEdit.Visible = False
         Me.DataNavigator.Buttons.Remove.Visible = False
-        Me.DataNavigator.Location = New System.Drawing.Point(584, 428)
+        Me.DataNavigator.Location = New System.Drawing.Point(701, 494)
+        Me.DataNavigator.Size = New System.Drawing.Size(161, 24)
         Me.DataNavigator.Visible = False
         '
         'TituloModulo
         '
-        Me.TituloModulo.Size = New System.Drawing.Size(712, 32)
+        Me.TituloModulo.Size = New System.Drawing.Size(856, 37)
         Me.TituloModulo.Text = "Recibo de Dinero"
         '
         'Label1
@@ -352,9 +353,9 @@ Public Class frmReciboDinero
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold)
         Me.Label1.ForeColor = System.Drawing.Color.RoyalBlue
         Me.Label1.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.Label1.Location = New System.Drawing.Point(1, 18)
+        Me.Label1.Location = New System.Drawing.Point(1, 21)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(64, 12)
+        Me.Label1.Size = New System.Drawing.Size(77, 14)
         Me.Label1.TabIndex = 157
         Me.Label1.Text = "Recibo N°"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -371,18 +372,18 @@ Public Class frmReciboDinero
         Me.GroupBox6.Enabled = False
         Me.GroupBox6.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox6.ForeColor = System.Drawing.Color.RoyalBlue
-        Me.GroupBox6.Location = New System.Drawing.Point(8, 40)
+        Me.GroupBox6.Location = New System.Drawing.Point(10, 46)
         Me.GroupBox6.Name = "GroupBox6"
-        Me.GroupBox6.Size = New System.Drawing.Size(536, 56)
+        Me.GroupBox6.Size = New System.Drawing.Size(643, 65)
         Me.GroupBox6.TabIndex = 1
         Me.GroupBox6.TabStop = False
         '
         'ckFiltrarIncobrable
         '
         Me.ckFiltrarIncobrable.BackColor = System.Drawing.Color.Transparent
-        Me.ckFiltrarIncobrable.Location = New System.Drawing.Point(213, 16)
+        Me.ckFiltrarIncobrable.Location = New System.Drawing.Point(256, 18)
         Me.ckFiltrarIncobrable.Name = "ckFiltrarIncobrable"
-        Me.ckFiltrarIncobrable.Size = New System.Drawing.Size(147, 15)
+        Me.ckFiltrarIncobrable.Size = New System.Drawing.Size(176, 18)
         Me.ckFiltrarIncobrable.TabIndex = 189
         Me.ckFiltrarIncobrable.Text = "Filtrar Incobrables"
         Me.ckFiltrarIncobrable.UseVisualStyleBackColor = False
@@ -392,9 +393,9 @@ Public Class frmReciboDinero
         Me.txtCodigo.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtCodigo.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.txtCodigo.ForeColor = System.Drawing.Color.Blue
-        Me.txtCodigo.Location = New System.Drawing.Point(13, 32)
+        Me.txtCodigo.Location = New System.Drawing.Point(16, 37)
         Me.txtCodigo.Name = "txtCodigo"
-        Me.txtCodigo.Size = New System.Drawing.Size(59, 13)
+        Me.txtCodigo.Size = New System.Drawing.Size(70, 16)
         Me.txtCodigo.TabIndex = 158
         '
         'Label37
@@ -404,7 +405,7 @@ Public Class frmReciboDinero
         Me.Label37.ForeColor = System.Drawing.Color.White
         Me.Label37.Location = New System.Drawing.Point(0, -1)
         Me.Label37.Name = "Label37"
-        Me.Label37.Size = New System.Drawing.Size(528, 16)
+        Me.Label37.Size = New System.Drawing.Size(634, 18)
         Me.Label37.TabIndex = 157
         Me.Label37.Text = "Datos del Cliente"
         Me.Label37.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -415,9 +416,9 @@ Public Class frmReciboDinero
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold)
         Me.Label5.ForeColor = System.Drawing.Color.RoyalBlue
         Me.Label5.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.Label5.Location = New System.Drawing.Point(80, 16)
+        Me.Label5.Location = New System.Drawing.Point(96, 18)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(448, 12)
+        Me.Label5.Size = New System.Drawing.Size(538, 14)
         Me.Label5.TabIndex = 2
         Me.Label5.Text = "Nombre del Cliente"
         Me.Label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -428,9 +429,9 @@ Public Class frmReciboDinero
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold)
         Me.Label2.ForeColor = System.Drawing.Color.RoyalBlue
         Me.Label2.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.Label2.Location = New System.Drawing.Point(12, 16)
+        Me.Label2.Location = New System.Drawing.Point(14, 18)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(60, 12)
+        Me.Label2.Size = New System.Drawing.Size(72, 14)
         Me.Label2.TabIndex = 0
         Me.Label2.Text = "Código"
         Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -441,9 +442,9 @@ Public Class frmReciboDinero
         Me.txtNombre.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.txtNombre.Enabled = False
         Me.txtNombre.ForeColor = System.Drawing.Color.Blue
-        Me.txtNombre.Location = New System.Drawing.Point(80, 32)
+        Me.txtNombre.Location = New System.Drawing.Point(96, 37)
         Me.txtNombre.Name = "txtNombre"
-        Me.txtNombre.Size = New System.Drawing.Size(448, 13)
+        Me.txtNombre.Size = New System.Drawing.Size(538, 16)
         Me.txtNombre.TabIndex = 1
         '
         'Label29
@@ -452,9 +453,9 @@ Public Class frmReciboDinero
         Me.Label29.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold)
         Me.Label29.ForeColor = System.Drawing.Color.RoyalBlue
         Me.Label29.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.Label29.Location = New System.Drawing.Point(8, 379)
+        Me.Label29.Location = New System.Drawing.Point(10, 437)
         Me.Label29.Name = "Label29"
-        Me.Label29.Size = New System.Drawing.Size(104, 12)
+        Me.Label29.Size = New System.Drawing.Size(124, 14)
         Me.Label29.TabIndex = 160
         Me.Label29.Text = "Observaciones:"
         Me.Label29.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -465,10 +466,10 @@ Public Class frmReciboDinero
         Me.txtObservaciones.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.txtObservaciones.Enabled = False
         Me.txtObservaciones.ForeColor = System.Drawing.Color.Blue
-        Me.txtObservaciones.Location = New System.Drawing.Point(112, 378)
+        Me.txtObservaciones.Location = New System.Drawing.Point(134, 436)
         Me.txtObservaciones.Multiline = True
         Me.txtObservaciones.Name = "txtObservaciones"
-        Me.txtObservaciones.Size = New System.Drawing.Size(328, 16)
+        Me.txtObservaciones.Size = New System.Drawing.Size(394, 19)
         Me.txtObservaciones.TabIndex = 4
         '
         'ComboMoneda
@@ -477,9 +478,9 @@ Public Class frmReciboDinero
         Me.ComboMoneda.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.ComboMoneda.Enabled = False
         Me.ComboMoneda.ForeColor = System.Drawing.Color.Blue
-        Me.ComboMoneda.Location = New System.Drawing.Point(624, 32)
+        Me.ComboMoneda.Location = New System.Drawing.Point(749, 37)
         Me.ComboMoneda.Name = "ComboMoneda"
-        Me.ComboMoneda.Size = New System.Drawing.Size(97, 21)
+        Me.ComboMoneda.Size = New System.Drawing.Size(116, 24)
         Me.ComboMoneda.TabIndex = 2
         Me.ComboMoneda.ValueMember = "Moneda.CodMoneda"
         '
@@ -489,9 +490,9 @@ Public Class frmReciboDinero
         Me.Label30.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold)
         Me.Label30.ForeColor = System.Drawing.Color.RoyalBlue
         Me.Label30.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.Label30.Location = New System.Drawing.Point(544, 34)
+        Me.Label30.Location = New System.Drawing.Point(653, 39)
         Me.Label30.Name = "Label30"
-        Me.Label30.Size = New System.Drawing.Size(72, 16)
+        Me.Label30.Size = New System.Drawing.Size(86, 19)
         Me.Label30.TabIndex = 164
         Me.Label30.Text = "Moneda"
         Me.Label30.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -503,9 +504,9 @@ Public Class frmReciboDinero
         Me.Panel1.Controls.Add(Me.txtUsuario)
         Me.Panel1.Controls.Add(Me.txtNombreUsuario)
         Me.Panel1.Controls.Add(Me.txtCedulaUsuario)
-        Me.Panel1.Location = New System.Drawing.Point(80, 459)
+        Me.Panel1.Location = New System.Drawing.Point(96, 530)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(291, 16)
+        Me.Panel1.Size = New System.Drawing.Size(349, 18)
         Me.Panel1.TabIndex = 0
         '
         'Label36
@@ -513,9 +514,9 @@ Public Class frmReciboDinero
         Me.Label36.BackColor = System.Drawing.Color.RoyalBlue
         Me.Label36.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label36.ForeColor = System.Drawing.Color.White
-        Me.Label36.Location = New System.Drawing.Point(-8, 0)
+        Me.Label36.Location = New System.Drawing.Point(-10, 0)
         Me.Label36.Name = "Label36"
-        Me.Label36.Size = New System.Drawing.Size(72, 13)
+        Me.Label36.Size = New System.Drawing.Size(87, 15)
         Me.Label36.TabIndex = 0
         Me.Label36.Text = "Usuario->"
         Me.Label36.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -524,10 +525,10 @@ Public Class frmReciboDinero
         '
         Me.txtUsuario.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtUsuario.ForeColor = System.Drawing.Color.Blue
-        Me.txtUsuario.Location = New System.Drawing.Point(64, 0)
+        Me.txtUsuario.Location = New System.Drawing.Point(77, 0)
         Me.txtUsuario.Name = "txtUsuario"
         Me.txtUsuario.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.txtUsuario.Size = New System.Drawing.Size(56, 13)
+        Me.txtUsuario.Size = New System.Drawing.Size(67, 15)
         Me.txtUsuario.TabIndex = 1
         '
         'txtNombreUsuario
@@ -535,9 +536,9 @@ Public Class frmReciboDinero
         Me.txtNombreUsuario.BackColor = System.Drawing.Color.Transparent
         Me.txtNombreUsuario.Enabled = False
         Me.txtNombreUsuario.ForeColor = System.Drawing.Color.Blue
-        Me.txtNombreUsuario.Location = New System.Drawing.Point(125, 0)
+        Me.txtNombreUsuario.Location = New System.Drawing.Point(150, 0)
         Me.txtNombreUsuario.Name = "txtNombreUsuario"
-        Me.txtNombreUsuario.Size = New System.Drawing.Size(163, 13)
+        Me.txtNombreUsuario.Size = New System.Drawing.Size(196, 15)
         Me.txtNombreUsuario.TabIndex = 2
         '
         'txtCedulaUsuario
@@ -545,9 +546,9 @@ Public Class frmReciboDinero
         Me.txtCedulaUsuario.BackColor = System.Drawing.Color.Transparent
         Me.txtCedulaUsuario.Enabled = False
         Me.txtCedulaUsuario.ForeColor = System.Drawing.Color.Blue
-        Me.txtCedulaUsuario.Location = New System.Drawing.Point(216, 16)
+        Me.txtCedulaUsuario.Location = New System.Drawing.Point(259, 18)
         Me.txtCedulaUsuario.Name = "txtCedulaUsuario"
-        Me.txtCedulaUsuario.Size = New System.Drawing.Size(72, 13)
+        Me.txtCedulaUsuario.Size = New System.Drawing.Size(87, 15)
         Me.txtCedulaUsuario.TabIndex = 170
         '
         'ImageList1
@@ -570,9 +571,9 @@ Public Class frmReciboDinero
         Me.dtFecha.CustomFormat = "dd/MMMM/yyyy"
         Me.dtFecha.Enabled = False
         Me.dtFecha.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.dtFecha.Location = New System.Drawing.Point(624, 73)
+        Me.dtFecha.Location = New System.Drawing.Point(749, 84)
         Me.dtFecha.Name = "dtFecha"
-        Me.dtFecha.Size = New System.Drawing.Size(96, 20)
+        Me.dtFecha.Size = New System.Drawing.Size(115, 22)
         Me.dtFecha.TabIndex = 3
         Me.dtFecha.Value = New Date(2006, 3, 23, 0, 0, 0, 0)
         '
@@ -583,9 +584,9 @@ Public Class frmReciboDinero
         Me.Label3.ForeColor = System.Drawing.Color.RoyalBlue
         Me.Label3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.Label3.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.Label3.Location = New System.Drawing.Point(544, 75)
+        Me.Label3.Location = New System.Drawing.Point(653, 87)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(72, 16)
+        Me.Label3.Size = New System.Drawing.Size(86, 18)
         Me.Label3.TabIndex = 165
         Me.Label3.Text = "Fecha"
         Me.Label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -596,10 +597,10 @@ Public Class frmReciboDinero
         '
         '
         Me.gridFacturas.EmbeddedNavigator.Name = ""
-        Me.gridFacturas.Location = New System.Drawing.Point(8, 96)
+        Me.gridFacturas.Location = New System.Drawing.Point(10, 111)
         Me.gridFacturas.MainView = Me.AdvBandedGridView1
         Me.gridFacturas.Name = "gridFacturas"
-        Me.gridFacturas.Size = New System.Drawing.Size(304, 112)
+        Me.gridFacturas.Size = New System.Drawing.Size(364, 129)
         Me.gridFacturas.TabIndex = 168
         Me.gridFacturas.Text = "GridControl1"
         '
@@ -662,9 +663,9 @@ Public Class frmReciboDinero
         Me.txtTipoCambio.Enabled = False
         Me.txtTipoCambio.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtTipoCambio.ForeColor = System.Drawing.Color.RoyalBlue
-        Me.txtTipoCambio.Location = New System.Drawing.Point(624, 55)
+        Me.txtTipoCambio.Location = New System.Drawing.Point(749, 63)
         Me.txtTipoCambio.Name = "txtTipoCambio"
-        Me.txtTipoCambio.Size = New System.Drawing.Size(96, 16)
+        Me.txtTipoCambio.Size = New System.Drawing.Size(115, 19)
         Me.txtTipoCambio.TabIndex = 169
         Me.txtTipoCambio.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
@@ -696,9 +697,9 @@ Public Class frmReciboDinero
         Me.GroupBox1.Controls.Add(Me.Label7)
         Me.GroupBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox1.ForeColor = System.Drawing.Color.RoyalBlue
-        Me.GroupBox1.Location = New System.Drawing.Point(327, 104)
+        Me.GroupBox1.Location = New System.Drawing.Point(392, 120)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(394, 103)
+        Me.GroupBox1.Size = New System.Drawing.Size(473, 119)
         Me.GroupBox1.TabIndex = 5
         Me.GroupBox1.TabStop = False
         '
@@ -708,9 +709,9 @@ Public Class frmReciboDinero
         Me.lbSimbolo3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold)
         Me.lbSimbolo3.ForeColor = System.Drawing.Color.RoyalBlue
         Me.lbSimbolo3.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.lbSimbolo3.Location = New System.Drawing.Point(264, 16)
+        Me.lbSimbolo3.Location = New System.Drawing.Point(317, 18)
         Me.lbSimbolo3.Name = "lbSimbolo3"
-        Me.lbSimbolo3.Size = New System.Drawing.Size(20, 12)
+        Me.lbSimbolo3.Size = New System.Drawing.Size(24, 14)
         Me.lbSimbolo3.TabIndex = 181
         Me.lbSimbolo3.Text = "¢"
         Me.lbSimbolo3.TextAlign = System.Drawing.ContentAlignment.TopCenter
@@ -721,9 +722,9 @@ Public Class frmReciboDinero
         Me.lbSimbolo6.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold)
         Me.lbSimbolo6.ForeColor = System.Drawing.Color.RoyalBlue
         Me.lbSimbolo6.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.lbSimbolo6.Location = New System.Drawing.Point(264, 76)
+        Me.lbSimbolo6.Location = New System.Drawing.Point(317, 88)
         Me.lbSimbolo6.Name = "lbSimbolo6"
-        Me.lbSimbolo6.Size = New System.Drawing.Size(20, 12)
+        Me.lbSimbolo6.Size = New System.Drawing.Size(24, 14)
         Me.lbSimbolo6.TabIndex = 180
         Me.lbSimbolo6.Text = "¢"
         Me.lbSimbolo6.TextAlign = System.Drawing.ContentAlignment.TopCenter
@@ -734,9 +735,9 @@ Public Class frmReciboDinero
         Me.lbSimbolo5.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold)
         Me.lbSimbolo5.ForeColor = System.Drawing.Color.RoyalBlue
         Me.lbSimbolo5.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.lbSimbolo5.Location = New System.Drawing.Point(264, 56)
+        Me.lbSimbolo5.Location = New System.Drawing.Point(317, 65)
         Me.lbSimbolo5.Name = "lbSimbolo5"
-        Me.lbSimbolo5.Size = New System.Drawing.Size(20, 12)
+        Me.lbSimbolo5.Size = New System.Drawing.Size(24, 13)
         Me.lbSimbolo5.TabIndex = 179
         Me.lbSimbolo5.Text = "¢"
         Me.lbSimbolo5.TextAlign = System.Drawing.ContentAlignment.TopCenter
@@ -747,9 +748,9 @@ Public Class frmReciboDinero
         Me.lbSimbolo4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold)
         Me.lbSimbolo4.ForeColor = System.Drawing.Color.RoyalBlue
         Me.lbSimbolo4.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.lbSimbolo4.Location = New System.Drawing.Point(264, 36)
+        Me.lbSimbolo4.Location = New System.Drawing.Point(317, 42)
         Me.lbSimbolo4.Name = "lbSimbolo4"
-        Me.lbSimbolo4.Size = New System.Drawing.Size(20, 12)
+        Me.lbSimbolo4.Size = New System.Drawing.Size(24, 13)
         Me.lbSimbolo4.TabIndex = 178
         Me.lbSimbolo4.Text = "¢"
         Me.lbSimbolo4.TextAlign = System.Drawing.ContentAlignment.TopCenter
@@ -760,9 +761,9 @@ Public Class frmReciboDinero
         Me.lbSimbolo2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold)
         Me.lbSimbolo2.ForeColor = System.Drawing.Color.RoyalBlue
         Me.lbSimbolo2.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.lbSimbolo2.Location = New System.Drawing.Point(60, 77)
+        Me.lbSimbolo2.Location = New System.Drawing.Point(72, 89)
         Me.lbSimbolo2.Name = "lbSimbolo2"
-        Me.lbSimbolo2.Size = New System.Drawing.Size(20, 12)
+        Me.lbSimbolo2.Size = New System.Drawing.Size(24, 14)
         Me.lbSimbolo2.TabIndex = 177
         Me.lbSimbolo2.Text = "¢"
         Me.lbSimbolo2.TextAlign = System.Drawing.ContentAlignment.TopCenter
@@ -773,9 +774,9 @@ Public Class frmReciboDinero
         Me.lbSimbolo1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold)
         Me.lbSimbolo1.ForeColor = System.Drawing.Color.RoyalBlue
         Me.lbSimbolo1.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.lbSimbolo1.Location = New System.Drawing.Point(60, 57)
+        Me.lbSimbolo1.Location = New System.Drawing.Point(72, 66)
         Me.lbSimbolo1.Name = "lbSimbolo1"
-        Me.lbSimbolo1.Size = New System.Drawing.Size(20, 12)
+        Me.lbSimbolo1.Size = New System.Drawing.Size(24, 14)
         Me.lbSimbolo1.TabIndex = 176
         Me.lbSimbolo1.Text = "¢"
         Me.lbSimbolo1.TextAlign = System.Drawing.ContentAlignment.TopCenter
@@ -783,7 +784,7 @@ Public Class frmReciboDinero
         'txtMonto
         '
         Me.txtMonto.EditValue = ""
-        Me.txtMonto.Location = New System.Drawing.Point(88, 56)
+        Me.txtMonto.Location = New System.Drawing.Point(106, 65)
         Me.txtMonto.Name = "txtMonto"
         '
         '
@@ -795,13 +796,13 @@ Public Class frmReciboDinero
         Me.txtMonto.Properties.Style = New DevExpress.Utils.ViewStyle("ControlStyle", Nothing, New System.Drawing.Font("Microsoft Sans Serif", 8.0!), "", DevExpress.Utils.StyleOptions.StyleEnabled, True, False, False, DevExpress.Utils.HorzAlignment.Far, DevExpress.Utils.VertAlignment.Center, Nothing, System.Drawing.SystemColors.Window, System.Drawing.Color.Blue)
         Me.txtMonto.Properties.StyleDisabled = New DevExpress.Utils.ViewStyle("ControlStyleDisabled", Nothing, New System.Drawing.Font("Microsoft Sans Serif", 8.0!), "", CType(((DevExpress.Utils.StyleOptions.StyleEnabled Or DevExpress.Utils.StyleOptions.UseBackColor) _
                 Or DevExpress.Utils.StyleOptions.UseForeColor), DevExpress.Utils.StyleOptions), True, False, False, DevExpress.Utils.HorzAlignment.[Default], DevExpress.Utils.VertAlignment.Center, Nothing, System.Drawing.SystemColors.Window, System.Drawing.SystemColors.ControlText)
-        Me.txtMonto.Size = New System.Drawing.Size(94, 17)
+        Me.txtMonto.Size = New System.Drawing.Size(112, 20)
         Me.txtMonto.TabIndex = 174
         '
         'txtSaldo
         '
         Me.txtSaldo.EditValue = ""
-        Me.txtSaldo.Location = New System.Drawing.Point(87, 75)
+        Me.txtSaldo.Location = New System.Drawing.Point(104, 87)
         Me.txtSaldo.Name = "txtSaldo"
         '
         '
@@ -813,13 +814,13 @@ Public Class frmReciboDinero
         Me.txtSaldo.Properties.Style = New DevExpress.Utils.ViewStyle("ControlStyle", Nothing, New System.Drawing.Font("Microsoft Sans Serif", 8.0!), "", DevExpress.Utils.StyleOptions.StyleEnabled, True, False, False, DevExpress.Utils.HorzAlignment.Far, DevExpress.Utils.VertAlignment.Center, Nothing, System.Drawing.SystemColors.Window, System.Drawing.Color.Blue)
         Me.txtSaldo.Properties.StyleDisabled = New DevExpress.Utils.ViewStyle("ControlStyleDisabled", Nothing, New System.Drawing.Font("Microsoft Sans Serif", 8.0!), "", CType(((DevExpress.Utils.StyleOptions.StyleEnabled Or DevExpress.Utils.StyleOptions.UseBackColor) _
                 Or DevExpress.Utils.StyleOptions.UseForeColor), DevExpress.Utils.StyleOptions), True, False, False, DevExpress.Utils.HorzAlignment.[Default], DevExpress.Utils.VertAlignment.Center, Nothing, System.Drawing.SystemColors.Window, System.Drawing.SystemColors.ControlText)
-        Me.txtSaldo.Size = New System.Drawing.Size(96, 17)
+        Me.txtSaldo.Size = New System.Drawing.Size(116, 20)
         Me.txtSaldo.TabIndex = 172
         '
         'txtSaldoAct
         '
         Me.txtSaldoAct.EditValue = ""
-        Me.txtSaldoAct.Location = New System.Drawing.Point(292, 76)
+        Me.txtSaldoAct.Location = New System.Drawing.Point(350, 88)
         Me.txtSaldoAct.Name = "txtSaldoAct"
         '
         '
@@ -831,13 +832,13 @@ Public Class frmReciboDinero
         Me.txtSaldoAct.Properties.Style = New DevExpress.Utils.ViewStyle("ControlStyle", Nothing, New System.Drawing.Font("Microsoft Sans Serif", 8.0!), "", DevExpress.Utils.StyleOptions.StyleEnabled, True, False, False, DevExpress.Utils.HorzAlignment.Far, DevExpress.Utils.VertAlignment.Center, Nothing, System.Drawing.SystemColors.Window, System.Drawing.Color.Blue)
         Me.txtSaldoAct.Properties.StyleDisabled = New DevExpress.Utils.ViewStyle("ControlStyleDisabled", Nothing, New System.Drawing.Font("Microsoft Sans Serif", 8.0!), "", CType(((DevExpress.Utils.StyleOptions.StyleEnabled Or DevExpress.Utils.StyleOptions.UseBackColor) _
                 Or DevExpress.Utils.StyleOptions.UseForeColor), DevExpress.Utils.StyleOptions), True, False, False, DevExpress.Utils.HorzAlignment.[Default], DevExpress.Utils.VertAlignment.Center, Nothing, System.Drawing.SystemColors.Window, System.Drawing.SystemColors.ControlText)
-        Me.txtSaldoAct.Size = New System.Drawing.Size(96, 17)
+        Me.txtSaldoAct.Size = New System.Drawing.Size(116, 20)
         Me.txtSaldoAct.TabIndex = 5
         '
         'txtAbono
         '
         Me.txtAbono.EditValue = ""
-        Me.txtAbono.Location = New System.Drawing.Point(292, 56)
+        Me.txtAbono.Location = New System.Drawing.Point(350, 65)
         Me.txtAbono.Name = "txtAbono"
         '
         '
@@ -849,13 +850,13 @@ Public Class frmReciboDinero
         Me.txtAbono.Properties.Style = New DevExpress.Utils.ViewStyle("ControlStyle", Nothing, New System.Drawing.Font("Microsoft Sans Serif", 8.0!), "", DevExpress.Utils.StyleOptions.StyleEnabled, True, False, False, DevExpress.Utils.HorzAlignment.Far, DevExpress.Utils.VertAlignment.Center, Nothing, System.Drawing.SystemColors.Window, System.Drawing.Color.Blue)
         Me.txtAbono.Properties.StyleDisabled = New DevExpress.Utils.ViewStyle("ControlStyleDisabled", Nothing, New System.Drawing.Font("Microsoft Sans Serif", 8.0!), "", CType(((DevExpress.Utils.StyleOptions.StyleEnabled Or DevExpress.Utils.StyleOptions.UseBackColor) _
                 Or DevExpress.Utils.StyleOptions.UseForeColor), DevExpress.Utils.StyleOptions), True, False, False, DevExpress.Utils.HorzAlignment.[Default], DevExpress.Utils.VertAlignment.Center, Nothing, System.Drawing.SystemColors.Window, System.Drawing.SystemColors.ControlText)
-        Me.txtAbono.Size = New System.Drawing.Size(96, 17)
+        Me.txtAbono.Size = New System.Drawing.Size(116, 20)
         Me.txtAbono.TabIndex = 4
         '
         'txtSaldoAnt
         '
         Me.txtSaldoAnt.EditValue = ""
-        Me.txtSaldoAnt.Location = New System.Drawing.Point(292, 36)
+        Me.txtSaldoAnt.Location = New System.Drawing.Point(350, 42)
         Me.txtSaldoAnt.Name = "txtSaldoAnt"
         '
         '
@@ -867,13 +868,13 @@ Public Class frmReciboDinero
         Me.txtSaldoAnt.Properties.Style = New DevExpress.Utils.ViewStyle("ControlStyle", Nothing, New System.Drawing.Font("Microsoft Sans Serif", 8.0!), "", DevExpress.Utils.StyleOptions.StyleEnabled, True, False, False, DevExpress.Utils.HorzAlignment.Far, DevExpress.Utils.VertAlignment.Center, Nothing, System.Drawing.SystemColors.Window, System.Drawing.Color.Blue)
         Me.txtSaldoAnt.Properties.StyleDisabled = New DevExpress.Utils.ViewStyle("ControlStyleDisabled", Nothing, New System.Drawing.Font("Microsoft Sans Serif", 8.0!), "", CType(((DevExpress.Utils.StyleOptions.StyleEnabled Or DevExpress.Utils.StyleOptions.UseBackColor) _
                 Or DevExpress.Utils.StyleOptions.UseForeColor), DevExpress.Utils.StyleOptions), True, False, False, DevExpress.Utils.HorzAlignment.[Default], DevExpress.Utils.VertAlignment.Center, Nothing, System.Drawing.SystemColors.Window, System.Drawing.SystemColors.ControlText)
-        Me.txtSaldoAnt.Size = New System.Drawing.Size(96, 17)
+        Me.txtSaldoAnt.Size = New System.Drawing.Size(116, 20)
         Me.txtSaldoAnt.TabIndex = 3
         '
         'txtIntereses
         '
         Me.txtIntereses.EditValue = ""
-        Me.txtIntereses.Location = New System.Drawing.Point(291, 16)
+        Me.txtIntereses.Location = New System.Drawing.Point(349, 18)
         Me.txtIntereses.Name = "txtIntereses"
         '
         '
@@ -885,7 +886,7 @@ Public Class frmReciboDinero
         Me.txtIntereses.Properties.Style = New DevExpress.Utils.ViewStyle("ControlStyle", Nothing, New System.Drawing.Font("Microsoft Sans Serif", 8.0!), "", DevExpress.Utils.StyleOptions.StyleEnabled, True, False, False, DevExpress.Utils.HorzAlignment.Far, DevExpress.Utils.VertAlignment.Center, Nothing, System.Drawing.SystemColors.Window, System.Drawing.Color.Blue)
         Me.txtIntereses.Properties.StyleDisabled = New DevExpress.Utils.ViewStyle("ControlStyleDisabled", Nothing, New System.Drawing.Font("Microsoft Sans Serif", 8.0!), "", CType(((DevExpress.Utils.StyleOptions.StyleEnabled Or DevExpress.Utils.StyleOptions.UseBackColor) _
                 Or DevExpress.Utils.StyleOptions.UseForeColor), DevExpress.Utils.StyleOptions), True, False, False, DevExpress.Utils.HorzAlignment.[Default], DevExpress.Utils.VertAlignment.Center, Nothing, System.Drawing.SystemColors.Window, System.Drawing.SystemColors.ControlText)
-        Me.txtIntereses.Size = New System.Drawing.Size(96, 17)
+        Me.txtIntereses.Size = New System.Drawing.Size(115, 20)
         Me.txtIntereses.TabIndex = 2
         '
         'dtEmitida
@@ -894,16 +895,16 @@ Public Class frmReciboDinero
         Me.dtEmitida.CustomFormat = "dd/MMMM/yyyy"
         Me.dtEmitida.Enabled = False
         Me.dtEmitida.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.dtEmitida.Location = New System.Drawing.Point(88, 35)
+        Me.dtEmitida.Location = New System.Drawing.Point(106, 40)
         Me.dtEmitida.Name = "dtEmitida"
-        Me.dtEmitida.Size = New System.Drawing.Size(94, 20)
+        Me.dtEmitida.Size = New System.Drawing.Size(112, 23)
         Me.dtEmitida.TabIndex = 1
         Me.dtEmitida.Value = New Date(2006, 3, 23, 0, 0, 0, 0)
         '
         'txtFactura
         '
         Me.txtFactura.EditValue = ""
-        Me.txtFactura.Location = New System.Drawing.Point(88, 17)
+        Me.txtFactura.Location = New System.Drawing.Point(106, 20)
         Me.txtFactura.Name = "txtFactura"
         '
         '
@@ -913,7 +914,7 @@ Public Class frmReciboDinero
         Me.txtFactura.Properties.Style = New DevExpress.Utils.ViewStyle("ControlStyle", Nothing, New System.Drawing.Font("Microsoft Sans Serif", 8.0!), "", DevExpress.Utils.StyleOptions.StyleEnabled, True, False, False, DevExpress.Utils.HorzAlignment.Far, DevExpress.Utils.VertAlignment.Center, Nothing, System.Drawing.SystemColors.Window, System.Drawing.Color.Blue)
         Me.txtFactura.Properties.StyleDisabled = New DevExpress.Utils.ViewStyle("ControlStyleDisabled", Nothing, New System.Drawing.Font("Microsoft Sans Serif", 8.0!), "", CType(((DevExpress.Utils.StyleOptions.StyleEnabled Or DevExpress.Utils.StyleOptions.UseBackColor) _
                 Or DevExpress.Utils.StyleOptions.UseForeColor), DevExpress.Utils.StyleOptions), True, False, False, DevExpress.Utils.HorzAlignment.[Default], DevExpress.Utils.VertAlignment.Center, Nothing, System.Drawing.SystemColors.Window, System.Drawing.SystemColors.ControlText)
-        Me.txtFactura.Size = New System.Drawing.Size(94, 17)
+        Me.txtFactura.Size = New System.Drawing.Size(112, 20)
         Me.txtFactura.TabIndex = 0
         '
         'Label14
@@ -922,9 +923,9 @@ Public Class frmReciboDinero
         Me.Label14.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold)
         Me.Label14.ForeColor = System.Drawing.Color.RoyalBlue
         Me.Label14.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.Label14.Location = New System.Drawing.Point(5, 55)
+        Me.Label14.Location = New System.Drawing.Point(6, 63)
         Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(76, 16)
+        Me.Label14.Size = New System.Drawing.Size(91, 19)
         Me.Label14.TabIndex = 175
         Me.Label14.Text = "Monto"
         Me.Label14.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -935,9 +936,9 @@ Public Class frmReciboDinero
         Me.Label13.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold)
         Me.Label13.ForeColor = System.Drawing.Color.RoyalBlue
         Me.Label13.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.Label13.Location = New System.Drawing.Point(5, 74)
+        Me.Label13.Location = New System.Drawing.Point(6, 85)
         Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(76, 16)
+        Me.Label13.Size = New System.Drawing.Size(91, 19)
         Me.Label13.TabIndex = 173
         Me.Label13.Text = "Saldo"
         Me.Label13.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -948,9 +949,9 @@ Public Class frmReciboDinero
         Me.Label12.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold)
         Me.Label12.ForeColor = System.Drawing.Color.RoyalBlue
         Me.Label12.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.Label12.Location = New System.Drawing.Point(192, 76)
+        Me.Label12.Location = New System.Drawing.Point(230, 88)
         Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(76, 16)
+        Me.Label12.Size = New System.Drawing.Size(92, 18)
         Me.Label12.TabIndex = 171
         Me.Label12.Text = "Saldo Actual"
         Me.Label12.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -961,9 +962,9 @@ Public Class frmReciboDinero
         Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold)
         Me.Label11.ForeColor = System.Drawing.Color.RoyalBlue
         Me.Label11.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.Label11.Location = New System.Drawing.Point(192, 56)
+        Me.Label11.Location = New System.Drawing.Point(230, 65)
         Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(76, 16)
+        Me.Label11.Size = New System.Drawing.Size(92, 18)
         Me.Label11.TabIndex = 169
         Me.Label11.Text = "Abono"
         Me.Label11.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -974,9 +975,9 @@ Public Class frmReciboDinero
         Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold)
         Me.Label10.ForeColor = System.Drawing.Color.RoyalBlue
         Me.Label10.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.Label10.Location = New System.Drawing.Point(192, 36)
+        Me.Label10.Location = New System.Drawing.Point(230, 42)
         Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(76, 16)
+        Me.Label10.Size = New System.Drawing.Size(92, 18)
         Me.Label10.TabIndex = 167
         Me.Label10.Text = "Saldo Previo"
         Me.Label10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -987,9 +988,9 @@ Public Class frmReciboDinero
         Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold)
         Me.Label8.ForeColor = System.Drawing.Color.RoyalBlue
         Me.Label8.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.Label8.Location = New System.Drawing.Point(192, 16)
+        Me.Label8.Location = New System.Drawing.Point(230, 18)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(76, 16)
+        Me.Label8.Size = New System.Drawing.Size(92, 19)
         Me.Label8.TabIndex = 165
         Me.Label8.Text = "Intereses"
         Me.Label8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -1000,9 +1001,9 @@ Public Class frmReciboDinero
         Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold)
         Me.Label6.ForeColor = System.Drawing.Color.RoyalBlue
         Me.Label6.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.Label6.Location = New System.Drawing.Point(5, 36)
+        Me.Label6.Location = New System.Drawing.Point(6, 42)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(76, 16)
+        Me.Label6.Size = New System.Drawing.Size(91, 18)
         Me.Label6.TabIndex = 159
         Me.Label6.Text = "Fecha"
         Me.Label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -1012,9 +1013,9 @@ Public Class frmReciboDinero
         Me.Label4.BackColor = System.Drawing.Color.RoyalBlue
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.ForeColor = System.Drawing.Color.White
-        Me.Label4.Location = New System.Drawing.Point(7, -4)
+        Me.Label4.Location = New System.Drawing.Point(8, -5)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(377, 19)
+        Me.Label4.Size = New System.Drawing.Size(453, 22)
         Me.Label4.TabIndex = 157
         Me.Label4.Text = "Datos de la Factura"
         Me.Label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -1025,9 +1026,9 @@ Public Class frmReciboDinero
         Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold)
         Me.Label7.ForeColor = System.Drawing.Color.RoyalBlue
         Me.Label7.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.Label7.Location = New System.Drawing.Point(5, 17)
+        Me.Label7.Location = New System.Drawing.Point(6, 20)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(76, 16)
+        Me.Label7.Size = New System.Drawing.Size(91, 18)
         Me.Label7.TabIndex = 0
         Me.Label7.Text = "Factura No."
         Me.Label7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -1035,25 +1036,25 @@ Public Class frmReciboDinero
         'txtAbonoB
         '
         Me.txtAbonoB.EditValue = ""
-        Me.txtAbonoB.Location = New System.Drawing.Point(770, 80)
+        Me.txtAbonoB.Location = New System.Drawing.Point(924, 92)
         Me.txtAbonoB.Name = "txtAbonoB"
         '
         '
         '
         Me.txtAbonoB.Properties.Style = New DevExpress.Utils.ViewStyle("ControlStyle", Nothing, New System.Drawing.Font("Microsoft Sans Serif", 8.0!), "", DevExpress.Utils.StyleOptions.StyleEnabled, True, False, False, DevExpress.Utils.HorzAlignment.[Default], DevExpress.Utils.VertAlignment.Center, Nothing, System.Drawing.SystemColors.Window, System.Drawing.Color.Blue)
-        Me.txtAbonoB.Size = New System.Drawing.Size(72, 19)
+        Me.txtAbonoB.Size = New System.Drawing.Size(86, 22)
         Me.txtAbonoB.TabIndex = 182
         '
         'txtAbonoSuMoneda
         '
         Me.txtAbonoSuMoneda.EditValue = ""
-        Me.txtAbonoSuMoneda.Location = New System.Drawing.Point(736, 72)
+        Me.txtAbonoSuMoneda.Location = New System.Drawing.Point(883, 83)
         Me.txtAbonoSuMoneda.Name = "txtAbonoSuMoneda"
         '
         '
         '
         Me.txtAbonoSuMoneda.Properties.Style = New DevExpress.Utils.ViewStyle("ControlStyle", Nothing, New System.Drawing.Font("Microsoft Sans Serif", 8.0!), "", DevExpress.Utils.StyleOptions.StyleEnabled, True, False, False, DevExpress.Utils.HorzAlignment.[Default], DevExpress.Utils.VertAlignment.Center, Nothing, System.Drawing.SystemColors.Window, System.Drawing.Color.Blue)
-        Me.txtAbonoSuMoneda.Size = New System.Drawing.Size(80, 19)
+        Me.txtAbonoSuMoneda.Size = New System.Drawing.Size(96, 22)
         Me.txtAbonoSuMoneda.TabIndex = 183
         '
         'GridControl2
@@ -1063,10 +1064,10 @@ Public Class frmReciboDinero
         '
         '
         Me.GridControl2.EmbeddedNavigator.Name = ""
-        Me.GridControl2.Location = New System.Drawing.Point(8, 216)
+        Me.GridControl2.Location = New System.Drawing.Point(10, 249)
         Me.GridControl2.MainView = Me.GridView2
         Me.GridControl2.Name = "GridControl2"
-        Me.GridControl2.Size = New System.Drawing.Size(712, 160)
+        Me.GridControl2.Size = New System.Drawing.Size(854, 185)
         Me.GridControl2.TabIndex = 6
         Me.GridControl2.Text = "GridControl2"
         '
@@ -1308,9 +1309,9 @@ Public Class frmReciboDinero
         Me.GroupBox2.Enabled = False
         Me.GroupBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox2.ForeColor = System.Drawing.Color.RoyalBlue
-        Me.GroupBox2.Location = New System.Drawing.Point(352, 404)
+        Me.GroupBox2.Location = New System.Drawing.Point(422, 466)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(368, 64)
+        Me.GroupBox2.Size = New System.Drawing.Size(442, 74)
         Me.GroupBox2.TabIndex = 171
         Me.GroupBox2.TabStop = False
         '
@@ -1319,9 +1320,9 @@ Public Class frmReciboDinero
         Me.Label15.BackColor = System.Drawing.Color.RoyalBlue
         Me.Label15.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label15.ForeColor = System.Drawing.Color.White
-        Me.Label15.Location = New System.Drawing.Point(8, 0)
+        Me.Label15.Location = New System.Drawing.Point(10, 0)
         Me.Label15.Name = "Label15"
-        Me.Label15.Size = New System.Drawing.Size(152, 16)
+        Me.Label15.Size = New System.Drawing.Size(182, 18)
         Me.Label15.TabIndex = 157
         Me.Label15.Text = "Saldos de la Cuenta"
         Me.Label15.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -1329,7 +1330,7 @@ Public Class frmReciboDinero
         'txtSaldoActGen
         '
         Me.txtSaldoActGen.EditValue = ""
-        Me.txtSaldoActGen.Location = New System.Drawing.Point(256, 40)
+        Me.txtSaldoActGen.Location = New System.Drawing.Point(307, 46)
         Me.txtSaldoActGen.Name = "txtSaldoActGen"
         '
         '
@@ -1339,7 +1340,7 @@ Public Class frmReciboDinero
         Me.txtSaldoActGen.Properties.Style = New DevExpress.Utils.ViewStyle("ControlStyle", Nothing, New System.Drawing.Font("Microsoft Sans Serif", 8.0!), "", DevExpress.Utils.StyleOptions.StyleEnabled, True, False, False, DevExpress.Utils.HorzAlignment.Far, DevExpress.Utils.VertAlignment.Center, Nothing, System.Drawing.SystemColors.Window, System.Drawing.Color.Blue)
         Me.txtSaldoActGen.Properties.StyleDisabled = New DevExpress.Utils.ViewStyle("ControlStyleDisabled", Nothing, New System.Drawing.Font("Microsoft Sans Serif", 8.0!), "", CType(((DevExpress.Utils.StyleOptions.StyleEnabled Or DevExpress.Utils.StyleOptions.UseBackColor) _
                 Or DevExpress.Utils.StyleOptions.UseForeColor), DevExpress.Utils.StyleOptions), True, False, False, DevExpress.Utils.HorzAlignment.[Default], DevExpress.Utils.VertAlignment.Center, Nothing, System.Drawing.SystemColors.Window, System.Drawing.SystemColors.ControlText)
-        Me.txtSaldoActGen.Size = New System.Drawing.Size(107, 19)
+        Me.txtSaldoActGen.Size = New System.Drawing.Size(129, 22)
         Me.txtSaldoActGen.TabIndex = 162
         '
         'Label18
@@ -1348,9 +1349,9 @@ Public Class frmReciboDinero
         Me.Label18.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold)
         Me.Label18.ForeColor = System.Drawing.Color.RoyalBlue
         Me.Label18.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.Label18.Location = New System.Drawing.Point(160, 40)
+        Me.Label18.Location = New System.Drawing.Point(192, 46)
         Me.Label18.Name = "Label18"
-        Me.Label18.Size = New System.Drawing.Size(88, 16)
+        Me.Label18.Size = New System.Drawing.Size(106, 19)
         Me.Label18.TabIndex = 161
         Me.Label18.Text = "Saldo Act."
         Me.Label18.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -1358,7 +1359,7 @@ Public Class frmReciboDinero
         'txtAbonoGen
         '
         Me.txtAbonoGen.EditValue = ""
-        Me.txtAbonoGen.Location = New System.Drawing.Point(256, 24)
+        Me.txtAbonoGen.Location = New System.Drawing.Point(307, 28)
         Me.txtAbonoGen.Name = "txtAbonoGen"
         '
         '
@@ -1368,7 +1369,7 @@ Public Class frmReciboDinero
         Me.txtAbonoGen.Properties.Style = New DevExpress.Utils.ViewStyle("ControlStyle", Nothing, New System.Drawing.Font("Microsoft Sans Serif", 8.0!), "", DevExpress.Utils.StyleOptions.StyleEnabled, True, False, False, DevExpress.Utils.HorzAlignment.Far, DevExpress.Utils.VertAlignment.Center, Nothing, System.Drawing.SystemColors.Window, System.Drawing.Color.Blue)
         Me.txtAbonoGen.Properties.StyleDisabled = New DevExpress.Utils.ViewStyle("ControlStyleDisabled", Nothing, New System.Drawing.Font("Microsoft Sans Serif", 8.0!), "", CType(((DevExpress.Utils.StyleOptions.StyleEnabled Or DevExpress.Utils.StyleOptions.UseBackColor) _
                 Or DevExpress.Utils.StyleOptions.UseForeColor), DevExpress.Utils.StyleOptions), True, False, False, DevExpress.Utils.HorzAlignment.[Default], DevExpress.Utils.VertAlignment.Center, Nothing, System.Drawing.SystemColors.Window, System.Drawing.SystemColors.ControlText)
-        Me.txtAbonoGen.Size = New System.Drawing.Size(107, 19)
+        Me.txtAbonoGen.Size = New System.Drawing.Size(129, 22)
         Me.txtAbonoGen.TabIndex = 160
         '
         'Label16
@@ -1377,9 +1378,9 @@ Public Class frmReciboDinero
         Me.Label16.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold)
         Me.Label16.ForeColor = System.Drawing.Color.RoyalBlue
         Me.Label16.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.Label16.Location = New System.Drawing.Point(160, 24)
+        Me.Label16.Location = New System.Drawing.Point(192, 28)
         Me.Label16.Name = "Label16"
-        Me.Label16.Size = New System.Drawing.Size(88, 16)
+        Me.Label16.Size = New System.Drawing.Size(106, 18)
         Me.Label16.TabIndex = 159
         Me.Label16.Text = "Monto Recibos"
         Me.Label16.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -1387,7 +1388,7 @@ Public Class frmReciboDinero
         'txtSaldoAntGen
         '
         Me.txtSaldoAntGen.EditValue = ""
-        Me.txtSaldoAntGen.Location = New System.Drawing.Point(256, 8)
+        Me.txtSaldoAntGen.Location = New System.Drawing.Point(307, 9)
         Me.txtSaldoAntGen.Name = "txtSaldoAntGen"
         '
         '
@@ -1397,7 +1398,7 @@ Public Class frmReciboDinero
         Me.txtSaldoAntGen.Properties.Style = New DevExpress.Utils.ViewStyle("ControlStyle", Nothing, New System.Drawing.Font("Microsoft Sans Serif", 8.0!), "", DevExpress.Utils.StyleOptions.StyleEnabled, True, False, False, DevExpress.Utils.HorzAlignment.Far, DevExpress.Utils.VertAlignment.Center, Nothing, System.Drawing.SystemColors.Window, System.Drawing.Color.Blue)
         Me.txtSaldoAntGen.Properties.StyleDisabled = New DevExpress.Utils.ViewStyle("ControlStyleDisabled", Nothing, New System.Drawing.Font("Microsoft Sans Serif", 8.0!), "", CType(((DevExpress.Utils.StyleOptions.StyleEnabled Or DevExpress.Utils.StyleOptions.UseBackColor) _
                 Or DevExpress.Utils.StyleOptions.UseForeColor), DevExpress.Utils.StyleOptions), True, False, False, DevExpress.Utils.HorzAlignment.[Default], DevExpress.Utils.VertAlignment.Center, Nothing, System.Drawing.SystemColors.Window, System.Drawing.SystemColors.ControlText)
-        Me.txtSaldoAntGen.Size = New System.Drawing.Size(107, 19)
+        Me.txtSaldoAntGen.Size = New System.Drawing.Size(129, 22)
         Me.txtSaldoAntGen.TabIndex = 158
         '
         'Label17
@@ -1406,9 +1407,9 @@ Public Class frmReciboDinero
         Me.Label17.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold)
         Me.Label17.ForeColor = System.Drawing.Color.RoyalBlue
         Me.Label17.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.Label17.Location = New System.Drawing.Point(160, 8)
+        Me.Label17.Location = New System.Drawing.Point(192, 9)
         Me.Label17.Name = "Label17"
-        Me.Label17.Size = New System.Drawing.Size(88, 16)
+        Me.Label17.Size = New System.Drawing.Size(106, 19)
         Me.Label17.TabIndex = 0
         Me.Label17.Text = "Saldo Ant."
         Me.Label17.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -1419,9 +1420,9 @@ Public Class frmReciboDinero
         Me.CheckBox1.Enabled = False
         Me.CheckBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CheckBox1.ForeColor = System.Drawing.Color.RoyalBlue
-        Me.CheckBox1.Location = New System.Drawing.Point(8, 458)
+        Me.CheckBox1.Location = New System.Drawing.Point(10, 528)
         Me.CheckBox1.Name = "CheckBox1"
-        Me.CheckBox1.Size = New System.Drawing.Size(72, 16)
+        Me.CheckBox1.Size = New System.Drawing.Size(86, 19)
         Me.CheckBox1.TabIndex = 172
         Me.CheckBox1.Text = "Anulada"
         Me.CheckBox1.UseVisualStyleBackColor = False
@@ -1431,9 +1432,9 @@ Public Class frmReciboDinero
         Me.txtNum_Recibo.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtNum_Recibo.Enabled = False
         Me.txtNum_Recibo.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtNum_Recibo.Location = New System.Drawing.Point(74, 17)
+        Me.txtNum_Recibo.Location = New System.Drawing.Point(89, 20)
         Me.txtNum_Recibo.Name = "txtNum_Recibo"
-        Me.txtNum_Recibo.Size = New System.Drawing.Size(72, 13)
+        Me.txtNum_Recibo.Size = New System.Drawing.Size(86, 16)
         Me.txtNum_Recibo.TabIndex = 159
         '
         'Check_Dig_Recibo
@@ -1441,9 +1442,9 @@ Public Class frmReciboDinero
         Me.Check_Dig_Recibo.BackColor = System.Drawing.Color.Transparent
         Me.Check_Dig_Recibo.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Check_Dig_Recibo.ForeColor = System.Drawing.Color.RoyalBlue
-        Me.Check_Dig_Recibo.Location = New System.Drawing.Point(4, 32)
+        Me.Check_Dig_Recibo.Location = New System.Drawing.Point(5, 37)
         Me.Check_Dig_Recibo.Name = "Check_Dig_Recibo"
-        Me.Check_Dig_Recibo.Size = New System.Drawing.Size(100, 16)
+        Me.Check_Dig_Recibo.Size = New System.Drawing.Size(120, 18)
         Me.Check_Dig_Recibo.TabIndex = 173
         Me.Check_Dig_Recibo.Text = "Digitar Recibo"
         Me.Check_Dig_Recibo.UseVisualStyleBackColor = False
@@ -1455,9 +1456,9 @@ Public Class frmReciboDinero
         Me.Label19.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold)
         Me.Label19.ForeColor = System.Drawing.Color.RoyalBlue
         Me.Label19.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.Label19.Location = New System.Drawing.Point(544, 54)
+        Me.Label19.Location = New System.Drawing.Point(653, 62)
         Me.Label19.Name = "Label19"
-        Me.Label19.Size = New System.Drawing.Size(72, 16)
+        Me.Label19.Size = New System.Drawing.Size(86, 19)
         Me.Label19.TabIndex = 174
         Me.Label19.Text = "Tipo Cambio"
         Me.Label19.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -1474,19 +1475,19 @@ Public Class frmReciboDinero
         Me.Label_Id_Recibo.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.DsRecibos1, "abonoccobrar.Id_Recibo", True))
         Me.Label_Id_Recibo.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label_Id_Recibo.ForeColor = System.Drawing.Color.White
-        Me.Label_Id_Recibo.Location = New System.Drawing.Point(680, 11)
+        Me.Label_Id_Recibo.Location = New System.Drawing.Point(816, 13)
         Me.Label_Id_Recibo.Name = "Label_Id_Recibo"
-        Me.Label_Id_Recibo.Size = New System.Drawing.Size(40, 12)
+        Me.Label_Id_Recibo.Size = New System.Drawing.Size(48, 14)
         Me.Label_Id_Recibo.TabIndex = 184
         Me.Label_Id_Recibo.Text = "000"
         '
         'StatusBar1
         '
-        Me.StatusBar1.Location = New System.Drawing.Point(0, 443)
+        Me.StatusBar1.Location = New System.Drawing.Point(0, 509)
         Me.StatusBar1.Name = "StatusBar1"
         Me.StatusBar1.Panels.AddRange(New System.Windows.Forms.StatusBarPanel() {Me.StatusBarPanel1, Me.StatusBarPanel2})
         Me.StatusBar1.ShowPanels = True
-        Me.StatusBar1.Size = New System.Drawing.Size(712, 18)
+        Me.StatusBar1.Size = New System.Drawing.Size(856, 21)
         Me.StatusBar1.TabIndex = 185
         '
         'StatusBarPanel1
@@ -1503,9 +1504,9 @@ Public Class frmReciboDinero
         '
         Me.CB_Cheque.BackColor = System.Drawing.Color.Transparent
         Me.CB_Cheque.Enabled = False
-        Me.CB_Cheque.Location = New System.Drawing.Point(440, 376)
+        Me.CB_Cheque.Location = New System.Drawing.Point(528, 434)
         Me.CB_Cheque.Name = "CB_Cheque"
-        Me.CB_Cheque.Size = New System.Drawing.Size(64, 24)
+        Me.CB_Cheque.Size = New System.Drawing.Size(77, 28)
         Me.CB_Cheque.TabIndex = 186
         Me.CB_Cheque.Text = "Cheque"
         Me.CB_Cheque.UseVisualStyleBackColor = False
@@ -1513,7 +1514,7 @@ Public Class frmReciboDinero
         'txtCheque
         '
         Me.txtCheque.EditValue = ""
-        Me.txtCheque.Location = New System.Drawing.Point(504, 376)
+        Me.txtCheque.Location = New System.Drawing.Point(605, 434)
         Me.txtCheque.Name = "txtCheque"
         '
         '
@@ -1523,16 +1524,16 @@ Public Class frmReciboDinero
         Me.txtCheque.Properties.Style = New DevExpress.Utils.ViewStyle("ControlStyle", Nothing, New System.Drawing.Font("Microsoft Sans Serif", 8.0!), "", DevExpress.Utils.StyleOptions.StyleEnabled, True, False, False, DevExpress.Utils.HorzAlignment.Far, DevExpress.Utils.VertAlignment.Center, Nothing, System.Drawing.SystemColors.Window, System.Drawing.Color.Blue)
         Me.txtCheque.Properties.StyleDisabled = New DevExpress.Utils.ViewStyle("ControlStyleDisabled", Nothing, New System.Drawing.Font("Microsoft Sans Serif", 8.0!), "", CType(((DevExpress.Utils.StyleOptions.StyleEnabled Or DevExpress.Utils.StyleOptions.UseBackColor) _
                 Or DevExpress.Utils.StyleOptions.UseForeColor), DevExpress.Utils.StyleOptions), True, False, False, DevExpress.Utils.HorzAlignment.[Default], DevExpress.Utils.VertAlignment.Center, Nothing, System.Drawing.SystemColors.Window, System.Drawing.SystemColors.ControlText)
-        Me.txtCheque.Size = New System.Drawing.Size(120, 19)
+        Me.txtCheque.Size = New System.Drawing.Size(144, 22)
         Me.txtCheque.TabIndex = 163
         '
         'labAnulado
         '
         Me.labAnulado.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.labAnulado.ForeColor = System.Drawing.Color.Red
-        Me.labAnulado.Location = New System.Drawing.Point(264, 288)
+        Me.labAnulado.Location = New System.Drawing.Point(317, 332)
         Me.labAnulado.Name = "labAnulado"
-        Me.labAnulado.Size = New System.Drawing.Size(168, 24)
+        Me.labAnulado.Size = New System.Drawing.Size(201, 28)
         Me.labAnulado.TabIndex = 187
         Me.labAnulado.Text = "ANULADO"
         Me.labAnulado.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -1544,15 +1545,15 @@ Public Class frmReciboDinero
         Me.cbocheque.Enabled = False
         Me.cbocheque.ForeColor = System.Drawing.Color.Blue
         Me.cbocheque.Items.AddRange(New Object() {"BCR", "BNCR", "Scotiabank", "BPopular"})
-        Me.cbocheque.Location = New System.Drawing.Point(624, 376)
+        Me.cbocheque.Location = New System.Drawing.Point(749, 434)
         Me.cbocheque.Name = "cbocheque"
-        Me.cbocheque.Size = New System.Drawing.Size(97, 21)
+        Me.cbocheque.Size = New System.Drawing.Size(116, 24)
         Me.cbocheque.TabIndex = 188
         '
         'frmReciboDinero
         '
-        Me.AutoScaleBaseSize = New System.Drawing.Size(5, 13)
-        Me.ClientSize = New System.Drawing.Size(712, 461)
+        Me.AutoScaleBaseSize = New System.Drawing.Size(6, 15)
+        Me.ClientSize = New System.Drawing.Size(856, 530)
         Me.Controls.Add(Me.cbocheque)
         Me.Controls.Add(Me.labAnulado)
         Me.Controls.Add(Me.CheckBox1)
@@ -1579,8 +1580,8 @@ Public Class frmReciboDinero
         Me.Controls.Add(Me.StatusBar1)
         Me.Controls.Add(Me.CB_Cheque)
         Me.Controls.Add(Me.txtCheque)
-        Me.MaximumSize = New System.Drawing.Size(728, 500)
-        Me.MinimumSize = New System.Drawing.Size(728, 500)
+        Me.MaximumSize = New System.Drawing.Size(874, 577)
+        Me.MinimumSize = New System.Drawing.Size(874, 577)
         Me.Name = "frmReciboDinero"
         Me.Text = ""
         Me.Controls.SetChildIndex(Me.txtCheque, 0)
@@ -1894,12 +1895,23 @@ Public Class frmReciboDinero
                     Exit Sub
                 End If
             Else
-                If MsgBox("Desea Registrar el abono en la caja 3?", MsgBoxStyle.Question + MsgBoxStyle.YesNo, "") = MsgBoxResult.Yes Then
-                    AplicarenCaja3 = True
-                    caja_factura = 3
-                    If CajaAbierta(caja_factura) = False Then
-                        MsgBox("La caja #" & caja_factura & " no esta abierta, no se puede realizar la operacion!!!", MsgBoxStyle.Exclamation, Text)
-                        Exit Sub
+                If IsClinica() = False Then
+                    If MsgBox("Desea Registrar el abono en la caja 3?", MsgBoxStyle.Question + MsgBoxStyle.YesNo, "") = MsgBoxResult.Yes Then
+                        AplicarenCaja3 = True
+                        caja_factura = 3
+                        If CajaAbierta(caja_factura) = False Then
+                            MsgBox("La caja #" & caja_factura & " no esta abierta, no se puede realizar la operacion!!!", MsgBoxStyle.Exclamation, Text)
+                            Exit Sub
+                        End If
+                    Else
+                        Dim frm As New frmIngresarNumerodeFicha
+                        frm.IdUsuario = BindingContext(DsRecibos1, "abonoccobrar").Current("Ced_Usuario")
+                        frm.txtNumero.Text = ""
+                        If frm.ShowDialog = Windows.Forms.DialogResult.OK Then
+                            NumeroFicha = frm.txtNumero.Text
+                        Else
+                            Exit Sub
+                        End If
                     End If
                 Else
                     Dim frm As New frmIngresarNumerodeFicha
@@ -1911,6 +1923,7 @@ Public Class frmReciboDinero
                         Exit Sub
                     End If
                 End If
+                
             End If
         Catch ex As Exception
             MsgBox(ex.ToString)

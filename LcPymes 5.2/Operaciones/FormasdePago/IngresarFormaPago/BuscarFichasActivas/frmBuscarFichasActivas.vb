@@ -25,18 +25,23 @@ Public Class frmBuscarFichasActivas
             Me.Numero_Caja = dt.Rows(0).Item("Num_Caja")
             Me.lblNumeroCaja.Text = Me.Numero_Caja
             Me.Factura = True
-            If Me.Numero_Caja <> 1 And Me.Numero_Caja <> 2 Then
-                MsgBox("Solo puede facturar las cajas 1 y 2", MsgBoxStyle.Exclamation, "No se puede realizar la operacion")
-                Me.Factura = False
+            If IsClinica() = False Then
+                If Me.Numero_Caja <> 1 And Me.Numero_Caja <> 2 Then
+                    MsgBox("Solo puede facturar las cajas 1 y 2", MsgBoxStyle.Exclamation, "No se puede realizar la operacion")
+                    Me.Factura = False
+                End If
             End If
         Else
+            MsgBox("Usuario no tiene caja abierta", MsgBoxStyle.Exclamation, Me.Text)
             Me.Factura = False
             Me.lblUsuario.Text = ""
             Me.lblNumeroCaja.Text = ""
         End If
     End Sub
+
     Private Sub frmBuscarFichasActivas_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Me.BuscarFichasActivas()
+        Me.btnDevolver.Enabled = IsClinica()
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
@@ -78,6 +83,7 @@ Public Class frmBuscarFichasActivas
 
             Dim indexFichas As Integer = 0
             Dim frm As New frmDatosPreVenta
+            frm.NoEnviarPideFicha = True
             frm.txtTotalCobro.Text = "0.00"
             frm.viewFichas.Columns("cAbono").Visible = False
             For Each x As DataRow In dtPreventasActivas.Rows
@@ -91,6 +97,12 @@ Public Class frmBuscarFichasActivas
                 Dim dtCliente As New DataTable
                 Dim esCliente As Boolean
                 Dim cedula, correo As String
+
+                Try
+                    frm.Cod_Cliente = x.Item("Cod_Cliente")
+                Catch ex As Exception
+
+                End Try
 
                 If x.Item("Tipo") = "APA" Then
                     frm.viewFichas.Columns("cAbono").Visible = True
@@ -114,7 +126,7 @@ Public Class frmBuscarFichasActivas
                 frm.ckEsElectronica.Visible = False
                 frm.btnTiquete.Enabled = IIf(esCliente = True, False, True)
                 frm.btnFactura.Enabled = IIf(esCliente = False, False, True)
-                frm.MdiParent = Me.MdiParent
+                'frm.MdiParent = Me.MdiParent
                 frm.txtPuntoVenta.Text = x.Item("BasedeDatos")
                 frm.Id_Usuario = Me.Id_Usuario
                 frm.NombreUsuario = Me.NombreUsuario
@@ -199,7 +211,7 @@ Public Class frmBuscarFichasActivas
                     correo = ""
                 End If
                 'Dim frm As New frmDatosPreVenta
-                frm.MdiParent = Me.MdiParent
+                ' frm.MdiParent = Me.MdiParent
                 frm.txtPuntoVenta.Text = dtPreventasActivas.Rows(0).Item("BasedeDatos")
                 frm.Id_Usuario = Me.Id_Usuario
                 frm.NombreUsuario = Me.NombreUsuario
@@ -238,7 +250,9 @@ Public Class frmBuscarFichasActivas
 
             Dim totalapagar As Decimal = (From x As DataGridViewRow In frm.viewFichas.Rows Select CDec(x.Cells("cTotal").Value)).Sum
             frm.txtTotalCobro.Text = totalapagar.ToString("N2")
-            frm.Show()
+
+            frm.ShowDialog()
+            Me.BuscarFichasActivas()
             'Me.Close()
 
         Else
@@ -249,4 +263,34 @@ Public Class frmBuscarFichasActivas
     Private Sub viewFichasActivas_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles viewFichasActivas.CellDoubleClick
         Me.CapturarDatosFicha()
     End Sub
+
+    Private Sub btnDevolver_Click(sender As Object, e As EventArgs) Handles btnDevolver.Click
+        Try
+            Dim id As String = Me.viewFichasActivas.Item("Id", Me.viewFichasActivas.CurrentRow.Index).Value
+            Dim base As String = Me.viewFichasActivas.Item("BasedeDatos", Me.viewFichasActivas.CurrentRow.Index).Value
+            Dim tipo As String = Me.viewFichasActivas.Item("Tipo", Me.viewFichasActivas.CurrentRow.Index).Value
+
+            Dim dt As New DataTable
+            cFunciones.Llenar_Tabla_Generico("select * from Albaran where ID_Factura_Suvesa = " & id, dt, CadenaConexionSeePOS)
+            If dt.Rows.Count > 0 Then
+                Dim frm As New frmVersionCompleta
+                If frm.ShowDialog = Windows.Forms.DialogResult.OK Then
+
+                    If MsgBox("Desea Reversar la preventa." & vbCrLf _
+                              & "Esta accion inactivara la preventa y devolvera los albaranes", MsgBoxStyle.YesNo + MsgBoxStyle.Question, "Confirmar Accion.") = MsgBoxResult.Yes Then
+                        Dim db As New OBSoluciones.SQL.Sentencias(CadenaConexionSeePOS)
+                        db.Ejecutar("Update " & base & ".dbo.PreVentas Set Estado = 'Inactivada' Where Id = " & id, CommandType.Text)
+                        db.Ejecutar("Update " & base & ".dbo.Albaran set facturado = 0, ID_Factura_Suvesa = 0 where ID_Factura_Suvesa = " & id, CommandType.Text)
+                        Me.BuscarFichasActivas()
+                    End If
+
+                End If
+            Else
+                MsgBox("La preventa no tiene relacionado un albaran", MsgBoxStyle.Exclamation, "No se puede realizar la Operacion.")
+            End If
+        Catch ex As Exception
+            MsgBox(ex.Message, MsgBoxStyle.Critical, Me.Text)
+        End Try
+    End Sub
+
 End Class

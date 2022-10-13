@@ -3,11 +3,23 @@
     'Public CadenaConexionSeePOS As String = GetSetting("SeeSOFT", "SeePOS", "Conexion")
     'Public CadenaConexionSeguridad As String = GetSetting("SeeSOFT", "Seguridad", "Conexion")
 
+    Private Clinica As Boolean = False
+
+    Public Sub ObtenerClinica()
+        'cargar esta funcion en el inicio del sistema para saber si es o no es clinica
+        Dim dt As New System.Data.DataTable
+        Try
+            cFunciones.Llenar_Tabla_Generico("select clinica from configuraciones", dt, CadenaConexionSeePOS)
+            If dt.Rows.Count > 0 Then
+                Clinica = dt.Rows(0).Item("Clinica")
+            End If
+        Catch ex As Exception
+            Clinica = False
+        End Try
+    End Sub
+
     Public Function IsClinica() As Boolean
-
-        'cambiar por una consulta a la base de datos
-
-        Return True
+        Return Clinica
     End Function
 
     Public Function ImpresoraCredito() As String

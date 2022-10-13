@@ -10,11 +10,13 @@ Public Class frmEtiquetasProductos
     Public Codigos(50) As Integer
     Public Cantidades(50) As Integer
     Public CodPro(50) As Integer
+    Dim EtiquetasGuanavet As New rptEtiquetasGuanavetClinica
     Dim Etiquetas1 As New Etiquetas
     Dim Etiquetas2 As New EtiquetaSATOCX400_2C
     Friend WithEvents Label4 As Label
     Friend WithEvents Label7 As Label
     Friend WithEvents Label8 As Label
+    Friend WithEvents dgEtiquetas As System.Windows.Forms.DataGridView
     Dim usua As Usuario_Logeado
 
 
@@ -68,7 +70,6 @@ Public Class frmEtiquetasProductos
     Friend WithEvents ToolBarExcel As System.Windows.Forms.ToolBarButton
     Friend WithEvents ToolBarCerrar As System.Windows.Forms.ToolBarButton
     Friend WithEvents DataNavigator1 As DevExpress.XtraEditors.DataNavigator
-    Friend WithEvents dgEtiquetas As System.Windows.Forms.DataGrid
     Friend WithEvents TextCantidad As System.Windows.Forms.TextBox
     Friend WithEvents Label5 As System.Windows.Forms.Label
     Friend WithEvents cmdEtiquetar As DevExpress.XtraEditors.SimpleButton
@@ -119,7 +120,6 @@ Public Class frmEtiquetasProductos
         Me.ToolBarImprimir = New System.Windows.Forms.ToolBarButton()
         Me.ToolBarExcel = New System.Windows.Forms.ToolBarButton()
         Me.ToolBarCerrar = New System.Windows.Forms.ToolBarButton()
-        Me.dgEtiquetas = New System.Windows.Forms.DataGrid()
         Me.SqlConnection1 = New System.Data.SqlClient.SqlConnection()
         Me.daArticulos = New System.Data.SqlClient.SqlDataAdapter()
         Me.SqlSelectCommand1 = New System.Data.SqlClient.SqlCommand()
@@ -128,6 +128,7 @@ Public Class frmEtiquetasProductos
         Me.rptViewer = New CrystalDecisions.Windows.Forms.CrystalReportViewer()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
+        Me.dgEtiquetas = New System.Windows.Forms.DataGridView()
         Me.GroupBox1.SuspendLayout()
         Me.Panel1.SuspendLayout()
         CType(Me.DsEtiquetasArticulos1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -152,9 +153,9 @@ Public Class frmEtiquetasProductos
         Me.GroupBox1.Controls.Add(Me.Label13)
         Me.GroupBox1.Font = New System.Drawing.Font("Trebuchet MS", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox1.ForeColor = System.Drawing.SystemColors.ControlDark
-        Me.GroupBox1.Location = New System.Drawing.Point(7, 40)
+        Me.GroupBox1.Location = New System.Drawing.Point(8, 46)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(495, 176)
+        Me.GroupBox1.Size = New System.Drawing.Size(594, 203)
         Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Datos Artículos"
@@ -163,18 +164,19 @@ Public Class frmEtiquetasProductos
         '
         Me.Panel1.Controls.Add(Me.RadioButtonCX)
         Me.Panel1.Controls.Add(Me.RadioButtonFX)
-        Me.Panel1.Location = New System.Drawing.Point(328, 56)
+        Me.Panel1.Location = New System.Drawing.Point(394, 65)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(161, 50)
+        Me.Panel1.Size = New System.Drawing.Size(193, 57)
         Me.Panel1.TabIndex = 138
+        Me.Panel1.Visible = False
         '
         'RadioButtonCX
         '
         Me.RadioButtonCX.Enabled = False
         Me.RadioButtonCX.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.RadioButtonCX.Location = New System.Drawing.Point(8, 28)
+        Me.RadioButtonCX.Location = New System.Drawing.Point(10, 32)
         Me.RadioButtonCX.Name = "RadioButtonCX"
-        Me.RadioButtonCX.Size = New System.Drawing.Size(96, 16)
+        Me.RadioButtonCX.Size = New System.Drawing.Size(115, 19)
         Me.RadioButtonCX.TabIndex = 1
         Me.RadioButtonCX.Text = "Estilo CX400"
         '
@@ -182,9 +184,9 @@ Public Class frmEtiquetasProductos
         '
         Me.RadioButtonFX.Checked = True
         Me.RadioButtonFX.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.RadioButtonFX.Location = New System.Drawing.Point(8, 8)
+        Me.RadioButtonFX.Location = New System.Drawing.Point(10, 9)
         Me.RadioButtonFX.Name = "RadioButtonFX"
-        Me.RadioButtonFX.Size = New System.Drawing.Size(153, 16)
+        Me.RadioButtonFX.Size = New System.Drawing.Size(183, 19)
         Me.RadioButtonFX.TabIndex = 0
         Me.RadioButtonFX.TabStop = True
         Me.RadioButtonFX.Text = "Zebra GC420t (3""x1.25"")"
@@ -192,9 +194,9 @@ Public Class frmEtiquetasProductos
         'cmdCorregir
         '
         Me.cmdCorregir.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat
-        Me.cmdCorregir.Location = New System.Drawing.Point(399, 112)
+        Me.cmdCorregir.Location = New System.Drawing.Point(479, 129)
         Me.cmdCorregir.Name = "cmdCorregir"
-        Me.cmdCorregir.Size = New System.Drawing.Size(64, 24)
+        Me.cmdCorregir.Size = New System.Drawing.Size(77, 28)
         Me.cmdCorregir.Style = New DevExpress.Utils.ViewStyle("ControlStyle", Nothing, New System.Drawing.Font("Trebuchet MS", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte)), "", DevExpress.Utils.StyleOptions.StyleEnabled, True, False, False, DevExpress.Utils.HorzAlignment.Center, DevExpress.Utils.VertAlignment.Center, Nothing, System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer)), System.Drawing.Color.White)
         Me.cmdCorregir.TabIndex = 69
         Me.cmdCorregir.Text = "Corregir"
@@ -202,9 +204,9 @@ Public Class frmEtiquetasProductos
         'cmdEtiquetar
         '
         Me.cmdEtiquetar.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat
-        Me.cmdEtiquetar.Location = New System.Drawing.Point(328, 112)
+        Me.cmdEtiquetar.Location = New System.Drawing.Point(394, 129)
         Me.cmdEtiquetar.Name = "cmdEtiquetar"
-        Me.cmdEtiquetar.Size = New System.Drawing.Size(64, 24)
+        Me.cmdEtiquetar.Size = New System.Drawing.Size(76, 28)
         Me.cmdEtiquetar.Style = New DevExpress.Utils.ViewStyle("ControlStyle", Nothing, New System.Drawing.Font("Trebuchet MS", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte)), "", DevExpress.Utils.StyleOptions.StyleEnabled, True, False, False, DevExpress.Utils.HorzAlignment.Center, DevExpress.Utils.VertAlignment.Center, Nothing, System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer)), System.Drawing.Color.White)
         Me.cmdEtiquetar.TabIndex = 68
         Me.cmdEtiquetar.Text = "Etiquetar"
@@ -214,18 +216,18 @@ Public Class frmEtiquetasProductos
         Me.Label5.BackColor = System.Drawing.Color.Transparent
         Me.Label5.Font = New System.Drawing.Font("Trebuchet MS", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Label5.Location = New System.Drawing.Point(195, 103)
+        Me.Label5.Location = New System.Drawing.Point(234, 119)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(48, 16)
+        Me.Label5.Size = New System.Drawing.Size(58, 18)
         Me.Label5.TabIndex = 67
         Me.Label5.Text = "Cant."
         '
         'TextCantidad
         '
         Me.TextCantidad.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TextCantidad.Location = New System.Drawing.Point(195, 119)
+        Me.TextCantidad.Location = New System.Drawing.Point(234, 137)
         Me.TextCantidad.Name = "TextCantidad"
-        Me.TextCantidad.Size = New System.Drawing.Size(48, 13)
+        Me.TextCantidad.Size = New System.Drawing.Size(58, 16)
         Me.TextCantidad.TabIndex = 66
         '
         'Label2
@@ -233,9 +235,9 @@ Public Class frmEtiquetasProductos
         Me.Label2.BackColor = System.Drawing.Color.Transparent
         Me.Label2.Font = New System.Drawing.Font("Trebuchet MS", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Label2.Location = New System.Drawing.Point(8, 64)
+        Me.Label2.Location = New System.Drawing.Point(10, 74)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(176, 16)
+        Me.Label2.Size = New System.Drawing.Size(211, 18)
         Me.Label2.TabIndex = 62
         Me.Label2.Text = "Código de barras"
         '
@@ -244,9 +246,9 @@ Public Class frmEtiquetasProductos
         Me.txtCodigoBarras.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtCodigoBarras.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.DsEtiquetasArticulos1, "Inventario.Barras", True))
         Me.txtCodigoBarras.Enabled = False
-        Me.txtCodigoBarras.Location = New System.Drawing.Point(8, 80)
+        Me.txtCodigoBarras.Location = New System.Drawing.Point(10, 92)
         Me.txtCodigoBarras.Name = "txtCodigoBarras"
-        Me.txtCodigoBarras.Size = New System.Drawing.Size(176, 13)
+        Me.txtCodigoBarras.Size = New System.Drawing.Size(211, 16)
         Me.txtCodigoBarras.TabIndex = 61
         Me.txtCodigoBarras.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
@@ -261,29 +263,30 @@ Public Class frmEtiquetasProductos
         Me.Label7.BackColor = System.Drawing.Color.Transparent
         Me.Label7.Font = New System.Drawing.Font("Trebuchet MS", 8.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label7.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Label7.Location = New System.Drawing.Point(8, 156)
+        Me.Label7.Location = New System.Drawing.Point(10, 180)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(481, 16)
+        Me.Label7.Size = New System.Drawing.Size(577, 18)
         Me.Label7.TabIndex = 60
-        Me.Label7.Text = "Agrege la lista de los productos a etiquetar y por ultimo presione el boton impri" & "mir"
+        Me.Label7.Text = "Agrege la lista de los productos a etiquetar y por ultimo presione el boton impri" & _
+    "mir"
         '
         'Label3
         '
         Me.Label3.BackColor = System.Drawing.Color.Transparent
         Me.Label3.Font = New System.Drawing.Font("Trebuchet MS", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Label3.Location = New System.Drawing.Point(8, 104)
+        Me.Label3.Location = New System.Drawing.Point(10, 120)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(176, 16)
+        Me.Label3.Size = New System.Drawing.Size(211, 18)
         Me.Label3.TabIndex = 60
         Me.Label3.Text = "Código de barras correcto"
         '
         'txtCodigoBarrrasCorrecto
         '
         Me.txtCodigoBarrrasCorrecto.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txtCodigoBarrrasCorrecto.Location = New System.Drawing.Point(8, 120)
+        Me.txtCodigoBarrrasCorrecto.Location = New System.Drawing.Point(10, 138)
         Me.txtCodigoBarrrasCorrecto.Name = "txtCodigoBarrrasCorrecto"
-        Me.txtCodigoBarrrasCorrecto.Size = New System.Drawing.Size(176, 13)
+        Me.txtCodigoBarrrasCorrecto.Size = New System.Drawing.Size(211, 16)
         Me.txtCodigoBarrrasCorrecto.TabIndex = 59
         Me.txtCodigoBarrrasCorrecto.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
@@ -292,9 +295,9 @@ Public Class frmEtiquetasProductos
         Me.Label1.BackColor = System.Drawing.Color.Transparent
         Me.Label1.Font = New System.Drawing.Font("Trebuchet MS", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Label1.Location = New System.Drawing.Point(105, 19)
+        Me.Label1.Location = New System.Drawing.Point(126, 22)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(336, 16)
+        Me.Label1.Size = New System.Drawing.Size(403, 18)
         Me.Label1.TabIndex = 56
         Me.Label1.Text = "Descripción"
         '
@@ -306,9 +309,9 @@ Public Class frmEtiquetasProductos
         Me.txtDescripcion.Enabled = False
         Me.txtDescripcion.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtDescripcion.ForeColor = System.Drawing.Color.Blue
-        Me.txtDescripcion.Location = New System.Drawing.Point(105, 40)
+        Me.txtDescripcion.Location = New System.Drawing.Point(126, 46)
         Me.txtDescripcion.Name = "txtDescripcion"
-        Me.txtDescripcion.Size = New System.Drawing.Size(336, 15)
+        Me.txtDescripcion.Size = New System.Drawing.Size(403, 19)
         Me.txtDescripcion.TabIndex = 55
         '
         'txtCodigo
@@ -317,9 +320,9 @@ Public Class frmEtiquetasProductos
         Me.txtCodigo.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.DsEtiquetasArticulos1, "Inventario.Codigo", True))
         Me.txtCodigo.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtCodigo.ForeColor = System.Drawing.Color.Blue
-        Me.txtCodigo.Location = New System.Drawing.Point(8, 40)
+        Me.txtCodigo.Location = New System.Drawing.Point(10, 46)
         Me.txtCodigo.Name = "txtCodigo"
-        Me.txtCodigo.Size = New System.Drawing.Size(88, 15)
+        Me.txtCodigo.Size = New System.Drawing.Size(105, 19)
         Me.txtCodigo.TabIndex = 53
         Me.txtCodigo.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
@@ -328,9 +331,9 @@ Public Class frmEtiquetasProductos
         Me.Label13.BackColor = System.Drawing.Color.Transparent
         Me.Label13.Font = New System.Drawing.Font("Trebuchet MS", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label13.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Label13.Location = New System.Drawing.Point(8, 20)
+        Me.Label13.Location = New System.Drawing.Point(10, 23)
         Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(88, 16)
+        Me.Label13.Size = New System.Drawing.Size(105, 19)
         Me.Label13.TabIndex = 54
         Me.Label13.Text = "Código"
         '
@@ -339,18 +342,18 @@ Public Class frmEtiquetasProductos
         Me.Label6.BackColor = System.Drawing.SystemColors.ControlLight
         Me.Label6.Font = New System.Drawing.Font("Trebuchet MS", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.ForeColor = System.Drawing.Color.RoyalBlue
-        Me.Label6.Location = New System.Drawing.Point(422, 176)
+        Me.Label6.Location = New System.Drawing.Point(506, 203)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(48, 16)
+        Me.Label6.Size = New System.Drawing.Size(58, 19)
         Me.Label6.TabIndex = 71
         Me.Label6.Text = "Pro"
         '
         'Textcod_Pro
         '
         Me.Textcod_Pro.Font = New System.Drawing.Font("Trebuchet MS", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Textcod_Pro.Location = New System.Drawing.Point(422, 192)
+        Me.Textcod_Pro.Location = New System.Drawing.Point(506, 222)
         Me.Textcod_Pro.Name = "Textcod_Pro"
-        Me.Textcod_Pro.Size = New System.Drawing.Size(48, 20)
+        Me.Textcod_Pro.Size = New System.Drawing.Size(58, 23)
         Me.Textcod_Pro.TabIndex = 70
         '
         'DataNavigator1
@@ -362,9 +365,9 @@ Public Class frmEtiquetasProductos
         Me.DataNavigator1.Buttons.Remove.Visible = False
         Me.DataNavigator1.DataMember = "Inventario"
         Me.DataNavigator1.DataSource = Me.DsEtiquetasArticulos1
-        Me.DataNavigator1.Location = New System.Drawing.Point(307, 429)
+        Me.DataNavigator1.Location = New System.Drawing.Point(368, 624)
         Me.DataNavigator1.Name = "DataNavigator1"
-        Me.DataNavigator1.Size = New System.Drawing.Size(160, 24)
+        Me.DataNavigator1.Size = New System.Drawing.Size(192, 28)
         Me.DataNavigator1.TabIndex = 65
         Me.DataNavigator1.Text = "DataNavigator1"
         '
@@ -428,10 +431,10 @@ Public Class frmEtiquetasProductos
         Me.ToolBar1.DropDownArrows = True
         Me.ToolBar1.ImageList = Me.ImageList1
         Me.ToolBar1.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.ToolBar1.Location = New System.Drawing.Point(0, 402)
+        Me.ToolBar1.Location = New System.Drawing.Point(0, 593)
         Me.ToolBar1.Name = "ToolBar1"
         Me.ToolBar1.ShowToolTips = True
-        Me.ToolBar1.Size = New System.Drawing.Size(836, 52)
+        Me.ToolBar1.Size = New System.Drawing.Size(853, 60)
         Me.ToolBar1.TabIndex = 135
         '
         'ToolBarNuevo
@@ -482,22 +485,10 @@ Public Class frmEtiquetasProductos
         Me.ToolBarCerrar.Name = "ToolBarCerrar"
         Me.ToolBarCerrar.Text = "Cerrar"
         '
-        'dgEtiquetas
-        '
-        Me.dgEtiquetas.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.dgEtiquetas.CaptionBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.dgEtiquetas.DataMember = ""
-        Me.dgEtiquetas.Font = New System.Drawing.Font("Trebuchet MS", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.dgEtiquetas.HeaderForeColor = System.Drawing.SystemColors.ControlText
-        Me.dgEtiquetas.Location = New System.Drawing.Point(8, 224)
-        Me.dgEtiquetas.Name = "dgEtiquetas"
-        Me.dgEtiquetas.Size = New System.Drawing.Size(494, 168)
-        Me.dgEtiquetas.TabIndex = 136
-        '
         'SqlConnection1
         '
-        Me.SqlConnection1.ConnectionString = "workstation id=HAZEL;packet size=4096;integrated security=SSPI;data source=SEESER" & "VER;persist security info=False;initial catalog=Seepos"
+        Me.SqlConnection1.ConnectionString = "workstation id=HAZEL;packet size=4096;integrated security=SSPI;data source=SEESER" & _
+    "VER;persist security info=False;initial catalog=Seepos"
         Me.SqlConnection1.FireInfoMessageEventOnUserErrors = False
         '
         'daArticulos
@@ -507,7 +498,8 @@ Public Class frmEtiquetasProductos
         '
         'SqlSelectCommand1
         '
-        Me.SqlSelectCommand1.CommandText = "SELECT Codigo, Barras, Descripcion, Inhabilitado, Servicio FROM Inventario WHERE " & "(Inhabilitado = 0) AND (Servicio = 0)"
+        Me.SqlSelectCommand1.CommandText = "SELECT Codigo, Barras, Descripcion, Inhabilitado, Servicio FROM Inventario WHERE " & _
+    "(Inhabilitado = 0) AND (Servicio = 0)"
         Me.SqlSelectCommand1.Connection = Me.SqlConnection1
         '
         'Adapter_ArticulosXProveedor
@@ -530,7 +522,7 @@ Public Class frmEtiquetasProductos
         Me.rptViewer.DisplayBackgroundEdge = False
         Me.rptViewer.DisplayToolbar = False
         Me.rptViewer.Font = New System.Drawing.Font("Trebuchet MS", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.rptViewer.Location = New System.Drawing.Point(508, 40)
+        Me.rptViewer.Location = New System.Drawing.Point(610, 46)
         Me.rptViewer.Name = "rptViewer"
         Me.rptViewer.ShowCloseButton = False
         Me.rptViewer.ShowExportButton = False
@@ -541,17 +533,17 @@ Public Class frmEtiquetasProductos
         Me.rptViewer.ShowRefreshButton = False
         Me.rptViewer.ShowTextSearchButton = False
         Me.rptViewer.ShowZoomButton = False
-        Me.rptViewer.Size = New System.Drawing.Size(328, 408)
+        Me.rptViewer.Size = New System.Drawing.Size(243, 600)
         Me.rptViewer.TabIndex = 137
-        '
+        Me.rptViewer.ToolPanelWidth = 240
         '
         'Label4
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Trebuchet MS", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(10, 3)
+        Me.Label4.Location = New System.Drawing.Point(12, 3)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(223, 27)
+        Me.Label4.Size = New System.Drawing.Size(291, 35)
         Me.Label4.TabIndex = 138
         Me.Label4.Text = "SISTEMA DE ETIQUETAS"
         '
@@ -560,21 +552,35 @@ Public Class frmEtiquetasProductos
         Me.Label8.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Trebuchet MS", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(503, 9)
+        Me.Label8.Location = New System.Drawing.Point(454, 10)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(195, 27)
+        Me.Label8.Size = New System.Drawing.Size(255, 35)
         Me.Label8.TabIndex = 138
         Me.Label8.Text = "Visor de la etiqueta"
         '
+        'dgEtiquetas
+        '
+        Me.dgEtiquetas.AllowUserToAddRows = False
+        Me.dgEtiquetas.AllowUserToResizeColumns = False
+        Me.dgEtiquetas.AllowUserToResizeRows = False
+        Me.dgEtiquetas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgEtiquetas.Location = New System.Drawing.Point(8, 247)
+        Me.dgEtiquetas.Name = "dgEtiquetas"
+        Me.dgEtiquetas.RowHeadersVisible = False
+        Me.dgEtiquetas.RowTemplate.Height = 29
+        Me.dgEtiquetas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.dgEtiquetas.Size = New System.Drawing.Size(596, 340)
+        Me.dgEtiquetas.TabIndex = 139
+        '
         'frmEtiquetasProductos
         '
-        Me.AutoScaleBaseSize = New System.Drawing.Size(5, 13)
-        Me.ClientSize = New System.Drawing.Size(836, 454)
+        Me.AutoScaleBaseSize = New System.Drawing.Size(6, 15)
+        Me.ClientSize = New System.Drawing.Size(853, 653)
+        Me.Controls.Add(Me.dgEtiquetas)
         Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.rptViewer)
         Me.Controls.Add(Me.DataNavigator1)
-        Me.Controls.Add(Me.dgEtiquetas)
         Me.Controls.Add(Me.ToolBar1)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.Label6)
@@ -669,6 +675,7 @@ Public Class frmEtiquetasProductos
             SqlConnection1.ConnectionString = CadenaConexionSeePOS
             CrystalReportsConexion.LoadReportViewer(Nothing, Etiquetas1, True)
             CrystalReportsConexion.LoadReportViewer(Nothing, Etiquetas2, True)
+            CrystalReportsConexion.LoadReportViewer(Nothing, EtiquetasGuanavet, True)
             cConexion = New Conexion
             sqlConexion = cConexion.Conectar
             Me.daArticulos.Fill(Me.DsEtiquetasArticulos1.Inventario)
@@ -752,7 +759,7 @@ Public Class frmEtiquetasProductos
 
             tabla.Columns(0).ReadOnly = True
             tabla.Columns(1).ReadOnly = True
-            tabla.Columns(2).ReadOnly = True
+            tabla.Columns(2).ReadOnly = False
             '  tabla.Columns(3).ReadOnly = False
             'tabla.Columns(2).DataType = System.Int32
 
@@ -805,6 +812,50 @@ Public Class frmEtiquetasProductos
 
             Me.dgEtiquetas.DataSource = Nothing
             Me.dgEtiquetas.DataSource = tabla
+
+        Catch ex As SystemException
+            MsgBox(ex.Message)
+        End Try
+    End Sub
+
+    Private Sub ImprimrEtiquetasGuanavet()
+        Dim i As Integer
+        Dim codigo As Integer
+        Dim cant As Integer
+        Dim Cod_Pro As Integer
+
+        Dim dts As New DataSetEtiquetasGuanavetClinica
+
+        Try
+            Dim vueltas As Integer = 0
+
+            For Each fila As DataGridViewRow In Me.dgEtiquetas.Rows
+
+                vueltas = 0
+                While vueltas < CInt(fila.Cells("Cantidad").Value)
+
+                    Dim row As DataRow = dts.DatosEtiquetasAlbaranesCompra_Crystal.NewRow
+                    row!idAlbaran = 0
+                    row!cantidad = 0
+                    row!ImporteUnitario = 0
+                    row!descripcion = fila.Cells("Descripcion").Value '***
+                    row!factorConversion = 0
+                    row!idArticulo = fila.Cells("Codigo").Value '***
+                    row!orden = ""
+                    row!PVP1 = 0 '***
+                    row!Moneda = 1 '***
+                    row!UnidadMedida = ""
+                    row!PesoEnvase = ""
+
+                    dts.DatosEtiquetasAlbaranesCompra_Crystal.Rows.Add(row)
+                    vueltas += 1
+                End While
+
+            Next
+
+            EtiquetasGuanavet.SetDataSource(dts)
+            Me.rptViewer.ReportSource = EtiquetasGuanavet
+            EtiquetasGuanavet.PrintToPrinter(cant, True, 1, 1)
 
         Catch ex As SystemException
             MsgBox(ex.Message)
@@ -876,14 +927,7 @@ Public Class frmEtiquetasProductos
         Try
             Select Case ToolBar1.Buttons.IndexOf(e.Button) + 1
                 Case 5
-
-                    If RadioButtonFX.Checked = True Then
-                        Imprimir(Me.Etiquetas1)
-                    Else
-                        Imprimir(Me.Etiquetas2)
-                    End If
-
-
+                    ImprimrEtiquetasGuanavet()
                 Case 7
                     Me.Close()
             End Select

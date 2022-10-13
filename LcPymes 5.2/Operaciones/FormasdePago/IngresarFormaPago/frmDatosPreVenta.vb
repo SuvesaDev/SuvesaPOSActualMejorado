@@ -10,6 +10,7 @@ Public Class frmDatosPreVenta
     Public NombreUsuario As String = ""
     Public Numero_Caja As Integer = 0
     Public BanderaesCliente As Boolean = False
+    Public Cod_Cliente As Long = 0
 
     Public NumCuenta As Integer = 0
 
@@ -396,6 +397,18 @@ Public Class frmDatosPreVenta
         Return True
     End Function
 
+    Public NoEnviarPideFicha As Boolean = False
+
+    Private Function CargarSaldoPrepago(_Identificacion As String) As Decimal
+        Dim dt As New DataTable
+        cFunciones.Llenar_Tabla_Generico("select IsNull(Sum(debitos - creditos),0) as Saldo from viewMovimientosPrepagos where identificacion = " & _Identificacion, dt, CadenaConexionSeePOS)
+        If dt.Rows.Count > 0 Then
+            Return dt.Rows(0).Item("Saldo")
+        Else
+            Return 0
+        End If
+    End Function
+
     Private Sub CobrarUnificado()
         For Each a As DataGridViewRow In Me.viewFichas.Rows
             If a.Cells("cTipo").Value = "APA" Then
@@ -426,6 +439,8 @@ Public Class frmDatosPreVenta
         End If
 
         Dim frm As New frmIngresarFomasdePago
+        frm.MontoAnticipo = Me.CargarSaldoPrepago(Me.Cod_Cliente)
+
         If Me.SoloEfectivo = True Then
             frm.btnTarjetaColones.Enabled = False
             frm.btnOtrasTarjetas.Enabled = False
@@ -504,6 +519,7 @@ Public Class frmDatosPreVenta
                         End If
                     Next
 
+                    Dim PrepagoColon As Decimal = (From x As DataGridViewRow In frm.viewDatos.Rows Where x.Cells("cFormaPago").Value = "PRE" And x.Cells("cCodMoneda").Value = 1 Select CDec(x.Cells("cMontoPago").Value)).Sum
                     Dim EfectivoColon As Decimal = (From x As DataGridViewRow In frm.viewDatos.Rows Where x.Cells("cFormaPago").Value = "EFE" And x.Cells("cCodMoneda").Value = 1 Select CDec(x.Cells("cMontoPago").Value)).Sum
                     Dim EfectivoDolar As Decimal = (From x As DataGridViewRow In frm.viewDatos.Rows Where x.Cells("cFormaPago").Value = "EFE" And x.Cells("cCodMoneda").Value = 2 Select CDec(x.Cells("cMontoPago").Value * x.Cells("cTipoCambio").Value)).Sum
                     Dim Tarjeta As Decimal = (From x As DataGridViewRow In frm.viewDatos.Rows Where x.Cells("cFormaPago").Value = "TAR" Select CDec(x.Cells("cMontoPago").Value * x.Cells("cTipoCambio").Value)).Sum
@@ -528,6 +544,28 @@ Public Class frmDatosPreVenta
                             Cod_Moneda = 1
                             NombreMoneda = "COLON"
                             TipoCambio = 1
+
+                            If PrepagoColon > 0 And CDec(doc.Cells("cTotal").Value) > 0 Then
+                                FormaPago = "PRE"
+                                If CDec(doc.Cells("cTotal").Value) < PrepagoColon Then
+                                    MontoPago = CDec(doc.Cells("cTotal").Value)
+                                    PrepagoColon -= CDec(doc.Cells("cTotal").Value)
+                                    doc.Cells("cTotal").Value = 0
+                                Else
+                                    doc.Cells("cTotal").Value = CDec(doc.Cells("cTotal").Value) - PrepagoColon
+                                    MontoPago = PrepagoColon
+                                    PrepagoColon = 0
+                                End If
+                                trans.Ejecutar("INSERT INTO [dbo].[OpcionesDePago] ([Documento],[TipoDocumento],[MontoPago],[FormaPago],[Denominacion],[Usuario],[Nombre],[CodMoneda],[Nombremoneda],[TipoCambio],[Fecha],[Numapertura],[Vuelto],[NumeroDocumento])VALUES(" & doc.Cells("cDocumento").Value & ", '" & TipoDoc & "'," & MontoPago & ", '" & FormaPago & "'," & MontoPago & ", '" & Me.Id_Usuario & "','" & Me.NombreUsuario & "'," & Cod_Moneda & ", '" & NombreMoneda & "', " & TipoCambio & ", getdate()," & NApertura & ", 0, '" & "" & "')", CommandType.Text)
+
+                                Select Case TipoDoc
+                                    Case "ABO"
+                                        trans.Ejecutar("Update [dbo].[abonoccobrar] Set Prepago = " & MontoPago & " Where Id_Recibo = " & IdRecibo, CommandType.Text)
+                                    Case Else
+                                        trans.Ejecutar("Update [dbo].[Ventas] Set Prepago = " & MontoPago & " Where Id = " & Id_Factura, CommandType.Text)
+                                End Select
+
+                            End If
 
                             If EfectivoColon > 0 And CDec(doc.Cells("cTotal").Value) > 0 Then
                                 FormaPago = "EFE"
@@ -644,10 +682,12 @@ Public Class frmDatosPreVenta
                     frmVuelto.ShowDialog()
                 End If
 
-                Dim frmficha As New frmNumeroFicha
-                frmficha.CargarPrimerUsuario(Me.Id_Usuario)
-                frmficha.MdiParent = Me.MdiParent
-                frmficha.Show()
+                If NoEnviarPideFicha = False Then
+                    Dim frmficha As New frmNumeroFicha
+                    frmficha.CargarPrimerUsuario(Me.Id_Usuario)
+                    frmficha.MdiParent = Me.MdiParent
+                    frmficha.Show()
+                End If
                 Me.Close()
 
             End If

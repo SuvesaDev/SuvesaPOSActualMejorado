@@ -206,23 +206,23 @@ Public Class frmMovimientoCajaPagoAbono
     <System.Diagnostics.DebuggerStepThrough()> Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmMovimientoCajaPagoAbono))
-        Dim ColumnFilterInfo18 As DevExpress.XtraGrid.Columns.ColumnFilterInfo = New DevExpress.XtraGrid.Columns.ColumnFilterInfo()
-        Dim ColumnFilterInfo19 As DevExpress.XtraGrid.Columns.ColumnFilterInfo = New DevExpress.XtraGrid.Columns.ColumnFilterInfo()
-        Dim ColumnFilterInfo20 As DevExpress.XtraGrid.Columns.ColumnFilterInfo = New DevExpress.XtraGrid.Columns.ColumnFilterInfo()
-        Dim ColumnFilterInfo21 As DevExpress.XtraGrid.Columns.ColumnFilterInfo = New DevExpress.XtraGrid.Columns.ColumnFilterInfo()
-        Dim ColumnFilterInfo22 As DevExpress.XtraGrid.Columns.ColumnFilterInfo = New DevExpress.XtraGrid.Columns.ColumnFilterInfo()
-        Dim ColumnFilterInfo23 As DevExpress.XtraGrid.Columns.ColumnFilterInfo = New DevExpress.XtraGrid.Columns.ColumnFilterInfo()
-        Dim ColumnFilterInfo24 As DevExpress.XtraGrid.Columns.ColumnFilterInfo = New DevExpress.XtraGrid.Columns.ColumnFilterInfo()
-        Dim ColumnFilterInfo25 As DevExpress.XtraGrid.Columns.ColumnFilterInfo = New DevExpress.XtraGrid.Columns.ColumnFilterInfo()
-        Dim ColumnFilterInfo26 As DevExpress.XtraGrid.Columns.ColumnFilterInfo = New DevExpress.XtraGrid.Columns.ColumnFilterInfo()
-        Dim ColumnFilterInfo27 As DevExpress.XtraGrid.Columns.ColumnFilterInfo = New DevExpress.XtraGrid.Columns.ColumnFilterInfo()
-        Dim ColumnFilterInfo28 As DevExpress.XtraGrid.Columns.ColumnFilterInfo = New DevExpress.XtraGrid.Columns.ColumnFilterInfo()
-        Dim ColumnFilterInfo29 As DevExpress.XtraGrid.Columns.ColumnFilterInfo = New DevExpress.XtraGrid.Columns.ColumnFilterInfo()
-        Dim ColumnFilterInfo30 As DevExpress.XtraGrid.Columns.ColumnFilterInfo = New DevExpress.XtraGrid.Columns.ColumnFilterInfo()
-        Dim ColumnFilterInfo31 As DevExpress.XtraGrid.Columns.ColumnFilterInfo = New DevExpress.XtraGrid.Columns.ColumnFilterInfo()
-        Dim ColumnFilterInfo32 As DevExpress.XtraGrid.Columns.ColumnFilterInfo = New DevExpress.XtraGrid.Columns.ColumnFilterInfo()
-        Dim ColumnFilterInfo33 As DevExpress.XtraGrid.Columns.ColumnFilterInfo = New DevExpress.XtraGrid.Columns.ColumnFilterInfo()
-        Dim ColumnFilterInfo34 As DevExpress.XtraGrid.Columns.ColumnFilterInfo = New DevExpress.XtraGrid.Columns.ColumnFilterInfo()
+        Dim ColumnFilterInfo1 As DevExpress.XtraGrid.Columns.ColumnFilterInfo = New DevExpress.XtraGrid.Columns.ColumnFilterInfo()
+        Dim ColumnFilterInfo2 As DevExpress.XtraGrid.Columns.ColumnFilterInfo = New DevExpress.XtraGrid.Columns.ColumnFilterInfo()
+        Dim ColumnFilterInfo3 As DevExpress.XtraGrid.Columns.ColumnFilterInfo = New DevExpress.XtraGrid.Columns.ColumnFilterInfo()
+        Dim ColumnFilterInfo4 As DevExpress.XtraGrid.Columns.ColumnFilterInfo = New DevExpress.XtraGrid.Columns.ColumnFilterInfo()
+        Dim ColumnFilterInfo5 As DevExpress.XtraGrid.Columns.ColumnFilterInfo = New DevExpress.XtraGrid.Columns.ColumnFilterInfo()
+        Dim ColumnFilterInfo6 As DevExpress.XtraGrid.Columns.ColumnFilterInfo = New DevExpress.XtraGrid.Columns.ColumnFilterInfo()
+        Dim ColumnFilterInfo7 As DevExpress.XtraGrid.Columns.ColumnFilterInfo = New DevExpress.XtraGrid.Columns.ColumnFilterInfo()
+        Dim ColumnFilterInfo8 As DevExpress.XtraGrid.Columns.ColumnFilterInfo = New DevExpress.XtraGrid.Columns.ColumnFilterInfo()
+        Dim ColumnFilterInfo9 As DevExpress.XtraGrid.Columns.ColumnFilterInfo = New DevExpress.XtraGrid.Columns.ColumnFilterInfo()
+        Dim ColumnFilterInfo10 As DevExpress.XtraGrid.Columns.ColumnFilterInfo = New DevExpress.XtraGrid.Columns.ColumnFilterInfo()
+        Dim ColumnFilterInfo11 As DevExpress.XtraGrid.Columns.ColumnFilterInfo = New DevExpress.XtraGrid.Columns.ColumnFilterInfo()
+        Dim ColumnFilterInfo12 As DevExpress.XtraGrid.Columns.ColumnFilterInfo = New DevExpress.XtraGrid.Columns.ColumnFilterInfo()
+        Dim ColumnFilterInfo13 As DevExpress.XtraGrid.Columns.ColumnFilterInfo = New DevExpress.XtraGrid.Columns.ColumnFilterInfo()
+        Dim ColumnFilterInfo14 As DevExpress.XtraGrid.Columns.ColumnFilterInfo = New DevExpress.XtraGrid.Columns.ColumnFilterInfo()
+        Dim ColumnFilterInfo15 As DevExpress.XtraGrid.Columns.ColumnFilterInfo = New DevExpress.XtraGrid.Columns.ColumnFilterInfo()
+        Dim ColumnFilterInfo16 As DevExpress.XtraGrid.Columns.ColumnFilterInfo = New DevExpress.XtraGrid.Columns.ColumnFilterInfo()
+        Dim ColumnFilterInfo17 As DevExpress.XtraGrid.Columns.ColumnFilterInfo = New DevExpress.XtraGrid.Columns.ColumnFilterInfo()
         Me.txtauxcoin = New System.Windows.Forms.TextBox()
         Me.DataSet_Opciones_Pago1 = New LcPymes_5._2.DataSet_Opciones_Pago()
         Me.txtauxtipocambio = New System.Windows.Forms.TextBox()
@@ -377,9 +377,9 @@ Public Class frmMovimientoCajaPagoAbono
         'txtauxcoin
         '
         Me.txtauxcoin.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.DataSet_Opciones_Pago1, "OpcionesDePago.OpcionesDePagoDetalle_pago_caja.Moneda", True))
-        Me.txtauxcoin.Location = New System.Drawing.Point(192, 64)
+        Me.txtauxcoin.Location = New System.Drawing.Point(230, 74)
         Me.txtauxcoin.Name = "txtauxcoin"
-        Me.txtauxcoin.Size = New System.Drawing.Size(56, 20)
+        Me.txtauxcoin.Size = New System.Drawing.Size(68, 23)
         Me.txtauxcoin.TabIndex = 66
         Me.txtauxcoin.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
@@ -392,18 +392,18 @@ Public Class frmMovimientoCajaPagoAbono
         'txtauxtipocambio
         '
         Me.txtauxtipocambio.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.DataSet_Opciones_Pago1, "OpcionesDePago.OpcionesDePagoDetalle_pago_caja.TipoCambio", True))
-        Me.txtauxtipocambio.Location = New System.Drawing.Point(264, 64)
+        Me.txtauxtipocambio.Location = New System.Drawing.Point(317, 74)
         Me.txtauxtipocambio.Name = "txtauxtipocambio"
-        Me.txtauxtipocambio.Size = New System.Drawing.Size(72, 20)
+        Me.txtauxtipocambio.Size = New System.Drawing.Size(86, 23)
         Me.txtauxtipocambio.TabIndex = 67
         Me.txtauxtipocambio.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
         'txtformapago
         '
         Me.txtformapago.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.DataSet_Opciones_Pago1, "OpcionesDePago.OpcionesDePagoDetalle_pago_caja.FormaPago", True))
-        Me.txtformapago.Location = New System.Drawing.Point(16, 64)
+        Me.txtformapago.Location = New System.Drawing.Point(19, 74)
         Me.txtformapago.Name = "txtformapago"
-        Me.txtformapago.Size = New System.Drawing.Size(128, 20)
+        Me.txtformapago.Size = New System.Drawing.Size(154, 23)
         Me.txtformapago.TabIndex = 65
         '
         'txttipofact
@@ -411,9 +411,9 @@ Public Class frmMovimientoCajaPagoAbono
         Me.txttipofact.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txttipofact.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.DataSet_Opciones_Pago1, "OpcionesDePago.OpcionesDePagoDetalle_pago_caja.TipoFactura", True))
         Me.txttipofact.ForeColor = System.Drawing.Color.Blue
-        Me.txttipofact.Location = New System.Drawing.Point(88, 32)
+        Me.txttipofact.Location = New System.Drawing.Point(106, 37)
         Me.txttipofact.Name = "txttipofact"
-        Me.txttipofact.Size = New System.Drawing.Size(80, 13)
+        Me.txttipofact.Size = New System.Drawing.Size(96, 16)
         Me.txttipofact.TabIndex = 57
         Me.txttipofact.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
@@ -422,16 +422,16 @@ Public Class frmMovimientoCajaPagoAbono
         Me.txtfactura.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtfactura.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.DataSet_Opciones_Pago1, "OpcionesDePago.OpcionesDePagoDetalle_pago_caja.NumeroFactura", True))
         Me.txtfactura.ForeColor = System.Drawing.Color.Blue
-        Me.txtfactura.Location = New System.Drawing.Point(16, 32)
+        Me.txtfactura.Location = New System.Drawing.Point(19, 37)
         Me.txtfactura.Name = "txtfactura"
-        Me.txtfactura.Size = New System.Drawing.Size(56, 13)
+        Me.txtfactura.Size = New System.Drawing.Size(67, 16)
         Me.txtfactura.TabIndex = 55
         Me.txtfactura.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
         'txttotal
         '
         Me.txttotal.EditValue = ""
-        Me.txttotal.Location = New System.Drawing.Point(128, 107)
+        Me.txttotal.Location = New System.Drawing.Point(154, 123)
         Me.txttotal.Name = "txttotal"
         '
         '
@@ -443,7 +443,7 @@ Public Class frmMovimientoCajaPagoAbono
         Me.txttotal.Properties.Enabled = False
         Me.txttotal.Properties.Style = New DevExpress.Utils.ViewStyle("ControlStyle", Nothing, New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte)), "", DevExpress.Utils.StyleOptions.StyleEnabled, True, False, False, DevExpress.Utils.HorzAlignment.[Default], DevExpress.Utils.VertAlignment.Center, Nothing, System.Drawing.SystemColors.Window, System.Drawing.Color.Blue)
         Me.txttotal.RightToLeft = System.Windows.Forms.RightToLeft.Yes
-        Me.txttotal.Size = New System.Drawing.Size(216, 39)
+        Me.txttotal.Size = New System.Drawing.Size(259, 48)
         Me.txttotal.TabIndex = 2
         '
         'Label4
@@ -451,9 +451,9 @@ Public Class frmMovimientoCajaPagoAbono
         Me.Label4.BackColor = System.Drawing.SystemColors.ControlLight
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.ForeColor = System.Drawing.Color.RoyalBlue
-        Me.Label4.Location = New System.Drawing.Point(88, 16)
+        Me.Label4.Location = New System.Drawing.Point(106, 18)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(80, 16)
+        Me.Label4.Size = New System.Drawing.Size(96, 19)
         Me.Label4.TabIndex = 58
         Me.Label4.Text = "Tipo Factura"
         Me.Label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -463,9 +463,9 @@ Public Class frmMovimientoCajaPagoAbono
         Me.Label9.BackColor = System.Drawing.SystemColors.ControlLight
         Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label9.ForeColor = System.Drawing.Color.RoyalBlue
-        Me.Label9.Location = New System.Drawing.Point(16, 16)
+        Me.Label9.Location = New System.Drawing.Point(19, 18)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(56, 16)
+        Me.Label9.Size = New System.Drawing.Size(67, 19)
         Me.Label9.TabIndex = 56
         Me.Label9.Text = "Factura"
         Me.Label9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -475,9 +475,9 @@ Public Class frmMovimientoCajaPagoAbono
         Me.Label3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.Color.RoyalBlue
-        Me.Label3.Location = New System.Drawing.Point(494, 253)
+        Me.Label3.Location = New System.Drawing.Point(593, 292)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(192, 16)
+        Me.Label3.Size = New System.Drawing.Size(230, 18)
         Me.Label3.TabIndex = 87
         Me.Label3.Text = "Vuelto"
         Me.Label3.TextAlign = System.Drawing.ContentAlignment.TopCenter
@@ -485,7 +485,7 @@ Public Class frmMovimientoCajaPagoAbono
         'lblvuelto
         '
         Me.lblvuelto.EditValue = "0"
-        Me.lblvuelto.Location = New System.Drawing.Point(494, 269)
+        Me.lblvuelto.Location = New System.Drawing.Point(593, 310)
         Me.lblvuelto.Name = "lblvuelto"
         '
         '
@@ -498,7 +498,7 @@ Public Class frmMovimientoCajaPagoAbono
         Me.lblvuelto.Properties.ReadOnly = True
         Me.lblvuelto.Properties.Style = New DevExpress.Utils.ViewStyle("ControlStyle", Nothing, New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte)), "", DevExpress.Utils.StyleOptions.StyleEnabled, True, False, False, DevExpress.Utils.HorzAlignment.[Default], DevExpress.Utils.VertAlignment.Center, Nothing, System.Drawing.SystemColors.InactiveCaptionText, System.Drawing.Color.Blue)
         Me.lblvuelto.RightToLeft = System.Windows.Forms.RightToLeft.Yes
-        Me.lblvuelto.Size = New System.Drawing.Size(192, 34)
+        Me.lblvuelto.Size = New System.Drawing.Size(230, 41)
         Me.lblvuelto.TabIndex = 86
         '
         'Label1
@@ -506,9 +506,9 @@ Public Class frmMovimientoCajaPagoAbono
         Me.Label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.RoyalBlue
-        Me.Label1.Location = New System.Drawing.Point(255, 254)
+        Me.Label1.Location = New System.Drawing.Point(306, 293)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(192, 16)
+        Me.Label1.Size = New System.Drawing.Size(230, 19)
         Me.Label1.TabIndex = 85
         Me.Label1.Text = "Monto Pagado"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.TopCenter
@@ -516,7 +516,7 @@ Public Class frmMovimientoCajaPagoAbono
         'lblmontopagado
         '
         Me.lblmontopagado.EditValue = "0"
-        Me.lblmontopagado.Location = New System.Drawing.Point(255, 270)
+        Me.lblmontopagado.Location = New System.Drawing.Point(306, 312)
         Me.lblmontopagado.Name = "lblmontopagado"
         '
         '
@@ -529,7 +529,7 @@ Public Class frmMovimientoCajaPagoAbono
         Me.lblmontopagado.Properties.ReadOnly = True
         Me.lblmontopagado.Properties.Style = New DevExpress.Utils.ViewStyle("ControlStyle", Nothing, New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte)), "", DevExpress.Utils.StyleOptions.StyleEnabled, True, False, False, DevExpress.Utils.HorzAlignment.[Default], DevExpress.Utils.VertAlignment.Center, Nothing, System.Drawing.SystemColors.InactiveCaptionText, System.Drawing.Color.Blue)
         Me.lblmontopagado.RightToLeft = System.Windows.Forms.RightToLeft.Yes
-        Me.lblmontopagado.Size = New System.Drawing.Size(192, 34)
+        Me.lblmontopagado.Size = New System.Drawing.Size(230, 41)
         Me.lblmontopagado.TabIndex = 84
         '
         'Label10
@@ -538,9 +538,9 @@ Public Class frmMovimientoCajaPagoAbono
         Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label10.ForeColor = System.Drawing.Color.RoyalBlue
         Me.Label10.ImageAlign = System.Drawing.ContentAlignment.TopCenter
-        Me.Label10.Location = New System.Drawing.Point(6, 254)
+        Me.Label10.Location = New System.Drawing.Point(7, 293)
         Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(192, 16)
+        Me.Label10.Size = New System.Drawing.Size(231, 19)
         Me.Label10.TabIndex = 81
         Me.Label10.Text = "Monto Total Factura"
         Me.Label10.TextAlign = System.Drawing.ContentAlignment.TopCenter
@@ -548,7 +548,7 @@ Public Class frmMovimientoCajaPagoAbono
         'lblmontofact
         '
         Me.lblmontofact.EditValue = "0"
-        Me.lblmontofact.Location = New System.Drawing.Point(6, 270)
+        Me.lblmontofact.Location = New System.Drawing.Point(7, 312)
         Me.lblmontofact.Name = "lblmontofact"
         '
         '
@@ -561,7 +561,7 @@ Public Class frmMovimientoCajaPagoAbono
         Me.lblmontofact.Properties.ReadOnly = True
         Me.lblmontofact.Properties.Style = New DevExpress.Utils.ViewStyle("ControlStyle", Nothing, New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte)), "", DevExpress.Utils.StyleOptions.StyleEnabled, True, False, False, DevExpress.Utils.HorzAlignment.[Default], DevExpress.Utils.VertAlignment.Center, Nothing, System.Drawing.SystemColors.InactiveCaptionText, System.Drawing.Color.Blue)
         Me.lblmontofact.RightToLeft = System.Windows.Forms.RightToLeft.Yes
-        Me.lblmontofact.Size = New System.Drawing.Size(192, 34)
+        Me.lblmontofact.Size = New System.Drawing.Size(231, 41)
         Me.lblmontofact.TabIndex = 80
         '
         'gbmoneda
@@ -569,9 +569,9 @@ Public Class frmMovimientoCajaPagoAbono
         Me.gbmoneda.Controls.Add(Me.cbomoneda)
         Me.gbmoneda.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.gbmoneda.ForeColor = System.Drawing.Color.MidnightBlue
-        Me.gbmoneda.Location = New System.Drawing.Point(123, 33)
+        Me.gbmoneda.Location = New System.Drawing.Point(148, 38)
         Me.gbmoneda.Name = "gbmoneda"
-        Me.gbmoneda.Size = New System.Drawing.Size(136, 48)
+        Me.gbmoneda.Size = New System.Drawing.Size(163, 55)
         Me.gbmoneda.TabIndex = 63
         Me.gbmoneda.TabStop = False
         Me.gbmoneda.Text = "Moneda"
@@ -581,9 +581,9 @@ Public Class frmMovimientoCajaPagoAbono
         Me.cbomoneda.DataSource = Me.DataSet_Opciones_Pago1
         Me.cbomoneda.DisplayMember = "Moneda.MonedaNombre"
         Me.cbomoneda.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.cbomoneda.Location = New System.Drawing.Point(8, 16)
+        Me.cbomoneda.Location = New System.Drawing.Point(10, 18)
         Me.cbomoneda.Name = "cbomoneda"
-        Me.cbomoneda.Size = New System.Drawing.Size(120, 21)
+        Me.cbomoneda.Size = New System.Drawing.Size(144, 25)
         Me.cbomoneda.TabIndex = 0
         Me.cbomoneda.ValueMember = "Moneda.CodMoneda"
         '
@@ -598,9 +598,9 @@ Public Class frmMovimientoCajaPagoAbono
         Me.GroupBox1.Controls.Add(Me.rbefectivo)
         Me.GroupBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox1.ForeColor = System.Drawing.Color.MidnightBlue
-        Me.GroupBox1.Location = New System.Drawing.Point(8, 33)
+        Me.GroupBox1.Location = New System.Drawing.Point(10, 38)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(112, 167)
+        Me.GroupBox1.Size = New System.Drawing.Size(134, 193)
         Me.GroupBox1.TabIndex = 50
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Forma Pago"
@@ -609,36 +609,36 @@ Public Class frmMovimientoCajaPagoAbono
         '
         Me.btnRefrescar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnRefrescar.Image = Global.LcPymes_5._2.My.Resources.Resources.arrow_refresh1
-        Me.btnRefrescar.Location = New System.Drawing.Point(80, 138)
+        Me.btnRefrescar.Location = New System.Drawing.Point(96, 159)
         Me.btnRefrescar.Name = "btnRefrescar"
-        Me.btnRefrescar.Size = New System.Drawing.Size(25, 21)
+        Me.btnRefrescar.Size = New System.Drawing.Size(30, 24)
         Me.btnRefrescar.TabIndex = 169
         Me.btnRefrescar.UseVisualStyleBackColor = True
         '
         'rbPrepago
         '
         Me.rbPrepago.ForeColor = System.Drawing.Color.RoyalBlue
-        Me.rbPrepago.Location = New System.Drawing.Point(8, 137)
+        Me.rbPrepago.Location = New System.Drawing.Point(10, 158)
         Me.rbPrepago.Name = "rbPrepago"
-        Me.rbPrepago.Size = New System.Drawing.Size(96, 24)
+        Me.rbPrepago.Size = New System.Drawing.Size(115, 28)
         Me.rbPrepago.TabIndex = 56
         Me.rbPrepago.Text = "Anticipo"
         '
         'rbSinpe
         '
         Me.rbSinpe.ForeColor = System.Drawing.Color.RoyalBlue
-        Me.rbSinpe.Location = New System.Drawing.Point(8, 113)
+        Me.rbSinpe.Location = New System.Drawing.Point(10, 130)
         Me.rbSinpe.Name = "rbSinpe"
-        Me.rbSinpe.Size = New System.Drawing.Size(96, 24)
+        Me.rbSinpe.Size = New System.Drawing.Size(115, 28)
         Me.rbSinpe.TabIndex = 55
         Me.rbSinpe.Text = "SINPE"
         '
         'rbtranferencia
         '
         Me.rbtranferencia.ForeColor = System.Drawing.Color.RoyalBlue
-        Me.rbtranferencia.Location = New System.Drawing.Point(8, 88)
+        Me.rbtranferencia.Location = New System.Drawing.Point(10, 102)
         Me.rbtranferencia.Name = "rbtranferencia"
-        Me.rbtranferencia.Size = New System.Drawing.Size(96, 24)
+        Me.rbtranferencia.Size = New System.Drawing.Size(115, 27)
         Me.rbtranferencia.TabIndex = 54
         Me.rbtranferencia.Text = "Transferencia"
         '
@@ -646,27 +646,27 @@ Public Class frmMovimientoCajaPagoAbono
         '
         Me.rbcheque.AccessibleName = ""
         Me.rbcheque.ForeColor = System.Drawing.Color.RoyalBlue
-        Me.rbcheque.Location = New System.Drawing.Point(8, 64)
+        Me.rbcheque.Location = New System.Drawing.Point(10, 74)
         Me.rbcheque.Name = "rbcheque"
-        Me.rbcheque.Size = New System.Drawing.Size(80, 24)
+        Me.rbcheque.Size = New System.Drawing.Size(96, 28)
         Me.rbcheque.TabIndex = 53
         Me.rbcheque.Text = "Cheque"
         '
         'rbtarjeta
         '
         Me.rbtarjeta.ForeColor = System.Drawing.Color.RoyalBlue
-        Me.rbtarjeta.Location = New System.Drawing.Point(8, 40)
+        Me.rbtarjeta.Location = New System.Drawing.Point(10, 46)
         Me.rbtarjeta.Name = "rbtarjeta"
-        Me.rbtarjeta.Size = New System.Drawing.Size(80, 24)
+        Me.rbtarjeta.Size = New System.Drawing.Size(96, 28)
         Me.rbtarjeta.TabIndex = 52
         Me.rbtarjeta.Text = "Tarjeta"
         '
         'rbefectivo
         '
         Me.rbefectivo.ForeColor = System.Drawing.Color.RoyalBlue
-        Me.rbefectivo.Location = New System.Drawing.Point(8, 17)
+        Me.rbefectivo.Location = New System.Drawing.Point(10, 20)
         Me.rbefectivo.Name = "rbefectivo"
-        Me.rbefectivo.Size = New System.Drawing.Size(80, 24)
+        Me.rbefectivo.Size = New System.Drawing.Size(96, 27)
         Me.rbefectivo.TabIndex = 51
         Me.rbefectivo.Text = "Efectivo"
         '
@@ -674,9 +674,9 @@ Public Class frmMovimientoCajaPagoAbono
         '
         Me.Combo_Tarjeta.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.Combo_Tarjeta.ForeColor = System.Drawing.Color.Blue
-        Me.Combo_Tarjeta.Location = New System.Drawing.Point(112, 72)
+        Me.Combo_Tarjeta.Location = New System.Drawing.Point(134, 83)
         Me.Combo_Tarjeta.Name = "Combo_Tarjeta"
-        Me.Combo_Tarjeta.Size = New System.Drawing.Size(184, 21)
+        Me.Combo_Tarjeta.Size = New System.Drawing.Size(221, 25)
         Me.Combo_Tarjeta.TabIndex = 3
         Me.Combo_Tarjeta.Visible = False
         '
@@ -694,9 +694,9 @@ Public Class frmMovimientoCajaPagoAbono
         Me.GroupBox_Detalle_Pago.Controls.Add(Me.Label_RefDocumento)
         Me.GroupBox_Detalle_Pago.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox_Detalle_Pago.ForeColor = System.Drawing.Color.MidnightBlue
-        Me.GroupBox_Detalle_Pago.Location = New System.Drawing.Point(8, 219)
+        Me.GroupBox_Detalle_Pago.Location = New System.Drawing.Point(10, 253)
         Me.GroupBox_Detalle_Pago.Name = "GroupBox_Detalle_Pago"
-        Me.GroupBox_Detalle_Pago.Size = New System.Drawing.Size(304, 76)
+        Me.GroupBox_Detalle_Pago.Size = New System.Drawing.Size(364, 87)
         Me.GroupBox_Detalle_Pago.TabIndex = 0
         Me.GroupBox_Detalle_Pago.TabStop = False
         Me.GroupBox_Detalle_Pago.Text = "Detalle Forma Pago"
@@ -707,9 +707,9 @@ Public Class frmMovimientoCajaPagoAbono
         Me.TxtVoucher.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxtVoucher.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.DataSet_Opciones_Pago1, "OpcionesDePago.OpcionesDePagoDetalle_pago_caja.Referencia", True))
         Me.TxtVoucher.ForeColor = System.Drawing.Color.Blue
-        Me.TxtVoucher.Location = New System.Drawing.Point(112, 96)
+        Me.TxtVoucher.Location = New System.Drawing.Point(134, 111)
         Me.TxtVoucher.Name = "TxtVoucher"
-        Me.TxtVoucher.Size = New System.Drawing.Size(184, 20)
+        Me.TxtVoucher.Size = New System.Drawing.Size(221, 23)
         Me.TxtVoucher.TabIndex = 149
         Me.TxtVoucher.Text = "00000"
         Me.TxtVoucher.Visible = False
@@ -719,9 +719,9 @@ Public Class frmMovimientoCajaPagoAbono
         Me.Label_RefTipo.BackColor = System.Drawing.SystemColors.ControlLight
         Me.Label_RefTipo.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label_RefTipo.ForeColor = System.Drawing.Color.RoyalBlue
-        Me.Label_RefTipo.Location = New System.Drawing.Point(12, 72)
+        Me.Label_RefTipo.Location = New System.Drawing.Point(14, 83)
         Me.Label_RefTipo.Name = "Label_RefTipo"
-        Me.Label_RefTipo.Size = New System.Drawing.Size(96, 16)
+        Me.Label_RefTipo.Size = New System.Drawing.Size(116, 19)
         Me.Label_RefTipo.TabIndex = 127
         Me.Label_RefTipo.Text = "Referencia Tipo"
         Me.Label_RefTipo.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -731,9 +731,9 @@ Public Class frmMovimientoCajaPagoAbono
         Me.Label_Referencia.BackColor = System.Drawing.SystemColors.ControlLight
         Me.Label_Referencia.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label_Referencia.ForeColor = System.Drawing.Color.RoyalBlue
-        Me.Label_Referencia.Location = New System.Drawing.Point(20, 24)
+        Me.Label_Referencia.Location = New System.Drawing.Point(24, 28)
         Me.Label_Referencia.Name = "Label_Referencia"
-        Me.Label_Referencia.Size = New System.Drawing.Size(88, 16)
+        Me.Label_Referencia.Size = New System.Drawing.Size(106, 18)
         Me.Label_Referencia.TabIndex = 128
         Me.Label_Referencia.Text = "Referencia"
         Me.Label_Referencia.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -743,9 +743,9 @@ Public Class frmMovimientoCajaPagoAbono
         Me.TxtReferenciaTipo.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxtReferenciaTipo.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.DataSet_Opciones_Pago1, "OpcionesDePago.OpcionesDePagoDetalle_pago_caja.ReferenciaTipo", True))
         Me.TxtReferenciaTipo.ForeColor = System.Drawing.Color.Blue
-        Me.TxtReferenciaTipo.Location = New System.Drawing.Point(112, 72)
+        Me.TxtReferenciaTipo.Location = New System.Drawing.Point(134, 83)
         Me.TxtReferenciaTipo.Name = "TxtReferenciaTipo"
-        Me.TxtReferenciaTipo.Size = New System.Drawing.Size(184, 20)
+        Me.TxtReferenciaTipo.Size = New System.Drawing.Size(221, 23)
         Me.TxtReferenciaTipo.TabIndex = 2
         '
         'Combo_Bancos
@@ -753,9 +753,9 @@ Public Class frmMovimientoCajaPagoAbono
         Me.Combo_Bancos.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.DataSet_Opciones_Pago1, "OpcionesDePago.OpcionesDePagoDetalle_pago_caja.ReferenciaDoc", True))
         Me.Combo_Bancos.ForeColor = System.Drawing.Color.Blue
         Me.Combo_Bancos.Items.AddRange(New Object() {"Banco Bac San Jose", "Banco Banex", "Banco Cathay", "Banco Crédito Agricola de Cartago", "Banco Cuscatlan", "Banco de Costa Rica", "Banco Improsa", "Banco Interfin", "Banco Nacional de Costa Rica", "Banco Popular", "Banco ProAmerica", "Banco ScotianBank", "Banco UNO"})
-        Me.Combo_Bancos.Location = New System.Drawing.Point(112, 96)
+        Me.Combo_Bancos.Location = New System.Drawing.Point(134, 111)
         Me.Combo_Bancos.Name = "Combo_Bancos"
-        Me.Combo_Bancos.Size = New System.Drawing.Size(184, 21)
+        Me.Combo_Bancos.Size = New System.Drawing.Size(221, 25)
         Me.Combo_Bancos.TabIndex = 3
         '
         'TxtDocumentoF
@@ -764,9 +764,9 @@ Public Class frmMovimientoCajaPagoAbono
         Me.TxtDocumentoF.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxtDocumentoF.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.DataSet_Opciones_Pago1, "OpcionesDePago.OpcionesDePagoDetalle_pago_caja.Documento", True))
         Me.TxtDocumentoF.ForeColor = System.Drawing.Color.Blue
-        Me.TxtDocumentoF.Location = New System.Drawing.Point(112, 48)
+        Me.TxtDocumentoF.Location = New System.Drawing.Point(134, 55)
         Me.TxtDocumentoF.Name = "TxtDocumentoF"
-        Me.TxtDocumentoF.Size = New System.Drawing.Size(184, 20)
+        Me.TxtDocumentoF.Size = New System.Drawing.Size(221, 23)
         Me.TxtDocumentoF.TabIndex = 1
         Me.TxtDocumentoF.Text = "00000"
         '
@@ -775,9 +775,9 @@ Public Class frmMovimientoCajaPagoAbono
         Me.TxtReferenciaF.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxtReferenciaF.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.DataSet_Opciones_Pago1, "OpcionesDePago.OpcionesDePagoDetalle_pago_caja.Referencia", True))
         Me.TxtReferenciaF.ForeColor = System.Drawing.Color.Blue
-        Me.TxtReferenciaF.Location = New System.Drawing.Point(112, 24)
+        Me.TxtReferenciaF.Location = New System.Drawing.Point(134, 28)
         Me.TxtReferenciaF.Name = "TxtReferenciaF"
-        Me.TxtReferenciaF.Size = New System.Drawing.Size(184, 20)
+        Me.TxtReferenciaF.Size = New System.Drawing.Size(221, 23)
         Me.TxtReferenciaF.TabIndex = 0
         Me.TxtReferenciaF.Text = "00000"
         '
@@ -786,9 +786,9 @@ Public Class frmMovimientoCajaPagoAbono
         Me.Label_Documento.BackColor = System.Drawing.SystemColors.ControlLight
         Me.Label_Documento.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label_Documento.ForeColor = System.Drawing.Color.RoyalBlue
-        Me.Label_Documento.Location = New System.Drawing.Point(20, 48)
+        Me.Label_Documento.Location = New System.Drawing.Point(24, 55)
         Me.Label_Documento.Name = "Label_Documento"
-        Me.Label_Documento.Size = New System.Drawing.Size(88, 16)
+        Me.Label_Documento.Size = New System.Drawing.Size(106, 19)
         Me.Label_Documento.TabIndex = 130
         Me.Label_Documento.Text = "Documento"
         Me.Label_Documento.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -798,9 +798,9 @@ Public Class frmMovimientoCajaPagoAbono
         Me.Label_RefDocumento.BackColor = System.Drawing.SystemColors.ControlLight
         Me.Label_RefDocumento.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label_RefDocumento.ForeColor = System.Drawing.Color.RoyalBlue
-        Me.Label_RefDocumento.Location = New System.Drawing.Point(11, 99)
+        Me.Label_RefDocumento.Location = New System.Drawing.Point(13, 114)
         Me.Label_RefDocumento.Name = "Label_RefDocumento"
-        Me.Label_RefDocumento.Size = New System.Drawing.Size(96, 16)
+        Me.Label_RefDocumento.Size = New System.Drawing.Size(115, 19)
         Me.Label_RefDocumento.TabIndex = 129
         Me.Label_RefDocumento.Text = "Referencia Doc"
         Me.Label_RefDocumento.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -815,7 +815,7 @@ Public Class frmMovimientoCajaPagoAbono
         Me.Label2.ImeMode = System.Windows.Forms.ImeMode.NoControl
         Me.Label2.Location = New System.Drawing.Point(0, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(720, 32)
+        Me.Label2.Size = New System.Drawing.Size(718, 37)
         Me.Label2.TabIndex = 103
         Me.Label2.Text = "Movimiento de Pago"
         Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -897,7 +897,7 @@ Public Class frmMovimientoCajaPagoAbono
         '
         'SqlSelectCommand3
         '
-        Me.SqlSelectCommand3.CommandText = "SELECT NumeroFactura, TipoFactura, FormaPago, Referencia, Documento, ReferenciaTi" &
+        Me.SqlSelectCommand3.CommandText = "SELECT NumeroFactura, TipoFactura, FormaPago, Referencia, Documento, ReferenciaTi" & _
     "po, ReferenciaDoc, Moneda, TipoCambio, Id FROM Detalle_pago_caja"
         '
         'SqlDeleteCommand1
@@ -912,7 +912,7 @@ Public Class frmMovimientoCajaPagoAbono
         '
         'SqlSelectCommand2
         '
-        Me.SqlSelectCommand2.CommandText = "SELECT id, Documento, TipoDocumento, MontoPago, FormaPago, Usuario, Nombre, CodMo" &
+        Me.SqlSelectCommand2.CommandText = "SELECT id, Documento, TipoDocumento, MontoPago, FormaPago, Usuario, Nombre, CodMo" & _
     "neda, TipoCambio, Fecha FROM OpcionesDePago"
         '
         'ImageList1
@@ -938,10 +938,10 @@ Public Class frmMovimientoCajaPagoAbono
         Me.ToolBar1.DropDownArrows = True
         Me.ToolBar1.ImageList = Me.ImageList1
         Me.ToolBar1.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.ToolBar1.Location = New System.Drawing.Point(0, 317)
+        Me.ToolBar1.Location = New System.Drawing.Point(0, 303)
         Me.ToolBar1.Name = "ToolBar1"
         Me.ToolBar1.ShowToolTips = True
-        Me.ToolBar1.Size = New System.Drawing.Size(720, 56)
+        Me.ToolBar1.Size = New System.Drawing.Size(718, 65)
         Me.ToolBar1.TabIndex = 1
         '
         'ToolBarNuevo
@@ -996,7 +996,7 @@ Public Class frmMovimientoCajaPagoAbono
         '
         'SqlConnection1
         '
-        Me.SqlConnection1.ConnectionString = "workstation id=""TOSHIBA-USER"";packet size=4096;integrated security=SSPI;data sour" &
+        Me.SqlConnection1.ConnectionString = "workstation id=""TOSHIBA-USER"";packet size=4096;integrated security=SSPI;data sour" & _
     "ce=""."";persist security info=False;initial catalog=SeePOS"
         Me.SqlConnection1.FireInfoMessageEventOnUserErrors = False
         '
@@ -1022,7 +1022,7 @@ Public Class frmMovimientoCajaPagoAbono
         '
         'SqlSelectCommand4
         '
-        Me.SqlSelectCommand4.CommandText = "SELECT NumeroFactura, TipoFactura, FormaPago, Referencia, Documento, ReferenciaTi" &
+        Me.SqlSelectCommand4.CommandText = "SELECT NumeroFactura, TipoFactura, FormaPago, Referencia, Documento, ReferenciaTi" & _
     "po, ReferenciaDoc, Moneda, TipoCambio, Id, Id_ODP FROM Detalle_pago_caja"
         Me.SqlSelectCommand4.Connection = Me.SqlConnection1
         '
@@ -1045,9 +1045,9 @@ Public Class frmMovimientoCajaPagoAbono
         'txtreftipo
         '
         Me.txtreftipo.ForeColor = System.Drawing.Color.Blue
-        Me.txtreftipo.Location = New System.Drawing.Point(16, 224)
+        Me.txtreftipo.Location = New System.Drawing.Point(19, 258)
         Me.txtreftipo.Name = "txtreftipo"
-        Me.txtreftipo.Size = New System.Drawing.Size(328, 20)
+        Me.txtreftipo.Size = New System.Drawing.Size(394, 23)
         Me.txtreftipo.TabIndex = 108
         '
         'daopcionpago
@@ -1072,8 +1072,8 @@ Public Class frmMovimientoCajaPagoAbono
         '
         'SqlSelectCommand7
         '
-        Me.SqlSelectCommand7.CommandText = "SELECT id, Documento, TipoDocumento, MontoPago, FormaPago, Denominacion, Usuario," &
-    " Nombre, CodMoneda, Nombremoneda, TipoCambio, Fecha, Numapertura FROM OpcionesDe" &
+        Me.SqlSelectCommand7.CommandText = "SELECT id, Documento, TipoDocumento, MontoPago, FormaPago, Denominacion, Usuario," & _
+    " Nombre, CodMoneda, Nombremoneda, TipoCambio, Fecha, Numapertura FROM OpcionesDe" & _
     "Pago"
         Me.SqlSelectCommand7.Connection = Me.SqlConnection1
         '
@@ -1086,63 +1086,63 @@ Public Class frmMovimientoCajaPagoAbono
         'TxtDocu
         '
         Me.TxtDocu.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.DataSet_Opciones_Pago1, "OpcionesDePago.Documento", True))
-        Me.TxtDocu.Location = New System.Drawing.Point(8, 32)
+        Me.TxtDocu.Location = New System.Drawing.Point(10, 37)
         Me.TxtDocu.Name = "TxtDocu"
-        Me.TxtDocu.Size = New System.Drawing.Size(96, 20)
+        Me.TxtDocu.Size = New System.Drawing.Size(115, 23)
         Me.TxtDocu.TabIndex = 109
         Me.TxtDocu.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
         'txtdenominacion
         '
         Me.txtdenominacion.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.DataSet_Opciones_Pago1, "OpcionesDePago.Denominacion", True))
-        Me.txtdenominacion.Location = New System.Drawing.Point(8, 72)
+        Me.txtdenominacion.Location = New System.Drawing.Point(10, 83)
         Me.txtdenominacion.Name = "txtdenominacion"
-        Me.txtdenominacion.Size = New System.Drawing.Size(96, 20)
+        Me.txtdenominacion.Size = New System.Drawing.Size(115, 23)
         Me.txtdenominacion.TabIndex = 110
         Me.txtdenominacion.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
         'txtauxformapago
         '
         Me.txtauxformapago.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.DataSet_Opciones_Pago1, "OpcionesDePago.FormaPago", True))
-        Me.txtauxformapago.Location = New System.Drawing.Point(8, 152)
+        Me.txtauxformapago.Location = New System.Drawing.Point(10, 175)
         Me.txtauxformapago.Name = "txtauxformapago"
-        Me.txtauxformapago.Size = New System.Drawing.Size(96, 20)
+        Me.txtauxformapago.Size = New System.Drawing.Size(115, 23)
         Me.txtauxformapago.TabIndex = 112
         Me.txtauxformapago.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
         'txtauxtipodocumento
         '
         Me.txtauxtipodocumento.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.DataSet_Opciones_Pago1, "OpcionesDePago.TipoDocumento", True))
-        Me.txtauxtipodocumento.Location = New System.Drawing.Point(8, 192)
+        Me.txtauxtipodocumento.Location = New System.Drawing.Point(10, 222)
         Me.txtauxtipodocumento.Name = "txtauxtipodocumento"
-        Me.txtauxtipodocumento.Size = New System.Drawing.Size(96, 20)
+        Me.txtauxtipodocumento.Size = New System.Drawing.Size(115, 23)
         Me.txtauxtipodocumento.TabIndex = 113
         Me.txtauxtipodocumento.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
         'txtfecha
         '
         Me.txtfecha.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.DataSet_Opciones_Pago1, "OpcionesDePago.Fecha", True))
-        Me.txtfecha.Location = New System.Drawing.Point(128, 72)
+        Me.txtfecha.Location = New System.Drawing.Point(154, 83)
         Me.txtfecha.Name = "txtfecha"
-        Me.txtfecha.Size = New System.Drawing.Size(96, 20)
+        Me.txtfecha.Size = New System.Drawing.Size(115, 23)
         Me.txtfecha.TabIndex = 114
         Me.txtfecha.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
         'txtcodcoin
         '
         Me.txtcodcoin.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.DataSet_Opciones_Pago1, "OpcionesDePago.CodMoneda", True))
-        Me.txtcodcoin.Location = New System.Drawing.Point(128, 112)
+        Me.txtcodcoin.Location = New System.Drawing.Point(154, 129)
         Me.txtcodcoin.Name = "txtcodcoin"
-        Me.txtcodcoin.Size = New System.Drawing.Size(96, 20)
+        Me.txtcodcoin.Size = New System.Drawing.Size(115, 23)
         Me.txtcodcoin.TabIndex = 115
         Me.txtcodcoin.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
         'txttc
         '
         Me.txttc.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.DataSet_Opciones_Pago1, "OpcionesDePago.TipoCambio", True))
-        Me.txttc.Location = New System.Drawing.Point(128, 192)
+        Me.txttc.Location = New System.Drawing.Point(154, 222)
         Me.txttc.Name = "txttc"
-        Me.txttc.Size = New System.Drawing.Size(72, 20)
+        Me.txttc.Size = New System.Drawing.Size(86, 23)
         Me.txttc.TabIndex = 116
         Me.txttc.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
@@ -1154,10 +1154,10 @@ Public Class frmMovimientoCajaPagoAbono
         '
         '
         Me.dgdetopcpago.EmbeddedNavigator.Name = ""
-        Me.dgdetopcpago.Location = New System.Drawing.Point(348, 116)
+        Me.dgdetopcpago.Location = New System.Drawing.Point(418, 134)
         Me.dgdetopcpago.MainView = Me.GridView2
         Me.dgdetopcpago.Name = "dgdetopcpago"
-        Me.dgdetopcpago.Size = New System.Drawing.Size(376, 120)
+        Me.dgdetopcpago.Size = New System.Drawing.Size(451, 138)
         Me.dgdetopcpago.TabIndex = 117
         '
         'GridView2
@@ -1170,7 +1170,7 @@ Public Class frmMovimientoCajaPagoAbono
         '
         Me.colFormaPago2.Caption = "FormaPago"
         Me.colFormaPago2.FieldName = "FormaPago"
-        Me.colFormaPago2.FilterInfo = ColumnFilterInfo18
+        Me.colFormaPago2.FilterInfo = ColumnFilterInfo1
         Me.colFormaPago2.Name = "colFormaPago2"
         Me.colFormaPago2.Options = CType(((((DevExpress.XtraGrid.Columns.ColumnOptions.CanResized Or DevExpress.XtraGrid.Columns.ColumnOptions.CanSorted) _
             Or DevExpress.XtraGrid.Columns.ColumnOptions.[ReadOnly]) _
@@ -1183,7 +1183,7 @@ Public Class frmMovimientoCajaPagoAbono
         '
         Me.colReferencia.Caption = "Ref."
         Me.colReferencia.FieldName = "Referencia"
-        Me.colReferencia.FilterInfo = ColumnFilterInfo19
+        Me.colReferencia.FilterInfo = ColumnFilterInfo2
         Me.colReferencia.Name = "colReferencia"
         Me.colReferencia.Options = CType(((((DevExpress.XtraGrid.Columns.ColumnOptions.CanResized Or DevExpress.XtraGrid.Columns.ColumnOptions.CanSorted) _
             Or DevExpress.XtraGrid.Columns.ColumnOptions.[ReadOnly]) _
@@ -1196,7 +1196,7 @@ Public Class frmMovimientoCajaPagoAbono
         '
         Me.colDocumento2.Caption = "Documento"
         Me.colDocumento2.FieldName = "Documento"
-        Me.colDocumento2.FilterInfo = ColumnFilterInfo20
+        Me.colDocumento2.FilterInfo = ColumnFilterInfo3
         Me.colDocumento2.Name = "colDocumento2"
         Me.colDocumento2.Options = CType(((((DevExpress.XtraGrid.Columns.ColumnOptions.CanResized Or DevExpress.XtraGrid.Columns.ColumnOptions.CanSorted) _
             Or DevExpress.XtraGrid.Columns.ColumnOptions.[ReadOnly]) _
@@ -1209,7 +1209,7 @@ Public Class frmMovimientoCajaPagoAbono
         '
         Me.colReferenciaTipo.Caption = "Ref.Tipo"
         Me.colReferenciaTipo.FieldName = "ReferenciaTipo"
-        Me.colReferenciaTipo.FilterInfo = ColumnFilterInfo21
+        Me.colReferenciaTipo.FilterInfo = ColumnFilterInfo4
         Me.colReferenciaTipo.Name = "colReferenciaTipo"
         Me.colReferenciaTipo.Options = CType(((((DevExpress.XtraGrid.Columns.ColumnOptions.CanResized Or DevExpress.XtraGrid.Columns.ColumnOptions.CanSorted) _
             Or DevExpress.XtraGrid.Columns.ColumnOptions.[ReadOnly]) _
@@ -1222,7 +1222,7 @@ Public Class frmMovimientoCajaPagoAbono
         '
         Me.colReferenciaDoc.Caption = "Ref.Doc"
         Me.colReferenciaDoc.FieldName = "ReferenciaDoc"
-        Me.colReferenciaDoc.FilterInfo = ColumnFilterInfo22
+        Me.colReferenciaDoc.FilterInfo = ColumnFilterInfo5
         Me.colReferenciaDoc.Name = "colReferenciaDoc"
         Me.colReferenciaDoc.Options = CType(((((DevExpress.XtraGrid.Columns.ColumnOptions.CanResized Or DevExpress.XtraGrid.Columns.ColumnOptions.CanSorted) _
             Or DevExpress.XtraGrid.Columns.ColumnOptions.[ReadOnly]) _
@@ -1236,9 +1236,9 @@ Public Class frmMovimientoCajaPagoAbono
         Me.Label21.BackColor = System.Drawing.SystemColors.ControlLight
         Me.Label21.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label21.ForeColor = System.Drawing.Color.RoyalBlue
-        Me.Label21.Location = New System.Drawing.Point(8, 16)
+        Me.Label21.Location = New System.Drawing.Point(10, 18)
         Me.Label21.Name = "Label21"
-        Me.Label21.Size = New System.Drawing.Size(96, 16)
+        Me.Label21.Size = New System.Drawing.Size(115, 19)
         Me.Label21.TabIndex = 119
         Me.Label21.Text = "Documento"
         Me.Label21.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -1248,9 +1248,9 @@ Public Class frmMovimientoCajaPagoAbono
         Me.Label20.BackColor = System.Drawing.SystemColors.ControlLight
         Me.Label20.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label20.ForeColor = System.Drawing.Color.RoyalBlue
-        Me.Label20.Location = New System.Drawing.Point(8, 56)
+        Me.Label20.Location = New System.Drawing.Point(10, 65)
         Me.Label20.Name = "Label20"
-        Me.Label20.Size = New System.Drawing.Size(96, 16)
+        Me.Label20.Size = New System.Drawing.Size(115, 18)
         Me.Label20.TabIndex = 120
         Me.Label20.Text = "Denominación"
         Me.Label20.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -1260,9 +1260,9 @@ Public Class frmMovimientoCajaPagoAbono
         Me.Label22.BackColor = System.Drawing.SystemColors.ControlLight
         Me.Label22.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label22.ForeColor = System.Drawing.Color.RoyalBlue
-        Me.Label22.Location = New System.Drawing.Point(8, 136)
+        Me.Label22.Location = New System.Drawing.Point(10, 157)
         Me.Label22.Name = "Label22"
-        Me.Label22.Size = New System.Drawing.Size(96, 16)
+        Me.Label22.Size = New System.Drawing.Size(115, 18)
         Me.Label22.TabIndex = 121
         Me.Label22.Text = "FormaPago"
         Me.Label22.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -1272,9 +1272,9 @@ Public Class frmMovimientoCajaPagoAbono
         Me.Label23.BackColor = System.Drawing.SystemColors.ControlLight
         Me.Label23.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label23.ForeColor = System.Drawing.Color.RoyalBlue
-        Me.Label23.Location = New System.Drawing.Point(8, 176)
+        Me.Label23.Location = New System.Drawing.Point(10, 203)
         Me.Label23.Name = "Label23"
-        Me.Label23.Size = New System.Drawing.Size(96, 16)
+        Me.Label23.Size = New System.Drawing.Size(115, 19)
         Me.Label23.TabIndex = 122
         Me.Label23.Text = "Tipo Documento"
         Me.Label23.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -1284,9 +1284,9 @@ Public Class frmMovimientoCajaPagoAbono
         Me.Label24.BackColor = System.Drawing.SystemColors.ControlLight
         Me.Label24.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label24.ForeColor = System.Drawing.Color.RoyalBlue
-        Me.Label24.Location = New System.Drawing.Point(128, 56)
+        Me.Label24.Location = New System.Drawing.Point(154, 65)
         Me.Label24.Name = "Label24"
-        Me.Label24.Size = New System.Drawing.Size(96, 16)
+        Me.Label24.Size = New System.Drawing.Size(115, 18)
         Me.Label24.TabIndex = 123
         Me.Label24.Text = "Fecha"
         Me.Label24.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -1296,9 +1296,9 @@ Public Class frmMovimientoCajaPagoAbono
         Me.Label25.BackColor = System.Drawing.SystemColors.ControlLight
         Me.Label25.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label25.ForeColor = System.Drawing.Color.RoyalBlue
-        Me.Label25.Location = New System.Drawing.Point(128, 96)
+        Me.Label25.Location = New System.Drawing.Point(154, 111)
         Me.Label25.Name = "Label25"
-        Me.Label25.Size = New System.Drawing.Size(96, 16)
+        Me.Label25.Size = New System.Drawing.Size(115, 18)
         Me.Label25.TabIndex = 124
         Me.Label25.Text = "Cod Moneda"
         Me.Label25.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -1308,9 +1308,9 @@ Public Class frmMovimientoCajaPagoAbono
         Me.Label26.BackColor = System.Drawing.SystemColors.ControlLight
         Me.Label26.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label26.ForeColor = System.Drawing.Color.RoyalBlue
-        Me.Label26.Location = New System.Drawing.Point(128, 176)
+        Me.Label26.Location = New System.Drawing.Point(154, 203)
         Me.Label26.Name = "Label26"
-        Me.Label26.Size = New System.Drawing.Size(72, 16)
+        Me.Label26.Size = New System.Drawing.Size(86, 19)
         Me.Label26.TabIndex = 125
         Me.Label26.Text = "Tipo Cambio"
         Me.Label26.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -1338,9 +1338,9 @@ Public Class frmMovimientoCajaPagoAbono
         Me.GroupBox2.Controls.Add(Me.Label38)
         Me.GroupBox2.Controls.Add(Me.txtNumApertura)
         Me.GroupBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox2.Location = New System.Drawing.Point(16, 424)
+        Me.GroupBox2.Location = New System.Drawing.Point(19, 489)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(232, 224)
+        Me.GroupBox2.Size = New System.Drawing.Size(279, 259)
         Me.GroupBox2.TabIndex = 126
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Opciones de Pago"
@@ -1348,9 +1348,9 @@ Public Class frmMovimientoCajaPagoAbono
         'txtnommoneda
         '
         Me.txtnommoneda.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.DataSet_Opciones_Pago1, "OpcionesDePago.Nombremoneda", True))
-        Me.txtnommoneda.Location = New System.Drawing.Point(128, 152)
+        Me.txtnommoneda.Location = New System.Drawing.Point(154, 175)
         Me.txtnommoneda.Name = "txtnommoneda"
-        Me.txtnommoneda.Size = New System.Drawing.Size(96, 20)
+        Me.txtnommoneda.Size = New System.Drawing.Size(115, 23)
         Me.txtnommoneda.TabIndex = 128
         Me.txtnommoneda.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
@@ -1359,9 +1359,9 @@ Public Class frmMovimientoCajaPagoAbono
         Me.Label35.BackColor = System.Drawing.SystemColors.ControlLight
         Me.Label35.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label35.ForeColor = System.Drawing.Color.RoyalBlue
-        Me.Label35.Location = New System.Drawing.Point(128, 136)
+        Me.Label35.Location = New System.Drawing.Point(154, 157)
         Me.Label35.Name = "Label35"
-        Me.Label35.Size = New System.Drawing.Size(96, 16)
+        Me.Label35.Size = New System.Drawing.Size(115, 18)
         Me.Label35.TabIndex = 129
         Me.Label35.Text = "Moneda"
         Me.Label35.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -1369,9 +1369,9 @@ Public Class frmMovimientoCajaPagoAbono
         'txtmonto
         '
         Me.txtmonto.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.DataSet_Opciones_Pago1, "OpcionesDePago.MontoPago", True))
-        Me.txtmonto.Location = New System.Drawing.Point(8, 112)
+        Me.txtmonto.Location = New System.Drawing.Point(10, 129)
         Me.txtmonto.Name = "txtmonto"
-        Me.txtmonto.Size = New System.Drawing.Size(96, 20)
+        Me.txtmonto.Size = New System.Drawing.Size(115, 23)
         Me.txtmonto.TabIndex = 126
         Me.txtmonto.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
@@ -1380,9 +1380,9 @@ Public Class frmMovimientoCajaPagoAbono
         Me.Label34.BackColor = System.Drawing.SystemColors.ControlLight
         Me.Label34.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label34.ForeColor = System.Drawing.Color.RoyalBlue
-        Me.Label34.Location = New System.Drawing.Point(8, 96)
+        Me.Label34.Location = New System.Drawing.Point(10, 111)
         Me.Label34.Name = "Label34"
-        Me.Label34.Size = New System.Drawing.Size(96, 16)
+        Me.Label34.Size = New System.Drawing.Size(115, 18)
         Me.Label34.TabIndex = 127
         Me.Label34.Text = "Monto"
         Me.Label34.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -1392,9 +1392,9 @@ Public Class frmMovimientoCajaPagoAbono
         Me.Label38.BackColor = System.Drawing.SystemColors.ControlLight
         Me.Label38.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label38.ForeColor = System.Drawing.Color.RoyalBlue
-        Me.Label38.Location = New System.Drawing.Point(120, 16)
+        Me.Label38.Location = New System.Drawing.Point(144, 18)
         Me.Label38.Name = "Label38"
-        Me.Label38.Size = New System.Drawing.Size(104, 16)
+        Me.Label38.Size = New System.Drawing.Size(125, 19)
         Me.Label38.TabIndex = 137
         Me.Label38.Text = "Num Apertura"
         Me.Label38.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -1402,9 +1402,9 @@ Public Class frmMovimientoCajaPagoAbono
         'txtNumApertura
         '
         Me.txtNumApertura.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.DataSet_Opciones_Pago1, "OpcionesDePago.Numapertura", True))
-        Me.txtNumApertura.Location = New System.Drawing.Point(120, 32)
+        Me.txtNumApertura.Location = New System.Drawing.Point(144, 37)
         Me.txtNumApertura.Name = "txtNumApertura"
-        Me.txtNumApertura.Size = New System.Drawing.Size(100, 20)
+        Me.txtNumApertura.Size = New System.Drawing.Size(120, 23)
         Me.txtNumApertura.TabIndex = 136
         '
         'GroupBox3
@@ -1421,9 +1421,9 @@ Public Class frmMovimientoCajaPagoAbono
         Me.GroupBox3.Controls.Add(Me.txtauxcoin)
         Me.GroupBox3.Controls.Add(Me.txtauxtipocambio)
         Me.GroupBox3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox3.Location = New System.Drawing.Point(368, 416)
+        Me.GroupBox3.Location = New System.Drawing.Point(442, 480)
         Me.GroupBox3.Name = "GroupBox3"
-        Me.GroupBox3.Size = New System.Drawing.Size(360, 128)
+        Me.GroupBox3.Size = New System.Drawing.Size(432, 148)
         Me.GroupBox3.TabIndex = 131
         Me.GroupBox3.TabStop = False
         Me.GroupBox3.Text = "Detalle Pago Caja"
@@ -1433,9 +1433,9 @@ Public Class frmMovimientoCajaPagoAbono
         Me.Label33.BackColor = System.Drawing.SystemColors.ControlLight
         Me.Label33.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label33.ForeColor = System.Drawing.Color.RoyalBlue
-        Me.Label33.Location = New System.Drawing.Point(264, 48)
+        Me.Label33.Location = New System.Drawing.Point(317, 55)
         Me.Label33.Name = "Label33"
-        Me.Label33.Size = New System.Drawing.Size(72, 16)
+        Me.Label33.Size = New System.Drawing.Size(86, 19)
         Me.Label33.TabIndex = 133
         Me.Label33.Text = "Tipo Cambio"
         Me.Label33.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -1445,9 +1445,9 @@ Public Class frmMovimientoCajaPagoAbono
         Me.Label32.BackColor = System.Drawing.SystemColors.ControlLight
         Me.Label32.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label32.ForeColor = System.Drawing.Color.RoyalBlue
-        Me.Label32.Location = New System.Drawing.Point(192, 48)
+        Me.Label32.Location = New System.Drawing.Point(230, 55)
         Me.Label32.Name = "Label32"
-        Me.Label32.Size = New System.Drawing.Size(56, 16)
+        Me.Label32.Size = New System.Drawing.Size(68, 19)
         Me.Label32.TabIndex = 132
         Me.Label32.Text = "Moneda"
         Me.Label32.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -1457,9 +1457,9 @@ Public Class frmMovimientoCajaPagoAbono
         Me.Label31.BackColor = System.Drawing.SystemColors.ControlLight
         Me.Label31.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label31.ForeColor = System.Drawing.Color.RoyalBlue
-        Me.Label31.Location = New System.Drawing.Point(16, 48)
+        Me.Label31.Location = New System.Drawing.Point(19, 55)
         Me.Label31.Name = "Label31"
-        Me.Label31.Size = New System.Drawing.Size(128, 16)
+        Me.Label31.Size = New System.Drawing.Size(154, 19)
         Me.Label31.TabIndex = 131
         Me.Label31.Text = "FormaPago"
         Me.Label31.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -1468,7 +1468,7 @@ Public Class frmMovimientoCajaPagoAbono
         '
         Me.colDenominacion.Caption = "Denominación"
         Me.colDenominacion.FieldName = "Denominacion"
-        Me.colDenominacion.FilterInfo = ColumnFilterInfo23
+        Me.colDenominacion.FilterInfo = ColumnFilterInfo6
         Me.colDenominacion.Name = "colDenominacion"
         Me.colDenominacion.VisibleIndex = 4
         '
@@ -1476,7 +1476,7 @@ Public Class frmMovimientoCajaPagoAbono
         '
         Me.colTipoCambio.Caption = "Cambio"
         Me.colTipoCambio.FieldName = "TipoCambio"
-        Me.colTipoCambio.FilterInfo = ColumnFilterInfo24
+        Me.colTipoCambio.FilterInfo = ColumnFilterInfo7
         Me.colTipoCambio.Name = "colTipoCambio"
         Me.colTipoCambio.VisibleIndex = 3
         Me.colTipoCambio.Width = 39
@@ -1485,7 +1485,7 @@ Public Class frmMovimientoCajaPagoAbono
         '
         Me.colDocumento.Caption = "Factura"
         Me.colDocumento.FieldName = "Documento"
-        Me.colDocumento.FilterInfo = ColumnFilterInfo25
+        Me.colDocumento.FilterInfo = ColumnFilterInfo8
         Me.colDocumento.Name = "colDocumento"
         Me.colDocumento.VisibleIndex = 5
         Me.colDocumento.Width = 77
@@ -1494,7 +1494,7 @@ Public Class frmMovimientoCajaPagoAbono
         '
         Me.colNombremoneda.Caption = "Moneda"
         Me.colNombremoneda.FieldName = "Nombremoneda"
-        Me.colNombremoneda.FilterInfo = ColumnFilterInfo26
+        Me.colNombremoneda.FilterInfo = ColumnFilterInfo9
         Me.colNombremoneda.Name = "colNombremoneda"
         Me.colNombremoneda.VisibleIndex = 2
         Me.colNombremoneda.Width = 71
@@ -1503,7 +1503,7 @@ Public Class frmMovimientoCajaPagoAbono
         '
         Me.colMontoPago.Caption = "Monto"
         Me.colMontoPago.FieldName = "MontoPago"
-        Me.colMontoPago.FilterInfo = ColumnFilterInfo27
+        Me.colMontoPago.FilterInfo = ColumnFilterInfo10
         Me.colMontoPago.Name = "colMontoPago"
         Me.colMontoPago.VisibleIndex = 0
         '
@@ -1511,7 +1511,7 @@ Public Class frmMovimientoCajaPagoAbono
         '
         Me.colFormaPago.Caption = "Forma Pago"
         Me.colFormaPago.FieldName = "FormaPago"
-        Me.colFormaPago.FilterInfo = ColumnFilterInfo28
+        Me.colFormaPago.FilterInfo = ColumnFilterInfo11
         Me.colFormaPago.Name = "colFormaPago"
         Me.colFormaPago.VisibleIndex = 1
         Me.colFormaPago.Width = 49
@@ -1524,10 +1524,10 @@ Public Class frmMovimientoCajaPagoAbono
         '
         '
         Me.GridControl1.EmbeddedNavigator.Name = ""
-        Me.GridControl1.Location = New System.Drawing.Point(348, 37)
+        Me.GridControl1.Location = New System.Drawing.Point(418, 43)
         Me.GridControl1.MainView = Me.GridView3
         Me.GridControl1.Name = "GridControl1"
-        Me.GridControl1.Size = New System.Drawing.Size(376, 199)
+        Me.GridControl1.Size = New System.Drawing.Size(451, 229)
         Me.GridControl1.TabIndex = 133
         '
         'GridView3
@@ -1541,7 +1541,7 @@ Public Class frmMovimientoCajaPagoAbono
         '
         Me.colDocumento1.Caption = "Documento"
         Me.colDocumento1.FieldName = "Documento"
-        Me.colDocumento1.FilterInfo = ColumnFilterInfo29
+        Me.colDocumento1.FilterInfo = ColumnFilterInfo12
         Me.colDocumento1.Name = "colDocumento1"
         Me.colDocumento1.Options = CType((((DevExpress.XtraGrid.Columns.ColumnOptions.CanSorted Or DevExpress.XtraGrid.Columns.ColumnOptions.[ReadOnly]) _
             Or DevExpress.XtraGrid.Columns.ColumnOptions.ShowInCustomizationForm) _
@@ -1552,7 +1552,7 @@ Public Class frmMovimientoCajaPagoAbono
         '
         Me.colTipoDocumento.Caption = "Tipo Doc."
         Me.colTipoDocumento.FieldName = "TipoDocumento"
-        Me.colTipoDocumento.FilterInfo = ColumnFilterInfo30
+        Me.colTipoDocumento.FilterInfo = ColumnFilterInfo13
         Me.colTipoDocumento.Name = "colTipoDocumento"
         Me.colTipoDocumento.Options = CType((((DevExpress.XtraGrid.Columns.ColumnOptions.CanSorted Or DevExpress.XtraGrid.Columns.ColumnOptions.[ReadOnly]) _
             Or DevExpress.XtraGrid.Columns.ColumnOptions.ShowInCustomizationForm) _
@@ -1565,7 +1565,7 @@ Public Class frmMovimientoCajaPagoAbono
         Me.colMontoPago1.DisplayFormat.FormatString = "#,#0.00"
         Me.colMontoPago1.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric
         Me.colMontoPago1.FieldName = "MontoPago"
-        Me.colMontoPago1.FilterInfo = ColumnFilterInfo31
+        Me.colMontoPago1.FilterInfo = ColumnFilterInfo14
         Me.colMontoPago1.Name = "colMontoPago1"
         Me.colMontoPago1.Options = CType((((DevExpress.XtraGrid.Columns.ColumnOptions.CanSorted Or DevExpress.XtraGrid.Columns.ColumnOptions.[ReadOnly]) _
             Or DevExpress.XtraGrid.Columns.ColumnOptions.ShowInCustomizationForm) _
@@ -1576,7 +1576,7 @@ Public Class frmMovimientoCajaPagoAbono
         '
         Me.colFormaPago1.Caption = "Forma Pago"
         Me.colFormaPago1.FieldName = "FormaPago"
-        Me.colFormaPago1.FilterInfo = ColumnFilterInfo32
+        Me.colFormaPago1.FilterInfo = ColumnFilterInfo15
         Me.colFormaPago1.Name = "colFormaPago1"
         Me.colFormaPago1.Options = CType((((DevExpress.XtraGrid.Columns.ColumnOptions.CanSorted Or DevExpress.XtraGrid.Columns.ColumnOptions.[ReadOnly]) _
             Or DevExpress.XtraGrid.Columns.ColumnOptions.ShowInCustomizationForm) _
@@ -1589,7 +1589,7 @@ Public Class frmMovimientoCajaPagoAbono
         Me.colDenominacion1.DisplayFormat.FormatString = "#,#0.00"
         Me.colDenominacion1.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric
         Me.colDenominacion1.FieldName = "Denominacion"
-        Me.colDenominacion1.FilterInfo = ColumnFilterInfo33
+        Me.colDenominacion1.FilterInfo = ColumnFilterInfo16
         Me.colDenominacion1.Name = "colDenominacion1"
         Me.colDenominacion1.Options = CType((((DevExpress.XtraGrid.Columns.ColumnOptions.CanSorted Or DevExpress.XtraGrid.Columns.ColumnOptions.[ReadOnly]) _
             Or DevExpress.XtraGrid.Columns.ColumnOptions.ShowInCustomizationForm) _
@@ -1600,7 +1600,7 @@ Public Class frmMovimientoCajaPagoAbono
         '
         Me.colNombremoneda1.Caption = "Moneda"
         Me.colNombremoneda1.FieldName = "Nombremoneda"
-        Me.colNombremoneda1.FilterInfo = ColumnFilterInfo34
+        Me.colNombremoneda1.FilterInfo = ColumnFilterInfo17
         Me.colNombremoneda1.Name = "colNombremoneda1"
         Me.colNombremoneda1.Options = CType((((DevExpress.XtraGrid.Columns.ColumnOptions.CanSorted Or DevExpress.XtraGrid.Columns.ColumnOptions.[ReadOnly]) _
             Or DevExpress.XtraGrid.Columns.ColumnOptions.ShowInCustomizationForm) _
@@ -1609,9 +1609,9 @@ Public Class frmMovimientoCajaPagoAbono
         '
         'Label39
         '
-        Me.Label39.Location = New System.Drawing.Point(16, 584)
+        Me.Label39.Location = New System.Drawing.Point(19, 674)
         Me.Label39.Name = "Label39"
-        Me.Label39.Size = New System.Drawing.Size(832, 104)
+        Me.Label39.Size = New System.Drawing.Size(999, 120)
         Me.Label39.TabIndex = 138
         '
         'Adapter_apertura
@@ -1621,25 +1621,25 @@ Public Class frmMovimientoCajaPagoAbono
         '
         'SqlSelectCommand6
         '
-        Me.SqlSelectCommand6.CommandText = "SELECT NApertura, Fecha, Nombre, Estado, Observaciones, Anulado, Cedula FROM aper" &
+        Me.SqlSelectCommand6.CommandText = "SELECT NApertura, Fecha, Nombre, Estado, Observaciones, Anulado, Cedula FROM aper" & _
     "turacaja"
         Me.SqlSelectCommand6.Connection = Me.SqlConnection1
         '
         'label_Tipo_Cambio
         '
         Me.label_Tipo_Cambio.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.DataSet_Opciones_Pago1, "Moneda.ValorCompra", True))
-        Me.label_Tipo_Cambio.Location = New System.Drawing.Point(264, 56)
+        Me.label_Tipo_Cambio.Location = New System.Drawing.Point(317, 65)
         Me.label_Tipo_Cambio.Name = "label_Tipo_Cambio"
-        Me.label_Tipo_Cambio.Size = New System.Drawing.Size(80, 16)
+        Me.label_Tipo_Cambio.Size = New System.Drawing.Size(96, 18)
         Me.label_Tipo_Cambio.TabIndex = 140
         '
         'Label40
         '
         Me.Label40.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Label40.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label40.Location = New System.Drawing.Point(264, 40)
+        Me.Label40.Location = New System.Drawing.Point(317, 46)
         Me.Label40.Name = "Label40"
-        Me.Label40.Size = New System.Drawing.Size(80, 16)
+        Me.Label40.Size = New System.Drawing.Size(96, 19)
         Me.Label40.TabIndex = 141
         Me.Label40.Text = "Tipo Cambio"
         '
@@ -1647,9 +1647,9 @@ Public Class frmMovimientoCajaPagoAbono
         '
         Me.Label41.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Label41.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label41.Location = New System.Drawing.Point(128, 89)
+        Me.Label41.Location = New System.Drawing.Point(154, 103)
         Me.Label41.Name = "Label41"
-        Me.Label41.Size = New System.Drawing.Size(216, 16)
+        Me.Label41.Size = New System.Drawing.Size(259, 18)
         Me.Label41.TabIndex = 142
         Me.Label41.Text = "Monto a Pagar"
         Me.Label41.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -1659,9 +1659,9 @@ Public Class frmMovimientoCajaPagoAbono
         Me.Monto_Su_Moneda.BackColor = System.Drawing.SystemColors.ControlLight
         Me.Monto_Su_Moneda.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Monto_Su_Moneda.ForeColor = System.Drawing.Color.Blue
-        Me.Monto_Su_Moneda.Location = New System.Drawing.Point(744, 48)
+        Me.Monto_Su_Moneda.Location = New System.Drawing.Point(893, 55)
         Me.Monto_Su_Moneda.Name = "Monto_Su_Moneda"
-        Me.Monto_Su_Moneda.Size = New System.Drawing.Size(136, 32)
+        Me.Monto_Su_Moneda.Size = New System.Drawing.Size(163, 37)
         Me.Monto_Su_Moneda.TabIndex = 143
         Me.Monto_Su_Moneda.Text = "0"
         Me.Monto_Su_Moneda.TextAlign = System.Drawing.ContentAlignment.TopRight
@@ -1671,9 +1671,9 @@ Public Class frmMovimientoCajaPagoAbono
         Me.Pagado_Su_Moneda.BackColor = System.Drawing.SystemColors.ControlLight
         Me.Pagado_Su_Moneda.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Pagado_Su_Moneda.ForeColor = System.Drawing.Color.Blue
-        Me.Pagado_Su_Moneda.Location = New System.Drawing.Point(744, 112)
+        Me.Pagado_Su_Moneda.Location = New System.Drawing.Point(893, 129)
         Me.Pagado_Su_Moneda.Name = "Pagado_Su_Moneda"
-        Me.Pagado_Su_Moneda.Size = New System.Drawing.Size(136, 32)
+        Me.Pagado_Su_Moneda.Size = New System.Drawing.Size(163, 37)
         Me.Pagado_Su_Moneda.TabIndex = 144
         Me.Pagado_Su_Moneda.Text = "0"
         Me.Pagado_Su_Moneda.TextAlign = System.Drawing.ContentAlignment.TopRight
@@ -1683,9 +1683,9 @@ Public Class frmMovimientoCajaPagoAbono
         Me.Label42.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label42.ForeColor = System.Drawing.Color.RoyalBlue
         Me.Label42.ImageAlign = System.Drawing.ContentAlignment.TopCenter
-        Me.Label42.Location = New System.Drawing.Point(744, 32)
+        Me.Label42.Location = New System.Drawing.Point(893, 37)
         Me.Label42.Name = "Label42"
-        Me.Label42.Size = New System.Drawing.Size(136, 16)
+        Me.Label42.Size = New System.Drawing.Size(163, 18)
         Me.Label42.TabIndex = 145
         Me.Label42.Text = "Monto Total Factura"
         Me.Label42.TextAlign = System.Drawing.ContentAlignment.TopCenter
@@ -1695,9 +1695,9 @@ Public Class frmMovimientoCajaPagoAbono
         Me.Label43.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label43.ForeColor = System.Drawing.Color.RoyalBlue
         Me.Label43.ImageAlign = System.Drawing.ContentAlignment.TopCenter
-        Me.Label43.Location = New System.Drawing.Point(744, 96)
+        Me.Label43.Location = New System.Drawing.Point(893, 111)
         Me.Label43.Name = "Label43"
-        Me.Label43.Size = New System.Drawing.Size(136, 16)
+        Me.Label43.Size = New System.Drawing.Size(163, 18)
         Me.Label43.TabIndex = 146
         Me.Label43.Text = "Monto Pagado Factura"
         Me.Label43.TextAlign = System.Drawing.ContentAlignment.TopCenter
@@ -1707,10 +1707,10 @@ Public Class frmMovimientoCajaPagoAbono
         Me.TxtMontoPagar_Sumoneda.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.TxtMontoPagar_Sumoneda.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TxtMontoPagar_Sumoneda.ForeColor = System.Drawing.Color.Blue
-        Me.TxtMontoPagar_Sumoneda.Location = New System.Drawing.Point(744, 184)
+        Me.TxtMontoPagar_Sumoneda.Location = New System.Drawing.Point(893, 212)
         Me.TxtMontoPagar_Sumoneda.Multiline = True
         Me.TxtMontoPagar_Sumoneda.Name = "TxtMontoPagar_Sumoneda"
-        Me.TxtMontoPagar_Sumoneda.Size = New System.Drawing.Size(136, 40)
+        Me.TxtMontoPagar_Sumoneda.Size = New System.Drawing.Size(163, 46)
         Me.TxtMontoPagar_Sumoneda.TabIndex = 147
         Me.TxtMontoPagar_Sumoneda.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
@@ -1719,9 +1719,9 @@ Public Class frmMovimientoCajaPagoAbono
         Me.Label36.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label36.ForeColor = System.Drawing.Color.RoyalBlue
         Me.Label36.ImageAlign = System.Drawing.ContentAlignment.TopCenter
-        Me.Label36.Location = New System.Drawing.Point(744, 168)
+        Me.Label36.Location = New System.Drawing.Point(893, 194)
         Me.Label36.Name = "Label36"
-        Me.Label36.Size = New System.Drawing.Size(136, 16)
+        Me.Label36.Size = New System.Drawing.Size(163, 18)
         Me.Label36.TabIndex = 148
         Me.Label36.Text = "Monto a Pagar"
         Me.Label36.TextAlign = System.Drawing.ContentAlignment.TopCenter
@@ -1734,10 +1734,10 @@ Public Class frmMovimientoCajaPagoAbono
         Me.txtNombreUsuario.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.DataSet_Opciones_Pago1, "OpcionesDePago.Nombre", True))
         Me.txtNombreUsuario.Enabled = False
         Me.txtNombreUsuario.ForeColor = System.Drawing.Color.Blue
-        Me.txtNombreUsuario.Location = New System.Drawing.Point(504, 348)
+        Me.txtNombreUsuario.Location = New System.Drawing.Point(461, 345)
         Me.txtNombreUsuario.Name = "txtNombreUsuario"
         Me.txtNombreUsuario.ReadOnly = True
-        Me.txtNombreUsuario.Size = New System.Drawing.Size(204, 13)
+        Me.txtNombreUsuario.Size = New System.Drawing.Size(245, 15)
         Me.txtNombreUsuario.TabIndex = 168
         '
         'txtUsuario
@@ -1745,10 +1745,10 @@ Public Class frmMovimientoCajaPagoAbono
         Me.txtUsuario.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.txtUsuario.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtUsuario.ForeColor = System.Drawing.Color.Blue
-        Me.txtUsuario.Location = New System.Drawing.Point(448, 348)
+        Me.txtUsuario.Location = New System.Drawing.Point(394, 345)
         Me.txtUsuario.Name = "txtUsuario"
         Me.txtUsuario.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.txtUsuario.Size = New System.Drawing.Size(56, 13)
+        Me.txtUsuario.Size = New System.Drawing.Size(67, 15)
         Me.txtUsuario.TabIndex = 166
         '
         'Label5
@@ -1757,9 +1757,9 @@ Public Class frmMovimientoCajaPagoAbono
         Me.Label5.BackColor = System.Drawing.Color.RoyalBlue
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.ForeColor = System.Drawing.Color.White
-        Me.Label5.Location = New System.Drawing.Point(384, 348)
+        Me.Label5.Location = New System.Drawing.Point(317, 345)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(72, 13)
+        Me.Label5.Size = New System.Drawing.Size(86, 15)
         Me.Label5.TabIndex = 167
         Me.Label5.Text = "Usuario->"
         Me.Label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -1769,17 +1769,17 @@ Public Class frmMovimientoCajaPagoAbono
         Me.lblSaldoPrepago.BackColor = System.Drawing.SystemColors.ControlLight
         Me.lblSaldoPrepago.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblSaldoPrepago.ForeColor = System.Drawing.Color.RoyalBlue
-        Me.lblSaldoPrepago.Location = New System.Drawing.Point(128, 178)
+        Me.lblSaldoPrepago.Location = New System.Drawing.Point(154, 205)
         Me.lblSaldoPrepago.Name = "lblSaldoPrepago"
-        Me.lblSaldoPrepago.Size = New System.Drawing.Size(135, 16)
+        Me.lblSaldoPrepago.Size = New System.Drawing.Size(162, 19)
         Me.lblSaldoPrepago.TabIndex = 150
         Me.lblSaldoPrepago.Text = "0.00"
         Me.lblSaldoPrepago.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
         'frmMovimientoCajaPagoAbono
         '
-        Me.AutoScaleBaseSize = New System.Drawing.Size(5, 13)
-        Me.ClientSize = New System.Drawing.Size(720, 373)
+        Me.AutoScaleBaseSize = New System.Drawing.Size(6, 15)
+        Me.ClientSize = New System.Drawing.Size(718, 368)
         Me.Controls.Add(Me.lblSaldoPrepago)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.txtNombreUsuario)
@@ -1813,7 +1813,7 @@ Public Class frmMovimientoCajaPagoAbono
         Me.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.DataSet_Opciones_Pago1, "OpcionesDePago.OpcionesDePagoDetalle_pago_caja.ReferenciaTipo", True))
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.MaximizeBox = False
-        Me.MaximumSize = New System.Drawing.Size(736, 415)
+        Me.MaximumSize = New System.Drawing.Size(883, 479)
         Me.MinimizeBox = False
         Me.Name = "frmMovimientoCajaPagoAbono"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen

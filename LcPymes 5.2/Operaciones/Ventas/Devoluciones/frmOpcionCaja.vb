@@ -43,32 +43,32 @@ Public Class frmOpcionCaja
         Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button1.Location = New System.Drawing.Point(0, 0)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(200, 136)
+        Me.Button1.Size = New System.Drawing.Size(240, 157)
         Me.Button1.TabIndex = 0
         Me.Button1.Text = "Caja #1"
         '
         'Button2
         '
         Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.Location = New System.Drawing.Point(200, 0)
+        Me.Button2.Location = New System.Drawing.Point(240, 0)
         Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(192, 136)
+        Me.Button2.Size = New System.Drawing.Size(230, 157)
         Me.Button2.TabIndex = 1
         Me.Button2.Text = "Caja #2"
         '
         'Button3
         '
         Me.Button3.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button3.Location = New System.Drawing.Point(392, 0)
+        Me.Button3.Location = New System.Drawing.Point(470, 0)
         Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(192, 136)
+        Me.Button3.Size = New System.Drawing.Size(231, 157)
         Me.Button3.TabIndex = 2
         Me.Button3.Text = "Caja #3"
         '
         'frmOpcionCaja
         '
-        Me.AutoScaleBaseSize = New System.Drawing.Size(5, 13)
-        Me.ClientSize = New System.Drawing.Size(584, 133)
+        Me.AutoScaleBaseSize = New System.Drawing.Size(6, 15)
+        Me.ClientSize = New System.Drawing.Size(701, 158)
         Me.ControlBox = False
         Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.Button2)

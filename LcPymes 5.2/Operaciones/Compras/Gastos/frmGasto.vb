@@ -1102,7 +1102,7 @@ Public Class frmGasto
         Dim rsReader As SqlClient.SqlDataReader
 
 
-        sql = "SELECT Factura,CodigoProv,Fecha,TipoCompra,Cod_MonedaCompra FROM SeePos.dbo.Compras  WHERE ID_Compra = " & pIdGasto
+        sql = "SELECT Factura,CodigoProv,Fecha,TipoCompra,Cod_MonedaCompra FROM dbo.Compras  WHERE ID_Compra = " & pIdGasto
 
         cnnConexion.ConnectionString = CadenaConexionSeePOS
         cnnConexion.Open()

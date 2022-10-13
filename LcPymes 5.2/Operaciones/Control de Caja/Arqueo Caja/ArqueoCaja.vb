@@ -108,73 +108,81 @@ Public Class ArqueoCaja
     Friend WithEvents SqlDeleteCommand1 As System.Data.SqlClient.SqlCommand
     Friend WithEvents lblCaja As System.Windows.Forms.Label
     <System.Diagnostics.DebuggerStepThrough()> Private Sub InitializeComponent()
-        Dim resources As System.Resources.ResourceManager = New System.Resources.ResourceManager(GetType(ArqueoCaja))
-        Me.GroupBox1 = New System.Windows.Forms.GroupBox
-        Me.Label7 = New System.Windows.Forms.Label
-        Me.GridControl1 = New DevExpress.XtraGrid.GridControl
-        Me.DataSetArqueo1 = New LcPymes_5._2.DataSetArqueo
-        Me.GridView1 = New DevExpress.XtraGrid.Views.Grid.GridView
-        Me.colMonedaNombre1 = New DevExpress.XtraGrid.Columns.GridColumn
-        Me.colCantidad = New DevExpress.XtraGrid.Columns.GridColumn
-        Me.colDenominacion = New DevExpress.XtraGrid.Columns.GridColumn
-        Me.colNumero = New DevExpress.XtraGrid.Columns.GridColumn
-        Me.RepositoryItemCalcEdit1 = New DevExpress.XtraEditors.Repository.RepositoryItemCalcEdit
-        Me.colTotal = New DevExpress.XtraGrid.Columns.GridColumn
-        Me.SqlConnection1 = New System.Data.SqlClient.SqlConnection
-        Me.AdapterDenominacion = New System.Data.SqlClient.SqlDataAdapter
-        Me.SqlSelectCommand1 = New System.Data.SqlClient.SqlCommand
-        Me.AdapterMoneda = New System.Data.SqlClient.SqlDataAdapter
-        Me.SqlSelectCommand2 = New System.Data.SqlClient.SqlCommand
-        Me.GroupBox2 = New System.Windows.Forms.GroupBox
-        Me.GridControl2 = New DevExpress.XtraGrid.GridControl
-        Me.GridView2 = New DevExpress.XtraGrid.Views.Grid.GridView
-        Me.GridColumn1 = New DevExpress.XtraGrid.Columns.GridColumn
-        Me.GridColumn5 = New DevExpress.XtraGrid.Columns.GridColumn
-        Me.GridColumn2 = New DevExpress.XtraGrid.Columns.GridColumn
-        Me.AdapterTarjeta = New System.Data.SqlClient.SqlDataAdapter
-        Me.SqlSelectCommand3 = New System.Data.SqlClient.SqlCommand
-        Me.GroupBox3 = New System.Windows.Forms.GroupBox
-        Me.txtDepositoDolar = New DevExpress.XtraEditors.TextEdit
-        Me.Label10 = New System.Windows.Forms.Label
-        Me.txtDepositosCol = New DevExpress.XtraEditors.TextEdit
-        Me.Label9 = New System.Windows.Forms.Label
-        Me.txtChequesDol = New DevExpress.XtraEditors.TextEdit
-        Me.Label8 = New System.Windows.Forms.Label
-        Me.txtCheques = New DevExpress.XtraEditors.TextEdit
-        Me.Label4 = New System.Windows.Forms.Label
-        Me.TextEdit6 = New DevExpress.XtraEditors.TextEdit
-        Me.TextEdit4 = New DevExpress.XtraEditors.TextEdit
-        Me.TextEdit3 = New DevExpress.XtraEditors.TextEdit
-        Me.TextEdit2 = New DevExpress.XtraEditors.TextEdit
-        Me.TextEdit1 = New DevExpress.XtraEditors.TextEdit
-        Me.Label6 = New System.Windows.Forms.Label
-        Me.Label5 = New System.Windows.Forms.Label
-        Me.Label3 = New System.Windows.Forms.Label
-        Me.Label2 = New System.Windows.Forms.Label
-        Me.Label1 = New System.Windows.Forms.Label
-        Me.Label36 = New System.Windows.Forms.Label
-        Me.txtNombreUsuario = New System.Windows.Forms.TextBox
-        Me.TextBox6 = New System.Windows.Forms.TextBox
-        Me.AdapterEfectivo = New System.Data.SqlClient.SqlDataAdapter
-        Me.SqlDeleteCommand3 = New System.Data.SqlClient.SqlCommand
-        Me.SqlInsertCommand3 = New System.Data.SqlClient.SqlCommand
-        Me.SqlSelectCommand5 = New System.Data.SqlClient.SqlCommand
-        Me.SqlUpdateCommand3 = New System.Data.SqlClient.SqlCommand
-        Me.AdapterTarjetas = New System.Data.SqlClient.SqlDataAdapter
-        Me.SqlDeleteCommand2 = New System.Data.SqlClient.SqlCommand
-        Me.SqlInsertCommand2 = New System.Data.SqlClient.SqlCommand
-        Me.SqlSelectCommand6 = New System.Data.SqlClient.SqlCommand
-        Me.SqlUpdateCommand2 = New System.Data.SqlClient.SqlCommand
-        Me.AdapterArqueodeCaja = New System.Data.SqlClient.SqlDataAdapter
-        Me.SqlDeleteCommand1 = New System.Data.SqlClient.SqlCommand
-        Me.SqlInsertCommand1 = New System.Data.SqlClient.SqlCommand
-        Me.SqlSelectCommand4 = New System.Data.SqlClient.SqlCommand
-        Me.SqlUpdateCommand1 = New System.Data.SqlClient.SqlCommand
-        Me.AdapterApertura = New System.Data.SqlClient.SqlDataAdapter
-        Me.SqlSelectCommand7 = New System.Data.SqlClient.SqlCommand
-        Me.GroupBox4 = New System.Windows.Forms.GroupBox
-        Me.txtobservacion = New System.Windows.Forms.TextBox
-        Me.lblCaja = New System.Windows.Forms.Label
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ArqueoCaja))
+        Dim ColumnFilterInfo1 As DevExpress.XtraGrid.Columns.ColumnFilterInfo = New DevExpress.XtraGrid.Columns.ColumnFilterInfo()
+        Dim ColumnFilterInfo2 As DevExpress.XtraGrid.Columns.ColumnFilterInfo = New DevExpress.XtraGrid.Columns.ColumnFilterInfo()
+        Dim ColumnFilterInfo3 As DevExpress.XtraGrid.Columns.ColumnFilterInfo = New DevExpress.XtraGrid.Columns.ColumnFilterInfo()
+        Dim ColumnFilterInfo4 As DevExpress.XtraGrid.Columns.ColumnFilterInfo = New DevExpress.XtraGrid.Columns.ColumnFilterInfo()
+        Dim ColumnFilterInfo5 As DevExpress.XtraGrid.Columns.ColumnFilterInfo = New DevExpress.XtraGrid.Columns.ColumnFilterInfo()
+        Dim ColumnFilterInfo6 As DevExpress.XtraGrid.Columns.ColumnFilterInfo = New DevExpress.XtraGrid.Columns.ColumnFilterInfo()
+        Dim ColumnFilterInfo7 As DevExpress.XtraGrid.Columns.ColumnFilterInfo = New DevExpress.XtraGrid.Columns.ColumnFilterInfo()
+        Dim ColumnFilterInfo8 As DevExpress.XtraGrid.Columns.ColumnFilterInfo = New DevExpress.XtraGrid.Columns.ColumnFilterInfo()
+        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.GridControl1 = New DevExpress.XtraGrid.GridControl()
+        Me.DataSetArqueo1 = New LcPymes_5._2.DataSetArqueo()
+        Me.GridView1 = New DevExpress.XtraGrid.Views.Grid.GridView()
+        Me.colMonedaNombre1 = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.colCantidad = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.colDenominacion = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.colNumero = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.RepositoryItemCalcEdit1 = New DevExpress.XtraEditors.Repository.RepositoryItemCalcEdit()
+        Me.colTotal = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.SqlConnection1 = New System.Data.SqlClient.SqlConnection()
+        Me.AdapterDenominacion = New System.Data.SqlClient.SqlDataAdapter()
+        Me.SqlSelectCommand1 = New System.Data.SqlClient.SqlCommand()
+        Me.AdapterMoneda = New System.Data.SqlClient.SqlDataAdapter()
+        Me.SqlSelectCommand2 = New System.Data.SqlClient.SqlCommand()
+        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.GridControl2 = New DevExpress.XtraGrid.GridControl()
+        Me.GridView2 = New DevExpress.XtraGrid.Views.Grid.GridView()
+        Me.GridColumn1 = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.GridColumn5 = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.GridColumn2 = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.AdapterTarjeta = New System.Data.SqlClient.SqlDataAdapter()
+        Me.SqlSelectCommand3 = New System.Data.SqlClient.SqlCommand()
+        Me.GroupBox3 = New System.Windows.Forms.GroupBox()
+        Me.txtDepositoDolar = New DevExpress.XtraEditors.TextEdit()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.txtDepositosCol = New DevExpress.XtraEditors.TextEdit()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.txtChequesDol = New DevExpress.XtraEditors.TextEdit()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.txtCheques = New DevExpress.XtraEditors.TextEdit()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.TextEdit6 = New DevExpress.XtraEditors.TextEdit()
+        Me.TextEdit4 = New DevExpress.XtraEditors.TextEdit()
+        Me.TextEdit3 = New DevExpress.XtraEditors.TextEdit()
+        Me.TextEdit2 = New DevExpress.XtraEditors.TextEdit()
+        Me.TextEdit1 = New DevExpress.XtraEditors.TextEdit()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Label36 = New System.Windows.Forms.Label()
+        Me.txtNombreUsuario = New System.Windows.Forms.TextBox()
+        Me.TextBox6 = New System.Windows.Forms.TextBox()
+        Me.AdapterEfectivo = New System.Data.SqlClient.SqlDataAdapter()
+        Me.SqlDeleteCommand3 = New System.Data.SqlClient.SqlCommand()
+        Me.SqlInsertCommand3 = New System.Data.SqlClient.SqlCommand()
+        Me.SqlSelectCommand5 = New System.Data.SqlClient.SqlCommand()
+        Me.SqlUpdateCommand3 = New System.Data.SqlClient.SqlCommand()
+        Me.AdapterTarjetas = New System.Data.SqlClient.SqlDataAdapter()
+        Me.SqlDeleteCommand2 = New System.Data.SqlClient.SqlCommand()
+        Me.SqlInsertCommand2 = New System.Data.SqlClient.SqlCommand()
+        Me.SqlSelectCommand6 = New System.Data.SqlClient.SqlCommand()
+        Me.SqlUpdateCommand2 = New System.Data.SqlClient.SqlCommand()
+        Me.AdapterArqueodeCaja = New System.Data.SqlClient.SqlDataAdapter()
+        Me.SqlDeleteCommand1 = New System.Data.SqlClient.SqlCommand()
+        Me.SqlInsertCommand1 = New System.Data.SqlClient.SqlCommand()
+        Me.SqlSelectCommand4 = New System.Data.SqlClient.SqlCommand()
+        Me.SqlUpdateCommand1 = New System.Data.SqlClient.SqlCommand()
+        Me.AdapterApertura = New System.Data.SqlClient.SqlDataAdapter()
+        Me.SqlSelectCommand7 = New System.Data.SqlClient.SqlCommand()
+        Me.GroupBox4 = New System.Windows.Forms.GroupBox()
+        Me.txtobservacion = New System.Windows.Forms.TextBox()
+        Me.lblCaja = New System.Windows.Forms.Label()
         Me.GroupBox1.SuspendLayout()
         CType(Me.GridControl1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataSetArqueo1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -196,45 +204,17 @@ Public Class ArqueoCaja
         Me.GroupBox4.SuspendLayout()
         Me.SuspendLayout()
         '
-        'ToolBarExcel
-        '
-        Me.ToolBarExcel.Enabled = False
-        Me.ToolBarExcel.ImageIndex = 3
-        Me.ToolBarExcel.Text = "Anular"
-        Me.ToolBarExcel.Visible = True
-        '
-        'DataNavigator
-        '
-        Me.DataNavigator.Buttons.Append.Visible = False
-        Me.DataNavigator.Buttons.CancelEdit.Visible = False
-        Me.DataNavigator.Buttons.EndEdit.Visible = False
-        Me.DataNavigator.Buttons.Remove.Visible = False
-        Me.DataNavigator.Location = New System.Drawing.Point(664, 424)
-        Me.DataNavigator.Name = "DataNavigator"
-        '
-        'TituloModulo
-        '
-        Me.TituloModulo.Name = "TituloModulo"
-        Me.TituloModulo.Size = New System.Drawing.Size(650, 32)
-        Me.TituloModulo.Text = "Arqueo de Caja"
-        '
-        'ToolBarRegistrar
-        '
-        Me.ToolBarRegistrar.Enabled = False
-        '
         'ToolBarNuevo
         '
         Me.ToolBarNuevo.Enabled = False
         '
-        'ToolBar1
+        'ToolBarBuscar
         '
-        Me.ToolBar1.Location = New System.Drawing.Point(0, 508)
-        Me.ToolBar1.Name = "ToolBar1"
-        Me.ToolBar1.Size = New System.Drawing.Size(650, 52)
+        Me.ToolBarBuscar.Enabled = False
         '
-        'ToolBarImprimir
+        'ToolBarRegistrar
         '
-        Me.ToolBarImprimir.Enabled = False
+        Me.ToolBarRegistrar.Enabled = False
         '
         'ToolBarEliminar
         '
@@ -243,13 +223,48 @@ Public Class ArqueoCaja
         Me.ToolBarEliminar.Text = "Editar"
         Me.ToolBarEliminar.Visible = False
         '
+        'ToolBarImprimir
+        '
+        Me.ToolBarImprimir.Enabled = False
+        '
+        'ToolBarExcel
+        '
+        Me.ToolBarExcel.Enabled = False
+        Me.ToolBarExcel.ImageIndex = 3
+        Me.ToolBarExcel.Text = "Anular"
+        Me.ToolBarExcel.Visible = True
+        '
         'ImageList
         '
         Me.ImageList.ImageStream = CType(resources.GetObject("ImageList.ImageStream"), System.Windows.Forms.ImageListStreamer)
+        Me.ImageList.Images.SetKeyName(0, "")
+        Me.ImageList.Images.SetKeyName(1, "")
+        Me.ImageList.Images.SetKeyName(2, "")
+        Me.ImageList.Images.SetKeyName(3, "")
+        Me.ImageList.Images.SetKeyName(4, "")
+        Me.ImageList.Images.SetKeyName(5, "")
+        Me.ImageList.Images.SetKeyName(6, "")
+        Me.ImageList.Images.SetKeyName(7, "")
+        Me.ImageList.Images.SetKeyName(8, "")
         '
-        'ToolBarBuscar
+        'ToolBar1
         '
-        Me.ToolBarBuscar.Enabled = False
+        Me.ToolBar1.Location = New System.Drawing.Point(0, 580)
+        Me.ToolBar1.Size = New System.Drawing.Size(784, 60)
+        '
+        'DataNavigator
+        '
+        Me.DataNavigator.Buttons.Append.Visible = False
+        Me.DataNavigator.Buttons.CancelEdit.Visible = False
+        Me.DataNavigator.Buttons.EndEdit.Visible = False
+        Me.DataNavigator.Buttons.Remove.Visible = False
+        Me.DataNavigator.Location = New System.Drawing.Point(801, 483)
+        Me.DataNavigator.Size = New System.Drawing.Size(161, 24)
+        '
+        'TituloModulo
+        '
+        Me.TituloModulo.Size = New System.Drawing.Size(784, 37)
+        Me.TituloModulo.Text = "Arqueo de Caja"
         '
         'GroupBox1
         '
@@ -257,9 +272,9 @@ Public Class ArqueoCaja
         Me.GroupBox1.Controls.Add(Me.GridControl1)
         Me.GroupBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox1.ForeColor = System.Drawing.Color.RoyalBlue
-        Me.GroupBox1.Location = New System.Drawing.Point(8, 40)
+        Me.GroupBox1.Location = New System.Drawing.Point(10, 46)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(632, 224)
+        Me.GroupBox1.Size = New System.Drawing.Size(758, 259)
         Me.GroupBox1.TabIndex = 59
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Desgloce Efectivo"
@@ -269,9 +284,9 @@ Public Class ArqueoCaja
         Me.Label7.BackColor = System.Drawing.Color.Red
         Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label7.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label7.Location = New System.Drawing.Point(224, 160)
+        Me.Label7.Location = New System.Drawing.Point(269, 185)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(208, 56)
+        Me.Label7.Size = New System.Drawing.Size(249, 64)
         Me.Label7.TabIndex = 12
         Me.Label7.Text = "ANULADO"
         Me.Label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -282,55 +297,14 @@ Public Class ArqueoCaja
         Me.GridControl1.DataMember = "Denominacion_Moneda"
         Me.GridControl1.DataSource = Me.DataSetArqueo1
         '
-        'GridControl1.EmbeddedNavigator
+        '
         '
         Me.GridControl1.EmbeddedNavigator.Name = ""
-        Me.GridControl1.Location = New System.Drawing.Point(8, 16)
+        Me.GridControl1.Location = New System.Drawing.Point(10, 18)
         Me.GridControl1.MainView = Me.GridView1
         Me.GridControl1.Name = "GridControl1"
         Me.GridControl1.RepositoryItems.AddRange(New DevExpress.XtraEditors.Repository.RepositoryItem() {Me.RepositoryItemCalcEdit1})
-        Me.GridControl1.Size = New System.Drawing.Size(616, 200)
-        Me.GridControl1.Styles.AddReplace("Preview", New DevExpress.Utils.ViewStyleEx("Preview", "Grid", New System.Drawing.Font("Arial", 8.0!), "", True, True, False, DevExpress.Utils.HorzAlignment.Near, DevExpress.Utils.VertAlignment.Top, Nothing, System.Drawing.Color.FromArgb(CType(217, Byte), CType(245, Byte), CType(255, Byte)), System.Drawing.Color.FromArgb(CType(85, Byte), CType(128, Byte), CType(151, Byte)), System.Drawing.Color.White, System.Drawing.Drawing2D.LinearGradientMode.Horizontal))
-        Me.GridControl1.Styles.AddReplace("FooterPanel", New DevExpress.Utils.ViewStyleEx("FooterPanel", "Grid", New System.Drawing.Font("Arial", 8.0!), "", True, False, False, DevExpress.Utils.HorzAlignment.Far, DevExpress.Utils.VertAlignment.Center, Nothing, System.Drawing.Color.FromArgb(CType(157, Byte), CType(185, Byte), CType(200, Byte)), System.Drawing.Color.Black, System.Drawing.Color.Empty, System.Drawing.Drawing2D.LinearGradientMode.Horizontal))
-        Me.GridControl1.Styles.AddReplace("GroupButton", New DevExpress.Utils.ViewStyleEx("GroupButton", "Grid", New System.Drawing.Font("Arial", 8.0!), System.Drawing.Color.FromArgb(CType(157, Byte), CType(185, Byte), CType(200, Byte)), System.Drawing.Color.Black, System.Drawing.Color.Empty, System.Drawing.Drawing2D.LinearGradientMode.Horizontal))
-        Me.GridControl1.Styles.AddReplace("FilterCloseButton", New DevExpress.Utils.ViewStyleEx("FilterCloseButton", "Grid", New System.Drawing.Font("Arial", 8.0!), System.Drawing.Color.FromArgb(CType(212, Byte), CType(208, Byte), CType(200, Byte)), System.Drawing.Color.Black, System.Drawing.Color.FromArgb(CType(125, Byte), CType(125, Byte), CType(125, Byte)), System.Drawing.Drawing2D.LinearGradientMode.ForwardDiagonal))
-        Me.GridControl1.Styles.AddReplace("EvenRow", New DevExpress.Utils.ViewStyleEx("EvenRow", "Grid", New System.Drawing.Font("Arial", 8.0!), CType((DevExpress.Utils.StyleOptions.StyleEnabled Or DevExpress.Utils.StyleOptions.UseBackColor), DevExpress.Utils.StyleOptions), System.Drawing.Color.FromArgb(CType(157, Byte), CType(185, Byte), CType(200, Byte)), System.Drawing.Color.Black, System.Drawing.Color.GhostWhite, System.Drawing.Drawing2D.LinearGradientMode.ForwardDiagonal))
-        Me.GridControl1.Styles.AddReplace("HideSelectionRow", New DevExpress.Utils.ViewStyleEx("HideSelectionRow", "Grid", New System.Drawing.Font("Arial", 8.0!), CType((((((DevExpress.Utils.StyleOptions.StyleEnabled Or DevExpress.Utils.StyleOptions.UseBackColor) _
-                            Or DevExpress.Utils.StyleOptions.UseDrawFocusRect) _
-                            Or DevExpress.Utils.StyleOptions.UseFont) _
-                            Or DevExpress.Utils.StyleOptions.UseForeColor) _
-                            Or DevExpress.Utils.StyleOptions.UseImage), DevExpress.Utils.StyleOptions), System.Drawing.Color.Gray, System.Drawing.Color.FromArgb(CType(212, Byte), CType(208, Byte), CType(200, Byte)), System.Drawing.Color.Empty, System.Drawing.Drawing2D.LinearGradientMode.Horizontal))
-        Me.GridControl1.Styles.AddReplace("FixedLine", New DevExpress.Utils.ViewStyleEx("FixedLine", "Grid", New System.Drawing.Font("Arial", 8.0!), System.Drawing.Color.FromArgb(CType(15, Byte), CType(58, Byte), CType(81, Byte)), System.Drawing.Color.Black, System.Drawing.Color.Empty, System.Drawing.Drawing2D.LinearGradientMode.Horizontal))
-        Me.GridControl1.Styles.AddReplace("HeaderPanel", New DevExpress.Utils.ViewStyleEx("HeaderPanel", "Grid", New System.Drawing.Font("Arial", 8.0!, System.Drawing.FontStyle.Bold), "", True, False, False, DevExpress.Utils.HorzAlignment.Near, DevExpress.Utils.VertAlignment.Center, Nothing, System.Drawing.Color.FromArgb(CType(157, Byte), CType(185, Byte), CType(200, Byte)), System.Drawing.Color.Black, System.Drawing.Color.Empty, System.Drawing.Drawing2D.LinearGradientMode.Horizontal))
-        Me.GridControl1.Styles.AddReplace("GroupPanel", New DevExpress.Utils.ViewStyleEx("GroupPanel", "Grid", New System.Drawing.Font("Arial", 8.0!, System.Drawing.FontStyle.Bold), "", True, False, False, DevExpress.Utils.HorzAlignment.Near, DevExpress.Utils.VertAlignment.Center, Nothing, System.Drawing.Color.SteelBlue, System.Drawing.Color.White, System.Drawing.Color.White, System.Drawing.Drawing2D.LinearGradientMode.Horizontal))
-        Me.GridControl1.Styles.AddReplace("Empty", New DevExpress.Utils.ViewStyleEx("Empty", "Grid", New System.Drawing.Font("Arial", 8.0!), System.Drawing.Color.FromArgb(CType(177, Byte), CType(205, Byte), CType(220, Byte)), System.Drawing.Color.White, System.Drawing.Color.Empty, System.Drawing.Drawing2D.LinearGradientMode.Horizontal))
-        Me.GridControl1.Styles.AddReplace("GroupFooter", New DevExpress.Utils.ViewStyleEx("GroupFooter", "Grid", New System.Drawing.Font("Arial", 8.0!), "", True, False, False, DevExpress.Utils.HorzAlignment.Far, DevExpress.Utils.VertAlignment.Center, Nothing, System.Drawing.Color.FromArgb(CType(167, Byte), CType(195, Byte), CType(210, Byte)), System.Drawing.Color.Black, System.Drawing.Color.Empty, System.Drawing.Drawing2D.LinearGradientMode.Horizontal))
-        Me.GridControl1.Styles.AddReplace("GroupRow", New DevExpress.Utils.ViewStyleEx("GroupRow", "Grid", New System.Drawing.Font("Arial", 8.0!), "", True, False, False, DevExpress.Utils.HorzAlignment.Near, DevExpress.Utils.VertAlignment.Center, Nothing, System.Drawing.Color.FromArgb(CType(85, Byte), CType(128, Byte), CType(151, Byte)), System.Drawing.Color.Silver, System.Drawing.Color.Empty, System.Drawing.Drawing2D.LinearGradientMode.Horizontal))
-        Me.GridControl1.Styles.AddReplace("HorzLine", New DevExpress.Utils.ViewStyleEx("HorzLine", "Grid", New System.Drawing.Font("Arial", 8.0!), System.Drawing.Color.FromArgb(CType(157, Byte), CType(185, Byte), CType(200, Byte)), System.Drawing.Color.FromArgb(CType(85, Byte), CType(128, Byte), CType(151, Byte)), System.Drawing.Color.Empty, System.Drawing.Drawing2D.LinearGradientMode.Horizontal))
-        Me.GridControl1.Styles.AddReplace("ColumnFilterButton", New DevExpress.Utils.ViewStyleEx("ColumnFilterButton", "Grid", New System.Drawing.Font("Arial", 8.0!), System.Drawing.Color.FromArgb(CType(157, Byte), CType(185, Byte), CType(200, Byte)), System.Drawing.Color.Gray, System.Drawing.Color.FromArgb(CType(177, Byte), CType(205, Byte), CType(220, Byte)), System.Drawing.Drawing2D.LinearGradientMode.Horizontal))
-        Me.GridControl1.Styles.AddReplace("FocusedRow", New DevExpress.Utils.ViewStyleEx("FocusedRow", "Grid", New System.Drawing.Font("Arial", 8.0!), CType((((((DevExpress.Utils.StyleOptions.StyleEnabled Or DevExpress.Utils.StyleOptions.UseBackColor) _
-                            Or DevExpress.Utils.StyleOptions.UseDrawFocusRect) _
-                            Or DevExpress.Utils.StyleOptions.UseFont) _
-                            Or DevExpress.Utils.StyleOptions.UseForeColor) _
-                            Or DevExpress.Utils.StyleOptions.UseImage), DevExpress.Utils.StyleOptions), System.Drawing.Color.FromArgb(CType(85, Byte), CType(128, Byte), CType(151, Byte)), System.Drawing.Color.White, System.Drawing.Color.FromArgb(CType(135, Byte), CType(178, Byte), CType(201, Byte)), System.Drawing.Drawing2D.LinearGradientMode.Horizontal))
-        Me.GridControl1.Styles.AddReplace("VertLine", New DevExpress.Utils.ViewStyleEx("VertLine", "Grid", New System.Drawing.Font("Arial", 8.0!), "", True, False, False, DevExpress.Utils.HorzAlignment.Near, DevExpress.Utils.VertAlignment.Center, Nothing, System.Drawing.Color.FromArgb(CType(157, Byte), CType(185, Byte), CType(200, Byte)), System.Drawing.Color.FromArgb(CType(85, Byte), CType(128, Byte), CType(151, Byte)), System.Drawing.Color.Empty, System.Drawing.Drawing2D.LinearGradientMode.Horizontal))
-        Me.GridControl1.Styles.AddReplace("FocusedCell", New DevExpress.Utils.ViewStyleEx("FocusedCell", "Grid", New System.Drawing.Font("Arial", 8.0!), CType((((((DevExpress.Utils.StyleOptions.StyleEnabled Or DevExpress.Utils.StyleOptions.UseBackColor) _
-                            Or DevExpress.Utils.StyleOptions.UseDrawFocusRect) _
-                            Or DevExpress.Utils.StyleOptions.UseFont) _
-                            Or DevExpress.Utils.StyleOptions.UseForeColor) _
-                            Or DevExpress.Utils.StyleOptions.UseImage), DevExpress.Utils.StyleOptions), System.Drawing.Color.White, System.Drawing.Color.Black, System.Drawing.Color.Empty, System.Drawing.Drawing2D.LinearGradientMode.Horizontal))
-        Me.GridControl1.Styles.AddReplace("OddRow", New DevExpress.Utils.ViewStyleEx("OddRow", "Grid", New System.Drawing.Font("Arial", 8.0!), CType((DevExpress.Utils.StyleOptions.StyleEnabled Or DevExpress.Utils.StyleOptions.UseBackColor), DevExpress.Utils.StyleOptions), System.Drawing.Color.FromArgb(CType(206, Byte), CType(220, Byte), CType(227, Byte)), System.Drawing.Color.Black, System.Drawing.Color.White, System.Drawing.Drawing2D.LinearGradientMode.BackwardDiagonal))
-        Me.GridControl1.Styles.AddReplace("SelectedRow", New DevExpress.Utils.ViewStyleEx("SelectedRow", "Grid", New System.Drawing.Font("Arial", 8.0!), CType((((((DevExpress.Utils.StyleOptions.StyleEnabled Or DevExpress.Utils.StyleOptions.UseBackColor) _
-                            Or DevExpress.Utils.StyleOptions.UseDrawFocusRect) _
-                            Or DevExpress.Utils.StyleOptions.UseFont) _
-                            Or DevExpress.Utils.StyleOptions.UseForeColor) _
-                            Or DevExpress.Utils.StyleOptions.UseImage), DevExpress.Utils.StyleOptions), System.Drawing.Color.FromArgb(CType(95, Byte), CType(138, Byte), CType(161, Byte)), System.Drawing.Color.White, System.Drawing.Color.Empty, System.Drawing.Drawing2D.LinearGradientMode.Horizontal))
-        Me.GridControl1.Styles.AddReplace("Style1", New DevExpress.Utils.ViewStyleEx("Style1", "", System.Drawing.SystemColors.Window, System.Drawing.SystemColors.WindowText, System.Drawing.Color.Empty, System.Drawing.Drawing2D.LinearGradientMode.Horizontal))
-        Me.GridControl1.Styles.AddReplace("Row", New DevExpress.Utils.ViewStyleEx("Row", "Grid", New System.Drawing.Font("Arial", 8.0!), DevExpress.Utils.StyleOptions.StyleEnabled, System.Drawing.Color.White, System.Drawing.Color.Black, System.Drawing.Color.Empty, System.Drawing.Drawing2D.LinearGradientMode.Horizontal))
-        Me.GridControl1.Styles.AddReplace("FilterPanel", New DevExpress.Utils.ViewStyleEx("FilterPanel", "Grid", New System.Drawing.Font("Arial", 8.0!), "", True, False, False, DevExpress.Utils.HorzAlignment.Near, DevExpress.Utils.VertAlignment.Center, Nothing, System.Drawing.Color.FromArgb(CType(35, Byte), CType(35, Byte), CType(35, Byte)), System.Drawing.Color.White, System.Drawing.Color.FromArgb(CType(212, Byte), CType(208, Byte), CType(200, Byte)), System.Drawing.Drawing2D.LinearGradientMode.ForwardDiagonal))
-        Me.GridControl1.Styles.AddReplace("RowSeparator", New DevExpress.Utils.ViewStyleEx("RowSeparator", "Grid", New System.Drawing.Font("Arial", 8.0!), DevExpress.Utils.StyleOptions.StyleEnabled, System.Drawing.Color.White, System.Drawing.Color.Gray, System.Drawing.Color.FromArgb(CType(177, Byte), CType(205, Byte), CType(220, Byte)), System.Drawing.Drawing2D.LinearGradientMode.Horizontal))
-        Me.GridControl1.Styles.AddReplace("ColumnFilterButtonActive", New DevExpress.Utils.ViewStyleEx("ColumnFilterButtonActive", "Grid", New System.Drawing.Font("Arial", 8.0!), System.Drawing.Color.LightGray, System.Drawing.Color.Blue, System.Drawing.Color.WhiteSmoke, System.Drawing.Drawing2D.LinearGradientMode.Horizontal))
-        Me.GridControl1.Styles.AddReplace("DetailTip", New DevExpress.Utils.ViewStyleEx("DetailTip", "Grid", New System.Drawing.Font("Arial", 8.0!), System.Drawing.Color.FromArgb(CType(255, Byte), CType(255, Byte), CType(225, Byte)), System.Drawing.Color.Black, System.Drawing.Color.Empty, System.Drawing.Drawing2D.LinearGradientMode.Horizontal))
+        Me.GridControl1.Size = New System.Drawing.Size(739, 231)
         Me.GridControl1.TabIndex = 11
         Me.GridControl1.Text = "GridControl1"
         '
@@ -338,6 +312,7 @@ Public Class ArqueoCaja
         '
         Me.DataSetArqueo1.DataSetName = "DataSetArqueo"
         Me.DataSetArqueo1.Locale = New System.Globalization.CultureInfo("es-MX")
+        Me.DataSetArqueo1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'GridView1
         '
@@ -352,9 +327,10 @@ Public Class ArqueoCaja
         '
         Me.colMonedaNombre1.Caption = "Moneda"
         Me.colMonedaNombre1.FieldName = "Moneda"
+        Me.colMonedaNombre1.FilterInfo = ColumnFilterInfo1
         Me.colMonedaNombre1.Name = "colMonedaNombre1"
-        Me.colMonedaNombre1.Options = CType(((DevExpress.XtraGrid.Columns.ColumnOptions.ReadOnly Or DevExpress.XtraGrid.Columns.ColumnOptions.CanFocused) _
-                    Or DevExpress.XtraGrid.Columns.ColumnOptions.NonEditable), DevExpress.XtraGrid.Columns.ColumnOptions)
+        Me.colMonedaNombre1.Options = CType(((DevExpress.XtraGrid.Columns.ColumnOptions.[ReadOnly] Or DevExpress.XtraGrid.Columns.ColumnOptions.CanFocused) _
+            Or DevExpress.XtraGrid.Columns.ColumnOptions.NonEditable), DevExpress.XtraGrid.Columns.ColumnOptions)
         Me.colMonedaNombre1.VisibleIndex = 0
         Me.colMonedaNombre1.Width = 129
         '
@@ -364,9 +340,10 @@ Public Class ArqueoCaja
         Me.colCantidad.DisplayFormat.FormatString = "#,#0.00"
         Me.colCantidad.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric
         Me.colCantidad.FieldName = "Tipo"
+        Me.colCantidad.FilterInfo = ColumnFilterInfo2
         Me.colCantidad.Name = "colCantidad"
-        Me.colCantidad.Options = CType(((DevExpress.XtraGrid.Columns.ColumnOptions.ReadOnly Or DevExpress.XtraGrid.Columns.ColumnOptions.CanFocused) _
-                    Or DevExpress.XtraGrid.Columns.ColumnOptions.NonEditable), DevExpress.XtraGrid.Columns.ColumnOptions)
+        Me.colCantidad.Options = CType(((DevExpress.XtraGrid.Columns.ColumnOptions.[ReadOnly] Or DevExpress.XtraGrid.Columns.ColumnOptions.CanFocused) _
+            Or DevExpress.XtraGrid.Columns.ColumnOptions.NonEditable), DevExpress.XtraGrid.Columns.ColumnOptions)
         Me.colCantidad.VisibleIndex = 1
         Me.colCantidad.Width = 129
         '
@@ -374,9 +351,10 @@ Public Class ArqueoCaja
         '
         Me.colDenominacion.Caption = "Denominacion"
         Me.colDenominacion.FieldName = "Denominacion"
+        Me.colDenominacion.FilterInfo = ColumnFilterInfo3
         Me.colDenominacion.Name = "colDenominacion"
-        Me.colDenominacion.Options = CType(((DevExpress.XtraGrid.Columns.ColumnOptions.ReadOnly Or DevExpress.XtraGrid.Columns.ColumnOptions.CanFocused) _
-                    Or DevExpress.XtraGrid.Columns.ColumnOptions.NonEditable), DevExpress.XtraGrid.Columns.ColumnOptions)
+        Me.colDenominacion.Options = CType(((DevExpress.XtraGrid.Columns.ColumnOptions.[ReadOnly] Or DevExpress.XtraGrid.Columns.ColumnOptions.CanFocused) _
+            Or DevExpress.XtraGrid.Columns.ColumnOptions.NonEditable), DevExpress.XtraGrid.Columns.ColumnOptions)
         Me.colDenominacion.VisibleIndex = 2
         Me.colDenominacion.Width = 110
         '
@@ -386,9 +364,10 @@ Public Class ArqueoCaja
         Me.colNumero.ColumnEdit = Me.RepositoryItemCalcEdit1
         Me.colNumero.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric
         Me.colNumero.FieldName = "Cantidad"
+        Me.colNumero.FilterInfo = ColumnFilterInfo4
         Me.colNumero.Name = "colNumero"
         Me.colNumero.Options = CType(((DevExpress.XtraGrid.Columns.ColumnOptions.FixedWidth Or DevExpress.XtraGrid.Columns.ColumnOptions.CanFocused) _
-                    Or DevExpress.XtraGrid.Columns.ColumnOptions.ShowInCustomizationForm), DevExpress.XtraGrid.Columns.ColumnOptions)
+            Or DevExpress.XtraGrid.Columns.ColumnOptions.ShowInCustomizationForm), DevExpress.XtraGrid.Columns.ColumnOptions)
         Me.colNumero.VisibleIndex = 3
         Me.colNumero.Width = 107
         '
@@ -402,16 +381,18 @@ Public Class ArqueoCaja
         '
         Me.colTotal.Caption = "Total"
         Me.colTotal.FieldName = "Total"
+        Me.colTotal.FilterInfo = ColumnFilterInfo5
         Me.colTotal.Name = "colTotal"
-        Me.colTotal.Options = CType(((DevExpress.XtraGrid.Columns.ColumnOptions.ReadOnly Or DevExpress.XtraGrid.Columns.ColumnOptions.CanFocused) _
-                    Or DevExpress.XtraGrid.Columns.ColumnOptions.NonEditable), DevExpress.XtraGrid.Columns.ColumnOptions)
+        Me.colTotal.Options = CType(((DevExpress.XtraGrid.Columns.ColumnOptions.[ReadOnly] Or DevExpress.XtraGrid.Columns.ColumnOptions.CanFocused) _
+            Or DevExpress.XtraGrid.Columns.ColumnOptions.NonEditable), DevExpress.XtraGrid.Columns.ColumnOptions)
         Me.colTotal.VisibleIndex = 4
         Me.colTotal.Width = 111
         '
         'SqlConnection1
         '
         Me.SqlConnection1.ConnectionString = "workstation id=OSCAR;packet size=4096;integrated security=SSPI;data source=OSCAR;" & _
-        "persist security info=False;initial catalog=SeePos"
+    "persist security info=False;initial catalog=SeePos"
+        Me.SqlConnection1.FireInfoMessageEventOnUserErrors = False
         '
         'AdapterDenominacion
         '
@@ -438,9 +419,9 @@ Public Class ArqueoCaja
         Me.GroupBox2.Controls.Add(Me.GridControl2)
         Me.GroupBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox2.ForeColor = System.Drawing.Color.RoyalBlue
-        Me.GroupBox2.Location = New System.Drawing.Point(8, 272)
+        Me.GroupBox2.Location = New System.Drawing.Point(10, 314)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(328, 136)
+        Me.GroupBox2.Size = New System.Drawing.Size(393, 157)
         Me.GroupBox2.TabIndex = 60
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Tarjetas"
@@ -450,54 +431,13 @@ Public Class ArqueoCaja
         Me.GridControl2.DataMember = "TipoTarjeta"
         Me.GridControl2.DataSource = Me.DataSetArqueo1
         '
-        'GridControl2.EmbeddedNavigator
+        '
         '
         Me.GridControl2.EmbeddedNavigator.Name = ""
-        Me.GridControl2.Location = New System.Drawing.Point(8, 16)
+        Me.GridControl2.Location = New System.Drawing.Point(10, 18)
         Me.GridControl2.MainView = Me.GridView2
         Me.GridControl2.Name = "GridControl2"
-        Me.GridControl2.Size = New System.Drawing.Size(312, 208)
-        Me.GridControl2.Styles.AddReplace("Preview", New DevExpress.Utils.ViewStyleEx("Preview", "Grid", New System.Drawing.Font("Arial", 8.0!), "", True, True, False, DevExpress.Utils.HorzAlignment.Near, DevExpress.Utils.VertAlignment.Top, Nothing, System.Drawing.Color.FromArgb(CType(217, Byte), CType(245, Byte), CType(255, Byte)), System.Drawing.Color.FromArgb(CType(85, Byte), CType(128, Byte), CType(151, Byte)), System.Drawing.Color.White, System.Drawing.Drawing2D.LinearGradientMode.Horizontal))
-        Me.GridControl2.Styles.AddReplace("FooterPanel", New DevExpress.Utils.ViewStyleEx("FooterPanel", "Grid", New System.Drawing.Font("Arial", 8.0!), "", True, False, False, DevExpress.Utils.HorzAlignment.Far, DevExpress.Utils.VertAlignment.Center, Nothing, System.Drawing.Color.FromArgb(CType(157, Byte), CType(185, Byte), CType(200, Byte)), System.Drawing.Color.Black, System.Drawing.Color.Empty, System.Drawing.Drawing2D.LinearGradientMode.Horizontal))
-        Me.GridControl2.Styles.AddReplace("GroupButton", New DevExpress.Utils.ViewStyleEx("GroupButton", "Grid", New System.Drawing.Font("Arial", 8.0!), System.Drawing.Color.FromArgb(CType(157, Byte), CType(185, Byte), CType(200, Byte)), System.Drawing.Color.Black, System.Drawing.Color.Empty, System.Drawing.Drawing2D.LinearGradientMode.Horizontal))
-        Me.GridControl2.Styles.AddReplace("FilterCloseButton", New DevExpress.Utils.ViewStyleEx("FilterCloseButton", "Grid", New System.Drawing.Font("Arial", 8.0!), System.Drawing.Color.FromArgb(CType(212, Byte), CType(208, Byte), CType(200, Byte)), System.Drawing.Color.Black, System.Drawing.Color.FromArgb(CType(125, Byte), CType(125, Byte), CType(125, Byte)), System.Drawing.Drawing2D.LinearGradientMode.ForwardDiagonal))
-        Me.GridControl2.Styles.AddReplace("EvenRow", New DevExpress.Utils.ViewStyleEx("EvenRow", "Grid", New System.Drawing.Font("Arial", 8.0!), CType((DevExpress.Utils.StyleOptions.StyleEnabled Or DevExpress.Utils.StyleOptions.UseBackColor), DevExpress.Utils.StyleOptions), System.Drawing.Color.FromArgb(CType(157, Byte), CType(185, Byte), CType(200, Byte)), System.Drawing.Color.Black, System.Drawing.Color.GhostWhite, System.Drawing.Drawing2D.LinearGradientMode.ForwardDiagonal))
-        Me.GridControl2.Styles.AddReplace("HideSelectionRow", New DevExpress.Utils.ViewStyleEx("HideSelectionRow", "Grid", New System.Drawing.Font("Arial", 8.0!), CType((((((DevExpress.Utils.StyleOptions.StyleEnabled Or DevExpress.Utils.StyleOptions.UseBackColor) _
-                            Or DevExpress.Utils.StyleOptions.UseDrawFocusRect) _
-                            Or DevExpress.Utils.StyleOptions.UseFont) _
-                            Or DevExpress.Utils.StyleOptions.UseForeColor) _
-                            Or DevExpress.Utils.StyleOptions.UseImage), DevExpress.Utils.StyleOptions), System.Drawing.Color.Gray, System.Drawing.Color.FromArgb(CType(212, Byte), CType(208, Byte), CType(200, Byte)), System.Drawing.Color.Empty, System.Drawing.Drawing2D.LinearGradientMode.Horizontal))
-        Me.GridControl2.Styles.AddReplace("FixedLine", New DevExpress.Utils.ViewStyleEx("FixedLine", "Grid", New System.Drawing.Font("Arial", 8.0!), System.Drawing.Color.FromArgb(CType(15, Byte), CType(58, Byte), CType(81, Byte)), System.Drawing.Color.Black, System.Drawing.Color.Empty, System.Drawing.Drawing2D.LinearGradientMode.Horizontal))
-        Me.GridControl2.Styles.AddReplace("HeaderPanel", New DevExpress.Utils.ViewStyleEx("HeaderPanel", "Grid", New System.Drawing.Font("Arial", 8.0!, System.Drawing.FontStyle.Bold), "", True, False, False, DevExpress.Utils.HorzAlignment.Near, DevExpress.Utils.VertAlignment.Center, Nothing, System.Drawing.Color.FromArgb(CType(157, Byte), CType(185, Byte), CType(200, Byte)), System.Drawing.Color.Black, System.Drawing.Color.Empty, System.Drawing.Drawing2D.LinearGradientMode.Horizontal))
-        Me.GridControl2.Styles.AddReplace("GroupPanel", New DevExpress.Utils.ViewStyleEx("GroupPanel", "Grid", New System.Drawing.Font("Arial", 8.0!, System.Drawing.FontStyle.Bold), "", True, False, False, DevExpress.Utils.HorzAlignment.Near, DevExpress.Utils.VertAlignment.Center, Nothing, System.Drawing.Color.SteelBlue, System.Drawing.Color.White, System.Drawing.Color.White, System.Drawing.Drawing2D.LinearGradientMode.Horizontal))
-        Me.GridControl2.Styles.AddReplace("Empty", New DevExpress.Utils.ViewStyleEx("Empty", "Grid", New System.Drawing.Font("Arial", 8.0!), System.Drawing.Color.FromArgb(CType(177, Byte), CType(205, Byte), CType(220, Byte)), System.Drawing.Color.White, System.Drawing.Color.Empty, System.Drawing.Drawing2D.LinearGradientMode.Horizontal))
-        Me.GridControl2.Styles.AddReplace("GroupFooter", New DevExpress.Utils.ViewStyleEx("GroupFooter", "Grid", New System.Drawing.Font("Arial", 8.0!), "", True, False, False, DevExpress.Utils.HorzAlignment.Far, DevExpress.Utils.VertAlignment.Center, Nothing, System.Drawing.Color.FromArgb(CType(167, Byte), CType(195, Byte), CType(210, Byte)), System.Drawing.Color.Black, System.Drawing.Color.Empty, System.Drawing.Drawing2D.LinearGradientMode.Horizontal))
-        Me.GridControl2.Styles.AddReplace("GroupRow", New DevExpress.Utils.ViewStyleEx("GroupRow", "Grid", New System.Drawing.Font("Arial", 8.0!), "", True, False, False, DevExpress.Utils.HorzAlignment.Near, DevExpress.Utils.VertAlignment.Center, Nothing, System.Drawing.Color.FromArgb(CType(85, Byte), CType(128, Byte), CType(151, Byte)), System.Drawing.Color.Silver, System.Drawing.Color.Empty, System.Drawing.Drawing2D.LinearGradientMode.Horizontal))
-        Me.GridControl2.Styles.AddReplace("HorzLine", New DevExpress.Utils.ViewStyleEx("HorzLine", "Grid", New System.Drawing.Font("Arial", 8.0!), System.Drawing.Color.FromArgb(CType(157, Byte), CType(185, Byte), CType(200, Byte)), System.Drawing.Color.FromArgb(CType(85, Byte), CType(128, Byte), CType(151, Byte)), System.Drawing.Color.Empty, System.Drawing.Drawing2D.LinearGradientMode.Horizontal))
-        Me.GridControl2.Styles.AddReplace("ColumnFilterButton", New DevExpress.Utils.ViewStyleEx("ColumnFilterButton", "Grid", New System.Drawing.Font("Arial", 8.0!), System.Drawing.Color.FromArgb(CType(157, Byte), CType(185, Byte), CType(200, Byte)), System.Drawing.Color.Gray, System.Drawing.Color.FromArgb(CType(177, Byte), CType(205, Byte), CType(220, Byte)), System.Drawing.Drawing2D.LinearGradientMode.Horizontal))
-        Me.GridControl2.Styles.AddReplace("FocusedRow", New DevExpress.Utils.ViewStyleEx("FocusedRow", "Grid", New System.Drawing.Font("Arial", 8.0!), CType((((((DevExpress.Utils.StyleOptions.StyleEnabled Or DevExpress.Utils.StyleOptions.UseBackColor) _
-                            Or DevExpress.Utils.StyleOptions.UseDrawFocusRect) _
-                            Or DevExpress.Utils.StyleOptions.UseFont) _
-                            Or DevExpress.Utils.StyleOptions.UseForeColor) _
-                            Or DevExpress.Utils.StyleOptions.UseImage), DevExpress.Utils.StyleOptions), System.Drawing.Color.FromArgb(CType(85, Byte), CType(128, Byte), CType(151, Byte)), System.Drawing.Color.White, System.Drawing.Color.FromArgb(CType(135, Byte), CType(178, Byte), CType(201, Byte)), System.Drawing.Drawing2D.LinearGradientMode.Horizontal))
-        Me.GridControl2.Styles.AddReplace("VertLine", New DevExpress.Utils.ViewStyleEx("VertLine", "Grid", New System.Drawing.Font("Arial", 8.0!), "", True, False, False, DevExpress.Utils.HorzAlignment.Near, DevExpress.Utils.VertAlignment.Center, Nothing, System.Drawing.Color.FromArgb(CType(157, Byte), CType(185, Byte), CType(200, Byte)), System.Drawing.Color.FromArgb(CType(85, Byte), CType(128, Byte), CType(151, Byte)), System.Drawing.Color.Empty, System.Drawing.Drawing2D.LinearGradientMode.Horizontal))
-        Me.GridControl2.Styles.AddReplace("FocusedCell", New DevExpress.Utils.ViewStyleEx("FocusedCell", "Grid", New System.Drawing.Font("Arial", 8.0!), CType((((((DevExpress.Utils.StyleOptions.StyleEnabled Or DevExpress.Utils.StyleOptions.UseBackColor) _
-                            Or DevExpress.Utils.StyleOptions.UseDrawFocusRect) _
-                            Or DevExpress.Utils.StyleOptions.UseFont) _
-                            Or DevExpress.Utils.StyleOptions.UseForeColor) _
-                            Or DevExpress.Utils.StyleOptions.UseImage), DevExpress.Utils.StyleOptions), System.Drawing.Color.White, System.Drawing.Color.Black, System.Drawing.Color.Empty, System.Drawing.Drawing2D.LinearGradientMode.Horizontal))
-        Me.GridControl2.Styles.AddReplace("OddRow", New DevExpress.Utils.ViewStyleEx("OddRow", "Grid", New System.Drawing.Font("Arial", 8.0!), CType((DevExpress.Utils.StyleOptions.StyleEnabled Or DevExpress.Utils.StyleOptions.UseBackColor), DevExpress.Utils.StyleOptions), System.Drawing.Color.FromArgb(CType(206, Byte), CType(220, Byte), CType(227, Byte)), System.Drawing.Color.Black, System.Drawing.Color.White, System.Drawing.Drawing2D.LinearGradientMode.BackwardDiagonal))
-        Me.GridControl2.Styles.AddReplace("SelectedRow", New DevExpress.Utils.ViewStyleEx("SelectedRow", "Grid", New System.Drawing.Font("Arial", 8.0!), CType((((((DevExpress.Utils.StyleOptions.StyleEnabled Or DevExpress.Utils.StyleOptions.UseBackColor) _
-                            Or DevExpress.Utils.StyleOptions.UseDrawFocusRect) _
-                            Or DevExpress.Utils.StyleOptions.UseFont) _
-                            Or DevExpress.Utils.StyleOptions.UseForeColor) _
-                            Or DevExpress.Utils.StyleOptions.UseImage), DevExpress.Utils.StyleOptions), System.Drawing.Color.FromArgb(CType(95, Byte), CType(138, Byte), CType(161, Byte)), System.Drawing.Color.White, System.Drawing.Color.Empty, System.Drawing.Drawing2D.LinearGradientMode.Horizontal))
-        Me.GridControl2.Styles.AddReplace("Style1", New DevExpress.Utils.ViewStyleEx("Style1", "", System.Drawing.SystemColors.Window, System.Drawing.SystemColors.WindowText, System.Drawing.Color.Empty, System.Drawing.Drawing2D.LinearGradientMode.Horizontal))
-        Me.GridControl2.Styles.AddReplace("Row", New DevExpress.Utils.ViewStyleEx("Row", "Grid", New System.Drawing.Font("Arial", 8.0!), DevExpress.Utils.StyleOptions.StyleEnabled, System.Drawing.Color.White, System.Drawing.Color.Black, System.Drawing.Color.Empty, System.Drawing.Drawing2D.LinearGradientMode.Horizontal))
-        Me.GridControl2.Styles.AddReplace("FilterPanel", New DevExpress.Utils.ViewStyleEx("FilterPanel", "Grid", New System.Drawing.Font("Arial", 8.0!), "", True, False, False, DevExpress.Utils.HorzAlignment.Near, DevExpress.Utils.VertAlignment.Center, Nothing, System.Drawing.Color.FromArgb(CType(35, Byte), CType(35, Byte), CType(35, Byte)), System.Drawing.Color.White, System.Drawing.Color.FromArgb(CType(212, Byte), CType(208, Byte), CType(200, Byte)), System.Drawing.Drawing2D.LinearGradientMode.ForwardDiagonal))
-        Me.GridControl2.Styles.AddReplace("RowSeparator", New DevExpress.Utils.ViewStyleEx("RowSeparator", "Grid", New System.Drawing.Font("Arial", 8.0!), DevExpress.Utils.StyleOptions.StyleEnabled, System.Drawing.Color.White, System.Drawing.Color.Gray, System.Drawing.Color.FromArgb(CType(177, Byte), CType(205, Byte), CType(220, Byte)), System.Drawing.Drawing2D.LinearGradientMode.Horizontal))
-        Me.GridControl2.Styles.AddReplace("ColumnFilterButtonActive", New DevExpress.Utils.ViewStyleEx("ColumnFilterButtonActive", "Grid", New System.Drawing.Font("Arial", 8.0!), System.Drawing.Color.LightGray, System.Drawing.Color.Blue, System.Drawing.Color.WhiteSmoke, System.Drawing.Drawing2D.LinearGradientMode.Horizontal))
-        Me.GridControl2.Styles.AddReplace("DetailTip", New DevExpress.Utils.ViewStyleEx("DetailTip", "Grid", New System.Drawing.Font("Arial", 8.0!), System.Drawing.Color.FromArgb(CType(255, Byte), CType(255, Byte), CType(225, Byte)), System.Drawing.Color.Black, System.Drawing.Color.Empty, System.Drawing.Drawing2D.LinearGradientMode.Horizontal))
+        Me.GridControl2.Size = New System.Drawing.Size(374, 240)
         Me.GridControl2.TabIndex = 12
         Me.GridControl2.Text = "GridControl2"
         '
@@ -514,9 +454,10 @@ Public Class ArqueoCaja
         '
         Me.GridColumn1.Caption = "Tarjeta"
         Me.GridColumn1.FieldName = "Nombre"
+        Me.GridColumn1.FilterInfo = ColumnFilterInfo6
         Me.GridColumn1.Name = "GridColumn1"
-        Me.GridColumn1.Options = CType(((DevExpress.XtraGrid.Columns.ColumnOptions.ReadOnly Or DevExpress.XtraGrid.Columns.ColumnOptions.CanFocused) _
-                    Or DevExpress.XtraGrid.Columns.ColumnOptions.NonEditable), DevExpress.XtraGrid.Columns.ColumnOptions)
+        Me.GridColumn1.Options = CType(((DevExpress.XtraGrid.Columns.ColumnOptions.[ReadOnly] Or DevExpress.XtraGrid.Columns.ColumnOptions.CanFocused) _
+            Or DevExpress.XtraGrid.Columns.ColumnOptions.NonEditable), DevExpress.XtraGrid.Columns.ColumnOptions)
         Me.GridColumn1.VisibleIndex = 0
         Me.GridColumn1.Width = 134
         '
@@ -526,6 +467,7 @@ Public Class ArqueoCaja
         Me.GridColumn5.DisplayFormat.FormatString = "#,#0.00"
         Me.GridColumn5.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric
         Me.GridColumn5.FieldName = "Total"
+        Me.GridColumn5.FilterInfo = ColumnFilterInfo7
         Me.GridColumn5.Name = "GridColumn5"
         Me.GridColumn5.Options = DevExpress.XtraGrid.Columns.ColumnOptions.CanFocused
         Me.GridColumn5.VisibleIndex = 2
@@ -535,6 +477,7 @@ Public Class ArqueoCaja
         '
         Me.GridColumn2.Caption = "Moneda"
         Me.GridColumn2.FieldName = "Monedas"
+        Me.GridColumn2.FilterInfo = ColumnFilterInfo8
         Me.GridColumn2.Name = "GridColumn2"
         Me.GridColumn2.VisibleIndex = 1
         Me.GridColumn2.Width = 100
@@ -570,204 +513,206 @@ Public Class ArqueoCaja
         Me.GroupBox3.Controls.Add(Me.Label2)
         Me.GroupBox3.Controls.Add(Me.Label1)
         Me.GroupBox3.ForeColor = System.Drawing.Color.RoyalBlue
-        Me.GroupBox3.Location = New System.Drawing.Point(344, 272)
+        Me.GroupBox3.Location = New System.Drawing.Point(413, 314)
         Me.GroupBox3.Name = "GroupBox3"
-        Me.GroupBox3.Size = New System.Drawing.Size(296, 232)
+        Me.GroupBox3.Size = New System.Drawing.Size(355, 268)
         Me.GroupBox3.TabIndex = 61
         Me.GroupBox3.TabStop = False
         Me.GroupBox3.Text = "Total  General"
         '
         'txtDepositoDolar
         '
-        Me.txtDepositoDolar.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.DataSetArqueo1, "ArqueoCajas.DepositoDol"))
+        Me.txtDepositoDolar.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.DataSetArqueo1, "ArqueoCajas.DepositoDol", True))
         Me.txtDepositoDolar.EditValue = New Decimal(New Integer() {0, 0, 0, 0})
-        Me.txtDepositoDolar.Location = New System.Drawing.Point(120, 184)
+        Me.txtDepositoDolar.Location = New System.Drawing.Point(144, 212)
         Me.txtDepositoDolar.Name = "txtDepositoDolar"
         '
-        'txtDepositoDolar.Properties
+        '
         '
         Me.txtDepositoDolar.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple
         Me.txtDepositoDolar.Properties.DisplayFormat.FormatString = "#,#0.00"
         Me.txtDepositoDolar.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric
+        Me.txtDepositoDolar.Properties.ReadOnly = True
         Me.txtDepositoDolar.Properties.Style = New DevExpress.Utils.ViewStyle("ControlStyle", Nothing, New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte)), "", DevExpress.Utils.StyleOptions.StyleEnabled, True, False, False, DevExpress.Utils.HorzAlignment.Far, DevExpress.Utils.VertAlignment.Center, Nothing, System.Drawing.SystemColors.Window, System.Drawing.Color.RoyalBlue)
-        Me.txtDepositoDolar.Size = New System.Drawing.Size(160, 19)
+        Me.txtDepositoDolar.Size = New System.Drawing.Size(192, 22)
         Me.txtDepositoDolar.TabIndex = 52
         '
         'Label10
         '
         Me.Label10.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.Label10.Location = New System.Drawing.Point(8, 184)
+        Me.Label10.Location = New System.Drawing.Point(10, 212)
         Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(96, 16)
+        Me.Label10.Size = New System.Drawing.Size(115, 19)
         Me.Label10.TabIndex = 51
         Me.Label10.Text = "Depositos Dolar"
         '
         'txtDepositosCol
         '
-        Me.txtDepositosCol.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.DataSetArqueo1, "ArqueoCajas.DepositoCol"))
+        Me.txtDepositosCol.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.DataSetArqueo1, "ArqueoCajas.DepositoCol", True))
         Me.txtDepositosCol.EditValue = New Decimal(New Integer() {0, 0, 0, 0})
-        Me.txtDepositosCol.Location = New System.Drawing.Point(120, 160)
+        Me.txtDepositosCol.Location = New System.Drawing.Point(144, 185)
         Me.txtDepositosCol.Name = "txtDepositosCol"
         '
-        'txtDepositosCol.Properties
+        '
         '
         Me.txtDepositosCol.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple
         Me.txtDepositosCol.Properties.DisplayFormat.FormatString = "#,#0.00"
         Me.txtDepositosCol.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric
+        Me.txtDepositosCol.Properties.ReadOnly = True
         Me.txtDepositosCol.Properties.Style = New DevExpress.Utils.ViewStyle("ControlStyle", Nothing, New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte)), "", DevExpress.Utils.StyleOptions.StyleEnabled, True, False, False, DevExpress.Utils.HorzAlignment.Far, DevExpress.Utils.VertAlignment.Center, Nothing, System.Drawing.SystemColors.Window, System.Drawing.Color.RoyalBlue)
-        Me.txtDepositosCol.Size = New System.Drawing.Size(160, 19)
+        Me.txtDepositosCol.Size = New System.Drawing.Size(192, 22)
         Me.txtDepositosCol.TabIndex = 50
         '
         'Label9
         '
         Me.Label9.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.Label9.Location = New System.Drawing.Point(8, 160)
+        Me.Label9.Location = New System.Drawing.Point(10, 185)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(96, 16)
+        Me.Label9.Size = New System.Drawing.Size(115, 18)
         Me.Label9.TabIndex = 49
         Me.Label9.Text = "Depositos Colon"
         '
         'txtChequesDol
         '
-        Me.txtChequesDol.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.DataSetArqueo1, "ArqueoCajas.ChequesDol"))
+        Me.txtChequesDol.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.DataSetArqueo1, "ArqueoCajas.ChequesDol", True))
         Me.txtChequesDol.EditValue = New Decimal(New Integer() {0, 0, 0, 0})
-        Me.txtChequesDol.Location = New System.Drawing.Point(120, 136)
+        Me.txtChequesDol.Location = New System.Drawing.Point(144, 157)
         Me.txtChequesDol.Name = "txtChequesDol"
         '
-        'txtChequesDol.Properties
+        '
         '
         Me.txtChequesDol.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple
         Me.txtChequesDol.Properties.DisplayFormat.FormatString = "#,#0.00"
         Me.txtChequesDol.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric
         Me.txtChequesDol.Properties.Style = New DevExpress.Utils.ViewStyle("ControlStyle", Nothing, New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte)), "", DevExpress.Utils.StyleOptions.StyleEnabled, True, False, False, DevExpress.Utils.HorzAlignment.Far, DevExpress.Utils.VertAlignment.Center, Nothing, System.Drawing.SystemColors.Window, System.Drawing.Color.RoyalBlue)
-        Me.txtChequesDol.Size = New System.Drawing.Size(160, 19)
+        Me.txtChequesDol.Size = New System.Drawing.Size(192, 22)
         Me.txtChequesDol.TabIndex = 48
         '
         'Label8
         '
         Me.Label8.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.Label8.Location = New System.Drawing.Point(8, 136)
+        Me.Label8.Location = New System.Drawing.Point(10, 157)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(96, 16)
+        Me.Label8.Size = New System.Drawing.Size(115, 18)
         Me.Label8.TabIndex = 47
         Me.Label8.Text = "Cheques Dolares"
         '
         'txtCheques
         '
-        Me.txtCheques.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.DataSetArqueo1, "ArqueoCajas.Cheques"))
+        Me.txtCheques.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.DataSetArqueo1, "ArqueoCajas.Cheques", True))
         Me.txtCheques.EditValue = New Decimal(New Integer() {0, 0, 0, 0})
-        Me.txtCheques.Location = New System.Drawing.Point(120, 112)
+        Me.txtCheques.Location = New System.Drawing.Point(144, 129)
         Me.txtCheques.Name = "txtCheques"
         '
-        'txtCheques.Properties
+        '
         '
         Me.txtCheques.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple
         Me.txtCheques.Properties.DisplayFormat.FormatString = "#,#0.00"
         Me.txtCheques.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric
         Me.txtCheques.Properties.Style = New DevExpress.Utils.ViewStyle("ControlStyle", Nothing, New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte)), "", DevExpress.Utils.StyleOptions.StyleEnabled, True, False, False, DevExpress.Utils.HorzAlignment.Far, DevExpress.Utils.VertAlignment.Center, Nothing, System.Drawing.SystemColors.Window, System.Drawing.Color.RoyalBlue)
-        Me.txtCheques.Size = New System.Drawing.Size(160, 19)
+        Me.txtCheques.Size = New System.Drawing.Size(192, 22)
         Me.txtCheques.TabIndex = 46
         '
         'Label4
         '
         Me.Label4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.Label4.Location = New System.Drawing.Point(8, 112)
+        Me.Label4.Location = New System.Drawing.Point(10, 129)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(96, 16)
+        Me.Label4.Size = New System.Drawing.Size(115, 19)
         Me.Label4.TabIndex = 45
         Me.Label4.Text = "Cheques Colones"
         '
         'TextEdit6
         '
-        Me.TextEdit6.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.DataSetArqueo1, "ArqueoCajas.Total"))
+        Me.TextEdit6.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.DataSetArqueo1, "ArqueoCajas.Total", True))
         Me.TextEdit6.EditValue = "0.00"
-        Me.TextEdit6.Location = New System.Drawing.Point(120, 208)
+        Me.TextEdit6.Location = New System.Drawing.Point(144, 240)
         Me.TextEdit6.Name = "TextEdit6"
         '
-        'TextEdit6.Properties
+        '
         '
         Me.TextEdit6.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple
         Me.TextEdit6.Properties.DisplayFormat.FormatString = "#,#0.00"
         Me.TextEdit6.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric
         Me.TextEdit6.Properties.ReadOnly = True
         Me.TextEdit6.Properties.Style = New DevExpress.Utils.ViewStyle("ControlStyle", Nothing, New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte)), "", DevExpress.Utils.StyleOptions.StyleEnabled, True, False, False, DevExpress.Utils.HorzAlignment.Far, DevExpress.Utils.VertAlignment.Center, Nothing, System.Drawing.SystemColors.Window, System.Drawing.Color.RoyalBlue)
-        Me.TextEdit6.Size = New System.Drawing.Size(160, 19)
+        Me.TextEdit6.Size = New System.Drawing.Size(192, 22)
         Me.TextEdit6.TabIndex = 44
         '
         'TextEdit4
         '
-        Me.TextEdit4.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.DataSetArqueo1, "ArqueoCajas.TarjetaDolares"))
+        Me.TextEdit4.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.DataSetArqueo1, "ArqueoCajas.TarjetaDolares", True))
         Me.TextEdit4.EditValue = "0.00"
-        Me.TextEdit4.Location = New System.Drawing.Point(120, 88)
+        Me.TextEdit4.Location = New System.Drawing.Point(144, 102)
         Me.TextEdit4.Name = "TextEdit4"
         '
-        'TextEdit4.Properties
+        '
         '
         Me.TextEdit4.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple
         Me.TextEdit4.Properties.DisplayFormat.FormatString = "#,#0.00"
         Me.TextEdit4.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric
         Me.TextEdit4.Properties.ReadOnly = True
         Me.TextEdit4.Properties.Style = New DevExpress.Utils.ViewStyle("ControlStyle", Nothing, New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte)), "", DevExpress.Utils.StyleOptions.StyleEnabled, True, False, False, DevExpress.Utils.HorzAlignment.Far, DevExpress.Utils.VertAlignment.Center, Nothing, System.Drawing.SystemColors.Window, System.Drawing.Color.RoyalBlue)
-        Me.TextEdit4.Size = New System.Drawing.Size(160, 19)
+        Me.TextEdit4.Size = New System.Drawing.Size(192, 22)
         Me.TextEdit4.TabIndex = 42
         '
         'TextEdit3
         '
-        Me.TextEdit3.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.DataSetArqueo1, "ArqueoCajas.TarjetaColones"))
+        Me.TextEdit3.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.DataSetArqueo1, "ArqueoCajas.TarjetaColones", True))
         Me.TextEdit3.EditValue = "0.00"
-        Me.TextEdit3.Location = New System.Drawing.Point(120, 64)
+        Me.TextEdit3.Location = New System.Drawing.Point(144, 74)
         Me.TextEdit3.Name = "TextEdit3"
         '
-        'TextEdit3.Properties
+        '
         '
         Me.TextEdit3.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple
         Me.TextEdit3.Properties.DisplayFormat.FormatString = "#,#0.00"
         Me.TextEdit3.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric
         Me.TextEdit3.Properties.ReadOnly = True
         Me.TextEdit3.Properties.Style = New DevExpress.Utils.ViewStyle("ControlStyle", Nothing, New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte)), "", DevExpress.Utils.StyleOptions.StyleEnabled, True, False, False, DevExpress.Utils.HorzAlignment.Far, DevExpress.Utils.VertAlignment.Center, Nothing, System.Drawing.SystemColors.Window, System.Drawing.Color.RoyalBlue)
-        Me.TextEdit3.Size = New System.Drawing.Size(160, 19)
+        Me.TextEdit3.Size = New System.Drawing.Size(192, 22)
         Me.TextEdit3.TabIndex = 41
         '
         'TextEdit2
         '
-        Me.TextEdit2.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.DataSetArqueo1, "ArqueoCajas.EfectivoDolares"))
+        Me.TextEdit2.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.DataSetArqueo1, "ArqueoCajas.EfectivoDolares", True))
         Me.TextEdit2.EditValue = "0.00"
-        Me.TextEdit2.Location = New System.Drawing.Point(120, 40)
+        Me.TextEdit2.Location = New System.Drawing.Point(144, 46)
         Me.TextEdit2.Name = "TextEdit2"
         '
-        'TextEdit2.Properties
+        '
         '
         Me.TextEdit2.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple
         Me.TextEdit2.Properties.DisplayFormat.FormatString = "#,#0.00"
         Me.TextEdit2.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric
         Me.TextEdit2.Properties.ReadOnly = True
         Me.TextEdit2.Properties.Style = New DevExpress.Utils.ViewStyle("ControlStyle", Nothing, New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte)), "", DevExpress.Utils.StyleOptions.StyleEnabled, True, False, False, DevExpress.Utils.HorzAlignment.Far, DevExpress.Utils.VertAlignment.Center, Nothing, System.Drawing.SystemColors.Window, System.Drawing.Color.RoyalBlue)
-        Me.TextEdit2.Size = New System.Drawing.Size(160, 19)
+        Me.TextEdit2.Size = New System.Drawing.Size(192, 22)
         Me.TextEdit2.TabIndex = 40
         '
         'TextEdit1
         '
-        Me.TextEdit1.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.DataSetArqueo1, "ArqueoCajas.EfectivoColones"))
+        Me.TextEdit1.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.DataSetArqueo1, "ArqueoCajas.EfectivoColones", True))
         Me.TextEdit1.EditValue = "0.00"
-        Me.TextEdit1.Location = New System.Drawing.Point(120, 16)
+        Me.TextEdit1.Location = New System.Drawing.Point(144, 18)
         Me.TextEdit1.Name = "TextEdit1"
         '
-        'TextEdit1.Properties
+        '
         '
         Me.TextEdit1.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple
         Me.TextEdit1.Properties.DisplayFormat.FormatString = "#,#0.00"
         Me.TextEdit1.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric
         Me.TextEdit1.Properties.ReadOnly = True
         Me.TextEdit1.Properties.Style = New DevExpress.Utils.ViewStyle("ControlStyle", Nothing, New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte)), "", DevExpress.Utils.StyleOptions.StyleEnabled, True, False, False, DevExpress.Utils.HorzAlignment.Far, DevExpress.Utils.VertAlignment.Center, Nothing, System.Drawing.SystemColors.Window, System.Drawing.Color.RoyalBlue)
-        Me.TextEdit1.Size = New System.Drawing.Size(160, 19)
+        Me.TextEdit1.Size = New System.Drawing.Size(192, 22)
         Me.TextEdit1.TabIndex = 39
         '
         'Label6
         '
         Me.Label6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.Label6.Location = New System.Drawing.Point(8, 88)
+        Me.Label6.Location = New System.Drawing.Point(10, 102)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(96, 16)
+        Me.Label6.Size = New System.Drawing.Size(115, 18)
         Me.Label6.TabIndex = 10
         Me.Label6.Text = "Tarjeta Dolares"
         '
@@ -776,9 +721,9 @@ Public Class ArqueoCaja
         Me.Label5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.ForeColor = System.Drawing.Color.RoyalBlue
-        Me.Label5.Location = New System.Drawing.Point(8, 208)
+        Me.Label5.Location = New System.Drawing.Point(10, 240)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(96, 16)
+        Me.Label5.Size = New System.Drawing.Size(115, 18)
         Me.Label5.TabIndex = 9
         Me.Label5.Text = "Total Sistema"
         Me.Label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -786,27 +731,27 @@ Public Class ArqueoCaja
         'Label3
         '
         Me.Label3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.Label3.Location = New System.Drawing.Point(8, 64)
+        Me.Label3.Location = New System.Drawing.Point(10, 74)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(96, 16)
+        Me.Label3.Size = New System.Drawing.Size(115, 18)
         Me.Label3.TabIndex = 4
         Me.Label3.Text = "Tarjeta Colones"
         '
         'Label2
         '
         Me.Label2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.Label2.Location = New System.Drawing.Point(8, 40)
+        Me.Label2.Location = New System.Drawing.Point(10, 46)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(96, 16)
+        Me.Label2.Size = New System.Drawing.Size(115, 19)
         Me.Label2.TabIndex = 2
         Me.Label2.Text = "Dolares"
         '
         'Label1
         '
         Me.Label1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.Label1.Location = New System.Drawing.Point(8, 16)
+        Me.Label1.Location = New System.Drawing.Point(10, 18)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(96, 16)
+        Me.Label1.Size = New System.Drawing.Size(115, 19)
         Me.Label1.TabIndex = 1
         Me.Label1.Text = "Colones"
         '
@@ -815,9 +760,9 @@ Public Class ArqueoCaja
         Me.Label36.BackColor = System.Drawing.Color.RoyalBlue
         Me.Label36.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label36.ForeColor = System.Drawing.Color.White
-        Me.Label36.Location = New System.Drawing.Point(368, 520)
+        Me.Label36.Location = New System.Drawing.Point(442, 600)
         Me.Label36.Name = "Label36"
-        Me.Label36.Size = New System.Drawing.Size(72, 13)
+        Me.Label36.Size = New System.Drawing.Size(86, 15)
         Me.Label36.TabIndex = 146
         Me.Label36.Text = "Usuario->"
         Me.Label36.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -828,23 +773,21 @@ Public Class ArqueoCaja
         Me.txtNombreUsuario.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtNombreUsuario.Enabled = False
         Me.txtNombreUsuario.ForeColor = System.Drawing.Color.Blue
-        Me.txtNombreUsuario.Location = New System.Drawing.Point(448, 536)
+        Me.txtNombreUsuario.Location = New System.Drawing.Point(538, 618)
         Me.txtNombreUsuario.Name = "txtNombreUsuario"
         Me.txtNombreUsuario.ReadOnly = True
-        Me.txtNombreUsuario.Size = New System.Drawing.Size(200, 13)
+        Me.txtNombreUsuario.Size = New System.Drawing.Size(240, 15)
         Me.txtNombreUsuario.TabIndex = 148
-        Me.txtNombreUsuario.Text = ""
         '
         'TextBox6
         '
         Me.TextBox6.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.TextBox6.ForeColor = System.Drawing.Color.Blue
-        Me.TextBox6.Location = New System.Drawing.Point(448, 520)
+        Me.TextBox6.Location = New System.Drawing.Point(538, 600)
         Me.TextBox6.Name = "TextBox6"
-        Me.TextBox6.PasswordChar = Microsoft.VisualBasic.ChrW(42)
-        Me.TextBox6.Size = New System.Drawing.Size(200, 13)
+        Me.TextBox6.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
+        Me.TextBox6.Size = New System.Drawing.Size(240, 15)
         Me.TextBox6.TabIndex = 0
-        Me.TextBox6.Text = ""
         '
         'AdapterEfectivo
         '
@@ -856,26 +799,15 @@ Public Class ArqueoCaja
         '
         'SqlDeleteCommand3
         '
-        Me.SqlDeleteCommand3.CommandText = "DELETE FROM ArqueoEfectivo WHERE (Id = @Original_Id) AND (Cantidad = @Original_Ca" & _
-        "ntidad) AND (Id_Arqueo = @Original_Id_Arqueo) AND (Id_Denominacion = @Original_I" & _
-        "d_Denominacion) AND (Monto = @Original_Monto)"
+        Me.SqlDeleteCommand3.CommandText = resources.GetString("SqlDeleteCommand3.CommandText")
         Me.SqlDeleteCommand3.Connection = Me.SqlConnection1
-        Me.SqlDeleteCommand3.Parameters.Add(New System.Data.SqlClient.SqlParameter("@Original_Id", System.Data.SqlDbType.Int, 4, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "Id", System.Data.DataRowVersion.Original, Nothing))
-        Me.SqlDeleteCommand3.Parameters.Add(New System.Data.SqlClient.SqlParameter("@Original_Cantidad", System.Data.SqlDbType.Int, 4, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "Cantidad", System.Data.DataRowVersion.Original, Nothing))
-        Me.SqlDeleteCommand3.Parameters.Add(New System.Data.SqlClient.SqlParameter("@Original_Id_Arqueo", System.Data.SqlDbType.BigInt, 8, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "Id_Arqueo", System.Data.DataRowVersion.Original, Nothing))
-        Me.SqlDeleteCommand3.Parameters.Add(New System.Data.SqlClient.SqlParameter("@Original_Id_Denominacion", System.Data.SqlDbType.BigInt, 8, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "Id_Denominacion", System.Data.DataRowVersion.Original, Nothing))
-        Me.SqlDeleteCommand3.Parameters.Add(New System.Data.SqlClient.SqlParameter("@Original_Monto", System.Data.SqlDbType.Float, 8, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "Monto", System.Data.DataRowVersion.Original, Nothing))
+        Me.SqlDeleteCommand3.Parameters.AddRange(New System.Data.SqlClient.SqlParameter() {New System.Data.SqlClient.SqlParameter("@Original_Id", System.Data.SqlDbType.Int, 4, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "Id", System.Data.DataRowVersion.Original, Nothing), New System.Data.SqlClient.SqlParameter("@Original_Cantidad", System.Data.SqlDbType.Int, 4, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "Cantidad", System.Data.DataRowVersion.Original, Nothing), New System.Data.SqlClient.SqlParameter("@Original_Id_Arqueo", System.Data.SqlDbType.BigInt, 8, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "Id_Arqueo", System.Data.DataRowVersion.Original, Nothing), New System.Data.SqlClient.SqlParameter("@Original_Id_Denominacion", System.Data.SqlDbType.BigInt, 8, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "Id_Denominacion", System.Data.DataRowVersion.Original, Nothing), New System.Data.SqlClient.SqlParameter("@Original_Monto", System.Data.SqlDbType.Float, 8, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "Monto", System.Data.DataRowVersion.Original, Nothing)})
         '
         'SqlInsertCommand3
         '
-        Me.SqlInsertCommand3.CommandText = "INSERT INTO ArqueoEfectivo(Id_Arqueo, Id_Denominacion, Monto, Cantidad) VALUES (@" & _
-        "Id_Arqueo, @Id_Denominacion, @Monto, @Cantidad); SELECT Id, Id_Arqueo, Id_Denomi" & _
-        "nacion, Monto, Cantidad FROM ArqueoEfectivo WHERE (Id = @@IDENTITY)"
+        Me.SqlInsertCommand3.CommandText = resources.GetString("SqlInsertCommand3.CommandText")
         Me.SqlInsertCommand3.Connection = Me.SqlConnection1
-        Me.SqlInsertCommand3.Parameters.Add(New System.Data.SqlClient.SqlParameter("@Id_Arqueo", System.Data.SqlDbType.BigInt, 8, "Id_Arqueo"))
-        Me.SqlInsertCommand3.Parameters.Add(New System.Data.SqlClient.SqlParameter("@Id_Denominacion", System.Data.SqlDbType.BigInt, 8, "Id_Denominacion"))
-        Me.SqlInsertCommand3.Parameters.Add(New System.Data.SqlClient.SqlParameter("@Monto", System.Data.SqlDbType.Float, 8, "Monto"))
-        Me.SqlInsertCommand3.Parameters.Add(New System.Data.SqlClient.SqlParameter("@Cantidad", System.Data.SqlDbType.Int, 4, "Cantidad"))
+        Me.SqlInsertCommand3.Parameters.AddRange(New System.Data.SqlClient.SqlParameter() {New System.Data.SqlClient.SqlParameter("@Id_Arqueo", System.Data.SqlDbType.BigInt, 8, "Id_Arqueo"), New System.Data.SqlClient.SqlParameter("@Id_Denominacion", System.Data.SqlDbType.BigInt, 8, "Id_Denominacion"), New System.Data.SqlClient.SqlParameter("@Monto", System.Data.SqlDbType.Float, 8, "Monto"), New System.Data.SqlClient.SqlParameter("@Cantidad", System.Data.SqlDbType.Int, 4, "Cantidad")})
         '
         'SqlSelectCommand5
         '
@@ -884,22 +816,9 @@ Public Class ArqueoCaja
         '
         'SqlUpdateCommand3
         '
-        Me.SqlUpdateCommand3.CommandText = "UPDATE ArqueoEfectivo SET Id_Arqueo = @Id_Arqueo, Id_Denominacion = @Id_Denominac" & _
-        "ion, Monto = @Monto, Cantidad = @Cantidad WHERE (Id = @Original_Id) AND (Cantida" & _
-        "d = @Original_Cantidad) AND (Id_Arqueo = @Original_Id_Arqueo) AND (Id_Denominaci" & _
-        "on = @Original_Id_Denominacion) AND (Monto = @Original_Monto); SELECT Id, Id_Arq" & _
-        "ueo, Id_Denominacion, Monto, Cantidad FROM ArqueoEfectivo WHERE (Id = @Id)"
+        Me.SqlUpdateCommand3.CommandText = resources.GetString("SqlUpdateCommand3.CommandText")
         Me.SqlUpdateCommand3.Connection = Me.SqlConnection1
-        Me.SqlUpdateCommand3.Parameters.Add(New System.Data.SqlClient.SqlParameter("@Id_Arqueo", System.Data.SqlDbType.BigInt, 8, "Id_Arqueo"))
-        Me.SqlUpdateCommand3.Parameters.Add(New System.Data.SqlClient.SqlParameter("@Id_Denominacion", System.Data.SqlDbType.BigInt, 8, "Id_Denominacion"))
-        Me.SqlUpdateCommand3.Parameters.Add(New System.Data.SqlClient.SqlParameter("@Monto", System.Data.SqlDbType.Float, 8, "Monto"))
-        Me.SqlUpdateCommand3.Parameters.Add(New System.Data.SqlClient.SqlParameter("@Cantidad", System.Data.SqlDbType.Int, 4, "Cantidad"))
-        Me.SqlUpdateCommand3.Parameters.Add(New System.Data.SqlClient.SqlParameter("@Original_Id", System.Data.SqlDbType.Int, 4, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "Id", System.Data.DataRowVersion.Original, Nothing))
-        Me.SqlUpdateCommand3.Parameters.Add(New System.Data.SqlClient.SqlParameter("@Original_Cantidad", System.Data.SqlDbType.Int, 4, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "Cantidad", System.Data.DataRowVersion.Original, Nothing))
-        Me.SqlUpdateCommand3.Parameters.Add(New System.Data.SqlClient.SqlParameter("@Original_Id_Arqueo", System.Data.SqlDbType.BigInt, 8, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "Id_Arqueo", System.Data.DataRowVersion.Original, Nothing))
-        Me.SqlUpdateCommand3.Parameters.Add(New System.Data.SqlClient.SqlParameter("@Original_Id_Denominacion", System.Data.SqlDbType.BigInt, 8, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "Id_Denominacion", System.Data.DataRowVersion.Original, Nothing))
-        Me.SqlUpdateCommand3.Parameters.Add(New System.Data.SqlClient.SqlParameter("@Original_Monto", System.Data.SqlDbType.Float, 8, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "Monto", System.Data.DataRowVersion.Original, Nothing))
-        Me.SqlUpdateCommand3.Parameters.Add(New System.Data.SqlClient.SqlParameter("@Id", System.Data.SqlDbType.Int, 4, "Id"))
+        Me.SqlUpdateCommand3.Parameters.AddRange(New System.Data.SqlClient.SqlParameter() {New System.Data.SqlClient.SqlParameter("@Id_Arqueo", System.Data.SqlDbType.BigInt, 8, "Id_Arqueo"), New System.Data.SqlClient.SqlParameter("@Id_Denominacion", System.Data.SqlDbType.BigInt, 8, "Id_Denominacion"), New System.Data.SqlClient.SqlParameter("@Monto", System.Data.SqlDbType.Float, 8, "Monto"), New System.Data.SqlClient.SqlParameter("@Cantidad", System.Data.SqlDbType.Int, 4, "Cantidad"), New System.Data.SqlClient.SqlParameter("@Original_Id", System.Data.SqlDbType.Int, 4, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "Id", System.Data.DataRowVersion.Original, Nothing), New System.Data.SqlClient.SqlParameter("@Original_Cantidad", System.Data.SqlDbType.Int, 4, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "Cantidad", System.Data.DataRowVersion.Original, Nothing), New System.Data.SqlClient.SqlParameter("@Original_Id_Arqueo", System.Data.SqlDbType.BigInt, 8, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "Id_Arqueo", System.Data.DataRowVersion.Original, Nothing), New System.Data.SqlClient.SqlParameter("@Original_Id_Denominacion", System.Data.SqlDbType.BigInt, 8, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "Id_Denominacion", System.Data.DataRowVersion.Original, Nothing), New System.Data.SqlClient.SqlParameter("@Original_Monto", System.Data.SqlDbType.Float, 8, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "Monto", System.Data.DataRowVersion.Original, Nothing), New System.Data.SqlClient.SqlParameter("@Id", System.Data.SqlDbType.Int, 4, "Id")})
         '
         'AdapterTarjetas
         '
@@ -912,22 +831,17 @@ Public Class ArqueoCaja
         'SqlDeleteCommand2
         '
         Me.SqlDeleteCommand2.CommandText = "DELETE FROM ArqueoTarjeta WHERE (Id = @Original_Id) AND (Id_Arqueo = @Original_Id" & _
-        "_Arqueo) AND (Id_Tarjeta = @Original_Id_Tarjeta) AND (Monto = @Original_Monto)"
+    "_Arqueo) AND (Id_Tarjeta = @Original_Id_Tarjeta) AND (Monto = @Original_Monto)"
         Me.SqlDeleteCommand2.Connection = Me.SqlConnection1
-        Me.SqlDeleteCommand2.Parameters.Add(New System.Data.SqlClient.SqlParameter("@Original_Id", System.Data.SqlDbType.Int, 4, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "Id", System.Data.DataRowVersion.Original, Nothing))
-        Me.SqlDeleteCommand2.Parameters.Add(New System.Data.SqlClient.SqlParameter("@Original_Id_Arqueo", System.Data.SqlDbType.BigInt, 8, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "Id_Arqueo", System.Data.DataRowVersion.Original, Nothing))
-        Me.SqlDeleteCommand2.Parameters.Add(New System.Data.SqlClient.SqlParameter("@Original_Id_Tarjeta", System.Data.SqlDbType.Int, 4, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "Id_Tarjeta", System.Data.DataRowVersion.Original, Nothing))
-        Me.SqlDeleteCommand2.Parameters.Add(New System.Data.SqlClient.SqlParameter("@Original_Monto", System.Data.SqlDbType.Float, 8, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "Monto", System.Data.DataRowVersion.Original, Nothing))
+        Me.SqlDeleteCommand2.Parameters.AddRange(New System.Data.SqlClient.SqlParameter() {New System.Data.SqlClient.SqlParameter("@Original_Id", System.Data.SqlDbType.Int, 4, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "Id", System.Data.DataRowVersion.Original, Nothing), New System.Data.SqlClient.SqlParameter("@Original_Id_Arqueo", System.Data.SqlDbType.BigInt, 8, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "Id_Arqueo", System.Data.DataRowVersion.Original, Nothing), New System.Data.SqlClient.SqlParameter("@Original_Id_Tarjeta", System.Data.SqlDbType.Int, 4, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "Id_Tarjeta", System.Data.DataRowVersion.Original, Nothing), New System.Data.SqlClient.SqlParameter("@Original_Monto", System.Data.SqlDbType.Float, 8, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "Monto", System.Data.DataRowVersion.Original, Nothing)})
         '
         'SqlInsertCommand2
         '
         Me.SqlInsertCommand2.CommandText = "INSERT INTO ArqueoTarjeta(Id_Arqueo, Id_Tarjeta, Monto) VALUES (@Id_Arqueo, @Id_T" & _
-        "arjeta, @Monto); SELECT Id, Id_Arqueo, Id_Tarjeta, Monto FROM ArqueoTarjeta WHER" & _
-        "E (Id = @@IDENTITY)"
+    "arjeta, @Monto); SELECT Id, Id_Arqueo, Id_Tarjeta, Monto FROM ArqueoTarjeta WHER" & _
+    "E (Id = @@IDENTITY)"
         Me.SqlInsertCommand2.Connection = Me.SqlConnection1
-        Me.SqlInsertCommand2.Parameters.Add(New System.Data.SqlClient.SqlParameter("@Id_Arqueo", System.Data.SqlDbType.BigInt, 8, "Id_Arqueo"))
-        Me.SqlInsertCommand2.Parameters.Add(New System.Data.SqlClient.SqlParameter("@Id_Tarjeta", System.Data.SqlDbType.Int, 4, "Id_Tarjeta"))
-        Me.SqlInsertCommand2.Parameters.Add(New System.Data.SqlClient.SqlParameter("@Monto", System.Data.SqlDbType.Float, 8, "Monto"))
+        Me.SqlInsertCommand2.Parameters.AddRange(New System.Data.SqlClient.SqlParameter() {New System.Data.SqlClient.SqlParameter("@Id_Arqueo", System.Data.SqlDbType.BigInt, 8, "Id_Arqueo"), New System.Data.SqlClient.SqlParameter("@Id_Tarjeta", System.Data.SqlDbType.Int, 4, "Id_Tarjeta"), New System.Data.SqlClient.SqlParameter("@Monto", System.Data.SqlDbType.Float, 8, "Monto")})
         '
         'SqlSelectCommand6
         '
@@ -936,19 +850,9 @@ Public Class ArqueoCaja
         '
         'SqlUpdateCommand2
         '
-        Me.SqlUpdateCommand2.CommandText = "UPDATE ArqueoTarjeta SET Id_Arqueo = @Id_Arqueo, Id_Tarjeta = @Id_Tarjeta, Monto " & _
-        "= @Monto WHERE (Id = @Original_Id) AND (Id_Arqueo = @Original_Id_Arqueo) AND (Id" & _
-        "_Tarjeta = @Original_Id_Tarjeta) AND (Monto = @Original_Monto); SELECT Id, Id_Ar" & _
-        "queo, Id_Tarjeta, Monto FROM ArqueoTarjeta WHERE (Id = @Id)"
+        Me.SqlUpdateCommand2.CommandText = resources.GetString("SqlUpdateCommand2.CommandText")
         Me.SqlUpdateCommand2.Connection = Me.SqlConnection1
-        Me.SqlUpdateCommand2.Parameters.Add(New System.Data.SqlClient.SqlParameter("@Id_Arqueo", System.Data.SqlDbType.BigInt, 8, "Id_Arqueo"))
-        Me.SqlUpdateCommand2.Parameters.Add(New System.Data.SqlClient.SqlParameter("@Id_Tarjeta", System.Data.SqlDbType.Int, 4, "Id_Tarjeta"))
-        Me.SqlUpdateCommand2.Parameters.Add(New System.Data.SqlClient.SqlParameter("@Monto", System.Data.SqlDbType.Float, 8, "Monto"))
-        Me.SqlUpdateCommand2.Parameters.Add(New System.Data.SqlClient.SqlParameter("@Original_Id", System.Data.SqlDbType.Int, 4, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "Id", System.Data.DataRowVersion.Original, Nothing))
-        Me.SqlUpdateCommand2.Parameters.Add(New System.Data.SqlClient.SqlParameter("@Original_Id_Arqueo", System.Data.SqlDbType.BigInt, 8, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "Id_Arqueo", System.Data.DataRowVersion.Original, Nothing))
-        Me.SqlUpdateCommand2.Parameters.Add(New System.Data.SqlClient.SqlParameter("@Original_Id_Tarjeta", System.Data.SqlDbType.Int, 4, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "Id_Tarjeta", System.Data.DataRowVersion.Original, Nothing))
-        Me.SqlUpdateCommand2.Parameters.Add(New System.Data.SqlClient.SqlParameter("@Original_Monto", System.Data.SqlDbType.Float, 8, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "Monto", System.Data.DataRowVersion.Original, Nothing))
-        Me.SqlUpdateCommand2.Parameters.Add(New System.Data.SqlClient.SqlParameter("@Id", System.Data.SqlDbType.Int, 4, "Id"))
+        Me.SqlUpdateCommand2.Parameters.AddRange(New System.Data.SqlClient.SqlParameter() {New System.Data.SqlClient.SqlParameter("@Id_Arqueo", System.Data.SqlDbType.BigInt, 8, "Id_Arqueo"), New System.Data.SqlClient.SqlParameter("@Id_Tarjeta", System.Data.SqlDbType.Int, 4, "Id_Tarjeta"), New System.Data.SqlClient.SqlParameter("@Monto", System.Data.SqlDbType.Float, 8, "Monto"), New System.Data.SqlClient.SqlParameter("@Original_Id", System.Data.SqlDbType.Int, 4, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "Id", System.Data.DataRowVersion.Original, Nothing), New System.Data.SqlClient.SqlParameter("@Original_Id_Arqueo", System.Data.SqlDbType.BigInt, 8, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "Id_Arqueo", System.Data.DataRowVersion.Original, Nothing), New System.Data.SqlClient.SqlParameter("@Original_Id_Tarjeta", System.Data.SqlDbType.Int, 4, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "Id_Tarjeta", System.Data.DataRowVersion.Original, Nothing), New System.Data.SqlClient.SqlParameter("@Original_Monto", System.Data.SqlDbType.Float, 8, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "Monto", System.Data.DataRowVersion.Original, Nothing), New System.Data.SqlClient.SqlParameter("@Id", System.Data.SqlDbType.Int, 4, "Id")})
         '
         'AdapterArqueodeCaja
         '
@@ -960,120 +864,26 @@ Public Class ArqueoCaja
         '
         'SqlDeleteCommand1
         '
-        Me.SqlDeleteCommand1.CommandText = "DELETE FROM ArqueoCajas WHERE (Id = @Original_Id) AND (Anulado = @Original_Anulad" & _
-        "o) AND (Cajero = @Original_Cajero) AND (Cheques = @Original_Cheques) AND (Cheque" & _
-        "sDol = @Original_ChequesDol) AND (DepositoCol = @Original_DepositoCol) AND (Depo" & _
-        "sitoDol = @Original_DepositoDol) AND (EfectivoColones = @Original_EfectivoColone" & _
-        "s) AND (EfectivoDolares = @Original_EfectivoDolares) AND (Fecha = @Original_Fech" & _
-        "a) AND (IdApertura = @Original_IdApertura) AND (Observaciones = @Original_Observ" & _
-        "aciones OR @Original_Observaciones IS NULL AND Observaciones IS NULL) AND (Tarje" & _
-        "taColones = @Original_TarjetaColones) AND (TarjetaDolares = @Original_TarjetaDol" & _
-        "ares) AND (TipoCambioD = @Original_TipoCambioD) AND (Total = @Original_Total)"
+        Me.SqlDeleteCommand1.CommandText = resources.GetString("SqlDeleteCommand1.CommandText")
         Me.SqlDeleteCommand1.Connection = Me.SqlConnection1
-        Me.SqlDeleteCommand1.Parameters.Add(New System.Data.SqlClient.SqlParameter("@Original_Id", System.Data.SqlDbType.BigInt, 8, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "Id", System.Data.DataRowVersion.Original, Nothing))
-        Me.SqlDeleteCommand1.Parameters.Add(New System.Data.SqlClient.SqlParameter("@Original_Anulado", System.Data.SqlDbType.Bit, 1, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "Anulado", System.Data.DataRowVersion.Original, Nothing))
-        Me.SqlDeleteCommand1.Parameters.Add(New System.Data.SqlClient.SqlParameter("@Original_Cajero", System.Data.SqlDbType.VarChar, 100, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "Cajero", System.Data.DataRowVersion.Original, Nothing))
-        Me.SqlDeleteCommand1.Parameters.Add(New System.Data.SqlClient.SqlParameter("@Original_Cheques", System.Data.SqlDbType.Float, 8, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "Cheques", System.Data.DataRowVersion.Original, Nothing))
-        Me.SqlDeleteCommand1.Parameters.Add(New System.Data.SqlClient.SqlParameter("@Original_ChequesDol", System.Data.SqlDbType.Float, 8, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "ChequesDol", System.Data.DataRowVersion.Original, Nothing))
-        Me.SqlDeleteCommand1.Parameters.Add(New System.Data.SqlClient.SqlParameter("@Original_DepositoCol", System.Data.SqlDbType.Float, 8, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "DepositoCol", System.Data.DataRowVersion.Original, Nothing))
-        Me.SqlDeleteCommand1.Parameters.Add(New System.Data.SqlClient.SqlParameter("@Original_DepositoDol", System.Data.SqlDbType.Float, 8, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "DepositoDol", System.Data.DataRowVersion.Original, Nothing))
-        Me.SqlDeleteCommand1.Parameters.Add(New System.Data.SqlClient.SqlParameter("@Original_EfectivoColones", System.Data.SqlDbType.Float, 8, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "EfectivoColones", System.Data.DataRowVersion.Original, Nothing))
-        Me.SqlDeleteCommand1.Parameters.Add(New System.Data.SqlClient.SqlParameter("@Original_EfectivoDolares", System.Data.SqlDbType.Float, 8, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "EfectivoDolares", System.Data.DataRowVersion.Original, Nothing))
-        Me.SqlDeleteCommand1.Parameters.Add(New System.Data.SqlClient.SqlParameter("@Original_Fecha", System.Data.SqlDbType.DateTime, 8, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "Fecha", System.Data.DataRowVersion.Original, Nothing))
-        Me.SqlDeleteCommand1.Parameters.Add(New System.Data.SqlClient.SqlParameter("@Original_IdApertura", System.Data.SqlDbType.Int, 4, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "IdApertura", System.Data.DataRowVersion.Original, Nothing))
-        Me.SqlDeleteCommand1.Parameters.Add(New System.Data.SqlClient.SqlParameter("@Original_Observaciones", System.Data.SqlDbType.VarChar, 250, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "Observaciones", System.Data.DataRowVersion.Original, Nothing))
-        Me.SqlDeleteCommand1.Parameters.Add(New System.Data.SqlClient.SqlParameter("@Original_TarjetaColones", System.Data.SqlDbType.Float, 8, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "TarjetaColones", System.Data.DataRowVersion.Original, Nothing))
-        Me.SqlDeleteCommand1.Parameters.Add(New System.Data.SqlClient.SqlParameter("@Original_TarjetaDolares", System.Data.SqlDbType.Float, 8, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "TarjetaDolares", System.Data.DataRowVersion.Original, Nothing))
-        Me.SqlDeleteCommand1.Parameters.Add(New System.Data.SqlClient.SqlParameter("@Original_TipoCambioD", System.Data.SqlDbType.Float, 8, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "TipoCambioD", System.Data.DataRowVersion.Original, Nothing))
-        Me.SqlDeleteCommand1.Parameters.Add(New System.Data.SqlClient.SqlParameter("@Original_Total", System.Data.SqlDbType.Float, 8, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "Total", System.Data.DataRowVersion.Original, Nothing))
+        Me.SqlDeleteCommand1.Parameters.AddRange(New System.Data.SqlClient.SqlParameter() {New System.Data.SqlClient.SqlParameter("@Original_Id", System.Data.SqlDbType.BigInt, 8, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "Id", System.Data.DataRowVersion.Original, Nothing), New System.Data.SqlClient.SqlParameter("@Original_Anulado", System.Data.SqlDbType.Bit, 1, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "Anulado", System.Data.DataRowVersion.Original, Nothing), New System.Data.SqlClient.SqlParameter("@Original_Cajero", System.Data.SqlDbType.VarChar, 100, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "Cajero", System.Data.DataRowVersion.Original, Nothing), New System.Data.SqlClient.SqlParameter("@Original_Cheques", System.Data.SqlDbType.Float, 8, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "Cheques", System.Data.DataRowVersion.Original, Nothing), New System.Data.SqlClient.SqlParameter("@Original_ChequesDol", System.Data.SqlDbType.Float, 8, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "ChequesDol", System.Data.DataRowVersion.Original, Nothing), New System.Data.SqlClient.SqlParameter("@Original_DepositoCol", System.Data.SqlDbType.Float, 8, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "DepositoCol", System.Data.DataRowVersion.Original, Nothing), New System.Data.SqlClient.SqlParameter("@Original_DepositoDol", System.Data.SqlDbType.Float, 8, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "DepositoDol", System.Data.DataRowVersion.Original, Nothing), New System.Data.SqlClient.SqlParameter("@Original_EfectivoColones", System.Data.SqlDbType.Float, 8, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "EfectivoColones", System.Data.DataRowVersion.Original, Nothing), New System.Data.SqlClient.SqlParameter("@Original_EfectivoDolares", System.Data.SqlDbType.Float, 8, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "EfectivoDolares", System.Data.DataRowVersion.Original, Nothing), New System.Data.SqlClient.SqlParameter("@Original_Fecha", System.Data.SqlDbType.DateTime, 8, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "Fecha", System.Data.DataRowVersion.Original, Nothing), New System.Data.SqlClient.SqlParameter("@Original_IdApertura", System.Data.SqlDbType.Int, 4, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "IdApertura", System.Data.DataRowVersion.Original, Nothing), New System.Data.SqlClient.SqlParameter("@Original_Observaciones", System.Data.SqlDbType.VarChar, 250, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "Observaciones", System.Data.DataRowVersion.Original, Nothing), New System.Data.SqlClient.SqlParameter("@Original_TarjetaColones", System.Data.SqlDbType.Float, 8, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "TarjetaColones", System.Data.DataRowVersion.Original, Nothing), New System.Data.SqlClient.SqlParameter("@Original_TarjetaDolares", System.Data.SqlDbType.Float, 8, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "TarjetaDolares", System.Data.DataRowVersion.Original, Nothing), New System.Data.SqlClient.SqlParameter("@Original_TipoCambioD", System.Data.SqlDbType.Float, 8, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "TipoCambioD", System.Data.DataRowVersion.Original, Nothing), New System.Data.SqlClient.SqlParameter("@Original_Total", System.Data.SqlDbType.Float, 8, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "Total", System.Data.DataRowVersion.Original, Nothing)})
         '
         'SqlInsertCommand1
         '
-        Me.SqlInsertCommand1.CommandText = "INSERT INTO ArqueoCajas(EfectivoColones, EfectivoDolares, TarjetaColones, Tarjeta" & _
-        "Dolares, Total, IdApertura, Fecha, Cajero, Anulado, TipoCambioD, Observaciones, " & _
-        "Cheques, ChequesDol, DepositoCol, DepositoDol) VALUES (@EfectivoColones, @Efecti" & _
-        "voDolares, @TarjetaColones, @TarjetaDolares, @Total, @IdApertura, @Fecha, @Cajer" & _
-        "o, @Anulado, @TipoCambioD, @Observaciones, @Cheques, @ChequesDol, @DepositoCol, " & _
-        "@DepositoDol); SELECT Id, EfectivoColones, EfectivoDolares, TarjetaColones, Tarj" & _
-        "etaDolares, Total, IdApertura, Fecha, Cajero, Anulado, TipoCambioD, Observacione" & _
-        "s, Cheques, ChequesDol, DepositoCol, DepositoDol FROM ArqueoCajas WHERE (Id = @@" & _
-        "IDENTITY)"
+        Me.SqlInsertCommand1.CommandText = resources.GetString("SqlInsertCommand1.CommandText")
         Me.SqlInsertCommand1.Connection = Me.SqlConnection1
-        Me.SqlInsertCommand1.Parameters.Add(New System.Data.SqlClient.SqlParameter("@EfectivoColones", System.Data.SqlDbType.Float, 8, "EfectivoColones"))
-        Me.SqlInsertCommand1.Parameters.Add(New System.Data.SqlClient.SqlParameter("@EfectivoDolares", System.Data.SqlDbType.Float, 8, "EfectivoDolares"))
-        Me.SqlInsertCommand1.Parameters.Add(New System.Data.SqlClient.SqlParameter("@TarjetaColones", System.Data.SqlDbType.Float, 8, "TarjetaColones"))
-        Me.SqlInsertCommand1.Parameters.Add(New System.Data.SqlClient.SqlParameter("@TarjetaDolares", System.Data.SqlDbType.Float, 8, "TarjetaDolares"))
-        Me.SqlInsertCommand1.Parameters.Add(New System.Data.SqlClient.SqlParameter("@Total", System.Data.SqlDbType.Float, 8, "Total"))
-        Me.SqlInsertCommand1.Parameters.Add(New System.Data.SqlClient.SqlParameter("@IdApertura", System.Data.SqlDbType.Int, 4, "IdApertura"))
-        Me.SqlInsertCommand1.Parameters.Add(New System.Data.SqlClient.SqlParameter("@Fecha", System.Data.SqlDbType.DateTime, 8, "Fecha"))
-        Me.SqlInsertCommand1.Parameters.Add(New System.Data.SqlClient.SqlParameter("@Cajero", System.Data.SqlDbType.VarChar, 100, "Cajero"))
-        Me.SqlInsertCommand1.Parameters.Add(New System.Data.SqlClient.SqlParameter("@Anulado", System.Data.SqlDbType.Bit, 1, "Anulado"))
-        Me.SqlInsertCommand1.Parameters.Add(New System.Data.SqlClient.SqlParameter("@TipoCambioD", System.Data.SqlDbType.Float, 8, "TipoCambioD"))
-        Me.SqlInsertCommand1.Parameters.Add(New System.Data.SqlClient.SqlParameter("@Observaciones", System.Data.SqlDbType.VarChar, 250, "Observaciones"))
-        Me.SqlInsertCommand1.Parameters.Add(New System.Data.SqlClient.SqlParameter("@Cheques", System.Data.SqlDbType.Float, 8, "Cheques"))
-        Me.SqlInsertCommand1.Parameters.Add(New System.Data.SqlClient.SqlParameter("@ChequesDol", System.Data.SqlDbType.Float, 8, "ChequesDol"))
-        Me.SqlInsertCommand1.Parameters.Add(New System.Data.SqlClient.SqlParameter("@DepositoCol", System.Data.SqlDbType.Float, 8, "DepositoCol"))
-        Me.SqlInsertCommand1.Parameters.Add(New System.Data.SqlClient.SqlParameter("@DepositoDol", System.Data.SqlDbType.Float, 8, "DepositoDol"))
+        Me.SqlInsertCommand1.Parameters.AddRange(New System.Data.SqlClient.SqlParameter() {New System.Data.SqlClient.SqlParameter("@EfectivoColones", System.Data.SqlDbType.Float, 8, "EfectivoColones"), New System.Data.SqlClient.SqlParameter("@EfectivoDolares", System.Data.SqlDbType.Float, 8, "EfectivoDolares"), New System.Data.SqlClient.SqlParameter("@TarjetaColones", System.Data.SqlDbType.Float, 8, "TarjetaColones"), New System.Data.SqlClient.SqlParameter("@TarjetaDolares", System.Data.SqlDbType.Float, 8, "TarjetaDolares"), New System.Data.SqlClient.SqlParameter("@Total", System.Data.SqlDbType.Float, 8, "Total"), New System.Data.SqlClient.SqlParameter("@IdApertura", System.Data.SqlDbType.Int, 4, "IdApertura"), New System.Data.SqlClient.SqlParameter("@Fecha", System.Data.SqlDbType.DateTime, 8, "Fecha"), New System.Data.SqlClient.SqlParameter("@Cajero", System.Data.SqlDbType.VarChar, 100, "Cajero"), New System.Data.SqlClient.SqlParameter("@Anulado", System.Data.SqlDbType.Bit, 1, "Anulado"), New System.Data.SqlClient.SqlParameter("@TipoCambioD", System.Data.SqlDbType.Float, 8, "TipoCambioD"), New System.Data.SqlClient.SqlParameter("@Observaciones", System.Data.SqlDbType.VarChar, 250, "Observaciones"), New System.Data.SqlClient.SqlParameter("@Cheques", System.Data.SqlDbType.Float, 8, "Cheques"), New System.Data.SqlClient.SqlParameter("@ChequesDol", System.Data.SqlDbType.Float, 8, "ChequesDol"), New System.Data.SqlClient.SqlParameter("@DepositoCol", System.Data.SqlDbType.Float, 8, "DepositoCol"), New System.Data.SqlClient.SqlParameter("@DepositoDol", System.Data.SqlDbType.Float, 8, "DepositoDol")})
         '
         'SqlSelectCommand4
         '
-        Me.SqlSelectCommand4.CommandText = "SELECT Id, EfectivoColones, EfectivoDolares, TarjetaColones, TarjetaDolares, Tota" & _
-        "l, IdApertura, Fecha, Cajero, Anulado, TipoCambioD, Observaciones, Cheques, Cheq" & _
-        "uesDol, DepositoCol, DepositoDol FROM ArqueoCajas"
+        Me.SqlSelectCommand4.CommandText = resources.GetString("SqlSelectCommand4.CommandText")
         Me.SqlSelectCommand4.Connection = Me.SqlConnection1
         '
         'SqlUpdateCommand1
         '
-        Me.SqlUpdateCommand1.CommandText = "UPDATE ArqueoCajas SET EfectivoColones = @EfectivoColones, EfectivoDolares = @Efe" & _
-        "ctivoDolares, TarjetaColones = @TarjetaColones, TarjetaDolares = @TarjetaDolares" & _
-        ", Total = @Total, IdApertura = @IdApertura, Fecha = @Fecha, Cajero = @Cajero, An" & _
-        "ulado = @Anulado, TipoCambioD = @TipoCambioD, Observaciones = @Observaciones, Ch" & _
-        "eques = @Cheques, ChequesDol = @ChequesDol, DepositoCol = @DepositoCol, Deposito" & _
-        "Dol = @DepositoDol WHERE (Id = @Original_Id) AND (Anulado = @Original_Anulado) A" & _
-        "ND (Cajero = @Original_Cajero) AND (Cheques = @Original_Cheques) AND (ChequesDol" & _
-        " = @Original_ChequesDol) AND (DepositoCol = @Original_DepositoCol) AND (Deposito" & _
-        "Dol = @Original_DepositoDol) AND (EfectivoColones = @Original_EfectivoColones) A" & _
-        "ND (EfectivoDolares = @Original_EfectivoDolares) AND (Fecha = @Original_Fecha) A" & _
-        "ND (IdApertura = @Original_IdApertura) AND (Observaciones = @Original_Observacio" & _
-        "nes OR @Original_Observaciones IS NULL AND Observaciones IS NULL) AND (TarjetaCo" & _
-        "lones = @Original_TarjetaColones) AND (TarjetaDolares = @Original_TarjetaDolares" & _
-        ") AND (TipoCambioD = @Original_TipoCambioD) AND (Total = @Original_Total); SELEC" & _
-        "T Id, EfectivoColones, EfectivoDolares, TarjetaColones, TarjetaDolares, Total, I" & _
-        "dApertura, Fecha, Cajero, Anulado, TipoCambioD, Observaciones, Cheques, ChequesD" & _
-        "ol, DepositoCol, DepositoDol FROM ArqueoCajas WHERE (Id = @Id)"
+        Me.SqlUpdateCommand1.CommandText = resources.GetString("SqlUpdateCommand1.CommandText")
         Me.SqlUpdateCommand1.Connection = Me.SqlConnection1
-        Me.SqlUpdateCommand1.Parameters.Add(New System.Data.SqlClient.SqlParameter("@EfectivoColones", System.Data.SqlDbType.Float, 8, "EfectivoColones"))
-        Me.SqlUpdateCommand1.Parameters.Add(New System.Data.SqlClient.SqlParameter("@EfectivoDolares", System.Data.SqlDbType.Float, 8, "EfectivoDolares"))
-        Me.SqlUpdateCommand1.Parameters.Add(New System.Data.SqlClient.SqlParameter("@TarjetaColones", System.Data.SqlDbType.Float, 8, "TarjetaColones"))
-        Me.SqlUpdateCommand1.Parameters.Add(New System.Data.SqlClient.SqlParameter("@TarjetaDolares", System.Data.SqlDbType.Float, 8, "TarjetaDolares"))
-        Me.SqlUpdateCommand1.Parameters.Add(New System.Data.SqlClient.SqlParameter("@Total", System.Data.SqlDbType.Float, 8, "Total"))
-        Me.SqlUpdateCommand1.Parameters.Add(New System.Data.SqlClient.SqlParameter("@IdApertura", System.Data.SqlDbType.Int, 4, "IdApertura"))
-        Me.SqlUpdateCommand1.Parameters.Add(New System.Data.SqlClient.SqlParameter("@Fecha", System.Data.SqlDbType.DateTime, 8, "Fecha"))
-        Me.SqlUpdateCommand1.Parameters.Add(New System.Data.SqlClient.SqlParameter("@Cajero", System.Data.SqlDbType.VarChar, 100, "Cajero"))
-        Me.SqlUpdateCommand1.Parameters.Add(New System.Data.SqlClient.SqlParameter("@Anulado", System.Data.SqlDbType.Bit, 1, "Anulado"))
-        Me.SqlUpdateCommand1.Parameters.Add(New System.Data.SqlClient.SqlParameter("@TipoCambioD", System.Data.SqlDbType.Float, 8, "TipoCambioD"))
-        Me.SqlUpdateCommand1.Parameters.Add(New System.Data.SqlClient.SqlParameter("@Observaciones", System.Data.SqlDbType.VarChar, 250, "Observaciones"))
-        Me.SqlUpdateCommand1.Parameters.Add(New System.Data.SqlClient.SqlParameter("@Cheques", System.Data.SqlDbType.Float, 8, "Cheques"))
-        Me.SqlUpdateCommand1.Parameters.Add(New System.Data.SqlClient.SqlParameter("@ChequesDol", System.Data.SqlDbType.Float, 8, "ChequesDol"))
-        Me.SqlUpdateCommand1.Parameters.Add(New System.Data.SqlClient.SqlParameter("@DepositoCol", System.Data.SqlDbType.Float, 8, "DepositoCol"))
-        Me.SqlUpdateCommand1.Parameters.Add(New System.Data.SqlClient.SqlParameter("@DepositoDol", System.Data.SqlDbType.Float, 8, "DepositoDol"))
-        Me.SqlUpdateCommand1.Parameters.Add(New System.Data.SqlClient.SqlParameter("@Original_Id", System.Data.SqlDbType.BigInt, 8, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "Id", System.Data.DataRowVersion.Original, Nothing))
-        Me.SqlUpdateCommand1.Parameters.Add(New System.Data.SqlClient.SqlParameter("@Original_Anulado", System.Data.SqlDbType.Bit, 1, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "Anulado", System.Data.DataRowVersion.Original, Nothing))
-        Me.SqlUpdateCommand1.Parameters.Add(New System.Data.SqlClient.SqlParameter("@Original_Cajero", System.Data.SqlDbType.VarChar, 100, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "Cajero", System.Data.DataRowVersion.Original, Nothing))
-        Me.SqlUpdateCommand1.Parameters.Add(New System.Data.SqlClient.SqlParameter("@Original_Cheques", System.Data.SqlDbType.Float, 8, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "Cheques", System.Data.DataRowVersion.Original, Nothing))
-        Me.SqlUpdateCommand1.Parameters.Add(New System.Data.SqlClient.SqlParameter("@Original_ChequesDol", System.Data.SqlDbType.Float, 8, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "ChequesDol", System.Data.DataRowVersion.Original, Nothing))
-        Me.SqlUpdateCommand1.Parameters.Add(New System.Data.SqlClient.SqlParameter("@Original_DepositoCol", System.Data.SqlDbType.Float, 8, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "DepositoCol", System.Data.DataRowVersion.Original, Nothing))
-        Me.SqlUpdateCommand1.Parameters.Add(New System.Data.SqlClient.SqlParameter("@Original_DepositoDol", System.Data.SqlDbType.Float, 8, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "DepositoDol", System.Data.DataRowVersion.Original, Nothing))
-        Me.SqlUpdateCommand1.Parameters.Add(New System.Data.SqlClient.SqlParameter("@Original_EfectivoColones", System.Data.SqlDbType.Float, 8, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "EfectivoColones", System.Data.DataRowVersion.Original, Nothing))
-        Me.SqlUpdateCommand1.Parameters.Add(New System.Data.SqlClient.SqlParameter("@Original_EfectivoDolares", System.Data.SqlDbType.Float, 8, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "EfectivoDolares", System.Data.DataRowVersion.Original, Nothing))
-        Me.SqlUpdateCommand1.Parameters.Add(New System.Data.SqlClient.SqlParameter("@Original_Fecha", System.Data.SqlDbType.DateTime, 8, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "Fecha", System.Data.DataRowVersion.Original, Nothing))
-        Me.SqlUpdateCommand1.Parameters.Add(New System.Data.SqlClient.SqlParameter("@Original_IdApertura", System.Data.SqlDbType.Int, 4, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "IdApertura", System.Data.DataRowVersion.Original, Nothing))
-        Me.SqlUpdateCommand1.Parameters.Add(New System.Data.SqlClient.SqlParameter("@Original_Observaciones", System.Data.SqlDbType.VarChar, 250, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "Observaciones", System.Data.DataRowVersion.Original, Nothing))
-        Me.SqlUpdateCommand1.Parameters.Add(New System.Data.SqlClient.SqlParameter("@Original_TarjetaColones", System.Data.SqlDbType.Float, 8, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "TarjetaColones", System.Data.DataRowVersion.Original, Nothing))
-        Me.SqlUpdateCommand1.Parameters.Add(New System.Data.SqlClient.SqlParameter("@Original_TarjetaDolares", System.Data.SqlDbType.Float, 8, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "TarjetaDolares", System.Data.DataRowVersion.Original, Nothing))
-        Me.SqlUpdateCommand1.Parameters.Add(New System.Data.SqlClient.SqlParameter("@Original_TipoCambioD", System.Data.SqlDbType.Float, 8, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "TipoCambioD", System.Data.DataRowVersion.Original, Nothing))
-        Me.SqlUpdateCommand1.Parameters.Add(New System.Data.SqlClient.SqlParameter("@Original_Total", System.Data.SqlDbType.Float, 8, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "Total", System.Data.DataRowVersion.Original, Nothing))
-        Me.SqlUpdateCommand1.Parameters.Add(New System.Data.SqlClient.SqlParameter("@Id", System.Data.SqlDbType.BigInt, 8, "Id"))
+        Me.SqlUpdateCommand1.Parameters.AddRange(New System.Data.SqlClient.SqlParameter() {New System.Data.SqlClient.SqlParameter("@EfectivoColones", System.Data.SqlDbType.Float, 8, "EfectivoColones"), New System.Data.SqlClient.SqlParameter("@EfectivoDolares", System.Data.SqlDbType.Float, 8, "EfectivoDolares"), New System.Data.SqlClient.SqlParameter("@TarjetaColones", System.Data.SqlDbType.Float, 8, "TarjetaColones"), New System.Data.SqlClient.SqlParameter("@TarjetaDolares", System.Data.SqlDbType.Float, 8, "TarjetaDolares"), New System.Data.SqlClient.SqlParameter("@Total", System.Data.SqlDbType.Float, 8, "Total"), New System.Data.SqlClient.SqlParameter("@IdApertura", System.Data.SqlDbType.Int, 4, "IdApertura"), New System.Data.SqlClient.SqlParameter("@Fecha", System.Data.SqlDbType.DateTime, 8, "Fecha"), New System.Data.SqlClient.SqlParameter("@Cajero", System.Data.SqlDbType.VarChar, 100, "Cajero"), New System.Data.SqlClient.SqlParameter("@Anulado", System.Data.SqlDbType.Bit, 1, "Anulado"), New System.Data.SqlClient.SqlParameter("@TipoCambioD", System.Data.SqlDbType.Float, 8, "TipoCambioD"), New System.Data.SqlClient.SqlParameter("@Observaciones", System.Data.SqlDbType.VarChar, 250, "Observaciones"), New System.Data.SqlClient.SqlParameter("@Cheques", System.Data.SqlDbType.Float, 8, "Cheques"), New System.Data.SqlClient.SqlParameter("@ChequesDol", System.Data.SqlDbType.Float, 8, "ChequesDol"), New System.Data.SqlClient.SqlParameter("@DepositoCol", System.Data.SqlDbType.Float, 8, "DepositoCol"), New System.Data.SqlClient.SqlParameter("@DepositoDol", System.Data.SqlDbType.Float, 8, "DepositoDol"), New System.Data.SqlClient.SqlParameter("@Original_Id", System.Data.SqlDbType.BigInt, 8, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "Id", System.Data.DataRowVersion.Original, Nothing), New System.Data.SqlClient.SqlParameter("@Original_Anulado", System.Data.SqlDbType.Bit, 1, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "Anulado", System.Data.DataRowVersion.Original, Nothing), New System.Data.SqlClient.SqlParameter("@Original_Cajero", System.Data.SqlDbType.VarChar, 100, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "Cajero", System.Data.DataRowVersion.Original, Nothing), New System.Data.SqlClient.SqlParameter("@Original_Cheques", System.Data.SqlDbType.Float, 8, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "Cheques", System.Data.DataRowVersion.Original, Nothing), New System.Data.SqlClient.SqlParameter("@Original_ChequesDol", System.Data.SqlDbType.Float, 8, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "ChequesDol", System.Data.DataRowVersion.Original, Nothing), New System.Data.SqlClient.SqlParameter("@Original_DepositoCol", System.Data.SqlDbType.Float, 8, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "DepositoCol", System.Data.DataRowVersion.Original, Nothing), New System.Data.SqlClient.SqlParameter("@Original_DepositoDol", System.Data.SqlDbType.Float, 8, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "DepositoDol", System.Data.DataRowVersion.Original, Nothing), New System.Data.SqlClient.SqlParameter("@Original_EfectivoColones", System.Data.SqlDbType.Float, 8, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "EfectivoColones", System.Data.DataRowVersion.Original, Nothing), New System.Data.SqlClient.SqlParameter("@Original_EfectivoDolares", System.Data.SqlDbType.Float, 8, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "EfectivoDolares", System.Data.DataRowVersion.Original, Nothing), New System.Data.SqlClient.SqlParameter("@Original_Fecha", System.Data.SqlDbType.DateTime, 8, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "Fecha", System.Data.DataRowVersion.Original, Nothing), New System.Data.SqlClient.SqlParameter("@Original_IdApertura", System.Data.SqlDbType.Int, 4, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "IdApertura", System.Data.DataRowVersion.Original, Nothing), New System.Data.SqlClient.SqlParameter("@Original_Observaciones", System.Data.SqlDbType.VarChar, 250, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "Observaciones", System.Data.DataRowVersion.Original, Nothing), New System.Data.SqlClient.SqlParameter("@Original_TarjetaColones", System.Data.SqlDbType.Float, 8, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "TarjetaColones", System.Data.DataRowVersion.Original, Nothing), New System.Data.SqlClient.SqlParameter("@Original_TarjetaDolares", System.Data.SqlDbType.Float, 8, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "TarjetaDolares", System.Data.DataRowVersion.Original, Nothing), New System.Data.SqlClient.SqlParameter("@Original_TipoCambioD", System.Data.SqlDbType.Float, 8, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "TipoCambioD", System.Data.DataRowVersion.Original, Nothing), New System.Data.SqlClient.SqlParameter("@Original_Total", System.Data.SqlDbType.Float, 8, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "Total", System.Data.DataRowVersion.Original, Nothing), New System.Data.SqlClient.SqlParameter("@Id", System.Data.SqlDbType.BigInt, 8, "Id")})
         '
         'AdapterApertura
         '
@@ -1083,7 +893,7 @@ Public Class ArqueoCaja
         'SqlSelectCommand7
         '
         Me.SqlSelectCommand7.CommandText = "SELECT NApertura, Fecha, Nombre, Estado, Observaciones, Anulado, Cedula FROM aper" & _
-        "turacaja"
+    "turacaja"
         Me.SqlSelectCommand7.Connection = Me.SqlConnection1
         '
         'GroupBox4
@@ -1092,43 +902,42 @@ Public Class ArqueoCaja
         Me.GroupBox4.Enabled = False
         Me.GroupBox4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox4.ForeColor = System.Drawing.Color.RoyalBlue
-        Me.GroupBox4.Location = New System.Drawing.Point(8, 416)
+        Me.GroupBox4.Location = New System.Drawing.Point(10, 480)
         Me.GroupBox4.Name = "GroupBox4"
-        Me.GroupBox4.Size = New System.Drawing.Size(328, 88)
+        Me.GroupBox4.Size = New System.Drawing.Size(393, 102)
         Me.GroupBox4.TabIndex = 149
         Me.GroupBox4.TabStop = False
         Me.GroupBox4.Text = "Observaciones"
         '
         'txtobservacion
         '
-        Me.txtobservacion.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.DataSetArqueo1, "ArqueoCajas.Observaciones"))
+        Me.txtobservacion.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.DataSetArqueo1, "ArqueoCajas.Observaciones", True))
         Me.txtobservacion.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtobservacion.ForeColor = System.Drawing.Color.RoyalBlue
-        Me.txtobservacion.Location = New System.Drawing.Point(8, 16)
+        Me.txtobservacion.Location = New System.Drawing.Point(10, 18)
         Me.txtobservacion.MaxLength = 250
         Me.txtobservacion.Multiline = True
         Me.txtobservacion.Name = "txtobservacion"
         Me.txtobservacion.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
-        Me.txtobservacion.Size = New System.Drawing.Size(312, 64)
+        Me.txtobservacion.Size = New System.Drawing.Size(374, 74)
         Me.txtobservacion.TabIndex = 0
-        Me.txtobservacion.Text = ""
         '
         'lblCaja
         '
         Me.lblCaja.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblCaja.ForeColor = System.Drawing.Color.RoyalBlue
-        Me.lblCaja.Location = New System.Drawing.Point(544, 0)
+        Me.lblCaja.Location = New System.Drawing.Point(653, 0)
         Me.lblCaja.Name = "lblCaja"
-        Me.lblCaja.Size = New System.Drawing.Size(104, 23)
+        Me.lblCaja.Size = New System.Drawing.Size(125, 27)
         Me.lblCaja.TabIndex = 150
         Me.lblCaja.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
         'ArqueoCaja
         '
-        Me.AutoScaleBaseSize = New System.Drawing.Size(5, 13)
+        Me.AutoScaleBaseSize = New System.Drawing.Size(6, 15)
         Me.BackColor = System.Drawing.SystemColors.Control
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
-        Me.ClientSize = New System.Drawing.Size(650, 560)
+        Me.ClientSize = New System.Drawing.Size(784, 640)
         Me.Controls.Add(Me.lblCaja)
         Me.Controls.Add(Me.GroupBox4)
         Me.Controls.Add(Me.Label36)
@@ -1138,7 +947,6 @@ Public Class ArqueoCaja
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
         Me.Name = "ArqueoCaja"
-        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Arqueo de Caja"
         Me.Controls.SetChildIndex(Me.DataNavigator, 0)
         Me.Controls.SetChildIndex(Me.GroupBox1, 0)
@@ -1170,7 +978,9 @@ Public Class ArqueoCaja
         CType(Me.TextEdit2.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TextEdit1.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox4.ResumeLayout(False)
+        Me.GroupBox4.PerformLayout()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
 
@@ -1185,6 +995,15 @@ Public Class ArqueoCaja
         ValoresDefecto()
         Inhabilitar()
         TextBox6.Focus()
+
+        If IsClinica() = True Then
+            txtDepositosCol.Properties.Enabled = False
+            txtDepositoDolar.Properties.Enabled = False
+        Else
+            txtDepositosCol.Properties.Enabled = True
+            txtDepositoDolar.Properties.Enabled = True
+        End If
+
     End Sub
 
     Function ValoresDefecto()
@@ -1268,6 +1087,7 @@ Public Class ArqueoCaja
                 Me.ToolBarNuevo.ImageIndex = 8
                 Me.ToolBarRegistrar.Enabled = True
                 Habilitar()
+                Me.CargarDepositos(Me.NApertura)
                 GridControl1.Focus()
 
             Catch eEndEdit As System.Data.NoNullAllowedException
@@ -1456,6 +1276,8 @@ Public Class ArqueoCaja
                             myCommandArqueoEfectivo.Transaction = Trans
                             myCommandArqueoEfectivo.ExecuteNonQuery()
                         End If
+
+                        Me.RegistrarArqueoDepositos(BindingContext(DataSetArqueo1, "ArqueoCajas").Current("IdApertura"), BindingContext(DataSetArqueo1, "ArqueoCajas").Current("Id"))
 
                         evaluarArqueoTarjetas()
                         Me.AdapterArqueodeCaja.Update(Me.DataSetArqueo1, "ArqueoCajas")
@@ -1769,6 +1591,41 @@ Public Class ArqueoCaja
         GroupBox4.Enabled = False
     End Function
 #End Region
+
+    Public Sub RegistrarArqueoDepositos(_IdApertura As Long, _IdArqueo As Long)
+        Dim db As New OBSoluciones.SQL.Sentencias(CadenaConexionSeePOS)
+        db.Ejecutar("Update arqueodeposito Set IdArqueo = " & _IdArqueo & " where IdApertura = " & _IdApertura, CommandType.Text)
+    End Sub
+
+
+    Private Sub CargarDepositos(_IdApertura As Long)
+        Dim dt As New DataTable
+        cFunciones.Llenar_Tabla_Generico("select sum(monto) as Monto from arqueodeposito where IdApertura = " & _IdApertura & " and Moneda in('COLON','COLONES')", dt, CadenaConexionSeePOS)
+
+        Try
+            If dt.Rows.Count > 0 Then
+                Me.txtDepositosCol.EditValue = CDec(dt.Rows(0).Item("Monto")).ToString("N2")
+            Else
+                Me.txtDepositosCol.EditValue = "0"
+            End If
+        Catch ex As Exception
+            Me.txtDepositosCol.EditValue = "0"
+        End Try
+
+        dt = New DataTable
+        cFunciones.Llenar_Tabla_Generico("select sum(monto) as Monto from arqueodeposito where IdApertura = " & _IdApertura & " and Moneda in('DOLAR','DOLARES')", dt, CadenaConexionSeePOS)
+        Try
+            If dt.Rows.Count > 0 Then
+                Me.txtDepositoDolar.EditValue = CDec(dt.Rows(0).Item("Monto")).ToString("N2")
+            Else
+                Me.txtDepositoDolar.EditValue = "0"
+            End If
+        Catch ex As Exception
+            Me.txtDepositoDolar.EditValue = "0"
+        End Try
+        
+
+    End Sub
 
 #Region "Validar Usuario"
     Private Sub TextBox6_KeyDown(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles TextBox6.KeyDown

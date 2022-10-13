@@ -125,7 +125,7 @@
         AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
         LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
         ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAADy
-        agAAAk1TRnQBSQFMAgEBCQEAAQ4BAAG0AQABIAEAASABAAT/ARkBEAj/AUIBTQE2BwABNgMAASgDAAGA
+        agAAAk1TRnQBSQFMAgEBCQEAAQ4BAAHEAQABIAEAASABAAT/ARkBEAj/AUIBTQE2BwABNgMAASgDAAGA
         AwABYAMAAQEBAAEYBgABkP8AtwACAQFdAgEBbQIBAXQCAQF0AgEBbQIBAV0CAQFK/wBjAAIBAXQCAAGG
         AgABiQIAAYUCAAGCAgABggIAAYACAAGAAgABgAIAAYICAAGCAgEBbQIBATj/AFQAAgEBeAICAZECAAGL
         AgABhQIAAYUCAAGFAgABhQIAAYYCAAGGAgABhQIAAYICAAGAAgABfwIAAYICAAGFAgEBdAIBATj/AE0A
@@ -585,7 +585,10 @@
 </value>
   </data>
   <metadata name="DataSetDevolucionVentas1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>121, 17</value>
+    <value>139, 17</value>
+  </metadata>
+  <metadata name="DataSetDevolucionVentas1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>139, 17</value>
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="GridControl1.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
@@ -1007,10 +1010,10 @@
 </value>
   </data>
   <metadata name="SqlConnection1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>320, 17</value>
+    <value>380, 17</value>
   </metadata>
   <metadata name="AdapterUsuario.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>457, 17</value>
+    <value>544, 17</value>
   </metadata>
   <metadata name="SqlDeleteCommand1.DesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
@@ -1100,10 +1103,10 @@
     <value>DELETE FROM Moneda WHERE (CodMoneda = @Original_CodMoneda) AND (MonedaNombre = @Original_MonedaNombre) AND (Simbolo = @Original_Simbolo) AND (ValorCompra = @Original_ValorCompra) AND (ValorVenta = @Original_ValorVenta)</value>
   </data>
   <metadata name="AdapterMoneda.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>594, 17</value>
+    <value>707, 17</value>
   </metadata>
   <metadata name="AdapterDevoluciones.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>735, 17</value>
+    <value>875, 17</value>
   </metadata>
   <metadata name="SqlDeleteCommand3.DesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
@@ -1154,7 +1157,7 @@
     <value>UPDATE devoluciones_ventas SET Id_Factura = @Id_Factura, SaldoAnt_Fact = @SaldoAnt_Fact, SubTotalGravado = @SubTotalGravado, SubTotalExcento = @SubTotalExcento, Descuento = @Descuento, Impuesto = @Impuesto, Monto = @Monto, Fecha = @Fecha, Contabilizado = @Contabilizado, Anulado = @Anulado, Cedula_Usuario = @Cedula_Usuario, Cod_Moneda = @Cod_Moneda, Transporte = @Transporte WHERE (Devolucion = @Devolucion); SELECT Devolucion, Id_Factura, SaldoAnt_Fact, SubTotalGravado, SubTotalExcento, Descuento, Impuesto, Monto, Fecha, Contabilizado, Anulado, Cedula_Usuario, Cod_Moneda, Transporte FROM devoluciones_ventas WHERE (Devolucion = @Devolucion)</value>
   </data>
   <metadata name="AdapterDetalleVentas.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>903, 17</value>
+    <value>1077, 17</value>
   </metadata>
   <metadata name="SqlDeleteCommand4.DesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
@@ -1205,7 +1208,7 @@
     <value>UPDATE Ventas_Detalle SET Id_Factura = @Id_Factura, Codigo = @Codigo, Descripcion = @Descripcion, Cantidad = @Cantidad, Precio_Costo = @Precio_Costo, Precio_Base = @Precio_Base, Precio_Flete = @Precio_Flete, Precio_Otros = @Precio_Otros, Precio_Unit = @Precio_Unit, Descuento = @Descuento, Monto_Descuento = @Monto_Descuento, Impuesto = @Impuesto, Monto_Impuesto = @Monto_Impuesto, SubtotalGravado = @SubtotalGravado, SubTotalExcento = @SubTotalExcento, SubTotal = @SubTotal, Devoluciones = @Devoluciones, Numero_Entrega = @Numero_Entrega, Max_Descuento = @Max_Descuento, CodArticulo = @CodArticulo, CantVet = @CantVet, CantBod = @CantBod, empaquetado = @empaquetado WHERE (id_venta_detalle = @Original_id_venta_detalle) AND (CantBod = @Original_CantBod) AND (CantVet = @Original_CantVet) AND (Cantidad = @Original_Cantidad) AND (CodArticulo = @Original_CodArticulo) AND (Codigo = @Original_Codigo) AND (Descripcion = @Original_Descripcion) AND (Descuento = @Original_Descuento) AND (Devoluciones = @Original_Devoluciones) AND (Id_Factura = @Original_Id_Factura) AND (Impuesto = @Original_Impuesto) AND (Max_Descuento = @Original_Max_Descuento) AND (Monto_Descuento = @Original_Monto_Descuento) AND (Monto_Impuesto = @Original_Monto_Impuesto) AND (Numero_Entrega = @Original_Numero_Entrega) AND (Precio_Base = @Original_Precio_Base) AND (Precio_Costo = @Original_Precio_Costo) AND (Precio_Flete = @Original_Precio_Flete) AND (Precio_Otros = @Original_Precio_Otros) AND (Precio_Unit = @Original_Precio_Unit) AND (SubTotal = @Original_SubTotal) AND (SubTotalExcento = @Original_SubTotalExcento) AND (SubtotalGravado = @Original_SubtotalGravado) AND (empaquetado = @Original_empaquetado OR @Original_empaquetado IS NULL AND empaquetado IS NULL); SELECT id_venta_detalle, Id_Factura, Codigo, Descripcion, Cantidad, Precio_Costo, Precio_Base, Precio_Flete, Precio_Otros, Precio_Unit, Descuento, Monto_Descuento, Impuesto, Monto_Impuesto, SubtotalGravado, SubTotalExcento, SubTotal, Devoluciones, Numero_Entrega, Max_Descuento, CodArticulo, CantVet, CantBod, empaquetado FROM Ventas_Detalle WHERE (id_venta_detalle = @id_venta_detalle)</value>
   </data>
   <metadata name="AdapterDetalleDevolucion.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 56</value>
+    <value>1282, 17</value>
   </metadata>
   <metadata name="SqlDeleteCommand5.DesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
@@ -1256,7 +1259,7 @@
     <value>UPDATE articulos_ventas_devueltos SET Devolucion = @Devolucion, Codigo = @Codigo, Descripcion = @Descripcion, Cantidad = @Cantidad, Precio_Costo = @Precio_Costo, Precio_Base = @Precio_Base, Precio_Flete = @Precio_Flete, Precio_Otros = @Precio_Otros, Precio_Unit = @Precio_Unit, Descuento = @Descuento, Monto_Descuento = @Monto_Descuento, Impuesto = @Impuesto, Monto_Impuesto = @Monto_Impuesto, SubtotalGravado = @SubtotalGravado, SubTotalExcento = @SubTotalExcento, SubTotal = @SubTotal, Id_Art_Venta = @Id_Art_Venta, CantVet = @CantVet, CantBod = @CantBod WHERE (Consecutivo = @Original_Consecutivo) AND (CantBod = @Original_CantBod) AND (CantVet = @Original_CantVet) AND (Cantidad = @Original_Cantidad) AND (Codigo = @Original_Codigo) AND (Descripcion = @Original_Descripcion) AND (Descuento = @Original_Descuento) AND (Devolucion = @Original_Devolucion) AND (Id_Art_Venta = @Original_Id_Art_Venta) AND (Impuesto = @Original_Impuesto) AND (Monto_Descuento = @Original_Monto_Descuento) AND (Monto_Impuesto = @Original_Monto_Impuesto) AND (Precio_Base = @Original_Precio_Base) AND (Precio_Costo = @Original_Precio_Costo) AND (Precio_Flete = @Original_Precio_Flete) AND (Precio_Otros = @Original_Precio_Otros) AND (Precio_Unit = @Original_Precio_Unit) AND (SubTotal = @Original_SubTotal) AND (SubTotalExcento = @Original_SubTotalExcento) AND (SubtotalGravado = @Original_SubtotalGravado); SELECT Consecutivo, Devolucion, Codigo, Descripcion, Cantidad, Precio_Costo, Precio_Base, Precio_Flete, Precio_Otros, Precio_Unit, Descuento, Monto_Descuento, Impuesto, Monto_Impuesto, SubtotalGravado, SubTotalExcento, SubTotal, Id_Art_Venta, CantVet, CantBod FROM articulos_ventas_devueltos WHERE (Consecutivo = @Consecutivo)</value>
   </data>
   <metadata name="AdapterVentas.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>212, 56</value>
+    <value>17, 60</value>
   </metadata>
   <metadata name="SqlDeleteCommand6.DesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
@@ -1349,7 +1352,7 @@
     <value>False</value>
   </metadata>
   <metadata name="AdapterKardex.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>344, 56</value>
+    <value>174, 60</value>
   </metadata>
   <metadata name="SqlSelectCommand8.DesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
@@ -1397,13 +1400,13 @@
     <value>DELETE FROM OpcionesDePago WHERE (id = @Original_id) AND (CodMoneda = @Original_CodMoneda OR @Original_CodMoneda IS NULL AND CodMoneda IS NULL) AND (Denominacion = @Original_Denominacion OR @Original_Denominacion IS NULL AND Denominacion IS NULL) AND (Documento = @Original_Documento OR @Original_Documento IS NULL AND Documento IS NULL) AND (Fecha = @Original_Fecha OR @Original_Fecha IS NULL AND Fecha IS NULL) AND (FormaPago = @Original_FormaPago OR @Original_FormaPago IS NULL AND FormaPago IS NULL) AND (MontoPago = @Original_MontoPago OR @Original_MontoPago IS NULL AND MontoPago IS NULL) AND (Nombre = @Original_Nombre OR @Original_Nombre IS NULL AND Nombre IS NULL) AND (Nombremoneda = @Original_Nombremoneda OR @Original_Nombremoneda IS NULL AND Nombremoneda IS NULL) AND (Numapertura = @Original_Numapertura OR @Original_Numapertura IS NULL AND Numapertura IS NULL) AND (TipoCambio = @Original_TipoCambio OR @Original_TipoCambio IS NULL AND TipoCambio IS NULL) AND (TipoDocumento = @Original_TipoDocumento OR @Original_TipoDocumento IS NULL AND TipoDocumento IS NULL) AND (Usuario = @Original_Usuario OR @Original_Usuario IS NULL AND Usuario IS NULL)</value>
   </data>
   <metadata name="AdapterOpcionesPago.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>476, 56</value>
+    <value>332, 60</value>
   </metadata>
   <metadata name="ToolTip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>650, 56</value>
+    <value>542, 60</value>
   </metadata>
   <metadata name="adapempaquetado.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>742, 56</value>
+    <value>649, 60</value>
   </metadata>
   <metadata name="SqlCommand1.DesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>

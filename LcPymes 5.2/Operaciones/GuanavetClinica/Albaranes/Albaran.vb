@@ -124,6 +124,58 @@ Public Class Albaran
         'End If
     End Function
 
+    Private Function AplicaCambioenCaja() As Boolean
+        Dim dt As New DataTable
+        Dim Modocaja As Boolean = False
+        cFunciones.Llenar_Tabla_Generico("Select ModoCaja from Configuraciones", dt, CadenaConexionSeePOS)
+        If dt.Rows.Count > 0 Then
+            Modocaja = dt.Rows(0).Item("ModoCaja")
+        End If
+        Return Modocaja
+    End Function
+
+    Private Function EstaLibre(_Ficha As String, _IdUsuario As String) As Boolean
+        Dim dt As New DataTable
+        Dim IdUsuario As String = _IdUsuario
+        Dim Ficha As String = _Ficha
+        cFunciones.Llenar_Tabla_Generico("select COUNT(*) FichaValida from fichasxusuario where idusuario = " & IdUsuario & " and " & Ficha & " between desde and hasta and " & Ficha & " not in(select Ficha from viewPreventasActivas)", dt, CadenaConexionSeePOS)
+        If dt.Rows(0).Item("FichaValida") = 0 Then
+            Return False
+        Else
+            Return True
+        End If
+    End Function
+
+    Private Function GetFicha(_IdUsuario As String) As String
+        Dim dt As New DataTable
+        Dim Fichas As New Collections.Generic.List(Of Integer)
+        Dim Desde As Integer = 0
+        Dim Hasta As Integer = 0
+        Dim Ficha As String = ""
+        cFunciones.Llenar_Tabla_Generico("select * from fichasxusuario where idusuario = " & _IdUsuario, dt, CadenaConexionSeePOS)
+        If dt.Rows.Count > 0 Then
+            Ficha = ""
+            Desde = dt.Rows(0).Item("Desde")
+            Hasta = dt.Rows(0).Item("Hasta")
+            For i As Integer = Desde To Hasta
+                Fichas.Add(i)
+            Next
+
+            For Each f As Integer In Fichas
+                If EstaLibre(f, _IdUsuario) = True Then
+                    Ficha = f
+                    Exit For
+                End If
+            Next
+
+            If Ficha = "" Then
+                MsgBox("No se encontraron fichas validas.", MsgBoxStyle.Exclamation, "Favor consultar con el encargado.")
+            End If
+
+        End If
+        Return Ficha
+    End Function
+
     Public Function GenerarFactura(_IdUsuario As String,
                               _TipoFactura As String,
                               _PlazoCredito As Integer,
@@ -139,6 +191,24 @@ Public Class Albaran
             Case Else : Tipo = "PVE"
         End Select
 
+        Dim TablaEncabezado As String = ""
+        Dim TablaDetalle As String = ""
+        Dim Ficha As String = ""
+        If Me.AplicaCambioenCaja = True Then
+            TablaEncabezado = "PreVentas"
+            TablaDetalle = "PreVentas_Detalle"
+            Ficha = GetFicha(_IdUsuario)
+        Else
+            TablaEncabezado = "Ventas"
+            TablaDetalle = "Ventas_Detalle"
+            Ficha = ""
+        End If
+
+        If Tipo = "CRE" And Me.AplicaCambioenCaja = True Then
+            TablaEncabezado = "Ventas"
+            TablaDetalle = "Ventas_Detalle"
+            Ficha = ""
+        End If
 
         If _Cod_Cliente = "" Then _Cod_Cliente = Me.Cod_Cliente
 
@@ -193,7 +263,14 @@ Public Class Albaran
                     db.SetParametro("@EnviadoMH", 0)
                     db.SetParametro("@TipoCedula", Me.TipoCedula)
                     db.SetParametro("@Cedula", Me.Cedula)
-                    IdFactura = db.EjecutarScalar("INSERT INTO [Ventas] ([Num_Factura], [Tipo], [Nombre_Cliente], [Orden], [Cedula_Usuario], [Pago_Comision], [SubTotal], [Descuento], [Imp_Venta], [Total], [Fecha], [Vence], [Cod_Encargado_Compra], [Contabilizado], [AsientoVenta], [ContabilizadoCVenta], [AsientoCosto], [Anulado], [PagoImpuesto], [FacturaCancelado], [Num_Apertura], [Entregado], [Cod_Moneda], [Moneda_Nombre], [Direccion], [Telefono], [SubTotalGravada], [SubTotalExento], [Transporte], [Tipo_Cambio], [Observaciones], [Exonerar], [Taller], [Mascotas], [Num_Caja], [cod_agente], [agente], [apartado], [Cod_Cliente], [EnviadoMH], [TipoCedula], [Cedula]) VALUES (@Num_Factura, @Tipo, @Nombre_Cliente, @Orden, @Cedula_Usuario, @Pago_Comision, @SubTotal, @Descuento, @Imp_Venta, @Total, @Fecha, @Vence, @Cod_Encargado_Compra, @Contabilizado, @AsientoVenta, @ContabilizadoCVenta, @AsientoCosto, @Anulado, @PagoImpuesto, @FacturaCancelado, @Num_Apertura, @Entregado, @Cod_Moneda, @Moneda_Nombre, @Direccion, @Telefono, @SubTotalGravada, @SubTotalExento, @Transporte, @Tipo_Cambio, @Observaciones, @Exonerar, @Taller, @Mascotas, @Num_Caja, @cod_agente, @agente, @apartado, @Cod_Cliente, @EnviadoMH, @TipoCedula, @Cedula); Select SCOPE_IDENTITY();", Data.CommandType.Text)
+                    IdFactura = db.EjecutarScalar("INSERT INTO [" & TablaEncabezado & "] ([Num_Factura], [Tipo], [Nombre_Cliente], [Orden], [Cedula_Usuario], [Pago_Comision], [SubTotal], [Descuento], [Imp_Venta], [Total], [Fecha], [Vence], [Cod_Encargado_Compra], [Contabilizado], [AsientoVenta], [ContabilizadoCVenta], [AsientoCosto], [Anulado], [PagoImpuesto], [FacturaCancelado], [Num_Apertura], [Entregado], [Cod_Moneda], [Moneda_Nombre], [Direccion], [Telefono], [SubTotalGravada], [SubTotalExento], [Transporte], [Tipo_Cambio], [Observaciones], [Exonerar], [Taller], [Mascotas], [Num_Caja], [cod_agente], [agente], [apartado], [Cod_Cliente], [EnviadoMH], [TipoCedula], [Cedula]) VALUES (@Num_Factura, @Tipo, @Nombre_Cliente, @Orden, @Cedula_Usuario, @Pago_Comision, @SubTotal, @Descuento, @Imp_Venta, @Total, @Fecha, @Vence, @Cod_Encargado_Compra, @Contabilizado, @AsientoVenta, @ContabilizadoCVenta, @AsientoCosto, @Anulado, @PagoImpuesto, @FacturaCancelado, @Num_Apertura, @Entregado, @Cod_Moneda, @Moneda_Nombre, @Direccion, @Telefono, @SubTotalGravada, @SubTotalExento, @Transporte, @Tipo_Cambio, @Observaciones, @Exonerar, @Taller, @Mascotas, @Num_Caja, @cod_agente, @agente, @apartado, @Cod_Cliente, @EnviadoMH, @TipoCedula, @Cedula); Select SCOPE_IDENTITY();", Data.CommandType.Text)
+
+                    If IsNumeric(Ficha) Then
+                        If CInt(Ficha) > 0 Then
+                            db.Ejecutar("Update PreVentas Set Ficha = " & Ficha & " where Id = " & IdFactura, CommandType.Text)
+                        End If
+                    End If
+
                     '**************************************************************************
                     'Crea los detalles de la factura
                     '**************************************************************************
@@ -233,7 +310,7 @@ Public Class Albaran
                         db.SetParametro("@FechaEmision", Date.Now)
                         db.SetParametro("@PorcentajeCompra", 0)
                         db.SetParametro("@IdSerie", 0)
-                        db.Ejecutar("INSERT INTO [Ventas_Detalle] ([Id_Factura], [Codigo], [Descripcion], [Cantidad], [Precio_Costo], [Precio_Base], [Precio_Flete], [Precio_Otros], [Precio_Unit], [Descuento], [Monto_Descuento], [Impuesto], [Monto_Impuesto], [SubtotalGravado], [SubTotalExcento], [SubTotal], [Devoluciones], [Numero_Entrega], [Max_Descuento], [Tipo_Cambio_ValorCompra], [Cod_MonedaVenta], [CodArticulo], [Lote], [CantVet], [CantBod], [empaquetado], [nota_pantalla], [regalias], [id_bodega], [CostoReal], [IdTipoExoneracion], [NumeroDocumento], [FechaEmision], [PorcentajeCompra], [IdSerie]) VALUES (@Id_Factura, @Codigo, @Descripcion, @Cantidad, @Precio_Costo, @Precio_Base, @Precio_Flete, @Precio_Otros, @Precio_Unit, @Descuento, @Monto_Descuento, @Impuesto, @Monto_Impuesto, @SubtotalGravado, @SubTotalExcento, @SubTotal, @Devoluciones, @Numero_Entrega, @Max_Descuento, @Tipo_Cambio_ValorCompra, @Cod_MonedaVenta, @CodArticulo, @Lote, @CantVet, @CantBod, @empaquetado, @nota_pantalla, @regalias, @id_bodega, @CostoReal, @IdTipoExoneracion, @NumeroDocumento, @FechaEmision, @PorcentajeCompra, @IdSerie);", Data.CommandType.Text)
+                        db.Ejecutar("INSERT INTO [" & TablaDetalle & "] ([Id_Factura], [Codigo], [Descripcion], [Cantidad], [Precio_Costo], [Precio_Base], [Precio_Flete], [Precio_Otros], [Precio_Unit], [Descuento], [Monto_Descuento], [Impuesto], [Monto_Impuesto], [SubtotalGravado], [SubTotalExcento], [SubTotal], [Devoluciones], [Numero_Entrega], [Max_Descuento], [Tipo_Cambio_ValorCompra], [Cod_MonedaVenta], [CodArticulo], [Lote], [CantVet], [CantBod], [empaquetado], [nota_pantalla], [regalias], [id_bodega], [CostoReal], [IdTipoExoneracion], [NumeroDocumento], [FechaEmision], [PorcentajeCompra], [IdSerie]) VALUES (@Id_Factura, @Codigo, @Descripcion, @Cantidad, @Precio_Costo, @Precio_Base, @Precio_Flete, @Precio_Otros, @Precio_Unit, @Descuento, @Monto_Descuento, @Impuesto, @Monto_Impuesto, @SubtotalGravado, @SubTotalExcento, @SubTotal, @Devoluciones, @Numero_Entrega, @Max_Descuento, @Tipo_Cambio_ValorCompra, @Cod_MonedaVenta, @CodArticulo, @Lote, @CantVet, @CantBod, @empaquetado, @nota_pantalla, @regalias, @id_bodega, @CostoReal, @IdTipoExoneracion, @NumeroDocumento, @FechaEmision, @PorcentajeCompra, @IdSerie);", Data.CommandType.Text)
                     Next
                     '**************************************************************************  
                     'Marca los albaranes como facturados
@@ -247,6 +324,7 @@ Public Class Albaran
                     Return IdFactura
                 Catch ex As Exception
                     db.Rollback()
+                    MsgBox(ex.Message)
                     Return 0
                 End Try
             End If

@@ -302,6 +302,10 @@
     <EmbeddedResource Include="Inventarios\Etiquetas\frmEtiquetarLiberia.resx">
       <DependentUpon>frmEtiquetarLiberia.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Inventarios\Etiquetas\rptEtiquetasGuanavetClinica.RPT">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptEtiquetasGuanavetClinica.vb</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="Inventarios\frmAplicarCambiosInventario.resx">
       <DependentUpon>frmAplicarCambiosInventario.vb</DependentUpon>
     </EmbeddedResource>
@@ -605,8 +609,15 @@
     <EmbeddedResource Include="Operaciones\FormasdePago\Arqueo\Depositos\frmEditarDepositos.resx">
       <DependentUpon>frmEditarDepositos.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Operaciones\FormasdePago\Arqueo\Depositos\frmReporteDepositos.resx">
+      <DependentUpon>frmReporteDepositos.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Operaciones\FormasdePago\Arqueo\Depositos\frmReporteDepositosdeCaja.resx">
       <DependentUpon>frmReporteDepositosdeCaja.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Operaciones\FormasdePago\Arqueo\Depositos\rptDespositos.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptDespositos.vb</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Operaciones\FormasdePago\Arqueo\frmArqueoCaja.resx">
       <DependentUpon>frmArqueoCaja.vb</DependentUpon>
@@ -700,11 +711,21 @@
     <EmbeddedResource Include="Operaciones\GuanavetClinica\Albaranes\frmEditarAlbaran.resx">
       <DependentUpon>frmEditarAlbaran.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Operaciones\GuanavetClinica\Albaranes\frmEstadoCuentaAlbaran.resx">
+      <DependentUpon>frmEstadoCuentaAlbaran.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Operaciones\GuanavetClinica\Albaranes\frmMovitoEliminacion.resx">
       <DependentUpon>frmMovitoEliminacion.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Operaciones\GuanavetClinica\Albaranes\frmPrepagos.resx">
       <DependentUpon>frmPrepagos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Operaciones\GuanavetClinica\Albaranes\frmUsuarioFactura.resx">
+      <DependentUpon>frmUsuarioFactura.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Operaciones\GuanavetClinica\Albaranes\rptCuentaAlbaran.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptCuentaAlbaran.vb</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Operaciones\Manejocxp\frmComprasPrepagadas.resx">
       <DependentUpon>frmComprasPrepagadas.vb</DependentUpon>
@@ -835,8 +856,17 @@
     <EmbeddedResource Include="Operaciones\Ventas\Devoluciones\FirmadoContado\frmSaldoFirmadoContado.resx">
       <DependentUpon>frmSaldoFirmadoContado.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Operaciones\Ventas\Devoluciones\frmDespositosporDevoluciones.resx">
+      <DependentUpon>frmDespositosporDevoluciones.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Operaciones\Ventas\Devoluciones\frmDevolucionesSencillas.resx">
       <DependentUpon>frmDevolucionesSencillas.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Operaciones\Ventas\Devoluciones\frmOpcionDevolucion.resx">
+      <DependentUpon>frmOpcionDevolucion.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Operaciones\Ventas\Devoluciones\frmRegistrarDepositoDevolucion.resx">
+      <DependentUpon>frmRegistrarDepositoDevolucion.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Operaciones\Ventas\Devoluciones\frmSeleccionarEncargadoDevolucion.resx">
       <DependentUpon>frmSeleccionarEncargadoDevolucion.vb</DependentUpon>
@@ -922,6 +952,9 @@
     <EmbeddedResource Include="Operaciones\Ventas\Facturacion\frmUsaGalon.resx">
       <DependentUpon>frmUsaGalon.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Operaciones\Ventas\Facturacion\frmValidaInscritoHacienda.resx">
+      <DependentUpon>frmValidaInscritoHacienda.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Operaciones\Ventas\Facturacion\frmValidarRegistroMAG.resx">
       <DependentUpon>frmValidarRegistroMAG.vb</DependentUpon>
     </EmbeddedResource>
@@ -950,7 +983,7 @@
     <EmbeddedResource Include="Principales\diagnostico\frmCambiarConexion.resx">
       <DependentUpon>frmCambiarConexion.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Principales\frmNuevaActualizacion.resx">
+    <EmbeddedResource Include="Principales\diagnostico\frmNuevaActualizacion.resx">
       <DependentUpon>frmNuevaActualizacion.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Principales\frmOpcionTomaFisicaGeneral.resx">
@@ -1275,6 +1308,17 @@
     </None>
     <None Include="Inventarios\Ajuste Inventario\DsAjusteInv.xss">
       <DependentUpon>DsAjusteInv.xsd</DependentUpon>
+    </None>
+    <None Include="Inventarios\Etiquetas\DataSetEtiquetasGuanavetClinica.xsc">
+      <DependentUpon>DataSetEtiquetasGuanavetClinica.xsd</DependentUpon>
+    </None>
+    <None Include="Inventarios\Etiquetas\DataSetEtiquetasGuanavetClinica.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetEtiquetasGuanavetClinica.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Inventarios\Etiquetas\DataSetEtiquetasGuanavetClinica.xss">
+      <DependentUpon>DataSetEtiquetasGuanavetClinica.xsd</DependentUpon>
     </None>
     <None Include="Inventarios\UnificarCodigos\UnificarCodigosPuntoVenta.xsc">
       <DependentUpon>UnificarCodigosPuntoVenta.xsd</DependentUpon>
@@ -3455,6 +3499,11 @@
     <Compile Include="Inventarios\DescargaOtro\frmAumentarOtro.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Inventarios\Etiquetas\DataSetEtiquetasGuanavetClinica.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetEtiquetasGuanavetClinica.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Inventarios\Etiquetas\frmEtiquetarLiberia.Designer.vb">
       <DependentUpon>frmEtiquetarLiberia.vb</DependentUpon>
     </Compile>
@@ -3466,6 +3515,12 @@
     </Compile>
     <Compile Include="Inventarios\Etiquetas\frmEtiquetarGuanavet.vb">
       <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventarios\Etiquetas\rptEtiquetasGuanavetClinica.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptEtiquetasGuanavetClinica.RPT</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Inventarios\frmAplicarCambiosInventario.Designer.vb">
       <DependentUpon>frmAplicarCambiosInventario.vb</DependentUpon>
@@ -4397,11 +4452,23 @@
     <Compile Include="Operaciones\FormasdePago\Arqueo\Depositos\frmEditarDepositos.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Operaciones\FormasdePago\Arqueo\Depositos\frmReporteDepositos.Designer.vb">
+      <DependentUpon>frmReporteDepositos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Operaciones\FormasdePago\Arqueo\Depositos\frmReporteDepositos.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Operaciones\FormasdePago\Arqueo\Depositos\frmReporteDepositosdeCaja.Designer.vb">
       <DependentUpon>frmReporteDepositosdeCaja.vb</DependentUpon>
     </Compile>
     <Compile Include="Operaciones\FormasdePago\Arqueo\Depositos\frmReporteDepositosdeCaja.vb">
       <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Operaciones\FormasdePago\Arqueo\Depositos\rptDespositos.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptDespositos.rpt</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Operaciones\FormasdePago\Arqueo\frmArqueoCaja.Designer.vb">
       <DependentUpon>frmArqueoCaja.vb</DependentUpon>
@@ -4584,6 +4651,12 @@
     <Compile Include="Operaciones\GuanavetClinica\Albaranes\frmEditarAlbaran.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Operaciones\GuanavetClinica\Albaranes\frmEstadoCuentaAlbaran.Designer.vb">
+      <DependentUpon>frmEstadoCuentaAlbaran.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Operaciones\GuanavetClinica\Albaranes\frmEstadoCuentaAlbaran.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Operaciones\GuanavetClinica\Albaranes\frmMovitoEliminacion.Designer.vb">
       <DependentUpon>frmMovitoEliminacion.vb</DependentUpon>
     </Compile>
@@ -4595,6 +4668,18 @@
     </Compile>
     <Compile Include="Operaciones\GuanavetClinica\Albaranes\frmPrepagos.vb">
       <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Operaciones\GuanavetClinica\Albaranes\frmUsuarioFactura.Designer.vb">
+      <DependentUpon>frmUsuarioFactura.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Operaciones\GuanavetClinica\Albaranes\frmUsuarioFactura.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Operaciones\GuanavetClinica\Albaranes\rptCuentaAlbaran.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptCuentaAlbaran.rpt</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Operaciones\Manejocxp\frmComprasPrepagadas.Designer.vb">
       <DependentUpon>frmComprasPrepagadas.vb</DependentUpon>
@@ -4843,10 +4928,28 @@
     <Compile Include="Operaciones\Ventas\Devoluciones\FirmadoContado\frmSaldoFirmadoContado.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Operaciones\Ventas\Devoluciones\frmDespositosporDevoluciones.Designer.vb">
+      <DependentUpon>frmDespositosporDevoluciones.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Operaciones\Ventas\Devoluciones\frmDespositosporDevoluciones.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Operaciones\Ventas\Devoluciones\frmDevolucionesSencillas.Designer.vb">
       <DependentUpon>frmDevolucionesSencillas.vb</DependentUpon>
     </Compile>
     <Compile Include="Operaciones\Ventas\Devoluciones\frmDevolucionesSencillas.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Operaciones\Ventas\Devoluciones\frmOpcionDevolucion.Designer.vb">
+      <DependentUpon>frmOpcionDevolucion.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Operaciones\Ventas\Devoluciones\frmOpcionDevolucion.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Operaciones\Ventas\Devoluciones\frmRegistrarDepositoDevolucion.Designer.vb">
+      <DependentUpon>frmRegistrarDepositoDevolucion.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Operaciones\Ventas\Devoluciones\frmRegistrarDepositoDevolucion.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Operaciones\Ventas\Devoluciones\frmSeleccionarEncargadoDevolucion.Designer.vb">
@@ -4966,6 +5069,12 @@
       <DependentUpon>frmUsaGalon.vb</DependentUpon>
     </Compile>
     <Compile Include="Operaciones\Ventas\Facturacion\frmUsaGalon.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Operaciones\Ventas\Facturacion\frmValidaInscritoHacienda.Designer.vb">
+      <DependentUpon>frmValidaInscritoHacienda.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Operaciones\Ventas\Facturacion\frmValidaInscritoHacienda.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Operaciones\Ventas\Facturacion\frmValidarRegistroMAG.Designer.vb">
@@ -5090,10 +5199,10 @@
     <Compile Include="Principales\diagnostico\frmCambiarConexion.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Principales\frmNuevaActualizacion.Designer.vb">
+    <Compile Include="Principales\diagnostico\frmNuevaActualizacion.Designer.vb">
       <DependentUpon>frmNuevaActualizacion.vb</DependentUpon>
     </Compile>
-    <Compile Include="Principales\frmNuevaActualizacion.vb">
+    <Compile Include="Principales\diagnostico\frmNuevaActualizacion.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Principales\frmOpcionTomaFisicaGeneral.Designer.vb">

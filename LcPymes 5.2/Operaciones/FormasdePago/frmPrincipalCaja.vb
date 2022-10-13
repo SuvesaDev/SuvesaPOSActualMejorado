@@ -248,6 +248,8 @@ Public Class ImpresionCaja
 
     Public Sub ImprimirReciboDinero(_IdRecibo As Double, Optional ByVal _Caja As Integer = 1)
         Try
+            If IsClinica() = True Then _Caja = 1
+
             If _Caja = 1 Then
                 Dim PrinterSettings1 As New Printing.PrinterSettings
                 Dim PageSettings1 As New Printing.PageSettings
@@ -274,6 +276,8 @@ Public Class ImpresionCaja
 
     Public Sub ImprimirApartado(_IdApartado As Double, Optional ByVal _Caja As Integer = 1)
         Try
+            If IsClinica() = True Then _Caja = 1
+
             If _Caja = 1 Then
                 Dim PrinterSettings1 As New Printing.PrinterSettings
                 Dim PageSettings1 As New Printing.PageSettings
@@ -300,6 +304,8 @@ Public Class ImpresionCaja
 
     Public Sub ImprimirAbonoApartado(_IdAbonoApartado As Double, Optional ByVal _Caja As Integer = 1)
         Try
+            If IsClinica() = True Then _Caja = 1
+
             If _Caja = 1 Then
                 Dim PrinterSettings1 As New Printing.PrinterSettings
                 Dim PageSettings1 As New Printing.PageSettings
@@ -326,6 +332,9 @@ Public Class ImpresionCaja
 
     Public Sub ImprimirFactura(ByVal Id_Factura As Double, ByVal PVE As Boolean, Optional ByVal Caja As Integer = 1) 'MOD SAJ 01092006
         Try
+
+            If IsClinica() = True Then Caja = 1
+
             If Caja = 1 Then
                 Dim PrinterSettings1 As New Printing.PrinterSettings
                 Dim PageSettings1 As New Printing.PageSettings
@@ -355,6 +364,8 @@ Public Class ImpresionCaja
 
     Public Sub ImprimirAdelanto(ByVal Id_Factura As Double, ByVal PVE As Boolean, ByVal Caja As Integer) 'MOD SAJ 01092006
         Try
+            If IsClinica() = True Then Caja = 1
+
             If Caja = 1 Then
                 Dim PrinterSettings1 As New Printing.PrinterSettings
                 Dim PageSettings1 As New Printing.PageSettings

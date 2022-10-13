@@ -176,6 +176,7 @@ Namespace api.Hacienda
         Public Property nombre As String
         Public Property tipoIdentificacion As String
         Public Property actividades As List(Of Actividade)
+        Public Property situacion As Situacion
     End Class
 
     '****************************************************************************************************************

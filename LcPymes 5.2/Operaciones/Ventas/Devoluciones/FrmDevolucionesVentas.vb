@@ -193,22 +193,22 @@ Public Class FrmDevolucionesVentas
     <System.Diagnostics.DebuggerStepThrough()> Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmDevolucionesVentas))
-        Dim ColumnFilterInfo1 As DevExpress.XtraGrid.Columns.ColumnFilterInfo = New DevExpress.XtraGrid.Columns.ColumnFilterInfo()
-        Dim ColumnFilterInfo2 As DevExpress.XtraGrid.Columns.ColumnFilterInfo = New DevExpress.XtraGrid.Columns.ColumnFilterInfo()
-        Dim ColumnFilterInfo3 As DevExpress.XtraGrid.Columns.ColumnFilterInfo = New DevExpress.XtraGrid.Columns.ColumnFilterInfo()
-        Dim ColumnFilterInfo4 As DevExpress.XtraGrid.Columns.ColumnFilterInfo = New DevExpress.XtraGrid.Columns.ColumnFilterInfo()
-        Dim ColumnFilterInfo5 As DevExpress.XtraGrid.Columns.ColumnFilterInfo = New DevExpress.XtraGrid.Columns.ColumnFilterInfo()
-        Dim ColumnFilterInfo6 As DevExpress.XtraGrid.Columns.ColumnFilterInfo = New DevExpress.XtraGrid.Columns.ColumnFilterInfo()
-        Dim ColumnFilterInfo7 As DevExpress.XtraGrid.Columns.ColumnFilterInfo = New DevExpress.XtraGrid.Columns.ColumnFilterInfo()
-        Dim ColumnFilterInfo8 As DevExpress.XtraGrid.Columns.ColumnFilterInfo = New DevExpress.XtraGrid.Columns.ColumnFilterInfo()
-        Dim ColumnFilterInfo9 As DevExpress.XtraGrid.Columns.ColumnFilterInfo = New DevExpress.XtraGrid.Columns.ColumnFilterInfo()
-        Dim ColumnFilterInfo10 As DevExpress.XtraGrid.Columns.ColumnFilterInfo = New DevExpress.XtraGrid.Columns.ColumnFilterInfo()
-        Dim ColumnFilterInfo11 As DevExpress.XtraGrid.Columns.ColumnFilterInfo = New DevExpress.XtraGrid.Columns.ColumnFilterInfo()
-        Dim ColumnFilterInfo12 As DevExpress.XtraGrid.Columns.ColumnFilterInfo = New DevExpress.XtraGrid.Columns.ColumnFilterInfo()
-        Dim ColumnFilterInfo13 As DevExpress.XtraGrid.Columns.ColumnFilterInfo = New DevExpress.XtraGrid.Columns.ColumnFilterInfo()
-        Dim ColumnFilterInfo14 As DevExpress.XtraGrid.Columns.ColumnFilterInfo = New DevExpress.XtraGrid.Columns.ColumnFilterInfo()
-        Dim ColumnFilterInfo15 As DevExpress.XtraGrid.Columns.ColumnFilterInfo = New DevExpress.XtraGrid.Columns.ColumnFilterInfo()
-        Dim ColumnFilterInfo16 As DevExpress.XtraGrid.Columns.ColumnFilterInfo = New DevExpress.XtraGrid.Columns.ColumnFilterInfo()
+        Dim ColumnFilterInfo33 As DevExpress.XtraGrid.Columns.ColumnFilterInfo = New DevExpress.XtraGrid.Columns.ColumnFilterInfo()
+        Dim ColumnFilterInfo34 As DevExpress.XtraGrid.Columns.ColumnFilterInfo = New DevExpress.XtraGrid.Columns.ColumnFilterInfo()
+        Dim ColumnFilterInfo35 As DevExpress.XtraGrid.Columns.ColumnFilterInfo = New DevExpress.XtraGrid.Columns.ColumnFilterInfo()
+        Dim ColumnFilterInfo36 As DevExpress.XtraGrid.Columns.ColumnFilterInfo = New DevExpress.XtraGrid.Columns.ColumnFilterInfo()
+        Dim ColumnFilterInfo37 As DevExpress.XtraGrid.Columns.ColumnFilterInfo = New DevExpress.XtraGrid.Columns.ColumnFilterInfo()
+        Dim ColumnFilterInfo38 As DevExpress.XtraGrid.Columns.ColumnFilterInfo = New DevExpress.XtraGrid.Columns.ColumnFilterInfo()
+        Dim ColumnFilterInfo39 As DevExpress.XtraGrid.Columns.ColumnFilterInfo = New DevExpress.XtraGrid.Columns.ColumnFilterInfo()
+        Dim ColumnFilterInfo40 As DevExpress.XtraGrid.Columns.ColumnFilterInfo = New DevExpress.XtraGrid.Columns.ColumnFilterInfo()
+        Dim ColumnFilterInfo41 As DevExpress.XtraGrid.Columns.ColumnFilterInfo = New DevExpress.XtraGrid.Columns.ColumnFilterInfo()
+        Dim ColumnFilterInfo42 As DevExpress.XtraGrid.Columns.ColumnFilterInfo = New DevExpress.XtraGrid.Columns.ColumnFilterInfo()
+        Dim ColumnFilterInfo43 As DevExpress.XtraGrid.Columns.ColumnFilterInfo = New DevExpress.XtraGrid.Columns.ColumnFilterInfo()
+        Dim ColumnFilterInfo44 As DevExpress.XtraGrid.Columns.ColumnFilterInfo = New DevExpress.XtraGrid.Columns.ColumnFilterInfo()
+        Dim ColumnFilterInfo45 As DevExpress.XtraGrid.Columns.ColumnFilterInfo = New DevExpress.XtraGrid.Columns.ColumnFilterInfo()
+        Dim ColumnFilterInfo46 As DevExpress.XtraGrid.Columns.ColumnFilterInfo = New DevExpress.XtraGrid.Columns.ColumnFilterInfo()
+        Dim ColumnFilterInfo47 As DevExpress.XtraGrid.Columns.ColumnFilterInfo = New DevExpress.XtraGrid.Columns.ColumnFilterInfo()
+        Dim ColumnFilterInfo48 As DevExpress.XtraGrid.Columns.ColumnFilterInfo = New DevExpress.XtraGrid.Columns.ColumnFilterInfo()
         Me.GroupBox1 = New System.Windows.Forms.Panel()
         Me.TextMonto = New System.Windows.Forms.TextBox()
         Me.txtNombre = New System.Windows.Forms.TextBox()
@@ -417,8 +417,8 @@ Public Class FrmDevolucionesVentas
         '
         'ToolBar1
         '
-        Me.ToolBar1.Location = New System.Drawing.Point(0, 441)
-        Me.ToolBar1.Size = New System.Drawing.Size(720, 56)
+        Me.ToolBar1.Location = New System.Drawing.Point(0, 517)
+        Me.ToolBar1.Size = New System.Drawing.Size(881, 57)
         Me.ToolBar1.TabIndex = 0
         '
         'DataNavigator
@@ -427,12 +427,12 @@ Public Class FrmDevolucionesVentas
         Me.DataNavigator.Buttons.CancelEdit.Visible = False
         Me.DataNavigator.Buttons.EndEdit.Visible = False
         Me.DataNavigator.Buttons.Remove.Visible = False
-        Me.DataNavigator.Location = New System.Drawing.Point(1353, 434)
-        Me.DataNavigator.Size = New System.Drawing.Size(158, 21)
+        Me.DataNavigator.Location = New System.Drawing.Point(1643, 511)
+        Me.DataNavigator.Size = New System.Drawing.Size(189, 24)
         '
         'TituloModulo
         '
-        Me.TituloModulo.Size = New System.Drawing.Size(720, 32)
+        Me.TituloModulo.Size = New System.Drawing.Size(881, 37)
         Me.TituloModulo.Text = "Devoluciones del Cliente"
         '
         'GroupBox1
@@ -449,9 +449,9 @@ Public Class FrmDevolucionesVentas
         Me.GroupBox1.Controls.Add(Me.Panel1)
         Me.GroupBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox1.ForeColor = System.Drawing.Color.RoyalBlue
-        Me.GroupBox1.Location = New System.Drawing.Point(3, 38)
+        Me.GroupBox1.Location = New System.Drawing.Point(4, 44)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(357, 114)
+        Me.GroupBox1.Size = New System.Drawing.Size(428, 131)
         Me.GroupBox1.TabIndex = 59
         Me.GroupBox1.Text = "Factura"
         '
@@ -459,9 +459,9 @@ Public Class FrmDevolucionesVentas
         '
         Me.TextMonto.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TextMonto.ForeColor = System.Drawing.Color.Blue
-        Me.TextMonto.Location = New System.Drawing.Point(232, 88)
+        Me.TextMonto.Location = New System.Drawing.Point(278, 102)
         Me.TextMonto.Name = "TextMonto"
-        Me.TextMonto.Size = New System.Drawing.Size(120, 20)
+        Me.TextMonto.Size = New System.Drawing.Size(144, 23)
         Me.TextMonto.TabIndex = 16
         Me.TextMonto.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
@@ -469,9 +469,9 @@ Public Class FrmDevolucionesVentas
         '
         Me.txtNombre.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.txtNombre.ForeColor = System.Drawing.Color.Blue
-        Me.txtNombre.Location = New System.Drawing.Point(8, 64)
+        Me.txtNombre.Location = New System.Drawing.Point(10, 74)
         Me.txtNombre.Name = "txtNombre"
-        Me.txtNombre.Size = New System.Drawing.Size(344, 20)
+        Me.txtNombre.Size = New System.Drawing.Size(412, 23)
         Me.txtNombre.TabIndex = 15
         '
         'DtVence
@@ -482,9 +482,9 @@ Public Class FrmDevolucionesVentas
         Me.DtVence.Enabled = False
         Me.DtVence.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.DtVence.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.DtVence.Location = New System.Drawing.Point(248, 24)
+        Me.DtVence.Location = New System.Drawing.Point(298, 28)
         Me.DtVence.Name = "DtVence"
-        Me.DtVence.Size = New System.Drawing.Size(96, 20)
+        Me.DtVence.Size = New System.Drawing.Size(115, 23)
         Me.DtVence.TabIndex = 14
         Me.DtVence.Value = New Date(2006, 3, 15, 10, 56, 38, 537)
         '
@@ -493,9 +493,9 @@ Public Class FrmDevolucionesVentas
         Me.ComboMoneda.DataBindings.Add(New System.Windows.Forms.Binding("SelectedValue", Me.DataSetDevolucionVentas1, "devoluciones_ventas.Cod_Moneda", True))
         Me.ComboMoneda.DataSource = Me.DataSetDevolucionVentas1
         Me.ComboMoneda.DisplayMember = "Moneda.MonedaNombre"
-        Me.ComboMoneda.Location = New System.Drawing.Point(64, 88)
+        Me.ComboMoneda.Location = New System.Drawing.Point(77, 102)
         Me.ComboMoneda.Name = "ComboMoneda"
-        Me.ComboMoneda.Size = New System.Drawing.Size(104, 21)
+        Me.ComboMoneda.Size = New System.Drawing.Size(125, 25)
         Me.ComboMoneda.TabIndex = 12
         Me.ComboMoneda.ValueMember = "Moneda.CodMoneda"
         '
@@ -512,9 +512,9 @@ Public Class FrmDevolucionesVentas
         Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold)
         Me.Label6.ForeColor = System.Drawing.Color.RoyalBlue
         Me.Label6.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.Label6.Location = New System.Drawing.Point(8, 88)
+        Me.Label6.Location = New System.Drawing.Point(10, 102)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(56, 20)
+        Me.Label6.Size = New System.Drawing.Size(67, 23)
         Me.Label6.TabIndex = 11
         Me.Label6.Text = "Moneda"
         Me.Label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -526,9 +526,9 @@ Public Class FrmDevolucionesVentas
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold)
         Me.Label4.ForeColor = System.Drawing.Color.RoyalBlue
         Me.Label4.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.Label4.Location = New System.Drawing.Point(248, 8)
+        Me.Label4.Location = New System.Drawing.Point(298, 9)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(96, 16)
+        Me.Label4.Size = New System.Drawing.Size(115, 19)
         Me.Label4.TabIndex = 9
         Me.Label4.Text = "Fecha"
         Me.Label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -540,9 +540,9 @@ Public Class FrmDevolucionesVentas
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold)
         Me.Label3.ForeColor = System.Drawing.Color.RoyalBlue
         Me.Label3.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.Label3.Location = New System.Drawing.Point(176, 88)
+        Me.Label3.Location = New System.Drawing.Point(211, 102)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(56, 20)
+        Me.Label3.Size = New System.Drawing.Size(67, 23)
         Me.Label3.TabIndex = 5
         Me.Label3.Text = "Monto"
         Me.Label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -554,9 +554,9 @@ Public Class FrmDevolucionesVentas
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold)
         Me.Label5.ForeColor = System.Drawing.Color.RoyalBlue
         Me.Label5.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.Label5.Location = New System.Drawing.Point(8, 48)
+        Me.Label5.Location = New System.Drawing.Point(10, 55)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(344, 16)
+        Me.Label5.Size = New System.Drawing.Size(412, 19)
         Me.Label5.TabIndex = 4
         Me.Label5.Text = "Nombre del Cliente"
         Me.Label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -571,19 +571,19 @@ Public Class FrmDevolucionesVentas
         Me.Panel1.Controls.Add(Me.ComboTipo)
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(248, 48)
+        Me.Panel1.Size = New System.Drawing.Size(298, 55)
         Me.Panel1.TabIndex = 223
         '
         'TextNumero
         '
         Me.TextNumero.FieldReference = Nothing
-        Me.TextNumero.Location = New System.Drawing.Point(136, 24)
+        Me.TextNumero.Location = New System.Drawing.Point(163, 28)
         Me.TextNumero.MaskEdit = ""
         Me.TextNumero.Name = "TextNumero"
         Me.TextNumero.RegExPattern = ValidText.ValidText.RegularExpressionModes.Custom
         Me.TextNumero.Required = False
         Me.TextNumero.ShowErrorIcon = False
-        Me.TextNumero.Size = New System.Drawing.Size(102, 20)
+        Me.TextNumero.Size = New System.Drawing.Size(123, 23)
         Me.TextNumero.TabIndex = 2
         Me.TextNumero.TabStop = False
         Me.TextNumero.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
@@ -597,9 +597,9 @@ Public Class FrmDevolucionesVentas
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold)
         Me.Label2.ForeColor = System.Drawing.Color.RoyalBlue
         Me.Label2.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.Label2.Location = New System.Drawing.Point(8, 8)
+        Me.Label2.Location = New System.Drawing.Point(10, 9)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(80, 16)
+        Me.Label2.Size = New System.Drawing.Size(96, 19)
         Me.Label2.TabIndex = 1
         Me.Label2.Text = "Tipo"
         Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -611,9 +611,9 @@ Public Class FrmDevolucionesVentas
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold)
         Me.Label1.ForeColor = System.Drawing.Color.RoyalBlue
         Me.Label1.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.Label1.Location = New System.Drawing.Point(136, 8)
+        Me.Label1.Location = New System.Drawing.Point(163, 9)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(102, 16)
+        Me.Label1.Size = New System.Drawing.Size(123, 19)
         Me.Label1.TabIndex = 2
         Me.Label1.Text = "Número"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -625,9 +625,9 @@ Public Class FrmDevolucionesVentas
         Me.Label16.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold)
         Me.Label16.ForeColor = System.Drawing.Color.RoyalBlue
         Me.Label16.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.Label16.Location = New System.Drawing.Point(96, 8)
+        Me.Label16.Location = New System.Drawing.Point(115, 9)
         Me.Label16.Name = "Label16"
-        Me.Label16.Size = New System.Drawing.Size(32, 16)
+        Me.Label16.Size = New System.Drawing.Size(39, 19)
         Me.Label16.TabIndex = 202
         Me.Label16.Text = "Caja"
         Me.Label16.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -635,13 +635,13 @@ Public Class FrmDevolucionesVentas
         'txtNum_Caja
         '
         Me.txtNum_Caja.FieldReference = Nothing
-        Me.txtNum_Caja.Location = New System.Drawing.Point(96, 24)
+        Me.txtNum_Caja.Location = New System.Drawing.Point(115, 28)
         Me.txtNum_Caja.MaskEdit = ""
         Me.txtNum_Caja.Name = "txtNum_Caja"
         Me.txtNum_Caja.RegExPattern = ValidText.ValidText.RegularExpressionModes.Custom
         Me.txtNum_Caja.Required = False
         Me.txtNum_Caja.ShowErrorIcon = False
-        Me.txtNum_Caja.Size = New System.Drawing.Size(32, 20)
+        Me.txtNum_Caja.Size = New System.Drawing.Size(39, 23)
         Me.txtNum_Caja.TabIndex = 1
         Me.txtNum_Caja.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.txtNum_Caja.ValidationMode = ValidText.ValidText.ValidationModes.Numbers
@@ -651,18 +651,18 @@ Public Class FrmDevolucionesVentas
         '
         Me.ComboTipo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.ComboTipo.Items.AddRange(New Object() {"CON", "CRE", "PVE", "TCO", "TCR", "MCO", "MCR", "APA"})
-        Me.ComboTipo.Location = New System.Drawing.Point(8, 24)
+        Me.ComboTipo.Location = New System.Drawing.Point(10, 28)
         Me.ComboTipo.Name = "ComboTipo"
-        Me.ComboTipo.Size = New System.Drawing.Size(80, 21)
+        Me.ComboTipo.Size = New System.Drawing.Size(96, 25)
         Me.ComboTipo.TabIndex = 0
         '
         'GroupBox2_1
         '
         Me.GroupBox2_1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox2_1.ForeColor = System.Drawing.Color.RoyalBlue
-        Me.GroupBox2_1.Location = New System.Drawing.Point(840, 240)
+        Me.GroupBox2_1.Location = New System.Drawing.Point(1008, 277)
         Me.GroupBox2_1.Name = "GroupBox2_1"
-        Me.GroupBox2_1.Size = New System.Drawing.Size(72, 152)
+        Me.GroupBox2_1.Size = New System.Drawing.Size(86, 175)
         Me.GroupBox2_1.TabIndex = 60
         Me.GroupBox2_1.TabStop = False
         Me.GroupBox2_1.Text = "Artículo"
@@ -671,7 +671,7 @@ Public Class FrmDevolucionesVentas
         '
         Me.TextEdit4.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.DataSetDevolucionVentas1, "Ventas_Detalle.Devoluciones", True))
         Me.TextEdit4.EditValue = ""
-        Me.TextEdit4.Location = New System.Drawing.Point(296, 195)
+        Me.TextEdit4.Location = New System.Drawing.Point(355, 225)
         Me.TextEdit4.Name = "TextEdit4"
         '
         '
@@ -681,14 +681,14 @@ Public Class FrmDevolucionesVentas
         Me.TextEdit4.Properties.Enabled = False
         Me.TextEdit4.Properties.ReadOnly = True
         Me.TextEdit4.Properties.Style = New DevExpress.Utils.ViewStyle("ControlStyle", Nothing, New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte)), "", DevExpress.Utils.StyleOptions.StyleEnabled, True, False, False, DevExpress.Utils.HorzAlignment.Far, DevExpress.Utils.VertAlignment.Center, Nothing, System.Drawing.Color.WhiteSmoke, System.Drawing.Color.RoyalBlue)
-        Me.TextEdit4.Size = New System.Drawing.Size(64, 17)
+        Me.TextEdit4.Size = New System.Drawing.Size(77, 21)
         Me.TextEdit4.TabIndex = 211
         '
         'TextEdit3
         '
         Me.TextEdit3.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.DataSetDevolucionVentas1, "Ventas_Detalle.Cantidad", True))
         Me.TextEdit3.EditValue = ""
-        Me.TextEdit3.Location = New System.Drawing.Point(296, 176)
+        Me.TextEdit3.Location = New System.Drawing.Point(355, 203)
         Me.TextEdit3.Name = "TextEdit3"
         '
         '
@@ -699,14 +699,14 @@ Public Class FrmDevolucionesVentas
         Me.TextEdit3.Properties.Enabled = False
         Me.TextEdit3.Properties.ReadOnly = True
         Me.TextEdit3.Properties.Style = New DevExpress.Utils.ViewStyle("ControlStyle", Nothing, New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte)), "", DevExpress.Utils.StyleOptions.StyleEnabled, True, False, False, DevExpress.Utils.HorzAlignment.Far, DevExpress.Utils.VertAlignment.Center, Nothing, System.Drawing.Color.WhiteSmoke, System.Drawing.Color.RoyalBlue)
-        Me.TextEdit3.Size = New System.Drawing.Size(64, 17)
+        Me.TextEdit3.Size = New System.Drawing.Size(77, 21)
         Me.TextEdit3.TabIndex = 210
         '
         'TextEdit2
         '
         Me.TextEdit2.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.DataSetDevolucionVentas1, "Ventas_Detalle.Descuento", True))
         Me.TextEdit2.EditValue = ""
-        Me.TextEdit2.Location = New System.Drawing.Point(104, 216)
+        Me.TextEdit2.Location = New System.Drawing.Point(125, 249)
         Me.TextEdit2.Name = "TextEdit2"
         '
         '
@@ -717,14 +717,14 @@ Public Class FrmDevolucionesVentas
         Me.TextEdit2.Properties.Enabled = False
         Me.TextEdit2.Properties.ReadOnly = True
         Me.TextEdit2.Properties.Style = New DevExpress.Utils.ViewStyle("ControlStyle", Nothing, New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte)), "", DevExpress.Utils.StyleOptions.StyleEnabled, True, False, False, DevExpress.Utils.HorzAlignment.Far, DevExpress.Utils.VertAlignment.Center, Nothing, System.Drawing.Color.WhiteSmoke, System.Drawing.Color.RoyalBlue)
-        Me.TextEdit2.Size = New System.Drawing.Size(88, 17)
+        Me.TextEdit2.Size = New System.Drawing.Size(105, 21)
         Me.TextEdit2.TabIndex = 209
         '
         'TextEdit1
         '
         Me.TextEdit1.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.DataSetDevolucionVentas1, "Ventas_Detalle.Precio_Unit", True))
         Me.TextEdit1.EditValue = ""
-        Me.TextEdit1.Location = New System.Drawing.Point(104, 195)
+        Me.TextEdit1.Location = New System.Drawing.Point(125, 225)
         Me.TextEdit1.Name = "TextEdit1"
         '
         '
@@ -735,14 +735,14 @@ Public Class FrmDevolucionesVentas
         Me.TextEdit1.Properties.Enabled = False
         Me.TextEdit1.Properties.ReadOnly = True
         Me.TextEdit1.Properties.Style = New DevExpress.Utils.ViewStyle("ControlStyle", Nothing, New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte)), "", DevExpress.Utils.StyleOptions.StyleEnabled, True, False, False, DevExpress.Utils.HorzAlignment.Far, DevExpress.Utils.VertAlignment.Center, Nothing, System.Drawing.Color.WhiteSmoke, System.Drawing.Color.RoyalBlue)
-        Me.TextEdit1.Size = New System.Drawing.Size(88, 17)
+        Me.TextEdit1.Size = New System.Drawing.Size(105, 21)
         Me.TextEdit1.TabIndex = 208
         '
         'SimpleButton1
         '
-        Me.SimpleButton1.Location = New System.Drawing.Point(768, 184)
+        Me.SimpleButton1.Location = New System.Drawing.Point(922, 212)
         Me.SimpleButton1.Name = "SimpleButton1"
-        Me.SimpleButton1.Size = New System.Drawing.Size(120, 24)
+        Me.SimpleButton1.Size = New System.Drawing.Size(144, 28)
         Me.SimpleButton1.TabIndex = 207
         Me.SimpleButton1.Text = "Devolución Total"
         Me.SimpleButton1.Visible = False
@@ -751,13 +751,13 @@ Public Class FrmDevolucionesVentas
         '
         Me.ValidText1.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.ValidText1.FieldReference = Nothing
-        Me.ValidText1.Location = New System.Drawing.Point(295, 216)
+        Me.ValidText1.Location = New System.Drawing.Point(354, 249)
         Me.ValidText1.MaskEdit = ""
         Me.ValidText1.Name = "ValidText1"
         Me.ValidText1.RegExPattern = ValidText.ValidText.RegularExpressionModes.Custom
         Me.ValidText1.Required = False
         Me.ValidText1.ShowErrorIcon = False
-        Me.ValidText1.Size = New System.Drawing.Size(64, 13)
+        Me.ValidText1.Size = New System.Drawing.Size(77, 15)
         Me.ValidText1.TabIndex = 206
         Me.ValidText1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         Me.ValidText1.ValidationMode = ValidText.ValidText.ValidationModes.Numbers
@@ -769,9 +769,9 @@ Public Class FrmDevolucionesVentas
         Me.TextDescripcion.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.DataSetDevolucionVentas1, "Ventas_Detalle.Descripcion", True))
         Me.TextDescripcion.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextDescripcion.ForeColor = System.Drawing.Color.RoyalBlue
-        Me.TextDescripcion.Location = New System.Drawing.Point(8, 160)
+        Me.TextDescripcion.Location = New System.Drawing.Point(10, 185)
         Me.TextDescripcion.Name = "TextDescripcion"
-        Me.TextDescripcion.Size = New System.Drawing.Size(352, 13)
+        Me.TextDescripcion.Size = New System.Drawing.Size(422, 15)
         Me.TextDescripcion.TabIndex = 201
         Me.TextDescripcion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
@@ -780,9 +780,9 @@ Public Class FrmDevolucionesVentas
         Me.TextCodigo.BackColor = System.Drawing.Color.WhiteSmoke
         Me.TextCodigo.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.DataSetDevolucionVentas1, "Ventas_Detalle.CodArticulo", True))
         Me.TextCodigo.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextCodigo.Location = New System.Drawing.Point(104, 176)
+        Me.TextCodigo.Location = New System.Drawing.Point(125, 203)
         Me.TextCodigo.Name = "TextCodigo"
-        Me.TextCodigo.Size = New System.Drawing.Size(88, 16)
+        Me.TextCodigo.Size = New System.Drawing.Size(105, 19)
         Me.TextCodigo.TabIndex = 200
         Me.TextCodigo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
@@ -792,9 +792,9 @@ Public Class FrmDevolucionesVentas
         Me.Label14.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold)
         Me.Label14.ForeColor = System.Drawing.Color.RoyalBlue
         Me.Label14.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.Label14.Location = New System.Drawing.Point(200, 216)
+        Me.Label14.Location = New System.Drawing.Point(240, 249)
         Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(88, 16)
+        Me.Label14.Size = New System.Drawing.Size(106, 19)
         Me.Label14.TabIndex = 199
         Me.Label14.Text = "Devolución"
         Me.Label14.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -805,9 +805,9 @@ Public Class FrmDevolucionesVentas
         Me.Label13.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold)
         Me.Label13.ForeColor = System.Drawing.Color.RoyalBlue
         Me.Label13.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.Label13.Location = New System.Drawing.Point(200, 194)
+        Me.Label13.Location = New System.Drawing.Point(240, 224)
         Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(88, 16)
+        Me.Label13.Size = New System.Drawing.Size(106, 18)
         Me.Label13.TabIndex = 197
         Me.Label13.Text = "Devoluciones"
         Me.Label13.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -818,9 +818,9 @@ Public Class FrmDevolucionesVentas
         Me.Label12.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold)
         Me.Label12.ForeColor = System.Drawing.Color.RoyalBlue
         Me.Label12.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.Label12.Location = New System.Drawing.Point(200, 176)
+        Me.Label12.Location = New System.Drawing.Point(240, 203)
         Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(88, 16)
+        Me.Label12.Size = New System.Drawing.Size(106, 19)
         Me.Label12.TabIndex = 195
         Me.Label12.Text = "Cant Original"
         Me.Label12.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -831,9 +831,9 @@ Public Class FrmDevolucionesVentas
         Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold)
         Me.Label10.ForeColor = System.Drawing.Color.RoyalBlue
         Me.Label10.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.Label10.Location = New System.Drawing.Point(8, 216)
+        Me.Label10.Location = New System.Drawing.Point(10, 249)
         Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(88, 16)
+        Me.Label10.Size = New System.Drawing.Size(105, 19)
         Me.Label10.TabIndex = 191
         Me.Label10.Text = "Descuento"
         Me.Label10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -844,9 +844,9 @@ Public Class FrmDevolucionesVentas
         Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold)
         Me.Label9.ForeColor = System.Drawing.Color.RoyalBlue
         Me.Label9.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.Label9.Location = New System.Drawing.Point(8, 194)
+        Me.Label9.Location = New System.Drawing.Point(10, 224)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(88, 16)
+        Me.Label9.Size = New System.Drawing.Size(105, 18)
         Me.Label9.TabIndex = 189
         Me.Label9.Text = "Precio Unitario"
         Me.Label9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -857,9 +857,9 @@ Public Class FrmDevolucionesVentas
         Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold)
         Me.Label7.ForeColor = System.Drawing.Color.RoyalBlue
         Me.Label7.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.Label7.Location = New System.Drawing.Point(8, 176)
+        Me.Label7.Location = New System.Drawing.Point(10, 203)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(88, 16)
+        Me.Label7.Size = New System.Drawing.Size(105, 19)
         Me.Label7.TabIndex = 185
         Me.Label7.Text = "Código"
         Me.Label7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -874,10 +874,10 @@ Public Class FrmDevolucionesVentas
         '
         '
         Me.GridControl1.EmbeddedNavigator.Name = ""
-        Me.GridControl1.Location = New System.Drawing.Point(368, 40)
+        Me.GridControl1.Location = New System.Drawing.Point(442, 46)
         Me.GridControl1.MainView = Me.BandedGridView1
         Me.GridControl1.Name = "GridControl1"
-        Me.GridControl1.Size = New System.Drawing.Size(360, 176)
+        Me.GridControl1.Size = New System.Drawing.Size(432, 203)
         Me.GridControl1.TabIndex = 184
         Me.GridControl1.TabStop = False
         '
@@ -907,7 +907,7 @@ Public Class FrmDevolucionesVentas
         '
         Me.Id_Articulo.Caption = "id_venta_detalle"
         Me.Id_Articulo.FieldName = "id_venta_detalle"
-        Me.Id_Articulo.FilterInfo = ColumnFilterInfo1
+        Me.Id_Articulo.FilterInfo = ColumnFilterInfo33
         Me.Id_Articulo.Name = "Id_Articulo"
         Me.Id_Articulo.Options = CType((((((((DevExpress.XtraGrid.Columns.ColumnOptions.CanFiltered Or DevExpress.XtraGrid.Columns.ColumnOptions.CanMoved) _
             Or DevExpress.XtraGrid.Columns.ColumnOptions.CanResized) _
@@ -925,7 +925,7 @@ Public Class FrmDevolucionesVentas
         '
         Me.codArticulo.Caption = "Código Artículo"
         Me.codArticulo.FieldName = "CodArticulo"
-        Me.codArticulo.FilterInfo = ColumnFilterInfo2
+        Me.codArticulo.FilterInfo = ColumnFilterInfo34
         Me.codArticulo.Name = "codArticulo"
         Me.codArticulo.Options = CType((((((DevExpress.XtraGrid.Columns.ColumnOptions.CanFiltered Or DevExpress.XtraGrid.Columns.ColumnOptions.CanMoved) _
             Or DevExpress.XtraGrid.Columns.ColumnOptions.CanGrouped) _
@@ -938,7 +938,7 @@ Public Class FrmDevolucionesVentas
         '
         Me.colCodigo.Caption = "Código"
         Me.colCodigo.FieldName = "Codigo"
-        Me.colCodigo.FilterInfo = ColumnFilterInfo3
+        Me.colCodigo.FilterInfo = ColumnFilterInfo35
         Me.colCodigo.Name = "colCodigo"
         Me.colCodigo.Options = CType((((((((DevExpress.XtraGrid.Columns.ColumnOptions.CanFiltered Or DevExpress.XtraGrid.Columns.ColumnOptions.CanMoved) _
             Or DevExpress.XtraGrid.Columns.ColumnOptions.CanResized) _
@@ -954,7 +954,7 @@ Public Class FrmDevolucionesVentas
         '
         Me.colDescripcion.Caption = "Descripción"
         Me.colDescripcion.FieldName = "Descripcion"
-        Me.colDescripcion.FilterInfo = ColumnFilterInfo4
+        Me.colDescripcion.FilterInfo = ColumnFilterInfo36
         Me.colDescripcion.Name = "colDescripcion"
         Me.colDescripcion.Options = CType((((((((DevExpress.XtraGrid.Columns.ColumnOptions.CanFiltered Or DevExpress.XtraGrid.Columns.ColumnOptions.CanMoved) _
             Or DevExpress.XtraGrid.Columns.ColumnOptions.CanResized) _
@@ -973,9 +973,9 @@ Public Class FrmDevolucionesVentas
         Me.CheckBox1.Enabled = False
         Me.CheckBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CheckBox1.ForeColor = System.Drawing.Color.Red
-        Me.CheckBox1.Location = New System.Drawing.Point(760, 208)
+        Me.CheckBox1.Location = New System.Drawing.Point(912, 240)
         Me.CheckBox1.Name = "CheckBox1"
-        Me.CheckBox1.Size = New System.Drawing.Size(72, 16)
+        Me.CheckBox1.Size = New System.Drawing.Size(86, 18)
         Me.CheckBox1.TabIndex = 211
         Me.CheckBox1.Text = "Anulado"
         Me.CheckBox1.UseVisualStyleBackColor = False
@@ -984,9 +984,9 @@ Public Class FrmDevolucionesVentas
         '
         Me.GroupBox3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox3.ForeColor = System.Drawing.Color.RoyalBlue
-        Me.GroupBox3.Location = New System.Drawing.Point(784, 128)
+        Me.GroupBox3.Location = New System.Drawing.Point(941, 148)
         Me.GroupBox3.Name = "GroupBox3"
-        Me.GroupBox3.Size = New System.Drawing.Size(128, 56)
+        Me.GroupBox3.Size = New System.Drawing.Size(153, 64)
         Me.GroupBox3.TabIndex = 61
         Me.GroupBox3.TabStop = False
         Me.GroupBox3.Text = "Detalle de Devolución"
@@ -996,9 +996,9 @@ Public Class FrmDevolucionesVentas
         Me.ANULADA.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.ANULADA.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ANULADA.ForeColor = System.Drawing.Color.Gainsboro
-        Me.ANULADA.Location = New System.Drawing.Point(19999, 8888)
+        Me.ANULADA.Location = New System.Drawing.Point(24018, 10265)
         Me.ANULADA.Name = "ANULADA"
-        Me.ANULADA.Size = New System.Drawing.Size(80, 12)
+        Me.ANULADA.Size = New System.Drawing.Size(96, 14)
         Me.ANULADA.TabIndex = 214
         Me.ANULADA.Text = "ANULADA"
         Me.ANULADA.TextAlign = System.Drawing.ContentAlignment.BottomCenter
@@ -1023,9 +1023,9 @@ Public Class FrmDevolucionesVentas
         Me.GroupBox4.Enabled = False
         Me.GroupBox4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox4.ForeColor = System.Drawing.Color.RoyalBlue
-        Me.GroupBox4.Location = New System.Drawing.Point(6, 390)
+        Me.GroupBox4.Location = New System.Drawing.Point(7, 450)
         Me.GroupBox4.Name = "GroupBox4"
-        Me.GroupBox4.Size = New System.Drawing.Size(722, 56)
+        Me.GroupBox4.Size = New System.Drawing.Size(867, 65)
         Me.GroupBox4.TabIndex = 162
         Me.GroupBox4.TabStop = False
         Me.GroupBox4.Text = "Totales"
@@ -1034,7 +1034,7 @@ Public Class FrmDevolucionesVentas
         '
         Me.TextEdit10.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.DataSetDevolucionVentas1, "devoluciones_ventas.Monto", True))
         Me.TextEdit10.EditValue = "0.00"
-        Me.TextEdit10.Location = New System.Drawing.Point(592, 33)
+        Me.TextEdit10.Location = New System.Drawing.Point(710, 38)
         Me.TextEdit10.Name = "TextEdit10"
         '
         '
@@ -1045,14 +1045,14 @@ Public Class FrmDevolucionesVentas
         Me.TextEdit10.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric
         Me.TextEdit10.Properties.ReadOnly = True
         Me.TextEdit10.Properties.Style = New DevExpress.Utils.ViewStyle("ControlStyle", Nothing, New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte)), "", DevExpress.Utils.StyleOptions.StyleEnabled, True, False, False, DevExpress.Utils.HorzAlignment.Far, DevExpress.Utils.VertAlignment.Center, Nothing, System.Drawing.SystemColors.Window, System.Drawing.Color.RoyalBlue)
-        Me.TextEdit10.Size = New System.Drawing.Size(128, 19)
+        Me.TextEdit10.Size = New System.Drawing.Size(154, 23)
         Me.TextEdit10.TabIndex = 45
         '
         'TextEdit9
         '
         Me.TextEdit9.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.DataSetDevolucionVentas1, "devoluciones_ventas.Impuesto", True))
         Me.TextEdit9.EditValue = "0.00"
-        Me.TextEdit9.Location = New System.Drawing.Point(464, 33)
+        Me.TextEdit9.Location = New System.Drawing.Point(557, 38)
         Me.TextEdit9.Name = "TextEdit9"
         '
         '
@@ -1063,14 +1063,14 @@ Public Class FrmDevolucionesVentas
         Me.TextEdit9.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric
         Me.TextEdit9.Properties.ReadOnly = True
         Me.TextEdit9.Properties.Style = New DevExpress.Utils.ViewStyle("ControlStyle", Nothing, New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte)), "", DevExpress.Utils.StyleOptions.StyleEnabled, True, False, False, DevExpress.Utils.HorzAlignment.Far, DevExpress.Utils.VertAlignment.Center, Nothing, System.Drawing.SystemColors.Window, System.Drawing.Color.RoyalBlue)
-        Me.TextEdit9.Size = New System.Drawing.Size(120, 19)
+        Me.TextEdit9.Size = New System.Drawing.Size(144, 23)
         Me.TextEdit9.TabIndex = 44
         '
         'TextEdit8
         '
         Me.TextEdit8.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.DataSetDevolucionVentas1, "devoluciones_ventas.Descuento", True))
         Me.TextEdit8.EditValue = "0.00"
-        Me.TextEdit8.Location = New System.Drawing.Point(344, 33)
+        Me.TextEdit8.Location = New System.Drawing.Point(413, 38)
         Me.TextEdit8.Name = "TextEdit8"
         '
         '
@@ -1081,14 +1081,14 @@ Public Class FrmDevolucionesVentas
         Me.TextEdit8.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric
         Me.TextEdit8.Properties.ReadOnly = True
         Me.TextEdit8.Properties.Style = New DevExpress.Utils.ViewStyle("ControlStyle", Nothing, New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte)), "", DevExpress.Utils.StyleOptions.StyleEnabled, True, False, False, DevExpress.Utils.HorzAlignment.Far, DevExpress.Utils.VertAlignment.Center, Nothing, System.Drawing.SystemColors.Window, System.Drawing.Color.RoyalBlue)
-        Me.TextEdit8.Size = New System.Drawing.Size(112, 19)
+        Me.TextEdit8.Size = New System.Drawing.Size(134, 23)
         Me.TextEdit8.TabIndex = 43
         '
         'TextEdit7
         '
         Me.TextEdit7.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.DataSetDevolucionVentas1, "devoluciones_ventas.Transporte", True))
         Me.TextEdit7.EditValue = "0.00"
-        Me.TextEdit7.Location = New System.Drawing.Point(224, 33)
+        Me.TextEdit7.Location = New System.Drawing.Point(269, 38)
         Me.TextEdit7.Name = "TextEdit7"
         '
         '
@@ -1099,14 +1099,14 @@ Public Class FrmDevolucionesVentas
         Me.TextEdit7.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric
         Me.TextEdit7.Properties.ReadOnly = True
         Me.TextEdit7.Properties.Style = New DevExpress.Utils.ViewStyle("ControlStyle", Nothing, New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte)), "", DevExpress.Utils.StyleOptions.StyleEnabled, True, False, False, DevExpress.Utils.HorzAlignment.Far, DevExpress.Utils.VertAlignment.Center, Nothing, System.Drawing.SystemColors.Window, System.Drawing.Color.RoyalBlue)
-        Me.TextEdit7.Size = New System.Drawing.Size(112, 19)
+        Me.TextEdit7.Size = New System.Drawing.Size(134, 23)
         Me.TextEdit7.TabIndex = 42
         '
         'TextEdit6
         '
         Me.TextEdit6.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.DataSetDevolucionVentas1, "devoluciones_ventas.SubTotalExcento", True))
         Me.TextEdit6.EditValue = "0.00"
-        Me.TextEdit6.Location = New System.Drawing.Point(120, 33)
+        Me.TextEdit6.Location = New System.Drawing.Point(144, 38)
         Me.TextEdit6.Name = "TextEdit6"
         '
         '
@@ -1118,14 +1118,14 @@ Public Class FrmDevolucionesVentas
         Me.TextEdit6.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric
         Me.TextEdit6.Properties.ReadOnly = True
         Me.TextEdit6.Properties.Style = New DevExpress.Utils.ViewStyle("ControlStyle", Nothing, New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte)), "", DevExpress.Utils.StyleOptions.StyleEnabled, True, False, False, DevExpress.Utils.HorzAlignment.Far, DevExpress.Utils.VertAlignment.Center, Nothing, System.Drawing.SystemColors.Window, System.Drawing.Color.RoyalBlue)
-        Me.TextEdit6.Size = New System.Drawing.Size(96, 19)
+        Me.TextEdit6.Size = New System.Drawing.Size(115, 23)
         Me.TextEdit6.TabIndex = 41
         '
         'TextEdit5
         '
         Me.TextEdit5.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.DataSetDevolucionVentas1, "devoluciones_ventas.SubTotalGravado", True))
         Me.TextEdit5.EditValue = "0.00"
-        Me.TextEdit5.Location = New System.Drawing.Point(7, 33)
+        Me.TextEdit5.Location = New System.Drawing.Point(8, 38)
         Me.TextEdit5.Name = "TextEdit5"
         '
         '
@@ -1137,7 +1137,7 @@ Public Class FrmDevolucionesVentas
         Me.TextEdit5.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric
         Me.TextEdit5.Properties.ReadOnly = True
         Me.TextEdit5.Properties.Style = New DevExpress.Utils.ViewStyle("ControlStyle", Nothing, New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte)), "", DevExpress.Utils.StyleOptions.StyleEnabled, True, False, False, DevExpress.Utils.HorzAlignment.Far, DevExpress.Utils.VertAlignment.Center, Nothing, System.Drawing.SystemColors.Window, System.Drawing.Color.RoyalBlue)
-        Me.TextEdit5.Size = New System.Drawing.Size(105, 19)
+        Me.TextEdit5.Size = New System.Drawing.Size(126, 23)
         Me.TextEdit5.TabIndex = 40
         '
         'Label45
@@ -1146,9 +1146,9 @@ Public Class FrmDevolucionesVentas
         Me.Label45.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label45.ForeColor = System.Drawing.Color.RoyalBlue
         Me.Label45.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.Label45.Location = New System.Drawing.Point(7, 17)
+        Me.Label45.Location = New System.Drawing.Point(8, 20)
         Me.Label45.Name = "Label45"
-        Me.Label45.Size = New System.Drawing.Size(105, 16)
+        Me.Label45.Size = New System.Drawing.Size(126, 18)
         Me.Label45.TabIndex = 39
         Me.Label45.Text = "Sub. Gravado"
         Me.Label45.TextAlign = System.Drawing.ContentAlignment.TopRight
@@ -1159,9 +1159,9 @@ Public Class FrmDevolucionesVentas
         Me.Label42.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label42.ForeColor = System.Drawing.Color.RoyalBlue
         Me.Label42.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.Label42.Location = New System.Drawing.Point(120, 17)
+        Me.Label42.Location = New System.Drawing.Point(144, 20)
         Me.Label42.Name = "Label42"
-        Me.Label42.Size = New System.Drawing.Size(96, 16)
+        Me.Label42.Size = New System.Drawing.Size(115, 18)
         Me.Label42.TabIndex = 38
         Me.Label42.Text = "Sub. Exento"
         Me.Label42.TextAlign = System.Drawing.ContentAlignment.TopRight
@@ -1171,9 +1171,9 @@ Public Class FrmDevolucionesVentas
         Me.Label27.BackColor = System.Drawing.Color.RoyalBlue
         Me.Label27.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label27.ForeColor = System.Drawing.Color.White
-        Me.Label27.Location = New System.Drawing.Point(8, 0)
+        Me.Label27.Location = New System.Drawing.Point(10, 0)
         Me.Label27.Name = "Label27"
-        Me.Label27.Size = New System.Drawing.Size(712, 16)
+        Me.Label27.Size = New System.Drawing.Size(854, 18)
         Me.Label27.TabIndex = 7
         Me.Label27.Text = "Totales de Devolución"
         Me.Label27.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -1184,9 +1184,9 @@ Public Class FrmDevolucionesVentas
         Me.Label25.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label25.ForeColor = System.Drawing.Color.RoyalBlue
         Me.Label25.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.Label25.Location = New System.Drawing.Point(592, 17)
+        Me.Label25.Location = New System.Drawing.Point(710, 20)
         Me.Label25.Name = "Label25"
-        Me.Label25.Size = New System.Drawing.Size(128, 16)
+        Me.Label25.Size = New System.Drawing.Size(154, 18)
         Me.Label25.TabIndex = 7
         Me.Label25.Text = "Total"
         Me.Label25.TextAlign = System.Drawing.ContentAlignment.TopRight
@@ -1197,9 +1197,9 @@ Public Class FrmDevolucionesVentas
         Me.Label24.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label24.ForeColor = System.Drawing.Color.RoyalBlue
         Me.Label24.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.Label24.Location = New System.Drawing.Point(464, 17)
+        Me.Label24.Location = New System.Drawing.Point(557, 20)
         Me.Label24.Name = "Label24"
-        Me.Label24.Size = New System.Drawing.Size(120, 16)
+        Me.Label24.Size = New System.Drawing.Size(144, 18)
         Me.Label24.TabIndex = 5
         Me.Label24.Text = "Imp. Venta"
         Me.Label24.TextAlign = System.Drawing.ContentAlignment.TopRight
@@ -1210,9 +1210,9 @@ Public Class FrmDevolucionesVentas
         Me.Label23.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label23.ForeColor = System.Drawing.Color.RoyalBlue
         Me.Label23.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.Label23.Location = New System.Drawing.Point(344, 17)
+        Me.Label23.Location = New System.Drawing.Point(413, 20)
         Me.Label23.Name = "Label23"
-        Me.Label23.Size = New System.Drawing.Size(112, 16)
+        Me.Label23.Size = New System.Drawing.Size(134, 18)
         Me.Label23.TabIndex = 2
         Me.Label23.Text = "Descuento"
         Me.Label23.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -1223,9 +1223,9 @@ Public Class FrmDevolucionesVentas
         Me.Label22.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label22.ForeColor = System.Drawing.Color.RoyalBlue
         Me.Label22.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.Label22.Location = New System.Drawing.Point(224, 17)
+        Me.Label22.Location = New System.Drawing.Point(269, 20)
         Me.Label22.Name = "Label22"
-        Me.Label22.Size = New System.Drawing.Size(112, 16)
+        Me.Label22.Size = New System.Drawing.Size(134, 18)
         Me.Label22.TabIndex = 0
         Me.Label22.Text = "Transporte"
         Me.Label22.TextAlign = System.Drawing.ContentAlignment.TopRight
@@ -1237,10 +1237,10 @@ Public Class FrmDevolucionesVentas
         Me.txtNombreUsuario.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtNombreUsuario.Enabled = False
         Me.txtNombreUsuario.ForeColor = System.Drawing.Color.Blue
-        Me.txtNombreUsuario.Location = New System.Drawing.Point(1000, 508)
+        Me.txtNombreUsuario.Location = New System.Drawing.Point(1219, 596)
         Me.txtNombreUsuario.Name = "txtNombreUsuario"
         Me.txtNombreUsuario.ReadOnly = True
-        Me.txtNombreUsuario.Size = New System.Drawing.Size(176, 13)
+        Me.txtNombreUsuario.Size = New System.Drawing.Size(211, 15)
         Me.txtNombreUsuario.TabIndex = 3
         '
         'txtUsuario
@@ -1248,10 +1248,10 @@ Public Class FrmDevolucionesVentas
         Me.txtUsuario.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.txtUsuario.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtUsuario.ForeColor = System.Drawing.Color.Blue
-        Me.txtUsuario.Location = New System.Drawing.Point(944, 508)
+        Me.txtUsuario.Location = New System.Drawing.Point(1152, 596)
         Me.txtUsuario.Name = "txtUsuario"
         Me.txtUsuario.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.txtUsuario.Size = New System.Drawing.Size(56, 13)
+        Me.txtUsuario.Size = New System.Drawing.Size(67, 15)
         Me.txtUsuario.TabIndex = 1
         '
         'Label36
@@ -1260,9 +1260,9 @@ Public Class FrmDevolucionesVentas
         Me.Label36.BackColor = System.Drawing.Color.RoyalBlue
         Me.Label36.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label36.ForeColor = System.Drawing.Color.White
-        Me.Label36.Location = New System.Drawing.Point(880, 508)
+        Me.Label36.Location = New System.Drawing.Point(1075, 596)
         Me.Label36.Name = "Label36"
-        Me.Label36.Size = New System.Drawing.Size(72, 13)
+        Me.Label36.Size = New System.Drawing.Size(86, 15)
         Me.Label36.TabIndex = 2
         Me.Label36.Text = "Usuario->"
         Me.Label36.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -1529,9 +1529,9 @@ Public Class FrmDevolucionesVentas
         '
         Me.txtNum_Devo.BackColor = System.Drawing.SystemColors.Window
         Me.txtNum_Devo.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.DataSetDevolucionVentas1, "devoluciones_ventas.Devolucion", True))
-        Me.txtNum_Devo.Location = New System.Drawing.Point(80, 18)
+        Me.txtNum_Devo.Location = New System.Drawing.Point(96, 21)
         Me.txtNum_Devo.Name = "txtNum_Devo"
-        Me.txtNum_Devo.Size = New System.Drawing.Size(56, 8)
+        Me.txtNum_Devo.Size = New System.Drawing.Size(67, 9)
         Me.txtNum_Devo.TabIndex = 208
         Me.txtNum_Devo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
@@ -1541,9 +1541,9 @@ Public Class FrmDevolucionesVentas
         Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold)
         Me.Label11.ForeColor = System.Drawing.Color.RoyalBlue
         Me.Label11.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.Label11.Location = New System.Drawing.Point(0, 16)
+        Me.Label11.Location = New System.Drawing.Point(0, 18)
         Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(63, 12)
+        Me.Label11.Size = New System.Drawing.Size(76, 14)
         Me.Label11.TabIndex = 209
         Me.Label11.Text = "Devol. N°"
         Me.Label11.TextAlign = System.Drawing.ContentAlignment.TopCenter
@@ -1555,9 +1555,9 @@ Public Class FrmDevolucionesVentas
         Me.CheckBox2.Enabled = False
         Me.CheckBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CheckBox2.ForeColor = System.Drawing.Color.Red
-        Me.CheckBox2.Location = New System.Drawing.Point(1179, 507)
+        Me.CheckBox2.Location = New System.Drawing.Point(1434, 595)
         Me.CheckBox2.Name = "CheckBox2"
-        Me.CheckBox2.Size = New System.Drawing.Size(81, 13)
+        Me.CheckBox2.Size = New System.Drawing.Size(97, 15)
         Me.CheckBox2.TabIndex = 212
         Me.CheckBox2.Text = "Cancelada"
         Me.CheckBox2.UseVisualStyleBackColor = False
@@ -1569,21 +1569,21 @@ Public Class FrmDevolucionesVentas
         Me.dtFecha.Enabled = False
         Me.dtFecha.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.dtFecha.ForeColor = System.Drawing.Color.Blue
-        Me.dtFecha.Location = New System.Drawing.Point(580, 507)
+        Me.dtFecha.Location = New System.Drawing.Point(715, 595)
         Me.dtFecha.Name = "dtFecha"
         Me.dtFecha.RightToLeft = System.Windows.Forms.RightToLeft.Yes
-        Me.dtFecha.Size = New System.Drawing.Size(96, 13)
+        Me.dtFecha.Size = New System.Drawing.Size(115, 15)
         Me.dtFecha.TabIndex = 213
         Me.dtFecha.Text = "00/00/0000"
         Me.dtFecha.TextAlign = System.Drawing.ContentAlignment.TopCenter
         '
         'StatusBar1
         '
-        Me.StatusBar1.Location = New System.Drawing.Point(0, 497)
+        Me.StatusBar1.Location = New System.Drawing.Point(0, 574)
         Me.StatusBar1.Name = "StatusBar1"
         Me.StatusBar1.Panels.AddRange(New System.Windows.Forms.StatusBarPanel() {Me.StatusBarPanel1, Me.StatusBarPanel2, Me.StatusBarPanel3, Me.StatusBarPanel4, Me.StatusBarPanel5})
         Me.StatusBar1.ShowPanels = True
-        Me.StatusBar1.Size = New System.Drawing.Size(720, 16)
+        Me.StatusBar1.Size = New System.Drawing.Size(881, 19)
         Me.StatusBar1.TabIndex = 214
         Me.StatusBar1.Text = "StatusBar1"
         '
@@ -1609,7 +1609,7 @@ Public Class FrmDevolucionesVentas
         '
         Me.StatusBarPanel5.AutoSize = System.Windows.Forms.StatusBarPanelAutoSize.Spring
         Me.StatusBarPanel5.Name = "StatusBarPanel5"
-        Me.StatusBarPanel5.Width = 103
+        Me.StatusBarPanel5.Width = 244
         '
         'GridControl2
         '
@@ -1619,10 +1619,10 @@ Public Class FrmDevolucionesVentas
         '
         '
         Me.GridControl2.EmbeddedNavigator.Name = ""
-        Me.GridControl2.Location = New System.Drawing.Point(8, 240)
+        Me.GridControl2.Location = New System.Drawing.Point(10, 277)
         Me.GridControl2.MainView = Me.GridView1
         Me.GridControl2.Name = "GridControl2"
-        Me.GridControl2.Size = New System.Drawing.Size(720, 144)
+        Me.GridControl2.Size = New System.Drawing.Size(864, 166)
         Me.GridControl2.TabIndex = 215
         '
         'GridView1
@@ -1639,14 +1639,14 @@ Public Class FrmDevolucionesVentas
         '
         'Codigo_Art
         '
-        Me.Codigo_Art.FilterInfo = ColumnFilterInfo5
+        Me.Codigo_Art.FilterInfo = ColumnFilterInfo37
         Me.Codigo_Art.Name = "Codigo_Art"
         '
         'colCodigo1
         '
         Me.colCodigo1.Caption = "Codigo"
         Me.colCodigo1.FieldName = "Codigo"
-        Me.colCodigo1.FilterInfo = ColumnFilterInfo6
+        Me.colCodigo1.FilterInfo = ColumnFilterInfo38
         Me.colCodigo1.Name = "colCodigo1"
         Me.colCodigo1.Options = CType(((((((((DevExpress.XtraGrid.Columns.ColumnOptions.CanFiltered Or DevExpress.XtraGrid.Columns.ColumnOptions.CanMoved) _
             Or DevExpress.XtraGrid.Columns.ColumnOptions.CanGrouped) _
@@ -1663,7 +1663,7 @@ Public Class FrmDevolucionesVentas
         '
         Me.colDescripcion1.Caption = "Descripcion"
         Me.colDescripcion1.FieldName = "Descripcion"
-        Me.colDescripcion1.FilterInfo = ColumnFilterInfo7
+        Me.colDescripcion1.FilterInfo = ColumnFilterInfo39
         Me.colDescripcion1.Name = "colDescripcion1"
         Me.colDescripcion1.Options = CType(((((((((DevExpress.XtraGrid.Columns.ColumnOptions.CanFiltered Or DevExpress.XtraGrid.Columns.ColumnOptions.CanMoved) _
             Or DevExpress.XtraGrid.Columns.ColumnOptions.CanGrouped) _
@@ -1682,7 +1682,7 @@ Public Class FrmDevolucionesVentas
         Me.colCantidad.DisplayFormat.FormatString = "#,#0.00"
         Me.colCantidad.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric
         Me.colCantidad.FieldName = "Cantidad"
-        Me.colCantidad.FilterInfo = ColumnFilterInfo8
+        Me.colCantidad.FilterInfo = ColumnFilterInfo40
         Me.colCantidad.Name = "colCantidad"
         Me.colCantidad.Options = CType(((((((((DevExpress.XtraGrid.Columns.ColumnOptions.CanFiltered Or DevExpress.XtraGrid.Columns.ColumnOptions.CanMoved) _
             Or DevExpress.XtraGrid.Columns.ColumnOptions.CanGrouped) _
@@ -1701,7 +1701,7 @@ Public Class FrmDevolucionesVentas
         Me.colPrecio_Flete.DisplayFormat.FormatString = "#,#0.00"
         Me.colPrecio_Flete.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric
         Me.colPrecio_Flete.FieldName = "Precio_Flete"
-        Me.colPrecio_Flete.FilterInfo = ColumnFilterInfo9
+        Me.colPrecio_Flete.FilterInfo = ColumnFilterInfo41
         Me.colPrecio_Flete.Name = "colPrecio_Flete"
         Me.colPrecio_Flete.Options = CType(((((((((DevExpress.XtraGrid.Columns.ColumnOptions.CanFiltered Or DevExpress.XtraGrid.Columns.ColumnOptions.CanMoved) _
             Or DevExpress.XtraGrid.Columns.ColumnOptions.CanGrouped) _
@@ -1720,7 +1720,7 @@ Public Class FrmDevolucionesVentas
         Me.colPrecio_Otros.DisplayFormat.FormatString = "#,#0.00"
         Me.colPrecio_Otros.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric
         Me.colPrecio_Otros.FieldName = "Precio_Otros"
-        Me.colPrecio_Otros.FilterInfo = ColumnFilterInfo10
+        Me.colPrecio_Otros.FilterInfo = ColumnFilterInfo42
         Me.colPrecio_Otros.Name = "colPrecio_Otros"
         Me.colPrecio_Otros.Options = CType(((((((((DevExpress.XtraGrid.Columns.ColumnOptions.CanFiltered Or DevExpress.XtraGrid.Columns.ColumnOptions.CanMoved) _
             Or DevExpress.XtraGrid.Columns.ColumnOptions.CanGrouped) _
@@ -1739,7 +1739,7 @@ Public Class FrmDevolucionesVentas
         Me.colPrecio_Unit.DisplayFormat.FormatString = "#,#0.00"
         Me.colPrecio_Unit.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric
         Me.colPrecio_Unit.FieldName = "Precio_Unit"
-        Me.colPrecio_Unit.FilterInfo = ColumnFilterInfo11
+        Me.colPrecio_Unit.FilterInfo = ColumnFilterInfo43
         Me.colPrecio_Unit.Name = "colPrecio_Unit"
         Me.colPrecio_Unit.Options = CType(((((((((DevExpress.XtraGrid.Columns.ColumnOptions.CanFiltered Or DevExpress.XtraGrid.Columns.ColumnOptions.CanMoved) _
             Or DevExpress.XtraGrid.Columns.ColumnOptions.CanGrouped) _
@@ -1758,7 +1758,7 @@ Public Class FrmDevolucionesVentas
         Me.colMonto_Descuento.DisplayFormat.FormatString = "#,#0.00"
         Me.colMonto_Descuento.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric
         Me.colMonto_Descuento.FieldName = "Monto_Descuento"
-        Me.colMonto_Descuento.FilterInfo = ColumnFilterInfo12
+        Me.colMonto_Descuento.FilterInfo = ColumnFilterInfo44
         Me.colMonto_Descuento.Name = "colMonto_Descuento"
         Me.colMonto_Descuento.Options = CType(((((((((DevExpress.XtraGrid.Columns.ColumnOptions.CanFiltered Or DevExpress.XtraGrid.Columns.ColumnOptions.CanMoved) _
             Or DevExpress.XtraGrid.Columns.ColumnOptions.CanGrouped) _
@@ -1777,7 +1777,7 @@ Public Class FrmDevolucionesVentas
         Me.colMonto_Impuesto.DisplayFormat.FormatString = "#,#0.00"
         Me.colMonto_Impuesto.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric
         Me.colMonto_Impuesto.FieldName = "Monto_Impuesto"
-        Me.colMonto_Impuesto.FilterInfo = ColumnFilterInfo13
+        Me.colMonto_Impuesto.FilterInfo = ColumnFilterInfo45
         Me.colMonto_Impuesto.Name = "colMonto_Impuesto"
         Me.colMonto_Impuesto.Options = CType(((((((((DevExpress.XtraGrid.Columns.ColumnOptions.CanFiltered Or DevExpress.XtraGrid.Columns.ColumnOptions.CanMoved) _
             Or DevExpress.XtraGrid.Columns.ColumnOptions.CanGrouped) _
@@ -1796,7 +1796,7 @@ Public Class FrmDevolucionesVentas
         Me.colSubtotalGravado.DisplayFormat.FormatString = "#,#0.00"
         Me.colSubtotalGravado.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric
         Me.colSubtotalGravado.FieldName = "SubtotalGravado"
-        Me.colSubtotalGravado.FilterInfo = ColumnFilterInfo14
+        Me.colSubtotalGravado.FilterInfo = ColumnFilterInfo46
         Me.colSubtotalGravado.Name = "colSubtotalGravado"
         Me.colSubtotalGravado.Options = CType(((((((((DevExpress.XtraGrid.Columns.ColumnOptions.CanFiltered Or DevExpress.XtraGrid.Columns.ColumnOptions.CanMoved) _
             Or DevExpress.XtraGrid.Columns.ColumnOptions.CanGrouped) _
@@ -1815,7 +1815,7 @@ Public Class FrmDevolucionesVentas
         Me.colSubTotalExcento.DisplayFormat.FormatString = "#,#0.00"
         Me.colSubTotalExcento.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric
         Me.colSubTotalExcento.FieldName = "SubTotalExcento"
-        Me.colSubTotalExcento.FilterInfo = ColumnFilterInfo15
+        Me.colSubTotalExcento.FilterInfo = ColumnFilterInfo47
         Me.colSubTotalExcento.Name = "colSubTotalExcento"
         Me.colSubTotalExcento.Options = CType(((((((((DevExpress.XtraGrid.Columns.ColumnOptions.CanFiltered Or DevExpress.XtraGrid.Columns.ColumnOptions.CanMoved) _
             Or DevExpress.XtraGrid.Columns.ColumnOptions.CanGrouped) _
@@ -1830,14 +1830,14 @@ Public Class FrmDevolucionesVentas
         '
         'colSubTotal
         '
-        Me.colSubTotal.FilterInfo = ColumnFilterInfo16
+        Me.colSubTotal.FilterInfo = ColumnFilterInfo48
         Me.colSubTotal.Name = "colSubTotal"
         '
         'SimpleButton2
         '
-        Me.SimpleButton2.Location = New System.Drawing.Point(230, 407)
+        Me.SimpleButton2.Location = New System.Drawing.Point(276, 470)
         Me.SimpleButton2.Name = "SimpleButton2"
-        Me.SimpleButton2.Size = New System.Drawing.Size(26, 16)
+        Me.SimpleButton2.Size = New System.Drawing.Size(31, 18)
         Me.SimpleButton2.Style = New DevExpress.Utils.ViewStyle("ControlStyle", Nothing, New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold), "", DevExpress.Utils.StyleOptions.StyleEnabled, True, False, False, DevExpress.Utils.HorzAlignment.Center, DevExpress.Utils.VertAlignment.Center, Nothing, System.Drawing.SystemColors.Control, System.Drawing.Color.RoyalBlue)
         Me.SimpleButton2.TabIndex = 216
         Me.SimpleButton2.Text = "..."
@@ -1848,9 +1848,9 @@ Public Class FrmDevolucionesVentas
         Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold)
         Me.Label8.ForeColor = System.Drawing.Color.RoyalBlue
         Me.Label8.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.Label8.Location = New System.Drawing.Point(368, 216)
+        Me.Label8.Location = New System.Drawing.Point(442, 249)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(32, 16)
+        Me.Label8.Size = New System.Drawing.Size(38, 19)
         Me.Label8.TabIndex = 217
         Me.Label8.Text = "Vete:"
         Me.Label8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -1859,7 +1859,7 @@ Public Class FrmDevolucionesVentas
         '
         Me.txtCantVet.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.DataSetDevolucionVentas1, "Ventas_Detalle.CantVet", True))
         Me.txtCantVet.EditValue = ""
-        Me.txtCantVet.Location = New System.Drawing.Point(408, 216)
+        Me.txtCantVet.Location = New System.Drawing.Point(490, 249)
         Me.txtCantVet.Name = "txtCantVet"
         '
         '
@@ -1868,7 +1868,7 @@ Public Class FrmDevolucionesVentas
         Me.txtCantVet.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric
         Me.txtCantVet.Properties.ReadOnly = True
         Me.txtCantVet.Properties.Style = New DevExpress.Utils.ViewStyle("ControlStyle", Nothing, New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte)), "", DevExpress.Utils.StyleOptions.StyleEnabled, True, False, False, DevExpress.Utils.HorzAlignment.Far, DevExpress.Utils.VertAlignment.Center, Nothing, System.Drawing.Color.WhiteSmoke, System.Drawing.Color.RoyalBlue)
-        Me.txtCantVet.Size = New System.Drawing.Size(40, 17)
+        Me.txtCantVet.Size = New System.Drawing.Size(48, 21)
         Me.txtCantVet.TabIndex = 218
         '
         'Label15
@@ -1877,9 +1877,9 @@ Public Class FrmDevolucionesVentas
         Me.Label15.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold)
         Me.Label15.ForeColor = System.Drawing.Color.RoyalBlue
         Me.Label15.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.Label15.Location = New System.Drawing.Point(512, 216)
+        Me.Label15.Location = New System.Drawing.Point(614, 249)
         Me.Label15.Name = "Label15"
-        Me.Label15.Size = New System.Drawing.Size(64, 16)
+        Me.Label15.Size = New System.Drawing.Size(77, 19)
         Me.Label15.TabIndex = 219
         Me.Label15.Text = "Cant Bod."
         Me.Label15.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -1888,7 +1888,7 @@ Public Class FrmDevolucionesVentas
         '
         Me.txtCantBod.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.DataSetDevolucionVentas1, "Ventas_Detalle.CantBod", True))
         Me.txtCantBod.EditValue = ""
-        Me.txtCantBod.Location = New System.Drawing.Point(583, 216)
+        Me.txtCantBod.Location = New System.Drawing.Point(700, 249)
         Me.txtCantBod.Name = "txtCantBod"
         '
         '
@@ -1897,14 +1897,14 @@ Public Class FrmDevolucionesVentas
         Me.txtCantBod.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric
         Me.txtCantBod.Properties.ReadOnly = True
         Me.txtCantBod.Properties.Style = New DevExpress.Utils.ViewStyle("ControlStyle", Nothing, New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte)), "", DevExpress.Utils.StyleOptions.StyleEnabled, True, False, False, DevExpress.Utils.HorzAlignment.Far, DevExpress.Utils.VertAlignment.Center, Nothing, System.Drawing.Color.WhiteSmoke, System.Drawing.Color.RoyalBlue)
-        Me.txtCantBod.Size = New System.Drawing.Size(41, 17)
+        Me.txtCantBod.Size = New System.Drawing.Size(49, 21)
         Me.txtCantBod.TabIndex = 220
         '
         'CantVet2
         '
         Me.CantVet2.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.DataSetDevolucionVentas1, "articulos_ventas_devueltos.CantVet", True))
         Me.CantVet2.EditValue = "0"
-        Me.CantVet2.Location = New System.Drawing.Point(456, 216)
+        Me.CantVet2.Location = New System.Drawing.Point(547, 249)
         Me.CantVet2.Name = "CantVet2"
         '
         '
@@ -1912,14 +1912,14 @@ Public Class FrmDevolucionesVentas
         Me.CantVet2.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder
         Me.CantVet2.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric
         Me.CantVet2.Properties.Style = New DevExpress.Utils.ViewStyle("ControlStyle", Nothing, New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte)), "", DevExpress.Utils.StyleOptions.StyleEnabled, True, False, False, DevExpress.Utils.HorzAlignment.Far, DevExpress.Utils.VertAlignment.Center, Nothing, System.Drawing.Color.Silver, System.Drawing.Color.RoyalBlue)
-        Me.CantVet2.Size = New System.Drawing.Size(40, 17)
+        Me.CantVet2.Size = New System.Drawing.Size(48, 21)
         Me.CantVet2.TabIndex = 221
         '
         'CantBod2
         '
         Me.CantBod2.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.DataSetDevolucionVentas1, "articulos_ventas_devueltos.CantBod", True))
         Me.CantBod2.EditValue = "0"
-        Me.CantBod2.Location = New System.Drawing.Point(632, 216)
+        Me.CantBod2.Location = New System.Drawing.Point(758, 249)
         Me.CantBod2.Name = "CantBod2"
         '
         '
@@ -1927,15 +1927,15 @@ Public Class FrmDevolucionesVentas
         Me.CantBod2.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder
         Me.CantBod2.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric
         Me.CantBod2.Properties.Style = New DevExpress.Utils.ViewStyle("ControlStyle", Nothing, New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte)), "", DevExpress.Utils.StyleOptions.StyleEnabled, True, False, False, DevExpress.Utils.HorzAlignment.Far, DevExpress.Utils.VertAlignment.Center, Nothing, System.Drawing.Color.Silver, System.Drawing.Color.RoyalBlue)
-        Me.CantBod2.Size = New System.Drawing.Size(41, 17)
+        Me.CantBod2.Size = New System.Drawing.Size(50, 21)
         Me.CantBod2.TabIndex = 222
         '
         'ckpantalla
         '
         Me.ckpantalla.DataBindings.Add(New System.Windows.Forms.Binding("Checked", Me.DataSetDevolucionVentas1, "Ventas_Detalle.empaquetado", True))
-        Me.ckpantalla.Location = New System.Drawing.Point(384, 152)
+        Me.ckpantalla.Location = New System.Drawing.Point(461, 175)
         Me.ckpantalla.Name = "ckpantalla"
-        Me.ckpantalla.Size = New System.Drawing.Size(104, 24)
+        Me.ckpantalla.Size = New System.Drawing.Size(125, 28)
         Me.ckpantalla.TabIndex = 223
         Me.ckpantalla.Text = "CheckBox3"
         '
@@ -1974,9 +1974,9 @@ Public Class FrmDevolucionesVentas
         '
         Me.lbanulado.Font = New System.Drawing.Font("Microsoft Sans Serif", 36.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbanulado.ForeColor = System.Drawing.Color.Red
-        Me.lbanulado.Location = New System.Drawing.Point(224, 248)
+        Me.lbanulado.Location = New System.Drawing.Point(269, 286)
         Me.lbanulado.Name = "lbanulado"
-        Me.lbanulado.Size = New System.Drawing.Size(320, 64)
+        Me.lbanulado.Size = New System.Drawing.Size(384, 74)
         Me.lbanulado.TabIndex = 224
         Me.lbanulado.Text = "Anulado"
         Me.lbanulado.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -1984,9 +1984,9 @@ Public Class FrmDevolucionesVentas
         '
         'FrmDevolucionesVentas
         '
-        Me.AutoScaleBaseSize = New System.Drawing.Size(5, 13)
+        Me.AutoScaleBaseSize = New System.Drawing.Size(6, 15)
         Me.BackColor = System.Drawing.SystemColors.Control
-        Me.ClientSize = New System.Drawing.Size(720, 513)
+        Me.ClientSize = New System.Drawing.Size(881, 593)
         Me.Controls.Add(Me.ANULADA)
         Me.Controls.Add(Me.lbanulado)
         Me.Controls.Add(Me.CantBod2)
@@ -2026,8 +2026,8 @@ Public Class FrmDevolucionesVentas
         Me.Controls.Add(Me.TextDescripcion)
         Me.Controls.Add(Me.GroupBox4)
         Me.Controls.Add(Me.ckpantalla)
-        Me.MaximumSize = New System.Drawing.Size(736, 552)
-        Me.MinimumSize = New System.Drawing.Size(736, 552)
+        Me.MaximumSize = New System.Drawing.Size(899, 640)
+        Me.MinimumSize = New System.Drawing.Size(899, 640)
         Me.Name = "FrmDevolucionesVentas"
         Me.Text = "Devoluciones"
         Me.Controls.SetChildIndex(Me.ckpantalla, 0)
@@ -2707,7 +2707,6 @@ Public Class FrmDevolucionesVentas
         End If
     End Sub
 
-
     Private Sub BuscarDevolucion()
         Dim Fx As New cFunciones
         Dim identificador As Double
@@ -3197,7 +3196,15 @@ Public Class FrmDevolucionesVentas
         Return False
     End Function
 
+    Private OpcionDevolucion As Tipo = Tipo.Efectivo
+    Private CedulaCliente As String = ""
+    Private NombreCliente As String = ""
+    Private CuentaCliente As String = ""
+    Private CodCliente As Long = 0
+    Private BanderaYaMarco As Boolean = False
+
     Private Sub Registrar()
+        Me.BanderaYaMarco = False
         'Dim Opcion_Devolucion As New Opciones_Devolucion
         'Dim Monto_Transporte As Monto_Transporte
         'Dim MontoTrans As Double = 0
@@ -3205,7 +3212,7 @@ Public Class FrmDevolucionesVentas
             Exit Sub
         End If
 
-        If CadenaConexionSeePOS.ToLower.IndexOf("taller") > 0 Then            
+        If CadenaConexionSeePOS.ToLower.IndexOf("taller") > 0 Then
             Me.AdapterOpcionesPago.InsertCommand.CommandText = Me.AdapterOpcionesPago.InsertCommand.CommandText.Replace("OpcionesDePago", "SeePOs.dbo.OpcionesDePago")
         End If
 
@@ -3244,12 +3251,30 @@ Public Class FrmDevolucionesVentas
             If saldo < 0 Then
                 Me.MontoDevolucion = (saldo * -1)
 
-                Dim frm As New frmOpcionCaja
-                frm.ShowDialog()
-                Me.Caja_Factura = frm.Caja
-                '*****************************************SELECCIONA CAJA **********************************************************
-                If CajaAbierta(Caja_Factura) = False Then
-                    MsgBox("La caja #" & Caja_Factura & " no esta abierta, no sepuede realizar la operacion!!!", MsgBoxStyle.Exclamation, Text)
+                'la factura es de credito pero tiene un saldo a favor
+                Dim frmOptDev As New frmOpcionDevolucion
+                If frmOptDev.ShowDialog() = Windows.Forms.DialogResult.OK Then
+                    Me.OpcionDevolucion = frmOptDev.FormaDevolucion
+                    Me.CedulaCliente = frmOptDev.txtCedula.Text
+                    Me.NombreCliente = frmOptDev.txtNombre.Text
+                    Me.CuentaCliente = frmOptDev.txtCuenta.Text
+                    Me.CodCliente = frmOptDev.CodCliente
+                    If Me.OpcionDevolucion = Tipo.Efectivo Then
+                        'si quiere devolver el dinero debe validar la caja
+                        Dim frm As New frmOpcionCaja
+                        frm.ShowDialog()
+                        Me.Caja_Factura = frm.Caja
+                        Me.BanderaYaMarco = True
+                        '*****************************************SELECCIONA CAJA **********************************************************
+                        If CajaAbierta(Caja_Factura) = False Then
+                            MsgBox("La caja #" & Caja_Factura & " no esta abierta, no sepuede realizar la operacion!!!", MsgBoxStyle.Exclamation, Text)
+                            Exit Sub
+                        End If
+                    Else
+                        Me.BanderaYaMarco = True
+                    End If
+
+                Else
                     Exit Sub
                 End If
 
@@ -3279,13 +3304,28 @@ Public Class FrmDevolucionesVentas
         '******************** SI LA FACTURA ES DE CONTADO O ES DE CREDITO PERO YA SE PAGO ********************
         If (ComboTipo.Text <> "CRE" And ComboTipo.Text <> "TCR") Or ((ComboTipo.Text = "CRE" Or ComboTipo.Text = "TCR") And CheckBox2.Checked = True) Then
             Try
-                Dim frm As New frmOpcionCaja
-                frm.ShowDialog()
-                Me.Caja_Factura = frm.Caja
-                '*****************************************SELECCIONA CAJA **********************************************************
-                If CajaAbierta(Caja_Factura) = False Then
-                    MsgBox("La caja #" & Caja_Factura & " no esta abierta, no sepuede realizar la operacion!!!", MsgBoxStyle.Exclamation, Text)
-                    Exit Sub
+
+                If Me.BanderaYaMarco = False Then
+                    Dim frmOptDev As New frmOpcionDevolucion
+                    If frmOptDev.ShowDialog() = Windows.Forms.DialogResult.OK Then
+                        Me.OpcionDevolucion = frmOptDev.FormaDevolucion
+                        Me.CedulaCliente = frmOptDev.txtCedula.Text
+                        Me.NombreCliente = frmOptDev.txtNombre.Text
+                        Me.CuentaCliente = frmOptDev.txtCuenta.Text
+                        Me.CodCliente = frmOptDev.CodCliente
+                        If Me.OpcionDevolucion = Tipo.Efectivo Then
+                            Dim frm As New frmOpcionCaja
+                            frm.ShowDialog()
+                            Me.Caja_Factura = frm.Caja
+                            '*****************************************SELECCIONA CAJA **********************************************************
+                            If CajaAbierta(Caja_Factura) = False Then
+                                MsgBox("La caja #" & Caja_Factura & " no esta abierta, no sepuede realizar la operacion!!!", MsgBoxStyle.Exclamation, Text)
+                                Exit Sub
+                            End If
+                        End If
+                    Else
+                        Exit Sub
+                    End If
                 End If
 
                 REST = MsgBox("Deseas devolver la siguiente cantidad --> " & Math.Round(CDbl(Me.BindingContext(Me.DataSetDevolucionVentas1, "devoluciones_ventas").Current("Monto").ToString), 2) & " <--", MsgBoxStyle.YesNo, "SeePos")
@@ -3326,7 +3366,9 @@ Public Class FrmDevolucionesVentas
                     End Try
 
                     If Me.esFirmadoContado = False Then
-                        Me.InsertarOpicion_Pago()
+                        If Me.OpcionDevolucion = Tipo.Efectivo Then
+                            Me.InsertarOpicion_Pago()
+                        End If
                     End If
 
                     Me.AdapterOpcionesPago.Update(Me.DataSetDevolucionVentas1.OpcionesDePago)
@@ -3334,9 +3376,16 @@ Public Class FrmDevolucionesVentas
 
                     Dim dbo As New GestioDatos
                     If Me.esFirmadoContado = False Then
-                        dbo.Ejecuta("Update devoluciones_ventas set UsuarioRecibio = '" & Me.UsuarioRecibo & "', Caja = " & Me.Caja_Factura & ", Num_Apertura = " & Num_Apertura & " where Devolucion = " & Me.BindingContext(Me.DataSetDevolucionVentas1, "devoluciones_ventas").Current("Devolucion"))
+                        If Me.OpcionDevolucion = Tipo.Efectivo Then
+                            dbo.Ejecuta("Update devoluciones_ventas set Caja = " & Me.Caja_Factura & ", Num_Apertura = " & Num_Apertura & " where Devolucion = " & Me.BindingContext(Me.DataSetDevolucionVentas1, "devoluciones_ventas").Current("Devolucion"))
+                        End If
                     End If
                     dbo.Ejecuta("Update devoluciones_ventas Set NotasDevolucion = '" & Me.NotasDevolucion & "', UsuarioRecibio = '" & Me.UsuarioRecibo & "', MontoDevolucion = " & Me.MontoDevolucion & " where Devolucion = " & Me.BindingContext(Me.DataSetDevolucionVentas1, "devoluciones_ventas").Current("Devolucion"))
+
+                    Try
+                        dbo.Ejecuta("Update devoluciones_ventas Set FormaDevolucion = '" & Me.OpcionDevolucion.ToString & "', CedulaCliente = '" & Me.CedulaCliente & "', NombreCliente = '" & Me.NombreCliente & "', CuentaCliente = '" & Me.CuentaCliente & "', CodCliente = " & Me.CodCliente & " where Devolucion = " & Me.BindingContext(Me.DataSetDevolucionVentas1, "devoluciones_ventas").Current("Devolucion"))
+                    Catch ex As Exception
+                    End Try
 
                     VolverEstadonormal()
                     Limpiar()

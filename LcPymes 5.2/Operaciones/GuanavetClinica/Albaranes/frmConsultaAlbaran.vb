@@ -160,26 +160,35 @@ Public Class frmConsultaAlbaran
             Next
 
             If frm.ShowDialog = Windows.Forms.DialogResult.OK Then
-                Dim albaran As Albaran
-                Dim IdFactura As Long = 0
-                For Each Clientes As DataGridViewRow In frm.viewDatos.Rows
-                    albaran = New Albaran
-                    For Each row As DataGridViewRow In (From x As DataGridViewRow In Me.viewDatos.Rows
-                                                        Where x.Cells("Identificacion").Value = Clientes.Cells("cIdentificacion").Value And x.Cells("Facturar").Value = True
-                                                        Select x).ToList
-                        albaran.Agregar(row.Cells("Id").Value)
-                    Next
-                    IdFactura = 0
-                    IdFactura = albaran.GenerarFactura(Me.IdUsuario,
-                                           Clientes.Cells("cTipo").Value,
-                                           Clientes.Cells("cPlazo").Value,
-                                           Clientes.Cells("cCaja").Value,
-                                           Clientes.Cells("cIdentificacion2").Value,
-                                           Clientes.Cells("cCliente").Value)
 
-                    If IdFactura > 0 And Clientes.Cells("cTipo").Value = "CREDITO" Then Me.ImprimirFactura(IdFactura, Clientes.Cells("cCaja").Value)
-                Next
-                Me.CargarAlbaranes()
+                Dim frmUsuario As New frmUsuarioFactura
+                If frmUsuario.ShowDialog = Windows.Forms.DialogResult.OK Then
+
+                    Dim albaran As Albaran
+                    Dim IdFactura As Long = 0
+                    For Each Clientes As DataGridViewRow In frm.viewDatos.Rows
+                        albaran = New Albaran
+                        For Each row As DataGridViewRow In (From x As DataGridViewRow In Me.viewDatos.Rows
+                                                            Where x.Cells("Identificacion").Value = Clientes.Cells("cIdentificacion").Value And x.Cells("Facturar").Value = True
+                                                            Select x).ToList
+                            albaran.Agregar(row.Cells("Id").Value)
+                        Next
+                        IdFactura = 0
+                        IdFactura = albaran.GenerarFactura(frmUsuario.IdUsuario,
+                                               Clientes.Cells("cTipo").Value,
+                                               Clientes.Cells("cPlazo").Value,
+                                               Clientes.Cells("cCaja").Value,
+                                               Clientes.Cells("cIdentificacion2").Value,
+                                               Clientes.Cells("cCliente").Value)
+                        '681896
+
+                        If IdFactura > 0 And Clientes.Cells("cTipo").Value = "CREDITO" Then Me.ImprimirFactura(IdFactura, Clientes.Cells("cCaja").Value)
+                    Next
+                    Me.CargarAlbaranes()
+                    Dim frmOpcionesdePago As New frmBuscarFichasActivas
+                    frmOpcionesdePago.CargarPrimerUsuario(frmUsuario.IdUsuario)
+                    frmOpcionesdePago.ShowDialog()
+                End If
             End If
         End If
     End Sub
@@ -294,12 +303,10 @@ Public Class frmConsultaAlbaran
     End Sub
 
     Private Sub btnObtenerDatos_Click(sender As Object, e As EventArgs) Handles btnSincronizacion.Click
-
         If Me.ServicioSincronizador() = True Then
             Me.CargarAlbaranes()
         End If
     End Sub
-
 
     Private Sub btnGenerarFacturas_Click(sender As Object, e As EventArgs) Handles btnGenerarFacturas.Click
         Me.GenerarFacturas()
@@ -358,5 +365,52 @@ Public Class frmConsultaAlbaran
         If e.KeyCode = Keys.Enter Then
             Me.CargarAlbaranes()
         End If
+    End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Dim frm As New frmAgregarDeposito
+        frm.Id_Usuario = Me.IdUsuario
+        frm.ShowDialog()
+    End Sub
+
+    Private Sub CargarForm(ByRef Form As Form)
+        Try
+            Form.ShowDialog()
+        Catch ex As SystemException
+            MsgBox(ex.ToString, MsgBoxStyle.Information, "Atención...")
+        End Try
+    End Sub
+
+    Private Sub btnOpcionesdePago_Click(sender As Object, e As EventArgs) Handles btnOpcionesdePago.Click
+        'CargarForm(New frmMovimientoCajaPago(Me.Usuario))
+        Dim frm As New frmBuscarFichasActivas
+        frm.CargarPrimerUsuario(Me.IdUsuario)
+        frm.MdiParent = Me.MdiParent
+        frm.Show()
+    End Sub
+
+    Private Sub btnDevoluciones_Click(sender As Object, e As EventArgs) Handles btnDevoluciones.Click
+        CargarForm(New MovimientoCaja(Me.Usuario))
+    End Sub
+
+    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+        CargarForm(New FrmDevolucionesVentas)
+    End Sub
+
+    Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
+        CargarForm(New frmReciboDinero(Me.Usuario))
+    End Sub
+
+    Private Sub btnEstadoCuenta_Click(sender As Object, e As EventArgs) Handles btnEstadoCuenta.Click
+        Dim frm As New frmEstadoCuentaAlbaran
+        frm.ShowDialog()
+    End Sub
+
+    Private Sub btnApertura_Click(sender As Object, e As EventArgs) Handles btnApertura.Click
+        CargarForm(New AperturaCaja(Me.Usuario))
+    End Sub
+
+    Private Sub btnArqueo_Click(sender As Object, e As EventArgs) Handles btnArqueo.Click
+        CargarForm(New ArqueoCaja)
     End Sub
 End Class

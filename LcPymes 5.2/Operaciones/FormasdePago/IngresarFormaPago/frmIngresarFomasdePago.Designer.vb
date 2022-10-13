@@ -52,6 +52,7 @@ Partial Class frmIngresarFomasdePago
         Me.btnPendientes = New System.Windows.Forms.Button()
         Me.lblTipodeCambio = New System.Windows.Forms.Label()
         Me.btnOtrasTarjetas = New System.Windows.Forms.Button()
+        Me.btnAnticipo = New System.Windows.Forms.Button()
         CType(Me.DataSet_Facturaciones1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.viewDatos, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -60,9 +61,10 @@ Partial Class frmIngresarFomasdePago
         '
         Me.btnChequeColones.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnChequeColones.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnChequeColones.Location = New System.Drawing.Point(14, 291)
+        Me.btnChequeColones.Location = New System.Drawing.Point(20, 282)
+        Me.btnChequeColones.Margin = New System.Windows.Forms.Padding(4)
         Me.btnChequeColones.Name = "btnChequeColones"
-        Me.btnChequeColones.Size = New System.Drawing.Size(204, 100)
+        Me.btnChequeColones.Size = New System.Drawing.Size(272, 98)
         Me.btnChequeColones.TabIndex = 3
         Me.btnChequeColones.TabStop = False
         Me.btnChequeColones.Text = "Cheque " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Colones"
@@ -72,9 +74,10 @@ Partial Class frmIngresarFomasdePago
         '
         Me.btnTarjetaColones.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnTarjetaColones.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnTarjetaColones.Location = New System.Drawing.Point(14, 165)
+        Me.btnTarjetaColones.Location = New System.Drawing.Point(20, 160)
+        Me.btnTarjetaColones.Margin = New System.Windows.Forms.Padding(4)
         Me.btnTarjetaColones.Name = "btnTarjetaColones"
-        Me.btnTarjetaColones.Size = New System.Drawing.Size(204, 100)
+        Me.btnTarjetaColones.Size = New System.Drawing.Size(272, 98)
         Me.btnTarjetaColones.TabIndex = 4
         Me.btnTarjetaColones.TabStop = False
         Me.btnTarjetaColones.Text = "Tarjeta " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Colones"
@@ -84,9 +87,10 @@ Partial Class frmIngresarFomasdePago
         '
         Me.btnTransferencia.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnTransferencia.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnTransferencia.Location = New System.Drawing.Point(245, 32)
+        Me.btnTransferencia.Location = New System.Drawing.Point(327, 39)
+        Me.btnTransferencia.Margin = New System.Windows.Forms.Padding(4)
         Me.btnTransferencia.Name = "btnTransferencia"
-        Me.btnTransferencia.Size = New System.Drawing.Size(204, 100)
+        Me.btnTransferencia.Size = New System.Drawing.Size(272, 98)
         Me.btnTransferencia.TabIndex = 5
         Me.btnTransferencia.TabStop = False
         Me.btnTransferencia.Text = "Transferencia"
@@ -96,9 +100,10 @@ Partial Class frmIngresarFomasdePago
         '
         Me.btnEfectivoColones.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnEfectivoColones.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnEfectivoColones.Location = New System.Drawing.Point(14, 32)
+        Me.btnEfectivoColones.Location = New System.Drawing.Point(19, 39)
+        Me.btnEfectivoColones.Margin = New System.Windows.Forms.Padding(4)
         Me.btnEfectivoColones.Name = "btnEfectivoColones"
-        Me.btnEfectivoColones.Size = New System.Drawing.Size(204, 100)
+        Me.btnEfectivoColones.Size = New System.Drawing.Size(272, 98)
         Me.btnEfectivoColones.TabIndex = 6
         Me.btnEfectivoColones.TabStop = False
         Me.btnEfectivoColones.Text = "Efectivo " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Colones "
@@ -108,9 +113,10 @@ Partial Class frmIngresarFomasdePago
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(481, 321)
+        Me.Label1.Location = New System.Drawing.Point(641, 405)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(109, 20)
+        Me.Label1.Size = New System.Drawing.Size(137, 25)
         Me.Label1.TabIndex = 7
         Me.Label1.Text = "Total a Cobrar"
         '
@@ -118,18 +124,20 @@ Partial Class frmIngresarFomasdePago
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(482, 361)
+        Me.Label2.Location = New System.Drawing.Point(643, 454)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(128, 20)
+        Me.Label2.Size = New System.Drawing.Size(159, 25)
         Me.Label2.TabIndex = 8
         Me.Label2.Text = "Pendiente Cobro"
         '
         'lblPendienteCobro
         '
         Me.lblPendienteCobro.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblPendienteCobro.Location = New System.Drawing.Point(615, 361)
+        Me.lblPendienteCobro.Location = New System.Drawing.Point(820, 454)
+        Me.lblPendienteCobro.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblPendienteCobro.Name = "lblPendienteCobro"
-        Me.lblPendienteCobro.Size = New System.Drawing.Size(93, 20)
+        Me.lblPendienteCobro.Size = New System.Drawing.Size(124, 25)
         Me.lblPendienteCobro.TabIndex = 10
         Me.lblPendienteCobro.Text = "7,000.00"
         Me.lblPendienteCobro.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -137,9 +145,10 @@ Partial Class frmIngresarFomasdePago
         'lblTotalCobro
         '
         Me.lblTotalCobro.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblTotalCobro.Location = New System.Drawing.Point(615, 321)
+        Me.lblTotalCobro.Location = New System.Drawing.Point(820, 405)
+        Me.lblTotalCobro.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblTotalCobro.Name = "lblTotalCobro"
-        Me.lblTotalCobro.Size = New System.Drawing.Size(93, 20)
+        Me.lblTotalCobro.Size = New System.Drawing.Size(124, 25)
         Me.lblTotalCobro.TabIndex = 9
         Me.lblTotalCobro.Text = "10.000.00"
         Me.lblTotalCobro.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -147,9 +156,10 @@ Partial Class frmIngresarFomasdePago
         'lblPagado
         '
         Me.lblPagado.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblPagado.Location = New System.Drawing.Point(615, 341)
+        Me.lblPagado.Location = New System.Drawing.Point(820, 430)
+        Me.lblPagado.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblPagado.Name = "lblPagado"
-        Me.lblPagado.Size = New System.Drawing.Size(93, 20)
+        Me.lblPagado.Size = New System.Drawing.Size(124, 25)
         Me.lblPagado.TabIndex = 12
         Me.lblPagado.Text = "3.000.00"
         Me.lblPagado.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -158,9 +168,10 @@ Partial Class frmIngresarFomasdePago
         '
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(482, 341)
+        Me.Label6.Location = New System.Drawing.Point(643, 430)
+        Me.Label6.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(64, 20)
+        Me.Label6.Size = New System.Drawing.Size(80, 25)
         Me.Label6.TabIndex = 11
         Me.Label6.Text = "Pagado"
         '
@@ -168,9 +179,10 @@ Partial Class frmIngresarFomasdePago
         '
         Me.btnEfectivoDolares.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnEfectivoDolares.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnEfectivoDolares.Location = New System.Drawing.Point(485, 32)
+        Me.btnEfectivoDolares.Location = New System.Drawing.Point(647, 39)
+        Me.btnEfectivoDolares.Margin = New System.Windows.Forms.Padding(4)
         Me.btnEfectivoDolares.Name = "btnEfectivoDolares"
-        Me.btnEfectivoDolares.Size = New System.Drawing.Size(204, 100)
+        Me.btnEfectivoDolares.Size = New System.Drawing.Size(272, 98)
         Me.btnEfectivoDolares.TabIndex = 13
         Me.btnEfectivoDolares.TabStop = False
         Me.btnEfectivoDolares.Text = "Efectivo " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Dolares"
@@ -180,9 +192,10 @@ Partial Class frmIngresarFomasdePago
         '
         Me.btnChequeDolares.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnChequeDolares.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnChequeDolares.Location = New System.Drawing.Point(245, 291)
+        Me.btnChequeDolares.Location = New System.Drawing.Point(328, 282)
+        Me.btnChequeDolares.Margin = New System.Windows.Forms.Padding(4)
         Me.btnChequeDolares.Name = "btnChequeDolares"
-        Me.btnChequeDolares.Size = New System.Drawing.Size(204, 100)
+        Me.btnChequeDolares.Size = New System.Drawing.Size(272, 98)
         Me.btnChequeDolares.TabIndex = 14
         Me.btnChequeDolares.TabStop = False
         Me.btnChequeDolares.Text = "Cheque " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Dolares"
@@ -202,9 +215,10 @@ Partial Class frmIngresarFomasdePago
         Me.viewDatos.AllowUserToResizeRows = False
         Me.viewDatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.viewDatos.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.cDocumento, Me.cTipoDocumento, Me.cMontoPago, Me.cFormaPago, Me.cDenominacion, Me.cUsuario, Me.cNombre, Me.cCodMoneda, Me.cNombreMoneda, Me.cTipoCambio, Me.cFecha, Me.cNumApertura, Me.cNumeroDocumento})
-        Me.viewDatos.Location = New System.Drawing.Point(42, 291)
+        Me.viewDatos.Location = New System.Drawing.Point(57, 282)
+        Me.viewDatos.Margin = New System.Windows.Forms.Padding(4)
         Me.viewDatos.Name = "viewDatos"
-        Me.viewDatos.Size = New System.Drawing.Size(234, 100)
+        Me.viewDatos.Size = New System.Drawing.Size(312, 98)
         Me.viewDatos.TabIndex = 15
         Me.viewDatos.Visible = False
         '
@@ -279,9 +293,10 @@ Partial Class frmIngresarFomasdePago
         Me.btnPendientes.Enabled = False
         Me.btnPendientes.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnPendientes.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnPendientes.Location = New System.Drawing.Point(245, 165)
+        Me.btnPendientes.Location = New System.Drawing.Point(328, 160)
+        Me.btnPendientes.Margin = New System.Windows.Forms.Padding(4)
         Me.btnPendientes.Name = "btnPendientes"
-        Me.btnPendientes.Size = New System.Drawing.Size(204, 100)
+        Me.btnPendientes.Size = New System.Drawing.Size(272, 98)
         Me.btnPendientes.TabIndex = 16
         Me.btnPendientes.TabStop = False
         Me.btnPendientes.Text = "Factura Pendiente"
@@ -290,9 +305,10 @@ Partial Class frmIngresarFomasdePago
         'lblTipodeCambio
         '
         Me.lblTipodeCambio.AutoSize = True
-        Me.lblTipodeCambio.Location = New System.Drawing.Point(39, 7)
+        Me.lblTipodeCambio.Location = New System.Drawing.Point(52, 9)
+        Me.lblTipodeCambio.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblTipodeCambio.Name = "lblTipodeCambio"
-        Me.lblTipodeCambio.Size = New System.Drawing.Size(168, 13)
+        Me.lblTipodeCambio.Size = New System.Drawing.Size(224, 17)
         Me.lblTipodeCambio.TabIndex = 17
         Me.lblTipodeCambio.Text = "Tipo de Cambio del Dolar : 500.00"
         '
@@ -300,20 +316,35 @@ Partial Class frmIngresarFomasdePago
         '
         Me.btnOtrasTarjetas.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnOtrasTarjetas.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnOtrasTarjetas.Location = New System.Drawing.Point(485, 165)
+        Me.btnOtrasTarjetas.Location = New System.Drawing.Point(648, 160)
+        Me.btnOtrasTarjetas.Margin = New System.Windows.Forms.Padding(4)
         Me.btnOtrasTarjetas.Name = "btnOtrasTarjetas"
-        Me.btnOtrasTarjetas.Size = New System.Drawing.Size(204, 100)
+        Me.btnOtrasTarjetas.Size = New System.Drawing.Size(272, 98)
         Me.btnOtrasTarjetas.TabIndex = 18
         Me.btnOtrasTarjetas.TabStop = False
         Me.btnOtrasTarjetas.Text = "Otras " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Tarjetas"
         Me.btnOtrasTarjetas.UseVisualStyleBackColor = True
         '
+        'btnAnticipo
+        '
+        Me.btnAnticipo.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnAnticipo.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnAnticipo.Location = New System.Drawing.Point(646, 282)
+        Me.btnAnticipo.Margin = New System.Windows.Forms.Padding(4)
+        Me.btnAnticipo.Name = "btnAnticipo"
+        Me.btnAnticipo.Size = New System.Drawing.Size(272, 98)
+        Me.btnAnticipo.TabIndex = 19
+        Me.btnAnticipo.TabStop = False
+        Me.btnAnticipo.Text = "Anticipo"
+        Me.btnAnticipo.UseVisualStyleBackColor = True
+        '
         'frmIngresarFomasdePago
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(718, 402)
+        Me.ClientSize = New System.Drawing.Size(957, 495)
+        Me.Controls.Add(Me.btnAnticipo)
         Me.Controls.Add(Me.btnOtrasTarjetas)
         Me.Controls.Add(Me.lblTipodeCambio)
         Me.Controls.Add(Me.btnPendientes)
@@ -331,6 +362,7 @@ Partial Class frmIngresarFomasdePago
         Me.Controls.Add(Me.btnChequeColones)
         Me.Controls.Add(Me.viewDatos)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "frmIngresarFomasdePago"
@@ -372,4 +404,5 @@ Partial Class frmIngresarFomasdePago
     Friend WithEvents cFecha As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents cNumApertura As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents cNumeroDocumento As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents btnAnticipo As System.Windows.Forms.Button
 End Class

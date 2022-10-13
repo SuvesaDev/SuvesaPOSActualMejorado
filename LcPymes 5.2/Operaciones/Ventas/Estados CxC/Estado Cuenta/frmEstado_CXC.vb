@@ -439,7 +439,6 @@ Public Class frmEstado_CXC
             Link.Conectar()
             Me.ButtonMostrar.Enabled = False
 
-
             Me.ProgressBarControl1.Text = 0
             Me.Timer1.Enabled = True
             Select Case X

@@ -107,6 +107,7 @@ Public Class frmIngresarFomasdePago
                 End If
             End If
 
+
             Select Case Me.TipoFactura
                 Case "TCO" : TipoDocumento = "FVT"
                 Case "MCO" : TipoDocumento = "FVM"
@@ -151,6 +152,7 @@ Public Class frmIngresarFomasdePago
         Me.lblTotalCobro.Text = Me.TotalCobro.ToString("N2")
         Me.lblPagado.Text = Me.MontoPagado.ToString("N2")
         Me.lblPendienteCobro.Text = Me.PendienteCobro.ToString("N2")
+        Me.TitulobtnAnticcipo()
     End Sub
 
     'Private Sub LlenarVentas(ByVal Id As Double)
@@ -386,7 +388,8 @@ Public Class frmIngresarFomasdePago
     Private CedulaCliente As String = ""
     Private NombreCliente As String = ""
     Public ListaPagosTransferencia As New System.Collections.Generic.List(Of PagoTranferencia)
-    Private Sub btnEfectivo_Click(sender As Object, e As EventArgs) Handles btnTarjetaColones.Click, btnEfectivoColones.Click, btnTransferencia.Click, btnChequeColones.Click, btnPendientes.Click, btnEfectivoDolares.Click, btnOtrasTarjetas.Click
+    Public MontoAnticipo As Decimal = 0
+    Private Sub btnEfectivo_Click(sender As Object, e As EventArgs) Handles btnTarjetaColones.Click, btnEfectivoColones.Click, btnTransferencia.Click, btnChequeColones.Click, btnPendientes.Click, btnEfectivoDolares.Click, btnOtrasTarjetas.Click, btnAnticipo.Click
 
         If sender.name = Me.btnPendientes.Name Then
 
@@ -416,6 +419,79 @@ Public Class frmIngresarFomasdePago
                 'End If
 
             End If
+
+        ElseIf sender.Name = Me.btnAnticipo.Name Then
+
+            If Me.MontoAnticipo > 0 Then
+
+                If Me.TotalCobro - (Me.MontoPagado + Me.MontoAnticipo) < 0 Then
+                    'estoy pagando demas
+                    Dim Justo As Decimal = (Me.TotalCobro - Me.MontoPagado)
+                    Me.Agregar_Forma_Pago(Justo, "PRE", 1, "0")
+                    Me.MontoPagado += Justo
+                    MontoAnticipo = Me.MontoAnticipo - Justo
+                    Me.PoneMontos()
+                Else
+                    'estoy pagano lo justo o menos
+                    Me.Agregar_Forma_Pago(MontoAnticipo, "PRE", 1, "0")
+                    Me.MontoPagado += MontoAnticipo
+                    MontoAnticipo = 0
+                    Me.PoneMontos()
+                End If
+
+               
+
+                If Me.TotalCobro <= Me.MontoPagado Then
+                    '***************************************************************************************
+                    'Aqui se registra la factura, las formas de pago y se procesa la factura electronica
+                    '***************************************************************************************
+                    Me.RegistrarFactura(Me.ListaPagosTransferencia)
+                    '***************************************************************************************
+
+                    'If Me.MontoPagado > Me.TotalCobro Then
+                    '    Dim frmVuelto As New frmVueltoCaja
+                    '    frmVuelto.Vuelto = Me.MontoPagado - Me.TotalCobro
+                    '    frmVuelto.ShowDialog()
+                    'End If
+
+                    If Me.NoVuelto = False Then
+                        Me.PasaVuelto = 0
+                        If Me.MontoPagado > Me.TotalCobro Then
+                            Dim frmVuelto As New frmVueltoCaja
+                            frmVuelto.Vuelto = Me.MontoPagado - Me.TotalCobro
+                            frmVuelto.ShowDialog()
+                        End If
+                    Else
+                        Me.PasaVuelto = Me.MontoPagado - Me.TotalCobro
+                    End If
+                    'select * from invenario where select * from 
+                    If Me.IgnoraTodo = True Then
+                        Me.DialogResult = Windows.Forms.DialogResult.OK
+                        Me.Close()
+                        Exit Sub
+                    End If
+
+                    If Me.EsAbono = True And Me.RegistroTodo = True Then
+                        Me.DialogResult = Windows.Forms.DialogResult.OK
+                        Me.Close()
+                        Exit Sub
+                    End If
+
+                    If Me.EsApartado = True And Me.RegistroTodo = True Then
+                        Me.DialogResult = Windows.Forms.DialogResult.OK
+                        Me.Close()
+                        Exit Sub
+                    End If
+
+                    Dim frmFicha As New frmNumeroFicha
+                    frmFicha.CargarPrimerUsuario(Me.Id_Usuario)
+                    frmFicha.MdiParent = Me.MdiParent
+                    frmFicha.Show()
+                    Me.Close()
+                End If
+
+            End If
+            'zoe
 
         ElseIf sender.Name = Me.btnTransferencia.Name Then
             Dim frm As New frmFormaPagoTranferencia
@@ -615,7 +691,21 @@ Public Class frmIngresarFomasdePago
         End If        
     End Sub
 
+    Private Sub TitulobtnAnticcipo()
+        Me.btnAnticipo.Text = "Anticipo"
+        If Me.MontoAnticipo > 0 Then
+            Me.btnAnticipo.Text = "Anticipo" & vbCrLf _
+                & "₡ " & Me.MontoAnticipo.ToString("N2")
+        End If
+    End Sub
+
     Private Sub frmIngresarFomasdePago_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        If IsClinica() = True Then
+            Me.btnTarjetaColones.Enabled = False
+        Else
+            Me.btnTarjetaColones.Enabled = True
+        End If
+
         Credomatic.Operaciones.General.LimpiarLogVentas()
         Credomatic.Operaciones.General.LimpiarLogAnulacion()
         Me.Vuelto = 0
@@ -623,6 +713,12 @@ Public Class frmIngresarFomasdePago
         Me.lblTipodeCambio.Text = "Tipo de Cambio del Dolar : " & Me.getTipocambio.ToString("N2")
         If CDec(Me.lblPendienteCobro.Text) = 0 Then
             Me.DialogResult = Windows.Forms.DialogResult.OK
+        End If
+        If Me.MontoAnticipo > 0 Then
+            Me.btnAnticipo.Enabled = True
+            Me.TitulobtnAnticcipo()
+        Else
+            Me.btnAnticipo.Enabled = False
         End If
     End Sub
 
@@ -636,6 +732,13 @@ Public Class frmIngresarFomasdePago
         Return TipoCambio
     End Function
 
+    Private Sub btnChequeDolares_Click(sender As Object, e As EventArgs) Handles btnChequeDolares.Click
+
+    End Sub
+
+    Private Sub btnAnticipo_Click(sender As Object, e As EventArgs) Handles btnAnticipo.Click
+
+    End Sub
 End Class
 
 Public Structure PagoTranferencia
