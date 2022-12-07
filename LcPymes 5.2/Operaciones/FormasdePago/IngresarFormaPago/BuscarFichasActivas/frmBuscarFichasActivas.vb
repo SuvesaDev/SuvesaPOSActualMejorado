@@ -73,7 +73,16 @@ Public Class frmBuscarFichasActivas
 
     Private Sub CapturarDatosFicha()
         If Factura = False Then Exit Sub
-        Dim ficha As String = Me.viewFichasActivas.Item("Ficha", Me.viewFichasActivas.CurrentRow.Index).Value
+
+        Dim ficha As String = ""
+        For Each row As DataGridViewRow In Me.viewFichasActivas.SelectedRows
+            If ficha = "" Then
+                ficha = row.Cells("Ficha").Value
+            Else
+                ficha += ", " & row.Cells("Ficha").Value
+            End If
+        Next
+
         Dim dtPreventasActivas As New DataTable
 
         Dim soloAPA As Boolean = True
@@ -291,6 +300,10 @@ Public Class frmBuscarFichasActivas
         Catch ex As Exception
             MsgBox(ex.Message, MsgBoxStyle.Critical, Me.Text)
         End Try
+    End Sub
+
+    Private Sub btnFacturar_Click(sender As Object, e As EventArgs) Handles btnFacturar.Click
+        CapturarDatosFicha()
     End Sub
 
 End Class

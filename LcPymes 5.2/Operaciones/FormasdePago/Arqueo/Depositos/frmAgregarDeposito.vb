@@ -116,9 +116,9 @@ Public Class frmAgregarDeposito
         Me.viewDepositos.Rows.Clear()
         Me.IndexDeposito = 0
         Dim dt As New DataTable
-        cFunciones.Llenar_Tabla_Generico("select Banco, Cuenta, Moneda, Numero, Monto from ArqueoDeposito Where IdArqueo = " & _IdArqueo & " And IdApertura = " & Me.IdApertura, dt, CadenaConexionSeePOS)
+        cFunciones.Llenar_Tabla_Generico("select Banco, Cuenta, Moneda, Numero, Monto, TipoMovimiento, Observaciones from ArqueoDeposito Where IdArqueo = " & _IdArqueo & " And IdApertura = " & Me.IdApertura, dt, CadenaConexionSeePOS)
         For Each r As DataRow In dt.Rows
-            Me.AgregarDeposito(r.Item("Banco"), r.Item("Cuenta"), r.Item("Moneda"), r.Item("Numero"), r.Item("Monto"))
+            Me.AgregarDeposito(r.Item("Banco"), r.Item("Cuenta"), r.Item("Moneda"), r.Item("Numero"), r.Item("Monto"), r.Item("TipoMovimiento"), r.Item("Observaciones"))
         Next
     End Sub
 
@@ -129,7 +129,7 @@ Public Class frmAgregarDeposito
         Try
             trans.Ejecutar("Delete from ArqueoDeposito where IdArqueo = " & Me.IdArqueo & " And IdApertura = " & Me.IdApertura, CommandType.Text)
             For Each f As DataGridViewRow In Me.viewDepositos.Rows
-                trans.Ejecutar("insert into ArqueoDeposito(IdArqueo, IdApertura, Banco, Cuenta, Moneda, Numero, Monto) values(" & Me.IdArqueo & ", " & Me.IdApertura & ", '" & f.Cells("cBanco").Value & "', '" & f.Cells("cCuenta").Value & "', '" & f.Cells("cMonedaDeposito").Value & "', '" & f.Cells("cNumero").Value & "', " & f.Cells("cMontoDeposito").Value & ")", CommandType.Text)
+                trans.Ejecutar("insert into ArqueoDeposito(IdArqueo, IdApertura, Banco, Cuenta, Moneda, Numero, Monto, TipoMovimiento, Observaciones) values(" & Me.IdArqueo & ", " & Me.IdApertura & ", '" & f.Cells("cBanco").Value & "', '" & f.Cells("cCuenta").Value & "', '" & f.Cells("cMonedaDeposito").Value & "', '" & f.Cells("cNumero").Value & "', " & f.Cells("cMontoDeposito").Value & ", '" & f.Cells("cTipo").Value & "', '" & f.Cells("cObservaciones").Value & "')", CommandType.Text)
             Next
             trans.Commit()
         Catch ex As Exception
@@ -137,13 +137,15 @@ Public Class frmAgregarDeposito
         End Try
     End Sub
 
-    Private Sub AgregarDeposito(_Banco As String, _Cuenta As String, _Moneda As String, _Numero As String, _Monto As Decimal)
+    Private Sub AgregarDeposito(_Banco As String, _Cuenta As String, _Moneda As String, _Numero As String, _Monto As Decimal, _Tipo As String, _Observaciones As String)
         Me.viewDepositos.Rows.Add()
         Me.viewDepositos.Item("cBanco", Me.IndexDeposito).Value = _Banco
         Me.viewDepositos.Item("cCuenta", Me.IndexDeposito).Value = _Cuenta
         Me.viewDepositos.Item("cMonedaDeposito", Me.IndexDeposito).Value = _Moneda
         Me.viewDepositos.Item("cNumero", Me.IndexDeposito).Value = _Numero
         Me.viewDepositos.Item("cMontoDeposito", Me.IndexDeposito).Value = _Monto
+        Me.viewDepositos.Item("cTipo", Me.IndexDeposito).Value = _Tipo
+        Me.viewDepositos.Item("cObservaciones", Me.IndexDeposito).Value = _Observaciones
         Me.IndexDeposito += 1
         Me.CalcualarMontosDeposito()
         Me.txtNumeroDeposito.Text = ""
@@ -185,7 +187,14 @@ Public Class frmAgregarDeposito
             If IsNumeric(Me.txtNumeroDeposito.Text) = True And IsNumeric(Me.txtMontoDeposito.Text) = True Then
                 If CDec(Me.txtMontoDeposito.Text) > 0 Then
                     If Me.PasaValidacionMontos(Me.txtMoneda.Text, CDec(Me.txtMontoDeposito.Text)) = True Then
-                        Me.AgregarDeposito(Me.cboBanco.Text, Me.cboCuenta.Text, Me.txtMoneda.Text, txtNumeroDeposito.Text, Me.txtMontoDeposito.Text)
+
+                        If Me.cboTipoDeposito.Text = "Otros" And Me.txtObservaciones.Text.Trim = "" Then
+                            MsgBox("Debe ingresar una observacion.", MsgBoxStyle.Exclamation, Me.Text)
+                            Me.txtObservaciones.Focus()
+                            Exit Sub
+                        End If
+
+                        Me.AgregarDeposito(Me.cboBanco.Text, Me.cboCuenta.Text, Me.txtMoneda.Text, txtNumeroDeposito.Text, Me.txtMontoDeposito.Text, Me.cboTipoDeposito.Text, Me.txtObservaciones.Text)
                     End If
                 End If
             End If
@@ -207,6 +216,7 @@ Public Class frmAgregarDeposito
     End Sub
 
     Private Sub frmAgregarDeposito_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Me.cboTipoDeposito.SelectedIndex = 0
         Me.CargarBancos()
         Me.TipoCambio = Me.getTipocambio
         Me.CargarIdApertura()

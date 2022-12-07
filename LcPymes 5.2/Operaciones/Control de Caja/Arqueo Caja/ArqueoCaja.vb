@@ -999,11 +999,14 @@ Public Class ArqueoCaja
         If IsClinica() = True Then
             txtDepositosCol.Properties.Enabled = False
             txtDepositoDolar.Properties.Enabled = False
+            txtDepositosCol.Properties.ReadOnly = True
+            txtDepositoDolar.Properties.ReadOnly = True
         Else
             txtDepositosCol.Properties.Enabled = True
             txtDepositoDolar.Properties.Enabled = True
+            txtDepositosCol.Properties.ReadOnly = False
+            txtDepositoDolar.Properties.ReadOnly = False
         End If
-
     End Sub
 
     Function ValoresDefecto()
@@ -1276,9 +1279,6 @@ Public Class ArqueoCaja
                             myCommandArqueoEfectivo.Transaction = Trans
                             myCommandArqueoEfectivo.ExecuteNonQuery()
                         End If
-
-                        Me.RegistrarArqueoDepositos(BindingContext(DataSetArqueo1, "ArqueoCajas").Current("IdApertura"), BindingContext(DataSetArqueo1, "ArqueoCajas").Current("Id"))
-
                         evaluarArqueoTarjetas()
                         Me.AdapterArqueodeCaja.Update(Me.DataSetArqueo1, "ArqueoCajas")
                         Me.AdapterEfectivo.Update(Me.DataSetArqueo1, "ArqueoEfectivo")
@@ -1306,6 +1306,10 @@ Public Class ArqueoCaja
 
                         Me.Inhabilitar()
                         MsgBox("Datos Ingresados Satisfactoriamente....", MsgBoxStyle.Information, "Atención...")
+
+                        'Me.BindingContext(Me.DataSetArqueo1, "ArqueoCajas").Current("Id")
+                        Me.RegistrarArqueoDepositos(BindingContext(DataSetArqueo1, "ArqueoCajas").Current("IdApertura"), BindingContext(DataSetArqueo1, "ArqueoCajas").Current("Id"))
+
 
                         If (MsgBox("Desea Imprimir el reporte de Arqueo ", MsgBoxStyle.YesNo)) = MsgBoxResult.Yes Then
                             Imprimir()

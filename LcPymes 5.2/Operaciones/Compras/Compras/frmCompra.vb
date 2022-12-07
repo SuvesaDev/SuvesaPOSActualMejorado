@@ -3742,7 +3742,7 @@ Public Class frmCompra
                 TxtGravado.Text = ((CostoGravado + CDec(Me.TxtFlete.Text)) * TxtCantidad.Text) - TxtDescuento_Monto.Text
                 TxtExento.Text = "0.00"
             Else
-                TxtGravado.Text = "0.00"
+                TxtGravado.Text = CDec(Me.TxtFlete.Text)
                 TxtExento.Text = (CostoGravado * TxtCantidad.Text) - TxtDescuento_Monto.Text + (CostoExento * TxtCantidad.Text)
             End If
             'Me.TxtGravado.Text += (CDec(Me.TxtFlete.Text) * CDec(Me.TxtCantidad.Text))
@@ -4019,9 +4019,26 @@ Public Class frmCompra
                 Else
                     SubtotalBonificacion = 0
                 End If
-                BindingContext(DataSetCompras, "compras.ComprasArticulos_Comprados").Current("Impuesto") = (BindingContext(DataSetCompras, "compras.ComprasArticulos_Comprados").Current("Gravado") + SubtotalBonificacion) * (BindingContext(DataSetCompras, "compras.ComprasArticulos_Comprados").Current("Impuesto_P") / 100)
-                Imp += BindingContext(DataSetCompras, "compras.ComprasArticulos_Comprados").Current("Impuesto")
-                BindingContext(DataSetCompras, "compras.ComprasArticulos_Comprados").EndCurrentEdit()
+
+                If BindingContext(DataSetCompras, "compras.ComprasArticulos_Comprados").Current("Impuesto_P") < 13 And BindingContext(DataSetCompras, "compras.ComprasArticulos_Comprados").Current("Monto_Flete") > 0 Then
+                    'si el producto es excento pero tienen flete
+                    '    BindingContext(DataSetCompras, "compras.ComprasArticulos_Comprados").Current("Impuesto") = (BindingContext(DataSetCompras, "compras.ComprasArticulos_Comprados").Current("Gravado") + SubtotalBonificacion) * (13 / 100)
+                    '    Imp += BindingContext(DataSetCompras, "compras.ComprasArticulos_Comprados").Current("Impuesto")
+                    '    BindingContext(DataSetCompras, "compras.ComprasArticulos_Comprados").EndCurrentEdit()
+                    'ElseIf BindingContext(DataSetCompras, "compras.ComprasArticulos_Comprados").Current("Impuesto_P") >= 0 And BindingContext(DataSetCompras, "compras.ComprasArticulos_Comprados").Current("Impuesto_P") < 13 And BindingContext(DataSetCompras, "compras.ComprasArticulos_Comprados").Current("Monto_Flete") > 0 Then
+                    'si el producto tiene impuesto reducido y tienen flete
+                    Dim subTotal As Decimal = CDec(BindingContext(DataSetCompras, "compras.ComprasArticulos_Comprados").Current("Gravado")) - CDec(BindingContext(DataSetCompras, "compras.ComprasArticulos_Comprados").Current("Monto_Flete"))
+                    Dim ImpuestoProducto As Decimal = (subTotal + SubtotalBonificacion) * (BindingContext(DataSetCompras, "compras.ComprasArticulos_Comprados").Current("Impuesto_P") / 100)
+                    Dim ImpuestoFlete As Decimal = BindingContext(DataSetCompras, "compras.ComprasArticulos_Comprados").Current("Monto_Flete") * (13 / 100)
+                    BindingContext(DataSetCompras, "compras.ComprasArticulos_Comprados").Current("Impuesto") = ImpuestoProducto + ImpuestoFlete
+                    Imp += BindingContext(DataSetCompras, "compras.ComprasArticulos_Comprados").Current("Impuesto")
+                    BindingContext(DataSetCompras, "compras.ComprasArticulos_Comprados").EndCurrentEdit()
+                Else
+
+                    BindingContext(DataSetCompras, "compras.ComprasArticulos_Comprados").Current("Impuesto") = (BindingContext(DataSetCompras, "compras.ComprasArticulos_Comprados").Current("Gravado") + SubtotalBonificacion) * (BindingContext(DataSetCompras, "compras.ComprasArticulos_Comprados").Current("Impuesto_P") / 100)
+                    Imp += BindingContext(DataSetCompras, "compras.ComprasArticulos_Comprados").Current("Impuesto")
+                    BindingContext(DataSetCompras, "compras.ComprasArticulos_Comprados").EndCurrentEdit()
+                End If
             Next i
             BindingContext(DataSetCompras, "compras").Current("Impuesto") = Imp
         End If
@@ -4308,90 +4325,117 @@ Public Class frmCompra
                 descuento = 0
                 montodescuento = 0
                 subtotal = 0
+
+                Dim Flete As Decimal = (From x As DataGridViewRow In frm.viewDatos.Rows
+                                        Where x.Cells("cFlete").Value = True
+                                        Select CDec(x.Cells("cCosto").Value) - CDec(x.Cells("cMontoDescuento").Value)).Sum
+
+                Dim CantidadProductos As Decimal = (From x As DataGridViewRow In frm.viewDatos.Rows
+                                                    Where x.Cells("cFlete").Value = False
+                                                    Select CDec(x.Cells("cCantidad").Value)).Sum
+
+                Dim FleteUnitario As Decimal = 0
+
+                If Flete > 0 Then
+                    FleteUnitario = Flete / CantidadProductos
+                End If
+
                 For Each r As DataGridViewRow In frm.viewDatos.Rows
+                    If r.Cells("cFlete").Value = False Then
 
 
-                    cant = CDec(r.Cells("cCantidad").Value) * CDec(r.Cells("cCantidadxPresentacion").Value)
-                    costo = (CDec(r.Cells("cCosto").Value) * CDec(r.Cells("cCantidad").Value)) / cant
+                        cant = CDec(r.Cells("cCantidad").Value) * CDec(r.Cells("cCantidadxPresentacion").Value)
+                        costo = (CDec(r.Cells("cCosto").Value) * CDec(r.Cells("cCantidad").Value)) / cant
 
-                    montodescuento = CDec(r.Cells("cMontoDescuento").Value)
-                    If montodescuento > 0 Then
-                        descuento = Math.Round(100 * (montodescuento / (costo * cant)), 4)
-                    Else
-                        descuento = 0
-                    End If
-
-                    nuevocosto = costo - (montodescuento / cant)
-                    subtotal = cant * nuevocosto
-
-                    If costo > 0 Then
-
-                        regalia = (From x As DataGridViewRow In frm.viewDatos.Rows Where x.Cells("cCodigoProveedor").Value = r.Cells("cCodigoProveedor").Value And x.Cells("cCosto").Value = 0 Select CDec(x.Cells("cCantidad").Value)).Sum
-
-                        BindingContext(DataSetCompras, "Compras.Comprasarticulos_comprados").EndCurrentEdit()
-                        BindingContext(DataSetCompras, "Compras.Comprasarticulos_comprados").AddNew()
-
-                        BindingContext(DataSetCompras, "Compras.Comprasarticulos_comprados").Current("CodCabys") = r.Cells("cCabys").Value
-                        BindingContext(DataSetCompras, "Compras.Comprasarticulos_comprados").Current("Codigo") = r.Cells("cId_ArticuloInterno").Value
-                        BindingContext(DataSetCompras, "Compras.Comprasarticulos_comprados").Current("CodArticulo") = r.Cells("cCodigoInterno").Value
-                        BindingContext(DataSetCompras, "Compras.Comprasarticulos_comprados").Current("Descripcion") = r.Cells("cDescripcionInterno").Value
-                        BindingContext(DataSetCompras, "Compras.Comprasarticulos_comprados").Current("Base") = costo
-                        BindingContext(DataSetCompras, "Compras.Comprasarticulos_comprados").Current("Monto_Flete") = 0
-                        BindingContext(DataSetCompras, "Compras.Comprasarticulos_comprados").Current("OtrosCargos") = 0
-                        BindingContext(DataSetCompras, "Compras.Comprasarticulos_comprados").Current("Costo") = nuevocosto
-                        BindingContext(DataSetCompras, "Compras.Comprasarticulos_comprados").Current("NuevoCostoBase") = nuevocosto
-                        BindingContext(DataSetCompras, "Compras.Comprasarticulos_comprados").Current("Cantidad") = cant
-                        BindingContext(DataSetCompras, "Compras.Comprasarticulos_comprados").Current("Regalias") = regalia
-
-                        BindingContext(DataSetCompras, "Compras.Comprasarticulos_comprados").Current("Precio_A") = CDec(r.Cells("cPrecioIva1").Value)
-                        BindingContext(DataSetCompras, "Compras.Comprasarticulos_comprados").Current("Precio_B") = CDec(r.Cells("cPrecioIva1").Value)
-                        BindingContext(DataSetCompras, "Compras.Comprasarticulos_comprados").Current("Precio_C") = CDec(r.Cells("cPrecioIva1").Value)
-                        BindingContext(DataSetCompras, "Compras.Comprasarticulos_comprados").Current("Precio_D") = 0
-
-                        If CDec(r.Cells("cImpuesto").Value) > 0 Then
-                            Me.CK_impuesto.Checked = True
-                            BindingContext(DataSetCompras, "Compras.Comprasarticulos_comprados").Current("Gravado") = subtotal
-                            BindingContext(DataSetCompras, "Compras.Comprasarticulos_comprados").Current("Exento") = 0
-                            BindingContext(DataSetCompras, "Compras.Comprasarticulos_comprados").Current("Impuesto") = subtotal * (CDec(r.Cells("cImpuesto").Value) / 100)
-                            txtimpuesto.Text = BindingContext(DataSetCompras, "Compras.Comprasarticulos_comprados").Current("Impuesto")
-                            BindingContext(DataSetCompras, "Compras.Comprasarticulos_comprados").Current("Impuesto_P") = CDec(r.Cells("cImpuesto").Value)
-                            Me.TxtImpuesto_Porcentaje.Text = CDec(r.Cells("cImpuesto").Value)
-                            Me.TxtImpuesto_Monto.Text = CDec(Me.txtimpuesto.Text)
+                        montodescuento = CDec(r.Cells("cMontoDescuento").Value)
+                        If montodescuento > 0 Then
+                            descuento = Math.Round(100 * (montodescuento / (costo * cant)), 4)
                         Else
-                            txtimpuesto.Text = 0
-                            Me.TxtImpuesto_Porcentaje.Text = 0
-                            Me.TxtImpuesto_Monto.Text = 0
-                            Me.CK_impuesto.Checked = False
-                            BindingContext(DataSetCompras, "Compras.Comprasarticulos_comprados").Current("Gravado") = 0
-                            BindingContext(DataSetCompras, "Compras.Comprasarticulos_comprados").Current("Exento") = subtotal
-                            BindingContext(DataSetCompras, "Compras.Comprasarticulos_comprados").Current("Impuesto") = 0
-                            BindingContext(DataSetCompras, "Compras.Comprasarticulos_comprados").Current("Impuesto_P") = 0
+                            descuento = 0
                         End If
 
-                        BindingContext(DataSetCompras, "Compras.Comprasarticulos_comprados").Current("Descuento") = montodescuento
-                        BindingContext(DataSetCompras, "Compras.Comprasarticulos_comprados").Current("Descuento_P") = descuento
+                        nuevocosto = costo - (montodescuento / cant)
+                        subtotal = cant * nuevocosto
 
-                        BindingContext(DataSetCompras, "Compras.Comprasarticulos_comprados").Current("Total") = subtotal + BindingContext(DataSetCompras, "Compras.Comprasarticulos_comprados").Current("Impuesto_P")
+                        If costo > 0 Then
 
-                        'Dim Link As New Conexion
-                        'Dim Articulo As SqlDataReader
-                        'Articulo = Link.GetRecorset(Link.Conectar, "SELECT Inventario.Precio_A, Inventario.Precio_B, Inventario.Precio_C, Inventario.Precio_D FROM Inventario where  (cast(codigo as varchar) = '" & BindingContext(DataSetCompras, "Compras.Comprasarticulos_comprados").Current("Codigo") & "' or  Barras = '" & BindingContext(DataSetCompras, "Compras.Comprasarticulos_comprados").Current("Codigo") & "')" & "and Inhabilitado = 0 and Servicio = 0")
-                        'If Articulo.Read Then
-                        '    TxtPrecioVenta_A.Text = Articulo!precio_A
-                        '    TxtPrecioVenta_B.Text = Articulo!precio_B
-                        '    TxtPrecioVenta_C.Text = Articulo!precio_C
-                        '    TxtPrecioVenta_D.Text = Articulo!precio_d
-                        'Else
+                            regalia = (From x As DataGridViewRow In frm.viewDatos.Rows Where x.Cells("cCodigoProveedor").Value = r.Cells("cCodigoProveedor").Value And x.Cells("cCosto").Value = 0 Select CDec(x.Cells("cCantidad").Value)).Sum
 
-                        '    BindingContext(DataSetCompras, "compras.ComprasArticulos_Comprados").CancelCurrentEdit()
-                        '    MsgBox("No existe un artículo con ese código o está inhabilitado", MsgBoxStyle.Exclamation)
-                        'End If
+                            BindingContext(DataSetCompras, "Compras.Comprasarticulos_comprados").EndCurrentEdit()
+                            BindingContext(DataSetCompras, "Compras.Comprasarticulos_comprados").AddNew()
 
-                        'Link.DesConectar(Link.sQlconexion)
+                            BindingContext(DataSetCompras, "Compras.Comprasarticulos_comprados").Current("CodCabys") = r.Cells("cCabys").Value
+                            BindingContext(DataSetCompras, "Compras.Comprasarticulos_comprados").Current("Codigo") = r.Cells("cId_ArticuloInterno").Value
+                            BindingContext(DataSetCompras, "Compras.Comprasarticulos_comprados").Current("CodArticulo") = r.Cells("cCodigoInterno").Value
+                            BindingContext(DataSetCompras, "Compras.Comprasarticulos_comprados").Current("Descripcion") = r.Cells("cDescripcionInterno").Value
+                            BindingContext(DataSetCompras, "Compras.Comprasarticulos_comprados").Current("Base") = costo
+                            BindingContext(DataSetCompras, "Compras.Comprasarticulos_comprados").Current("Monto_Flete") = FleteUnitario
+                            BindingContext(DataSetCompras, "Compras.Comprasarticulos_comprados").Current("OtrosCargos") = 0
+                            BindingContext(DataSetCompras, "Compras.Comprasarticulos_comprados").Current("Costo") = nuevocosto
+                            BindingContext(DataSetCompras, "Compras.Comprasarticulos_comprados").Current("NuevoCostoBase") = nuevocosto
+                            BindingContext(DataSetCompras, "Compras.Comprasarticulos_comprados").Current("Cantidad") = cant
+                            BindingContext(DataSetCompras, "Compras.Comprasarticulos_comprados").Current("Regalias") = regalia
 
-                        BindingContext(DataSetCompras, "Compras.Comprasarticulos_comprados").EndCurrentEdit()
-                        Calcular_Totales_Compras()
-                        Calcular_Totales_Compras()
+                            BindingContext(DataSetCompras, "Compras.Comprasarticulos_comprados").Current("Precio_A") = CDec(r.Cells("cPrecioIva1").Value)
+                            BindingContext(DataSetCompras, "Compras.Comprasarticulos_comprados").Current("Precio_B") = CDec(r.Cells("cPrecioIva1").Value)
+                            BindingContext(DataSetCompras, "Compras.Comprasarticulos_comprados").Current("Precio_C") = CDec(r.Cells("cPrecioIva1").Value)
+                            BindingContext(DataSetCompras, "Compras.Comprasarticulos_comprados").Current("Precio_D") = 0
+
+                            If CDec(r.Cells("cImpuesto").Value) > 0 Then
+                                Me.CK_impuesto.Checked = True
+                                BindingContext(DataSetCompras, "Compras.Comprasarticulos_comprados").Current("Gravado") = subtotal + FleteUnitario
+                                BindingContext(DataSetCompras, "Compras.Comprasarticulos_comprados").Current("Exento") = 0
+                                BindingContext(DataSetCompras, "Compras.Comprasarticulos_comprados").Current("Impuesto") = subtotal * (CDec(r.Cells("cImpuesto").Value) / 100)
+                                txtimpuesto.Text = BindingContext(DataSetCompras, "Compras.Comprasarticulos_comprados").Current("Impuesto")
+                                BindingContext(DataSetCompras, "Compras.Comprasarticulos_comprados").Current("Impuesto_P") = CDec(r.Cells("cImpuesto").Value)
+                                Me.TxtImpuesto_Porcentaje.Text = CDec(r.Cells("cImpuesto").Value)
+                                Me.TxtImpuesto_Monto.Text = CDec(Me.txtimpuesto.Text)
+                            Else
+                                txtimpuesto.Text = 0
+                                Me.TxtImpuesto_Porcentaje.Text = 0
+                                Me.TxtImpuesto_Monto.Text = 0
+                                Me.CK_impuesto.Checked = False
+
+                                If FleteUnitario > 0 Then
+                                    'por ley el flete es gravado al 13%
+                                    BindingContext(DataSetCompras, "Compras.Comprasarticulos_comprados").Current("Gravado") = FleteUnitario
+                                    BindingContext(DataSetCompras, "Compras.Comprasarticulos_comprados").Current("Impuesto") = Flete * 0.13
+                                Else
+
+                                    BindingContext(DataSetCompras, "Compras.Comprasarticulos_comprados").Current("Gravado") = 0
+                                    BindingContext(DataSetCompras, "Compras.Comprasarticulos_comprados").Current("Impuesto") = 0
+                                End If
+
+                                BindingContext(DataSetCompras, "Compras.Comprasarticulos_comprados").Current("Exento") = subtotal
+                                BindingContext(DataSetCompras, "Compras.Comprasarticulos_comprados").Current("Impuesto") = 0
+                                BindingContext(DataSetCompras, "Compras.Comprasarticulos_comprados").Current("Impuesto_P") = 0
+                            End If
+
+                            BindingContext(DataSetCompras, "Compras.Comprasarticulos_comprados").Current("Descuento") = montodescuento
+                            BindingContext(DataSetCompras, "Compras.Comprasarticulos_comprados").Current("Descuento_P") = descuento
+
+                            BindingContext(DataSetCompras, "Compras.Comprasarticulos_comprados").Current("Total") = subtotal + FleteUnitario + BindingContext(DataSetCompras, "Compras.Comprasarticulos_comprados").Current("Impuesto_P")
+
+                            'Dim Link As New Conexion
+                            'Dim Articulo As SqlDataReader
+                            'Articulo = Link.GetRecorset(Link.Conectar, "SELECT Inventario.Precio_A, Inventario.Precio_B, Inventario.Precio_C, Inventario.Precio_D FROM Inventario where  (cast(codigo as varchar) = '" & BindingContext(DataSetCompras, "Compras.Comprasarticulos_comprados").Current("Codigo") & "' or  Barras = '" & BindingContext(DataSetCompras, "Compras.Comprasarticulos_comprados").Current("Codigo") & "')" & "and Inhabilitado = 0 and Servicio = 0")
+                            'If Articulo.Read Then
+                            '    TxtPrecioVenta_A.Text = Articulo!precio_A
+                            '    TxtPrecioVenta_B.Text = Articulo!precio_B
+                            '    TxtPrecioVenta_C.Text = Articulo!precio_C
+                            '    TxtPrecioVenta_D.Text = Articulo!precio_d
+                            'Else
+
+                            '    BindingContext(DataSetCompras, "compras.ComprasArticulos_Comprados").CancelCurrentEdit()
+                            '    MsgBox("No existe un artículo con ese código o está inhabilitado", MsgBoxStyle.Exclamation)
+                            'End If
+
+                            'Link.DesConectar(Link.sQlconexion)
+
+                            BindingContext(DataSetCompras, "Compras.Comprasarticulos_comprados").EndCurrentEdit()
+                            Calcular_Totales_Compras()
+                            Calcular_Totales_Compras()
+                        End If
                     End If
                 Next
             End If
@@ -5163,6 +5207,7 @@ Public Class frmCompra
 
     Private Sub TxtImpuesto_Porcentaje_KeyDown(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles TxtImpuesto_Porcentaje.KeyDown
         Try
+            'Meteraldetalle
             Calcular_Monto()
 
             If e.KeyCode = Keys.Enter Then
@@ -5424,7 +5469,7 @@ Public Class frmCompra
         If e.KeyCode = Keys.Enter Then
             ComboMonedaCompra.Enabled = False
             GroupBoxDetalleArticulo.Enabled = True
-            txtCodArticulo.Focus()            
+            txtCodArticulo.Focus()
         End If
     End Sub
     Private Sub TxtTotalFactura_KeyDown(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles TxtTotalFactura.KeyDown
@@ -5531,6 +5576,8 @@ Public Class frmCompra
 
                     End If
 
+
+
                 Case Keys.F1
                     Dim Fx As New cFunciones
                     Dim valor As String
@@ -5554,7 +5601,6 @@ Public Class frmCompra
 #Region "Etiquetas"
     Private Sub Etiquetas()
         Try
-
 
             If (MsgBox("¿Desea Generar las Etiquetas de estos artículos?", MsgBoxStyle.YesNo)) = MsgBoxResult.Yes Then
                 Dim i As Integer

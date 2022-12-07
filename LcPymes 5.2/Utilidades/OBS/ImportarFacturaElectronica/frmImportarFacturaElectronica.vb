@@ -108,12 +108,13 @@ Public Class frmImportarFacturaElectronica
 
                 Dim dt As New DataTable
                 Dim cCabys As String = "0"
-                Dim Cantidad, Costo, Descuento, MontoDescuento, Impuesto As Decimal
+                Dim Cantidad, Costo, Descuento, MontoDescuento, Impuesto, ExoneracionImpuesto As Decimal
                 Cantidad = 0
                 Costo = 0
                 Descuento = 0
                 MontoDescuento = 0
                 Impuesto = 13
+                ExoneracionImpuesto = 0
 
                 For i As Integer = 0 To xmlEnvia.GetElementsByTagName("LineaDetalle").Count - 1
 
@@ -129,9 +130,15 @@ Public Class frmImportarFacturaElectronica
                     dt = Me.Articulo.GET_ARTICULOS_PROVEEDOR_x_CODIGO_PROVEEDOR(Me.txtCedula.Text, codigolinea)
 
                     Me.viewDatos.Rows.Add()
+                    Me.viewDatos.Item("cFlete", Index).Value = False
                     Me.viewDatos.Item("cCodigoProveedor", Index).Value = xmlEnvia.GetElementsByTagName("LineaDetalle")(i)("CodigoComercial")("Codigo").InnerText
                     Me.viewDatos.Item("cDescripcion", Index).Value = xmlEnvia.GetElementsByTagName("LineaDetalle")(i)("Detalle").InnerText.ToUpper
                     Me.viewDatos.Item("cBuscaCodigoInterno", Index).Value = "B"
+
+                    If CStr(Me.viewDatos.Item("cDescripcion", Index).Value).Contains("FLETE") = True Or _
+                    CStr(Me.viewDatos.Item("cCodigoProveedor", Index).Value).Contains("FLETE") = True Then
+                        Me.viewDatos.Item("cFlete", Index).Value = True
+                    End If
 
                     '********************************************************************************************************
                     'Carga el detalle de la compra
@@ -159,6 +166,14 @@ Public Class frmImportarFacturaElectronica
 
                     Try
                         Impuesto = CDec(xmlEnvia.GetElementsByTagName("LineaDetalle")(i)("Impuesto")("Tarifa").InnerText)
+                        Try
+                            ExoneracionImpuesto = CDec(xmlEnvia.GetElementsByTagName("LineaDetalle")(i)("Impuesto")("Exoneracion")("PorcentajeExoneracion").InnerText)
+                        Catch ex As Exception
+                            ExoneracionImpuesto = 0
+                        End Try
+                        Impuesto = Impuesto - ExoneracionImpuesto
+                        'Exoneracion
+                        'PorcentajeExoneracion
                     Catch ex As Exception
                         Impuesto = CDec(0)
                     End Try
@@ -226,9 +241,9 @@ Public Class frmImportarFacturaElectronica
             Dim CodigoInterno As String
             CodigoInterno = Me.Articulo.BuscarArticulo
 
-            If IsNumeric(CodigoInterno) And CodigoInterno <> "" Then
-                If CodigoInterno <> 0 Then
-                    Me.Articulo.GET_ARTICULO(CodigoInterno)
+            If CodigoInterno <> "" Then
+                'If CodigoInterno <> 0 Then
+                If Me.Articulo.GET_ARTICULO(CodigoInterno) = True Then
                     Me.viewDatos.Item("cId_ArticuloInterno", e.RowIndex).Value = Me.Articulo.Id_Articulo
                     Me.viewDatos.Item("cCodigoInterno", e.RowIndex).Value = Me.Articulo.Codigo
                     Me.viewDatos.Item("cDescripcionInterno", e.RowIndex).Value = Me.Articulo.Descripcion
@@ -237,6 +252,7 @@ Public Class frmImportarFacturaElectronica
                     Me.viewDatos.Item("cPrecioIva2", e.RowIndex).Value = Me.Articulo.Precio_IVA2
                     Me.viewDatos.Item("cPrecioIva3", e.RowIndex).Value = Me.Articulo.Precio_IVA3
                 End If
+                'End If
             End If
 
         End If
@@ -387,7 +403,7 @@ Namespace GestionDatos
             End If
         End Function
 
-        Public Sub GET_ARTICULO(_IdArticulo As String, Optional ByVal _IdPuntoVenta As Integer = 0)
+        Public Function GET_ARTICULO(_IdArticulo As String, Optional ByVal _IdPuntoVenta As Integer = 0) As Boolean
             Dim dt As New DataTable
             cFunciones.Llenar_Tabla_Generico("select i.Codigo As Id_Articulo, i.Cod_Articulo As Codigo, i.Descripcion, i.PresentaCant As Cantidad_Presentacion, p.Presentaciones As Presentacion, i.Precio_A As Precio_IVA1, i.Precio_B As Precio_IVA2, i.Precio_C As Precio_IVA3 from Inventario i inner join Presentaciones p on  i.CodPresentacion = p.CodPres where i.Cod_Articulo = '" & _IdArticulo & "'", dt, Me.Conexcion(_IdPuntoVenta))
             If dt.Rows.Count > 0 Then
@@ -399,12 +415,15 @@ Namespace GestionDatos
                 Me.Precio_IVA1 = dt.Rows(0).Item("Precio_IVA1")
                 Me.Precio_IVA2 = dt.Rows(0).Item("Precio_IVA2")
                 Me.Precio_IVA3 = dt.Rows(0).Item("Precio_IVA3")
+                Return True
+            Else
+                Return False
             End If
-        End Sub
+        End Function
 
         Public Sub SAVE_ARTICULO_PROVEEDOR(_Cedula As String, _CodProveedor As String, _CodInterno As String, _CantPresentacion As Decimal)
             Dim db As New OBSoluciones.SQL.Sentencias(CadenaConexionSeePOS)
-            Dim strSQL As String = "Delete from articulos_proveedor Where Cedula = '" & _CodProveedor & "' and Codigo_Proveedor = '" & _CodInterno & "'"
+            Dim strSQL As String = "Delete from articulos_proveedor Where Cedula = '" & _Cedula & "' and Codigo_Proveedor = '" & _CodProveedor & "'"
             db.Ejecutar(strSQL, CommandType.Text)
             strSQL = "Insert Into articulos_proveedor(Cedula, Codigo_Proveedor, Id_Articulo, CantidadxPresentacion) Values('" & _Cedula & "', '" & _CodProveedor & "', " & _CodInterno & ", " & _CantPresentacion & ")"
             db.Ejecutar(strSQL, CommandType.Text)

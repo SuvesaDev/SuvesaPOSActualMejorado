@@ -55,87 +55,96 @@ Partial Class frmAumentarOtro
         '
         'txtExistenciaDescargar
         '
-        Me.txtExistenciaDescargar.Location = New System.Drawing.Point(377, 42)
-        Me.txtExistenciaDescargar.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.txtExistenciaDescargar.Location = New System.Drawing.Point(503, 52)
+        Me.txtExistenciaDescargar.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.txtExistenciaDescargar.MaxLength = 20
         Me.txtExistenciaDescargar.Name = "txtExistenciaDescargar"
         Me.txtExistenciaDescargar.ReadOnly = True
-        Me.txtExistenciaDescargar.Size = New System.Drawing.Size(84, 20)
+        Me.txtExistenciaDescargar.Size = New System.Drawing.Size(111, 22)
         Me.txtExistenciaDescargar.TabIndex = 13
         '
         'Label10
         '
         Me.Label10.AutoSize = True
-        Me.Label10.Location = New System.Drawing.Point(374, 26)
+        Me.Label10.Location = New System.Drawing.Point(499, 32)
+        Me.Label10.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(87, 13)
+        Me.Label10.Size = New System.Drawing.Size(113, 17)
         Me.Label10.TabIndex = 12
         Me.Label10.Text = "Existencia actual"
         '
         'txtDescripcionDescargar
         '
-        Me.txtDescripcionDescargar.Location = New System.Drawing.Point(88, 42)
-        Me.txtDescripcionDescargar.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.txtDescripcionDescargar.Location = New System.Drawing.Point(117, 52)
+        Me.txtDescripcionDescargar.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.txtDescripcionDescargar.MaxLength = 20
         Me.txtDescripcionDescargar.Name = "txtDescripcionDescargar"
         Me.txtDescripcionDescargar.ReadOnly = True
-        Me.txtDescripcionDescargar.Size = New System.Drawing.Size(279, 20)
+        Me.txtDescripcionDescargar.Size = New System.Drawing.Size(371, 22)
         Me.txtDescripcionDescargar.TabIndex = 11
         '
         'txtCodigoDescargar
         '
-        Me.txtCodigoDescargar.Location = New System.Drawing.Point(31, 42)
-        Me.txtCodigoDescargar.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.txtCodigoDescargar.Location = New System.Drawing.Point(41, 52)
+        Me.txtCodigoDescargar.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.txtCodigoDescargar.MaxLength = 20
         Me.txtCodigoDescargar.Name = "txtCodigoDescargar"
         Me.txtCodigoDescargar.ReadOnly = True
-        Me.txtCodigoDescargar.Size = New System.Drawing.Size(50, 20)
+        Me.txtCodigoDescargar.Size = New System.Drawing.Size(65, 22)
         Me.txtCodigoDescargar.TabIndex = 10
         '
         'Label9
         '
         Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(86, 25)
+        Me.Label9.Location = New System.Drawing.Point(115, 31)
+        Me.Label9.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(63, 13)
+        Me.Label9.Size = New System.Drawing.Size(82, 17)
         Me.Label9.TabIndex = 8
         Me.Label9.Text = "Descripción"
         '
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(6, 25)
+        Me.Label5.Location = New System.Drawing.Point(8, 31)
+        Me.Label5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(40, 13)
+        Me.Label5.Size = New System.Drawing.Size(52, 17)
         Me.Label5.TabIndex = 9
         Me.Label5.Text = "Codigo"
         '
         'txtCantidadDescargar
         '
-        Me.txtCantidadDescargar.Location = New System.Drawing.Point(6, 93)
+        Me.txtCantidadDescargar.DecimalPlaces = 2
+        Me.txtCantidadDescargar.Increment = New Decimal(New Integer() {50, 0, 0, 131072})
+        Me.txtCantidadDescargar.Location = New System.Drawing.Point(8, 114)
+        Me.txtCantidadDescargar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.txtCantidadDescargar.Maximum = New Decimal(New Integer() {1000, 0, 0, 0})
-        Me.txtCantidadDescargar.Minimum = New Decimal(New Integer() {1, 0, 0, 0})
+        Me.txtCantidadDescargar.Minimum = New Decimal(New Integer() {1, 0, 0, 131072})
         Me.txtCantidadDescargar.Name = "txtCantidadDescargar"
-        Me.txtCantidadDescargar.Size = New System.Drawing.Size(84, 20)
+        Me.txtCantidadDescargar.Size = New System.Drawing.Size(112, 22)
         Me.txtCantidadDescargar.TabIndex = 15
+        Me.txtCantidadDescargar.ThousandsSeparator = True
         Me.txtCantidadDescargar.Value = New Decimal(New Integer() {1, 0, 0, 0})
         '
         'Label7
         '
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
-        Me.Label7.Location = New System.Drawing.Point(3, 74)
+        Me.Label7.Location = New System.Drawing.Point(4, 91)
+        Me.Label7.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(101, 13)
+        Me.Label7.Size = New System.Drawing.Size(134, 17)
         Me.Label7.TabIndex = 14
         Me.Label7.Text = "Cantidad Descargar"
         '
         'btnAceptar
         '
         Me.btnAceptar.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnAceptar.Location = New System.Drawing.Point(185, 279)
+        Me.btnAceptar.Location = New System.Drawing.Point(247, 343)
+        Me.btnAceptar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnAceptar.Name = "btnAceptar"
-        Me.btnAceptar.Size = New System.Drawing.Size(141, 35)
+        Me.btnAceptar.Size = New System.Drawing.Size(188, 43)
         Me.btnAceptar.TabIndex = 16
         Me.btnAceptar.Text = "Aceptar"
         Me.btnAceptar.UseVisualStyleBackColor = True
@@ -143,9 +152,10 @@ Partial Class frmAumentarOtro
         'btnCancelar
         '
         Me.btnCancelar.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnCancelar.Location = New System.Drawing.Point(332, 279)
+        Me.btnCancelar.Location = New System.Drawing.Point(443, 343)
+        Me.btnCancelar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnCancelar.Name = "btnCancelar"
-        Me.btnCancelar.Size = New System.Drawing.Size(141, 35)
+        Me.btnCancelar.Size = New System.Drawing.Size(188, 43)
         Me.btnCancelar.TabIndex = 17
         Me.btnCancelar.Text = "Cancelar"
         Me.btnCancelar.UseVisualStyleBackColor = True
@@ -162,9 +172,11 @@ Partial Class frmAumentarOtro
         Me.GroupBox1.Controls.Add(Me.Label7)
         Me.GroupBox1.Controls.Add(Me.Label10)
         Me.GroupBox1.Controls.Add(Me.txtExistenciaDescargar)
-        Me.GroupBox1.Location = New System.Drawing.Point(12, 12)
+        Me.GroupBox1.Location = New System.Drawing.Point(16, 15)
+        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(483, 126)
+        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GroupBox1.Size = New System.Drawing.Size(644, 155)
         Me.GroupBox1.TabIndex = 26
         Me.GroupBox1.TabStop = False
         '
@@ -173,18 +185,20 @@ Partial Class frmAumentarOtro
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label8.ForeColor = System.Drawing.Color.DarkRed
-        Me.Label8.Location = New System.Drawing.Point(5, -4)
+        Me.Label8.Location = New System.Drawing.Point(7, -5)
+        Me.Label8.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(171, 24)
+        Me.Label8.Size = New System.Drawing.Size(219, 29)
         Me.Label8.TabIndex = 28
         Me.Label8.Text = "Articulo a Disminuir"
         '
         'btnBuscarDescargar
         '
         Me.btnBuscarDescargar.Image = Global.LcPymes_5._2.My.Resources.Resources.research
-        Me.btnBuscarDescargar.Location = New System.Drawing.Point(6, 40)
+        Me.btnBuscarDescargar.Location = New System.Drawing.Point(8, 49)
+        Me.btnBuscarDescargar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnBuscarDescargar.Name = "btnBuscarDescargar"
-        Me.btnBuscarDescargar.Size = New System.Drawing.Size(25, 24)
+        Me.btnBuscarDescargar.Size = New System.Drawing.Size(33, 30)
         Me.btnBuscarDescargar.TabIndex = 27
         Me.btnBuscarDescargar.UseVisualStyleBackColor = True
         '
@@ -202,9 +216,11 @@ Partial Class frmAumentarOtro
         Me.GroupBox2.Controls.Add(Me.Label3)
         Me.GroupBox2.Controls.Add(Me.Label4)
         Me.GroupBox2.Controls.Add(Me.txtExistenciaAumentar)
-        Me.GroupBox2.Location = New System.Drawing.Point(12, 147)
+        Me.GroupBox2.Location = New System.Drawing.Point(16, 181)
+        Me.GroupBox2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(483, 126)
+        Me.GroupBox2.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GroupBox2.Size = New System.Drawing.Size(644, 155)
         Me.GroupBox2.TabIndex = 27
         Me.GroupBox2.TabStop = False
         '
@@ -213,124 +229,133 @@ Partial Class frmAumentarOtro
         Me.Label11.AutoSize = True
         Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label11.ForeColor = System.Drawing.Color.DarkGreen
-        Me.Label11.Location = New System.Drawing.Point(4, -5)
+        Me.Label11.Location = New System.Drawing.Point(5, -6)
+        Me.Label11.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(175, 24)
+        Me.Label11.Size = New System.Drawing.Size(220, 29)
         Me.Label11.TabIndex = 29
         Me.Label11.Text = "Articulo a Aumentar"
         '
         'txtCantidadAumentar
         '
-        Me.txtCantidadAumentar.Location = New System.Drawing.Point(108, 90)
+        Me.txtCantidadAumentar.Location = New System.Drawing.Point(144, 111)
+        Me.txtCantidadAumentar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.txtCantidadAumentar.Name = "txtCantidadAumentar"
         Me.txtCantidadAumentar.ReadOnly = True
-        Me.txtCantidadAumentar.Size = New System.Drawing.Size(94, 20)
+        Me.txtCantidadAumentar.Size = New System.Drawing.Size(124, 22)
         Me.txtCantidadAumentar.TabIndex = 30
         '
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(3, 74)
+        Me.Label6.Location = New System.Drawing.Point(4, 91)
+        Me.Label6.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(88, 13)
+        Me.Label6.Size = New System.Drawing.Size(115, 17)
         Me.Label6.TabIndex = 28
         Me.Label6.Text = "Aumentar x Saco"
         '
         'txtDescargaxSaco
         '
-        Me.txtDescargaxSaco.Location = New System.Drawing.Point(6, 90)
-        Me.txtDescargaxSaco.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.txtDescargaxSaco.Location = New System.Drawing.Point(8, 111)
+        Me.txtDescargaxSaco.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.txtDescargaxSaco.MaxLength = 20
         Me.txtDescargaxSaco.Name = "txtDescargaxSaco"
-        Me.txtDescargaxSaco.Size = New System.Drawing.Size(84, 20)
+        Me.txtDescargaxSaco.Size = New System.Drawing.Size(111, 22)
         Me.txtDescargaxSaco.TabIndex = 29
         '
         'btnBuscarAumentar
         '
         Me.btnBuscarAumentar.Image = Global.LcPymes_5._2.My.Resources.Resources.research
-        Me.btnBuscarAumentar.Location = New System.Drawing.Point(6, 40)
+        Me.btnBuscarAumentar.Location = New System.Drawing.Point(8, 49)
+        Me.btnBuscarAumentar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnBuscarAumentar.Name = "btnBuscarAumentar"
-        Me.btnBuscarAumentar.Size = New System.Drawing.Size(25, 24)
+        Me.btnBuscarAumentar.Size = New System.Drawing.Size(33, 30)
         Me.btnBuscarAumentar.TabIndex = 27
         Me.btnBuscarAumentar.UseVisualStyleBackColor = True
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(6, 25)
+        Me.Label1.Location = New System.Drawing.Point(8, 31)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(40, 13)
+        Me.Label1.Size = New System.Drawing.Size(52, 17)
         Me.Label1.TabIndex = 9
         Me.Label1.Text = "Codigo"
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(86, 25)
+        Me.Label2.Location = New System.Drawing.Point(115, 31)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(63, 13)
+        Me.Label2.Size = New System.Drawing.Size(82, 17)
         Me.Label2.TabIndex = 8
         Me.Label2.Text = "Descripción"
         '
         'txtCodigoAumentar
         '
-        Me.txtCodigoAumentar.Location = New System.Drawing.Point(31, 42)
-        Me.txtCodigoAumentar.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.txtCodigoAumentar.Location = New System.Drawing.Point(41, 52)
+        Me.txtCodigoAumentar.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.txtCodigoAumentar.MaxLength = 20
         Me.txtCodigoAumentar.Name = "txtCodigoAumentar"
         Me.txtCodigoAumentar.ReadOnly = True
-        Me.txtCodigoAumentar.Size = New System.Drawing.Size(50, 20)
+        Me.txtCodigoAumentar.Size = New System.Drawing.Size(65, 22)
         Me.txtCodigoAumentar.TabIndex = 10
         '
         'txtDescripcionAumentar
         '
-        Me.txtDescripcionAumentar.Location = New System.Drawing.Point(88, 42)
-        Me.txtDescripcionAumentar.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.txtDescripcionAumentar.Location = New System.Drawing.Point(117, 52)
+        Me.txtDescripcionAumentar.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.txtDescripcionAumentar.MaxLength = 20
         Me.txtDescripcionAumentar.Name = "txtDescripcionAumentar"
         Me.txtDescripcionAumentar.ReadOnly = True
-        Me.txtDescripcionAumentar.Size = New System.Drawing.Size(279, 20)
+        Me.txtDescripcionAumentar.Size = New System.Drawing.Size(371, 22)
         Me.txtDescripcionAumentar.TabIndex = 11
         '
         'Label3
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
-        Me.Label3.Location = New System.Drawing.Point(105, 69)
+        Me.Label3.Location = New System.Drawing.Point(140, 85)
+        Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(97, 13)
+        Me.Label3.Size = New System.Drawing.Size(129, 17)
         Me.Label3.TabIndex = 14
         Me.Label3.Text = "Cantidad Aumentar"
         '
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(374, 26)
+        Me.Label4.Location = New System.Drawing.Point(499, 32)
+        Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(87, 13)
+        Me.Label4.Size = New System.Drawing.Size(113, 17)
         Me.Label4.TabIndex = 12
         Me.Label4.Text = "Existencia actual"
         '
         'txtExistenciaAumentar
         '
-        Me.txtExistenciaAumentar.Location = New System.Drawing.Point(377, 42)
-        Me.txtExistenciaAumentar.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.txtExistenciaAumentar.Location = New System.Drawing.Point(503, 52)
+        Me.txtExistenciaAumentar.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.txtExistenciaAumentar.MaxLength = 20
         Me.txtExistenciaAumentar.Name = "txtExistenciaAumentar"
         Me.txtExistenciaAumentar.ReadOnly = True
-        Me.txtExistenciaAumentar.Size = New System.Drawing.Size(84, 20)
+        Me.txtExistenciaAumentar.Size = New System.Drawing.Size(111, 22)
         Me.txtExistenciaAumentar.TabIndex = 13
         '
         'frmAumentarOtro
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(511, 325)
+        Me.ClientSize = New System.Drawing.Size(681, 400)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.btnCancelar)
         Me.Controls.Add(Me.btnAceptar)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
+        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "frmAumentarOtro"

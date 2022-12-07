@@ -26,38 +26,39 @@ Public Class frmEtiquetarGuanavet
     Private Sub printDocument1_PrintPage(ByVal sender As Object, ByVal e As System.Drawing.Printing.PrintPageEventArgs) Handles printDocument1.PrintPage
         Dim caption As String = ""
         Dim tamanyo As Integer = 0
-        Dim pos As Integer = 0
+        Dim vVertical As Integer = 0
+        Dim vHorisontal As Integer = 20
         Dim cuna As Integer = Me.GetCuna
 
         Dim g As Graphics = e.Graphics
         Dim fnt As Font = New Font("Arial", 7)
 
-        pos = 15 + cuna
+        vVertical = 15 + cuna
         caption = Me.txtDescripcion.Text
-        g.DrawString(caption, fnt, System.Drawing.Brushes.Black, 55, pos)
-
-        pos = 27 + cuna
+        g.DrawString(caption, fnt, System.Drawing.Brushes.Black, vHorisontal, vVertical)
+8:
+        vVertical = 27 + cuna
         'g.DrawImage(pLogo.Image, 1, pos, 69, 69)
-        pos = 27 + cuna
-        g.DrawImage(pictBarcode.Image, 50, pos, 190, 50)
+        vVertical = 27 + cuna
+        g.DrawImage(pictBarcode.Image, vHorisontal, vVertical, 190, 50)
 
-        pos = 80 + cuna
+        vVertical = 80 + cuna
         caption = "COD: " & Me.txtCodArticulo.Text & IIf(Me.IncluirPrecio = True, "     ₡" & CDec(txtPrecio.Text).ToString("N2"), "")
-        g.DrawString(caption, fnt, System.Drawing.Brushes.Black, 55, pos)
+        g.DrawString(caption, fnt, System.Drawing.Brushes.Black, vHorisontal, vVertical)
 
-        If CInt(lblPrecioLent.Text) <= 10 Then pos = 180 + cuna
-        If CInt(lblPrecioLent.Text) > 10 Then pos = 130 + cuna
-        pos = 74 + cuna
+        If CInt(lblPrecioLent.Text) <= 10 Then vVertical = 180 + cuna
+        If CInt(lblPrecioLent.Text) > 10 Then vVertical = 130 + cuna
+        vVertical = 74 + cuna
         'caption = "₡" & " " & Format(CDec(Me.txtPrecio.Text * Me.txtCantidad.Value), "N2")
         ' g.DrawString(caption, fnt, System.Drawing.Brushes.Black, 76, pos)
 
-        pos = 90 + cuna
+        vVertical = 90 + cuna
         caption = Me.lblPresentacion.Text & "  SUPER VETERINARIA LIBERIA"
-        g.DrawString(caption, fnt, System.Drawing.Brushes.Black, 55, pos)
+        g.DrawString(caption, fnt, System.Drawing.Brushes.Black, vHorisontal, vVertical)
 
         fnt = New Font("Arial", 7)
 
-        pos = 98 + cuna
+        vVertical = 98 + cuna
         caption = Me.Empresa.Replace(", S.A.", "") & " " & "Tel. :" & Me.Telefono & " Cel. :" & Me.Celular
         'g.DrawString(caption, fnt, System.Drawing.Brushes.Black, 1, pos)
 

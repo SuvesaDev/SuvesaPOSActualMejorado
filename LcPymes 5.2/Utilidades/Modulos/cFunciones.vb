@@ -145,7 +145,7 @@ Public Class cFunciones
             ' Creamos el comando para la consulta
             Dim cmd As SqlCommand = New SqlCommand
             Dim sel As String = _
-            "SELECT Id_Compra, Factura, Fecha, TotalFactura, dbo.SaldoFacturaCompra(GETDATE(), Factura, CodigoProv) as Saldo, Prepagada FROM compras WHERE (FacturaCancelado = 0) AND (TipoCompra = 'CRE') AND (CodigoProv = " & CodigoProv & ") AND (dbo.SaldoFacturaCompra(GETDATE(), Factura, CodigoProv) <> 0) order by Fecha"
+            "SELECT Id_Compra, Factura, Fecha, TotalFactura, dbo.SaldoFacturaCompra(GETDATE(), Factura, CodigoProv) as Saldo, Prepagada, FechaPreabono, DocumentoPreabono FROM compras WHERE (FacturaCancelado = 0) AND (TipoCompra = 'CRE') AND (CodigoProv = " & CodigoProv & ") AND (dbo.SaldoFacturaCompra(GETDATE(), Factura, CodigoProv) <> 0) order by Fecha"
             cmd.CommandText = sel
             cmd.Connection = cnn
             cmd.CommandType = CommandType.Text

@@ -97,6 +97,7 @@ Public Class frmUtilidadVentasxRangoFechas
                 rpt.SetParameterValue(0, Me.dtpDesde.Value)
                 rpt.SetParameterValue(1, Me.dtpHasta.Value)
                 rpt.SetParameterValue(2, huber)
+                rpt.SetParameterValue(3, Me.ckSoloServicios.Checked)
                 rpt.RecordSelectionFormula = Formula
                 CrystalReportsConexion.LoadReportViewer(CrystalReportViewer1, rpt, , CadenaConexionSeePOS)
                 'Me.CrystalReportViewer1.SelectionFormula = Formula

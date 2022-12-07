@@ -209,6 +209,10 @@ Public Class MainForm
     Friend WithEvents MenuItem36 As System.Windows.Forms.MenuItem
     Friend WithEvents MenuItem38 As System.Windows.Forms.MenuItem
     Friend WithEvents MenuItem54 As System.Windows.Forms.MenuItem
+    Friend WithEvents MenuItem55 As System.Windows.Forms.MenuItem
+    Friend WithEvents MenuItem56 As System.Windows.Forms.MenuItem
+    Friend WithEvents MenuItem94 As System.Windows.Forms.MenuItem
+    Friend WithEvents MenuItem106 As System.Windows.Forms.MenuItem
     Dim SistemaNormal As Boolean = False
 #End Region
 
@@ -463,6 +467,7 @@ Public Class MainForm
         Me.MenuItem156 = New System.Windows.Forms.MenuItem()
         Me.MenuItem157 = New System.Windows.Forms.MenuItem()
         Me.MenuItem35 = New System.Windows.Forms.MenuItem()
+        Me.MenuItem55 = New System.Windows.Forms.MenuItem()
         Me.MenuItemLinea01 = New System.Windows.Forms.MenuItem()
         Me.MenuItemCuentasXCobrar = New System.Windows.Forms.MenuItem()
         Me.MenuItemOperacion_AbonosCXC = New System.Windows.Forms.MenuItem()
@@ -512,6 +517,7 @@ Public Class MainForm
         Me.MenuItem105 = New System.Windows.Forms.MenuItem()
         Me.mnVentasPendientes = New System.Windows.Forms.MenuItem()
         Me.MenuItem38 = New System.Windows.Forms.MenuItem()
+        Me.MenuItem56 = New System.Windows.Forms.MenuItem()
         Me.MenuItem82 = New System.Windows.Forms.MenuItem()
         Me.mnPrestamosBodega = New System.Windows.Forms.MenuItem()
         Me.mnEmpresaPrestamos = New System.Windows.Forms.MenuItem()
@@ -610,6 +616,7 @@ Public Class MainForm
         Me.mnuReporteDevolucionDetallado = New System.Windows.Forms.MenuItem()
         Me.mnuReporteGraficoVentasAnuales = New System.Windows.Forms.MenuItem()
         Me.mnuReporteCrecimientoCompras = New System.Windows.Forms.MenuItem()
+        Me.MenuItem94 = New System.Windows.Forms.MenuItem()
         Me.MenuItemReporteCompras = New System.Windows.Forms.MenuItem()
         Me.MenuItem174 = New System.Windows.Forms.MenuItem()
         Me.MenuItem142 = New System.Windows.Forms.MenuItem()
@@ -741,6 +748,7 @@ Public Class MainForm
         Me.ToolStripButton2 = New System.Windows.Forms.ToolStripButton()
         Me.TimerSolicitudes = New System.Windows.Forms.Timer(Me.components)
         Me.PictureBoxFondo = New System.Windows.Forms.PictureBox()
+        Me.MenuItem106 = New System.Windows.Forms.MenuItem()
         CType(Me.StatusBarPanel1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.StatusBarPanel4, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.StatusBarPanel2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -954,7 +962,7 @@ Public Class MainForm
         Me.menuExtender.SetExtEnable(Me.MenuItemVentas, True)
         Me.menuExtender.SetImageIndex(Me.MenuItemVentas, -1)
         Me.MenuItemVentas.Index = 0
-        Me.MenuItemVentas.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.MenuItemOperacion_Facturacion, Me.MenuItem112, Me.MenuItemOperacion_Proformas, Me.MenuItem113, Me.MenuItem108, Me.MenuItem114, Me.MenuItemOperacion_DevolucionesVentas, Me.MenuItem54, Me.MenuItem11, Me.MenuItem27, Me.MenuItem70, Me.MenuItem86, Me.MenuItem87, Me.MenuItem88, Me.mnMovimientoArticulo, Me.mnProveedores, Me.MenuItem120, Me.MenuItem121, Me.MenuItem118, Me.MenuItem127, Me.MenuItem130, Me.MenuItem131, Me.MenuItem132, Me.MenuItem151, Me.MenuItem154, Me.MenuItem155, Me.MenuItem35})
+        Me.MenuItemVentas.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.MenuItemOperacion_Facturacion, Me.MenuItem112, Me.MenuItemOperacion_Proformas, Me.MenuItem113, Me.MenuItem108, Me.MenuItem114, Me.MenuItemOperacion_DevolucionesVentas, Me.MenuItem54, Me.MenuItem11, Me.MenuItem27, Me.MenuItem70, Me.MenuItem86, Me.MenuItem87, Me.MenuItem88, Me.mnMovimientoArticulo, Me.mnProveedores, Me.MenuItem120, Me.MenuItem121, Me.MenuItem118, Me.MenuItem127, Me.MenuItem130, Me.MenuItem131, Me.MenuItem132, Me.MenuItem151, Me.MenuItem154, Me.MenuItem155, Me.MenuItem35, Me.MenuItem55})
         Me.MenuItemVentas.OwnerDraw = True
         Me.MenuItemVentas.Text = "Ventas"
         '
@@ -1203,6 +1211,12 @@ Public Class MainForm
         Me.MenuItem35.Index = 26
         Me.MenuItem35.Text = "Albaranes"
         '
+        'MenuItem55
+        '
+        Me.menuExtender.SetImageIndex(Me.MenuItem55, -1)
+        Me.MenuItem55.Index = 27
+        Me.MenuItem55.Text = "Reporte de productos por casa comercial"
+        '
         'MenuItemLinea01
         '
         Me.menuExtender.SetImageIndex(Me.MenuItemLinea01, -1)
@@ -1215,7 +1229,7 @@ Public Class MainForm
         Me.menuExtender.SetExtEnable(Me.MenuItemCuentasXCobrar, True)
         Me.menuExtender.SetImageIndex(Me.MenuItemCuentasXCobrar, -1)
         Me.MenuItemCuentasXCobrar.Index = 2
-        Me.MenuItemCuentasXCobrar.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.MenuItemOperacion_AbonosCXC, Me.MenuItemOperacion_AjustesCXC, Me.MenuItemOperacion_EstadoCuentaCXC, Me.MenuItem122, Me.MenuItem107, Me.MenuItem149, Me.MenuItem192, Me.MenuItem185, Me.MenuItem186, Me.MenuItem189, Me.MenuItem190})
+        Me.MenuItemCuentasXCobrar.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.MenuItemOperacion_AbonosCXC, Me.MenuItemOperacion_AjustesCXC, Me.MenuItemOperacion_EstadoCuentaCXC, Me.MenuItem106, Me.MenuItem122, Me.MenuItem107, Me.MenuItem149, Me.MenuItem192, Me.MenuItem185, Me.MenuItem186, Me.MenuItem189, Me.MenuItem190})
         Me.MenuItemCuentasXCobrar.OwnerDraw = True
         Me.MenuItemCuentasXCobrar.Text = "Cuentas x Cobrar"
         '
@@ -1240,37 +1254,37 @@ Public Class MainForm
         'MenuItem122
         '
         Me.menuExtender.SetImageIndex(Me.MenuItem122, -1)
-        Me.MenuItem122.Index = 3
+        Me.MenuItem122.Index = 4
         Me.MenuItem122.Text = "Estado de Cuenta Firmado Contado"
         '
         'MenuItem107
         '
         Me.menuExtender.SetImageIndex(Me.MenuItem107, -1)
-        Me.MenuItem107.Index = 4
+        Me.MenuItem107.Index = 5
         Me.MenuItem107.Text = "Facturas Archivadas"
         '
         'MenuItem149
         '
         Me.menuExtender.SetImageIndex(Me.MenuItem149, -1)
-        Me.MenuItem149.Index = 5
+        Me.MenuItem149.Index = 6
         Me.MenuItem149.Text = "Proximas a Vencer"
         '
         'MenuItem192
         '
         Me.menuExtender.SetImageIndex(Me.MenuItem192, -1)
-        Me.MenuItem192.Index = 6
+        Me.MenuItem192.Index = 7
         Me.MenuItem192.Text = "Vencen en X Meses"
         '
         'MenuItem185
         '
         Me.menuExtender.SetImageIndex(Me.MenuItem185, -1)
-        Me.MenuItem185.Index = 7
+        Me.MenuItem185.Index = 8
         Me.MenuItem185.Text = "-"
         '
         'MenuItem186
         '
         Me.menuExtender.SetImageIndex(Me.MenuItem186, -1)
-        Me.MenuItem186.Index = 8
+        Me.MenuItem186.Index = 9
         Me.MenuItem186.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.MenuItem187})
         Me.MenuItem186.Text = "Gestion de Cobro"
         '
@@ -1283,13 +1297,13 @@ Public Class MainForm
         'MenuItem189
         '
         Me.menuExtender.SetImageIndex(Me.MenuItem189, -1)
-        Me.MenuItem189.Index = 9
+        Me.MenuItem189.Index = 10
         Me.MenuItem189.Text = "Reporte Abonos Incobrables"
         '
         'MenuItem190
         '
         Me.menuExtender.SetImageIndex(Me.MenuItem190, -1)
-        Me.MenuItem190.Index = 10
+        Me.MenuItem190.Index = 11
         Me.MenuItem190.Text = "Enviar a Incobrables"
         '
         'MenuItemLinea02
@@ -1440,7 +1454,7 @@ Public Class MainForm
         Me.menuExtender.SetExtEnable(Me.MenuItemControlCaja, True)
         Me.menuExtender.SetImageIndex(Me.MenuItemControlCaja, -1)
         Me.MenuItemControlCaja.Index = 8
-        Me.MenuItemControlCaja.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.MenuItemOperacion_Caja_Apertura, Me.MenuItemOperacion_Caja_Arqueo, Me.MenuItemOperacion_Caja_Cierre, Me.MenuItem147, Me.MenuItemOperacion_Caja_OpcionesPago, Me.MenuItemOperacion_Caja_Movimientos, Me.MenuItem12, Me.MenuItem59, Me.MenuItem58, Me.MenuItem105, Me.mnVentasPendientes, Me.MenuItem38})
+        Me.MenuItemControlCaja.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.MenuItemOperacion_Caja_Apertura, Me.MenuItemOperacion_Caja_Arqueo, Me.MenuItemOperacion_Caja_Cierre, Me.MenuItem147, Me.MenuItemOperacion_Caja_OpcionesPago, Me.MenuItemOperacion_Caja_Movimientos, Me.MenuItem12, Me.MenuItem59, Me.MenuItem58, Me.MenuItem105, Me.mnVentasPendientes, Me.MenuItem38, Me.MenuItem56})
         Me.MenuItemControlCaja.OwnerDraw = True
         Me.MenuItemControlCaja.Text = "Control de Caja"
         '
@@ -1515,6 +1529,12 @@ Public Class MainForm
         Me.menuExtender.SetImageIndex(Me.MenuItem38, -1)
         Me.MenuItem38.Index = 11
         Me.MenuItem38.Text = "Reporte de Depositos"
+        '
+        'MenuItem56
+        '
+        Me.menuExtender.SetImageIndex(Me.MenuItem56, -1)
+        Me.MenuItem56.Index = 12
+        Me.MenuItem56.Text = "Procesar Envio Depositos"
         '
         'MenuItem82
         '
@@ -1987,7 +2007,7 @@ Public Class MainForm
         '
         Me.menuExtender.SetImageIndex(Me.MenuItemReporteVentas, -1)
         Me.MenuItemReporteVentas.Index = 0
-        Me.MenuItemReporteVentas.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.mnuReporteVentas, Me.mnuReporteGeneraeIndividualVentas, Me.mnuReporteArticulosCompradosCliente, Me.mnuReporteTopCliente, Me.mnuReporteVentasUnificado, Me.mnuReporteClientesmasCompran, Me.MenuItem74, Me.mnuReporteUtilidad, Me.MenuItem93, Me.mnuReporteDescuentosProveedor, Me.mnuReporteUtilidadArticulos, Me.mnuReporteD151Proveedores, Me.mnuReporteD151Clientes, Me.mnuReportePanelControl, Me.MenuItem135, Me.mnuReporteUtilidadFactura, Me.mnuReporteUtilidadFechas, Me.mnuReportePorcentajeVenta, Me.mnuReporteCierreCaja, Me.MenuItem166, Me.mnuReporteSinCabys, Me.mnuReporteMovimientoporArticulo, Me.mnuReporteCreditoRecuperacion, Me.mnuReporteDevolucionDetallado, Me.mnuReporteGraficoVentasAnuales, Me.mnuReporteCrecimientoCompras})
+        Me.MenuItemReporteVentas.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.mnuReporteVentas, Me.mnuReporteGeneraeIndividualVentas, Me.mnuReporteArticulosCompradosCliente, Me.mnuReporteTopCliente, Me.mnuReporteVentasUnificado, Me.mnuReporteClientesmasCompran, Me.MenuItem74, Me.mnuReporteUtilidad, Me.MenuItem93, Me.mnuReporteDescuentosProveedor, Me.mnuReporteUtilidadArticulos, Me.mnuReporteD151Proveedores, Me.mnuReporteD151Clientes, Me.mnuReportePanelControl, Me.MenuItem135, Me.mnuReporteUtilidadFactura, Me.mnuReporteUtilidadFechas, Me.mnuReportePorcentajeVenta, Me.mnuReporteCierreCaja, Me.MenuItem166, Me.mnuReporteSinCabys, Me.mnuReporteMovimientoporArticulo, Me.mnuReporteCreditoRecuperacion, Me.mnuReporteDevolucionDetallado, Me.mnuReporteGraficoVentasAnuales, Me.mnuReporteCrecimientoCompras, Me.MenuItem94})
         Me.MenuItemReporteVentas.Text = "Reportes de Ventas"
         '
         'mnuReporteVentas
@@ -2153,6 +2173,12 @@ Public Class MainForm
         Me.menuExtender.SetImageIndex(Me.mnuReporteCrecimientoCompras, -1)
         Me.mnuReporteCrecimientoCompras.Index = 25
         Me.mnuReporteCrecimientoCompras.Text = "Crecimiento de Compras"
+        '
+        'MenuItem94
+        '
+        Me.menuExtender.SetImageIndex(Me.MenuItem94, -1)
+        Me.MenuItem94.Index = 26
+        Me.MenuItem94.Text = "Rentabilidad Productos"
         '
         'MenuItemReporteCompras
         '
@@ -2722,11 +2748,11 @@ Public Class MainForm
         'StatusBar1
         '
         Me.StatusBar1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.StatusBar1.Location = New System.Drawing.Point(0, 291)
+        Me.StatusBar1.Location = New System.Drawing.Point(0, 434)
         Me.StatusBar1.Name = "StatusBar1"
         Me.StatusBar1.Panels.AddRange(New System.Windows.Forms.StatusBarPanel() {Me.StatusBarPanel1, Me.StatusBarPanel4, Me.StatusBarPanel2, Me.StatusBarPanel3, Me.StatusBarPanel5, Me.sbpTCCompra, Me.sbpTCVenta, Me.sbpVersion})
         Me.StatusBar1.ShowPanels = True
-        Me.StatusBar1.Size = New System.Drawing.Size(1541, 17)
+        Me.StatusBar1.Size = New System.Drawing.Size(1480, 17)
         Me.StatusBar1.TabIndex = 9
         '
         'StatusBarPanel1
@@ -2763,7 +2789,7 @@ Public Class MainForm
         '
         Me.StatusBarPanel5.AutoSize = System.Windows.Forms.StatusBarPanelAutoSize.Spring
         Me.StatusBarPanel5.Name = "StatusBarPanel5"
-        Me.StatusBarPanel5.Width = 941
+        Me.StatusBarPanel5.Width = 880
         '
         'sbpTCCompra
         '
@@ -2780,7 +2806,7 @@ Public Class MainForm
         'sbpVersion
         '
         Me.sbpVersion.Name = "sbpVersion"
-        Me.sbpVersion.Text = "*11Oct2022"
+        Me.sbpVersion.Text = "*06Dic2022"
         Me.sbpVersion.Width = 150
         '
         'ImageList1
@@ -2914,7 +2940,7 @@ Public Class MainForm
         Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.btnInventario, Me.ToolStripSeparator1, Me.btnProveedores, Me.ToolStripSeparator2, Me.btnClientesCredito, Me.ToolStripSeparator3, Me.btnCompras, Me.ToolStripSeparator4, Me.btnFacturacion, Me.ToolStripSeparator5, Me.btnPuntoVenta, Me.lblempresa, Me.ToolStripSeparator9, Me.btnNegativo, Me.ToolStripSeparator8, Me.btnCambio, Me.ToolStripSeparator6, Me.btnAlbaran, Me.ToolStripSeparator7, Me.ToolStripButton1, Me.ToolStripSeparator10, Me.ToolStripButton2})
         Me.ToolStrip1.Location = New System.Drawing.Point(0, 0)
         Me.ToolStrip1.Name = "ToolStrip1"
-        Me.ToolStrip1.Size = New System.Drawing.Size(1541, 57)
+        Me.ToolStrip1.Size = New System.Drawing.Size(1480, 57)
         Me.ToolStrip1.TabIndex = 23
         Me.ToolStrip1.Text = "ToolStrip1"
         '
@@ -3081,11 +3107,17 @@ Public Class MainForm
         Me.PictureBoxFondo.TabStop = False
         Me.PictureBoxFondo.Visible = False
         '
+        'MenuItem106
+        '
+        Me.menuExtender.SetImageIndex(Me.MenuItem106, -1)
+        Me.MenuItem106.Index = 3
+        Me.MenuItem106.Text = "Facturas Pendiente entre Fechas"
+        '
         'MainForm
         '
         Me.AutoScaleBaseSize = New System.Drawing.Size(6, 15)
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(1541, 308)
+        Me.ClientSize = New System.Drawing.Size(1480, 451)
         Me.Controls.Add(Me.ToolStrip1)
         Me.Controls.Add(Me.PictureBoxFondo)
         Me.Controls.Add(Me.StatusBar1)
@@ -3306,7 +3338,7 @@ Contador:
             MenuReportes.Enabled = False
             MenuInterfaz.Enabled = False
             Me.mnEmpresaPrestamos.Enabled = False
-            Me.mnReportePrestamos.Enabled = False
+            'Me.mnReportePrestamos.Enabled = False
             Me.mnMovimientoArticulo.Enabled = True
             Me.mnProveedores.Enabled = True
 
@@ -3334,7 +3366,7 @@ Contador:
             MenuReportes.Enabled = False
             MenuInterfaz.Enabled = False
             Me.mnEmpresaPrestamos.Enabled = False
-            Me.mnReportePrestamos.Enabled = False
+            'Me.mnReportePrestamos.Enabled = False
             Me.mnMovimientoArticulo.Enabled = False
             Me.mnProveedores.Enabled = False
             Me.ToolStripSeparator6.Visible = True
@@ -3405,6 +3437,8 @@ Contador:
             Me.ToolStripSeparator10.Visible = False
             Me.ToolStripButton2.Visible = False
         End If
+
+        Me.ToolStripButton2.Visible = True
 
         If GetSetting("SeeSOFT", "SeePOS", regeditSegura) = "" Then
             SaveSetting("SeeSOFT", "SeePOS", regeditSegura, "0")
@@ -3554,7 +3588,7 @@ Contador:
         mnEmpresaPrestamos.Enabled = VerificandoAcceso_a_Modulos("EmpresasPrestamosBodega", "EmpresasPrestamosBodega", usua.Cedula, "Operaciones Prestamos Bodega")
         mnPrestamos.Enabled = VerificandoAcceso_a_Modulos("PrestamosBodega", "PrestamosBodega", usua.Cedula, "Operaciones Prestamos Bodega")
         'mnDevolucionPrestamos.Enabled = VerificandoAcceso_a_Modulos("DevolucionPrestamosBodega", "DevolucionPrestamosBodega", usua.Cedula, "Operaciones Prestamos Bodega")
-        mnReportePrestamos.Enabled = VerificandoAcceso_a_Modulos("ReportesPrestamosBodega", "ReportesPrestamosBodega", usua.Cedula, "Operaciones Prestamos Bodega")
+        'mnReportePrestamos.Enabled = VerificandoAcceso_a_Modulos("ReportesPrestamosBodega", "ReportesPrestamosBodega", usua.Cedula, "Operaciones Prestamos Bodega")
         '*******************************************************************************************************
 
 
@@ -4485,19 +4519,29 @@ Contador:
     End Sub
 
     Private Sub MenuItem76_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MenuItem76.Click
-        If GetRegistroSeePOS("EtiquetasGuanavet") = 1 Then
+
+        If CadenaConexionSeePOS.IndexOf("192.168.0.2") > 0 Then
+            'el servidor de super vet liberia
             Dim frm As New frmEtiquetarGuanavet
             frm.MdiParent = Me
             frm.Show()
             Exit Sub
+        Else
+
+            If GetRegistroSeePOS("EtiquetasGuanavet") = 1 Then
+                Dim frm As New frmEtiquetarGuanavet
+                frm.MdiParent = Me
+                frm.Show()
+                Exit Sub
+            End If
+            If GetRegistroSeePOS("EtiquetasLiberia") = 1 Then
+                Dim frm As New frmEtiquetarLiberia
+                frm.MdiParent = Me
+                frm.Show()
+                Exit Sub
+            End If
+            MsgBox("No hay etiquetador configurado", MsgBoxStyle.Information, Text)
         End If
-        If GetRegistroSeePOS("EtiquetasLiberia") = 1 Then
-            Dim frm As New frmEtiquetarLiberia
-            frm.MdiParent = Me
-            frm.Show()
-            Exit Sub
-        End If
-        MsgBox("No hay etiquetador configurado", MsgBoxStyle.Information, Text)
     End Sub
 
     Private Sub MenuItem81_Click(sender As Object, e As EventArgs) Handles MenuItem81.Click
@@ -4848,8 +4892,8 @@ Contador:
 
     Private Sub MenuItem125_Click(sender As Object, e As EventArgs) Handles mnuReportePanelControl.Click
         Dim frm As New frmPaneldeControl
-        frm.MdiParent = Me
-        frm.Show()
+        'frm.MdiParent = Me
+        frm.ShowDialog()
     End Sub
 
     Private Sub MenuItem129_Click(sender As Object, e As EventArgs) Handles MenuItem129.Click
@@ -5270,6 +5314,21 @@ Contador:
         frm.Show()
     End Sub
 
+    Private Sub MenuItem55_Click_2(sender As Object, e As EventArgs) Handles MenuItem55.Click
+        CargarForm(New frmReporteInventarioxProveedor)
+    End Sub
+
+    Private Sub MenuItem56_Click_1(sender As Object, e As EventArgs) Handles MenuItem56.Click
+        CargarForm(New frmArqueoDeposito)
+    End Sub
+
+    Private Sub MenuItem94_Click_1(sender As Object, e As EventArgs) Handles MenuItem94.Click
+        CargarForm(New frmReporteProductosRentalbes)
+    End Sub
+
+    Private Sub MenuItem106_Click_2(sender As Object, e As EventArgs) Handles MenuItem106.Click
+        CargarForm(New frmCxCEntreFechas)
+    End Sub
 End Class
 
 Public Module PuntoVentaActual

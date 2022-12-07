@@ -37,27 +37,29 @@ Partial Class frmComprasPrepagadas
         Me.viewDatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.viewDatos.Dock = System.Windows.Forms.DockStyle.Fill
         Me.viewDatos.Location = New System.Drawing.Point(0, 0)
+        Me.viewDatos.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.viewDatos.MultiSelect = False
         Me.viewDatos.Name = "viewDatos"
         Me.viewDatos.ReadOnly = True
         Me.viewDatos.RowHeadersVisible = False
         Me.viewDatos.RowTemplate.Height = 29
         Me.viewDatos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.viewDatos.Size = New System.Drawing.Size(602, 488)
+        Me.viewDatos.Size = New System.Drawing.Size(1177, 601)
         Me.viewDatos.TabIndex = 0
         '
         'frmComprasPrepagadas
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(602, 488)
+        Me.ClientSize = New System.Drawing.Size(1177, 601)
         Me.Controls.Add(Me.viewDatos)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
+        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "frmComprasPrepagadas"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "Compras pagas sin aplicar"
+        Me.Text = "Compras pagadas sin aplicar"
         CType(Me.viewDatos, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 

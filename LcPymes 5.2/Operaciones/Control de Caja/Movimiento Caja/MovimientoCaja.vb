@@ -169,8 +169,8 @@ Public Class MovimientoCaja
         '
         'ToolBar1
         '
-        Me.ToolBar1.Location = New System.Drawing.Point(0, 297)
-        Me.ToolBar1.Size = New System.Drawing.Size(634, 52)
+        Me.ToolBar1.Location = New System.Drawing.Point(0, 332)
+        Me.ToolBar1.Size = New System.Drawing.Size(634, 60)
         '
         'DataNavigator
         '
@@ -178,12 +178,13 @@ Public Class MovimientoCaja
         Me.DataNavigator.Buttons.CancelEdit.Visible = False
         Me.DataNavigator.Buttons.EndEdit.Visible = False
         Me.DataNavigator.Buttons.Remove.Visible = False
-        Me.DataNavigator.Location = New System.Drawing.Point(328, 355)
+        Me.DataNavigator.Location = New System.Drawing.Point(267, 399)
+        Me.DataNavigator.Size = New System.Drawing.Size(160, 24)
         Me.DataNavigator.Visible = False
         '
         'TituloModulo
         '
-        Me.TituloModulo.Size = New System.Drawing.Size(634, 32)
+        Me.TituloModulo.Size = New System.Drawing.Size(634, 37)
         Me.TituloModulo.Text = " Módulo Movimiento Caja"
         '
         'GroupBox1
@@ -191,9 +192,9 @@ Public Class MovimientoCaja
         Me.GroupBox1.Controls.Add(Me.Option_Salida)
         Me.GroupBox1.Controls.Add(Me.Option_Entrada)
         Me.GroupBox1.ForeColor = System.Drawing.SystemColors.Highlight
-        Me.GroupBox1.Location = New System.Drawing.Point(16, 40)
+        Me.GroupBox1.Location = New System.Drawing.Point(19, 46)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(152, 40)
+        Me.GroupBox1.Size = New System.Drawing.Size(183, 46)
         Me.GroupBox1.TabIndex = 70
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Tipo Movimento"
@@ -201,9 +202,9 @@ Public Class MovimientoCaja
         'Option_Salida
         '
         Me.Option_Salida.DataBindings.Add(New System.Windows.Forms.Binding("Checked", Me.DataSet_MovimientoCaja1, "Movimiento_Caja.Salida", True))
-        Me.Option_Salida.Location = New System.Drawing.Point(80, 16)
+        Me.Option_Salida.Location = New System.Drawing.Point(96, 18)
         Me.Option_Salida.Name = "Option_Salida"
-        Me.Option_Salida.Size = New System.Drawing.Size(56, 16)
+        Me.Option_Salida.Size = New System.Drawing.Size(67, 19)
         Me.Option_Salida.TabIndex = 1
         Me.Option_Salida.Text = "Salida"
         '
@@ -216,9 +217,9 @@ Public Class MovimientoCaja
         'Option_Entrada
         '
         Me.Option_Entrada.DataBindings.Add(New System.Windows.Forms.Binding("Checked", Me.DataSet_MovimientoCaja1, "Movimiento_Caja.Entrada", True))
-        Me.Option_Entrada.Location = New System.Drawing.Point(8, 16)
+        Me.Option_Entrada.Location = New System.Drawing.Point(10, 18)
         Me.Option_Entrada.Name = "Option_Entrada"
-        Me.Option_Entrada.Size = New System.Drawing.Size(72, 16)
+        Me.Option_Entrada.Size = New System.Drawing.Size(86, 19)
         Me.Option_Entrada.TabIndex = 0
         Me.Option_Entrada.Text = "Entrada"
         '
@@ -227,9 +228,9 @@ Public Class MovimientoCaja
         Me.Panel1.Controls.Add(Me.Label17)
         Me.Panel1.Controls.Add(Me.TxtNombreUsuario)
         Me.Panel1.Controls.Add(Me.txtUsuario)
-        Me.Panel1.Location = New System.Drawing.Point(309, 321)
+        Me.Panel1.Location = New System.Drawing.Point(371, 370)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(291, 16)
+        Me.Panel1.Size = New System.Drawing.Size(349, 19)
         Me.Panel1.TabIndex = 71
         '
         'Label17
@@ -237,9 +238,9 @@ Public Class MovimientoCaja
         Me.Label17.BackColor = System.Drawing.Color.RoyalBlue
         Me.Label17.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label17.ForeColor = System.Drawing.Color.White
-        Me.Label17.Location = New System.Drawing.Point(-8, 0)
+        Me.Label17.Location = New System.Drawing.Point(-10, 0)
         Me.Label17.Name = "Label17"
-        Me.Label17.Size = New System.Drawing.Size(72, 13)
+        Me.Label17.Size = New System.Drawing.Size(87, 15)
         Me.Label17.TabIndex = 0
         Me.Label17.Text = "Usuario->"
         Me.Label17.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -251,10 +252,10 @@ Public Class MovimientoCaja
         Me.TxtNombreUsuario.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxtNombreUsuario.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TxtNombreUsuario.ForeColor = System.Drawing.Color.Blue
-        Me.TxtNombreUsuario.Location = New System.Drawing.Point(120, 0)
+        Me.TxtNombreUsuario.Location = New System.Drawing.Point(144, 0)
         Me.TxtNombreUsuario.Name = "TxtNombreUsuario"
         Me.TxtNombreUsuario.ReadOnly = True
-        Me.TxtNombreUsuario.Size = New System.Drawing.Size(168, 13)
+        Me.TxtNombreUsuario.Size = New System.Drawing.Size(202, 16)
         Me.TxtNombreUsuario.TabIndex = 2
         '
         'txtUsuario
@@ -262,35 +263,35 @@ Public Class MovimientoCaja
         Me.txtUsuario.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtUsuario.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtUsuario.ForeColor = System.Drawing.Color.Blue
-        Me.txtUsuario.Location = New System.Drawing.Point(64, 0)
+        Me.txtUsuario.Location = New System.Drawing.Point(77, 0)
         Me.txtUsuario.Name = "txtUsuario"
         Me.txtUsuario.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.txtUsuario.Size = New System.Drawing.Size(56, 13)
+        Me.txtUsuario.Size = New System.Drawing.Size(67, 16)
         Me.txtUsuario.TabIndex = 1
         '
         'txtCedula
         '
         Me.txtCedula.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.DataSet_MovimientoCaja1, "Movimiento_Caja.Usuario", True))
-        Me.txtCedula.Location = New System.Drawing.Point(464, 305)
+        Me.txtCedula.Location = New System.Drawing.Point(557, 352)
         Me.txtCedula.Name = "txtCedula"
-        Me.txtCedula.Size = New System.Drawing.Size(120, 20)
+        Me.txtCedula.Size = New System.Drawing.Size(144, 22)
         Me.txtCedula.TabIndex = 73
         '
         'Label_Fecha
         '
         Me.Label_Fecha.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.DataSet_MovimientoCaja1, "Movimiento_Caja.Fecha", True))
-        Me.Label_Fecha.Location = New System.Drawing.Point(176, 64)
+        Me.Label_Fecha.Location = New System.Drawing.Point(211, 74)
         Me.Label_Fecha.Name = "Label_Fecha"
-        Me.Label_Fecha.Size = New System.Drawing.Size(248, 16)
+        Me.Label_Fecha.Size = New System.Drawing.Size(298, 18)
         Me.Label_Fecha.TabIndex = 74
         '
         'Label1
         '
         Me.Label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Label1.ForeColor = System.Drawing.SystemColors.Highlight
-        Me.Label1.Location = New System.Drawing.Point(176, 48)
+        Me.Label1.Location = New System.Drawing.Point(211, 55)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(248, 16)
+        Me.Label1.Size = New System.Drawing.Size(298, 19)
         Me.Label1.TabIndex = 75
         Me.Label1.Text = "Fecha del Movimiento"
         '
@@ -298,9 +299,9 @@ Public Class MovimientoCaja
         '
         Me.Label2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Label2.ForeColor = System.Drawing.SystemColors.Highlight
-        Me.Label2.Location = New System.Drawing.Point(16, 101)
+        Me.Label2.Location = New System.Drawing.Point(19, 117)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(288, 16)
+        Me.Label2.Size = New System.Drawing.Size(346, 18)
         Me.Label2.TabIndex = 76
         Me.Label2.Text = "Monto Movimiento"
         '
@@ -311,9 +312,9 @@ Public Class MovimientoCaja
         Me.ComboBo_Moneda.DisplayMember = "Moneda.MonedaNombre"
         Me.ComboBo_Moneda.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.ComboBo_Moneda.ForeColor = System.Drawing.SystemColors.Highlight
-        Me.ComboBo_Moneda.Location = New System.Drawing.Point(432, 64)
+        Me.ComboBo_Moneda.Location = New System.Drawing.Point(518, 74)
         Me.ComboBo_Moneda.Name = "ComboBo_Moneda"
-        Me.ComboBo_Moneda.Size = New System.Drawing.Size(120, 21)
+        Me.ComboBo_Moneda.Size = New System.Drawing.Size(144, 24)
         Me.ComboBo_Moneda.TabIndex = 77
         Me.ComboBo_Moneda.ValueMember = "Moneda.CodMoneda"
         '
@@ -321,9 +322,9 @@ Public Class MovimientoCaja
         '
         Me.Label3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Label3.ForeColor = System.Drawing.SystemColors.Highlight
-        Me.Label3.Location = New System.Drawing.Point(432, 48)
+        Me.Label3.Location = New System.Drawing.Point(518, 55)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(120, 16)
+        Me.Label3.Size = New System.Drawing.Size(144, 19)
         Me.Label3.TabIndex = 78
         Me.Label3.Text = "Moneda"
         '
@@ -347,9 +348,9 @@ Public Class MovimientoCaja
         '
         Me.Label4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Label4.ForeColor = System.Drawing.SystemColors.Highlight
-        Me.Label4.Location = New System.Drawing.Point(16, 168)
+        Me.Label4.Location = New System.Drawing.Point(19, 194)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(584, 16)
+        Me.Label4.Size = New System.Drawing.Size(701, 18)
         Me.Label4.TabIndex = 79
         Me.Label4.Text = "Observaciones"
         '
@@ -358,11 +359,11 @@ Public Class MovimientoCaja
         Me.Text_Observaciones.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.Text_Observaciones.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.DataSet_MovimientoCaja1, "Movimiento_Caja.Observaciones", True))
         Me.Text_Observaciones.ForeColor = System.Drawing.SystemColors.Highlight
-        Me.Text_Observaciones.Location = New System.Drawing.Point(16, 184)
+        Me.Text_Observaciones.Location = New System.Drawing.Point(19, 212)
         Me.Text_Observaciones.Multiline = True
         Me.Text_Observaciones.Name = "Text_Observaciones"
         Me.Text_Observaciones.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
-        Me.Text_Observaciones.Size = New System.Drawing.Size(584, 48)
+        Me.Text_Observaciones.Size = New System.Drawing.Size(701, 56)
         Me.Text_Observaciones.TabIndex = 80
         '
         'Apertura_Caja
@@ -411,9 +412,9 @@ Public Class MovimientoCaja
         'Label_TipoCambio
         '
         Me.Label_TipoCambio.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.DataSet_MovimientoCaja1, "Moneda.ValorCompra", True))
-        Me.Label_TipoCambio.Location = New System.Drawing.Point(432, 128)
+        Me.Label_TipoCambio.Location = New System.Drawing.Point(518, 148)
         Me.Label_TipoCambio.Name = "Label_TipoCambio"
-        Me.Label_TipoCambio.Size = New System.Drawing.Size(120, 16)
+        Me.Label_TipoCambio.Size = New System.Drawing.Size(144, 18)
         Me.Label_TipoCambio.TabIndex = 81
         Me.Label_TipoCambio.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
@@ -421,9 +422,9 @@ Public Class MovimientoCaja
         '
         Me.Label6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Label6.ForeColor = System.Drawing.SystemColors.Highlight
-        Me.Label6.Location = New System.Drawing.Point(432, 112)
+        Me.Label6.Location = New System.Drawing.Point(518, 129)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(120, 16)
+        Me.Label6.Size = New System.Drawing.Size(144, 19)
         Me.Label6.TabIndex = 82
         Me.Label6.Text = "Tipo Cambio"
         Me.Label6.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -431,7 +432,7 @@ Public Class MovimientoCaja
         'Calc_Monto
         '
         Me.Calc_Monto.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.DataSet_MovimientoCaja1, "Movimiento_Caja.Monto", True))
-        Me.Calc_Monto.Location = New System.Drawing.Point(16, 117)
+        Me.Calc_Monto.Location = New System.Drawing.Point(19, 135)
         Me.Calc_Monto.Name = "Calc_Monto"
         '
         '
@@ -442,15 +443,15 @@ Public Class MovimientoCaja
         Me.Calc_Monto.Properties.EditFormat.FormatString = "#,#0.00"
         Me.Calc_Monto.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric
         Me.Calc_Monto.Properties.Style = New DevExpress.Utils.ViewStyle("ControlStyle", Nothing, New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte)), "", DevExpress.Utils.StyleOptions.StyleEnabled, True, False, False, DevExpress.Utils.HorzAlignment.[Default], DevExpress.Utils.VertAlignment.Center, Nothing, System.Drawing.SystemColors.Window, System.Drawing.SystemColors.Highlight)
-        Me.Calc_Monto.Size = New System.Drawing.Size(288, 36)
+        Me.Calc_Monto.Size = New System.Drawing.Size(346, 43)
         Me.Calc_Monto.TabIndex = 83
         '
         'Tipo_Cambio
         '
         Me.Tipo_Cambio.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.DataSet_MovimientoCaja1, "Movimiento_Caja.TipoCambio", True))
-        Me.Tipo_Cambio.Location = New System.Drawing.Point(584, 305)
+        Me.Tipo_Cambio.Location = New System.Drawing.Point(701, 352)
         Me.Tipo_Cambio.Name = "Tipo_Cambio"
-        Me.Tipo_Cambio.Size = New System.Drawing.Size(56, 20)
+        Me.Tipo_Cambio.Size = New System.Drawing.Size(67, 22)
         Me.Tipo_Cambio.TabIndex = 84
         '
         'Check_Anulado
@@ -458,9 +459,9 @@ Public Class MovimientoCaja
         Me.Check_Anulado.BackColor = System.Drawing.Color.Transparent
         Me.Check_Anulado.DataBindings.Add(New System.Windows.Forms.Binding("Checked", Me.DataSet_MovimientoCaja1, "Movimiento_Caja.Anulado", True))
         Me.Check_Anulado.Enabled = False
-        Me.Check_Anulado.Location = New System.Drawing.Point(560, 72)
+        Me.Check_Anulado.Location = New System.Drawing.Point(672, 83)
         Me.Check_Anulado.Name = "Check_Anulado"
-        Me.Check_Anulado.Size = New System.Drawing.Size(72, 16)
+        Me.Check_Anulado.Size = New System.Drawing.Size(86, 19)
         Me.Check_Anulado.TabIndex = 85
         Me.Check_Anulado.Text = "Anulado"
         Me.Check_Anulado.UseVisualStyleBackColor = False
@@ -469,9 +470,9 @@ Public Class MovimientoCaja
         '
         Me.Label_Anulado.Font = New System.Drawing.Font("Microsoft Sans Serif", 36.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label_Anulado.ForeColor = System.Drawing.Color.Red
-        Me.Label_Anulado.Location = New System.Drawing.Point(216, 144)
+        Me.Label_Anulado.Location = New System.Drawing.Point(259, 166)
         Me.Label_Anulado.Name = "Label_Anulado"
-        Me.Label_Anulado.Size = New System.Drawing.Size(200, 64)
+        Me.Label_Anulado.Size = New System.Drawing.Size(240, 74)
         Me.Label_Anulado.TabIndex = 86
         Me.Label_Anulado.Text = "Anulado"
         Me.Label_Anulado.Visible = False
@@ -481,17 +482,17 @@ Public Class MovimientoCaja
         Me.LabelId.AccessibleRole = System.Windows.Forms.AccessibleRole.Border
         Me.LabelId.BackColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.LabelId.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.DataSet_MovimientoCaja1, "Movimiento_Caja.Id", True))
-        Me.LabelId.Location = New System.Drawing.Point(16, 16)
+        Me.LabelId.Location = New System.Drawing.Point(19, 18)
         Me.LabelId.Name = "LabelId"
-        Me.LabelId.Size = New System.Drawing.Size(48, 16)
+        Me.LabelId.Size = New System.Drawing.Size(58, 19)
         Me.LabelId.TabIndex = 87
         '
         'CK_PVE
         '
         Me.CK_PVE.BackColor = System.Drawing.Color.Transparent
-        Me.CK_PVE.Location = New System.Drawing.Point(584, 32)
+        Me.CK_PVE.Location = New System.Drawing.Point(701, 37)
         Me.CK_PVE.Name = "CK_PVE"
-        Me.CK_PVE.Size = New System.Drawing.Size(48, 24)
+        Me.CK_PVE.Size = New System.Drawing.Size(57, 28)
         Me.CK_PVE.TabIndex = 88
         Me.CK_PVE.Text = "PVE"
         Me.CK_PVE.UseVisualStyleBackColor = False
@@ -501,20 +502,20 @@ Public Class MovimientoCaja
         Me.txtCodigoCliente.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.txtCodigoCliente.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.DataSet_MovimientoCaja1, "Movimiento_Caja.Observaciones", True))
         Me.txtCodigoCliente.ForeColor = System.Drawing.SystemColors.Highlight
-        Me.txtCodigoCliente.Location = New System.Drawing.Point(37, 255)
+        Me.txtCodigoCliente.Location = New System.Drawing.Point(44, 294)
         Me.txtCodigoCliente.Name = "txtCodigoCliente"
         Me.txtCodigoCliente.ReadOnly = True
         Me.txtCodigoCliente.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
-        Me.txtCodigoCliente.Size = New System.Drawing.Size(131, 20)
+        Me.txtCodigoCliente.Size = New System.Drawing.Size(158, 22)
         Me.txtCodigoCliente.TabIndex = 90
         '
         'Label5
         '
         Me.Label5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Label5.ForeColor = System.Drawing.SystemColors.Highlight
-        Me.Label5.Location = New System.Drawing.Point(16, 236)
+        Me.Label5.Location = New System.Drawing.Point(19, 272)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(584, 19)
+        Me.Label5.Size = New System.Drawing.Size(701, 22)
         Me.Label5.TabIndex = 89
         '
         'txtNombreCliente
@@ -522,38 +523,38 @@ Public Class MovimientoCaja
         Me.txtNombreCliente.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.txtNombreCliente.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.DataSet_MovimientoCaja1, "Movimiento_Caja.Observaciones", True))
         Me.txtNombreCliente.ForeColor = System.Drawing.SystemColors.Highlight
-        Me.txtNombreCliente.Location = New System.Drawing.Point(170, 255)
+        Me.txtNombreCliente.Location = New System.Drawing.Point(204, 294)
         Me.txtNombreCliente.Name = "txtNombreCliente"
         Me.txtNombreCliente.ReadOnly = True
         Me.txtNombreCliente.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
-        Me.txtNombreCliente.Size = New System.Drawing.Size(430, 20)
+        Me.txtNombreCliente.Size = New System.Drawing.Size(516, 22)
         Me.txtNombreCliente.TabIndex = 91
         '
         'ckVincular
         '
         Me.ckVincular.AutoSize = True
         Me.ckVincular.ForeColor = System.Drawing.SystemColors.Highlight
-        Me.ckVincular.Location = New System.Drawing.Point(19, 237)
+        Me.ckVincular.Location = New System.Drawing.Point(23, 273)
         Me.ckVincular.Name = "ckVincular"
-        Me.ckVincular.Size = New System.Drawing.Size(123, 17)
+        Me.ckVincular.Size = New System.Drawing.Size(160, 21)
         Me.ckVincular.TabIndex = 92
         Me.ckVincular.Text = "Vincular a un Cliente"
         Me.ckVincular.UseVisualStyleBackColor = True
         '
         'btnBuscarCliente
         '
-        Me.btnBuscarCliente.Location = New System.Drawing.Point(15, 255)
+        Me.btnBuscarCliente.Location = New System.Drawing.Point(18, 294)
         Me.btnBuscarCliente.Name = "btnBuscarCliente"
-        Me.btnBuscarCliente.Size = New System.Drawing.Size(21, 21)
+        Me.btnBuscarCliente.Size = New System.Drawing.Size(25, 24)
         Me.btnBuscarCliente.TabIndex = 93
         Me.btnBuscarCliente.Text = "..."
         Me.btnBuscarCliente.UseVisualStyleBackColor = True
         '
         'MovimientoCaja
         '
-        Me.AutoScaleBaseSize = New System.Drawing.Size(5, 13)
+        Me.AutoScaleBaseSize = New System.Drawing.Size(6, 15)
         Me.BackColor = System.Drawing.SystemColors.ControlLight
-        Me.ClientSize = New System.Drawing.Size(634, 349)
+        Me.ClientSize = New System.Drawing.Size(634, 392)
         Me.Controls.Add(Me.btnBuscarCliente)
         Me.Controls.Add(Me.ckVincular)
         Me.Controls.Add(Me.txtNombreCliente)

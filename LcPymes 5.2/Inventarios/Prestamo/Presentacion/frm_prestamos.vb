@@ -130,18 +130,35 @@ Namespace Prestamos
             End If
             Return False
         End Function
+
+        Private Function BoletaDuplicada(_Bolega As String) As Boolean
+            Dim dt As New DataTable
+            cFunciones.Llenar_Tabla_Generico("select * from Prestamo where BoletaProveedor = '" & _Bolega & "'", dt, CadenaConexionSeePOS)
+            If dt.Rows.Count > 0 Then
+                Return True
+            Else
+                Return False
+            End If
+        End Function
+
         Sub guardar()
 
-            If Me.txtBoletaProveedor.Text = "" Then
-                Me.txtBoletaProveedor.Text = "0"
-            End If
-
-            If Me.txtBoletaProveedor.ReadOnly = False Then
-                If Me.txtBoletaProveedor.Text = "" Then
+            If rb_entrada.Checked = True Then
+                If Me.txtBoletaProveedor.Text = "" Or Me.txtBoletaProveedor.Text = "0" Then
                     MsgBox("Debe de Asignar la boleta del proveedor", MsgBoxStyle.Exclamation, Text)
                     Me.txtBoletaProveedor.Focus()
                     Exit Sub
+                Else
+                    If BoletaDuplicada(Me.txtBoletaProveedor.Text) Then
+                        MsgBox("Esta boleta ya fue ingresada" & vbCrLf _
+                               & "Favor revise, para no duplicar los prestamos.", MsgBoxStyle.Exclamation, "No puede ingrear la boleta")
+                        Exit Sub
+                    End If
                 End If
+            End If
+
+            If Me.txtBoletaProveedor.Text = "" Then
+                Me.txtBoletaProveedor.Text = "0"
             End If
 
             Try
@@ -199,7 +216,7 @@ Namespace Prestamos
                             If Me.IdSPrestamo > 0 Then
                                 'debe actualizar el prestamo en la nube
                                 'para marcarlo como aceptado.
-                                OBSoluciones.db.Ejecutar("Update Prestamo Set Aceptado = 1 Where ID = " & Me.IdSPrestamo, CommandType.Text)
+                                'OBSoluciones.db.Ejecutar("Update Prestamo Set Aceptado = 1 Where ID = " & Me.IdSPrestamo, CommandType.Text)
                                 Me.Close()
                             End If
 
@@ -210,12 +227,12 @@ Namespace Prestamos
                             Catch ex As Exception
                             End Try
                         End If
-                        
+
                         limpiar()
                     Else
-            MsgBox("Error al intentar guardar")
+                        MsgBox("Error al intentar guardar")
                     End If
-                    End If
+                End If
             Catch ex As Exception
                 MsgBox(ex.Message)
             End Try
@@ -634,29 +651,38 @@ Namespace Prestamos
         End Sub
 
         Private Sub bt_eliminar_Click(sender As Object, e As EventArgs) Handles bt_eliminar.Click
-            Try
-                Dim dts As New vprestamo
-                Dim func As New fprestamo
-                Dim dts_prestamo As New DataTable
+            Dim frm As New frmMotivoAnulacionPrestamo
+            If frm.ShowDialog = Windows.Forms.DialogResult.OK Then
 
-                dts.gid = lb_id.Text
-                cFunciones.Llenar_Tabla_Generico("select * from devolucion_prestamo where id_prestamo = " & lb_id.Text, dts_prestamo, CadenaConexionSeePOS)
 
-                If dts_prestamo.Rows.Count > 0 Then
-                    MsgBox("No se puede Anular el prestamo porque este ya tiene devoluciones, primero anular las devoluciones, para luego poder anular el prestamo", MsgBoxStyle.Exclamation, "Anulación")
-                    Exit Sub
-                End If
-                If MsgBox("Desea anular este registro?", MsgBoxStyle.YesNo, "Anular") = MsgBoxResult.Yes Then
-                    If func.eliminar(dts, Me.SPrestamo) Then
-                        MsgBox("Eliminado Correctamente")
-                        limpiar()
-                    Else
-                        MsgBox("Error al intentar Eliminar ")
+                Try
+                    Dim dts As New vprestamo
+                    Dim func As New fprestamo
+                    Dim dts_prestamo As New DataTable
+
+                    dts.gid = lb_id.Text
+                    cFunciones.Llenar_Tabla_Generico("select * from devolucion_prestamo where id_prestamo = " & lb_id.Text, dts_prestamo, CadenaConexionSeePOS)
+
+                    If dts_prestamo.Rows.Count > 0 Then
+                        MsgBox("No se puede Anular el prestamo porque este ya tiene devoluciones, primero anular las devoluciones, para luego poder anular el prestamo", MsgBoxStyle.Exclamation, "Anulación")
+                        Exit Sub
                     End If
-                End If
-            Catch ex As Exception
-                MsgBox(ex.Message)
-            End Try
+                    If MsgBox("Desea anular este registro?", MsgBoxStyle.YesNo, "Anular") = MsgBoxResult.Yes Then
+                        If func.eliminar(dts, Me.SPrestamo) Then
+
+                            Dim db As New OBSoluciones.SQL.Sentencias(CadenaConexionSeePOS)
+                            db.Ejecutar("Update Prestamo set FechaAnulacion = getdate(), IdUsuarioAnulo = '" & frm.IdUsuario & "', MotivoAnulacion = '" & frm.txtObservaciones.Text & "' Where Id = " & lb_id.Text, CommandType.Text)
+
+                            MsgBox("Eliminado Correctamente")
+                            limpiar()
+                        Else
+                            MsgBox("Error al intentar Eliminar ")
+                        End If
+                    End If
+                Catch ex As Exception
+                    MsgBox(ex.Message)
+                End Try
+            End If
         End Sub
 
 

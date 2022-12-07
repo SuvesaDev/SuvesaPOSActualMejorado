@@ -1,119 +1,169 @@
-﻿Imports System.Windows.Forms.DataVisualization.Charting
-Imports System.Drawing
+﻿Imports System.Data
 
 Public Class frmPaneldeControl
 
-    Private colorseleccionado As System.Drawing.Color = System.Drawing.Color.Orange
 
-    Private Sub ProcesarBoton(ByRef btn As Button)
-        Dim Desde, Hasta As Date
+    Private Sub TopArticulos(_Desde As DateTime, _Hasta As DateTime)
+        Dim dtsVendidos As New DataTable
+        Dim dtsUtilidad As New DataTable
+        Dim dtsRentabilidad As New DataTable
 
-        Me.btnHoy.BackColor = System.Drawing.SystemColors.Control
-        Me.btnSemana.BackColor = System.Drawing.SystemColors.Control
-        Me.btnMes.BackColor = System.Drawing.SystemColors.Control
-        btn.BackColor = Me.colorseleccionado
+        Dim Desde As DateTime
+        Dim Hasta As DateTime
 
-        Select Case btn.Name
-            Case Me.btnHoy.Name
-                Desde = Date.Now
-                Hasta = Date.Now
-                Me.CargarTops(Desde, Hasta)
-            Case Me.btnSemana.Name
-                Dim today As Date = Date.Today
-                Dim dayDiff As Integer = today.DayOfWeek - DayOfWeek.Monday
-                Desde = today.AddDays(-dayDiff)
-                Hasta = Date.Now
-                Me.CargarTops(Desde, Hasta)
-            Case Me.btnMes.Name
-                Desde = DateSerial(Date.Now.Year, Date.Now.Month, 1)
-                Hasta = Date.Now
-                Me.CargarTops(Desde, Hasta)
-        End Select
+        Dim db As New OBSoluciones.SQL.Sentencias(CadenaConexionSeePOS)
+        Try
+            Desde = Date.Now
+            db.AddParametro("@Desde", Me.dtpDesde.Value)
+            db.AddParametro("@Hasta", Me.dtpHasta.Value)
+            db.Ejecutar("usp_TopArticulos_Vendidos", dtsVendidos)
+            Hasta = Date.Now
+            Me.lbl01.Text = label1 & " (segundos:" & DateDiff(DateInterval.Second, Desde, Hasta).ToString & ") "
+
+            Me.viewArticulosVendidos.DataSource = dtsVendidos
+            Me.viewArticulosVendidos.Columns("CodArticulo").Visible = False
+            Me.viewArticulosVendidos.Columns("Vendidos").DefaultCellStyle.Format = "N2"
+            Me.viewArticulosVendidos.Columns("Vendidos").DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight
+            Me.viewArticulosVendidos.Columns("Vendidos").Width = 85
+            Me.viewArticulosVendidos.Columns("Descripcion").Width = 200
+        Catch ex As Exception
+        End Try
+
+        Try
+            Desde = Date.Now
+            db.AddParametro("@Desde", Me.dtpDesde.Value)
+            db.AddParametro("@Hasta", Me.dtpHasta.Value)
+            db.Ejecutar("usp_TopArticulos_Utilidad", dtsUtilidad)
+            Hasta = Date.Now
+            Me.lbl02.Text = label2 & " (segundos:" & DateDiff(DateInterval.Second, Desde, Hasta).ToString & ") "
+            Me.viewArticulosUtilidad.DataSource = dtsUtilidad
+            Me.viewArticulosUtilidad.Columns("CodArticulo").Visible = False
+            Me.viewArticulosUtilidad.Columns("Utilidad").DefaultCellStyle.Format = "N2"
+            Me.viewArticulosUtilidad.Columns("Utilidad").DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight
+            Me.viewArticulosUtilidad.Columns("Utilidad").Width = 85
+            Me.viewArticulosUtilidad.Columns("Descripcion").Width = 200
+        Catch ex As Exception
+        End Try
+
+        Try
+            Desde = Date.Now
+            db.AddParametro("@Desde", Me.dtpDesde.Value)
+            db.AddParametro("@Hasta", Me.dtpHasta.Value)
+            db.Ejecutar("usp_TopArticulos_Rentabilidad", dtsRentabilidad)
+
+            'cFunciones.Llenar_Tabla_Generico("exec usp_TopArticulos_Rentabilidad '" & Me.dtpDesde.Value.ToShortDateString & "','" & Me.dtpHasta.Value.ToShortDateString & "'", dtsRentabilidad, CadenaConexionSeePOS)
+
+            Hasta = Date.Now
+            Me.lbl03.Text = label3 & " (segundos:" & DateDiff(DateInterval.Second, Desde, Hasta).ToString & ") "
+            Me.viewArticulosRentabilidad.DataSource = dtsRentabilidad
+            Me.viewArticulosRentabilidad.Columns("CodArticulo").Visible = False
+            Me.viewArticulosRentabilidad.Columns("Rentabilidad").DefaultCellStyle.Format = "N2"
+            Me.viewArticulosRentabilidad.Columns("Rentabilidad").DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight
+            Me.viewArticulosRentabilidad.Columns("Rentabilidad").Width = 85
+            Me.viewArticulosRentabilidad.Columns("Descripcion").Width = 200
+        Catch ex As Exception
+        End Try
 
     End Sub
 
-    Private Sub CargarTops(_Desde As Date, _Hasta As Date)
-        Dim dtsTopArticulo As New System.Data.DataTable
-        Dim dtsTopClientes As New System.Data.DataTable
-        Dim dtsTopVendedores As New System.Data.DataTable
-        Dim dtsTopProveedores As New System.Data.DataTable
+    Private Sub TopClientes(_Desde As DateTime, _Hasta As DateTime)
+        Dim dtsVentas As New DataTable
+        Dim dtsVisitas As New DataTable
+        Dim dtsRentabilidad As New DataTable
 
-        Dim topArticulo As Integer = Me.txtTopArticulos.Value
-        Dim topCliente As Integer = Me.txtTopCliente.Value
-        Dim topVendedor As Integer = Me.txtTopVendedores.Value
-        Dim topProveedor As Integer = Me.txtTopProveedores.Value
+        Dim Desde As DateTime
+        Dim Hasta As DateTime
 
-        Dim frm As New Conecta_Frm
-        frm.Show("Espere porfavor", "Obteniendo datos...")
+        Dim db As New OBSoluciones.SQL.Sentencias(CadenaConexionSeePOS, 200)
+        Try
+            Desde = Date.Now
+            db.AddParametro("@Desde", Me.dtpDesde.Value)
+            db.AddParametro("@Hasta", Me.dtpHasta.Value)
+            dtsVentas = db.Ejecutar("usp_TopClientes_Ventas")
+            Hasta = Date.Now
+            Me.lbl04.Text = label4 & " (segundos:" & DateDiff(DateInterval.Second, Desde, Hasta).ToString & ") "
+            Me.viewClientesVentas.DataSource = dtsVentas
+            Me.viewClientesVentas.Columns("Cod_Cliente").Visible = False
+            Me.viewClientesVentas.Columns("Ventas").DefaultCellStyle.Format = "N2"
+            Me.viewClientesVentas.Columns("Ventas").DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight
+            Me.viewClientesVentas.Columns("Ventas").Width = 85
+            Me.viewClientesVentas.Columns("Nombre_Cliente").Width = 200
+            Me.viewClientesVentas.Columns("Nombre_Cliente").HeaderText = "Cliente"
+        Catch ex As Exception
+        End Try
 
-        cFunciones.Llenar_Tabla_Generico("exec spTopArticulos '" & _Desde.ToShortDateString & "', '" & _Hasta.ToShortDateString & "', " & topArticulo, dtsTopArticulo, CadenaConexionSeePOS)
-        cFunciones.Llenar_Tabla_Generico("exec spTopClientes '" & _Desde.ToShortDateString & "', '" & _Hasta.ToShortDateString & "', " & topCliente, dtsTopClientes, CadenaConexionSeePOS)
-        cFunciones.Llenar_Tabla_Generico("exec spTopVendedores '" & _Desde.ToShortDateString & "', '" & _Hasta.ToShortDateString & "', " & topVendedor, dtsTopVendedores, CadenaConexionSeePOS)
-        cFunciones.Llenar_Tabla_Generico("exec spTopProveedores '" & _Desde.ToShortDateString & "', '" & _Hasta.ToShortDateString & "', " & topProveedor, dtsTopProveedores, CadenaConexionSeePOS)
+        Try
+            Desde = Date.Now
+            db.AddParametro("@Desde", Me.dtpDesde.Value)
+            db.AddParametro("@Hasta", Me.dtpHasta.Value)
+            dtsVisitas = db.Ejecutar("usp_TopClientes_Visitas")
+            Hasta = Date.Now
+            Me.lbl05.Text = label5 & " (segundos:" & DateDiff(DateInterval.Second, Desde, Hasta).ToString & ") "
+            Me.viewClientesVisitas.DataSource = dtsVisitas
+            Me.viewClientesVisitas.Columns("Cod_Cliente").Visible = False
+            Me.viewClientesVisitas.Columns("Visitas").DefaultCellStyle.Format = "N2"
+            Me.viewClientesVisitas.Columns("Visitas").DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight
+            Me.viewClientesVisitas.Columns("Visitas").Width = 85
+            Me.viewClientesVisitas.Columns("Nombre_Cliente").Width = 200
+            Me.viewClientesVisitas.Columns("Nombre_Cliente").HeaderText = "Cliente"
+        Catch ex As Exception
+        End Try
 
-        Me.viewTopArticulos.DataSource = dtsTopArticulo
-        'Me.viewTopArticulos.Columns("Descripcion").Width = 235
-        'Me.viewTopArticulos.Columns("Ventas").Width = 60
-        Me.viewTopArticulos.Columns("Ventas").DefaultCellStyle.Format = "N2"
-        Me.viewTopArticulos.Columns("Ventas").DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight
+        Try
+            Desde = Date.Now
+            db.AddParametro("@Desde", Me.dtpDesde.Value)
+            db.AddParametro("@Hasta", Me.dtpHasta.Value)
+            dtsRentabilidad = db.Ejecutar("usp_TopClientes_Rentabilidad")
+            Hasta = Date.Now
+            Me.lbl06.Text = label6 & " (segundos:" & DateDiff(DateInterval.Second, Desde, Hasta).ToString & ") "
+            Me.viewClienteRentabilidad.DataSource = dtsRentabilidad
+            Me.viewClienteRentabilidad.Columns("Cod_Cliente").Visible = False
+            Me.viewClienteRentabilidad.Columns("Rentabilidad").DefaultCellStyle.Format = "N2"
+            Me.viewClienteRentabilidad.Columns("Rentabilidad").DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight
+            Me.viewClienteRentabilidad.Columns("Rentabilidad").Width = 85
+            Me.viewClienteRentabilidad.Columns("Nombre_Cliente").Width = 200
+            Me.viewClienteRentabilidad.Columns("Nombre_Cliente").HeaderText = "Cliente"
+        Catch ex As Exception
+        End Try
 
-        Me.viewTopClientes.DataSource = dtsTopClientes
-        'Me.viewTopClientes.Columns("Cliente").Width = 210
-        'Me.viewTopClientes.Columns("Ventas").Width = 85
-        Me.viewTopClientes.Columns("Ventas").DefaultCellStyle.Format = "N2"
-        Me.viewTopClientes.Columns("Ventas").DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight
-
-        Me.viewTopVendedores.DataSource = dtsTopVendedores
-        'Me.viewTopVendedores.Columns("Vendedor").Width = 150
-        'Me.viewTopVendedores.Columns("Facturas").Width = 60
-        Me.viewTopVendedores.Columns("Facturas").DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight
-        'Me.viewTopVendedores.Columns("Ventas").Width = 85
-        Me.viewTopVendedores.Columns("Ventas").DefaultCellStyle.Format = "N2"
-        Me.viewTopVendedores.Columns("Ventas").DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight
-
-        Me.viewTopProveedores.DataSource = dtsTopProveedores
-        'Me.viewTopProveedores.Columns("Proveedor").Width = 210
-        'Me.viewTopProveedores.Columns("Compras").Width = 85
-        Me.viewTopProveedores.Columns("Compras").DefaultCellStyle.Format = "N2"
-        Me.viewTopProveedores.Columns("Compras").DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight
-
-        frm.Close()
     End Sub
 
-    Private Sub CargarGrafico()
-        Dim frm As New Conecta_Frm
-        frm.Show("Espere porfavor", "Obteniendo datos...")
+    Private Sub btnMostrar_Click(sender As Object, e As EventArgs) Handles btnMostrar.Click
+        Me.viewArticulosVendidos.DataSource = Nothing
+        Me.viewArticulosUtilidad.DataSource = Nothing
+        Me.viewArticulosRentabilidad.DataSource = Nothing
 
-        Dim dt As New System.Data.DataTable
-        Dim strSQL As String = "select year(v.Fecha) as anyo, MONTH(v.fecha) as mes, cast(month(v.fecha) as nvarchar) + '/' + cast(year(v.fecha) as nvarchar) as Fecha, sum(v.Total) as Total from ventas v where dbo.DateOnly(fecha) >=  Dateadd(MM,-10,Getdate()) group by year(v.Fecha), MONTH(v.fecha) order by anyo, mes"
-        cFunciones.Llenar_Tabla_Generico(strSQL, dt, CadenaConexionSeePOS)
+        Me.viewClienteRentabilidad.DataSource = Nothing
+        Me.viewClientesVentas.DataSource = Nothing
+        Me.viewClientesVisitas.DataSource = Nothing
 
-        For i As Integer = 0 To dt.Rows.Count - 1
-            Chart1.Series(0).Points.AddXY(dt.Rows(i).Item("Fecha"), CDec(dt.Rows(i).Item("Total")))
-            Chart1.Series(1).Points.AddXY(dt.Rows(i).Item("Fecha"), CDec(dt.Rows(i).Item("Total")))
-            Chart1.Series(2).Points.AddXY(dt.Rows(i).Item("Fecha"), CDec(dt.Rows(i).Item("Total")))
-        Next
 
-        frm.Close()
+        Me.TopArticulos(Me.dtpDesde.Value, Me.dtpHasta.Value)
+        Me.TopClientes(Me.dtpDesde.Value, Me.dtpHasta.Value)
+
     End Sub
 
-    Private Sub chart1_GetToolTipText(sender As Object, e As ToolTipEventArgs) Handles Chart1.GetToolTipText
-        ' Check selected chart element and set tooltip text for it
-        Select Case e.HitTestResult.ChartElementType
-            Case ChartElementType.DataPoint
-                Dim dataPoint = e.HitTestResult.Series.Points(e.HitTestResult.PointIndex)
-                e.Text = CDec(dataPoint.YValues(0)).ToString("N2")
-                Exit Select
-        End Select
-    End Sub
-
-    Private Sub btnMes_Click(sender As Object, e As EventArgs) Handles btnSemana.Click, btnMes.Click, btnHoy.Click
-        Me.ProcesarBoton(sender)
-    End Sub
-
+    Private label1 As String
+    Private label2 As String
+    Private label3 As String
+    Private label4 As String
+    Private label5 As String
+    Private label6 As String
     Private Sub frmPaneldeControl_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Me.ProcesarBoton(Me.btnHoy)
-        Me.CargarGrafico()
+        Me.label1 = Me.lbl01.Text
+        Me.label2 = Me.lbl02.Text
+        Me.label3 = Me.lbl03.Text
+        Me.label4 = Me.lbl04.Text
+        Me.label5 = Me.lbl05.Text
+        Me.label6 = Me.lbl06.Text
     End Sub
+End Class
 
+Public Class ReporteTop
+    Public Property Descripcion As String = ""
+    Public Property Valor As Long = 0
+    Sub New(_descripcion As String, _valor As Long)
+        Me.Descripcion = _descripcion
+        Me.Valor = _valor
+    End Sub
 End Class

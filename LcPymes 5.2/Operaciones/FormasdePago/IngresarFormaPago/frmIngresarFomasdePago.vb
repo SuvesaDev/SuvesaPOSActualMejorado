@@ -515,7 +515,7 @@ Public Class frmIngresarFomasdePago
                 '        Me.Agregar_Forma_Pago(MontoPago, "TAR", 1, "0")
                 '    Case btnTransferencia.Name
                 Me.Agregar_Forma_Pago(MontoPago, "TRA", 1, frm.txtNumeroDeposito.Text)
-                Dim PagoTransferencia As New PagoTranferencia(False, frm.cboBanco.Text, frm.cboCuenta.Text, frm.txtMoneda.Text, frm.txtNumeroDeposito.Text, CDec(frm.txtMontoDeposito.Text))
+                Dim PagoTransferencia As New PagoTranferencia(False, frm.cboBanco.Text, frm.cboCuenta.Text, frm.txtMoneda.Text, frm.txtNumeroDeposito.Text, CDec(frm.txtMontoDeposito.Text), frm.cboTipoMovimiento.Text)
                 Me.ListaPagosTransferencia.Add(PagoTransferencia)
                 'End Select
 
@@ -748,12 +748,16 @@ Public Structure PagoTranferencia
     Public Moneda As String
     Public NumeroDocumento As String
     Public Monto As Decimal
-    Sub New(_Vacio As Boolean, _IdBanco As String, _IdCuenta As String, _Moneda As String, _NumeroDocumento As String, _Monto As Decimal)
+    Public TipoMoviminento As String
+    Sub New(_Vacio As Boolean, _IdBanco As String, _IdCuenta As String, _Moneda As String, _NumeroDocumento As String, _Monto As Decimal, _TipoMovimiento As String)
         Me.Vacio = _Vacio
         Me.Banco = _IdBanco
         Me.Cuenta = _IdCuenta
         Me.Moneda = _Moneda
         Me.NumeroDocumento = _NumeroDocumento
         Me.Monto = _Monto
+        If _TipoMovimiento = "Transferencia" Then _TipoMovimiento = "Deposito"
+        Me.TipoMoviminento = _TipoMovimiento
     End Sub
+
 End Structure

@@ -37,12 +37,16 @@ Public Class frmReporteInventarioxProveedor
 
     Private Sub btnMostrar_Click(sender As Object, e As EventArgs) Handles btnMostrar.Click
         If Me.lblProveedor.Text <> "" And Me.txtCodigo.Text <> "" Then
-            Dim rpt As New rptInventarioxProveedor
-            rpt.SetParameterValue(0, "Reporte de Articulos por Proveedor  " & Me.lblProveedor.Text)
-            rpt.SetParameterValue(1, Me.CodProveedor)
-            rpt.SetParameterValue(2, Me.ckExistencias.Checked)
-            CrystalReportsConexion.LoadReportViewer(CrystalReportViewer1, rpt, , CadenaConexionSeePOS)
-            CrystalReportViewer1.Show()
+            Try
+                Dim rpt As New rptInventarioxProveedor
+                rpt.SetParameterValue(0, "Reporte de Articulos por Proveedor  " & Me.lblProveedor.Text)
+                rpt.SetParameterValue(1, Me.ckExistencias.Checked)
+                rpt.SetParameterValue(2, Me.CodProveedor)
+                CrystalReportsConexion.LoadReportViewer(CrystalReportViewer1, rpt, , CadenaConexionSeePOS)
+                CrystalReportViewer1.Show()
+            Catch ex As Exception
+                MsgBox(ex.StackTrace)
+            End Try
         End If
     End Sub
 

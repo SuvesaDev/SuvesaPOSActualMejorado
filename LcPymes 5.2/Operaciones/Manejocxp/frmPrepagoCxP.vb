@@ -32,6 +32,8 @@ Public Class frmPrepagoCxP
                         Me.viewDatos.Item("cPagar", index).Value = r.Item("Prepagada")
                         Me.viewDatos.Item("cFactura", index).Value = r.Item("Factura")
                         Me.viewDatos.Item("cFecha", index).Value = r.Item("Fecha")
+                        Me.viewDatos.Item("cFechaAbono", index).Value = r.Item("FechaPreabono")
+                        Me.viewDatos.Item("cDocumento", index).Value = r.Item("DocumentoPreabono")
                         Me.viewDatos.Item("cTotal", index).Value = r.Item("Saldo")
                         index += 1
                     Next
@@ -86,16 +88,46 @@ Public Class frmPrepagoCxP
         End Try
     End Sub
 
+    Public Sub ActualizarDatos(Fecha, Documento)
+        Dim db As New OBSoluciones.SQL.Sentencias(CadenaConexionSeePOS)
+        Dim Prepagar As String = "0"
+        Dim Id_Compra As String = "0"
+        For Each i As DataGridViewRow In Me.viewDatos.Rows
+            Prepagar = IIf(i.Cells("cPagar").Value = True, 1, 0)
+            Id_Compra = i.Cells("cIdCompra").Value
+            If Prepagar = False Then
+                i.Cells("cFechaAbono").Value = ""
+                i.Cells("cDocumento").Value = ""
+                db.Ejecutar("Update Compras set FechaPreabono = null, DocumentoPreabono = '', Preabono = 0, Prepagada = 0 Where Id_Compra = " & Id_Compra, CommandType.Text)
+            Else
+                If i.Cells("cDocumento").Value = "" Then
+                    i.Cells("cFechaAbono").Value = Fecha
+                    i.Cells("cDocumento").Value = Documento
+                    db.Ejecutar("Update Compras set FechaPreabono = '" & Fecha & "', DocumentoPreabono= '" & Documento & "', PreAbono = " & 0 & ", Prepagada = " & Prepagar & " Where Id_Compra = " & Id_Compra, CommandType.Text)
+                End If
+            End If
+        Next
+    End Sub
+
     Private Sub btnApliar_Click(sender As Object, e As EventArgs) Handles btnApliar.Click
         If MsgBox("Desea apliar los cambios", MsgBoxStyle.YesNo + MsgBoxStyle.Question, "Confirmar Accion.") = MsgBoxResult.Yes Then
-            Dim db As New OBSoluciones.SQL.Sentencias(CadenaConexionSeePOS)
-            Dim Prepagar As String = "0"
-            Dim Id_Compra As String = "0"
-            For Each i As DataGridViewRow In Me.viewDatos.Rows
-                Prepagar = IIf(i.Cells("cPagar").Value = True, 1, 0)
-                Id_Compra = i.Cells("cIdCompra").Value
-                db.Ejecutar("Update Compras set PreAbono = " & 0 & ", Prepagada = " & Prepagar & " Where Id_Compra = " & Id_Compra, CommandType.Text)
-            Next
+            Dim Fecha As DateTime = Date.Now
+            Dim Documento As String = ""
+
+            Dim CountAplicar As Decimal = (From x As DataGridViewRow In Me.viewDatos.Rows
+                                      Where x.Cells("cPagar").Value = True
+                                      Select x).Count
+
+            If CountAplicar > 0 Then
+                Dim frm As New frmAgregarFechaDocumento
+                If frm.ShowDialog = Windows.Forms.DialogResult.OK Then
+                    Me.ActualizarDatos(frm.dtpFecha.Value, frm.txtNumeroDocumento.Text)
+                End If
+            Else
+                Me.ActualizarDatos(Fecha, Documento)
+            End If
+
+            
         End If
     End Sub
 
@@ -111,4 +143,7 @@ Public Class frmPrepagoCxP
         Me.CalcularTotal()
     End Sub
 
+    Private Sub frmPrepagoCxP_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+    End Sub
 End Class

@@ -35,6 +35,7 @@ Public Class frmDespositosporDevoluciones
     Private Sub viewDatos_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles viewDatos.CellDoubleClick
         Try
             Dim frm As New frmRegistrarDepositoDevolucion
+            Dim Tipo As String = Me.viewDatos.Item("Tipo", Me.viewDatos.CurrentRow.Index).Value
             frm.txtCedula.Text = Me.viewDatos.Item("Identificacion", Me.viewDatos.CurrentRow.Index).Value
             frm.txtNombre.Text = Me.viewDatos.Item("Cliente", Me.viewDatos.CurrentRow.Index).Value
             frm.txtCuenta.Text = Me.viewDatos.Item("Cuenta", Me.viewDatos.CurrentRow.Index).Value
@@ -45,7 +46,12 @@ Public Class frmDespositosporDevoluciones
             End If
             If frm.ShowDialog = Windows.Forms.DialogResult.OK Then
                 Dim db As New OBSoluciones.SQL.Sentencias(CadenaConexionSeePOS)
-                Dim strSQL As String = "Update devoluciones_ventas Set Devuelto = 1, Documento = '" & frm.txtDocumento.Text & "', FechaDeposito = '" & frm.dtpFecha.Value & "' Where devolucion = " & Me.viewDatos("Id", Me.viewDatos.CurrentRow.Index).Value
+                Dim strSQL As String = ""
+                If Tipo = "Devolucion" Then
+                    strSQL = "Update devoluciones_ventas Set Devuelto = 1, Documento = '" & frm.txtDocumento.Text & "', FechaDeposito = '" & frm.dtpFecha.Value & "' Where devolucion = " & Me.viewDatos("Id", Me.viewDatos.CurrentRow.Index).Value
+                Else
+                    strSQL = "Update DevolucionPrepago set Depositado = 1, Documento = '" & frm.txtDocumento.Text & "', FechaDeposito = '" & frm.dtpFecha.Value & "' Where Id = " & Me.viewDatos("Id", Me.viewDatos.CurrentRow.Index).Value
+                End If
                 db.Ejecutar(strSQL, CommandType.Text)
                 Me.MostrarDatos()
             End If

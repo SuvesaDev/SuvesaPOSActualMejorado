@@ -1,4 +1,4 @@
-Imports System.Drawing
+ï»¿Imports System.Drawing
 Imports System.Data
 Imports System.Data.SqlClient
 Imports System.Drawing.Printing
@@ -11,6 +11,7 @@ Public Class frmEtiquetasProductos
     Public Cantidades(50) As Integer
     Public CodPro(50) As Integer
     Dim EtiquetasGuanavet As New rptEtiquetasGuanavetClinica
+    Dim EtiquetasSUVELISA As New rptEtiquetasSUVELISA
     Dim Etiquetas1 As New Etiquetas
     Dim Etiquetas2 As New EtiquetaSATOCX400_2C
     Friend WithEvents Label4 As Label
@@ -20,14 +21,14 @@ Public Class frmEtiquetasProductos
     Dim usua As Usuario_Logeado
 
 
-#Region " Código generado por el Diseñador de Windows Forms "
+#Region " CÃ³digo generado por el DiseÃ±ador de Windows Forms "
 
     Public Sub New(ByVal f As Boolean, ByVal s() As Integer, ByVal w() As Integer, ByVal z() As Integer)
         MyBase.New()
 
-        'El Diseñador de Windows Forms requiere esta llamada.
+        'El DiseÃ±ador de Windows Forms requiere esta llamada.
         InitializeComponent()
-        'Agregar cualquier inicialización después de la llamada a InitializeComponent()
+        'Agregar cualquier inicializaciÃ³n despuÃ©s de la llamada a InitializeComponent()
         Automatico = f
         Codigos = s
         Cantidades = w
@@ -44,12 +45,12 @@ Public Class frmEtiquetasProductos
         MyBase.Dispose(disposing)
     End Sub
 
-    'Requerido por el Diseñador de Windows Forms
+    'Requerido por el DiseÃ±ador de Windows Forms
     Private components As System.ComponentModel.IContainer
 
-    'NOTA: el Diseñador de Windows Forms requiere el siguiente procedimiento
-    'Puede modificarse utilizando el Diseñador de Windows Forms. 
-    'No lo modifique con el editor de código.
+    'NOTA: el DiseÃ±ador de Windows Forms requiere el siguiente procedimiento
+    'Puede modificarse utilizando el DiseÃ±ador de Windows Forms. 
+    'No lo modifique con el editor de cÃ³digo.
     Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
     Friend WithEvents Label13 As System.Windows.Forms.Label
     Friend WithEvents Label1 As System.Windows.Forms.Label
@@ -158,7 +159,7 @@ Public Class frmEtiquetasProductos
         Me.GroupBox1.Size = New System.Drawing.Size(594, 203)
         Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
-        Me.GroupBox1.Text = "Datos Artículos"
+        Me.GroupBox1.Text = "Datos ArtÃ­culos"
         '
         'Panel1
         '
@@ -239,7 +240,7 @@ Public Class frmEtiquetasProductos
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(211, 18)
         Me.Label2.TabIndex = 62
-        Me.Label2.Text = "Código de barras"
+        Me.Label2.Text = "CÃ³digo de barras"
         '
         'txtCodigoBarras
         '
@@ -279,7 +280,7 @@ Public Class frmEtiquetasProductos
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(211, 18)
         Me.Label3.TabIndex = 60
-        Me.Label3.Text = "Código de barras correcto"
+        Me.Label3.Text = "CÃ³digo de barras correcto"
         '
         'txtCodigoBarrrasCorrecto
         '
@@ -299,7 +300,7 @@ Public Class frmEtiquetasProductos
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(403, 18)
         Me.Label1.TabIndex = 56
-        Me.Label1.Text = "Descripción"
+        Me.Label1.Text = "DescripciÃ³n"
         '
         'txtDescripcion
         '
@@ -335,7 +336,7 @@ Public Class frmEtiquetasProductos
         Me.Label13.Name = "Label13"
         Me.Label13.Size = New System.Drawing.Size(105, 19)
         Me.Label13.TabIndex = 54
-        Me.Label13.Text = "Código"
+        Me.Label13.Text = "CÃ³digo"
         '
         'Label6
         '
@@ -587,7 +588,7 @@ Public Class frmEtiquetasProductos
         Me.Controls.Add(Me.Textcod_Pro)
         Me.Name = "frmEtiquetasProductos"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "Etiquetas de Artículos"
+        Me.Text = "Etiquetas de ArtÃ­culos"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         Me.Panel1.ResumeLayout(False)
@@ -621,7 +622,7 @@ Public Class frmEtiquetasProductos
                 End Select
             Next
 
-            If MsgBox("No se ha encontrado las impresoras predeterminadas para el sistema..." & vbCrLf & "Desea proceder a selecionar una impresora....", MsgBoxStyle.YesNo + MsgBoxStyle.Critical, "Atención...") = MsgBoxResult.Yes Then
+            If MsgBox("No se ha encontrado las impresoras predeterminadas para el sistema..." & vbCrLf & "Desea proceder a selecionar una impresora....", MsgBoxStyle.YesNo + MsgBoxStyle.Critical, "AtenciÃ³n...") = MsgBoxResult.Yes Then
                 Dim PrinterDialog As New PrintDialog
                 Dim DocPrint As New PrintDocument
                 PrinterDialog.Document = DocPrint
@@ -641,8 +642,8 @@ Public Class frmEtiquetasProductos
     End Function
     Private Sub cargarinformacion(ByVal codigo As String)
         Try
-            Dim articulos() As System.Data.DataRow 'almacena temporalmente los datos de un artículo
-            Dim articulo As System.Data.DataRow 'almacena temporalmente los datos de un artículo
+            Dim articulos() As System.Data.DataRow 'almacena temporalmente los datos de un artÃ­culo
+            Dim articulo As System.Data.DataRow 'almacena temporalmente los datos de un artÃ­culo
             Dim pos As Integer
             Dim vista As DataView
 
@@ -658,7 +659,7 @@ Public Class frmEtiquetasProductos
 
 
             Else
-                MsgBox("No existe un artículo con ese código en el inventario", MsgBoxStyle.Information)
+                MsgBox("No existe un artÃ­culo con ese cÃ³digo en el inventario", MsgBoxStyle.Information)
                 Me.BindingContext(Me.DsEtiquetasArticulos1, "Inventario").CancelCurrentEdit()
 
 
@@ -792,11 +793,11 @@ Public Class frmEtiquetasProductos
 
             'If Me.Textcod_Pro.Text = "" Then
             '    Try
-            '        cod_prov = CInt(InputBox("Código del Proveedor", ""))
+            '        cod_prov = CInt(InputBox("CÃ³digo del Proveedor", ""))
             '        Me.Textcod_Pro.Text = cod_prov
 
             '    Catch ex As SystemException
-            '        MsgBox("Digite un Código de Proveedor Válido", MsgBoxStyle.Exclamation)
+            '        MsgBox("Digite un CÃ³digo de Proveedor VÃ¡lido", MsgBoxStyle.Exclamation)
             '        Me.Textcod_Pro.Text = ""
             '        Exit Sub
             '    End Try
@@ -861,6 +862,82 @@ Public Class frmEtiquetasProductos
             MsgBox(ex.Message)
         End Try
     End Sub
+
+    Private Function CodArticulo(_Cod As String) As String
+        Dim dt As New DataTable
+        cFunciones.Llenar_Tabla_Generico("select Cod_Articulo from Inventario where Codigo = " & _Cod, dt, CadenaConexionSeePOS)
+        If dt.Rows.Count > 0 Then
+            Return dt.Rows(0).Item("Cod_Articulo")
+        Else
+            Return _Cod
+        End If
+    End Function
+
+    Private Function Precio(_Cod As String) As Decimal
+        Dim dt As New DataTable
+        cFunciones.Llenar_Tabla_Generico("select Precio_A * (1 + (IVenta / 100)) as Precio from Inventario where Codigo = " & _Cod, dt, CadenaConexionSeePOS)
+        If dt.Rows.Count > 0 Then
+            Return dt.Rows(0).Item("Precio")
+        Else
+            Return 0
+        End If
+    End Function
+
+    Private Sub ImprimrEtiquetasSUVELISA()
+        Dim i As Integer
+        Dim codigo As Integer
+        Dim cant As Integer
+        Dim Cod_Pro As Integer
+
+        Try
+            Dim vueltas As Integer = 0
+
+            Dim IncluirPrecio As Boolean = False
+            If MsgBox("Desea Imprimir el precio de venta.", MsgBoxStyle.Question + MsgBoxStyle.YesNo, "Confirmar Accion") = MsgBoxResult.Yes Then
+                IncluirPrecio = True
+            Else
+                IncluirPrecio = False
+            End If
+
+            For Each fila As DataGridViewRow In Me.dgEtiquetas.Rows
+
+                vueltas = 0
+                While vueltas < CInt(fila.Cells("Cantidad").Value)
+                    Dim dts As New DataSetEtiquetasGuanavetClinica
+                    Dim row As DataRow = dts.DatosEtiquetasAlbaranesCompra_Crystal.NewRow
+                    row!idAlbaran = 0
+                    row!cantidad = 0
+                    row!ImporteUnitario = 0
+                    row!descripcion = fila.Cells("Descripcion").Value '***
+                    row!factorConversion = 0
+                    row!idArticulo = Me.CodArticulo(fila.Cells("Codigo").Value) '***
+                    row!orden = ""
+                    If IncluirPrecio = True Then
+                        row!UnidadMedida = " â‚¡ " & Me.Precio(fila.Cells("Codigo").Value).ToString("N2") '***
+                    Else
+                        row!UnidadMedida = ""
+                    End If
+                    row!PVP1 = 0
+                    row!Moneda = 1 '***
+                    row!PesoEnvase = ""
+                    dts.DatosEtiquetasAlbaranesCompra_Crystal.Rows.Add(row)
+                    vueltas += 1
+
+
+                    EtiquetasSUVELISA.SetDataSource(dts)
+                    Me.rptViewer.ReportSource = EtiquetasSUVELISA
+                    EtiquetasSUVELISA.PrintToPrinter(cant, True, 1, 1)
+                    dts.Clear()
+                End While
+
+            Next
+
+
+
+        Catch ex As SystemException
+            MsgBox(ex.Message)
+        End Try
+    End Sub
     Private Sub Imprimir(ByVal Etiquetas As CrystalDecisions.CrystalReports.Engine.ReportDocument)
 
         Dim i As Integer
@@ -900,7 +977,7 @@ Public Class frmEtiquetasProductos
     'Try 'se intenta hacer
     '        If Me.BindingContext(Me.DsEtiquetasArticulos1, "inventario").Count > 0 Then ' si hay articulos
 
-    'resp = MessageBox.Show("¿Desea eliminar excluir este artículo para impresión de etiquetas?", "Seepos", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1)
+    'resp = MessageBox.Show("Â¿Desea eliminar excluir este artÃ­culo para impresiÃ³n de etiquetas?", "Seepos", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1)
 
     'If resp = 6 Then
     '    Try
@@ -923,19 +1000,36 @@ Public Class frmEtiquetasProductos
     '    End Try
     'End Sub
 
+    Private Function Empresa() As String
+        Dim dt As New DataTable
+        cFunciones.Llenar_Tabla_Generico("select replace(replace(Cedula,'-',''),' ','') as Cedula from configuraciones", dt, CadenaConexionSeePOS)
+        If dt.Rows.Count > 0 Then
+            Return dt.Rows(0).Item("Cedula")
+        Else
+            Return ""
+        End If
+    End Function
+
     Private Sub ToolBar1_ButtonClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.ToolBarButtonClickEventArgs) Handles ToolBar1.ButtonClick
         Try
             Select Case ToolBar1.Buttons.IndexOf(e.Button) + 1
                 Case 5
-                    ImprimrEtiquetasGuanavet()
+                    Select Case Me.Empresa
+                        Case "3101105432" 'SUVELISA
+                            Me.ImprimrEtiquetasSUVELISA()
+                        Case "3101696098" 'Guanavet Clinica
+                            Me.ImprimrEtiquetasGuanavet()
+                        Case Else
+                            MsgBox("No se reconoce el formato de las etiquetas", MsgBoxStyle.Exclamation, Me.Text)
+                    End Select
                 Case 7
                     Me.Close()
             End Select
         Catch ex As Exception
             MsgBox(ex.ToString)
         End Try
-
     End Sub
+
 
     'Private Sub dgEtiquetas_KeyDown(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles dgEtiquetas.KeyDown
     'If e.KeyCode = Keys.Delete Then
@@ -995,7 +1089,7 @@ Public Class frmEtiquetasProductos
     Private Sub cmdEtiquetar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmdEtiquetar.Click
         Dim resp As String
 
-        resp = MessageBox.Show("¿Desea etiquetar este artículo?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1)
+        resp = MessageBox.Show("Â¿Desea etiquetar este artÃ­culo?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1)
 
         If resp = 6 Then
             insertar()
@@ -1008,7 +1102,7 @@ Public Class frmEtiquetasProductos
         Dim rs As SqlDataReader
         Dim cod_barras As String
 
-        resp = MessageBox.Show("¿Desea corregir el código de barras de este artículo?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1)
+        resp = MessageBox.Show("Â¿Desea corregir el cÃ³digo de barras de este artÃ­culo?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1)
 
         If resp = 6 Then
             cod_barras = Me.txtCodigoBarrrasCorrecto.Text
@@ -1016,24 +1110,24 @@ Public Class frmEtiquetasProductos
             If rs.Read Then
                 If rs!codigo = Me.txtCodigo.Text Then
 
-                    MessageBox.Show("Este artículo ya posee el código de barras asignado", "", MessageBoxButtons.OK)
+                    MessageBox.Show("Este artÃ­culo ya posee el cÃ³digo de barras asignado", "", MessageBoxButtons.OK)
 
-                    resp = MessageBox.Show("¿Desea etiquetar este artículo?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1)
+                    resp = MessageBox.Show("Â¿Desea etiquetar este artÃ­culo?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1)
 
                     If resp = 6 Then
                         insertar()
                     End If
                 Else
-                    MsgBox("El Código de barras ya existe", MsgBoxStyle.Exclamation)
+                    MsgBox("El CÃ³digo de barras ya existe", MsgBoxStyle.Exclamation)
                 End If
             Else
                 Try
                     Me.BindingContext(Me.DsEtiquetasArticulos1, "Inventario").EndCurrentEdit()
                     Me.daArticulos.Update(Me.DsEtiquetasArticulos1, "Inventario")
 
-                    MsgBox("Actualización de artículo exitosa", MsgBoxStyle.Information)
+                    MsgBox("ActualizaciÃ³n de artÃ­culo exitosa", MsgBoxStyle.Information)
 
-                    resp = MessageBox.Show("¿Desea etiquetar este artículo?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1)
+                    resp = MessageBox.Show("Â¿Desea etiquetar este artÃ­culo?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1)
 
                     If resp = 6 Then
                         insertar()

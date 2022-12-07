@@ -11,6 +11,7 @@
         VisorReporte.ToolPanelView = CrystalDecisions.Windows.Forms.ToolPanelViewType.GroupTree
     End Sub
 
+
     Private Sub frmReporteTemperaturaCamara_Load(sender As Object, e As EventArgs) Handles Me.Load
         Me.WindowState = Windows.Forms.FormWindowState.Maximized
         FechaFinal.Value = Now.Date

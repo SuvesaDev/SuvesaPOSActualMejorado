@@ -399,6 +399,20 @@ Public Class frmDatosPreVenta
 
     Public NoEnviarPideFicha As Boolean = False
 
+    Private Function GetCupones(_IdPreventa As Integer) As Integer
+        Try
+            Dim dt As New DataTable
+            cFunciones.Llenar_Tabla_Generico("select cupones from PreVentas where id = " & _IdPreventa, dt, CadenaConexionSeePOS)
+            If dt.Rows.Count > 0 Then
+                Return dt.Rows(0).Item("cupones")
+            Else
+                Return 0
+            End If
+        Catch ex As Exception
+            Return 0
+        End Try
+    End Function
+
     Private Function CargarSaldoPrepago(_Identificacion As String) As Decimal
         Dim dt As New DataTable
         cFunciones.Llenar_Tabla_Generico("select IsNull(Sum(debitos - creditos),0) as Saldo from viewMovimientosPrepagos where identificacion = " & _Identificacion, dt, CadenaConexionSeePOS)
@@ -560,9 +574,9 @@ Public Class frmDatosPreVenta
 
                                 Select Case TipoDoc
                                     Case "ABO"
-                                        trans.Ejecutar("Update [dbo].[abonoccobrar] Set Prepago = " & MontoPago & " Where Id_Recibo = " & IdRecibo, CommandType.Text)
+                                        trans.Ejecutar("Update " & doc.Cells("cPuntoVenta").Value & ".[dbo].[abonoccobrar] Set Prepago = " & MontoPago & " Where Id_Recibo = " & IdRecibo, CommandType.Text)
                                     Case Else
-                                        trans.Ejecutar("Update [dbo].[Ventas] Set Prepago = " & MontoPago & " Where Id = " & Id_Factura, CommandType.Text)
+                                        trans.Ejecutar("Update " & doc.Cells("cPuntoVenta").Value & ".[dbo].[Ventas] Set Prepago = " & MontoPago & " Where Id = " & Id_Factura, CommandType.Text)
                                 End Select
 
                             End If
@@ -648,12 +662,13 @@ Public Class frmDatosPreVenta
                     Next
 
                     For Each t As PagoTranferencia In frm.ListaPagosTransferencia
-                        trans.Ejecutar("insert into ArqueoDeposito(IdArqueo, IdApertura, Banco, Cuenta, Moneda, Numero, Monto, Tipo) values(" & 0 & ", " & NApertura & ", '" & t.Banco & "', '" & t.Cuenta & "', '" & t.Moneda & "', '" & t.NumeroDocumento & "', " & t.Monto & ", 'Transferencia')", CommandType.Text)
+                        trans.Ejecutar("insert into ArqueoDeposito(IdArqueo, IdApertura, Banco, Cuenta, Moneda, Numero, Monto, Tipo, TipoMovimiento) values(" & 0 & ", " & NApertura & ", '" & t.Banco & "', '" & t.Cuenta & "', '" & t.Moneda & "', '" & t.NumeroDocumento & "', " & t.Monto & ", 'Transferencia', '" & t.TipoMoviminento & "')", CommandType.Text)
                     Next
 
                     trans.Commit()
                 Catch ex As Exception
                     trans.Rollback()
+                    MsgBox(ex.Message, MsgBoxStyle.Critical, Text)
                 End Try
 
                 Try
@@ -661,6 +676,17 @@ Public Class frmDatosPreVenta
                         GeneralCaja.clsImpresion.InicalizaReporte(r.Cells("cPuntoVenta").Value)
                         If r.Cells("cTipo").Value = "CON" Or r.Cells("cTipo").Value = "MCO" Or r.Cells("cTipo").Value = "TCO" Or r.Cells("cTipo").Value = "PVE" Then
                             GeneralCaja.clsImpresion.ImprimirFactura(r.Cells("cIdDocumento").Value, True, Caja)
+
+                            Dim Cupones As Integer = Me.GetCupones(r.Cells("cId").Value)
+                            If Cupones > 0 Then
+                                Dim index As Integer = 0
+                                While index < Cupones
+                                    GeneralCaja.clsImpresion.Imprimir_Tiquete_Rifa(Caja, r.Cells("cIdDocumento").Value)
+                                    index += 1
+                                End While
+
+                            End If
+
                         End If
                         If r.Cells("cTipo").Value = "ABO" Then
                             GeneralCaja.clsImpresion.ImprimirReciboDinero(r.Cells("cIdDocumento").Value, Me.Numero_Caja)

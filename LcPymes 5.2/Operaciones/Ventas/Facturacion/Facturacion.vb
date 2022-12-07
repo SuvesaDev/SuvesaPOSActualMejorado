@@ -6450,10 +6450,49 @@ Fin:
         End If
     End Function
 
+
+    Private Function PuedeRegistrarVenta(_PVE As Boolean) As Boolean
+        Dim Resultado As Boolean = True
+
+        If Me.ClienteRegistradoMAG And _PVE Then
+            Resultado = False
+        End If
+
+        If Me.Ck_Exonerar.Checked And _PVE Then
+            Resultado = False        
+        End If
+
+        If Resultado = False Then
+            MsgBox("La factura debe ser registrada con F2 o F4", MsgBoxStyle.Exclamation, Me.Text)
+        End If
+
+        Return Resultado
+    End Function
+
     Private Sub Registrar(ByVal PV As Boolean, _NumCaja As Integer)
+        If PuedeRegistrarVenta(PV) = False Then
+            Exit Sub
+        End If
+
         Me.YaEstaFacturando = True
         Me.codigo_cliente = txtcodigo.Text
         Me.nombre_cliente = txtNombre.Text
+
+        If Me.ck_agente.Checked = True Then
+            If Me.txtagente.Text <> "" Then
+                If IsNumeric(Me.txtagente.Text) Then
+                    If CDec(Me.txtagente.Text) > 0 Then
+                        Me.txtagente.Text = Me.CodAgente
+                        Me.BindingContext(Me.DataSet_Facturaciones, "Ventas").Current("agente") = Me.ck_agente.Checked
+                        Me.BindingContext(Me.DataSet_Facturaciones, "Ventas").Current("cod_agente") = Me.CodAgente
+                    End If
+                End If
+            End If
+        Else
+            Me.CodAgente = 0
+        End If
+
+
         Me.BindingContext(Me.DataSet_Facturaciones, "Ventas").Current("num_caja") = _NumCaja
         Me.BindingContext(Me.DataSet_Facturaciones, "Ventas").Current("EnviadoMH") = False
         Me.BindingContext(Me.DataSet_Facturaciones, "Ventas").Current("TipoCedula") = Me.cbo_tipo_cliente.Text
@@ -6720,7 +6759,10 @@ Fin:
             dtFecha.Text = DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss")
             BindingContext(DataSet_Facturaciones, "Ventas").EndCurrentEdit()
 
+            '***********************************************************************************
+            'Ojo Rifa
             Me.buscar_rifa()
+            '***********************************************************************************
 
             If Me.RegistrarVenta() Then 'se registra en la base de datos then
                 Me.IngresoIdentificacion = False
@@ -6763,8 +6805,14 @@ Fin:
 
                 If Me.AplicaCambioenCaja = True Then
                     Dim db As New OBSoluciones.SQL.Sentencias(CadenaConexionSeePOS)
-                    db.Ejecutar("Update Preventas set Id_FacturaRemplaza = " & Me.IdFacturaRemplaza & ", Ficha = " & Me.txtFicha.Text & ", Frecuente = " & IIf(Me.ckFrecuente.Checked = False, 0, 1) & " where id = " & id, CommandType.Text)
+                    db.Ejecutar("Update Preventas set Id_FacturaRemplaza = " & Me.IdFacturaRemplaza & ", Ficha = " & Me.txtFicha.Text & ", Frecuente = " & IIf(Me.ckFrecuente.Checked = False, 0, 1) & " where Id = " & id, CommandType.Text)
                     Me.txtFicha.Text = ""
+                    Try
+                        If Me.cantidad_cupon > 0 Then
+                            db.Ejecutar("Update Preventas set Cupones = " & Me.cantidad_cupon & " Where Id = " & id, CommandType.Text)
+                        End If
+                    Catch ex As Exception
+                    End Try
                 Else
                     Dim db As New OBSoluciones.SQL.Sentencias(CadenaConexionSeePOS)
                     db.Ejecutar("Update ventas set Id_FacturaRemplaza = " & Me.IdFacturaRemplaza & ", Frecuente = " & IIf(Me.ckFrecuente.Checked = False, 0, 1) & " where id = " & id, CommandType.Text)
@@ -8695,6 +8743,8 @@ Fin:
         Dim Proveedor As Integer
         Dim productos_patrocinadores As Decimal = 0
 
+        'Me.txtMontoCupon.BackColor = SystemColors.Control
+
         Try
             With BindingContext(Me.DataSet_Facturaciones, "Ventas.VentasVentas_Detalle")
                 Me.imprime_cupon = False
@@ -8728,8 +8778,10 @@ Fin:
 
                 If Me.imprime_cupon = True Then
                     Me.cantidad_cupon = productos_patrocinadores / Monto_Minimo
+                    'Me.txtMontoCupon.BackColor = Color.Green
                 Else
                     Me.cantidad_cupon = 0
+                    'Me.txtMontoCupon.BackColor = Color.Red
                 End If
 
                 If Me.opCredito.Checked = True Then
@@ -11260,6 +11312,7 @@ Fin:
         End If
     End Function
 
+    Private CodAgente As Long = 0
     Private Sub ck_agente_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ck_agente.CheckedChanged
         Dim cFunciones As New cFunciones
         Dim c As String
@@ -11267,6 +11320,7 @@ Fin:
             Me.DetenerTiempo()
             c = cFunciones.BuscarDatos("select id as id,nombre as Nombre from agente_ventas where Activo = 1 and anulado = 0", "Nombre")
             If c <> "" Then
+                Me.CodAgente = c
                 Me.txtagente.Text = c
                 If c = 8 Then 'solo para huber
                     Me.ckPD.Checked = Me.AutoActivaPD(c)

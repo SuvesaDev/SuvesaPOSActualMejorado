@@ -443,10 +443,8 @@ Public Class frmEstado_CXP
             Me.ProgressBarControl1.Text = 0
             Me.Timer1.Enabled = True
 
-
-
-
             Select Case X
+
 
                 Case 0 To 2 'Estado de Cuenta General,Vencidas,Pagadas. 
                     Dim Reporte As New Reporte_Estado_CXP_FechaCorte_Proveedor

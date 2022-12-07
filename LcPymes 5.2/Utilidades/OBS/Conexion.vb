@@ -13,6 +13,7 @@ Namespace OBSoluciones
             Private Conexion As New SqlConnection
             Private Adapter As SqlDataAdapter
             Private Parametros As New List(Of SqlParameter)
+            Private TimeOut As Integer = 0
 
             Public Function Test(_Con As String) As String
                 Try
@@ -54,6 +55,12 @@ Namespace OBSoluciones
 
             Sub New(ByVal _Cadena As String)
                 Me.Conexion = New SqlConnection(_Cadena)
+                Me.TimeOut = 0
+            End Sub
+
+            Sub New(ByVal _Cadena As String, _TimeOut As Integer)
+                Me.Conexion = New SqlConnection(_Cadena)
+                Me.TimeOut = _TimeOut
             End Sub
             Public Sub AddParametro(ByVal _nombre As String, ByVal _valor As Object)
                 Parametros.Add(New SqlParameter(_nombre, _valor))
@@ -76,6 +83,9 @@ Namespace OBSoluciones
                     Me.Adapter = New SqlDataAdapter(_strSQL, Me.Conexion)
                     Me.Adapter.SelectCommand.CommandType = _Tipo
                     Me.Adapter.SelectCommand.Parameters.AddRange(Me.Parametros.ToArray)
+                    If Me.TimeOut > 0 Then
+                        Me.Adapter.SelectCommand.CommandTimeout = Me.TimeOut
+                    End If
                     Me.Adapter.Fill(_dt)
                     Me.Conexion.Close()
                     Me.Parametros.Clear()
@@ -94,11 +104,15 @@ Namespace OBSoluciones
                     Me.Adapter = New SqlDataAdapter(_strSQL, Me.Conexion)
                     Me.Adapter.SelectCommand.CommandType = _Tipo
                     Me.Adapter.SelectCommand.Parameters.AddRange(Me.Parametros.ToArray)
+                    If Me.TimeOut > 0 Then
+                        Me.Adapter.SelectCommand.CommandTimeout = Me.TimeOut
+                    End If
                     Me.Adapter.Fill(dt)
                     Me.Conexion.Close()
                     Me.Parametros.Clear()
                     Return dt
                 Catch ex As Exception
+                    MsgBox(ex.Message)
                     Conexion.Close()
                     Me.Parametros.Clear()
                     Return Nothing
@@ -112,6 +126,9 @@ Namespace OBSoluciones
                     Me.Adapter = New SqlDataAdapter(_strSQL, Me.Conexion)
                     Me.Adapter.SelectCommand.CommandType = CommandType.StoredProcedure
                     Me.Adapter.SelectCommand.Parameters.AddRange(Me.Parametros.ToArray)
+                    If Me.TimeOut > 0 Then
+                        Me.Adapter.SelectCommand.CommandTimeout = Me.TimeOut
+                    End If
                     Me.Adapter.Fill(dt)
                     Me.Conexion.Close()
                     _ID = Parametros.Item(_index).Value

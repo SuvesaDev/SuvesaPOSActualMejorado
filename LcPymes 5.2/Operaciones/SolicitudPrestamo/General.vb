@@ -183,8 +183,8 @@ Namespace OBSoluciones
 
             Dim dtPrestamo As New DataTable
             Dim dtDetalle As New DataTable
-            dtPrestamo = db.Ejecutar("SELECT * FROM prestamo p WHERE p.ID = " & _Id, CommandType.Text)
-            dtDetalle = db.Ejecutar("SELECT dp.ID, dp.ID_prestamo, dp.codigo, p." & CodigoEmpresa & " AS CodigoPrestamo, dp.descripcion, dp.cantidad, dp.precio, dp.entregado, dp.devuelto, dp.cantidadAceptada FROM detalle_prestamo dp INNER JOIN producto p ON dp.codigo = p.Codigo WHERE dp.ID_prestamo = " & _Id, CommandType.Text)
+            'dtPrestamo = db.Ejecutar("SELECT * FROM prestamo p WHERE p.ID = " & _Id, CommandType.Text)
+            'dtDetalle = db.Ejecutar("SELECT dp.ID, dp.ID_prestamo, dp.codigo, p." & CodigoEmpresa & " AS CodigoPrestamo, dp.descripcion, dp.cantidad, dp.precio, dp.entregado, dp.devuelto, dp.cantidadAceptada FROM detalle_prestamo dp INNER JOIN producto p ON dp.codigo = p.Codigo WHERE dp.ID_prestamo = " & _Id, CommandType.Text)
 
             Me.ID = _Id
             Me.IDReferencia = dtPrestamo.Rows(0).Item("IDReferencia")

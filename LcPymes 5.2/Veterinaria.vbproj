@@ -198,6 +198,7 @@
     <Reference Include="System">
       <Name>System</Name>
     </Reference>
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
     </Reference>
@@ -214,6 +215,7 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Web.Services, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\..\..\WINDOWS\assembly\GAC_MSIL\System.Web.Services\2.0.0.0__b03f5f7f11d50a3a\System.Web.Services.dll</HintPath>
@@ -302,6 +304,10 @@
     <EmbeddedResource Include="Inventarios\Etiquetas\frmEtiquetarLiberia.resx">
       <DependentUpon>frmEtiquetarLiberia.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Inventarios\Etiquetas\rptEtiquetasSUVELISA.RPT">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptEtiquetasSUVELISA.vb</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="Inventarios\Etiquetas\rptEtiquetasGuanavetClinica.RPT">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>rptEtiquetasGuanavetClinica.vb</LastGenOutput>
@@ -384,6 +390,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Inventarios\Prestamo\Presentacion\frmMostrarSolicitudes.resx">
       <DependentUpon>frmMostrarSolicitudes.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventarios\Prestamo\Presentacion\frmMotivoAnulacionPrestamo.resx">
+      <DependentUpon>frmMotivoAnulacionPrestamo.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Inventarios\Prestamo\Presentacion\frmRelacionarProductos.resx">
       <DependentUpon>frmRelacionarProductos.vb</DependentUpon>
@@ -702,11 +711,20 @@
     <EmbeddedResource Include="Operaciones\GestionCobro\frmGestionCobro.resx">
       <DependentUpon>frmGestionCobro.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Operaciones\GuanavetClinica\Albaranes\EntregaCuenta\frmCambiarEntregaCuenta.resx">
+      <DependentUpon>frmCambiarEntregaCuenta.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Operaciones\GuanavetClinica\Albaranes\EntregaCuenta\frmDevolverEntregaCuenta.resx">
+      <DependentUpon>frmDevolverEntregaCuenta.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Operaciones\GuanavetClinica\Albaranes\frmConfirmarGenerarFacturas.resx">
       <DependentUpon>frmConfirmarGenerarFacturas.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Operaciones\GuanavetClinica\Albaranes\frmConsultaAlbaran.resx">
       <DependentUpon>frmConsultaAlbaran.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Operaciones\GuanavetClinica\Albaranes\frmDescuentoTeleton.resx">
+      <DependentUpon>frmDescuentoTeleton.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Operaciones\GuanavetClinica\Albaranes\frmEditarAlbaran.resx">
       <DependentUpon>frmEditarAlbaran.vb</DependentUpon>
@@ -726,6 +744,15 @@
     <EmbeddedResource Include="Operaciones\GuanavetClinica\Albaranes\rptCuentaAlbaran.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>rptCuentaAlbaran.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Operaciones\GuanavetClinica\arqueodeposito\frmArqueoDeposito.resx">
+      <DependentUpon>frmArqueoDeposito.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Operaciones\GuanavetClinica\arqueodeposito\frmProcesarDeposito.resx">
+      <DependentUpon>frmProcesarDeposito.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Operaciones\Manejocxp\frmAgregarFechaDocumento.resx">
+      <DependentUpon>frmAgregarFechaDocumento.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Operaciones\Manejocxp\frmComprasPrepagadas.resx">
       <DependentUpon>frmComprasPrepagadas.vb</DependentUpon>
@@ -1200,15 +1227,29 @@
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>reporteparaquimicos.vb</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\Ventas\utilidadxfactura\frmCxCEntreFechas.resx">
+      <DependentUpon>frmCxCEntreFechas.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\Ventas\utilidadxfactura\frmReporteProductosRentalbes.resx">
+      <DependentUpon>frmReporteProductosRentalbes.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reportes\Ventas\utilidadxfactura\frmUtilidadVentasxRangoFechas.resx">
       <DependentUpon>frmUtilidadVentasxRangoFechas.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reportes\Ventas\utilidadxfactura\frmUtilidadxFactura.resx">
       <DependentUpon>frmUtilidadxFactura.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\Ventas\utilidadxfactura\rptCxCentreFechas.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptCxCentreFechas.vb</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reportes\Ventas\utilidadxfactura\rptDesmenuzarFactura.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>rptDesmenuzarFactura.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\Ventas\utilidadxfactura\rptTopProductosRentables.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptTopProductosRentables.vb</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Reportes\Ventas\utilidadxfactura\rptUlitidadesRangoFecha.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
@@ -3516,6 +3557,12 @@
     <Compile Include="Inventarios\Etiquetas\frmEtiquetarGuanavet.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Inventarios\Etiquetas\rptEtiquetasSUVELISA.vb">
+      <DependentUpon>rptEtiquetasSUVELISA.RPT</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
     <Compile Include="Inventarios\Etiquetas\rptEtiquetasGuanavetClinica.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -3625,6 +3672,12 @@
       <DependentUpon>frmMostrarSolicitudes.vb</DependentUpon>
     </Compile>
     <Compile Include="Inventarios\Prestamo\Presentacion\frmMostrarSolicitudes.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventarios\Prestamo\Presentacion\frmMotivoAnulacionPrestamo.Designer.vb">
+      <DependentUpon>frmMotivoAnulacionPrestamo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Inventarios\Prestamo\Presentacion\frmMotivoAnulacionPrestamo.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Inventarios\Prestamo\Presentacion\frmRelacionarProductos.Designer.vb">
@@ -4633,6 +4686,18 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Operaciones\GuanavetClinica\Albaranes\Albaran.vb" />
+    <Compile Include="Operaciones\GuanavetClinica\Albaranes\EntregaCuenta\frmCambiarEntregaCuenta.Designer.vb">
+      <DependentUpon>frmCambiarEntregaCuenta.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Operaciones\GuanavetClinica\Albaranes\EntregaCuenta\frmCambiarEntregaCuenta.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Operaciones\GuanavetClinica\Albaranes\EntregaCuenta\frmDevolverEntregaCuenta.Designer.vb">
+      <DependentUpon>frmDevolverEntregaCuenta.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Operaciones\GuanavetClinica\Albaranes\EntregaCuenta\frmDevolverEntregaCuenta.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Operaciones\GuanavetClinica\Albaranes\frmConfirmarGenerarFacturas.Designer.vb">
       <DependentUpon>frmConfirmarGenerarFacturas.vb</DependentUpon>
     </Compile>
@@ -4643,6 +4708,12 @@
       <DependentUpon>frmConsultaAlbaran.vb</DependentUpon>
     </Compile>
     <Compile Include="Operaciones\GuanavetClinica\Albaranes\frmConsultaAlbaran.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Operaciones\GuanavetClinica\Albaranes\frmDescuentoTeleton.Designer.vb">
+      <DependentUpon>frmDescuentoTeleton.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Operaciones\GuanavetClinica\Albaranes\frmDescuentoTeleton.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Operaciones\GuanavetClinica\Albaranes\frmEditarAlbaran.Designer.vb">
@@ -4680,6 +4751,24 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>rptCuentaAlbaran.rpt</DependentUpon>
       <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Operaciones\GuanavetClinica\arqueodeposito\frmArqueoDeposito.Designer.vb">
+      <DependentUpon>frmArqueoDeposito.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Operaciones\GuanavetClinica\arqueodeposito\frmArqueoDeposito.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Operaciones\GuanavetClinica\arqueodeposito\frmProcesarDeposito.Designer.vb">
+      <DependentUpon>frmProcesarDeposito.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Operaciones\GuanavetClinica\arqueodeposito\frmProcesarDeposito.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Operaciones\Manejocxp\frmAgregarFechaDocumento.Designer.vb">
+      <DependentUpon>frmAgregarFechaDocumento.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Operaciones\Manejocxp\frmAgregarFechaDocumento.vb">
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="Operaciones\Manejocxp\frmComprasPrepagadas.Designer.vb">
       <DependentUpon>frmComprasPrepagadas.vb</DependentUpon>
@@ -6051,6 +6140,18 @@
       <DependentUpon>reporteparaquimicos.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Reportes\Ventas\utilidadxfactura\frmCxCEntreFechas.Designer.vb">
+      <DependentUpon>frmCxCEntreFechas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\Ventas\utilidadxfactura\frmCxCEntreFechas.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\Ventas\utilidadxfactura\frmReporteProductosRentalbes.Designer.vb">
+      <DependentUpon>frmReporteProductosRentalbes.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\Ventas\utilidadxfactura\frmReporteProductosRentalbes.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Reportes\Ventas\utilidadxfactura\frmUtilidadVentasxRangoFechas.Designer.vb">
       <DependentUpon>frmUtilidadVentasxRangoFechas.vb</DependentUpon>
     </Compile>
@@ -6063,10 +6164,22 @@
     <Compile Include="Reportes\Ventas\utilidadxfactura\frmUtilidadxFactura.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Reportes\Ventas\utilidadxfactura\rptCxCentreFechas.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptCxCentreFechas.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Reportes\Ventas\utilidadxfactura\rptDesmenuzarFactura.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>rptDesmenuzarFactura.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reportes\Ventas\utilidadxfactura\rptTopProductosRentables.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptTopProductosRentables.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Reportes\Ventas\utilidadxfactura\rptUlitidadesRangoFecha.vb">

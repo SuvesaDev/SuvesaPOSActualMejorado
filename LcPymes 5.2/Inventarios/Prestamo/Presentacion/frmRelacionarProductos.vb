@@ -25,9 +25,9 @@ Public Class frmRelacionarProductos
 
         Dim dt As New DataTable
         If _SoloPendientes = False Then
-            dt = OBSoluciones.db.Ejecutar("Select * from Producto", CommandType.Text)
+            'dt = OBSoluciones.db.Ejecutar("Select * from Producto", CommandType.Text)
         Else
-            dt = OBSoluciones.db.Ejecutar("Select * from Producto Where " & CodigoEmpresa & " = 0", CommandType.Text)
+            'dt = OBSoluciones.db.Ejecutar("Select * from Producto Where " & CodigoEmpresa & " = 0", CommandType.Text)
         End If
 
         Me.viewDatos.Rows.Clear()        
@@ -57,7 +57,7 @@ Public Class frmRelacionarProductos
 
         If MsgBox("Desea aplicar los cambios ", MsgBoxStyle.YesNo + MsgBoxStyle.Question, "Confirmar accion") = MsgBoxResult.Yes Then
             Dim dbSQL As New OBSoluciones.SQL.Sentencias(CadenaConexionSeePOS)
-            Dim dbMySQL As New OBSoluciones.MySql.Sentencias(OBSoluciones.CadenaConexionMySQL)
+            'Dim dbMySQL As New OBSoluciones.MySql.Sentencias(OBSoluciones.CadenaConexionMySQL)
             Dim Cedula As String = Me.GetEmpresa
             Dim CodigoEmpresa As String = ""
             Select Case Cedula
@@ -72,7 +72,7 @@ Public Class frmRelacionarProductos
             dbSQL.Ejecutar("Update Inventario Set CodigoPrestamo = 0 Where CodigoPrestamo <> 0", CommandType.Text)
             For Each r As DataGridViewRow In Me.viewDatos.Rows
                 dbSQL.Ejecutar("Update Inventario Set CodigoPrestamo = " & r.Cells("cCodigoPrestamo").Value & " Where Codigo = " & r.Cells("cCodigoInterno").Value, CommandType.Text)
-                dbMySQL.Ejecutar("Update producto Set " & CodigoEmpresa & " = " & r.Cells("cCodigoInterno").Value & " Where Codigo = " & r.Cells("cCodigoPrestamo").Value, CommandType.Text)
+                'dbMySQL.Ejecutar("Update producto Set " & CodigoEmpresa & " = " & r.Cells("cCodigoInterno").Value & " Where Codigo = " & r.Cells("cCodigoPrestamo").Value, CommandType.Text)
             Next
         End If
 

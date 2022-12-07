@@ -31,6 +31,7 @@ Partial Class frmBuscarFichasActivas
         Me.txtClave = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.btnDevolver = New System.Windows.Forms.Button()
+        Me.btnFacturar = New System.Windows.Forms.Button()
         CType(Me.viewFichasActivas, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -47,7 +48,7 @@ Partial Class frmBuscarFichasActivas
         Me.viewFichasActivas.BackgroundColor = System.Drawing.Color.White
         Me.viewFichasActivas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.viewFichasActivas.Location = New System.Drawing.Point(1, 0)
-        Me.viewFichasActivas.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.viewFichasActivas.Margin = New System.Windows.Forms.Padding(4)
         Me.viewFichasActivas.Name = "viewFichasActivas"
         Me.viewFichasActivas.ReadOnly = True
         Me.viewFichasActivas.RowHeadersVisible = False
@@ -63,11 +64,11 @@ Partial Class frmBuscarFichasActivas
         Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button1.Location = New System.Drawing.Point(1, 505)
-        Me.Button1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Button1.Margin = New System.Windows.Forms.Padding(4)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(335, 52)
+        Me.Button1.Size = New System.Drawing.Size(252, 52)
         Me.Button1.TabIndex = 1
-        Me.Button1.Text = "Buscar Fichas Activas"
+        Me.Button1.Text = "Buscar Fichas"
         Me.Button1.UseVisualStyleBackColor = True
         '
         'btnInactivar
@@ -76,12 +77,12 @@ Partial Class frmBuscarFichasActivas
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.btnInactivar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnInactivar.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnInactivar.Location = New System.Drawing.Point(347, 505)
-        Me.btnInactivar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnInactivar.Location = New System.Drawing.Point(514, 505)
+        Me.btnInactivar.Margin = New System.Windows.Forms.Padding(4)
         Me.btnInactivar.Name = "btnInactivar"
-        Me.btnInactivar.Size = New System.Drawing.Size(324, 52)
+        Me.btnInactivar.Size = New System.Drawing.Size(241, 52)
         Me.btnInactivar.TabIndex = 2
-        Me.btnInactivar.Text = "Inactivar Ficha Seleccionada"
+        Me.btnInactivar.Text = "Inactivar Ficha"
         Me.btnInactivar.UseVisualStyleBackColor = True
         '
         'lblNumeroCaja
@@ -122,7 +123,7 @@ Partial Class frmBuscarFichasActivas
         '
         Me.txtClave.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.txtClave.Location = New System.Drawing.Point(4, 581)
-        Me.txtClave.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtClave.Margin = New System.Windows.Forms.Padding(4)
         Me.txtClave.Name = "txtClave"
         Me.txtClave.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.txtClave.ReadOnly = True
@@ -146,19 +147,34 @@ Partial Class frmBuscarFichasActivas
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.btnDevolver.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnDevolver.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnDevolver.Location = New System.Drawing.Point(682, 505)
+        Me.btnDevolver.Location = New System.Drawing.Point(767, 505)
         Me.btnDevolver.Margin = New System.Windows.Forms.Padding(4)
         Me.btnDevolver.Name = "btnDevolver"
-        Me.btnDevolver.Size = New System.Drawing.Size(324, 52)
+        Me.btnDevolver.Size = New System.Drawing.Size(241, 52)
         Me.btnDevolver.TabIndex = 24
         Me.btnDevolver.Text = "Revertir"
         Me.btnDevolver.UseVisualStyleBackColor = True
+        '
+        'btnFacturar
+        '
+        Me.btnFacturar.Anchor = CType(((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnFacturar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnFacturar.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnFacturar.Location = New System.Drawing.Point(263, 505)
+        Me.btnFacturar.Margin = New System.Windows.Forms.Padding(4)
+        Me.btnFacturar.Name = "btnFacturar"
+        Me.btnFacturar.Size = New System.Drawing.Size(241, 52)
+        Me.btnFacturar.TabIndex = 25
+        Me.btnFacturar.Text = "Cobrar Fichas"
+        Me.btnFacturar.UseVisualStyleBackColor = True
         '
         'frmBuscarFichasActivas
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1008, 608)
+        Me.Controls.Add(Me.btnFacturar)
         Me.Controls.Add(Me.btnDevolver)
         Me.Controls.Add(Me.lblNumeroCaja)
         Me.Controls.Add(Me.lblUsuario)
@@ -169,7 +185,7 @@ Partial Class frmBuscarFichasActivas
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.viewFichasActivas)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "frmBuscarFichasActivas"
@@ -189,4 +205,5 @@ End Sub
     Friend WithEvents txtClave As System.Windows.Forms.TextBox
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents btnDevolver As System.Windows.Forms.Button
+    Friend WithEvents btnFacturar As System.Windows.Forms.Button
 End Class

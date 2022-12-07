@@ -22,396 +22,368 @@ Partial Class frmPaneldeControl
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim ChartArea1 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
-        Dim Legend1 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
-        Dim Series1 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
-        Dim Series2 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
-        Dim Series3 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
-        Me.viewTopArticulos = New System.Windows.Forms.DataGridView()
-        Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.TabControl1 = New System.Windows.Forms.TabControl()
-        Me.TabPage1 = New System.Windows.Forms.TabPage()
-        Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.txtTopProveedores = New System.Windows.Forms.NumericUpDown()
-        Me.btnMes = New System.Windows.Forms.Button()
-        Me.txtTopVendedores = New System.Windows.Forms.NumericUpDown()
-        Me.btnSemana = New System.Windows.Forms.Button()
-        Me.txtTopCliente = New System.Windows.Forms.NumericUpDown()
-        Me.btnHoy = New System.Windows.Forms.Button()
-        Me.txtTopArticulos = New System.Windows.Forms.NumericUpDown()
-        Me.viewTopProveedores = New System.Windows.Forms.DataGridView()
-        Me.viewTopClientes = New System.Windows.Forms.DataGridView()
-        Me.viewTopVendedores = New System.Windows.Forms.DataGridView()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.TabPage2 = New System.Windows.Forms.TabPage()
-        Me.Chart1 = New System.Windows.Forms.DataVisualization.Charting.Chart()
-        CType(Me.viewTopArticulos, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.Panel1.SuspendLayout()
-        Me.TabControl1.SuspendLayout()
-        Me.TabPage1.SuspendLayout()
-        Me.Panel2.SuspendLayout()
-        CType(Me.txtTopProveedores, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.txtTopVendedores, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.txtTopCliente, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.txtTopArticulos, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.viewTopProveedores, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.viewTopClientes, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.viewTopVendedores, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.TabPage2.SuspendLayout()
-        CType(Me.Chart1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.viewArticulosVendidos = New System.Windows.Forms.DataGridView()
+        Me.viewArticulosUtilidad = New System.Windows.Forms.DataGridView()
+        Me.viewArticulosRentabilidad = New System.Windows.Forms.DataGridView()
+        Me.viewClienteRentabilidad = New System.Windows.Forms.DataGridView()
+        Me.viewClientesVisitas = New System.Windows.Forms.DataGridView()
+        Me.viewClientesVentas = New System.Windows.Forms.DataGridView()
+        Me.lbl04 = New System.Windows.Forms.Label()
+        Me.lbl05 = New System.Windows.Forms.Label()
+        Me.lbl06 = New System.Windows.Forms.Label()
+        Me.lbl01 = New System.Windows.Forms.Label()
+        Me.lbl02 = New System.Windows.Forms.Label()
+        Me.lbl03 = New System.Windows.Forms.Label()
+        Me.dtpDesde = New System.Windows.Forms.DateTimePicker()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.dtpHasta = New System.Windows.Forms.DateTimePicker()
+        Me.btnMostrar = New System.Windows.Forms.Button()
+        Me.lblInicio = New System.Windows.Forms.Label()
+        Me.lblFinal = New System.Windows.Forms.Label()
+        Me.lblDiferencia = New System.Windows.Forms.Label()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.Label11 = New System.Windows.Forms.Label()
+        CType(Me.viewArticulosVendidos, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.viewArticulosUtilidad, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.viewArticulosRentabilidad, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.viewClienteRentabilidad, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.viewClientesVisitas, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.viewClientesVentas, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'viewTopArticulos
+        'viewArticulosVendidos
         '
-        Me.viewTopArticulos.AllowUserToAddRows = False
-        Me.viewTopArticulos.AllowUserToDeleteRows = False
-        Me.viewTopArticulos.AllowUserToResizeColumns = False
-        Me.viewTopArticulos.AllowUserToResizeRows = False
-        Me.viewTopArticulos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells
-        Me.viewTopArticulos.BackgroundColor = System.Drawing.Color.White
-        Me.viewTopArticulos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.viewTopArticulos.Location = New System.Drawing.Point(22, 63)
-        Me.viewTopArticulos.MultiSelect = False
-        Me.viewTopArticulos.Name = "viewTopArticulos"
-        Me.viewTopArticulos.ReadOnly = True
-        Me.viewTopArticulos.RowHeadersVisible = False
-        Me.viewTopArticulos.RowTemplate.Height = 28
-        Me.viewTopArticulos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.viewTopArticulos.Size = New System.Drawing.Size(444, 197)
-        Me.viewTopArticulos.TabIndex = 0
+        Me.viewArticulosVendidos.AllowUserToAddRows = False
+        Me.viewArticulosVendidos.AllowUserToDeleteRows = False
+        Me.viewArticulosVendidos.AllowUserToResizeColumns = False
+        Me.viewArticulosVendidos.AllowUserToResizeRows = False
+        Me.viewArticulosVendidos.BackgroundColor = System.Drawing.Color.White
+        Me.viewArticulosVendidos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.viewArticulosVendidos.Location = New System.Drawing.Point(4, 95)
+        Me.viewArticulosVendidos.MultiSelect = False
+        Me.viewArticulosVendidos.Name = "viewArticulosVendidos"
+        Me.viewArticulosVendidos.ReadOnly = True
+        Me.viewArticulosVendidos.RowHeadersVisible = False
+        Me.viewArticulosVendidos.RowTemplate.Height = 24
+        Me.viewArticulosVendidos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.viewArticulosVendidos.Size = New System.Drawing.Size(407, 307)
+        Me.viewArticulosVendidos.TabIndex = 0
         '
-        'Panel1
+        'viewArticulosUtilidad
         '
-        Me.Panel1.AutoScroll = True
-        Me.Panel1.Controls.Add(Me.TabControl1)
-        Me.Panel1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Panel1.Location = New System.Drawing.Point(0, 0)
-        Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(1008, 536)
-        Me.Panel1.TabIndex = 1
+        Me.viewArticulosUtilidad.AllowUserToAddRows = False
+        Me.viewArticulosUtilidad.AllowUserToDeleteRows = False
+        Me.viewArticulosUtilidad.AllowUserToResizeColumns = False
+        Me.viewArticulosUtilidad.AllowUserToResizeRows = False
+        Me.viewArticulosUtilidad.BackgroundColor = System.Drawing.Color.White
+        Me.viewArticulosUtilidad.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.viewArticulosUtilidad.Location = New System.Drawing.Point(430, 95)
+        Me.viewArticulosUtilidad.MultiSelect = False
+        Me.viewArticulosUtilidad.Name = "viewArticulosUtilidad"
+        Me.viewArticulosUtilidad.ReadOnly = True
+        Me.viewArticulosUtilidad.RowHeadersVisible = False
+        Me.viewArticulosUtilidad.RowTemplate.Height = 24
+        Me.viewArticulosUtilidad.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.viewArticulosUtilidad.Size = New System.Drawing.Size(407, 307)
+        Me.viewArticulosUtilidad.TabIndex = 1
         '
-        'TabControl1
+        'viewArticulosRentabilidad
         '
-        Me.TabControl1.Appearance = System.Windows.Forms.TabAppearance.FlatButtons
-        Me.TabControl1.Controls.Add(Me.TabPage1)
-        Me.TabControl1.Controls.Add(Me.TabPage2)
-        Me.TabControl1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TabControl1.Location = New System.Drawing.Point(0, 0)
-        Me.TabControl1.Name = "TabControl1"
-        Me.TabControl1.SelectedIndex = 0
-        Me.TabControl1.Size = New System.Drawing.Size(1008, 536)
-        Me.TabControl1.TabIndex = 17
+        Me.viewArticulosRentabilidad.AllowUserToAddRows = False
+        Me.viewArticulosRentabilidad.AllowUserToDeleteRows = False
+        Me.viewArticulosRentabilidad.AllowUserToResizeColumns = False
+        Me.viewArticulosRentabilidad.AllowUserToResizeRows = False
+        Me.viewArticulosRentabilidad.BackgroundColor = System.Drawing.Color.White
+        Me.viewArticulosRentabilidad.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.viewArticulosRentabilidad.Location = New System.Drawing.Point(862, 95)
+        Me.viewArticulosRentabilidad.MultiSelect = False
+        Me.viewArticulosRentabilidad.Name = "viewArticulosRentabilidad"
+        Me.viewArticulosRentabilidad.ReadOnly = True
+        Me.viewArticulosRentabilidad.RowHeadersVisible = False
+        Me.viewArticulosRentabilidad.RowTemplate.Height = 24
+        Me.viewArticulosRentabilidad.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.viewArticulosRentabilidad.Size = New System.Drawing.Size(407, 307)
+        Me.viewArticulosRentabilidad.TabIndex = 2
         '
-        'TabPage1
+        'viewClienteRentabilidad
         '
-        Me.TabPage1.Controls.Add(Me.Panel2)
-        Me.TabPage1.Location = New System.Drawing.Point(4, 25)
-        Me.TabPage1.Name = "TabPage1"
-        Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage1.Size = New System.Drawing.Size(1000, 507)
-        Me.TabPage1.TabIndex = 0
-        Me.TabPage1.Text = "Tops"
-        Me.TabPage1.UseVisualStyleBackColor = True
+        Me.viewClienteRentabilidad.AllowUserToAddRows = False
+        Me.viewClienteRentabilidad.AllowUserToDeleteRows = False
+        Me.viewClienteRentabilidad.AllowUserToResizeColumns = False
+        Me.viewClienteRentabilidad.AllowUserToResizeRows = False
+        Me.viewClienteRentabilidad.BackgroundColor = System.Drawing.Color.White
+        Me.viewClienteRentabilidad.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.viewClienteRentabilidad.Location = New System.Drawing.Point(862, 438)
+        Me.viewClienteRentabilidad.MultiSelect = False
+        Me.viewClienteRentabilidad.Name = "viewClienteRentabilidad"
+        Me.viewClienteRentabilidad.ReadOnly = True
+        Me.viewClienteRentabilidad.RowHeadersVisible = False
+        Me.viewClienteRentabilidad.RowTemplate.Height = 24
+        Me.viewClienteRentabilidad.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.viewClienteRentabilidad.Size = New System.Drawing.Size(407, 307)
+        Me.viewClienteRentabilidad.TabIndex = 5
         '
-        'Panel2
+        'viewClientesVisitas
         '
-        Me.Panel2.AutoScroll = True
-        Me.Panel2.Controls.Add(Me.txtTopProveedores)
-        Me.Panel2.Controls.Add(Me.btnMes)
-        Me.Panel2.Controls.Add(Me.txtTopVendedores)
-        Me.Panel2.Controls.Add(Me.btnSemana)
-        Me.Panel2.Controls.Add(Me.txtTopCliente)
-        Me.Panel2.Controls.Add(Me.btnHoy)
-        Me.Panel2.Controls.Add(Me.txtTopArticulos)
-        Me.Panel2.Controls.Add(Me.viewTopProveedores)
-        Me.Panel2.Controls.Add(Me.viewTopArticulos)
-        Me.Panel2.Controls.Add(Me.viewTopClientes)
-        Me.Panel2.Controls.Add(Me.viewTopVendedores)
-        Me.Panel2.Controls.Add(Me.Label5)
-        Me.Panel2.Controls.Add(Me.Label1)
-        Me.Panel2.Controls.Add(Me.Label2)
-        Me.Panel2.Controls.Add(Me.Label3)
-        Me.Panel2.Location = New System.Drawing.Point(6, 6)
-        Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(986, 498)
-        Me.Panel2.TabIndex = 13
+        Me.viewClientesVisitas.AllowUserToAddRows = False
+        Me.viewClientesVisitas.AllowUserToDeleteRows = False
+        Me.viewClientesVisitas.AllowUserToResizeColumns = False
+        Me.viewClientesVisitas.AllowUserToResizeRows = False
+        Me.viewClientesVisitas.BackgroundColor = System.Drawing.Color.White
+        Me.viewClientesVisitas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.viewClientesVisitas.Location = New System.Drawing.Point(430, 438)
+        Me.viewClientesVisitas.MultiSelect = False
+        Me.viewClientesVisitas.Name = "viewClientesVisitas"
+        Me.viewClientesVisitas.ReadOnly = True
+        Me.viewClientesVisitas.RowHeadersVisible = False
+        Me.viewClientesVisitas.RowTemplate.Height = 24
+        Me.viewClientesVisitas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.viewClientesVisitas.Size = New System.Drawing.Size(407, 307)
+        Me.viewClientesVisitas.TabIndex = 4
         '
-        'txtTopProveedores
+        'viewClientesVentas
         '
-        Me.txtTopProveedores.Location = New System.Drawing.Point(664, 268)
-        Me.txtTopProveedores.Minimum = New Decimal(New Integer() {5, 0, 0, 0})
-        Me.txtTopProveedores.Name = "txtTopProveedores"
-        Me.txtTopProveedores.Size = New System.Drawing.Size(48, 20)
-        Me.txtTopProveedores.TabIndex = 15
-        Me.txtTopProveedores.Value = New Decimal(New Integer() {10, 0, 0, 0})
+        Me.viewClientesVentas.AllowUserToAddRows = False
+        Me.viewClientesVentas.AllowUserToDeleteRows = False
+        Me.viewClientesVentas.AllowUserToResizeColumns = False
+        Me.viewClientesVentas.AllowUserToResizeRows = False
+        Me.viewClientesVentas.BackgroundColor = System.Drawing.Color.White
+        Me.viewClientesVentas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.viewClientesVentas.Location = New System.Drawing.Point(4, 438)
+        Me.viewClientesVentas.MultiSelect = False
+        Me.viewClientesVentas.Name = "viewClientesVentas"
+        Me.viewClientesVentas.ReadOnly = True
+        Me.viewClientesVentas.RowHeadersVisible = False
+        Me.viewClientesVentas.RowTemplate.Height = 24
+        Me.viewClientesVentas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.viewClientesVentas.Size = New System.Drawing.Size(407, 307)
+        Me.viewClientesVentas.TabIndex = 3
         '
-        'btnMes
+        'lbl04
         '
-        Me.btnMes.AutoSize = True
-        Me.btnMes.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnMes.Location = New System.Drawing.Point(121, 8)
-        Me.btnMes.Name = "btnMes"
-        Me.btnMes.Size = New System.Drawing.Size(39, 25)
-        Me.btnMes.TabIndex = 12
-        Me.btnMes.Text = "Mes"
-        Me.btnMes.UseVisualStyleBackColor = True
+        Me.lbl04.AutoSize = True
+        Me.lbl04.Location = New System.Drawing.Point(4, 416)
+        Me.lbl04.Name = "lbl04"
+        Me.lbl04.Size = New System.Drawing.Size(160, 17)
+        Me.lbl04.TabIndex = 6
+        Me.lbl04.Text = "Top Clientes por Ventas"
         '
-        'txtTopVendedores
+        'lbl05
         '
-        Me.txtTopVendedores.Location = New System.Drawing.Point(132, 271)
-        Me.txtTopVendedores.Minimum = New Decimal(New Integer() {5, 0, 0, 0})
-        Me.txtTopVendedores.Name = "txtTopVendedores"
-        Me.txtTopVendedores.Size = New System.Drawing.Size(48, 20)
-        Me.txtTopVendedores.TabIndex = 13
-        Me.txtTopVendedores.Value = New Decimal(New Integer() {10, 0, 0, 0})
+        Me.lbl05.AutoSize = True
+        Me.lbl05.Location = New System.Drawing.Point(427, 416)
+        Me.lbl05.Name = "lbl05"
+        Me.lbl05.Size = New System.Drawing.Size(157, 17)
+        Me.lbl05.TabIndex = 7
+        Me.lbl05.Text = "Top Clientes por Visitas"
         '
-        'btnSemana
+        'lbl06
         '
-        Me.btnSemana.AutoSize = True
-        Me.btnSemana.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnSemana.Location = New System.Drawing.Point(63, 8)
-        Me.btnSemana.Name = "btnSemana"
-        Me.btnSemana.Size = New System.Drawing.Size(59, 25)
-        Me.btnSemana.TabIndex = 11
-        Me.btnSemana.Text = "Semana"
-        Me.btnSemana.UseVisualStyleBackColor = True
+        Me.lbl06.AutoSize = True
+        Me.lbl06.Location = New System.Drawing.Point(859, 416)
+        Me.lbl06.Name = "lbl06"
+        Me.lbl06.Size = New System.Drawing.Size(195, 17)
+        Me.lbl06.TabIndex = 8
+        Me.lbl06.Text = "Top Clientes por Rentabilidad"
         '
-        'txtTopCliente
+        'lbl01
         '
-        Me.txtTopCliente.Location = New System.Drawing.Point(603, 41)
-        Me.txtTopCliente.Minimum = New Decimal(New Integer() {5, 0, 0, 0})
-        Me.txtTopCliente.Name = "txtTopCliente"
-        Me.txtTopCliente.Size = New System.Drawing.Size(48, 20)
-        Me.txtTopCliente.TabIndex = 11
-        Me.txtTopCliente.Value = New Decimal(New Integer() {10, 0, 0, 0})
+        Me.lbl01.AutoSize = True
+        Me.lbl01.Location = New System.Drawing.Point(4, 73)
+        Me.lbl01.Name = "lbl01"
+        Me.lbl01.Size = New System.Drawing.Size(232, 17)
+        Me.lbl01.TabIndex = 9
+        Me.lbl01.Text = "Top Articulos por Cantidad Vendida"
         '
-        'btnHoy
+        'lbl02
         '
-        Me.btnHoy.AutoSize = True
-        Me.btnHoy.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnHoy.Location = New System.Drawing.Point(25, 8)
-        Me.btnHoy.Name = "btnHoy"
-        Me.btnHoy.Size = New System.Drawing.Size(39, 25)
-        Me.btnHoy.TabIndex = 10
-        Me.btnHoy.Text = "Hoy"
-        Me.btnHoy.UseVisualStyleBackColor = True
+        Me.lbl02.AutoSize = True
+        Me.lbl02.Location = New System.Drawing.Point(427, 73)
+        Me.lbl02.Name = "lbl02"
+        Me.lbl02.Size = New System.Drawing.Size(167, 17)
+        Me.lbl02.TabIndex = 10
+        Me.lbl02.Text = "Top Articulos por Utilidad"
         '
-        'txtTopArticulos
+        'lbl03
         '
-        Me.txtTopArticulos.Location = New System.Drawing.Point(121, 41)
-        Me.txtTopArticulos.Minimum = New Decimal(New Integer() {5, 0, 0, 0})
-        Me.txtTopArticulos.Name = "txtTopArticulos"
-        Me.txtTopArticulos.Size = New System.Drawing.Size(48, 20)
-        Me.txtTopArticulos.TabIndex = 9
-        Me.txtTopArticulos.Value = New Decimal(New Integer() {20, 0, 0, 0})
+        Me.lbl03.AutoSize = True
+        Me.lbl03.Location = New System.Drawing.Point(859, 73)
+        Me.lbl03.Name = "lbl03"
+        Me.lbl03.Size = New System.Drawing.Size(199, 17)
+        Me.lbl03.TabIndex = 11
+        Me.lbl03.Text = "Top Articulos por Rentabilidad"
         '
-        'viewTopProveedores
+        'dtpDesde
         '
-        Me.viewTopProveedores.AllowUserToAddRows = False
-        Me.viewTopProveedores.AllowUserToDeleteRows = False
-        Me.viewTopProveedores.AllowUserToResizeColumns = False
-        Me.viewTopProveedores.AllowUserToResizeRows = False
-        Me.viewTopProveedores.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells
-        Me.viewTopProveedores.BackgroundColor = System.Drawing.Color.White
-        Me.viewTopProveedores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.viewTopProveedores.Location = New System.Drawing.Point(521, 293)
-        Me.viewTopProveedores.MultiSelect = False
-        Me.viewTopProveedores.Name = "viewTopProveedores"
-        Me.viewTopProveedores.ReadOnly = True
-        Me.viewTopProveedores.RowHeadersVisible = False
-        Me.viewTopProveedores.RowTemplate.Height = 28
-        Me.viewTopProveedores.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.viewTopProveedores.Size = New System.Drawing.Size(444, 197)
-        Me.viewTopProveedores.TabIndex = 8
+        Me.dtpDesde.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.dtpDesde.Location = New System.Drawing.Point(7, 33)
+        Me.dtpDesde.Name = "dtpDesde"
+        Me.dtpDesde.Size = New System.Drawing.Size(200, 22)
+        Me.dtpDesde.TabIndex = 12
         '
-        'viewTopClientes
+        'Label7
         '
-        Me.viewTopClientes.AllowUserToAddRows = False
-        Me.viewTopClientes.AllowUserToDeleteRows = False
-        Me.viewTopClientes.AllowUserToResizeColumns = False
-        Me.viewTopClientes.AllowUserToResizeRows = False
-        Me.viewTopClientes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells
-        Me.viewTopClientes.BackgroundColor = System.Drawing.Color.White
-        Me.viewTopClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.viewTopClientes.Location = New System.Drawing.Point(521, 63)
-        Me.viewTopClientes.MultiSelect = False
-        Me.viewTopClientes.Name = "viewTopClientes"
-        Me.viewTopClientes.ReadOnly = True
-        Me.viewTopClientes.RowHeadersVisible = False
-        Me.viewTopClientes.RowTemplate.Height = 28
-        Me.viewTopClientes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.viewTopClientes.Size = New System.Drawing.Size(444, 197)
-        Me.viewTopClientes.TabIndex = 4
+        Me.Label7.AutoSize = True
+        Me.Label7.Location = New System.Drawing.Point(4, 13)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(57, 17)
+        Me.Label7.TabIndex = 13
+        Me.Label7.Text = "Desde :"
         '
-        'viewTopVendedores
+        'Label8
         '
-        Me.viewTopVendedores.AllowUserToAddRows = False
-        Me.viewTopVendedores.AllowUserToDeleteRows = False
-        Me.viewTopVendedores.AllowUserToResizeColumns = False
-        Me.viewTopVendedores.AllowUserToResizeRows = False
-        Me.viewTopVendedores.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells
-        Me.viewTopVendedores.BackgroundColor = System.Drawing.Color.White
-        Me.viewTopVendedores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.viewTopVendedores.Location = New System.Drawing.Point(25, 293)
-        Me.viewTopVendedores.MultiSelect = False
-        Me.viewTopVendedores.Name = "viewTopVendedores"
-        Me.viewTopVendedores.ReadOnly = True
-        Me.viewTopVendedores.RowHeadersVisible = False
-        Me.viewTopVendedores.RowTemplate.Height = 28
-        Me.viewTopVendedores.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.viewTopVendedores.Size = New System.Drawing.Size(444, 197)
-        Me.viewTopVendedores.TabIndex = 6
+        Me.Label8.AutoSize = True
+        Me.Label8.Location = New System.Drawing.Point(223, 13)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(53, 17)
+        Me.Label8.TabIndex = 15
+        Me.Label8.Text = "Hasta :"
         '
-        'Label5
+        'dtpHasta
         '
-        Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(518, 272)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(108, 17)
-        Me.Label5.TabIndex = 7
-        Me.Label5.Text = "Top Proveedores"
+        Me.dtpHasta.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.dtpHasta.Location = New System.Drawing.Point(226, 33)
+        Me.dtpHasta.Name = "dtpHasta"
+        Me.dtpHasta.Size = New System.Drawing.Size(200, 22)
+        Me.dtpHasta.TabIndex = 14
         '
-        'Label1
+        'btnMostrar
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(22, 42)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(93, 17)
-        Me.Label1.TabIndex = 1
-        Me.Label1.Text = "Top Productos"
+        Me.btnMostrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnMostrar.Location = New System.Drawing.Point(442, 13)
+        Me.btnMostrar.Name = "btnMostrar"
+        Me.btnMostrar.Size = New System.Drawing.Size(142, 42)
+        Me.btnMostrar.TabIndex = 16
+        Me.btnMostrar.Text = "Mostrar Datos"
+        Me.btnMostrar.UseVisualStyleBackColor = True
         '
-        'Label2
+        'lblInicio
         '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(518, 42)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(79, 17)
-        Me.Label2.TabIndex = 3
-        Me.Label2.Text = "Top Clientes"
+        Me.lblInicio.AutoSize = True
+        Me.lblInicio.Location = New System.Drawing.Point(706, 9)
+        Me.lblInicio.Name = "lblInicio"
+        Me.lblInicio.Size = New System.Drawing.Size(16, 17)
+        Me.lblInicio.TabIndex = 17
+        Me.lblInicio.Text = "0"
+        Me.lblInicio.Visible = False
         '
-        'Label3
+        'lblFinal
         '
-        Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(22, 272)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(104, 17)
-        Me.Label3.TabIndex = 5
-        Me.Label3.Text = "Top Vendedores"
+        Me.lblFinal.AutoSize = True
+        Me.lblFinal.Location = New System.Drawing.Point(706, 29)
+        Me.lblFinal.Name = "lblFinal"
+        Me.lblFinal.Size = New System.Drawing.Size(16, 17)
+        Me.lblFinal.TabIndex = 18
+        Me.lblFinal.Text = "0"
+        Me.lblFinal.Visible = False
         '
-        'TabPage2
+        'lblDiferencia
         '
-        Me.TabPage2.Controls.Add(Me.Chart1)
-        Me.TabPage2.Location = New System.Drawing.Point(4, 25)
-        Me.TabPage2.Name = "TabPage2"
-        Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage2.Size = New System.Drawing.Size(1000, 507)
-        Me.TabPage2.TabIndex = 1
-        Me.TabPage2.Text = "Comparativo de ventas de un año"
-        Me.TabPage2.UseVisualStyleBackColor = True
+        Me.lblDiferencia.AutoSize = True
+        Me.lblDiferencia.Location = New System.Drawing.Point(706, 46)
+        Me.lblDiferencia.Name = "lblDiferencia"
+        Me.lblDiferencia.Size = New System.Drawing.Size(16, 17)
+        Me.lblDiferencia.TabIndex = 19
+        Me.lblDiferencia.Text = "0"
+        Me.lblDiferencia.Visible = False
         '
-        'Chart1
+        'Label9
         '
-        ChartArea1.Name = "ChartArea1"
-        Me.Chart1.ChartAreas.Add(ChartArea1)
-        Me.Chart1.Dock = System.Windows.Forms.DockStyle.Fill
-        Legend1.Name = "Legend2"
-        Me.Chart1.Legends.Add(Legend1)
-        Me.Chart1.Location = New System.Drawing.Point(3, 3)
-        Me.Chart1.Name = "Chart1"
-        Me.Chart1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Berry
-        Series1.ChartArea = "ChartArea1"
-        Series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Bar
-        Series1.CustomProperties = "BarLabelStyle=Left"
-        Series1.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Series1.IsValueShownAsLabel = True
-        Series1.LabelForeColor = System.Drawing.Color.White
-        Series1.LabelFormat = "C"
-        Series1.Legend = "Legend2"
-        Series1.LegendText = "Contado"
-        Series1.Name = "Series1"
-        Series2.ChartArea = "ChartArea1"
-        Series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Bar
-        Series2.CustomProperties = "BarLabelStyle=Left"
-        Series2.Font = New System.Drawing.Font("Segoe UI", 8.25!)
-        Series2.IsValueShownAsLabel = True
-        Series2.LabelForeColor = System.Drawing.Color.White
-        Series2.LabelFormat = "C"
-        Series2.Legend = "Legend2"
-        Series2.LegendText = "Credito"
-        Series2.Name = "Series2"
-        Series3.ChartArea = "ChartArea1"
-        Series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Bar
-        Series3.CustomProperties = "BarLabelStyle=Left"
-        Series3.Font = New System.Drawing.Font("Segoe UI", 8.25!)
-        Series3.IsValueShownAsLabel = True
-        Series3.LabelForeColor = System.Drawing.Color.White
-        Series3.LabelFormat = "C"
-        Series3.Legend = "Legend2"
-        Series3.LegendText = "Recibos"
-        Series3.Name = "Series3"
-        Me.Chart1.Series.Add(Series1)
-        Me.Chart1.Series.Add(Series2)
-        Me.Chart1.Series.Add(Series3)
-        Me.Chart1.Size = New System.Drawing.Size(994, 501)
-        Me.Chart1.TabIndex = 16
-        Me.Chart1.Text = "Chart1"
+        Me.Label9.AutoSize = True
+        Me.Label9.Location = New System.Drawing.Point(625, 9)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(40, 17)
+        Me.Label9.TabIndex = 20
+        Me.Label9.Text = "Inicio"
+        Me.Label9.Visible = False
+        '
+        'Label10
+        '
+        Me.Label10.AutoSize = True
+        Me.Label10.Location = New System.Drawing.Point(625, 29)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(60, 17)
+        Me.Label10.TabIndex = 21
+        Me.Label10.Text = "Termino"
+        Me.Label10.Visible = False
+        '
+        'Label11
+        '
+        Me.Label11.AutoSize = True
+        Me.Label11.Location = New System.Drawing.Point(625, 46)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(65, 17)
+        Me.Label11.TabIndex = 22
+        Me.Label11.Text = "Duracion"
+        Me.Label11.Visible = False
         '
         'frmPaneldeControl
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1008, 536)
-        Me.Controls.Add(Me.Panel1)
-        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
-        Me.MaximizeBox = False
-        Me.MinimizeBox = False
+        Me.BackColor = System.Drawing.SystemColors.Control
+        Me.ClientSize = New System.Drawing.Size(1280, 763)
+        Me.Controls.Add(Me.Label11)
+        Me.Controls.Add(Me.Label10)
+        Me.Controls.Add(Me.Label9)
+        Me.Controls.Add(Me.lblDiferencia)
+        Me.Controls.Add(Me.lblFinal)
+        Me.Controls.Add(Me.lblInicio)
+        Me.Controls.Add(Me.btnMostrar)
+        Me.Controls.Add(Me.Label8)
+        Me.Controls.Add(Me.dtpHasta)
+        Me.Controls.Add(Me.Label7)
+        Me.Controls.Add(Me.dtpDesde)
+        Me.Controls.Add(Me.lbl03)
+        Me.Controls.Add(Me.lbl02)
+        Me.Controls.Add(Me.lbl01)
+        Me.Controls.Add(Me.lbl06)
+        Me.Controls.Add(Me.lbl05)
+        Me.Controls.Add(Me.lbl04)
+        Me.Controls.Add(Me.viewClienteRentabilidad)
+        Me.Controls.Add(Me.viewClientesVisitas)
+        Me.Controls.Add(Me.viewClientesVentas)
+        Me.Controls.Add(Me.viewArticulosRentabilidad)
+        Me.Controls.Add(Me.viewArticulosUtilidad)
+        Me.Controls.Add(Me.viewArticulosVendidos)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "frmPaneldeControl"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Reportes"
-        CType(Me.viewTopArticulos, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.Panel1.ResumeLayout(False)
-        Me.TabControl1.ResumeLayout(False)
-        Me.TabPage1.ResumeLayout(False)
-        Me.Panel2.ResumeLayout(False)
-        Me.Panel2.PerformLayout()
-        CType(Me.txtTopProveedores, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.txtTopVendedores, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.txtTopCliente, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.txtTopArticulos, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.viewTopProveedores, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.viewTopClientes, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.viewTopVendedores, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.TabPage2.ResumeLayout(False)
-        CType(Me.Chart1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
+        CType(Me.viewArticulosVendidos, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.viewArticulosUtilidad, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.viewArticulosRentabilidad, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.viewClienteRentabilidad, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.viewClientesVisitas, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.viewClientesVentas, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
-    Friend WithEvents viewTopArticulos As System.Windows.Forms.DataGridView
-    Friend WithEvents Panel1 As System.Windows.Forms.Panel
-    Friend WithEvents viewTopClientes As System.Windows.Forms.DataGridView
-    Friend WithEvents Label2 As System.Windows.Forms.Label
-    Friend WithEvents Label1 As System.Windows.Forms.Label
-    Friend WithEvents viewTopVendedores As System.Windows.Forms.DataGridView
-    Friend WithEvents Label3 As System.Windows.Forms.Label
-    Friend WithEvents btnMes As System.Windows.Forms.Button
-    Friend WithEvents btnSemana As System.Windows.Forms.Button
-    Friend WithEvents btnHoy As System.Windows.Forms.Button
-    Friend WithEvents Panel2 As System.Windows.Forms.Panel
-    Friend WithEvents Label5 As System.Windows.Forms.Label
-    Friend WithEvents viewTopProveedores As System.Windows.Forms.DataGridView
-    Friend WithEvents txtTopArticulos As System.Windows.Forms.NumericUpDown
-    Friend WithEvents txtTopProveedores As System.Windows.Forms.NumericUpDown
-    Friend WithEvents txtTopVendedores As System.Windows.Forms.NumericUpDown
-    Friend WithEvents txtTopCliente As System.Windows.Forms.NumericUpDown
-    Friend WithEvents Chart1 As System.Windows.Forms.DataVisualization.Charting.Chart
-    Friend WithEvents TabControl1 As System.Windows.Forms.TabControl
-    Friend WithEvents TabPage1 As System.Windows.Forms.TabPage
-    Friend WithEvents TabPage2 As System.Windows.Forms.TabPage
+    Friend WithEvents viewArticulosVendidos As System.Windows.Forms.DataGridView
+    Friend WithEvents viewArticulosUtilidad As System.Windows.Forms.DataGridView
+    Friend WithEvents viewArticulosRentabilidad As System.Windows.Forms.DataGridView
+    Friend WithEvents viewClienteRentabilidad As System.Windows.Forms.DataGridView
+    Friend WithEvents viewClientesVisitas As System.Windows.Forms.DataGridView
+    Friend WithEvents viewClientesVentas As System.Windows.Forms.DataGridView
+    Friend WithEvents lbl04 As System.Windows.Forms.Label
+    Friend WithEvents lbl05 As System.Windows.Forms.Label
+    Friend WithEvents lbl06 As System.Windows.Forms.Label
+    Friend WithEvents lbl01 As System.Windows.Forms.Label
+    Friend WithEvents lbl02 As System.Windows.Forms.Label
+    Friend WithEvents lbl03 As System.Windows.Forms.Label
+    Friend WithEvents dtpDesde As System.Windows.Forms.DateTimePicker
+    Friend WithEvents Label7 As System.Windows.Forms.Label
+    Friend WithEvents Label8 As System.Windows.Forms.Label
+    Friend WithEvents dtpHasta As System.Windows.Forms.DateTimePicker
+    Friend WithEvents btnMostrar As System.Windows.Forms.Button
+    Friend WithEvents lblInicio As System.Windows.Forms.Label
+    Friend WithEvents lblFinal As System.Windows.Forms.Label
+    Friend WithEvents lblDiferencia As System.Windows.Forms.Label
+    Friend WithEvents Label9 As System.Windows.Forms.Label
+    Friend WithEvents Label10 As System.Windows.Forms.Label
+    Friend WithEvents Label11 As System.Windows.Forms.Label
 End Class

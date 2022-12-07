@@ -9,6 +9,7 @@ Public Class frmReporteContadoRecuperacion
         VisorReporte.Show()
     End Sub
 
+
     Private Sub FrmReport_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         Me.WindowState = Windows.Forms.FormWindowState.Maximized
         Me.cboTipo.SelectedIndex = 0

@@ -216,4 +216,43 @@ Public Class frmEditarAlbaran
         End If
     End Sub
 
+    Private Sub btnDescuentoTeleton_Click(sender As Object, e As EventArgs) Handles btnDescuentoTeleton.Click
+        Dim frm As New frmDescuentoTeleton
+        Dim Total As Decimal = (From x As DataGridViewRow In Me.viewDatos.Rows
+                                Where x.Cells("cDescripcion").Value.ToString.Contains("TELETÓN") = True
+                                Select CDec(x.Cells("cCantidad").Value)).Sum
+        frm.CantidadMaxima = Total
+        frm.CantidadDevolver = Total
+        If frm.ShowDialog = Windows.Forms.DialogResult.OK Then
+
+            For Each row As DataGridViewRow In (From x As DataGridViewRow In Me.viewDatos.Rows
+                                                Where x.Cells("cDescripcion").Value.ToString.Contains("Servicio") = True
+                                                Select x).ToList
+
+                If CDec(row.Cells("cPrecio").Value) > (frm.CantidadDevolver * 500) Then
+                    row.Cells("cPrecio").Value = CDec(row.Cells("cPrecio").Value) - (frm.CantidadDevolver * 500)
+                    Dim Subtotal As Decimal = CDec(row.Cells("cCantidad").Value) * CDec(row.Cells("cPrecio").Value)
+                    Dim Descuento As Decimal = Subtotal * (CDec(row.Cells("cDescuento").Value) / 100)
+                    Dim Impuestos As Decimal = (Subtotal - Descuento) * (CDec(row.Cells("cIva").Value) / 100)
+                    row.Cells("cTotal").Value = Subtotal - Descuento + Impuestos
+                    Exit For
+                End If
+                
+            Next
+
+            Dim eliminadas As Integer = 0
+            For Each row As DataGridViewRow In (From x As DataGridViewRow In Me.viewDatos.Rows
+                                                Where x.Cells("cDescripcion").Value.ToString.Contains("TELETÓN") = True
+                                                Select x).ToList
+                If eliminadas < frm.CantidadDevolver Then
+                    row.Cells("cMotivo").Value = " El cliente no quiere donar a la Teleton."
+                    row.Visible = False
+                    eliminadas += 1
+                End If
+                
+            Next
+
+            Me.CalcularTotal()
+        End If
+    End Sub
 End Class

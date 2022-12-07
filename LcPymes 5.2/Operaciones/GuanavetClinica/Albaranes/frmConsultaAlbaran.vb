@@ -155,7 +155,7 @@ Public Class frmConsultaAlbaran
                 frm.viewDatos.Item("cCliente", Index).Value = Nombre
                 frm.viewDatos.Item("cTotal", Index).Value = Total
                 frm.viewDatos.Item("cCaja", Index).Value = 1
-                frm.viewDatos.Item("cTipo", Index).Value = "CONTADO"
+                frm.viewDatos.Item("cTipo", Index).Value = "TIQUETE"
                 Index += 1
             Next
 
@@ -322,15 +322,16 @@ Public Class frmConsultaAlbaran
             Dim db As New OBSoluciones.SQL.Transaccion(CadenaConexionSeePOS)
             Try
                 For Each row As DataGridViewRow In frm.viewDatos.Rows
-
+                    Dim PrecioUnitario As Decimal = (CDec(row.Cells("cTotal").Value) / CDec(row.Cells("cCantidad").Value))
                     If row.Visible = True Then
                         'datos a agregar o modificar
                         If row.Cells("cId").Value > 0 Then
                             'modificar
+                            db.Ejecutar("Update Albaran_Detalle set CodigoInternoQvet = " & row.Cells("cCodigo").Value & ", Descripcion = '" & row.Cells("cDescripcion").Value & "', Cantidad = " & row.Cells("cCantidad").Value & ", PrecioVenta = " & PrecioUnitario & ", IVA = " & row.Cells("cIva").Value & ", descuento = " & row.Cells("cDescuento").Value & ",Total = " & row.Cells("cTotal").Value & " Where Id = " & row.Cells("cId").Value, CommandType.Text)
                         Else
                             'agregar
                             db.Ejecutar("Insert Into Bitacora_Albaran(Id_Albaran, Usuario_Suvesa, Fecha_Hora, Accion, Observaciones) Values(" & frm.IdAlbaran & ", '" & Me.IdUsuario & "', getdate(), 'Adicion', '" & row.Cells("cDescripcion").Value & ", Cant: " & row.Cells("cCantidad").Value & ", Total: " & row.Cells("cTotal").Value & "')", CommandType.Text)
-                            db.Ejecutar("Insert into Albaran_Detalle(idEncabezado, CodigoInternoQvet, Descripcion, Cantidad, PrecioVenta, IVA, descuento, Unidad,Total) Values(" & frm.IdAlbaran & ", " & row.Cells("cCodigo").Value & ", '" & row.Cells("cDescripcion").Value & "', " & CDec(row.Cells("cCantidad").Value) & ", " & CDec(row.Cells("cPrecio").Value) & ", " & CDec(row.Cells("cIva").Value) & ", " & CDec(row.Cells("cDescuento").Value) & ", '" & row.Cells("cUnidad").Value & "', " & CDec(row.Cells("cTotal").Value) & ")", CommandType.Text)
+                            db.Ejecutar("Insert into Albaran_Detalle(idEncabezado, CodigoInternoQvet, Descripcion, Cantidad, PrecioVenta, IVA, descuento, Unidad,Total) Values(" & frm.IdAlbaran & ", " & row.Cells("cCodigo").Value & ", '" & row.Cells("cDescripcion").Value & "', " & CDec(row.Cells("cCantidad").Value) & ", " & PrecioUnitario & ", " & CDec(row.Cells("cIva").Value) & ", " & CDec(row.Cells("cDescuento").Value) & ", '" & row.Cells("cUnidad").Value & "', " & CDec(row.Cells("cTotal").Value) & ")", CommandType.Text)
                         End If
                     Else
                         'datos a borrar

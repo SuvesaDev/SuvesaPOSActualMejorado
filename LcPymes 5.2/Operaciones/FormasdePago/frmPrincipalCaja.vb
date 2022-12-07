@@ -15,7 +15,7 @@ Public Class frmPrincipalCaja
     End Sub
 
     Private Sub frmPrincipalCaja_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Me.Text = "Sistema Control de Caja (04052021)"
+        Me.Text = "Sistema Control de Caja (04112022)"
         Me.lblUsuario.Text = Me.NombreUsuario
         Me.IniciaFormularioFicha()
         clsImpresion.InicalizaReporte("SeePOS")
@@ -116,6 +116,7 @@ End Class
 
 Public Class ImpresionCaja
     Public facturaPVE As New CrystalDecisions.CrystalReports.Engine.ReportDocument
+    Public rptTiquete As New CrystalDecisions.CrystalReports.Engine.ReportDocument
     Public adelantoPVE As New CrystalDecisions.CrystalReports.Engine.ReportDocument
     Public apartadoPVE As New CrystalDecisions.CrystalReports.Engine.ReportDocument
     Public abonoapartadoPVE As New CrystalDecisions.CrystalReports.Engine.ReportDocument
@@ -124,6 +125,8 @@ Public Class ImpresionCaja
 
     Sub New()
         Dim raiz As String = "C:\rpt\"
+
+        Me.rptTiquete = New rptTiqueteRifa2
 
         If IO.File.Exists(raiz & "facturaPVE.rpt") = True Then
             Me.facturaPVE.Load(raiz & "facturaPVE.rpt")
@@ -156,6 +159,7 @@ Public Class ImpresionCaja
         End If
 
         CrystalReportsConexion.LoadReportViewer(Nothing, facturaPVE, True)
+        CrystalReportsConexion.LoadReportViewer(Nothing, rptTiquete, True)
         CrystalReportsConexion.LoadReportViewer(Nothing, adelantoPVE, True)
         CrystalReportsConexion.LoadReportViewer(Nothing, apartadoPVE, True)
         CrystalReportsConexion.LoadReportViewer(Nothing, abonoapartadoPVE, True)
@@ -232,6 +236,7 @@ Public Class ImpresionCaja
     Public Sub InicalizaReporte(_PuntoVenta As String)
         If _PuntoVenta.ToUpper = "SEEPOS" Then
             CrystalReportsConexion.LoadReportViewer(Nothing, facturaPVE, True, CadenaConexionSeePOS)
+            CrystalReportsConexion.LoadReportViewer(Nothing, rptTiquete, True, CadenaConexionSeePOS)
             CrystalReportsConexion.LoadReportViewer(Nothing, adelantoPVE, True, CadenaConexionSeePOS)
             CrystalReportsConexion.LoadReportViewer(Nothing, apartadoPVE, True, CadenaConexionSeePOS)
             CrystalReportsConexion.LoadReportViewer(Nothing, abonoapartadoPVE, True, CadenaConexionSeePOS)
@@ -239,6 +244,7 @@ Public Class ImpresionCaja
         End If
         If _PuntoVenta.ToUpper = "TALLER" Then
             CrystalReportsConexion.LoadReportViewer(Nothing, facturaPVE, True, CadenaConexionTaller)
+            CrystalReportsConexion.LoadReportViewer(Nothing, rptTiquete, True, CadenaConexionTaller)
             CrystalReportsConexion.LoadReportViewer(Nothing, adelantoPVE, True, CadenaConexionTaller)
             CrystalReportsConexion.LoadReportViewer(Nothing, apartadoPVE, True, CadenaConexionTaller)
             CrystalReportsConexion.LoadReportViewer(Nothing, abonoapartadoPVE, True, CadenaConexionTaller)
@@ -328,6 +334,29 @@ Public Class ImpresionCaja
         Catch ex As Exception
             MsgBox(ex.Message, MsgBoxStyle.Exclamation)
         End Try
+    End Sub
+
+    Public Sub Imprimir_Tiquete_Rifa(ByVal _Caja As Integer, ByVal _IdFactura As String)
+
+        Dim NombreImpresoraCupones As String = ""
+
+        If NombreImpresoraCupones = "" Then
+            If _Caja = 1 Then
+                NombreImpresoraCupones = Automatic_Printer_Dialog(3)
+                'NombreImpresoraCupones = Automatic_Printer_Dialog(5)
+            End If
+
+            If _Caja = 2 Then
+                NombreImpresoraCupones = Automatic_Printer_Dialog(5)
+            End If
+        End If
+
+        Dim PrinterSettings1 As New Printing.PrinterSettings
+        Dim PageSettings1 As New Printing.PageSettings
+        PrinterSettings1.PrinterName = NombreImpresoraCupones
+
+        rptTiquete.SetParameterValue(0, _IdFactura)
+        rptTiquete.PrintToPrinter(PrinterSettings1, PageSettings1, False)
     End Sub
 
     Public Sub ImprimirFactura(ByVal Id_Factura As Double, ByVal PVE As Boolean, Optional ByVal Caja As Integer = 1) 'MOD SAJ 01092006
