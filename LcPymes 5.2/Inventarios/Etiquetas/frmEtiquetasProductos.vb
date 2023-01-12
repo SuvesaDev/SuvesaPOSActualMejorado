@@ -7,9 +7,9 @@ Public Class frmEtiquetasProductos
     Inherits System.Windows.Forms.Form
     Public tabla As New DataTable
     Public Automatico As Boolean
-    Public Codigos(50) As Integer
-    Public Cantidades(50) As Integer
-    Public CodPro(50) As Integer
+    Public Codigos(150) As Integer
+    Public Cantidades(150) As Integer
+    Public CodPro(150) As Integer
     Dim EtiquetasGuanavet As New rptEtiquetasGuanavetClinica
     Dim EtiquetasSUVELISA As New rptEtiquetasSUVELISA
     Dim Etiquetas1 As New Etiquetas
@@ -695,7 +695,7 @@ Public Class frmEtiquetasProductos
     Function Etiquetar_Factura()
         Dim i As Integer
 
-        For i = 0 To 50
+        For i = 0 To 150
             If Codigos(i) = 0 Then Exit For
             Me.txtCodigo.Text = Codigos(i)
             Me.cargarinformacion(Me.txtCodigo.Text)
@@ -825,10 +825,13 @@ Public Class frmEtiquetasProductos
         Dim cant As Integer
         Dim Cod_Pro As Integer
 
-        Dim dts As New DataSetEtiquetasGuanavetClinica
+
 
         Try
             Dim vueltas As Integer = 0
+            Dim lineas As Integer = 0
+            Dim dts As New DataSetEtiquetasGuanavetClinica
+
 
             For Each fila As DataGridViewRow In Me.dgEtiquetas.Rows
 
@@ -850,13 +853,24 @@ Public Class frmEtiquetasProductos
 
                     dts.DatosEtiquetasAlbaranesCompra_Crystal.Rows.Add(row)
                     vueltas += 1
+                    lineas += 1
                 End While
-
+                If lineas >= 2 Then
+                    EtiquetasGuanavet.SetDataSource(dts)
+                    'EtiquetasGuanavet.ExportToDisk(CrystalDecisions.Shared.ExportFormatType.CrystalReport, "C:\a\algo.rpt")
+                    Me.rptViewer.ReportSource = EtiquetasGuanavet
+                    EtiquetasGuanavet.PrintToPrinter(cant, True, 1, 1)
+                    dts = New DataSetEtiquetasGuanavetClinica
+                    lineas = 0
+                End If
             Next
 
-            EtiquetasGuanavet.SetDataSource(dts)
-            Me.rptViewer.ReportSource = EtiquetasGuanavet
-            EtiquetasGuanavet.PrintToPrinter(cant, True, 1, 1)
+            If lineas > 0 Then
+                EtiquetasGuanavet.SetDataSource(dts)
+                EtiquetasGuanavet.ExportToDisk(CrystalDecisions.Shared.ExportFormatType.CrystalReport, "C:\a\algo.rpt")
+                Me.rptViewer.ReportSource = EtiquetasGuanavet
+                EtiquetasGuanavet.PrintToPrinter(cant, True, 1, 1)
+            End If
 
         Catch ex As SystemException
             MsgBox(ex.Message)

@@ -170,7 +170,7 @@ Public Class MovimientoCaja
         'ToolBar1
         '
         Me.ToolBar1.Location = New System.Drawing.Point(0, 332)
-        Me.ToolBar1.Size = New System.Drawing.Size(634, 60)
+        Me.ToolBar1.Size = New System.Drawing.Size(758, 60)
         '
         'DataNavigator
         '
@@ -178,13 +178,13 @@ Public Class MovimientoCaja
         Me.DataNavigator.Buttons.CancelEdit.Visible = False
         Me.DataNavigator.Buttons.EndEdit.Visible = False
         Me.DataNavigator.Buttons.Remove.Visible = False
-        Me.DataNavigator.Location = New System.Drawing.Point(267, 399)
+        Me.DataNavigator.Location = New System.Drawing.Point(391, 399)
         Me.DataNavigator.Size = New System.Drawing.Size(160, 24)
         Me.DataNavigator.Visible = False
         '
         'TituloModulo
         '
-        Me.TituloModulo.Size = New System.Drawing.Size(634, 37)
+        Me.TituloModulo.Size = New System.Drawing.Size(758, 37)
         Me.TituloModulo.Text = " Módulo Movimiento Caja"
         '
         'GroupBox1
@@ -500,7 +500,6 @@ Public Class MovimientoCaja
         'txtCodigoCliente
         '
         Me.txtCodigoCliente.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
-        Me.txtCodigoCliente.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.DataSet_MovimientoCaja1, "Movimiento_Caja.Observaciones", True))
         Me.txtCodigoCliente.ForeColor = System.Drawing.SystemColors.Highlight
         Me.txtCodigoCliente.Location = New System.Drawing.Point(44, 294)
         Me.txtCodigoCliente.Name = "txtCodigoCliente"
@@ -521,7 +520,6 @@ Public Class MovimientoCaja
         'txtNombreCliente
         '
         Me.txtNombreCliente.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
-        Me.txtNombreCliente.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.DataSet_MovimientoCaja1, "Movimiento_Caja.Observaciones", True))
         Me.txtNombreCliente.ForeColor = System.Drawing.SystemColors.Highlight
         Me.txtNombreCliente.Location = New System.Drawing.Point(204, 294)
         Me.txtNombreCliente.Name = "txtNombreCliente"
@@ -554,7 +552,7 @@ Public Class MovimientoCaja
         '
         Me.AutoScaleBaseSize = New System.Drawing.Size(6, 15)
         Me.BackColor = System.Drawing.SystemColors.ControlLight
-        Me.ClientSize = New System.Drawing.Size(634, 392)
+        Me.ClientSize = New System.Drawing.Size(758, 392)
         Me.Controls.Add(Me.btnBuscarCliente)
         Me.Controls.Add(Me.ckVincular)
         Me.Controls.Add(Me.txtNombreCliente)
@@ -781,7 +779,12 @@ Public Class MovimientoCaja
 
             If Me.ckVincular.Checked = True Then
                 If Me.Identificacion = "0" Then
-                    MsgBox("Debe seleccionar el cliente a vincular.")
+                    MsgBox("Debe seleccionar el cliente a vincular.", MsgBoxStyle.Exclamation, Me.Text)
+                    Exit Sub
+                End If
+
+                If Me.Option_Salida.Checked = True Then
+                    MsgBox("El tipo de movimiento debe ser Entrada", MsgBoxStyle.Exclamation, Me.Text)
                     Exit Sub
                 End If
             End If
@@ -869,6 +872,18 @@ Public Class MovimientoCaja
             End If
             Fx.Cargar_Tabla_Generico(Me.Adapter_MovimientoCaja, "SELECT * FROM Movimiento_Caja WHERE (Id =" & identificador & " )")
             Me.Adapter_MovimientoCaja.Fill(Me.DataSet_MovimientoCaja1, "Movimiento_Caja")
+
+            Try
+                'cargar info cliente anticipo
+                Dim dt As New DataTable
+                cFunciones.Llenar_Tabla_Generico("select ISNULL(c.cedula, '') as Cedula, ISNULL(c.nombre, '') as Nombre from Movimiento_Caja m inner join Clientes c on m.Identificacion = c.identificacion where m.Id = " & identificador, dt, CadenaConexionSeePOS)
+                If dt.Rows.Count > 0 Then
+                    Me.txtCodigoCliente.Text = dt.Rows(0).Item("Cedula")
+                    Me.txtNombreCliente.Text = dt.Rows(0).Item("Nombre")
+                End If
+            Catch ex As Exception
+
+            End Try
 
             'si esta venta aun no ha sido anulada
             If Me.BindingContext(Me.DataSet_MovimientoCaja1, "Movimiento_Caja").Current("Anulado") = False Then Me.ToolBar1.Buttons(3).Enabled = True
@@ -1108,4 +1123,5 @@ Public Class MovimientoCaja
     Private Sub btnBuscarCliente_Click(sender As Object, e As EventArgs) Handles btnBuscarCliente.Click
         Me.BuscarCliente()
     End Sub
+
 End Class

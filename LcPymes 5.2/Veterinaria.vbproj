@@ -1230,6 +1230,9 @@
     <EmbeddedResource Include="Reportes\Ventas\utilidadxfactura\frmCxCEntreFechas.resx">
       <DependentUpon>frmCxCEntreFechas.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\Ventas\utilidadxfactura\frmExistenciaConsignacion.resx">
+      <DependentUpon>frmExistenciaConsignacion.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reportes\Ventas\utilidadxfactura\frmReporteProductosRentalbes.resx">
       <DependentUpon>frmReporteProductosRentalbes.vb</DependentUpon>
     </EmbeddedResource>
@@ -1238,6 +1241,10 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Reportes\Ventas\utilidadxfactura\frmUtilidadxFactura.resx">
       <DependentUpon>frmUtilidadxFactura.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\Ventas\utilidadxfactura\rptBodegaConsignacion.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptBodegaConsignacion.vb</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Reportes\Ventas\utilidadxfactura\rptCxCentreFechas.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
@@ -6146,6 +6153,12 @@
     <Compile Include="Reportes\Ventas\utilidadxfactura\frmCxCEntreFechas.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Reportes\Ventas\utilidadxfactura\frmExistenciaConsignacion.Designer.vb">
+      <DependentUpon>frmExistenciaConsignacion.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\Ventas\utilidadxfactura\frmExistenciaConsignacion.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Reportes\Ventas\utilidadxfactura\frmReporteProductosRentalbes.Designer.vb">
       <DependentUpon>frmReporteProductosRentalbes.vb</DependentUpon>
     </Compile>
@@ -6163,6 +6176,12 @@
     </Compile>
     <Compile Include="Reportes\Ventas\utilidadxfactura\frmUtilidadxFactura.vb">
       <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\Ventas\utilidadxfactura\rptBodegaConsignacion.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptBodegaConsignacion.rpt</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Reportes\Ventas\utilidadxfactura\rptCxCentreFechas.vb">
       <AutoGen>True</AutoGen>

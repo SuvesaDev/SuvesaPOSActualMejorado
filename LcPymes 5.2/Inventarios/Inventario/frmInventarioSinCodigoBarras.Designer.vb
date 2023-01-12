@@ -26,6 +26,7 @@ Partial Class frmInventarioSinCodigoBarras
         Me.Button1 = New System.Windows.Forms.Button()
         Me.txtDescripcion = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.ckTodos = New System.Windows.Forms.CheckBox()
         CType(Me.viewDatos, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -41,52 +42,68 @@ Partial Class frmInventarioSinCodigoBarras
         Me.viewDatos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells
         Me.viewDatos.BackgroundColor = System.Drawing.Color.White
         Me.viewDatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.viewDatos.Location = New System.Drawing.Point(12, 57)
+        Me.viewDatos.Location = New System.Drawing.Point(16, 70)
+        Me.viewDatos.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.viewDatos.MultiSelect = False
         Me.viewDatos.Name = "viewDatos"
         Me.viewDatos.ReadOnly = True
         Me.viewDatos.RowHeadersVisible = False
         Me.viewDatos.RowTemplate.Height = 29
         Me.viewDatos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.viewDatos.Size = New System.Drawing.Size(619, 419)
+        Me.viewDatos.Size = New System.Drawing.Size(825, 516)
         Me.viewDatos.TabIndex = 0
         '
         'Button1
         '
         Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Location = New System.Drawing.Point(369, 12)
+        Me.Button1.Location = New System.Drawing.Point(492, 15)
+        Me.Button1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(261, 39)
+        Me.Button1.Size = New System.Drawing.Size(348, 48)
         Me.Button1.TabIndex = 1
-        Me.Button1.Text = "Mostrar Articulos sin Codigo de Barras"
+        Me.Button1.Text = "Mostrar Articulos"
         Me.Button1.UseVisualStyleBackColor = True
         '
         'txtDescripcion
         '
-        Me.txtDescripcion.Location = New System.Drawing.Point(12, 31)
+        Me.txtDescripcion.Location = New System.Drawing.Point(16, 38)
+        Me.txtDescripcion.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.txtDescripcion.Name = "txtDescripcion"
-        Me.txtDescripcion.Size = New System.Drawing.Size(351, 20)
+        Me.txtDescripcion.Size = New System.Drawing.Size(467, 22)
         Me.txtDescripcion.TabIndex = 2
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(12, 15)
+        Me.Label1.Location = New System.Drawing.Point(16, 18)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(113, 13)
+        Me.Label1.Size = New System.Drawing.Size(153, 17)
         Me.Label1.TabIndex = 3
         Me.Label1.Text = "Filtrar por descripcion :"
         '
+        'ckTodos
+        '
+        Me.ckTodos.AutoSize = True
+        Me.ckTodos.Location = New System.Drawing.Point(357, 14)
+        Me.ckTodos.Name = "ckTodos"
+        Me.ckTodos.Size = New System.Drawing.Size(126, 21)
+        Me.ckTodos.TabIndex = 4
+        Me.ckTodos.Text = "Obtener Todos"
+        Me.ckTodos.UseVisualStyleBackColor = True
+        '
         'frmInventarioSinCodigoBarras
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(643, 488)
+        Me.ClientSize = New System.Drawing.Size(857, 601)
+        Me.Controls.Add(Me.ckTodos)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.txtDescripcion)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.viewDatos)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
+        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Name = "frmInventarioSinCodigoBarras"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "frmInventarioSinCodigoBarras"
@@ -99,4 +116,5 @@ Partial Class frmInventarioSinCodigoBarras
     Friend WithEvents Button1 As System.Windows.Forms.Button
     Friend WithEvents txtDescripcion As System.Windows.Forms.TextBox
     Friend WithEvents Label1 As System.Windows.Forms.Label
+    Friend WithEvents ckTodos As System.Windows.Forms.CheckBox
 End Class

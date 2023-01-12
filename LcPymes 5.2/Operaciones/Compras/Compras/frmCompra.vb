@@ -5604,9 +5604,9 @@ Public Class frmCompra
 
             If (MsgBox("¿Desea Generar las Etiquetas de estos artículos?", MsgBoxStyle.YesNo)) = MsgBoxResult.Yes Then
                 Dim i As Integer
-                Dim cod(50) As Integer
-                Dim can(50) As Integer
-                Dim CodPro(50) As Integer
+                Dim cod(150) As Integer
+                Dim can(150) As Integer
+                Dim CodPro(150) As Integer
 
                 For i = 0 To BindingContext(DataSetCompras, "compras.ComprasArticulos_Comprados").Count - 1
                     BindingContext(DataSetCompras, "compras.ComprasArticulos_Comprados").Position = i

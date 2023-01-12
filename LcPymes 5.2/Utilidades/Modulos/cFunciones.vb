@@ -223,7 +223,7 @@ Public Class cFunciones
         Dim StringConexion As String = IIf(NuevaConexionStr = "", CadenaConexionSeePOS, NuevaConexionStr) 'JCGA 19032007
         Dim ConexionX As SqlConnection = New SqlConnection(StringConexion)
         Dim Tabla As New DataTable
-        Dim Comando As SQLCommand = New SQLCommand
+        Dim Comando As SqlCommand = New SqlCommand
         Try
             ConexionX.Open()
             Comando.CommandText = SQLCommand
@@ -248,7 +248,7 @@ Public Class cFunciones
         StringConexion = IIf(NuevaConexionStr = "", CadenaConexionSeePOS, NuevaConexionStr)
 
         Dim ConexionX As SqlConnection = New SqlConnection(StringConexion)
-        Dim Comando As SQLCommand = New SQLCommand
+        Dim Comando As SqlCommand = New SqlCommand
         Try
             ConexionX.Open()
             Comando.CommandText = SQLCommand
@@ -501,7 +501,6 @@ Namespace Apartado
             Return Tabla ' Devolvemos el objeto DataTable con los datos de la consulta
         End Function
 
-
         Public Shared Function Llenar_Tabla_Generico(ByVal SQLCommand As String, ByRef Tabla As DataTable, Optional ByVal NuevaConexionStr As String = "")
             Dim StringConexion As String
             StringConexion = IIf(NuevaConexionStr = "", GetSetting("SeeSOFT", "SEEPOS", "CONEXION"), NuevaConexionStr)
@@ -527,6 +526,8 @@ Namespace Apartado
                 End If
             End Try
         End Function
+
+
         Public Shared Function BuscaString(ByVal strQuery As String, ByVal Conected As String) As String 'JCGA 12042007
             Dim strDatos As String = ""
 

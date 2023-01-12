@@ -5258,13 +5258,15 @@ Public Class FrmInventario
                 Dim db As New OBSoluciones.SQL.Sentencias(CadenaConexionSeePOS)
                 db.AddParametro("@Codigo", Me.BindingContext(Me.DataSetInventario, "Inventario").Current("codigo"))
                 db.Ejecutar("ActualizaPorcentajeImpuesto")
+
+                'db.Ejecutar("update Inventario set FechaModificacion = getdate(), IdUsuarioModificacion = '" & Me.txtNombreUsuario.Text & "' where Codigo = " & Me.BindingContext(Me.DataSetInventario, "Inventario").Current("codigo"), CommandType.Text)
             Catch ex As Exception
             End Try
 
             'FIN DE CAMBIOS
             '************************************************************************************
 
-            MsgBox("Los datos se actualiazaron satisfactoriamente...", MsgBoxStyle.Information, "Atención...")
+            MsgBox("Los datos se actualizaron satisfactoriamente...", MsgBoxStyle.Information, "Atención...")
             ToolBar1.Buttons(0).Text = "Nuevo"
             ToolBar1.Buttons(0).ImageIndex = 0
             Me.DataNavigator1.Enabled = True

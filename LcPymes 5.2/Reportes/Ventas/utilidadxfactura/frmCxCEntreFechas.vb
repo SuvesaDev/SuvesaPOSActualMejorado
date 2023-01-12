@@ -14,6 +14,7 @@
     End Sub
 
     Private Sub frmReporteProductosRentalbes_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Me.WindowState = FormWindowState.Maximized
         FechaInicio.Value = Now.Date
         FechaFinal.Value = Now.Date
     End Sub

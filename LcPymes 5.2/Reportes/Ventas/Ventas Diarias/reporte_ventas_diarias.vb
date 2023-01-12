@@ -46,15 +46,15 @@ Public Class reporte_ventas_diarias
     Friend WithEvents FechaFinal As System.Windows.Forms.DateTimePicker
     Friend WithEvents FechaInicio As System.Windows.Forms.DateTimePicker
     <System.Diagnostics.DebuggerStepThrough()> Private Sub InitializeComponent()
-        Me.Label4 = New System.Windows.Forms.Label
-        Me.Label3 = New System.Windows.Forms.Label
-        Me.ButtonMostrar = New DevExpress.XtraEditors.SimpleButton
-        Me.VisorReporte = New CrystalDecisions.Windows.Forms.CrystalReportViewer
-        Me.cbooption = New System.Windows.Forms.ComboBox
-        Me.Label2 = New System.Windows.Forms.Label
-        Me.SqlConnection2 = New System.Data.SqlClient.SqlConnection
-        Me.FechaFinal = New System.Windows.Forms.DateTimePicker
-        Me.FechaInicio = New System.Windows.Forms.DateTimePicker
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.ButtonMostrar = New DevExpress.XtraEditors.SimpleButton()
+        Me.VisorReporte = New CrystalDecisions.Windows.Forms.CrystalReportViewer()
+        Me.cbooption = New System.Windows.Forms.ComboBox()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.SqlConnection2 = New System.Data.SqlClient.SqlConnection()
+        Me.FechaFinal = New System.Windows.Forms.DateTimePicker()
+        Me.FechaInicio = New System.Windows.Forms.DateTimePicker()
         Me.SuspendLayout()
         '
         'Label4
@@ -62,9 +62,9 @@ Public Class reporte_ventas_diarias
         Me.Label4.BackColor = System.Drawing.SystemColors.ControlLight
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.ForeColor = System.Drawing.Color.RoyalBlue
-        Me.Label4.Location = New System.Drawing.Point(120, 16)
+        Me.Label4.Location = New System.Drawing.Point(144, 18)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(96, 16)
+        Me.Label4.Size = New System.Drawing.Size(115, 19)
         Me.Label4.TabIndex = 100
         Me.Label4.Text = "Hasta"
         '
@@ -73,17 +73,17 @@ Public Class reporte_ventas_diarias
         Me.Label3.BackColor = System.Drawing.SystemColors.ControlLight
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.Color.RoyalBlue
-        Me.Label3.Location = New System.Drawing.Point(8, 16)
+        Me.Label3.Location = New System.Drawing.Point(10, 18)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(96, 16)
+        Me.Label3.Size = New System.Drawing.Size(115, 19)
         Me.Label3.TabIndex = 99
         Me.Label3.Text = "Desde"
         '
         'ButtonMostrar
         '
-        Me.ButtonMostrar.Location = New System.Drawing.Point(368, 24)
+        Me.ButtonMostrar.Location = New System.Drawing.Point(442, 28)
         Me.ButtonMostrar.Name = "ButtonMostrar"
-        Me.ButtonMostrar.Size = New System.Drawing.Size(88, 32)
+        Me.ButtonMostrar.Size = New System.Drawing.Size(105, 37)
         Me.ButtonMostrar.TabIndex = 98
         Me.ButtonMostrar.Text = "Mostrar"
         '
@@ -91,25 +91,26 @@ Public Class reporte_ventas_diarias
         '
         Me.VisorReporte.ActiveViewIndex = -1
         Me.VisorReporte.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-                    Or System.Windows.Forms.AnchorStyles.Left) _
-                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.VisorReporte.AutoScroll = True
         Me.VisorReporte.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.VisorReporte.DisplayGroupTree = False
-        Me.VisorReporte.Location = New System.Drawing.Point(0, 64)
+        Me.VisorReporte.Cursor = System.Windows.Forms.Cursors.Default
+        Me.VisorReporte.Location = New System.Drawing.Point(0, 74)
         Me.VisorReporte.Name = "VisorReporte"
         Me.VisorReporte.SelectionFormula = ""
         Me.VisorReporte.ShowCloseButton = False
-        Me.VisorReporte.Size = New System.Drawing.Size(744, 432)
+        Me.VisorReporte.Size = New System.Drawing.Size(744, 424)
         Me.VisorReporte.TabIndex = 95
+        Me.VisorReporte.ToolPanelWidth = 240
         Me.VisorReporte.ViewTimeSelectionFormula = ""
         '
         'cbooption
         '
         Me.cbooption.Items.AddRange(New Object() {"1", "2", "3 ", "General", "General Mensual"})
-        Me.cbooption.Location = New System.Drawing.Point(232, 32)
+        Me.cbooption.Location = New System.Drawing.Point(278, 37)
         Me.cbooption.Name = "cbooption"
-        Me.cbooption.Size = New System.Drawing.Size(120, 21)
+        Me.cbooption.Size = New System.Drawing.Size(144, 24)
         Me.cbooption.TabIndex = 101
         Me.cbooption.Text = "Seleccione..."
         '
@@ -118,40 +119,40 @@ Public Class reporte_ventas_diarias
         Me.Label2.BackColor = System.Drawing.SystemColors.ControlLight
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.RoyalBlue
-        Me.Label2.Location = New System.Drawing.Point(232, 16)
+        Me.Label2.Location = New System.Drawing.Point(278, 18)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(120, 16)
+        Me.Label2.Size = New System.Drawing.Size(144, 19)
         Me.Label2.TabIndex = 100
         Me.Label2.Text = "Opción"
         '
         'SqlConnection2
         '
         Me.SqlConnection2.ConnectionString = "workstation id=""DESKTOP-T96OM6J"";packet size=4096;integrated security=SSPI;data s" & _
-            "ource=""DESKTOP-T96OM6J\DESARROLLO"";persist security info=False;initial catalog=s" & _
-            "eepos"
+    "ource=""DESKTOP-T96OM6J\DESARROLLO"";persist security info=False;initial catalog=s" & _
+    "eepos"
         Me.SqlConnection2.FireInfoMessageEventOnUserErrors = False
         '
         'FechaFinal
         '
         Me.FechaFinal.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.FechaFinal.Location = New System.Drawing.Point(120, 32)
+        Me.FechaFinal.Location = New System.Drawing.Point(144, 37)
         Me.FechaFinal.Name = "FechaFinal"
-        Me.FechaFinal.Size = New System.Drawing.Size(96, 20)
+        Me.FechaFinal.Size = New System.Drawing.Size(115, 22)
         Me.FechaFinal.TabIndex = 103
         Me.FechaFinal.Value = New Date(2006, 4, 19, 0, 0, 0, 0)
         '
         'FechaInicio
         '
         Me.FechaInicio.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.FechaInicio.Location = New System.Drawing.Point(8, 32)
+        Me.FechaInicio.Location = New System.Drawing.Point(10, 37)
         Me.FechaInicio.Name = "FechaInicio"
-        Me.FechaInicio.Size = New System.Drawing.Size(96, 20)
+        Me.FechaInicio.Size = New System.Drawing.Size(115, 22)
         Me.FechaInicio.TabIndex = 102
         Me.FechaInicio.Value = New Date(2006, 4, 10, 0, 0, 0, 0)
         '
         'reporte_ventas_diarias
         '
-        Me.AutoScaleBaseSize = New System.Drawing.Size(5, 13)
+        Me.AutoScaleBaseSize = New System.Drawing.Size(6, 15)
         Me.ClientSize = New System.Drawing.Size(744, 497)
         Me.Controls.Add(Me.FechaFinal)
         Me.Controls.Add(Me.FechaInicio)
@@ -162,8 +163,8 @@ Public Class reporte_ventas_diarias
         Me.Controls.Add(Me.VisorReporte)
         Me.Controls.Add(Me.Label2)
         Me.Name = "reporte_ventas_diarias"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "reporte_ventas_diarias"
-        Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.ResumeLayout(False)
 
     End Sub
@@ -217,6 +218,7 @@ Public Class reporte_ventas_diarias
         SqlConnection2.ConnectionString = CadenaConexionSeePOS
         Me.FechaInicio.Text = Date.Today
         Me.FechaFinal.Text = Date.Today
+        Me.WindowState = FormWindowState.Maximized
     End Sub
 
     Private Sub SimpleButton1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)

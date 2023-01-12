@@ -60,6 +60,15 @@ Public Class frmReporteCompravsVentas
         Me.cboTipoReporte.SelectedIndex = 0
     End Sub
 
+    Private Function GetSaldoActual(_Codigo As String) As Decimal
+        Dim dt As New DataTable
+        cFunciones.Llenar_Tabla_Generico("select isnull(sum(dbo.SaldoFacturaCompra(getdate(), Factura, CodigoProv)),0) as Saldo from compras where codigoprov = " & _Codigo & " and tipocompra = 'CRE' and facturacancelado = 0", dt, CadenaConexionSeePOS)
+        If dt.Rows.Count > 0 Then
+            Return CDec(dt.Rows(0).Item("Saldo"))
+        End If
+    End Function
+
+
     Private Sub ButtonMostrar_Click(sender As Object, e As EventArgs) Handles ButtonMostrar.Click
         Try
             If Me.cboTipoReporte.SelectedIndex = 0 Then
@@ -69,6 +78,7 @@ Public Class frmReporteCompravsVentas
                 rpt.SetParameterValue(1, Me.FechaFinal.Value)
                 rpt.SetParameterValue(2, Me.CodProveedor)
                 rpt.SetParameterValue(3, Me.lblProveedor.Text)
+                rpt.SetParameterValue(4, Me.GetSaldoActual(Me.CodProveedor))
                 CrystalReportsConexion.LoadReportViewer(VisorReporte, rpt, , CadenaConexionSeePOS)
                 VisorReporte.Show()
             End If

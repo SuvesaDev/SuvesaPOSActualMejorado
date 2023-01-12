@@ -42,7 +42,7 @@ Public Class frmConsultaAlbaran
             Dim argumentos As String() = New String(0) {}
             Dim service As ServiceController = New ServiceController("Sincronizador")
             service.Refresh()
-            If (service.Status.Equals(ServiceControllerStatus.Stopped)) OrElse (service.Status.Equals(ServiceControllerStatus.StopPending)) Then
+            If (service.Status.Equals(ServiceControllerStatus.Stopped)) Then
                 BanderaGeneralEjecucion = True
                 argumentos(0) = "1," & Me.IdUsuario
                 service.Start(argumentos)
@@ -53,10 +53,13 @@ Public Class frmConsultaAlbaran
                     If (service.Status.Equals(ServiceControllerStatus.Stopped)) OrElse (service.Status.Equals(ServiceControllerStatus.StopPending)) Then
                         Bandera = True
                         BanderaGeneralEjecucion = False
-                        Me.btnSincronizacion.Enabled = True
+                        Me.BackgroundWorker1.RunWorkerAsync()
                         dlg.Close()
                     End If
                 End While
+
+                Me.btnSincronizacion.Enabled = False
+
                 Return True
             Else
                 service.[Stop]()
@@ -414,4 +417,18 @@ Public Class frmConsultaAlbaran
     Private Sub btnArqueo_Click(sender As Object, e As EventArgs) Handles btnArqueo.Click
         CargarForm(New ArqueoCaja)
     End Sub
+
+    Private Sub BackgroundWorker1_DoWork(sender As Object, e As System.ComponentModel.DoWorkEventArgs) Handles BackgroundWorker1.DoWork
+        Dim service As ServiceController = New ServiceController("Sincronizador")
+        Dim Bandera As Boolean = False
+        While Bandera = False
+            service.Refresh()
+            If (service.Status.Equals(ServiceControllerStatus.Stopped)) Then
+                Bandera = True
+                Me.btnSincronizacion.Enabled = True
+            End If
+        End While
+        Me.BackgroundWorker1.Dispose()
+    End Sub
+
 End Class

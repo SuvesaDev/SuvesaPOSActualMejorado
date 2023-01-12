@@ -35,9 +35,10 @@ Partial Class frmOpcionDevolucion
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.pAnticipo = New System.Windows.Forms.GroupBox()
+        Me.btnBuscarCliente = New System.Windows.Forms.Button()
         Me.txtNombreAnticcipo = New System.Windows.Forms.TextBox()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.btnBuscarCliente = New System.Windows.Forms.Button()
+        Me.ckDevolverAlbaran = New System.Windows.Forms.CheckBox()
         Me.pDeposito.SuspendLayout()
         Me.pAnticipo.SuspendLayout()
         Me.SuspendLayout()
@@ -168,6 +169,15 @@ Partial Class frmOpcionDevolucion
         Me.pAnticipo.TabStop = False
         Me.pAnticipo.Text = "Cliente Anticipo"
         '
+        'btnBuscarCliente
+        '
+        Me.btnBuscarCliente.Location = New System.Drawing.Point(29, 28)
+        Me.btnBuscarCliente.Name = "btnBuscarCliente"
+        Me.btnBuscarCliente.Size = New System.Drawing.Size(75, 43)
+        Me.btnBuscarCliente.TabIndex = 4
+        Me.btnBuscarCliente.Text = "Buscar Cliente"
+        Me.btnBuscarCliente.UseVisualStyleBackColor = True
+        '
         'txtNombreAnticcipo
         '
         Me.txtNombreAnticcipo.Location = New System.Drawing.Point(113, 49)
@@ -184,20 +194,22 @@ Partial Class frmOpcionDevolucion
         Me.Label6.TabIndex = 2
         Me.Label6.Text = "Nombre"
         '
-        'btnBuscarCliente
+        'ckDevolverAlbaran
         '
-        Me.btnBuscarCliente.Location = New System.Drawing.Point(29, 28)
-        Me.btnBuscarCliente.Name = "btnBuscarCliente"
-        Me.btnBuscarCliente.Size = New System.Drawing.Size(75, 43)
-        Me.btnBuscarCliente.TabIndex = 4
-        Me.btnBuscarCliente.Text = "Buscar Cliente"
-        Me.btnBuscarCliente.UseVisualStyleBackColor = True
+        Me.ckDevolverAlbaran.AutoSize = True
+        Me.ckDevolverAlbaran.Location = New System.Drawing.Point(24, 288)
+        Me.ckDevolverAlbaran.Name = "ckDevolverAlbaran"
+        Me.ckDevolverAlbaran.Size = New System.Drawing.Size(139, 21)
+        Me.ckDevolverAlbaran.TabIndex = 7
+        Me.ckDevolverAlbaran.Text = "Devolver Albaran"
+        Me.ckDevolverAlbaran.UseVisualStyleBackColor = True
         '
         'frmOpcionDevolucion
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(767, 339)
+        Me.Controls.Add(Me.ckDevolverAlbaran)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.pDeposito)
         Me.Controls.Add(Me.btnEfectivo)
@@ -235,4 +247,5 @@ Partial Class frmOpcionDevolucion
     Friend WithEvents txtNombreAnticcipo As System.Windows.Forms.TextBox
     Friend WithEvents Label6 As System.Windows.Forms.Label
     Friend WithEvents btnBuscarCliente As System.Windows.Forms.Button
+    Friend WithEvents ckDevolverAlbaran As System.Windows.Forms.CheckBox
 End Class

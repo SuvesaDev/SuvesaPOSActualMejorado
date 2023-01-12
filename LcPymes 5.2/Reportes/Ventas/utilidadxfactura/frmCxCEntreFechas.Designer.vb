@@ -126,7 +126,6 @@ Partial Class frmCxCEntreFechas
         Me.Name = "frmCxCEntreFechas"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Cuentas por cobrar entre Fechas"
-        Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

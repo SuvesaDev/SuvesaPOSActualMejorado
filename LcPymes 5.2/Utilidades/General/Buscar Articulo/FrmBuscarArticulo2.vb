@@ -92,10 +92,10 @@ Public Class FrmBuscarArticulo2
     Friend WithEvents SqlInsertCommand1 As System.Data.SqlClient.SqlCommand
     <System.Diagnostics.DebuggerStepThrough()> Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmBuscarArticulo2))
-        Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle10 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle11 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle12 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.SqlDataAdapter = New System.Data.SqlClient.SqlDataAdapter()
         Me.SqlInsertCommand1 = New System.Data.SqlClient.SqlCommand()
         Me.SqlConnection = New System.Data.SqlClient.SqlConnection()
@@ -176,9 +176,9 @@ Public Class FrmBuscarArticulo2
         '
         Me.TextBoxBuscar.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.TextBoxBuscar.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
-        Me.TextBoxBuscar.Location = New System.Drawing.Point(10, 326)
+        Me.TextBoxBuscar.Location = New System.Drawing.Point(12, 376)
         Me.TextBoxBuscar.Name = "TextBoxBuscar"
-        Me.TextBoxBuscar.Size = New System.Drawing.Size(853, 13)
+        Me.TextBoxBuscar.Size = New System.Drawing.Size(1024, 15)
         Me.TextBoxBuscar.TabIndex = 0
         '
         'RadioButton1
@@ -187,9 +187,9 @@ Public Class FrmBuscarArticulo2
         Me.RadioButton1.Checked = True
         Me.RadioButton1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.RadioButton1.ForeColor = System.Drawing.Color.RoyalBlue
-        Me.RadioButton1.Location = New System.Drawing.Point(136, 0)
+        Me.RadioButton1.Location = New System.Drawing.Point(163, 0)
         Me.RadioButton1.Name = "RadioButton1"
-        Me.RadioButton1.Size = New System.Drawing.Size(88, 16)
+        Me.RadioButton1.Size = New System.Drawing.Size(106, 18)
         Me.RadioButton1.TabIndex = 1
         Me.RadioButton1.TabStop = True
         Me.RadioButton1.Text = "Descripción"
@@ -200,9 +200,9 @@ Public Class FrmBuscarArticulo2
         Me.RadioButton2.BackColor = System.Drawing.Color.White
         Me.RadioButton2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.RadioButton2.ForeColor = System.Drawing.Color.RoyalBlue
-        Me.RadioButton2.Location = New System.Drawing.Point(232, 0)
+        Me.RadioButton2.Location = New System.Drawing.Point(278, 0)
         Me.RadioButton2.Name = "RadioButton2"
-        Me.RadioButton2.Size = New System.Drawing.Size(80, 16)
+        Me.RadioButton2.Size = New System.Drawing.Size(96, 18)
         Me.RadioButton2.TabIndex = 2
         Me.RadioButton2.TabStop = True
         Me.RadioButton2.Text = "Ubicación"
@@ -213,9 +213,9 @@ Public Class FrmBuscarArticulo2
         Me.RadioButton3.BackColor = System.Drawing.Color.White
         Me.RadioButton3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.RadioButton3.ForeColor = System.Drawing.Color.RoyalBlue
-        Me.RadioButton3.Location = New System.Drawing.Point(320, 0)
+        Me.RadioButton3.Location = New System.Drawing.Point(384, 0)
         Me.RadioButton3.Name = "RadioButton3"
-        Me.RadioButton3.Size = New System.Drawing.Size(64, 16)
+        Me.RadioButton3.Size = New System.Drawing.Size(77, 18)
         Me.RadioButton3.TabIndex = 3
         Me.RadioButton3.TabStop = True
         Me.RadioButton3.Text = "Barras"
@@ -228,7 +228,7 @@ Public Class FrmBuscarArticulo2
         Me.Label1.ForeColor = System.Drawing.Color.White
         Me.Label1.Location = New System.Drawing.Point(0, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(128, 16)
+        Me.Label1.Size = New System.Drawing.Size(154, 18)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Busqueda en -->"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -241,9 +241,9 @@ Public Class FrmBuscarArticulo2
         Me.Panel1.Controls.Add(Me.RadioButton1)
         Me.Panel1.Controls.Add(Me.RadioButton2)
         Me.Panel1.Controls.Add(Me.RB_Codigo)
-        Me.Panel1.Location = New System.Drawing.Point(10, 341)
+        Me.Panel1.Location = New System.Drawing.Point(12, 393)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(470, 16)
+        Me.Panel1.Size = New System.Drawing.Size(564, 19)
         Me.Panel1.TabIndex = 0
         Me.Panel1.TabStop = True
         '
@@ -252,9 +252,9 @@ Public Class FrmBuscarArticulo2
         Me.RB_Codigo.BackColor = System.Drawing.Color.White
         Me.RB_Codigo.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.RB_Codigo.ForeColor = System.Drawing.Color.RoyalBlue
-        Me.RB_Codigo.Location = New System.Drawing.Point(400, 0)
+        Me.RB_Codigo.Location = New System.Drawing.Point(480, 0)
         Me.RB_Codigo.Name = "RB_Codigo"
-        Me.RB_Codigo.Size = New System.Drawing.Size(64, 16)
+        Me.RB_Codigo.Size = New System.Drawing.Size(77, 18)
         Me.RB_Codigo.TabIndex = 4
         Me.RB_Codigo.TabStop = True
         Me.RB_Codigo.Text = "Código"
@@ -266,9 +266,9 @@ Public Class FrmBuscarArticulo2
         Me.Panel2.Controls.Add(Me.Label2)
         Me.Panel2.Controls.Add(Me.Filtro_Inicio_del_Campo)
         Me.Panel2.Controls.Add(Me.Filtro_Cualquier_Parte_del_Campo)
-        Me.Panel2.Location = New System.Drawing.Point(9, 360)
+        Me.Panel2.Location = New System.Drawing.Point(11, 415)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(471, 16)
+        Me.Panel2.Size = New System.Drawing.Size(565, 19)
         Me.Panel2.TabIndex = 7
         '
         'Label2
@@ -278,7 +278,7 @@ Public Class FrmBuscarArticulo2
         Me.Label2.ForeColor = System.Drawing.Color.White
         Me.Label2.Location = New System.Drawing.Point(0, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(128, 16)
+        Me.Label2.Size = New System.Drawing.Size(154, 18)
         Me.Label2.TabIndex = 1
         Me.Label2.Text = "Coincidir  -->"
         Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -288,9 +288,9 @@ Public Class FrmBuscarArticulo2
         Me.Filtro_Inicio_del_Campo.BackColor = System.Drawing.Color.White
         Me.Filtro_Inicio_del_Campo.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Filtro_Inicio_del_Campo.ForeColor = System.Drawing.Color.RoyalBlue
-        Me.Filtro_Inicio_del_Campo.Location = New System.Drawing.Point(140, 2)
+        Me.Filtro_Inicio_del_Campo.Location = New System.Drawing.Point(168, 2)
         Me.Filtro_Inicio_del_Campo.Name = "Filtro_Inicio_del_Campo"
-        Me.Filtro_Inicio_del_Campo.Size = New System.Drawing.Size(116, 13)
+        Me.Filtro_Inicio_del_Campo.Size = New System.Drawing.Size(139, 15)
         Me.Filtro_Inicio_del_Campo.TabIndex = 0
         Me.Filtro_Inicio_del_Campo.TabStop = True
         Me.Filtro_Inicio_del_Campo.Text = "Inicio del Campo"
@@ -302,9 +302,9 @@ Public Class FrmBuscarArticulo2
         Me.Filtro_Cualquier_Parte_del_Campo.Checked = True
         Me.Filtro_Cualquier_Parte_del_Campo.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Filtro_Cualquier_Parte_del_Campo.ForeColor = System.Drawing.Color.RoyalBlue
-        Me.Filtro_Cualquier_Parte_del_Campo.Location = New System.Drawing.Point(285, 0)
+        Me.Filtro_Cualquier_Parte_del_Campo.Location = New System.Drawing.Point(342, 0)
         Me.Filtro_Cualquier_Parte_del_Campo.Name = "Filtro_Cualquier_Parte_del_Campo"
-        Me.Filtro_Cualquier_Parte_del_Campo.Size = New System.Drawing.Size(112, 16)
+        Me.Filtro_Cualquier_Parte_del_Campo.Size = New System.Drawing.Size(134, 18)
         Me.Filtro_Cualquier_Parte_del_Campo.TabIndex = 1
         Me.Filtro_Cualquier_Parte_del_Campo.TabStop = True
         Me.Filtro_Cualquier_Parte_del_Campo.Text = "Cualquier Parte"
@@ -315,18 +315,18 @@ Public Class FrmBuscarArticulo2
         Me.Label3.BackColor = System.Drawing.Color.RoyalBlue
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.Color.White
-        Me.Label3.Location = New System.Drawing.Point(488, 344)
+        Me.Label3.Location = New System.Drawing.Point(586, 397)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(112, 16)
+        Me.Label3.Size = New System.Drawing.Size(134, 18)
         Me.Label3.TabIndex = 77
         Me.Label3.Text = "Cód. Seleccionado"
         Me.Label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'ButtonAceptar
         '
-        Me.ButtonAceptar.Location = New System.Drawing.Point(673, 341)
+        Me.ButtonAceptar.Location = New System.Drawing.Point(808, 393)
         Me.ButtonAceptar.Name = "ButtonAceptar"
-        Me.ButtonAceptar.Size = New System.Drawing.Size(91, 35)
+        Me.ButtonAceptar.Size = New System.Drawing.Size(109, 41)
         Me.ButtonAceptar.Style = New DevExpress.Utils.ViewStyle("ControlStyle", Nothing, New System.Drawing.Font("Microsoft Sans Serif", 8.0!), "", DevExpress.Utils.StyleOptions.StyleEnabled, True, False, False, DevExpress.Utils.HorzAlignment.Center, DevExpress.Utils.VertAlignment.Center, Nothing, System.Drawing.SystemColors.Control, System.Drawing.Color.RoyalBlue)
         Me.ButtonAceptar.TabIndex = 4
         Me.ButtonAceptar.Text = "Aceptar"
@@ -334,9 +334,9 @@ Public Class FrmBuscarArticulo2
         'ButtonCancelar
         '
         Me.ButtonCancelar.DialogResult = System.Windows.Forms.DialogResult.Cancel
-        Me.ButtonCancelar.Location = New System.Drawing.Point(772, 341)
+        Me.ButtonCancelar.Location = New System.Drawing.Point(926, 393)
         Me.ButtonCancelar.Name = "ButtonCancelar"
-        Me.ButtonCancelar.Size = New System.Drawing.Size(91, 35)
+        Me.ButtonCancelar.Size = New System.Drawing.Size(110, 41)
         Me.ButtonCancelar.Style = New DevExpress.Utils.ViewStyle("ControlStyle", Nothing, New System.Drawing.Font("Microsoft Sans Serif", 8.0!), "", DevExpress.Utils.StyleOptions.StyleEnabled, True, False, False, DevExpress.Utils.HorzAlignment.Center, DevExpress.Utils.VertAlignment.Center, Nothing, System.Drawing.SystemColors.Control, System.Drawing.Color.RoyalBlue)
         Me.ButtonCancelar.TabIndex = 5
         Me.ButtonCancelar.Text = "Cancelar"
@@ -353,13 +353,13 @@ Public Class FrmBuscarArticulo2
         Me.TxtCodigo.FieldReference = Nothing
         Me.TxtCodigo.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TxtCodigo.ForeColor = System.Drawing.Color.Blue
-        Me.TxtCodigo.Location = New System.Drawing.Point(488, 360)
+        Me.TxtCodigo.Location = New System.Drawing.Point(586, 415)
         Me.TxtCodigo.MaskEdit = ""
         Me.TxtCodigo.Name = "TxtCodigo"
         Me.TxtCodigo.RegExPattern = ValidText.ValidText.RegularExpressionModes.Custom
         Me.TxtCodigo.Required = False
         Me.TxtCodigo.ShowErrorIcon = False
-        Me.TxtCodigo.Size = New System.Drawing.Size(112, 13)
+        Me.TxtCodigo.Size = New System.Drawing.Size(134, 16)
         Me.TxtCodigo.TabIndex = 3
         Me.TxtCodigo.Text = "0.00"
         Me.TxtCodigo.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -371,9 +371,9 @@ Public Class FrmBuscarArticulo2
         Me.CheckBoxInHabilitados.Enabled = False
         Me.CheckBoxInHabilitados.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CheckBoxInHabilitados.ForeColor = System.Drawing.SystemColors.ActiveCaption
-        Me.CheckBoxInHabilitados.Location = New System.Drawing.Point(672, 5)
+        Me.CheckBoxInHabilitados.Location = New System.Drawing.Point(806, 6)
         Me.CheckBoxInHabilitados.Name = "CheckBoxInHabilitados"
-        Me.CheckBoxInHabilitados.Size = New System.Drawing.Size(136, 16)
+        Me.CheckBoxInHabilitados.Size = New System.Drawing.Size(164, 18)
         Me.CheckBoxInHabilitados.TabIndex = 78
         Me.CheckBoxInHabilitados.Text = "Mostrar Inhabilitados"
         '
@@ -389,7 +389,7 @@ Public Class FrmBuscarArticulo2
         Me.viewDatos.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.CodigoDataGridViewTextBoxColumn, Me.CodArticuloDataGridViewTextBoxColumn, Me.DescripcionDataGridViewTextBoxColumn, Me.BarrasDataGridViewTextBoxColumn, Me.PrestamoDataGridViewTextBoxColumn, Me.ExistenciaDataGridViewTextBoxColumn, Me.Existencia2, Me.BodegaDataGridViewTextBoxColumn, Me.PrecioFinalDataGridViewTextBoxColumn, Me.UbicacionDataGridViewTextBoxColumn, Me.RecetaDataGridViewCheckBoxColumn, Me.MarcaDataGridViewTextBoxColumn, Me.SimboloDataGridViewTextBoxColumn, Me.PrecioADataGridViewTextBoxColumn, Me.ValorCompraDataGridViewTextBoxColumn, Me.InhabilitadoDataGridViewCheckBoxColumn, Me.ConsignacionDataGridViewCheckBoxColumn})
         Me.viewDatos.DataMember = "CatalogoInventario"
         Me.viewDatos.DataSource = Me.DataSetCatalogoInventario
-        Me.viewDatos.Location = New System.Drawing.Point(3, 24)
+        Me.viewDatos.Location = New System.Drawing.Point(4, 28)
         Me.viewDatos.MultiSelect = False
         Me.viewDatos.Name = "viewDatos"
         Me.viewDatos.ReadOnly = True
@@ -397,7 +397,7 @@ Public Class FrmBuscarArticulo2
         Me.viewDatos.RowTemplate.DefaultCellStyle.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.viewDatos.RowTemplate.Height = 28
         Me.viewDatos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.viewDatos.Size = New System.Drawing.Size(860, 300)
+        Me.viewDatos.Size = New System.Drawing.Size(1032, 342)
         Me.viewDatos.TabIndex = 1
         Me.viewDatos.TabStop = False
         '
@@ -437,9 +437,9 @@ Public Class FrmBuscarArticulo2
         'PrestamoDataGridViewTextBoxColumn
         '
         Me.PrestamoDataGridViewTextBoxColumn.DataPropertyName = "prestamo"
-        DataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        DataGridViewCellStyle9.Format = "N2"
-        Me.PrestamoDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle9
+        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        DataGridViewCellStyle5.Format = "N2"
+        Me.PrestamoDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle5
         Me.PrestamoDataGridViewTextBoxColumn.HeaderText = "Prestamo"
         Me.PrestamoDataGridViewTextBoxColumn.Name = "PrestamoDataGridViewTextBoxColumn"
         Me.PrestamoDataGridViewTextBoxColumn.ReadOnly = True
@@ -448,9 +448,9 @@ Public Class FrmBuscarArticulo2
         'ExistenciaDataGridViewTextBoxColumn
         '
         Me.ExistenciaDataGridViewTextBoxColumn.DataPropertyName = "Existencia"
-        DataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        DataGridViewCellStyle10.Format = "N2"
-        Me.ExistenciaDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle10
+        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        DataGridViewCellStyle6.Format = "N2"
+        Me.ExistenciaDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle6
         Me.ExistenciaDataGridViewTextBoxColumn.HeaderText = "Existencia"
         Me.ExistenciaDataGridViewTextBoxColumn.Name = "ExistenciaDataGridViewTextBoxColumn"
         Me.ExistenciaDataGridViewTextBoxColumn.ReadOnly = True
@@ -467,9 +467,9 @@ Public Class FrmBuscarArticulo2
         'BodegaDataGridViewTextBoxColumn
         '
         Me.BodegaDataGridViewTextBoxColumn.DataPropertyName = "Bodega"
-        DataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        DataGridViewCellStyle11.Format = "N2"
-        Me.BodegaDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle11
+        DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        DataGridViewCellStyle7.Format = "N2"
+        Me.BodegaDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle7
         Me.BodegaDataGridViewTextBoxColumn.HeaderText = "Bodega"
         Me.BodegaDataGridViewTextBoxColumn.Name = "BodegaDataGridViewTextBoxColumn"
         Me.BodegaDataGridViewTextBoxColumn.ReadOnly = True
@@ -478,9 +478,9 @@ Public Class FrmBuscarArticulo2
         'PrecioFinalDataGridViewTextBoxColumn
         '
         Me.PrecioFinalDataGridViewTextBoxColumn.DataPropertyName = "PrecioFinal"
-        DataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        DataGridViewCellStyle12.Format = "N2"
-        Me.PrecioFinalDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle12
+        DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        DataGridViewCellStyle8.Format = "N2"
+        Me.PrecioFinalDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle8
         Me.PrecioFinalDataGridViewTextBoxColumn.HeaderText = "PrecioFinal"
         Me.PrecioFinalDataGridViewTextBoxColumn.Name = "PrecioFinalDataGridViewTextBoxColumn"
         Me.PrecioFinalDataGridViewTextBoxColumn.ReadOnly = True
@@ -560,18 +560,18 @@ Public Class FrmBuscarArticulo2
         'CheckBox1
         '
         Me.CheckBox1.AutoSize = True
-        Me.CheckBox1.Location = New System.Drawing.Point(3, 5)
+        Me.CheckBox1.Location = New System.Drawing.Point(4, 6)
         Me.CheckBox1.Name = "CheckBox1"
-        Me.CheckBox1.Size = New System.Drawing.Size(203, 17)
+        Me.CheckBox1.Size = New System.Drawing.Size(270, 21)
         Me.CheckBox1.TabIndex = 79
         Me.CheckBox1.Text = "Mostrar precios con impuestos al 1 % "
         Me.CheckBox1.UseVisualStyleBackColor = True
         '
         'FrmBuscarArticulo2
         '
-        Me.AutoScaleBaseSize = New System.Drawing.Size(5, 13)
+        Me.AutoScaleBaseSize = New System.Drawing.Size(6, 15)
         Me.CancelButton = Me.ButtonCancelar
-        Me.ClientSize = New System.Drawing.Size(866, 382)
+        Me.ClientSize = New System.Drawing.Size(1041, 438)
         Me.ControlBox = False
         Me.Controls.Add(Me.CheckBox1)
         Me.Controls.Add(Me.viewDatos)
@@ -711,6 +711,7 @@ Public Class FrmBuscarArticulo2
         Dim YoDebo As Drawing.Color = Drawing.Color.Orange
         Dim EnCero As Drawing.Color = Drawing.Color.OliveDrab
         Dim EsConsignacion As Drawing.Color = Drawing.Color.Purple
+        Dim PromoActiva As Drawing.Color = Drawing.Color.Black 'ojo cambiar color
 
         Dim t As List(Of DataGridViewRow)
 
@@ -718,6 +719,7 @@ Public Class FrmBuscarArticulo2
 
         For Each r As DataGridViewRow In t
             r.DefaultCellStyle.BackColor = MeDeben
+            r.DefaultCellStyle.ForeColor = Drawing.Color.White
             r.DefaultCellStyle.SelectionBackColor = MeDeben
             r.DefaultCellStyle.SelectionForeColor = Drawing.Color.White
         Next
@@ -726,6 +728,7 @@ Public Class FrmBuscarArticulo2
 
         For Each r As DataGridViewRow In t
             r.DefaultCellStyle.BackColor = YoDebo
+            r.DefaultCellStyle.ForeColor = Drawing.Color.White
             r.DefaultCellStyle.SelectionBackColor = YoDebo
             r.DefaultCellStyle.SelectionForeColor = Drawing.Color.White
         Next
@@ -734,6 +737,7 @@ Public Class FrmBuscarArticulo2
 
         For Each r As DataGridViewRow In t
             r.DefaultCellStyle.BackColor = Negativo
+            r.DefaultCellStyle.ForeColor = Drawing.Color.White
             r.DefaultCellStyle.SelectionBackColor = Negativo
             r.DefaultCellStyle.SelectionForeColor = Drawing.Color.White
         Next
@@ -742,6 +746,7 @@ Public Class FrmBuscarArticulo2
 
         For Each r As DataGridViewRow In t
             r.DefaultCellStyle.BackColor = EsConsignacion
+            r.DefaultCellStyle.ForeColor = Drawing.Color.White
             r.DefaultCellStyle.SelectionBackColor = EsConsignacion
             r.DefaultCellStyle.SelectionForeColor = Drawing.Color.White
         Next
@@ -750,9 +755,24 @@ Public Class FrmBuscarArticulo2
 
         For Each r As DataGridViewRow In t
             r.DefaultCellStyle.BackColor = EnCero
+            r.DefaultCellStyle.ForeColor = Drawing.Color.White
             r.DefaultCellStyle.SelectionBackColor = EnCero
             r.DefaultCellStyle.SelectionForeColor = Drawing.Color.White
         Next
+
+        Dim dt As New DataTable
+        cFunciones.Llenar_Tabla_Generico("select Codigo from inventario_promo where Promo_Activa = 1", dt, CadenaConexionSeePOS)
+        If dt.Rows.Count > 0 Then
+            For Each row As DataRow In dt.Rows
+                t = (From x As DataGridViewRow In Me.viewDatos.Rows Where CDec(x.Cells("CodigoDataGridViewTextBoxColumn").Value) = CDec(row.Item("Codigo")) Select x).ToList
+                For Each r As DataGridViewRow In t
+                    r.DefaultCellStyle.BackColor = PromoActiva
+                    r.DefaultCellStyle.ForeColor = Drawing.Color.White
+                    r.DefaultCellStyle.SelectionBackColor = PromoActiva
+                    r.DefaultCellStyle.SelectionForeColor = Drawing.Color.Blue
+                Next
+            Next
+        End If
 
     End Sub
 

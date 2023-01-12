@@ -158,6 +158,7 @@ Public Class frmDatosPreVenta
                 Me.RegistroTodo = True
             Catch ex As Exception
                 trans.Rollback()
+                RegistrarLog(ex.StackTrace)
                 Me.RegistroTodo = False
                 MsgBox(ex.Message, MsgBoxStyle.Exclamation, Text & " - ")
                 Exit Sub
@@ -400,6 +401,7 @@ Public Class frmDatosPreVenta
     Public NoEnviarPideFicha As Boolean = False
 
     Private Function GetCupones(_IdPreventa As Integer) As Integer
+        If IsClinica() = True Then Return 0
         Try
             Dim dt As New DataTable
             cFunciones.Llenar_Tabla_Generico("select cupones from PreVentas where id = " & _IdPreventa, dt, CadenaConexionSeePOS)
@@ -668,20 +670,22 @@ Public Class frmDatosPreVenta
                     trans.Commit()
                 Catch ex As Exception
                     trans.Rollback()
+                    RegistrarLog(ex.StackTrace)
                     MsgBox(ex.Message, MsgBoxStyle.Critical, Text)
                 End Try
 
                 Try
+                    Dim clsImpresion As New ImpresionCaja
                     For Each r As DataGridViewRow In Me.viewFichas.Rows
-                        GeneralCaja.clsImpresion.InicalizaReporte(r.Cells("cPuntoVenta").Value)
+                        clsImpresion.InicalizaReporte(r.Cells("cPuntoVenta").Value)
                         If r.Cells("cTipo").Value = "CON" Or r.Cells("cTipo").Value = "MCO" Or r.Cells("cTipo").Value = "TCO" Or r.Cells("cTipo").Value = "PVE" Then
-                            GeneralCaja.clsImpresion.ImprimirFactura(r.Cells("cIdDocumento").Value, True, Caja)
+                            clsImpresion.ImprimirFactura(r.Cells("cIdDocumento").Value, True, Caja)
 
                             Dim Cupones As Integer = Me.GetCupones(r.Cells("cId").Value)
                             If Cupones > 0 Then
                                 Dim index As Integer = 0
                                 While index < Cupones
-                                    GeneralCaja.clsImpresion.Imprimir_Tiquete_Rifa(Caja, r.Cells("cIdDocumento").Value)
+                                    clsImpresion.Imprimir_Tiquete_Rifa(Caja, r.Cells("cIdDocumento").Value)
                                     index += 1
                                 End While
 
@@ -689,17 +693,17 @@ Public Class frmDatosPreVenta
 
                         End If
                         If r.Cells("cTipo").Value = "ABO" Then
-                            GeneralCaja.clsImpresion.ImprimirReciboDinero(r.Cells("cIdDocumento").Value, Me.Numero_Caja)
+                            clsImpresion.ImprimirReciboDinero(r.Cells("cIdDocumento").Value, Me.Numero_Caja)
                         End If
                         If r.Cells("cTipo").Value = "APA" Then
-                            GeneralCaja.clsImpresion.ImprimirApartado(r.Cells("cDocumento").Value, Me.Numero_Caja)
+                            clsImpresion.ImprimirApartado(r.Cells("cDocumento").Value, Me.Numero_Caja)
                             If CDec(r.Cells("cAbono").Value) > 0 Then
-                                GeneralCaja.clsImpresion.ImprimirAbonoApartado(r.Cells("cIdDocumento").Value, Me.Numero_Caja)
+                                clsImpresion.ImprimirAbonoApartado(r.Cells("cIdDocumento").Value, Me.Numero_Caja)
                             End If
                         End If
                     Next
                 Catch ex As Exception
-
+                    RegistrarLog(ex.StackTrace)
                 End Try
 
                 If frm.PasaVuelto > 0 Then

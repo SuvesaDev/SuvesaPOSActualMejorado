@@ -2114,7 +2114,7 @@ Public Class frmAjustecCobrar
                     'daba error cuando ejecutaba esta linea, por eso se quito (si no sirve que no estorbe)
                     If TipoOriginal = "CRE" Then
                         'cuando es seepos lo necesita
-                        BindingContext(AjusteCxC1, "ajustesccobrar").EndCurrentEdit()
+                        'BindingContext(AjusteCxC1, "ajustesccobrar").EndCurrentEdit()
                     ElseIf TipoOriginal = "MCR" Then
                         'cuando es mascotas no lo nesecita
                         'de hecho se cae si lo tiene por eso lo quito.

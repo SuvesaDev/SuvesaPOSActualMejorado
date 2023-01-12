@@ -6469,7 +6469,32 @@ Fin:
         Return Resultado
     End Function
 
+    Private Function ValidaAgente(_IdAgente As Integer) As Boolean
+        If _IdAgente = 8 Then
+
+            Dim dt As New DataTable
+            cFunciones.Llenar_Tabla_Generico("exec usp_ValidaAgenteVenta", dt, CadenaConexionSeePOS)
+            If dt.Rows.Count > 0 Then
+                Return False
+            Else
+                Return True
+            End If
+        End If
+
+        Return True
+    End Function
+
+    Private Function IsMascotas() As Boolean
+        Dim conexion As String = CadenaConexionSeePOS().ToLower
+        If conexion.IndexOf("mascota") > 0 Then
+            Return True
+        Else
+            Return False
+        End If
+    End Function
+
     Private Sub Registrar(ByVal PV As Boolean, _NumCaja As Integer)
+
         If PuedeRegistrarVenta(PV) = False Then
             Exit Sub
         End If
@@ -6478,6 +6503,16 @@ Fin:
         Me.codigo_cliente = txtcodigo.Text
         Me.nombre_cliente = txtNombre.Text
 
+        If IsMascotas() = True Then
+
+            If nombre_cliente = "CLIENTE DE CONTADO" Or nombre_cliente.IndexOf("CLIENTE") > 0 Or nombre_cliente.IndexOf("CONTADO") > 0 Or nombre_cliente.Length < 3 Then
+
+                MsgBox("Debe ingresar un nombre en la factura.", MsgBoxStyle.Critical, Me.Text)
+                Exit Sub
+
+            End If
+        End If
+
         If Me.ck_agente.Checked = True Then
             If Me.txtagente.Text <> "" Then
                 If IsNumeric(Me.txtagente.Text) Then
@@ -6485,6 +6520,14 @@ Fin:
                         Me.txtagente.Text = Me.CodAgente
                         Me.BindingContext(Me.DataSet_Facturaciones, "Ventas").Current("agente") = Me.ck_agente.Checked
                         Me.BindingContext(Me.DataSet_Facturaciones, "Ventas").Current("cod_agente") = Me.CodAgente
+
+                        If Me.CodAgente = 8 Then
+                            If Me.ValidaAgente(8) = False Then
+                                MsgBox("El agente numero 8 tiene facturas pendientes que superan el limite permitido(vencidas)" & vbCrLf _
+                                       & "No puede registrar la factura.", MsgBoxStyle.Exclamation, "No se puede procesar la operacion.")
+                                Exit Sub
+                            End If
+                        End If
                     End If
                 End If
             End If
@@ -8436,6 +8479,51 @@ Fin:
     Dim BodegaConsignacion As Boolean
     Dim Bloqueado As Boolean
 
+    Private TieneDescuentoPromo As Boolean
+    Private DescuentoPromo As Decimal = 0
+
+    Private Sub CargarTextoSegundoMitad(_Codigo As String)
+        Dim dt As New DataTable
+        cFunciones.Llenar_Tabla_Generico("Select ip.Id, ip.Codigo, i.Cod_Articulo, ip.Porcentaje, ip.Cantidad, ip.Texto from inventario_promo ip inner join Inventario i on ip.codigo = i.codigo where ip.Promo_Activa = 1 and ip.Codigo = " & _Codigo, dt, CadenaConexionSeePOS)
+        If dt.Rows.Count > 0 Then
+            MsgBox(CStr(dt.Rows(0).Item("Texto")), MsgBoxStyle.Information, Me.Text)
+        End If
+    End Sub
+
+    Private Sub SegundoMitad(_Codigo As String, _Cant As Decimal)
+        If _Codigo <> "" Then
+            Dim Porcentaje As Decimal = 0
+            Dim CantidadPromo As Decimal = 0
+            Dim dt As New DataTable
+            cFunciones.Llenar_Tabla_Generico("Select ip.Id, ip.Codigo, i.Cod_Articulo, ip.Porcentaje, ip.Cantidad, ip.Texto from inventario_promo ip inner join Inventario i on ip.codigo = i.codigo where ip.Promo_Activa = 1 and ip.Codigo = " & _Codigo, dt, CadenaConexionSeePOS)
+            If dt.Rows.Count > 0 Then
+
+                Porcentaje = dt.Rows(0).Item("Porcentaje")
+                CantidadPromo = dt.Rows(0).Item("Cantidad")
+
+                If _Cant < CantidadPromo Then
+                    'faltan
+                    If _Cant = (CantidadPromo - 1) Then
+                        If MsgBox("Por la compra de " & _Cant & " lleve el siguiente con un " & Porcentaje & "% de descuento." & vbCrLf _
+                                  & "Desea agrear la promocion", MsgBoxStyle.Question + MsgBoxStyle.YesNo, "Confirmarccion") = MsgBoxResult.Yes Then
+                            Me.TieneDescuentoPromo = True
+                            Dim CodArticulo As String = dt.Rows(0).Item("Cod_Articulo")
+                            Me.CargarInformacionArticulo(CodArticulo)
+                            Me.txtDescuento.Text = Porcentaje
+                            Me.DescuentoPromo = Porcentaje
+                            Me.meter_al_detalle()
+                            Me.TieneDescuentoPromo = False
+                        End If
+                    End If
+
+                Else
+                    'sobran
+                End If
+
+            End If
+        End If
+    End Sub
+
     Private Sub UsaGalon(_Codigo As String)
         If _Codigo <> "" Then
             Dim dt As New DataTable
@@ -8449,8 +8537,8 @@ Fin:
                         Me.meter_al_detalle()
                     End If
                 End If
-            End If            
-        End If       
+            End If
+        End If
     End Sub
 
     Private Sub CargarInformacionArticulo(ByVal codigo As String, Optional ByVal recargar As Boolean = False)
@@ -8488,6 +8576,9 @@ Fin:
                         txtCodArticulo.Text = rs("Codigo")
 
                         Dim DescuentoAutomatico As Decimal = GetDescuentoAutomatico(txtCodArticulo.Text)
+                        If Me.TieneDescuentoPromo = True Then
+                            DescuentoAutomatico = Me.DescuentoPromo
+                        End If
                         If DescuentoAutomatico > 0 Then
                             Me.txtDescuento.Text = DescuentoAutomatico
                         End If
@@ -8652,6 +8743,11 @@ Fin:
                 End While
 
                 rs.Close()
+
+                If Me.TieneDescuentoPromo = False Then
+                    Me.CargarTextoSegundoMitad(Me.txtCodArticulo.Text)
+                End If
+
                 If Not Encontrado Then
                     Me.BindingContext(Me.DataSet_Facturaciones, "Ventas.VentasVentas_Detalle").CancelCurrentEdit()
                     Me.BindingContext(Me.DataSet_Facturaciones, "Ventas.VentasVentas_Detalle").AddNew()
@@ -9097,7 +9193,7 @@ Fin:
                 End If
             End If
         Catch ex As Exception
-        End Try        
+        End Try
         '********************************************************************************************************
 
         '********************************************************************************************************
@@ -9219,9 +9315,14 @@ Fin:
 
 
             Dim DescuentoAutomatico As Decimal = GetDescuentoAutomatico(txtCodArticulo.Text)
+            If Me.TieneDescuentoPromo = True Then
+                DescuentoAutomatico = Me.DescuentoPromo
+            End If
             If DescuentoAutomatico > 0 Then
                 Me.txtDescuento.Text = DescuentoAutomatico
             End If
+
+
 
             Me.Calculos_Articulo()
             Validar_Punitario()
@@ -9257,7 +9358,7 @@ Fin:
             Else
                 CantVet = txtCantidad.Text
                 CantBod = 0
-            End If            
+            End If
             '*******************************************************************************************************************
 
             BindingContext(Me.DataSet_Facturaciones, "Ventas.VentasVentas_Detalle").Current("CantVet") = CantVet
@@ -9297,6 +9398,10 @@ Fin:
             Me.buscar_rifa()
 
             Me.UsaGalon(CodigoTemporal)
+            If DescuentoAutomatico = 0 Then
+                Me.SegundoMitad(CodigoTemporal, Me.txtCantidad.Text)
+            End If
+
 
         Catch ex As System.Exception
             MsgBox(ex.Message, MsgBoxStyle.Information, "Atención...")
@@ -9326,7 +9431,6 @@ Fin:
                     Else
                         Me.txtCantidad.Text = Me.Existencia '' se vende solo lo que hay en el inventario
                     End If
-
 
                     If Existencia = 0 Then ' si no hay articulos de ese tipo en el inventario
                         Me.BindingContext(Me.DataSet_Facturaciones, "Ventas.VentasVentas_Detalle").CancelCurrentEdit()
@@ -9372,7 +9476,7 @@ Fin:
                 CantVet = txtCantidad.Text
                 CantBod = 0
             End If
-            
+
 
             BindingContext(Me.DataSet_Facturaciones, "Ventas.VentasVentas_Detalle").Current("CantVet") = CantVet
             BindingContext(Me.DataSet_Facturaciones, "Ventas.VentasVentas_Detalle").Current("CantBod") = CantBod
@@ -9403,6 +9507,12 @@ Fin:
             Else
                 DescuentoCasa = False
             End If
+
+            If Me.TieneDescuentoPromo = True Then
+                DescuentoAutomatico = DescuentoPromo
+                DescuentoCasa = True
+            End If
+
 
             If CDbl(Me.txtDescuento.Text) > 0 Then 'si el articulo tiene un descuento
                 '''''''''''''''''''''''''''''PROMO'''''''''''''''''''''' ACTIVA''''''''''''''''''''''''''''''''''''''''''
@@ -9476,7 +9586,7 @@ Fin:
                                 frm.ShowDialog()
                             End If
                         End If
-                    End If                    
+                    End If
 
                     'si el descuento que se desea aplicar, el usuario lo puede aplicar
                     'es aplicable al cliente

@@ -41,6 +41,8 @@ Partial Class frmPrincipalCaja
         Me.btnFichasActivas = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripSeparator7 = New System.Windows.Forms.ToolStripSeparator()
         Me.btnArchivar = New System.Windows.Forms.ToolStripButton()
+        Me.ToolStripSeparator4 = New System.Windows.Forms.ToolStripSeparator()
+        Me.FirmadoContadoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -51,7 +53,7 @@ Partial Class frmPrincipalCaja
         Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripButton2, Me.ToolStripSeparator1, Me.ToolStripButton1, Me.lblUsuario, Me.ToolStripSeparator2, Me.ToolStripButton3, Me.ToolStripSeparator3, Me.ToolStripButton4, Me.ToolStripSeparator5, Me.btnResumenCaja, Me.ToolStripSeparator6, Me.btnFichasActivas, Me.ToolStripSeparator7, Me.btnArchivar})
         Me.ToolStrip1.Location = New System.Drawing.Point(0, 0)
         Me.ToolStrip1.Name = "ToolStrip1"
-        Me.ToolStrip1.Size = New System.Drawing.Size(965, 32)
+        Me.ToolStrip1.Size = New System.Drawing.Size(1287, 39)
         Me.ToolStrip1.TabIndex = 1
         Me.ToolStrip1.Text = "ToolStrip1"
         '
@@ -61,13 +63,13 @@ Partial Class frmPrincipalCaja
         Me.ToolStripButton2.Image = CType(resources.GetObject("ToolStripButton2.Image"), System.Drawing.Image)
         Me.ToolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.ToolStripButton2.Name = "ToolStripButton2"
-        Me.ToolStripButton2.Size = New System.Drawing.Size(52, 29)
+        Me.ToolStripButton2.Size = New System.Drawing.Size(66, 36)
         Me.ToolStripButton2.Text = "TC $"
         '
         'ToolStripSeparator1
         '
         Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
-        Me.ToolStripSeparator1.Size = New System.Drawing.Size(6, 32)
+        Me.ToolStripSeparator1.Size = New System.Drawing.Size(6, 39)
         '
         'ToolStripButton1
         '
@@ -75,53 +77,53 @@ Partial Class frmPrincipalCaja
         Me.ToolStripButton1.Image = Global.LcPymes_5._2.My.Resources.Resources._1339068973_electronic_billing_machine
         Me.ToolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.ToolStripButton1.Name = "ToolStripButton1"
-        Me.ToolStripButton1.Size = New System.Drawing.Size(113, 29)
+        Me.ToolStripButton1.Size = New System.Drawing.Size(140, 36)
         Me.ToolStripButton1.Text = "Facturacion"
         '
         'lblUsuario
         '
         Me.lblUsuario.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
         Me.lblUsuario.Name = "lblUsuario"
-        Me.lblUsuario.Size = New System.Drawing.Size(89, 29)
+        Me.lblUsuario.Size = New System.Drawing.Size(109, 36)
         Me.lblUsuario.Text = "[Usuario]"
         '
         'ToolStripSeparator2
         '
         Me.ToolStripSeparator2.Name = "ToolStripSeparator2"
-        Me.ToolStripSeparator2.Size = New System.Drawing.Size(6, 32)
+        Me.ToolStripSeparator2.Size = New System.Drawing.Size(6, 39)
         '
         'ToolStripButton3
         '
         Me.ToolStripButton3.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text
-        Me.ToolStripButton3.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CorteDeCajaToolStripMenuItem, Me.DepositosToolStripMenuItem, Me.ArqueoToolStripMenuItem})
+        Me.ToolStripButton3.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CorteDeCajaToolStripMenuItem, Me.DepositosToolStripMenuItem, Me.ArqueoToolStripMenuItem, Me.ToolStripSeparator4, Me.FirmadoContadoToolStripMenuItem})
         Me.ToolStripButton3.Image = CType(resources.GetObject("ToolStripButton3.Image"), System.Drawing.Image)
         Me.ToolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.ToolStripButton3.Name = "ToolStripButton3"
-        Me.ToolStripButton3.Size = New System.Drawing.Size(76, 29)
+        Me.ToolStripButton3.Size = New System.Drawing.Size(92, 36)
         Me.ToolStripButton3.Text = "Cierre"
         '
         'CorteDeCajaToolStripMenuItem
         '
         Me.CorteDeCajaToolStripMenuItem.Name = "CorteDeCajaToolStripMenuItem"
-        Me.CorteDeCajaToolStripMenuItem.Size = New System.Drawing.Size(261, 30)
+        Me.CorteDeCajaToolStripMenuItem.Size = New System.Drawing.Size(322, 36)
         Me.CorteDeCajaToolStripMenuItem.Text = "Movimientos de Caja"
         '
         'DepositosToolStripMenuItem
         '
         Me.DepositosToolStripMenuItem.Name = "DepositosToolStripMenuItem"
-        Me.DepositosToolStripMenuItem.Size = New System.Drawing.Size(261, 30)
+        Me.DepositosToolStripMenuItem.Size = New System.Drawing.Size(322, 36)
         Me.DepositosToolStripMenuItem.Text = "Depositos"
         '
         'ArqueoToolStripMenuItem
         '
         Me.ArqueoToolStripMenuItem.Name = "ArqueoToolStripMenuItem"
-        Me.ArqueoToolStripMenuItem.Size = New System.Drawing.Size(261, 30)
+        Me.ArqueoToolStripMenuItem.Size = New System.Drawing.Size(322, 36)
         Me.ArqueoToolStripMenuItem.Text = "Arqueo"
         '
         'ToolStripSeparator3
         '
         Me.ToolStripSeparator3.Name = "ToolStripSeparator3"
-        Me.ToolStripSeparator3.Size = New System.Drawing.Size(6, 32)
+        Me.ToolStripSeparator3.Size = New System.Drawing.Size(6, 39)
         '
         'ToolStripButton4
         '
@@ -129,13 +131,13 @@ Partial Class frmPrincipalCaja
         Me.ToolStripButton4.Image = CType(resources.GetObject("ToolStripButton4.Image"), System.Drawing.Image)
         Me.ToolStripButton4.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.ToolStripButton4.Name = "ToolStripButton4"
-        Me.ToolStripButton4.Size = New System.Drawing.Size(86, 29)
+        Me.ToolStripButton4.Size = New System.Drawing.Size(106, 36)
         Me.ToolStripButton4.Text = "Voucher"
         '
         'ToolStripSeparator5
         '
         Me.ToolStripSeparator5.Name = "ToolStripSeparator5"
-        Me.ToolStripSeparator5.Size = New System.Drawing.Size(6, 32)
+        Me.ToolStripSeparator5.Size = New System.Drawing.Size(6, 39)
         '
         'btnResumenCaja
         '
@@ -143,13 +145,13 @@ Partial Class frmPrincipalCaja
         Me.btnResumenCaja.Image = CType(resources.GetObject("btnResumenCaja.Image"), System.Drawing.Image)
         Me.btnResumenCaja.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.btnResumenCaja.Name = "btnResumenCaja"
-        Me.btnResumenCaja.Size = New System.Drawing.Size(92, 29)
+        Me.btnResumenCaja.Size = New System.Drawing.Size(117, 36)
         Me.btnResumenCaja.Text = "Resumen"
         '
         'ToolStripSeparator6
         '
         Me.ToolStripSeparator6.Name = "ToolStripSeparator6"
-        Me.ToolStripSeparator6.Size = New System.Drawing.Size(6, 32)
+        Me.ToolStripSeparator6.Size = New System.Drawing.Size(6, 39)
         '
         'btnFichasActivas
         '
@@ -157,13 +159,13 @@ Partial Class frmPrincipalCaja
         Me.btnFichasActivas.Image = CType(resources.GetObject("btnFichasActivas.Image"), System.Drawing.Image)
         Me.btnFichasActivas.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.btnFichasActivas.Name = "btnFichasActivas"
-        Me.btnFichasActivas.Size = New System.Drawing.Size(75, 29)
+        Me.btnFichasActivas.Size = New System.Drawing.Size(93, 36)
         Me.btnFichasActivas.Text = "Activas"
         '
         'ToolStripSeparator7
         '
         Me.ToolStripSeparator7.Name = "ToolStripSeparator7"
-        Me.ToolStripSeparator7.Size = New System.Drawing.Size(6, 32)
+        Me.ToolStripSeparator7.Size = New System.Drawing.Size(6, 39)
         '
         'btnArchivar
         '
@@ -171,16 +173,28 @@ Partial Class frmPrincipalCaja
         Me.btnArchivar.Image = CType(resources.GetObject("btnArchivar.Image"), System.Drawing.Image)
         Me.btnArchivar.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.btnArchivar.Name = "btnArchivar"
-        Me.btnArchivar.Size = New System.Drawing.Size(86, 29)
+        Me.btnArchivar.Size = New System.Drawing.Size(105, 36)
         Me.btnArchivar.Text = "Archivar"
+        '
+        'ToolStripSeparator4
+        '
+        Me.ToolStripSeparator4.Name = "ToolStripSeparator4"
+        Me.ToolStripSeparator4.Size = New System.Drawing.Size(319, 6)
+        '
+        'FirmadoContadoToolStripMenuItem
+        '
+        Me.FirmadoContadoToolStripMenuItem.Name = "FirmadoContadoToolStripMenuItem"
+        Me.FirmadoContadoToolStripMenuItem.Size = New System.Drawing.Size(322, 36)
+        Me.FirmadoContadoToolStripMenuItem.Text = "Firmado Contado "
         '
         'frmPrincipalCaja
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(965, 431)
+        Me.ClientSize = New System.Drawing.Size(1287, 530)
         Me.Controls.Add(Me.ToolStrip1)
         Me.IsMdiContainer = True
+        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Name = "frmPrincipalCaja"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Sistema Control de Caja "
@@ -209,4 +223,6 @@ Partial Class frmPrincipalCaja
     Friend WithEvents CorteDeCajaToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents DepositosToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ArqueoToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents ToolStripSeparator4 As System.Windows.Forms.ToolStripSeparator
+    Friend WithEvents FirmadoContadoToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
 End Class

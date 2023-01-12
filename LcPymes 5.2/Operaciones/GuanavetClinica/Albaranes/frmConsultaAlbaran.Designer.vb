@@ -33,6 +33,8 @@ Partial Class frmConsultaAlbaran
         Me.Label3 = New System.Windows.Forms.Label()
         Me.dtpHasta = New System.Windows.Forms.DateTimePicker()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.btnArqueo = New System.Windows.Forms.Button()
+        Me.btnApertura = New System.Windows.Forms.Button()
         Me.btnEstadoCuenta = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Button4 = New System.Windows.Forms.Button()
@@ -47,8 +49,7 @@ Partial Class frmConsultaAlbaran
         Me.txtNombreUsuario = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.btnGenerarFacturas = New System.Windows.Forms.Button()
-        Me.btnApertura = New System.Windows.Forms.Button()
-        Me.btnArqueo = New System.Windows.Forms.Button()
+        Me.BackgroundWorker1 = New System.ComponentModel.BackgroundWorker()
         CType(Me.viewDatos, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
@@ -231,6 +232,30 @@ Partial Class frmConsultaAlbaran
         Me.Panel1.Size = New System.Drawing.Size(1179, 607)
         Me.Panel1.TabIndex = 3
         '
+        'btnArqueo
+        '
+        Me.btnArqueo.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnArqueo.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnArqueo.Location = New System.Drawing.Point(1030, 4)
+        Me.btnArqueo.Margin = New System.Windows.Forms.Padding(4)
+        Me.btnArqueo.Name = "btnArqueo"
+        Me.btnArqueo.Size = New System.Drawing.Size(138, 30)
+        Me.btnArqueo.TabIndex = 92
+        Me.btnArqueo.Text = "Arqueo Caja"
+        Me.btnArqueo.UseVisualStyleBackColor = True
+        '
+        'btnApertura
+        '
+        Me.btnApertura.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnApertura.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnApertura.Location = New System.Drawing.Point(888, 5)
+        Me.btnApertura.Margin = New System.Windows.Forms.Padding(4)
+        Me.btnApertura.Name = "btnApertura"
+        Me.btnApertura.Size = New System.Drawing.Size(138, 30)
+        Me.btnApertura.TabIndex = 91
+        Me.btnApertura.Text = "Apertura Caja"
+        Me.btnApertura.UseVisualStyleBackColor = True
+        '
         'btnEstadoCuenta
         '
         Me.btnEstadoCuenta.FlatStyle = System.Windows.Forms.FlatStyle.Flat
@@ -402,29 +427,8 @@ Partial Class frmConsultaAlbaran
         Me.btnGenerarFacturas.Text = "Generar Facturas"
         Me.btnGenerarFacturas.UseVisualStyleBackColor = True
         '
-        'btnApertura
+        'BackgroundWorker1
         '
-        Me.btnApertura.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnApertura.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnApertura.Location = New System.Drawing.Point(888, 5)
-        Me.btnApertura.Margin = New System.Windows.Forms.Padding(4)
-        Me.btnApertura.Name = "btnApertura"
-        Me.btnApertura.Size = New System.Drawing.Size(138, 30)
-        Me.btnApertura.TabIndex = 91
-        Me.btnApertura.Text = "Apertura Caja"
-        Me.btnApertura.UseVisualStyleBackColor = True
-        '
-        'btnArqueo
-        '
-        Me.btnArqueo.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnArqueo.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnArqueo.Location = New System.Drawing.Point(1030, 4)
-        Me.btnArqueo.Margin = New System.Windows.Forms.Padding(4)
-        Me.btnArqueo.Name = "btnArqueo"
-        Me.btnArqueo.Size = New System.Drawing.Size(138, 30)
-        Me.btnArqueo.TabIndex = 92
-        Me.btnArqueo.Text = "Arqueo Caja"
-        Me.btnArqueo.UseVisualStyleBackColor = True
         '
         'frmConsultaAlbaran
         '
@@ -485,4 +489,5 @@ Partial Class frmConsultaAlbaran
     Friend WithEvents btnEstadoCuenta As System.Windows.Forms.Button
     Friend WithEvents btnArqueo As System.Windows.Forms.Button
     Friend WithEvents btnApertura As System.Windows.Forms.Button
+    Friend WithEvents BackgroundWorker1 As System.ComponentModel.BackgroundWorker
 End Class

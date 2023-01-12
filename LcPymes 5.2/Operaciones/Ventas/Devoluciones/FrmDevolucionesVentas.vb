@@ -3375,6 +3375,13 @@ Public Class FrmDevolucionesVentas
                     Me.DataSetDevolucionVentas1.AcceptChanges()
 
                     Dim dbo As New GestioDatos
+
+                    Try
+                        'habilita los albaranes para volver a facturar
+                        dbo.Ejecuta("exec usp_HabiliarAlbaran " & Me.BindingContext(Me.DataSetDevolucionVentas1, "devoluciones_ventas").Current("Devolucion"))
+                    Catch ex As Exception
+                    End Try
+
                     If Me.esFirmadoContado = False Then
                         If Me.OpcionDevolucion = Tipo.Efectivo Then
                             dbo.Ejecuta("Update devoluciones_ventas set Caja = " & Me.Caja_Factura & ", Num_Apertura = " & Num_Apertura & " where Devolucion = " & Me.BindingContext(Me.DataSetDevolucionVentas1, "devoluciones_ventas").Current("Devolucion"))

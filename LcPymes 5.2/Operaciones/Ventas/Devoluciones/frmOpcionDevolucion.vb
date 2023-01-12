@@ -60,14 +60,26 @@
         If IsClinica() = True Then
             Me.btnEfectivo.Enabled = False
             Me.FormaDevolucion = Tipo.Deposito
+            Me.ckDevolverAlbaran.Enabled = True
+            Me.ckDevolverAlbaran.Visible = True
+            Me.ckDevolverAlbaran.Checked = False
         Else
             Me.FormaDevolucion = Tipo.Efectivo
+            Me.ckDevolverAlbaran.Checked = False
+            Me.ckDevolverAlbaran.Enabled = False
+            Me.ckDevolverAlbaran.Visible = False
         End If
         Me.pDeposito.Enabled = True
         Me.pAnticipo.Enabled = True
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        If IsClinica() = True And Me.ckDevolverAlbaran.Checked = False Then
+            If MsgBox("Desea habilitar los albaranes para volver a facturar.", MsgBoxStyle.YesNo + MsgBoxStyle.Question, "Confirmar Accion.") = MsgBoxResult.Yes Then
+                Me.ckDevolverAlbaran.Checked = True
+            End If
+        End If
+
         If Me.FormaDevolucion = Tipo.Deposito Then
             If Me.txtCedula.Text = "" Or Me.txtNombre.Text = "" Or Me.txtCuenta.Text = "" Then
                 MsgBox("Debe llenar la informacion del cliente y cuenta", MsgBoxStyle.Exclamation, "No se puede realizar la operacion.")

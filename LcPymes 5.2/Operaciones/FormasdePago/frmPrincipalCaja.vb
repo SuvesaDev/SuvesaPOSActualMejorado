@@ -112,6 +112,20 @@ Public Class frmPrincipalCaja
         frm.MdiParent = Me
         frm.Show()
     End Sub
+
+    Private Sub FirmadoContadoToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles FirmadoContadoToolStripMenuItem.Click
+        'If GetSetting("SeeSOFT", "SeePOS", regeditSegura) = "1" Then
+        Dim dt As New DataTable
+        cFunciones.Llenar_Tabla_Generico("select * from viewDiasContadoFirmado where dias > 7 order by dias desc", dt, CadenaConexionSeePOS)
+        If dt.Rows.Count > 0 Then
+            If MsgBox("Desea ver el Reporte", MsgBoxStyle.Question + MsgBoxStyle.YesNo, "Hay Contado Firmado con mas de 7 dias") = MsgBoxResult.Yes Then
+                Dim frm As New frmFirmadoContadoViejo
+                frm.MdiParent = Me
+                frm.Show()
+            End If
+        End If
+        'End If
+    End Sub
 End Class
 
 Public Class ImpresionCaja

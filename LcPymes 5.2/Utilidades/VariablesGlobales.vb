@@ -1,9 +1,25 @@
-﻿Module VariablesGlobales
+﻿Imports System.IO
+Imports System.Text
+Module VariablesGlobales
 
     'Public CadenaConexionSeePOS As String = GetSetting("SeeSOFT", "SeePOS", "Conexion")
     'Public CadenaConexionSeguridad As String = GetSetting("SeeSOFT", "Seguridad", "Conexion")
 
     Private Clinica As Boolean = False
+
+    Public Sub RegistrarLog(_Texto As String)
+        Try
+            Dim path As String = "c:\suvesa\logSuvesa" & Date.Now.Day & Date.Now.Month & Date.Now.Year & ".txt"
+            If IO.Directory.Exists("c:\suvesa\") = False Then
+                IO.Directory.CreateDirectory("c:\suvesa\")
+            End If
+
+            Dim escribir As New StreamWriter(path, True)
+            escribir.WriteLine(Date.Now.ToString & " - " & _Texto)
+            escribir.Close()
+        Catch ex As Exception
+        End Try
+    End Sub
 
     Public Sub ObtenerClinica()
         'cargar esta funcion en el inicio del sistema para saber si es o no es clinica
