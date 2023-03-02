@@ -4386,12 +4386,21 @@ Public Class FrmInventario
             ToolBar1.Buttons(5).Enabled = False
             Me.txtUsuario.Focus()
 
+
             If Me.Obtener_BasedeDatos.ToLower = "mascotas".ToLower Then
                 Me.ck_taller.Text = "Groomer"
             End If
 
             If Me.Obtener_BasedeDatos.ToLower = "seepos".ToLower Then
                 Me.ck_peces.Text = "Poliducto"
+            End If
+
+            If Me.Obtener_BasedeDatos.ToLower = "clinica".ToLower Then
+                Me.ck_peces.Text = "Ultrasonido"
+            End If
+
+            If Me.Obtener_BasedeDatos.ToLower = "clinica".ToLower Then
+                Me.ckmascotas.Text = "Laboratori"
             End If
 
         Catch ex As SystemException

@@ -2870,3 +2870,5 @@ C:\Users\LENOVO\Documents\GitHub\SuvesaPOSActualMejorado\LcPymes 5.2\obj\Debug\e
 C:\Users\LENOVO\Documents\GitHub\SuvesaPOSActualMejorado\LcPymes 5.2\obj\Debug\Veterinaria.exe.manifest
 C:\Users\LENOVO\Documents\GitHub\SuvesaPOSActualMejorado\LcPymes 5.2\obj\Debug\Veterinaria.application
 C:\Users\LENOVO\Documents\GitHub\SuvesaPOSActualMejorado\LcPymes 5.2\obj\Debug\Veterinaria.xml
+C:\Users\LENOVO\Documents\GitHub\SuvesaPOSActualMejorado\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmEntradasAnticipos.resources
+C:\Users\LENOVO\Documents\GitHub\SuvesaPOSActualMejorado\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmMovimientosAnticipos.resources

@@ -2398,8 +2398,6 @@ Public Class Frmcliente
         End Try
     End Sub
 
-
-
     Private Sub txtUsuario_KeyDown(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles txtUsuario.KeyDown
         If e.KeyCode = Keys.Enter Then Loggin_Usuario()
     End Sub

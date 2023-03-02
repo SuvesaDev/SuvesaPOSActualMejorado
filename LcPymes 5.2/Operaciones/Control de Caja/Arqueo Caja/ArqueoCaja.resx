@@ -125,7 +125,7 @@
         AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
         LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
         ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAADy
-        agAAAk1TRnQBSQFMAgEBCQEAAQ4BAAEMAQABIAEAASABAAT/ARkBEAj/AUIBTQE2BwABNgMAASgDAAGA
+        agAAAk1TRnQBSQFMAgEBCQEAAQ4BAAEcAQABIAEAASABAAT/ARkBEAj/AUIBTQE2BwABNgMAASgDAAGA
         AwABYAMAAQEBAAEYBgABkP8AtwACAQFdAgEBbQIBAXQCAQF0AgEBbQIBAV0CAQFK/wBjAAIBAXQCAAGG
         AgABiQIAAYUCAAGCAgABggIAAYACAAGAAgABgAIAAYICAAGCAgEBbQIBATj/AFQAAgEBeAICAZECAAGL
         AgABhQIAAYUCAAGFAgABhQIAAYYCAAGGAgABhQIAAYICAAGAAgABfwIAAYICAAGFAgEBdAIBATj/AE0A
@@ -717,7 +717,7 @@
     <value>UPDATE ArqueoTarjeta SET Id_Arqueo = @Id_Arqueo, Id_Tarjeta = @Id_Tarjeta, Monto = @Monto WHERE (Id = @Original_Id) AND (Id_Arqueo = @Original_Id_Arqueo) AND (Id_Tarjeta = @Original_Id_Tarjeta) AND (Monto = @Original_Monto); SELECT Id, Id_Arqueo, Id_Tarjeta, Monto FROM ArqueoTarjeta WHERE (Id = @Id)</value>
   </data>
   <metadata name="AdapterArqueodeCaja.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 60</value>
+    <value>1334, 17</value>
   </metadata>
   <metadata name="SqlDeleteCommand1.DesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
@@ -768,7 +768,7 @@
     <value>UPDATE ArqueoCajas SET EfectivoColones = @EfectivoColones, EfectivoDolares = @EfectivoDolares, TarjetaColones = @TarjetaColones, TarjetaDolares = @TarjetaDolares, Total = @Total, IdApertura = @IdApertura, Fecha = @Fecha, Cajero = @Cajero, Anulado = @Anulado, TipoCambioD = @TipoCambioD, Observaciones = @Observaciones, Cheques = @Cheques, ChequesDol = @ChequesDol, DepositoCol = @DepositoCol, DepositoDol = @DepositoDol WHERE (Id = @Original_Id) AND (Anulado = @Original_Anulado) AND (Cajero = @Original_Cajero) AND (Cheques = @Original_Cheques) AND (ChequesDol = @Original_ChequesDol) AND (DepositoCol = @Original_DepositoCol) AND (DepositoDol = @Original_DepositoDol) AND (EfectivoColones = @Original_EfectivoColones) AND (EfectivoDolares = @Original_EfectivoDolares) AND (Fecha = @Original_Fecha) AND (IdApertura = @Original_IdApertura) AND (Observaciones = @Original_Observaciones OR @Original_Observaciones IS NULL AND Observaciones IS NULL) AND (TarjetaColones = @Original_TarjetaColones) AND (TarjetaDolares = @Original_TarjetaDolares) AND (TipoCambioD = @Original_TipoCambioD) AND (Total = @Original_Total); SELECT Id, EfectivoColones, EfectivoDolares, TarjetaColones, TarjetaDolares, Total, IdApertura, Fecha, Cajero, Anulado, TipoCambioD, Observaciones, Cheques, ChequesDol, DepositoCol, DepositoDol FROM ArqueoCajas WHERE (Id = @Id)</value>
   </data>
   <metadata name="AdapterApertura.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>225, 60</value>
+    <value>17, 60</value>
   </metadata>
   <metadata name="SqlSelectCommand7.DesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>

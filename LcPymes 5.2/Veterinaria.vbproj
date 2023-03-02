@@ -1201,6 +1201,20 @@
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>rptVentaCompraArticuloResumen.vb</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\Ventas\Anticipos\frmEntradasAnticipos.resx">
+      <DependentUpon>frmEntradasAnticipos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\Ventas\Anticipos\frmMovimientosAnticipos.resx">
+      <DependentUpon>frmMovimientosAnticipos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\Ventas\Anticipos\rptEntradaAnticipo.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptEntradaAnticipo.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\Ventas\Anticipos\rptMovimientoAnticipo.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptMovimientoAnticipo.vb</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reportes\Ventas\MargenInventario\frmMargenInventario.resx">
       <DependentUpon>frmMargenInventario.vb</DependentUpon>
     </EmbeddedResource>
@@ -5635,6 +5649,30 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>rptVentasUtilidad.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reportes\Ventas\Anticipos\frmEntradasAnticipos.Designer.vb">
+      <DependentUpon>frmEntradasAnticipos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\Ventas\Anticipos\frmEntradasAnticipos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\Ventas\Anticipos\frmMovimientosAnticipos.Designer.vb">
+      <DependentUpon>frmMovimientosAnticipos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\Ventas\Anticipos\frmMovimientosAnticipos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\Ventas\Anticipos\rptEntradaAnticipo.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptEntradaAnticipo.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reportes\Ventas\Anticipos\rptMovimientoAnticipo.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptMovimientoAnticipo.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Reportes\Ventas\Bitacora_reimpresiones.vb">

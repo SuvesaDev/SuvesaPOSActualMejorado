@@ -10,6 +10,8 @@ Public Class ArqueoCaja
     Dim TipoCambioDolar As Double
     Dim Cedula As String
     Public NApertura As Long
+    Friend WithEvents txtDiferenciaCaja As DevExpress.XtraEditors.TextEdit
+    Friend WithEvents Label11 As System.Windows.Forms.Label
     Public nombre As String
 #End Region
 
@@ -183,6 +185,8 @@ Public Class ArqueoCaja
         Me.GroupBox4 = New System.Windows.Forms.GroupBox()
         Me.txtobservacion = New System.Windows.Forms.TextBox()
         Me.lblCaja = New System.Windows.Forms.Label()
+        Me.txtDiferenciaCaja = New DevExpress.XtraEditors.TextEdit()
+        Me.Label11 = New System.Windows.Forms.Label()
         Me.GroupBox1.SuspendLayout()
         CType(Me.GridControl1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataSetArqueo1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -202,6 +206,7 @@ Public Class ArqueoCaja
         CType(Me.TextEdit2.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TextEdit1.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox4.SuspendLayout()
+        CType(Me.txtDiferenciaCaja.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'ToolBarNuevo
@@ -904,7 +909,7 @@ Public Class ArqueoCaja
         Me.GroupBox4.ForeColor = System.Drawing.Color.RoyalBlue
         Me.GroupBox4.Location = New System.Drawing.Point(10, 480)
         Me.GroupBox4.Name = "GroupBox4"
-        Me.GroupBox4.Size = New System.Drawing.Size(393, 102)
+        Me.GroupBox4.Size = New System.Drawing.Size(393, 56)
         Me.GroupBox4.TabIndex = 149
         Me.GroupBox4.TabStop = False
         Me.GroupBox4.Text = "Observaciones"
@@ -919,7 +924,7 @@ Public Class ArqueoCaja
         Me.txtobservacion.Multiline = True
         Me.txtobservacion.Name = "txtobservacion"
         Me.txtobservacion.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
-        Me.txtobservacion.Size = New System.Drawing.Size(374, 74)
+        Me.txtobservacion.Size = New System.Drawing.Size(374, 34)
         Me.txtobservacion.TabIndex = 0
         '
         'lblCaja
@@ -932,12 +937,40 @@ Public Class ArqueoCaja
         Me.lblCaja.TabIndex = 150
         Me.lblCaja.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
+        'txtDiferenciaCaja
+        '
+        Me.txtDiferenciaCaja.EditValue = "0.00"
+        Me.txtDiferenciaCaja.Location = New System.Drawing.Point(134, 550)
+        Me.txtDiferenciaCaja.Name = "txtDiferenciaCaja"
+        '
+        '
+        '
+        Me.txtDiferenciaCaja.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple
+        Me.txtDiferenciaCaja.Properties.DisplayFormat.FormatString = "#,#0.00"
+        Me.txtDiferenciaCaja.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric
+        Me.txtDiferenciaCaja.Properties.ReadOnly = True
+        Me.txtDiferenciaCaja.Properties.Style = New DevExpress.Utils.ViewStyle("ControlStyle", Nothing, New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte)), "", DevExpress.Utils.StyleOptions.StyleEnabled, True, False, False, DevExpress.Utils.HorzAlignment.Far, DevExpress.Utils.VertAlignment.Center, Nothing, System.Drawing.SystemColors.Window, System.Drawing.Color.RoyalBlue)
+        Me.txtDiferenciaCaja.Size = New System.Drawing.Size(260, 22)
+        Me.txtDiferenciaCaja.TabIndex = 54
+        Me.txtDiferenciaCaja.TabStop = False
+        '
+        'Label11
+        '
+        Me.Label11.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.Label11.Location = New System.Drawing.Point(20, 553)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(115, 19)
+        Me.Label11.TabIndex = 53
+        Me.Label11.Text = "Diferencia :"
+        '
         'ArqueoCaja
         '
         Me.AutoScaleBaseSize = New System.Drawing.Size(6, 15)
         Me.BackColor = System.Drawing.SystemColors.Control
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.ClientSize = New System.Drawing.Size(784, 640)
+        Me.Controls.Add(Me.txtDiferenciaCaja)
+        Me.Controls.Add(Me.Label11)
         Me.Controls.Add(Me.lblCaja)
         Me.Controls.Add(Me.GroupBox4)
         Me.Controls.Add(Me.Label36)
@@ -959,6 +992,8 @@ Public Class ArqueoCaja
         Me.Controls.SetChildIndex(Me.Label36, 0)
         Me.Controls.SetChildIndex(Me.GroupBox4, 0)
         Me.Controls.SetChildIndex(Me.lblCaja, 0)
+        Me.Controls.SetChildIndex(Me.Label11, 0)
+        Me.Controls.SetChildIndex(Me.txtDiferenciaCaja, 0)
         Me.GroupBox1.ResumeLayout(False)
         CType(Me.GridControl1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DataSetArqueo1, System.ComponentModel.ISupportInitialize).EndInit()
@@ -979,6 +1014,7 @@ Public Class ArqueoCaja
         CType(Me.TextEdit1.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox4.ResumeLayout(False)
         Me.GroupBox4.PerformLayout()
+        CType(Me.txtDiferenciaCaja.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -1080,6 +1116,7 @@ Public Class ArqueoCaja
         Me.lblCaja.Text = ""
         If Me.ToolBarNuevo.Text = "Nuevo" Then 'n si ya hay un registropendiente por agregar
             Try 'inicia la edicion
+                Me.txtDiferenciaCaja.Text = "0.00"
                 Me.BindingContext(Me.DataSetArqueo1.ArqueoCajas).CancelCurrentEdit()
                 Me.BindingContext(Me.DataSetArqueo1.ArqueoEfectivo).CancelCurrentEdit()
                 Me.BindingContext(Me.DataSetArqueo1.ArqueoTarjeta).CancelCurrentEdit()
@@ -1106,7 +1143,7 @@ Public Class ArqueoCaja
                 Me.ToolBarNuevo.ImageIndex = 0
                 Me.ToolBarRegistrar.Enabled = False
                 Me.Inhabilitar()
-
+                Me.txtDiferenciaCaja.Text = "0.00"
             Catch eEndEdit As System.Data.NoNullAllowedException
                 System.Windows.Forms.MessageBox.Show(eEndEdit.Message)
             End Try
@@ -1148,7 +1185,7 @@ Public Class ArqueoCaja
             If Id_ArqueoCaja = Nothing Then
 
             Else
-                Cargar(Id_ArqueoCaja)
+                Cargar(Id_ArqueoCaja)                
                 ToolBarEliminar.Enabled = True
                 ToolBarExcel.Enabled = True
                 ToolBarImprimir.Enabled = True
@@ -1206,8 +1243,8 @@ Public Class ArqueoCaja
             cFunciones.Llenar_Tabla_Generico("Select * from ArqueoTarjeta Where Id_Arqueo = " & IdArqueo, Me.DataSetArqueo1.ArqueoTarjeta)
             cFunciones.Llenar_Tabla_Generico("Select * from ArqueoEfectivo Where Id_Arqueo = " & IdArqueo, Me.DataSetArqueo1.ArqueoEfectivo)
             Me.Cargando()
+            Me.txtDiferenciaCaja.Text = Me.ObtenerDiferenciaCaja(Me.DataSetArqueo1.ArqueoCajas(0).IdApertura).ToString("N2")
             Return True
-
         Catch ex As Exception
             MsgBox(ex.Message)
             Return False
@@ -1253,6 +1290,7 @@ Public Class ArqueoCaja
                 resp = MsgBox("¿Deseas Guardar los cambios?", MsgBoxStyle.YesNo, "SeeSoft")
                 If resp = 6 Then
                     Try
+                        Me.txtDiferenciaCaja.Text = Me.ObtenerDiferenciaCaja(NApertura).ToString("N2")
                         Me.BindingContext(Me.DataSetArqueo1, "ArqueoCajas").Current("IdApertura") = NApertura
                         Me.BindingContext(Me.DataSetArqueo1, "ArqueoCajas").Current("Fecha") = Date.Today.ToShortDateString
                         Me.BindingContext(Me.DataSetArqueo1, "ArqueoCajas").Current("Anulado") = 0
@@ -1305,7 +1343,8 @@ Public Class ArqueoCaja
                         cConexion = Nothing
 
                         Me.Inhabilitar()
-                        MsgBox("Datos Ingresados Satisfactoriamente....", MsgBoxStyle.Information, "Atención...")
+                        MsgBox("Datos Ingresados Satisfactoriamente...." & vbCrLf _
+                               & "Diferencia de caja : " & Me.txtDiferenciaCaja.Text, MsgBoxStyle.Information, "Atención...")
 
                         'Me.BindingContext(Me.DataSetArqueo1, "ArqueoCajas").Current("Id")
                         Me.RegistrarArqueoDepositos(BindingContext(DataSetArqueo1, "ArqueoCajas").Current("IdApertura"), BindingContext(DataSetArqueo1, "ArqueoCajas").Current("Id"))
@@ -1683,4 +1722,35 @@ Public Class ArqueoCaja
     Private Sub TextBox6_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TextBox6.TextChanged
 
     End Sub
+
+    Private Function ObtenerDiferenciaCaja(_IdAperturaCaja As Integer) As Decimal
+        Dim dtOpcionesdePago As New DataTable
+        Dim dtAperturaCaja As New DataTable
+        Dim TotalSistema As Decimal = 0
+        Dim AperturaCaja As Decimal = 0
+        Try
+            cFunciones.Llenar_Tabla_Generico("select att.Monto_Tope as MontoApertura from aperturacaja ap inner join Apertura_Total_Tope att on ap.NApertura = att.NApertura and att.CodMoneda = 1 where ap.NApertura = " & _IdAperturaCaja, dtAperturaCaja, CadenaConexionSeePOS)
+            AperturaCaja = dtAperturaCaja.Rows(0).Item("MontoApertura")
+            If dtAperturaCaja.Rows.Count > 0 Then
+                cFunciones.Llenar_Tabla_Generico("select TipoDocumento, SUM(MontoPago) as MontoPago from OpcionesDePago where Numapertura = " & _IdAperturaCaja & " and FormaPago not in('ANU','PRE') group by TipoDocumento", dtOpcionesdePago, CadenaConexionSeePOS)
+                If dtOpcionesdePago.Rows.Count > 0 Then
+                    For Each row As DataRow In dtOpcionesdePago.Rows
+                        Select Case row.Item("TipoDocumento").ToString
+                            Case "CON" : TotalSistema += row("MontoPago") 'contado
+                            Case "FVC" : TotalSistema += row("MontoPago") 'factura venta contado
+                            Case "MCS" : TotalSistema -= row("MontoPago") 'movimiento caja salida
+                            Case "ABO" : TotalSistema += row("MontoPago") 'abono cxc
+                            Case "MCE" : TotalSistema += row("MontoPago") 'movimiento caja entraa
+                            Case "FVP" : TotalSistema += row("MontoPago") 'factura venta punto de venta
+                            Case "PVE" : TotalSistema += row("MontoPago") ' punto de venta
+                            Case "DVE" : TotalSistema -= row("MontoPago") 'devolucion de venta
+                        End Select
+                    Next
+                End If
+            End If            
+        Catch ex As Exception
+        End Try
+        Return CDec(TextEdit6.EditValue) - (TotalSistema + AperturaCaja)
+    End Function
+
 End Class

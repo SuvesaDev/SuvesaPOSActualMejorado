@@ -49,18 +49,18 @@ Public Module Principal
         End Try
     End Sub
     Public Sub CapturaPantallaVisual()
-        Try
-            Dim Pantalla As New DevExpress.XtraEditors.PictureEdit
+        'Try
+        '    Dim Pantalla As New DevExpress.XtraEditors.PictureEdit
 
 
-            keybd_event(44, 0, 0&, 0&)
-            Dim iData As IDataObject = Clipboard.GetDataObject()
-            Pantalla.Image = CType(iData.GetData(DataFormats.Bitmap), Bitmap)
-            Pantalla.Image.Save(Application.StartupPath & "\Capturas\Captura" & Now.Day & "-" & Now.Month & "-" & Now.Year & " " & Format(Now.Hour, "00") & "" & Format(Now.Minute, "00") & "" & Format(Now.Second, "00") & ".JPG") 'MLHIDE
+        '    keybd_event(44, 0, 0&, 0&)
+        '    Dim iData As IDataObject = Clipboard.GetDataObject()
+        '    Pantalla.Image = CType(iData.GetData(DataFormats.Bitmap), Bitmap)
+        '    Pantalla.Image.Save(Application.StartupPath & "\Capturas\Captura" & Now.Day & "-" & Now.Month & "-" & Now.Year & " " & Format(Now.Hour, "00") & "" & Format(Now.Minute, "00") & "" & Format(Now.Second, "00") & ".JPG") 'MLHIDE
 
-        Catch ex As Exception
-            MsgBox(ex.Message, MsgBoxStyle.Information)
-        End Try
+        'Catch ex As Exception
+        '    MsgBox(ex.Message, MsgBoxStyle.Information)
+        'End Try
 
     End Sub
     Function Loggin_Usuario() As Boolean
