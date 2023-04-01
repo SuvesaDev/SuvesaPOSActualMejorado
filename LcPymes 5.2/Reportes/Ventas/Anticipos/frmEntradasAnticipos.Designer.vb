@@ -75,7 +75,7 @@ Partial Class frmEntradasAnticipos
         Me.VisorReporte.Name = "VisorReporte"
         Me.VisorReporte.SelectionFormula = ""
         Me.VisorReporte.ShowCloseButton = False
-        Me.VisorReporte.Size = New System.Drawing.Size(1115, 457)
+        Me.VisorReporte.Size = New System.Drawing.Size(1113, 457)
         Me.VisorReporte.TabIndex = 107
         Me.VisorReporte.ToolPanelWidth = 267
         Me.VisorReporte.ViewTimeSelectionFormula = ""

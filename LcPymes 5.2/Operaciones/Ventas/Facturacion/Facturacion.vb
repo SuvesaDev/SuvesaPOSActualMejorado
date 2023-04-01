@@ -324,6 +324,7 @@ Public Class Facturacion
     Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents txtExistencia As DevExpress.XtraEditors.TextEdit
     Friend WithEvents Ck_Exonerar As DevExpress.XtraEditors.CheckEdit
+    Friend WithEvents Ck_Extranjero As DevExpress.XtraEditors.CheckEdit
     Friend WithEvents txtEncargado As System.Windows.Forms.TextBox
     Friend WithEvents txtCod_Articulo As DevExpress.XtraEditors.TextEdit
     Friend WithEvents Ck_Taller As DevExpress.XtraEditors.CheckEdit
@@ -449,6 +450,7 @@ Public Class Facturacion
         Me.txtMontoCupon = New System.Windows.Forms.TextBox()
         Me.txtTotal = New DevExpress.XtraEditors.TextEdit()
         Me.Ck_Exonerar = New DevExpress.XtraEditors.CheckEdit()
+        Me.Ck_Extranjero = New DevExpress.XtraEditors.CheckEdit()
         Me.SimpleButton1 = New DevExpress.XtraEditors.SimpleButton()
         Me.Label44 = New System.Windows.Forms.Label()
         Me.Label46 = New DevExpress.XtraEditors.TextEdit()
@@ -634,6 +636,7 @@ Public Class Facturacion
         Me.GroupBox4.SuspendLayout()
         CType(Me.txtTotal.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Ck_Exonerar.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Ck_Extranjero.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Label46.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Lb_Subgravado.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Lb_SubExento.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -1447,6 +1450,7 @@ Public Class Facturacion
         Me.GroupBox4.Controls.Add(Me.txtMontoCupon)
         Me.GroupBox4.Controls.Add(Me.txtTotal)
         Me.GroupBox4.Controls.Add(Me.Ck_Exonerar)
+        Me.GroupBox4.Controls.Add(Me.Ck_Extranjero)
         Me.GroupBox4.Controls.Add(Me.SimpleButton1)
         Me.GroupBox4.Controls.Add(Me.Label44)
         Me.GroupBox4.Controls.Add(Me.Label46)
@@ -1511,6 +1515,22 @@ Public Class Facturacion
         Me.txtTotal.RightToLeft = System.Windows.Forms.RightToLeft.Yes
         Me.txtTotal.Size = New System.Drawing.Size(202, 41)
         Me.txtTotal.TabIndex = 29
+        '
+        'Ck_Extranjero
+        '
+        Me.Ck_Extranjero.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        'Me.Ck_Extranjero.DataBindings.Add(New System.Windows.Forms.Binding("Checked", Me.DataSet_Facturaciones, "Ventas.Exonerar", True))
+        Me.Ck_Extranjero.EditValue = False
+        Me.Ck_Extranjero.Location = New System.Drawing.Point(118, 312)
+        Me.Ck_Extranjero.Name = "Ck_Extranjero"
+        '
+        '
+        '
+        Me.Ck_Extranjero.Properties.Caption = "Extranjero"
+        Me.Ck_Extranjero.Properties.Enabled = True
+        Me.Ck_Extranjero.Properties.Style = New DevExpress.Utils.ViewStyle("ControlStyle", Nothing, New System.Drawing.Font("Trebuchet MS", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte)), "", DevExpress.Utils.StyleOptions.StyleEnabled, True, False, False, DevExpress.Utils.HorzAlignment.[Default], DevExpress.Utils.VertAlignment.Center, Nothing, System.Drawing.Color.Transparent, System.Drawing.Color.Red)
+        Me.Ck_Extranjero.Size = New System.Drawing.Size(90, 21)
+        Me.Ck_Extranjero.TabIndex = 192
         '
         'Ck_Exonerar
         '
@@ -3406,6 +3426,7 @@ Public Class Facturacion
         Me.GroupBox4.PerformLayout()
         CType(Me.txtTotal.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Ck_Exonerar.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Ck_Extranjero.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Label46.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Lb_Subgravado.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Lb_SubExento.Properties, System.ComponentModel.ISupportInitialize).EndInit()
@@ -4484,7 +4505,8 @@ Public Class Facturacion
                 Me.ToolBar1.Buttons(6).Enabled = False
                 Me.GroupBox6.Enabled = False
                 Me.GroupBox3.Enabled = False
-                Ck_Exonerar.Enabled = False
+                Me.Ck_Exonerar.Enabled = False
+                Me.Ck_Extranjero.Enabled = False
                 Me.dtFecha.Enabled = False
                 Me.txtorden.Enabled = True
                 Me.txtUsuario.Enabled = True
@@ -4529,7 +4551,8 @@ Public Class Facturacion
                     Me.ToolBar1.Buttons(0).ImageIndex = 0
                     Me.GroupBox6.Enabled = False
                     Me.GroupBox3.Enabled = False
-                    Ck_Exonerar.Enabled = False
+                    Me.Ck_Exonerar.Enabled = False
+                    Me.Ck_Extranjero.Enabled = False
                     Me.Label10.Visible = False
                     Me.Label11.Visible = False
                     Me.Label_Costobase.Visible = False
@@ -4564,7 +4587,8 @@ Public Class Facturacion
                         Me.ToolBar1.Buttons(0).ImageIndex = 0
                         Me.ToolBar1.Buttons(3).Enabled = True
                         Me.GroupBox6.Enabled = False
-                        Ck_Exonerar.Enabled = False
+                        Me.Ck_Exonerar.Enabled = False
+                        Me.Ck_Extranjero.Enabled = False
                         Me.GroupBox3.Enabled = False
                         Me.Label10.Visible = False
                         Me.Label11.Visible = False
@@ -5260,13 +5284,15 @@ Fin:
             Me.ToolBar1.Buttons(2).Enabled = True
             Me.GroupBox6.Enabled = True
             Me.GroupBox3.Enabled = True
-            Ck_Exonerar.Enabled = True
+            Me.Ck_Exonerar.Enabled = True
+            Me.Ck_Extranjero.Enabled = True
             Me.txtorden.Enabled = True
         Else
             Me.ToolBar1.Buttons(2).Enabled = False
             Me.GroupBox6.Enabled = False
             Me.GroupBox3.Enabled = False
-            Ck_Exonerar.Enabled = False
+            Me.Ck_Exonerar.Enabled = False
+            Me.Ck_Extranjero.Enabled = False
             Me.txtorden.Enabled = True
         End If
 
@@ -5401,12 +5427,14 @@ Fin:
                 Me.GroupBox6.Enabled = True
                 Me.GroupBox3.Enabled = True
                 Ck_Exonerar.Enabled = True
+                Ck_Extranjero.Enabled = True
                 Me.txtorden.Enabled = True
             Else
                 Me.ToolBar1.Buttons(2).Enabled = False
                 Me.GroupBox6.Enabled = False
                 Me.GroupBox3.Enabled = False
                 Ck_Exonerar.Enabled = False
+                Ck_Extranjero.Enabled = True
                 Me.txtorden.Enabled = True
             End If
             
@@ -5881,6 +5909,7 @@ Fin:
                         Me.GroupBox6.Enabled = False
                         Me.GroupBox3.Enabled = False
                         Ck_Exonerar.Enabled = False
+                        Ck_Extranjero.Enabled = False
                         Me.txtorden.Enabled = True
                         Me.Label10.Visible = False
                         Me.Label11.Visible = False
@@ -5980,6 +6009,7 @@ Fin:
                         Me.GroupBox6.Enabled = False
                         Me.GroupBox3.Enabled = False
                         Ck_Exonerar.Enabled = False
+                        Ck_Extranjero.Enabled = False
                         Me.txtorden.Enabled = True
                         Me.Label10.Visible = False
                         Me.Label11.Visible = False
@@ -12183,12 +12213,14 @@ Contador:
                         Me.GroupBox6.Enabled = True
                         Me.GroupBox3.Enabled = True
                         Ck_Exonerar.Enabled = True
+                        Ck_Extranjero.Enabled = True
                         Me.txtorden.Enabled = True
                     Else
                         Me.ToolBar1.Buttons(2).Enabled = False
                         Me.GroupBox6.Enabled = False
                         Me.GroupBox3.Enabled = False
                         Ck_Exonerar.Enabled = False
+                        Ck_Extranjero.Enabled = False
                         Me.txtorden.Enabled = True
                     End If
 
@@ -12411,6 +12443,52 @@ Contador:
         End If
     End Sub
 
+    Private Function GetPorcentajeExtranjero() As Decimal
+        Dim dt As New DataTable
+        cFunciones.Llenar_Tabla_Generico("Select PorcentajeExtranjero from configuraciones", dt, CadenaConexionSeePOS)
+        If dt.Rows.Count > 0 Then
+            Return dt.Rows(0).Item("PorcentajeExtranjero")
+        End If
+        Return 0
+    End Function
+
+    Private Sub Ck_Extranjero_CheckedChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles Ck_Extranjero.CheckedChanged
+        Dim porcentaje = Me.GetPorcentajeExtranjero
+        If porcentaje > 0 Then
+
+            Me.BindingContext(Me.DataSet_Facturaciones, "Ventas.VentasVentas_Detalle").CancelCurrentEdit()
+            For i As Integer = 0 To Me.BindingContext(Me.DataSet_Facturaciones, "Ventas.VentasVentas_Detalle").Count - 1
+                With Me.BindingContext(Me.DataSet_Facturaciones, "Ventas.VentasVentas_Detalle")
+                    .Position = i
+
+                    If Me.Ck_Extranjero.Checked = True Then
+                        .Current("Precio_Unit") = .Current("Precio_Unit") * (1 + (porcentaje / 100))
+                    Else
+                        .Current("Precio_Unit") = .Current("Precio_Unit") / (1 + (porcentaje / 100))
+                    End If
+
+                    .Current("SubTotal") = CDec(.Current("Cantidad") * .Current("Precio_Unit"))
+
+                    If CDec(.Current("Descuento")) > 0 Then
+                        .Current("Monto_Descuento") = CDec(.Current("SubTotal") * (.Current("Descuento") / 100))
+                    End If
+
+                    If CDec(.Current("Impuesto")) > 0 Then
+                        .Current("SubtotalGravado") = .Current("SubTotal")
+                        .Current("SubTotalExcento") = 0
+                        .Current("Monto_Impuesto") = (.Current("SubtotalGravado") - .Current("Monto_Descuento")) * (.Current("Impuesto") / 100)
+                    Else
+                        .Current("SubtotalGravado") = 0
+                        .Current("SubTotalExcento") = .Current("SubTotal")
+                        .Current("Monto_Impuesto") = 0
+                    End If
+
+                    .EndCurrentEdit()
+                End With
+            Next
+            Me.Calcular_totales()
+        End If
+    End Sub
 End Class
 
 

@@ -77,7 +77,7 @@ Public Class frmConsultaAlbaran
     Private Sub CargarAlbaranes()
 
         Dim dt As New DataTable
-        Dim strSQL As String = "Select Id, Identificacion, Cliente, Mascota, Fecha, Subtotal, Descuento, Impuesto, Total, Facturado, UsuarioClinica as Responsable, cast(0 as bit) as Facturar  from viewAlbaran"
+        Dim strSQL As String = "Select Id, Identificacion, Cliente, Mascota, Fecha, Subtotal, Descuento, Impuesto, Total, Facturado, UsuarioClinica as Responsable, cast(0 as bit) as Facturar, cast(0 as bit) as Extranjero from viewAlbaran"
         Dim strWhere As String = ""
 
         strWhere = " Where dbo.dateonly(Fecha) >= dbo.dateonly('" & Me.dtpDesde.Value.ToShortDateString & "') and dbo.dateonly(Fecha) <= dbo.dateonly('" & Me.dtpHasta.Value.ToShortDateString & "')" & IIf(Me.ckSoloPendientes.Checked = True, " And Facturado = 0 ", "")
@@ -174,7 +174,7 @@ Public Class frmConsultaAlbaran
                         For Each row As DataGridViewRow In (From x As DataGridViewRow In Me.viewDatos.Rows
                                                             Where x.Cells("Identificacion").Value = Clientes.Cells("cIdentificacion").Value And x.Cells("Facturar").Value = True
                                                             Select x).ToList
-                            albaran.Agregar(row.Cells("Id").Value)
+                            albaran.Agregar(row.Cells("Id").Value, row.Cells("Extranjero").Value)
                         Next
                         IdFactura = 0
                         IdFactura = albaran.GenerarFactura(frmUsuario.IdUsuario,
@@ -330,7 +330,7 @@ Public Class frmConsultaAlbaran
                         'datos a agregar o modificar
                         If row.Cells("cId").Value > 0 Then
                             'modificar
-                            db.Ejecutar("Update Albaran_Detalle set CodigoInternoQvet = " & row.Cells("cCodigo").Value & ", Descripcion = '" & row.Cells("cDescripcion").Value & "', Cantidad = " & row.Cells("cCantidad").Value & ", PrecioVenta = " & PrecioUnitario & ", IVA = " & row.Cells("cIva").Value & ", descuento = " & row.Cells("cDescuento").Value & ",Total = " & row.Cells("cTotal").Value & " Where Id = " & row.Cells("cId").Value, CommandType.Text)
+                            db.Ejecutar("Update Albaran_Detalle set  CodigoInternoQvet = " & row.Cells("cCodigo").Value & ", Descripcion = '" & row.Cells("cDescripcion").Value & "', Cantidad = " & row.Cells("cCantidad").Value & ", PrecioVenta = " & PrecioUnitario & ", IVA = " & row.Cells("cIva").Value & ", descuento = " & row.Cells("cDescuento").Value & ",Total = " & row.Cells("cTotal").Value & " Where Id = " & row.Cells("cId").Value, CommandType.Text)
                         Else
                             'agregar
                             db.Ejecutar("Insert Into Bitacora_Albaran(Id_Albaran, Usuario_Suvesa, Fecha_Hora, Accion, Observaciones) Values(" & frm.IdAlbaran & ", '" & Me.IdUsuario & "', getdate(), 'Adicion', '" & row.Cells("cDescripcion").Value & ", Cant: " & row.Cells("cCantidad").Value & ", Total: " & row.Cells("cTotal").Value & "')", CommandType.Text)
@@ -345,6 +345,9 @@ Public Class frmConsultaAlbaran
                         End If
                     End If
                 Next
+
+                db.Ejecutar("Update Albaran set Extranjero = " & IIf(frm.ckExtranjero.Checked, 1, 0) & " Where Id = " & IdAlbaran, CommandType.Text)
+
                 db.Commit()
             Catch ex As Exception
                 db.Rollback()
@@ -429,6 +432,52 @@ Public Class frmConsultaAlbaran
             End If
         End While
         Me.BackgroundWorker1.Dispose()
+    End Sub
+
+    Private Function GetPorcentajeExtranjero() As Decimal
+        Dim dt As New DataTable
+        cFunciones.Llenar_Tabla_Generico("Select PorcentajeExtranjero from configuraciones", dt, CadenaConexionSeePOS)
+        If dt.Rows.Count > 0 Then
+            Return dt.Rows(0).Item("PorcentajeExtranjero")
+        End If
+        Return 0
+    End Function
+
+    Private Sub viewDatos_CellValueChanged(sender As Object, e As DataGridViewCellEventArgs) Handles viewDatos.CellValueChanged
+        If Me.viewDatos.Columns(e.ColumnIndex).Name = "Extranjero" Then
+            Dim Extranjero As Boolean = Me.viewDatos.Item(e.ColumnIndex, e.RowIndex).Value
+            Dim Id As Integer = Me.viewDatos.Item("Id", e.RowIndex).Value
+
+            Dim dt As New DataTable
+            cFunciones.Llenar_Tabla_Generico("select * from viewAlbaranDetalle where Id_Albaran = " & Id, dt, CadenaConexionSeePOS)
+            If dt.Rows.Count > 0 Then
+                Dim Porcentaje = Me.GetPorcentajeExtranjero
+                Dim Subtotal As Decimal = 0
+                Dim Descuento As Decimal = 0
+                Dim Impuesto As Decimal = 0
+                Dim SubtotalTemp As Decimal = 0
+                Dim DescuentoTemp As Decimal = 0
+                For Each row As DataRow In dt.Rows
+                    SubtotalTemp = CDec(row.Item("Cantidad") * row.Item("Precio_Unit"))
+                    If Extranjero Then SubtotalTemp = SubtotalTemp * (1 + (Porcentaje / 100))
+                    DescuentoTemp = SubtotalTemp * (CDec(row.Item("Descuento") / 100))
+                    Subtotal += SubtotalTemp
+                    Descuento += DescuentoTemp
+                    Impuesto += (SubtotalTemp - DescuentoTemp) * (CDec(row.Item("Impuestos") / 100))
+                Next
+                Me.viewDatos.Item("Subtotal", e.RowIndex).Value = Subtotal
+                Me.viewDatos.Item("Descuento", e.RowIndex).Value = Descuento
+                Me.viewDatos.Item("Impuesto", e.RowIndex).Value = Impuesto
+                Me.viewDatos.Item("Total", e.RowIndex).Value = Subtotal - Descuento + Impuesto
+
+            End If
+        End If
+    End Sub
+
+    Private Sub ckExtranjero_CheckedChanged(sender As Object, e As EventArgs) Handles ckExtranjero.CheckedChanged
+        For Each row As DataGridViewRow In Me.viewDatos.Rows
+            row.Cells("Extranjero").Value = Me.ckExtranjero.Checked
+        Next
     End Sub
 
 End Class

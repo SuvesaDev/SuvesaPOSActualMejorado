@@ -90,6 +90,7 @@ Public Class frmEditarAlbaran
             Me.txtCliente.Text = dtEncabezado.Rows(0).Item("Cliente")
             Me.txtMascota.Text = dtEncabezado.Rows(0).Item("Mascota")
             Me.txtFecha.Text = CDate(dtEncabezado.Rows(0).Item("Fecha")).ToShortDateString
+
             cFunciones.Llenar_Tabla_Generico("select id, id_albaran as IdEncabezado, descripcion, codarticulo as CodigoInternoQvet, Cantidad, Impuestos as IVA, Descuento, Precio_Unit as PrecioVenta, (subtotal - Monto_Descuento + Monto_Impuestos) as Total, '' as Unidad  from viewAlbaranDetalle where id_albaran = " & Me.IdAlbaran, dtDetalle, CadenaConexionSeePOS)
 
             Me.Index = 0
@@ -255,4 +256,6 @@ Public Class frmEditarAlbaran
             Me.CalcularTotal()
         End If
     End Sub
+
+
 End Class

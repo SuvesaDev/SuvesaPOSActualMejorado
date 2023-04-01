@@ -63,6 +63,7 @@ Partial Class frmEditarAlbaran
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.btnDescuentoTeleton = New System.Windows.Forms.Button()
         Me.btnAceptar = New System.Windows.Forms.Button()
+        Me.ckExtranjero = New System.Windows.Forms.CheckBox()
         CType(Me.viewDatos, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
@@ -81,7 +82,7 @@ Partial Class frmEditarAlbaran
         Me.viewDatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.viewDatos.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.cId, Me.cIdAlbaran, Me.cCodigo, Me.cDescripcion, Me.cCantidad, Me.cPrecio, Me.cIva, Me.cDescuento, Me.cUnidad, Me.cTotal, Me.cMotivo})
         Me.viewDatos.Location = New System.Drawing.Point(13, 144)
-        Me.viewDatos.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.viewDatos.Margin = New System.Windows.Forms.Padding(4)
         Me.viewDatos.MultiSelect = False
         Me.viewDatos.Name = "viewDatos"
         Me.viewDatos.ReadOnly = True
@@ -191,7 +192,7 @@ Partial Class frmEditarAlbaran
         'txtCliente
         '
         Me.txtCliente.Location = New System.Drawing.Point(16, 26)
-        Me.txtCliente.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtCliente.Margin = New System.Windows.Forms.Padding(4)
         Me.txtCliente.Name = "txtCliente"
         Me.txtCliente.ReadOnly = True
         Me.txtCliente.Size = New System.Drawing.Size(413, 22)
@@ -226,7 +227,7 @@ Partial Class frmEditarAlbaran
         'txtMascota
         '
         Me.txtMascota.Location = New System.Drawing.Point(439, 26)
-        Me.txtMascota.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtMascota.Margin = New System.Windows.Forms.Padding(4)
         Me.txtMascota.Name = "txtMascota"
         Me.txtMascota.ReadOnly = True
         Me.txtMascota.Size = New System.Drawing.Size(413, 22)
@@ -250,7 +251,7 @@ Partial Class frmEditarAlbaran
         Me.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnCancelar.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnCancelar.Location = New System.Drawing.Point(796, 570)
-        Me.btnCancelar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnCancelar.Margin = New System.Windows.Forms.Padding(4)
         Me.btnCancelar.Name = "btnCancelar"
         Me.btnCancelar.Size = New System.Drawing.Size(263, 50)
         Me.btnCancelar.TabIndex = 86
@@ -260,7 +261,7 @@ Partial Class frmEditarAlbaran
         'txtFecha
         '
         Me.txtFecha.Location = New System.Drawing.Point(861, 26)
-        Me.txtFecha.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtFecha.Margin = New System.Windows.Forms.Padding(4)
         Me.txtFecha.Name = "txtFecha"
         Me.txtFecha.ReadOnly = True
         Me.txtFecha.Size = New System.Drawing.Size(204, 22)
@@ -269,7 +270,7 @@ Partial Class frmEditarAlbaran
         'txtCodigo
         '
         Me.txtCodigo.Location = New System.Drawing.Point(13, 49)
-        Me.txtCodigo.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtCodigo.Margin = New System.Windows.Forms.Padding(4)
         Me.txtCodigo.Name = "txtCodigo"
         Me.txtCodigo.Size = New System.Drawing.Size(149, 22)
         Me.txtCodigo.TabIndex = 1
@@ -302,7 +303,7 @@ Partial Class frmEditarAlbaran
         'txtCantidad
         '
         Me.txtCantidad.Location = New System.Drawing.Point(169, 49)
-        Me.txtCantidad.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtCantidad.Margin = New System.Windows.Forms.Padding(4)
         Me.txtCantidad.Name = "txtCantidad"
         Me.txtCantidad.Size = New System.Drawing.Size(149, 22)
         Me.txtCantidad.TabIndex = 2
@@ -324,7 +325,7 @@ Partial Class frmEditarAlbaran
         'txtPrecio
         '
         Me.txtPrecio.Location = New System.Drawing.Point(325, 49)
-        Me.txtPrecio.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtPrecio.Margin = New System.Windows.Forms.Padding(4)
         Me.txtPrecio.Name = "txtPrecio"
         Me.txtPrecio.Size = New System.Drawing.Size(149, 22)
         Me.txtPrecio.TabIndex = 3
@@ -346,7 +347,7 @@ Partial Class frmEditarAlbaran
         'txtDescuento
         '
         Me.txtDescuento.Location = New System.Drawing.Point(481, 49)
-        Me.txtDescuento.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtDescuento.Margin = New System.Windows.Forms.Padding(4)
         Me.txtDescuento.Name = "txtDescuento"
         Me.txtDescuento.Size = New System.Drawing.Size(149, 22)
         Me.txtDescuento.TabIndex = 4
@@ -368,7 +369,7 @@ Partial Class frmEditarAlbaran
         'txtIVA
         '
         Me.txtIVA.Location = New System.Drawing.Point(637, 49)
-        Me.txtIVA.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtIVA.Margin = New System.Windows.Forms.Padding(4)
         Me.txtIVA.Name = "txtIVA"
         Me.txtIVA.Size = New System.Drawing.Size(149, 22)
         Me.txtIVA.TabIndex = 5
@@ -390,7 +391,7 @@ Partial Class frmEditarAlbaran
         'txtTotalAlbaran
         '
         Me.txtTotalAlbaran.Location = New System.Drawing.Point(796, 539)
-        Me.txtTotalAlbaran.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtTotalAlbaran.Margin = New System.Windows.Forms.Padding(4)
         Me.txtTotalAlbaran.Name = "txtTotalAlbaran"
         Me.txtTotalAlbaran.ReadOnly = True
         Me.txtTotalAlbaran.Size = New System.Drawing.Size(261, 22)
@@ -415,7 +416,7 @@ Partial Class frmEditarAlbaran
         Me.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnAgregar.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnAgregar.Location = New System.Drawing.Point(796, 4)
-        Me.btnAgregar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnAgregar.Margin = New System.Windows.Forms.Padding(4)
         Me.btnAgregar.Name = "btnAgregar"
         Me.btnAgregar.Size = New System.Drawing.Size(263, 70)
         Me.btnAgregar.TabIndex = 6
@@ -437,7 +438,7 @@ Partial Class frmEditarAlbaran
         Me.Panel1.Controls.Add(Me.Label7)
         Me.Panel1.Controls.Add(Me.txtPrecio)
         Me.Panel1.Location = New System.Drawing.Point(0, 63)
-        Me.Panel1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Panel1.Margin = New System.Windows.Forms.Padding(4)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(1079, 78)
         Me.Panel1.TabIndex = 102
@@ -469,11 +470,23 @@ Partial Class frmEditarAlbaran
         Me.btnAceptar.Text = "Aceptar"
         Me.btnAceptar.UseVisualStyleBackColor = True
         '
+        'ckExtranjero
+        '
+        Me.ckExtranjero.AutoSize = True
+        Me.ckExtranjero.Location = New System.Drawing.Point(15, 521)
+        Me.ckExtranjero.Name = "ckExtranjero"
+        Me.ckExtranjero.Size = New System.Drawing.Size(94, 21)
+        Me.ckExtranjero.TabIndex = 104
+        Me.ckExtranjero.Text = "Extranjero"
+        Me.ckExtranjero.UseVisualStyleBackColor = True
+        Me.ckExtranjero.Visible = False
+        '
         'frmEditarAlbaran
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1083, 622)
+        Me.Controls.Add(Me.ckExtranjero)
         Me.Controls.Add(Me.btnDescuentoTeleton)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.txtTotalAlbaran)
@@ -488,7 +501,7 @@ Partial Class frmEditarAlbaran
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.viewDatos)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "frmEditarAlbaran"
@@ -537,4 +550,5 @@ Partial Class frmEditarAlbaran
     Friend WithEvents cTotal As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents cMotivo As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents btnDescuentoTeleton As System.Windows.Forms.Button
+    Friend WithEvents ckExtranjero As System.Windows.Forms.CheckBox
 End Class

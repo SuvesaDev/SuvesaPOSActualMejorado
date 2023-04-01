@@ -12,6 +12,7 @@ Public Class frmMovimientosAnticipos
         Try
             If CodProveedor <> "0" Then
                 Dim Reporte As New rptMovimientoAnticipo
+                Reporte.Refresh()
                 Reporte.SetParameterValue(0, CodProveedor)
                 Reporte.SetParameterValue(1, Me.dtpDesde.Value)
                 Reporte.SetParameterValue(2, Me.dtpHasta.Value)

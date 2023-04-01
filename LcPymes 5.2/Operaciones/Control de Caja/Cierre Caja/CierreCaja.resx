@@ -125,7 +125,7 @@
         AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
         LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
         ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAADy
-        agAAAk1TRnQBSQFMAgEBCQEAAQ4BAAE0AQABIAEAASABAAT/ARkBEAj/AUIBTQE2BwABNgMAASgDAAGA
+        agAAAk1TRnQBSQFMAgEBCQEAAQ4BAAE8AQABIAEAASABAAT/ARkBEAj/AUIBTQE2BwABNgMAASgDAAGA
         AwABYAMAAQEBAAEYBgABkP8AtwACAQFdAgEBbQIBAXQCAQF0AgEBbQIBAV0CAQFK/wBjAAIBAXQCAAGG
         AgABiQIAAYUCAAGCAgABggIAAYACAAGAAgABgAIAAYICAAGCAgEBbQIBATj/AFQAAgEBeAICAZECAAGL
         AgABhQIAAYUCAAGFAgABhQIAAYYCAAGGAgABhQIAAYICAAGAAgABfwIAAYICAAGFAgEBdAIBATj/AE0A
@@ -585,10 +585,10 @@
 </value>
   </data>
   <metadata name="SqlConnection1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>121, 17</value>
+    <value>17, 60</value>
   </metadata>
   <metadata name="AdapterUsuarios.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>258, 17</value>
+    <value>17, 103</value>
   </metadata>
   <metadata name="SqlSelectCommand1.DesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
@@ -600,10 +600,10 @@
     <value>False</value>
   </metadata>
   <metadata name="DataSetCierreCaja1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>400, 17</value>
+    <value>17, 146</value>
   </metadata>
   <metadata name="AdapterCierre.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>556, 17</value>
+    <value>17, 189</value>
   </metadata>
   <metadata name="SqlDeleteCommand1.DesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
@@ -654,7 +654,7 @@
     <value>UPDATE cierrecaja SET Cajera = @Cajera, Nombre = @Nombre, Apertura = @Apertura, Usuario = @Usuario, Fecha = @Fecha, NombreUsuario = @NombreUsuario, Anulado = @Anulado, Devoluciones = @Devoluciones, Subtotal = @Subtotal, TotalSistema = @TotalSistema, Equivalencia = @Equivalencia, EfectivoColones = @EfectivoColones, EfectivoDolares = @EfectivoDolares, TarjetaColones = @TarjetaColones, TarjetaDolares = @TarjetaDolares, Cheques = @Cheques, ChequeDol = @ChequeDol, DepositosCol = @DepositosCol, DepositosDol = @DepositosDol WHERE (NumeroCierre = @Original_NumeroCierre) AND (Anulado = @Original_Anulado) AND (Apertura = @Original_Apertura) AND (Cajera = @Original_Cajera) AND (ChequeDol = @Original_ChequeDol) AND (Cheques = @Original_Cheques) AND (DepositosCol = @Original_DepositosCol) AND (DepositosDol = @Original_DepositosDol) AND (Devoluciones = @Original_Devoluciones) AND (EfectivoColones = @Original_EfectivoColones) AND (EfectivoDolares = @Original_EfectivoDolares) AND (Equivalencia = @Original_Equivalencia) AND (Fecha = @Original_Fecha) AND (Nombre = @Original_Nombre) AND (NombreUsuario = @Original_NombreUsuario) AND (Subtotal = @Original_Subtotal) AND (TarjetaColones = @Original_TarjetaColones) AND (TarjetaDolares = @Original_TarjetaDolares) AND (TotalSistema = @Original_TotalSistema) AND (Usuario = @Original_Usuario); SELECT NumeroCierre, Cajera, Nombre, Apertura, Usuario, Fecha, NombreUsuario, Anulado, Devoluciones, Subtotal, TotalSistema, Equivalencia, EfectivoColones, EfectivoDolares, TarjetaColones, TarjetaDolares, Cheques, ChequeDol, DepositosCol, DepositosDol FROM cierrecaja WHERE (NumeroCierre = @NumeroCierre)</value>
   </data>
   <metadata name="AdapterApertura.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 56</value>
+    <value>17, 232</value>
   </metadata>
   <metadata name="SqlSelectCommand3.DesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
@@ -666,7 +666,7 @@
     <value>False</value>
   </metadata>
   <metadata name="AdapterOpciones.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>160, 56</value>
+    <value>17, 275</value>
   </metadata>
   <metadata name="SqlSelectCommand4.DesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
@@ -678,7 +678,7 @@
     <value>False</value>
   </metadata>
   <metadata name="AdapterMoneda.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>306, 56</value>
+    <value>17, 318</value>
   </metadata>
   <metadata name="SqlSelectCommand5.DesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
@@ -690,7 +690,7 @@
     <value>False</value>
   </metadata>
   <metadata name="AdapterTotalTope.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>447, 56</value>
+    <value>17, 361</value>
   </metadata>
   <metadata name="SqlSelectCommand6.DesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
@@ -702,7 +702,7 @@
     <value>False</value>
   </metadata>
   <metadata name="AdapterArqueo.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 95</value>
+    <value>17, 404</value>
   </metadata>
   <metadata name="SqlSelectCommand7.DesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
@@ -714,7 +714,7 @@
     <value>False</value>
   </metadata>
   <metadata name="AdapterTarjeta.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>152, 95</value>
+    <value>17, 447</value>
   </metadata>
   <metadata name="SqlSelectCommand8.DesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
@@ -726,7 +726,7 @@
     <value>False</value>
   </metadata>
   <metadata name="AdapterTipoTarjeta.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>284, 95</value>
+    <value>17, 490</value>
   </metadata>
   <metadata name="SqlSelectCommand9.DesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
@@ -738,7 +738,7 @@
     <value>False</value>
   </metadata>
   <metadata name="AdapterDetallePago.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>440, 95</value>
+    <value>17, 533</value>
   </metadata>
   <metadata name="SqlSelectCommand10.DesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
@@ -750,7 +750,7 @@
     <value>False</value>
   </metadata>
   <metadata name="AdapterVentasContado.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 134</value>
+    <value>17, 576</value>
   </metadata>
   <metadata name="SqlSelectCommand11.DesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
@@ -762,7 +762,7 @@
     <value>False</value>
   </metadata>
   <metadata name="AdapterCierreMonto.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>196, 134</value>
+    <value>17, 619</value>
   </metadata>
   <metadata name="SqlDeleteCommand3.DesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
@@ -810,7 +810,7 @@
     <value>UPDATE CierreCaja_DetMon SET Id_CierreCaja = @Id_CierreCaja, Id_Moneda = @Id_Moneda, MontoSistema = @MontoSistema, MontoCajero = @MontoCajero WHERE (Id_DetaMoneda = @Original_Id_DetaMoneda) AND (Id_CierreCaja = @Original_Id_CierreCaja) AND (Id_Moneda = @Original_Id_Moneda) AND (MontoCajero = @Original_MontoCajero) AND (MontoSistema = @Original_MontoSistema); SELECT Id_DetaMoneda, Id_CierreCaja, Id_Moneda, MontoSistema, MontoCajero FROM CierreCaja_DetMon WHERE (Id_DetaMoneda = @Id_DetaMoneda)</value>
   </data>
   <metadata name="AdapterCierreTarjeta.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>360, 134</value>
+    <value>17, 662</value>
   </metadata>
   <metadata name="SqlDeleteCommand2.DesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
@@ -858,7 +858,7 @@
     <value>UPDATE CierreCaja_DetTarj SET Id_CierreCaja = @Id_CierreCaja, Id_TipoTarjeta = @Id_TipoTarjeta, MontoSistema = @MontoSistema, MontoCajero = @MontoCajero WHERE (Id_DetalleTarjeta = @Original_Id_DetalleTarjeta) AND (Id_CierreCaja = @Original_Id_CierreCaja) AND (Id_TipoTarjeta = @Original_Id_TipoTarjeta) AND (MontoCajero = @Original_MontoCajero) AND (MontoSistema = @Original_MontoSistema); SELECT Id_DetalleTarjeta, Id_CierreCaja, Id_TipoTarjeta, MontoSistema, MontoCajero FROM CierreCaja_DetTarj WHERE (Id_DetalleTarjeta = @Id_DetalleTarjeta)</value>
   </data>
   <metadata name="AdapterVentasCredito.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>524, 134</value>
+    <value>17, 705</value>
   </metadata>
   <metadata name="SqlSelectCommand12.DesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>

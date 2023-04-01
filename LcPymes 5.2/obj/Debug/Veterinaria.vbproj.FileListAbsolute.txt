@@ -2451,6 +2451,7 @@ C:\Users\LENOVO\Documents\GitHub\SuvesaPOSActualMejorado2\LcPymes 5.2\obj\Debug\
 C:\Users\LENOVO\Documents\GitHub\SuvesaPOSActualMejorado2\LcPymes 5.2\obj\Debug\Veterinaria.exe.manifest
 C:\Users\LENOVO\Documents\GitHub\SuvesaPOSActualMejorado2\LcPymes 5.2\obj\Debug\Veterinaria.application
 C:\Users\LENOVO\Documents\GitHub\SuvesaPOSActualMejorado\LcPymes 5.2\obj\Debug\Veterinaria.exe
+C:\Users\LENOVO\Documents\GitHub\SuvesaPOSActualMejorado\LcPymes 5.2\obj\Debug\Veterinaria.vbprojResolveAssemblyReference.cache
 C:\Users\LENOVO\Documents\GitHub\SuvesaPOSActualMejorado\LcPymes 5.2\obj\Debug\Interop.Shell32.dll
 C:\Users\LENOVO\Documents\GitHub\SuvesaPOSActualMejorado\LcPymes 5.2\obj\Debug\Veterinaria.vbproj.ResolveComReference.cache
 C:\Users\LENOVO\Documents\GitHub\SuvesaPOSActualMejorado\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmBuscarArticuloMigrador.resources
@@ -2669,6 +2670,7 @@ C:\Users\LENOVO\Documents\GitHub\SuvesaPOSActualMejorado\LcPymes 5.2\obj\Debug\L
 C:\Users\LENOVO\Documents\GitHub\SuvesaPOSActualMejorado\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmMovimientoCompras.resources
 C:\Users\LENOVO\Documents\GitHub\SuvesaPOSActualMejorado\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmMovimientoxCodigo.resources
 C:\Users\LENOVO\Documents\GitHub\SuvesaPOSActualMejorado\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmReporteAbonoIncobrable.resources
+C:\Users\LENOVO\Documents\GitHub\SuvesaPOSActualMejorado\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmReporteArticulosComprados.resources
 C:\Users\LENOVO\Documents\GitHub\SuvesaPOSActualMejorado\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmReporteCompravsVentas.resources
 C:\Users\LENOVO\Documents\GitHub\SuvesaPOSActualMejorado\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmReporteContadoRecuperacion.resources
 C:\Users\LENOVO\Documents\GitHub\SuvesaPOSActualMejorado\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmReporteCxCMeses.resources
@@ -2676,6 +2678,9 @@ C:\Users\LENOVO\Documents\GitHub\SuvesaPOSActualMejorado\LcPymes 5.2\obj\Debug\L
 C:\Users\LENOVO\Documents\GitHub\SuvesaPOSActualMejorado\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmReporteDevoluciones.resources
 C:\Users\LENOVO\Documents\GitHub\SuvesaPOSActualMejorado\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmReportePorcentajeVenta.resources
 C:\Users\LENOVO\Documents\GitHub\SuvesaPOSActualMejorado\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmVentasxProveedor.resources
+C:\Users\LENOVO\Documents\GitHub\SuvesaPOSActualMejorado\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmEntradasAnticipos.resources
+C:\Users\LENOVO\Documents\GitHub\SuvesaPOSActualMejorado\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmMovimientosAnticipos.resources
+C:\Users\LENOVO\Documents\GitHub\SuvesaPOSActualMejorado\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmSaldosAnticiposActual.resources
 C:\Users\LENOVO\Documents\GitHub\SuvesaPOSActualMejorado\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmMargenInventario.resources
 C:\Users\LENOVO\Documents\GitHub\SuvesaPOSActualMejorado\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmReporteQuimicos.resources
 C:\Users\LENOVO\Documents\GitHub\SuvesaPOSActualMejorado\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmCxCEntreFechas.resources
@@ -2870,5 +2875,3 @@ C:\Users\LENOVO\Documents\GitHub\SuvesaPOSActualMejorado\LcPymes 5.2\obj\Debug\e
 C:\Users\LENOVO\Documents\GitHub\SuvesaPOSActualMejorado\LcPymes 5.2\obj\Debug\Veterinaria.exe.manifest
 C:\Users\LENOVO\Documents\GitHub\SuvesaPOSActualMejorado\LcPymes 5.2\obj\Debug\Veterinaria.application
 C:\Users\LENOVO\Documents\GitHub\SuvesaPOSActualMejorado\LcPymes 5.2\obj\Debug\Veterinaria.xml
-C:\Users\LENOVO\Documents\GitHub\SuvesaPOSActualMejorado\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmEntradasAnticipos.resources
-C:\Users\LENOVO\Documents\GitHub\SuvesaPOSActualMejorado\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmMovimientosAnticipos.resources

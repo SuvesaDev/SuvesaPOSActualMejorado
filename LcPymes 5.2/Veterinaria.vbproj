@@ -1124,6 +1124,9 @@
     <EmbeddedResource Include="Reportes\Ventas\a Reportes de Ventas\frmReporteAbonoIncobrable.resx">
       <DependentUpon>frmReporteAbonoIncobrable.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\Ventas\a Reportes de Ventas\frmReporteArticulosComprados.resx">
+      <DependentUpon>frmReporteArticulosComprados.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reportes\Ventas\a Reportes de Ventas\frmReporteCompravsVentas.resx">
       <DependentUpon>frmReporteCompravsVentas.vb</DependentUpon>
     </EmbeddedResource>
@@ -1144,6 +1147,10 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Reportes\Ventas\a Reportes de Ventas\frmVentasxProveedor.resx">
       <DependentUpon>frmVentasxProveedor.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\Ventas\a Reportes de Ventas\rptArticulosComprados.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptArticulosComprados.vb</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Reportes\Ventas\a Reportes de Ventas\rptGraficoVetasMensual.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
@@ -1207,6 +1214,9 @@
     <EmbeddedResource Include="Reportes\Ventas\Anticipos\frmMovimientosAnticipos.resx">
       <DependentUpon>frmMovimientosAnticipos.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\Ventas\Anticipos\frmSaldosAnticiposActual.resx">
+      <DependentUpon>frmSaldosAnticiposActual.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reportes\Ventas\Anticipos\rptEntradaAnticipo.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>rptEntradaAnticipo.vb</LastGenOutput>
@@ -1214,6 +1224,10 @@
     <EmbeddedResource Include="Reportes\Ventas\Anticipos\rptMovimientoAnticipo.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>rptMovimientoAnticipo.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\Ventas\Anticipos\rptSaldosPrepago.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptSaldosPrepago.vb</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Reportes\Ventas\MargenInventario\frmMargenInventario.resx">
       <DependentUpon>frmMargenInventario.vb</DependentUpon>
@@ -5513,6 +5527,12 @@
     <Compile Include="Reportes\Ventas\a Reportes de Ventas\frmReporteAbonoIncobrable.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Reportes\Ventas\a Reportes de Ventas\frmReporteArticulosComprados.Designer.vb">
+      <DependentUpon>frmReporteArticulosComprados.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\Ventas\a Reportes de Ventas\frmReporteArticulosComprados.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Reportes\Ventas\a Reportes de Ventas\frmReporteCompravsVentas.Designer.vb">
       <DependentUpon>frmReporteCompravsVentas.vb</DependentUpon>
     </Compile>
@@ -5560,6 +5580,12 @@
     </Compile>
     <Compile Include="Reportes\Ventas\a Reportes de Ventas\frmVentasxProveedor.vb">
       <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\Ventas\a Reportes de Ventas\rptArticulosComprados.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptArticulosComprados.rpt</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Reportes\Ventas\a Reportes de Ventas\rptGraficoVetasMensual.vb">
       <AutoGen>True</AutoGen>
@@ -5663,6 +5689,12 @@
     <Compile Include="Reportes\Ventas\Anticipos\frmMovimientosAnticipos.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Reportes\Ventas\Anticipos\frmSaldosAnticiposActual.Designer.vb">
+      <DependentUpon>frmSaldosAnticiposActual.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\Ventas\Anticipos\frmSaldosAnticiposActual.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Reportes\Ventas\Anticipos\rptEntradaAnticipo.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -5673,6 +5705,12 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>rptMovimientoAnticipo.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reportes\Ventas\Anticipos\rptSaldosPrepago.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptSaldosPrepago.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Reportes\Ventas\Bitacora_reimpresiones.vb">

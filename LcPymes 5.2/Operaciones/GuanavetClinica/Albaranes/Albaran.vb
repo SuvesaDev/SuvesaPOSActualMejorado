@@ -26,7 +26,17 @@ Public Class Albaran
         Me.Correo = ""
         Me.AlbaranDetalle = New System.Collections.Generic.List(Of AlbaranDetalle)
     End Sub
-    Public Sub Agregar(_IdAlbaran As Long)
+
+    Private Function GetPorcentajeExtranjero() As Decimal
+        Dim dt As New DataTable
+        cFunciones.Llenar_Tabla_Generico("Select PorcentajeExtranjero from configuraciones", dt, CadenaConexionSeePOS)
+        If dt.Rows.Count > 0 Then
+            Return dt.Rows(0).Item("PorcentajeExtranjero")
+        End If
+        Return 0
+    End Function
+
+    Public Sub Agregar(_IdAlbaran As Long, Optional ByVal _Extranjero As Boolean = False)
         Dim dtEncabezado As New DataTable
         Dim dtDetalle As New DataTable
         'Obtener el encabezado del albaran
@@ -59,37 +69,67 @@ Public Class Albaran
 
             'Obtener los detalles del albaran
             cFunciones.Llenar_Tabla_Generico("Select * from viewAlbaranDetalle where Id_Albaran = " & _IdAlbaran, dtDetalle, CadenaConexionSeePOS)
-                Dim Detalle As AlbaranDetalle
-                For Each row As DataRow In dtDetalle.Rows
-                    Detalle = New AlbaranDetalle(row.Item("Id"),
-                                             row.Item("Id_Albaran"),
-                                             row.Item("Codigo"),
-                                             row.Item("CodArticulo"),
-                                             row.Item("Descripcion"),
-                                             row.Item("Cantidad"),
-                                             row.Item("Precio_Costo"),
-                                             row.Item("Precio_Base"),
-                                             row.Item("Precio_Fletes"),
-                                             row.Item("Precio_Otros"),
-                                             row.Item("Precio_Unit"),
-                                             row.Item("Descuento"),
-                                             row.Item("Monto_Descuento"),
-                                             row.Item("Impuestos"),
-                                             row.Item("Monto_Impuestos"),
-                                             row.Item("SubTotalGravado"),
-                                             row.Item("SubTotalExcento"),
-                                             row.Item("SubTotal"))
-                    Me.AlbaranDetalle.Add(Detalle)
-                Next
+            Dim Detalle As AlbaranDetalle
+            For Each row As DataRow In dtDetalle.Rows
+                Dim Descripcion As String = ""
+                Dim PrecioUnit As Decimal = CDec(row.Item("Precio_Unit"))
+                Dim MontoDescuento As Decimal = 0
+                Dim MontoImpuesto As Decimal = 0
+                Dim SubTotalGravado As Decimal = 0
+                Dim SubTotalExcento As Decimal = 0
+                Dim SubTotal As Decimal = 0
+                Dim porcentaje As Decimal = Me.GetPorcentajeExtranjero()
 
-                'Calcular los totales de la venta
-                Me.SubTotal = (From x As AlbaranDetalle In Me.AlbaranDetalle Select CDec(x.Subtotal)).Sum
-                Me.Descuento = (From x As AlbaranDetalle In Me.AlbaranDetalle Select CDec(x.Monto_Descuento)).Sum
-                Me.Imp_Venta = (From x As AlbaranDetalle In Me.AlbaranDetalle Select CDec(x.Monto_Impuestos)).Sum
-                Me.SubTotalExcento = (From x As AlbaranDetalle In Me.AlbaranDetalle Select CDec(x.SubTotalExcento)).Sum
-                Me.SubTotalGravado = (From x As AlbaranDetalle In Me.AlbaranDetalle Select CDec(x.SubTotalGravado)).Sum
-                Me.Total = SubTotal - Descuento + Imp_Venta
-            End If
+                Descripcion = row.Item("Descripcion")
+                If Descripcion.Length > 21 Then
+                    Descripcion = Descripcion.Substring(0, 20)
+                End If
+
+                If _Extranjero Then
+                    PrecioUnit = PrecioUnit * (1 + (porcentaje / 100))
+                End If
+
+                SubTotal = CDec(PrecioUnit * row.Item("Cantidad"))
+                MontoDescuento = SubTotal * (row.Item("Descuento") / 100)
+                If CDec(row.Item("Impuestos")) > 0 Then
+                    SubTotalGravado = SubTotal
+                    SubTotalExcento = 0
+                    MontoImpuesto = (SubTotal - MontoDescuento) * (row.Item("Impuestos") / 100)
+                Else
+                    SubTotalGravado = 0
+                    SubTotalExcento = SubTotal
+                    MontoImpuesto = 0
+                End If
+
+                Detalle = New AlbaranDetalle(row.Item("Id"),
+                                         row.Item("Id_Albaran"),
+                                         row.Item("Codigo"),
+                                         row.Item("CodArticulo"),
+                                         Descripcion,
+                                         row.Item("Cantidad"),
+                                         row.Item("Precio_Costo"),
+                                         row.Item("Precio_Base"),
+                                         row.Item("Precio_Fletes"),
+                                         row.Item("Precio_Otros"),
+                                         Math.Round(PrecioUnit, 4),
+                                         row.Item("Descuento"),
+                                         Math.Round(MontoDescuento, 4),
+                                         row.Item("Impuestos"),
+                                         Math.Round(MontoImpuesto, 4),
+                                         Math.Round(SubTotalGravado, 4),
+                                         Math.Round(SubTotalExcento, 4),
+                                         Math.Round(SubTotal, 4))
+                Me.AlbaranDetalle.Add(Detalle)
+            Next
+
+            'Calcular los totales de la venta
+            Me.SubTotal = (From x As AlbaranDetalle In Me.AlbaranDetalle Select CDec(x.Subtotal)).Sum
+            Me.Descuento = (From x As AlbaranDetalle In Me.AlbaranDetalle Select CDec(x.Monto_Descuento)).Sum
+            Me.Imp_Venta = (From x As AlbaranDetalle In Me.AlbaranDetalle Select CDec(x.Monto_Impuestos)).Sum
+            Me.SubTotalExcento = (From x As AlbaranDetalle In Me.AlbaranDetalle Select CDec(x.SubTotalExcento)).Sum
+            Me.SubTotalGravado = (From x As AlbaranDetalle In Me.AlbaranDetalle Select CDec(x.SubTotalGravado)).Sum
+            Me.Total = SubTotal - Descuento + Imp_Venta
+        End If
     End Sub
 
     Private Function ValidarCliente() As Boolean

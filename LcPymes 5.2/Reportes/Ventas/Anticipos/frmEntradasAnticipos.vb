@@ -3,6 +3,7 @@
     Private Sub ButtonMostrar_Click(sender As Object, e As EventArgs) Handles ButtonMostrar.Click
         Try
             Dim Reporte As New rptEntradaAnticipo
+            Reporte.Refresh()
             Reporte.SetParameterValue(0, Me.dtpDesde.Value)
             Reporte.SetParameterValue(1, Me.dtpHasta.Value)
             CrystalReportsConexion.LoadReportViewer(Me.VisorReporte, Reporte)

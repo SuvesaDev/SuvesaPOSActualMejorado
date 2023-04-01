@@ -906,30 +906,37 @@ Public Class MovimientoCaja
 #End Region
 
 #Region "Imprimir"
+
+    Public Function GetImpresora() As String
+        'deveria sacarlo de un configuracion.
+
+        Dim PrintDocument1 As New System.Drawing.Printing.PrintDocument
+        Dim PrinterDialog As New System.Windows.Forms.PrintDialog
+        Dim DocPrint As New System.Drawing.Printing.PrintDocument
+        PrinterDialog.Document = DocPrint
+        If PrinterDialog.ShowDialog() = DialogResult.OK Then
+            Return PrinterDialog.PrinterSettings.PrinterName 'DEVUELVE LA IMPRESORA  SELECCIONADA
+        Else
+            Return ""
+        End If
+        Return ""
+    End Function
+
     Function imprimir()
         Try
             Me.ToolBar1.Buttons(4).Enabled = False
 
             If CK_PVE.Checked Then
-                Dim Impresora As Integer = 3
-                Dim opcaja As New frmOpcionCaja
-                opcaja.Text = "Elija a la caja que desea mandar la impresión"
-                opcaja.ShowDialog()
-                If opcaja.Caja = 1 Then
-                    Impresora = 3
-                Else
-                    Impresora = 5
+                Dim Impresora As String = Me.GetImpresora
+
+                If Impresora <> "" Then
+                    Dim Reporte As New Reporte_Movimiento__Caja_PVE
+                    CrystalReportsConexion.LoadReportViewer(Nothing, Reporte, True)
+                    Reporte.PrintOptions.PrinterName = Impresora 'Automatic_Printer_Dialog(Impresora) 'PV
+                    Reporte.PrintOptions.PaperSize = CrystalDecisions.Shared.PaperSize.DefaultPaperSize
+                    Reporte.SetParameterValue(0, CInt(Me.LabelId.Text))
+                    Reporte.PrintToPrinter(1, True, 0, 0)
                 End If
-
-                'solo para guanavet
-                Impresora = 3
-
-                Dim Reporte As New Reporte_Movimiento__Caja_PVE
-                CrystalReportsConexion.LoadReportViewer(Nothing, Reporte, True)
-                Reporte.PrintOptions.PrinterName = Automatic_Printer_Dialog(Impresora) 'PV
-                Reporte.PrintOptions.PaperSize = CrystalDecisions.Shared.PaperSize.DefaultPaperSize
-                Reporte.SetParameterValue(0, CInt(Me.LabelId.Text))
-                Reporte.PrintToPrinter(1, True, 0, 0)
             Else
                 Dim Movimiento_Reporte As New Reporte_Movimiento__Caja
                 Movimiento_Reporte.SetParameterValue(0, CInt(Me.LabelId.Text))

@@ -133,9 +133,4 @@ Public Class frmConfirmarGenerarFacturas
         Me.CrearCliente()
     End Sub
 
-    Private Sub frmConfirmarGenerarFacturas_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
-    End Sub
-
-
 End Class

@@ -33,6 +33,7 @@ Partial Class frmConsultaAlbaran
         Me.Label3 = New System.Windows.Forms.Label()
         Me.dtpHasta = New System.Windows.Forms.DateTimePicker()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.ckExtranjero = New System.Windows.Forms.CheckBox()
         Me.btnArqueo = New System.Windows.Forms.Button()
         Me.btnApertura = New System.Windows.Forms.Button()
         Me.btnEstadoCuenta = New System.Windows.Forms.Button()
@@ -205,6 +206,7 @@ Partial Class frmConsultaAlbaran
         Me.Panel1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Panel1.Controls.Add(Me.ckExtranjero)
         Me.Panel1.Controls.Add(Me.btnArqueo)
         Me.Panel1.Controls.Add(Me.btnApertura)
         Me.Panel1.Controls.Add(Me.btnEstadoCuenta)
@@ -231,6 +233,17 @@ Partial Class frmConsultaAlbaran
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(1179, 607)
         Me.Panel1.TabIndex = 3
+        '
+        'ckExtranjero
+        '
+        Me.ckExtranjero.AutoSize = True
+        Me.ckExtranjero.Location = New System.Drawing.Point(1009, 142)
+        Me.ckExtranjero.Margin = New System.Windows.Forms.Padding(4)
+        Me.ckExtranjero.Name = "ckExtranjero"
+        Me.ckExtranjero.Size = New System.Drawing.Size(94, 21)
+        Me.ckExtranjero.TabIndex = 93
+        Me.ckExtranjero.Text = "Extranjero"
+        Me.ckExtranjero.UseVisualStyleBackColor = True
         '
         'btnArqueo
         '
@@ -490,4 +503,5 @@ Partial Class frmConsultaAlbaran
     Friend WithEvents btnArqueo As System.Windows.Forms.Button
     Friend WithEvents btnApertura As System.Windows.Forms.Button
     Friend WithEvents BackgroundWorker1 As System.ComponentModel.BackgroundWorker
+    Friend WithEvents ckExtranjero As System.Windows.Forms.CheckBox
 End Class

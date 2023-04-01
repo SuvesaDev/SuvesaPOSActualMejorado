@@ -2689,6 +2689,11 @@ Public Class frmAjustePagar
         txtAbono.SelectAll()
     End Sub
 
+    Private Sub GridControl2_Enter(sender As Object, e As EventArgs) Handles GridControl2.Enter
+        On Error Resume Next
+        Me.BindingContext(Me.DsAjustePagar, "Ajustescpagar.AjustescpagarDetalle_AjustescPagar").CancelCurrentEdit()
+    End Sub
+
     Private Sub GridControl2_KeyDown(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles GridControl2.KeyDown
         If e.KeyCode = Keys.Delete Then
             Eliminar_Factura_Detalle()

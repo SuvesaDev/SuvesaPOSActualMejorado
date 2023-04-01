@@ -112,23 +112,26 @@
     <value>2.0</value>
   </resheader>
   <resheader name="reader">
-    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <resheader name="writer">
-    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="DsConfiguracion.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  <metadata name="DsConfiguracion.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
-  <metadata name="ImageList1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  <metadata name="DsConfiguracion.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="ImageList1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>159, 17</value>
   </metadata>
   <data name="ImageList1.ImageStream" mimetype="application/x-microsoft.net.object.binary.base64">
     <value>
-        AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj0yLjAuMC4w
+        AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
         LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
         ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAAD+
-        bAAAAk1TRnQBSQFMAgEBCQEAARQBAAEUAQABIAEAASABAAT/ARkBAAj/AUIBTQE2BwABNgMAASgDAAGA
+        bAAAAk1TRnQBSQFMAgEBCQEAASQBAAEkAQABIAEAASABAAT/ARkBAAj/AUIBTQE2BwABNgMAASgDAAGA
         AwABYAMAAQEBAAEYBgABkP8AugAVZf8AaQABZAFpAYsBXAFlAaoBRgFSAbABOgFIAa8BOgFIAa8BOgFI
         Aa8BUQFbAagBWwFjAZ8BZQFoAYIDbf8AWgABXAFlAaoBXAFlAaoBFwEnAagBCgEeAbcBDAEhAcEBDgEk
         AcwBDgEkAcwBDgEkAcwBCwEgAbwBCQEdAbIBBwEZAaIBBwEZAaIBOQFHAa0BZQFoAYIDZf8AUQABXAFl
@@ -596,15 +599,15 @@
         Bf8BzwT/Cw==
 </value>
   </data>
-  <metadata name="ImageList2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  <metadata name="ImageList2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>269, 17</value>
   </metadata>
   <data name="ImageList2.ImageStream" mimetype="application/x-microsoft.net.object.binary.base64">
     <value>
-        AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj0yLjAuMC4w
+        AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
         LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
         ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAACc
-        TgAAAk1TRnQBSQFMAgEBHwEAATwBAAEUAQABEAEAARABAAT/ARkBAAj/AUIBTQE2BwABNgMAASgDAAFA
+        TgAAAk1TRnQBSQFMAgEBHwEAASQBAAEkAQABEAEAARABAAT/ARkBAAj/AUIBTQE2BwABNgMAASgDAAFA
         AwABgAMAAQEBAAEYBgABYP8A/wD/AP8A/wD/AB4AAZQBSgEhJwABuAGjAZQB1wHSAdAB1wHOAckBxgGk
         AYkBBgEpAf4BQQFQAdQB3AHJAbsBOQFKAdoYAAG4AaMBlAHXAdIB0AHWAc0ByAG/AZcBeQHUAcEBtQHS
         AbsBrAG/AZcBeQHQAbEBnUsAAecBjAFjAdYBewFSAcYBawFCAbUBYwFCAaUBUgExASEBhAG1ASEBcwGl
@@ -942,173 +945,173 @@
         Ac8B/wHfAv8BgAEfAf8B3wT/AcABPwb/AeAD/ws=
 </value>
   </data>
-  <metadata name="DaConfiguracion.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  <metadata name="DaConfiguracion.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>379, 17</value>
   </metadata>
-  <metadata name="SqlDeleteCommand1.DesignTimeVisible" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="SqlDeleteCommand1.DesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
   </metadata>
-  <metadata name="SqlDeleteCommand1.CommandDesignTimeVisible" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>False</value>
-  </metadata>
-  <metadata name="SqlDeleteCommand1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  <metadata name="SqlDeleteCommand1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>0, 0</value>
+  </metadata>
+  <metadata name="SqlDeleteCommand1.CommandDesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
   </metadata>
   <data name="SqlDeleteCommand1.CommandText" xml:space="preserve">
     <value>DELETE FROM [configuraciones] WHERE (([Cedula] = @Original_Cedula) AND ([Empresa] = @Original_Empresa) AND ([Tel_01] = @Original_Tel_01) AND ([Tel_02] = @Original_Tel_02) AND ([Fax_01] = @Original_Fax_01) AND ([Fax_02] = @Original_Fax_02) AND ([Direccion] = @Original_Direccion) AND ([Imp_Venta] = @Original_Imp_Venta) AND ([Frase] = @Original_Frase) AND ([Cajeros] = @Original_Cajeros) AND ([Intereses] = @Original_Intereses) AND ([UnicoConsecutivo] = @Original_UnicoConsecutivo) AND ([NumeroConsecutivo] = @Original_NumeroConsecutivo) AND ([ConsContado] = @Original_ConsContado) AND ([NumeroContado] = @Original_NumeroContado) AND ([ConsCredito] = @Original_ConsCredito) AND ([NumeroCredito] = @Original_NumeroCredito) AND ([ConsPuntoVenta] = @Original_ConsPuntoVenta) AND ([NumeroPuntoVenta] = @Original_NumeroPuntoVenta) AND ([Taller] = @Original_Taller) AND ([TallerContado] = @Original_TallerContado) AND ([TallerCredito] = @Original_TallerCredito) AND ([Imprimir_en_Factura_Personalizada] = @Original_Imprimir_en_Factura_Personalizada) AND ([FormatoCheck] = @Original_FormatoCheck) AND ([Contabilidad] = @Original_Contabilidad) AND ([CambiaPrecioCredito] = @Original_CambiaPrecioCredito) AND ([Mascotas] = @Original_Mascotas) AND ([MascotasContado] = @Original_MascotasContado) AND ([MascotasCredito] = @Original_MascotasCredito) AND ((@IsNull_regalias = 1 AND [regalias] IS NULL) OR ([regalias] = @Original_regalias)) AND ((@IsNull_editar_nombre = 1 AND [editar_nombre] IS NULL) OR ([editar_nombre] = @Original_editar_nombre)))</value>
   </data>
-  <metadata name="SqlConnection.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  <metadata name="SqlConnection.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>522, 17</value>
   </metadata>
-  <metadata name="SqlInsertCommand1.DesignTimeVisible" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="SqlInsertCommand1.DesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
   </metadata>
-  <metadata name="SqlInsertCommand1.CommandDesignTimeVisible" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>False</value>
-  </metadata>
-  <metadata name="SqlInsertCommand1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  <metadata name="SqlInsertCommand1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>0, 0</value>
+  </metadata>
+  <metadata name="SqlInsertCommand1.CommandDesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
   </metadata>
   <data name="SqlInsertCommand1.CommandText" xml:space="preserve">
     <value>INSERT INTO [configuraciones] ([Cedula], [Empresa], [Tel_01], [Tel_02], [Fax_01], [Fax_02], [Direccion], [Imp_Venta], [Frase], [Cajeros], [Logo], [Intereses], [UnicoConsecutivo], [NumeroConsecutivo], [ConsContado], [NumeroContado], [ConsCredito], [NumeroCredito], [ConsPuntoVenta], [NumeroPuntoVenta], [Taller], [TallerContado], [TallerCredito], [Imprimir_en_Factura_Personalizada], [FormatoCheck], [Contabilidad], [CambiaPrecioCredito], [Mascotas], [MascotasContado], [MascotasCredito], [regalias], [editar_nombre]) VALUES (@Cedula, @Empresa, @Tel_01, @Tel_02, @Fax_01, @Fax_02, @Direccion, @Imp_Venta, @Frase, @Cajeros, @Logo, @Intereses, @UnicoConsecutivo, @NumeroConsecutivo, @ConsContado, @NumeroContado, @ConsCredito, @NumeroCredito, @ConsPuntoVenta, @NumeroPuntoVenta, @Taller, @TallerContado, @TallerCredito, @Imprimir_en_Factura_Personalizada, @FormatoCheck, @Contabilidad, @CambiaPrecioCredito, @Mascotas, @MascotasContado, @MascotasCredito, @regalias, @editar_nombre);
 SELECT Cedula, Empresa, Tel_01, Tel_02, Fax_01, Fax_02, Direccion, Imp_Venta, Frase, Cajeros, Logo, Intereses, UnicoConsecutivo, NumeroConsecutivo, ConsContado, NumeroContado, ConsCredito, NumeroCredito, ConsPuntoVenta, NumeroPuntoVenta, Taller, TallerContado, TallerCredito, Imprimir_en_Factura_Personalizada, FormatoCheck, Contabilidad, CambiaPrecioCredito, Mascotas, MascotasContado, MascotasCredito, regalias, editar_nombre FROM configuraciones WHERE (Cedula = @Cedula)</value>
   </data>
-  <metadata name="SqlSelectCommand1.DesignTimeVisible" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="SqlSelectCommand1.DesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
   </metadata>
-  <metadata name="SqlSelectCommand1.CommandDesignTimeVisible" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>False</value>
-  </metadata>
-  <metadata name="SqlSelectCommand1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  <metadata name="SqlSelectCommand1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>0, 0</value>
+  </metadata>
+  <metadata name="SqlSelectCommand1.CommandDesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
   </metadata>
   <data name="SqlSelectCommand1.CommandText" xml:space="preserve">
     <value>SELECT        Cedula, Empresa, Tel_01, Tel_02, Fax_01, Fax_02, Direccion, Imp_Venta, Frase, Cajeros, Logo, Intereses, UnicoConsecutivo, NumeroConsecutivo, ConsContado, NumeroContado, ConsCredito, NumeroCredito, ConsPuntoVenta, 
                          NumeroPuntoVenta, Taller, TallerContado, TallerCredito, Imprimir_en_Factura_Personalizada, FormatoCheck, Contabilidad, CambiaPrecioCredito, Mascotas, MascotasContado, MascotasCredito, regalias, editar_nombre
 FROM            configuraciones</value>
   </data>
-  <metadata name="SqlUpdateCommand1.DesignTimeVisible" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="SqlUpdateCommand1.DesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
   </metadata>
-  <metadata name="SqlUpdateCommand1.CommandDesignTimeVisible" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>False</value>
-  </metadata>
-  <metadata name="SqlUpdateCommand1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  <metadata name="SqlUpdateCommand1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>0, 0</value>
+  </metadata>
+  <metadata name="SqlUpdateCommand1.CommandDesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
   </metadata>
   <data name="SqlUpdateCommand1.CommandText" xml:space="preserve">
     <value>UPDATE [configuraciones] SET [Cedula] = @Cedula, [Empresa] = @Empresa, [Tel_01] = @Tel_01, [Tel_02] = @Tel_02, [Fax_01] = @Fax_01, [Fax_02] = @Fax_02, [Direccion] = @Direccion, [Imp_Venta] = @Imp_Venta, [Frase] = @Frase, [Cajeros] = @Cajeros, [Logo] = @Logo, [Intereses] = @Intereses, [UnicoConsecutivo] = @UnicoConsecutivo, [NumeroConsecutivo] = @NumeroConsecutivo, [ConsContado] = @ConsContado, [NumeroContado] = @NumeroContado, [ConsCredito] = @ConsCredito, [NumeroCredito] = @NumeroCredito, [ConsPuntoVenta] = @ConsPuntoVenta, [NumeroPuntoVenta] = @NumeroPuntoVenta, [Taller] = @Taller, [TallerContado] = @TallerContado, [TallerCredito] = @TallerCredito, [Imprimir_en_Factura_Personalizada] = @Imprimir_en_Factura_Personalizada, [FormatoCheck] = @FormatoCheck, [Contabilidad] = @Contabilidad, [CambiaPrecioCredito] = @CambiaPrecioCredito, [Mascotas] = @Mascotas, [MascotasContado] = @MascotasContado, [MascotasCredito] = @MascotasCredito, [regalias] = @regalias, [editar_nombre] = @editar_nombre WHERE (([Cedula] = @Original_Cedula) AND ([Empresa] = @Original_Empresa) AND ([Tel_01] = @Original_Tel_01) AND ([Tel_02] = @Original_Tel_02) AND ([Fax_01] = @Original_Fax_01) AND ([Fax_02] = @Original_Fax_02) AND ([Direccion] = @Original_Direccion) AND ([Imp_Venta] = @Original_Imp_Venta) AND ([Frase] = @Original_Frase) AND ([Cajeros] = @Original_Cajeros) AND ([Intereses] = @Original_Intereses) AND ([UnicoConsecutivo] = @Original_UnicoConsecutivo) AND ([NumeroConsecutivo] = @Original_NumeroConsecutivo) AND ([ConsContado] = @Original_ConsContado) AND ([NumeroContado] = @Original_NumeroContado) AND ([ConsCredito] = @Original_ConsCredito) AND ([NumeroCredito] = @Original_NumeroCredito) AND ([ConsPuntoVenta] = @Original_ConsPuntoVenta) AND ([NumeroPuntoVenta] = @Original_NumeroPuntoVenta) AND ([Taller] = @Original_Taller) AND ([TallerContado] = @Original_TallerContado) AND ([TallerCredito] = @Original_TallerCredito) AND ([Imprimir_en_Factura_Personalizada] = @Original_Imprimir_en_Factura_Personalizada) AND ([FormatoCheck] = @Original_FormatoCheck) AND ([Contabilidad] = @Original_Contabilidad) AND ([CambiaPrecioCredito] = @Original_CambiaPrecioCredito) AND ([Mascotas] = @Original_Mascotas) AND ([MascotasContado] = @Original_MascotasContado) AND ([MascotasCredito] = @Original_MascotasCredito) AND ((@IsNull_regalias = 1 AND [regalias] IS NULL) OR ([regalias] = @Original_regalias)) AND ((@IsNull_editar_nombre = 1 AND [editar_nombre] IS NULL) OR ([editar_nombre] = @Original_editar_nombre)));
 SELECT Cedula, Empresa, Tel_01, Tel_02, Fax_01, Fax_02, Direccion, Imp_Venta, Frase, Cajeros, Logo, Intereses, UnicoConsecutivo, NumeroConsecutivo, ConsContado, NumeroContado, ConsCredito, NumeroCredito, ConsPuntoVenta, NumeroPuntoVenta, Taller, TallerContado, TallerCredito, Imprimir_en_Factura_Personalizada, FormatoCheck, Contabilidad, CambiaPrecioCredito, Mascotas, MascotasContado, MascotasCredito, regalias, editar_nombre FROM configuraciones WHERE (Cedula = @Cedula)</value>
   </data>
-  <metadata name="dacorreo.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  <metadata name="dacorreo.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>653, 17</value>
   </metadata>
-  <metadata name="SqlDeleteCommand2.DesignTimeVisible" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="SqlDeleteCommand2.DesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
   </metadata>
-  <metadata name="SqlDeleteCommand2.CommandDesignTimeVisible" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>False</value>
-  </metadata>
-  <metadata name="SqlDeleteCommand2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  <metadata name="SqlDeleteCommand2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>0, 0</value>
   </metadata>
-  <metadata name="SqlInsertCommand2.DesignTimeVisible" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="SqlDeleteCommand2.CommandDesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
   </metadata>
-  <metadata name="SqlInsertCommand2.CommandDesignTimeVisible" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="SqlInsertCommand2.DesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
   </metadata>
-  <metadata name="SqlInsertCommand2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  <metadata name="SqlInsertCommand2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>0, 0</value>
+  </metadata>
+  <metadata name="SqlInsertCommand2.CommandDesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
   </metadata>
   <data name="SqlInsertCommand2.CommandText" xml:space="preserve">
     <value>INSERT INTO correo(clave, asunto, mensaje, direccion_correo) VALUES (@clave, @asunto, @mensaje, @direccion_correo); SELECT clave, asunto, mensaje, direccion_correo FROM correo WHERE (direccion_correo = @direccion_correo)</value>
   </data>
-  <metadata name="SqlSelectCommand2.DesignTimeVisible" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="SqlSelectCommand2.DesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
   </metadata>
-  <metadata name="SqlSelectCommand2.CommandDesignTimeVisible" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>False</value>
-  </metadata>
-  <metadata name="SqlSelectCommand2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  <metadata name="SqlSelectCommand2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>0, 0</value>
   </metadata>
-  <metadata name="SqlUpdateCommand2.DesignTimeVisible" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="SqlSelectCommand2.CommandDesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
   </metadata>
-  <metadata name="SqlUpdateCommand2.CommandDesignTimeVisible" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="SqlUpdateCommand2.DesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
   </metadata>
-  <metadata name="SqlUpdateCommand2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  <metadata name="SqlUpdateCommand2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>0, 0</value>
+  </metadata>
+  <metadata name="SqlUpdateCommand2.CommandDesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
   </metadata>
   <data name="SqlUpdateCommand2.CommandText" xml:space="preserve">
     <value>UPDATE correo SET clave = @clave, asunto = @asunto, mensaje = @mensaje, direccion_correo = @direccion_correo WHERE (direccion_correo = @Original_direccion_correo); SELECT clave, asunto, mensaje, direccion_correo FROM correo WHERE (direccion_correo = @direccion_correo)</value>
   </data>
-  <metadata name="adpermiso.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  <metadata name="adpermiso.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>753, 17</value>
   </metadata>
-  <metadata name="SqlDeleteCommand3.DesignTimeVisible" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="SqlDeleteCommand3.DesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
   </metadata>
-  <metadata name="SqlDeleteCommand3.CommandDesignTimeVisible" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>False</value>
-  </metadata>
-  <metadata name="SqlDeleteCommand3.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  <metadata name="SqlDeleteCommand3.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>0, 0</value>
   </metadata>
-  <metadata name="SqlInsertCommand3.DesignTimeVisible" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="SqlDeleteCommand3.CommandDesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
   </metadata>
-  <metadata name="SqlInsertCommand3.CommandDesignTimeVisible" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="SqlInsertCommand3.DesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
   </metadata>
-  <metadata name="SqlInsertCommand3.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  <metadata name="SqlInsertCommand3.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>0, 0</value>
   </metadata>
-  <metadata name="SqlSelectCommand3.DesignTimeVisible" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="SqlInsertCommand3.CommandDesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
   </metadata>
-  <metadata name="SqlSelectCommand3.CommandDesignTimeVisible" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="SqlSelectCommand3.DesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
   </metadata>
-  <metadata name="SqlSelectCommand3.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  <metadata name="SqlSelectCommand3.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>0, 0</value>
   </metadata>
-  <metadata name="SqlUpdateCommand3.DesignTimeVisible" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="SqlSelectCommand3.CommandDesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
   </metadata>
-  <metadata name="SqlUpdateCommand3.CommandDesignTimeVisible" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="SqlUpdateCommand3.DesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
   </metadata>
-  <metadata name="SqlUpdateCommand3.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  <metadata name="SqlUpdateCommand3.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>0, 0</value>
+  </metadata>
+  <metadata name="SqlUpdateCommand3.CommandDesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
   </metadata>
   <data name="SqlUpdateCommand3.CommandText" xml:space="preserve">
     <value>UPDATE permisos SET usuario = @usuario, clave = @clave WHERE (id = @Original_id) AND (clave = @Original_clave) AND (usuario = @Original_usuario); SELECT usuario, clave, id FROM permisos WHERE (id = @id)</value>
   </data>
-  <metadata name="adusuarios.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  <metadata name="adusuarios.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>154, 56</value>
   </metadata>
-  <metadata name="SqlInsertCommand4.DesignTimeVisible" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="SqlInsertCommand4.DesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
   </metadata>
-  <metadata name="SqlInsertCommand4.CommandDesignTimeVisible" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>False</value>
-  </metadata>
-  <metadata name="SqlInsertCommand4.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  <metadata name="SqlInsertCommand4.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>0, 0</value>
+  </metadata>
+  <metadata name="SqlInsertCommand4.CommandDesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
   </metadata>
   <data name="SqlInsertCommand4.CommandText" xml:space="preserve">
     <value>INSERT INTO Usuarios(Cedula, Id_Usuario, Nombre, Clave_Entrada, Clave_Interna, Perfil, Foto, Iniciales, CambiarPrecio, Porc_Precio, Aplicar_Desc, Porc_Desc, Exist_Negativa) VALUES (@Cedula, @Id_Usuario, @Nombre, @Clave_Entrada, @Clave_Interna, @Perfil, @Foto, @Iniciales, @CambiarPrecio, @Porc_Precio, @Aplicar_Desc, @Porc_Desc, @Exist_Negativa); SELECT Cedula, Id_Usuario, Nombre, Clave_Entrada, Clave_Interna, Perfil, Foto, Iniciales, CambiarPrecio, Porc_Precio, Aplicar_Desc, Porc_Desc, Exist_Negativa FROM Usuarios</value>
   </data>
-  <metadata name="SqlSelectCommand4.DesignTimeVisible" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="SqlSelectCommand4.DesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
   </metadata>
-  <metadata name="SqlSelectCommand4.CommandDesignTimeVisible" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>False</value>
-  </metadata>
-  <metadata name="SqlSelectCommand4.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  <metadata name="SqlSelectCommand4.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>0, 0</value>
+  </metadata>
+  <metadata name="SqlSelectCommand4.CommandDesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
   </metadata>
 </root>

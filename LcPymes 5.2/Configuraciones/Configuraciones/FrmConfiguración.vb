@@ -7,6 +7,8 @@ Public Class FrmConfiguracion
     Dim existe As Boolean = False
     Private cConexion As Conexion
     Friend WithEvents CheckBox2 As System.Windows.Forms.CheckBox
+    Friend WithEvents Label22 As System.Windows.Forms.Label
+    Friend WithEvents txtExtranjero As System.Windows.Forms.TextBox
     Private sqlConexion As SqlConnection
 
 #Region " Windows Form Designer generated code "
@@ -135,103 +137,105 @@ Public Class FrmConfiguracion
     Friend WithEvents SqlDeleteCommand1 As System.Data.SqlClient.SqlCommand
 
     <System.Diagnostics.DebuggerStepThrough()> Private Sub InitializeComponent()
-        Me.components = New System.ComponentModel.Container
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmConfiguracion))
-        Me.TabControl1 = New System.Windows.Forms.TabControl
-        Me.TabPage1 = New System.Windows.Forms.TabPage
-        Me.GroupBox2 = New System.Windows.Forms.GroupBox
-        Me.TxtDireccion = New System.Windows.Forms.TextBox
-        Me.DsConfiguracion = New LcPymes_5._2.DsConfiguracion
-        Me.VTTel2 = New System.Windows.Forms.TextBox
-        Me.VTFax2 = New System.Windows.Forms.TextBox
-        Me.VTFax1 = New System.Windows.Forms.TextBox
-        Me.VTTel1 = New System.Windows.Forms.TextBox
-        Me.TxtFrase = New System.Windows.Forms.TextBox
-        Me.Label6 = New System.Windows.Forms.Label
-        Me.Label5 = New System.Windows.Forms.Label
-        Me.Label4 = New System.Windows.Forms.Label
-        Me.TxtCedula = New System.Windows.Forms.TextBox
-        Me.Label3 = New System.Windows.Forms.Label
-        Me.Label2 = New System.Windows.Forms.Label
-        Me.TxtEmpresa = New System.Windows.Forms.TextBox
-        Me.Label1 = New System.Windows.Forms.Label
-        Me.TabPage2 = New System.Windows.Forms.TabPage
-        Me.GroupBox1 = New System.Windows.Forms.GroupBox
-        Me.CheckBox2 = New System.Windows.Forms.CheckBox
-        Me.ck_regalias = New System.Windows.Forms.CheckBox
-        Me.txtMascotasCredito = New System.Windows.Forms.TextBox
-        Me.Label12 = New System.Windows.Forms.Label
-        Me.Label13 = New System.Windows.Forms.Label
-        Me.txtMascotasContado = New System.Windows.Forms.TextBox
-        Me.ck_Mascotas = New System.Windows.Forms.CheckBox
-        Me.txtTallerCredito = New System.Windows.Forms.TextBox
-        Me.Label11 = New System.Windows.Forms.Label
-        Me.Label10 = New System.Windows.Forms.Label
-        Me.txtTallerContado = New System.Windows.Forms.TextBox
-        Me.ck_Taller = New System.Windows.Forms.CheckBox
-        Me.CheckBoxCambiaPrecio = New System.Windows.Forms.CheckBox
-        Me.TextBoxNumUnico = New System.Windows.Forms.TextBox
-        Me.CheckBoxFacturaPersonalizada = New System.Windows.Forms.CheckBox
-        Me.CheckBoxUnico = New System.Windows.Forms.CheckBox
-        Me.TextBoxNumCRE = New System.Windows.Forms.TextBox
-        Me.TextBoxNumPVE = New System.Windows.Forms.TextBox
-        Me.CheckBoxCredito = New System.Windows.Forms.CheckBox
-        Me.CheckBoxContadoPVE = New System.Windows.Forms.CheckBox
-        Me.CheckBoxContado = New System.Windows.Forms.CheckBox
-        Me.TextBoxNumCON = New System.Windows.Forms.TextBox
-        Me.TxtCajeros = New System.Windows.Forms.TextBox
-        Me.TxtInteres = New System.Windows.Forms.TextBox
-        Me.TxtImpuesto = New System.Windows.Forms.TextBox
-        Me.Label9 = New System.Windows.Forms.Label
-        Me.Label8 = New System.Windows.Forms.Label
-        Me.Label7 = New System.Windows.Forms.Label
-        Me.TabPage3 = New System.Windows.Forms.TabPage
-        Me.PictureEdit1 = New DevExpress.XtraEditors.PictureEdit
-        Me.TabPage4 = New System.Windows.Forms.TabPage
-        Me.txt_dir_correo = New System.Windows.Forms.TextBox
-        Me.txt_asunto = New System.Windows.Forms.TextBox
-        Me.Label14 = New System.Windows.Forms.Label
-        Me.Label18 = New System.Windows.Forms.Label
-        Me.txt_clave = New System.Windows.Forms.TextBox
-        Me.Label16 = New System.Windows.Forms.Label
-        Me.Label17 = New System.Windows.Forms.Label
-        Me.CheckBox1 = New System.Windows.Forms.CheckBox
-        Me.txt_mensaje = New System.Windows.Forms.RichTextBox
-        Me.TabPage5 = New System.Windows.Forms.TabPage
-        Me.btneliminar = New System.Windows.Forms.Button
-        Me.cbousuarios = New System.Windows.Forms.ComboBox
-        Me.Label21 = New System.Windows.Forms.Label
-        Me.Button1 = New System.Windows.Forms.Button
-        Me.Label20 = New System.Windows.Forms.Label
-        Me.txtclave1 = New System.Windows.Forms.TextBox
-        Me.Label19 = New System.Windows.Forms.Label
-        Me.Label15 = New System.Windows.Forms.Label
-        Me.txtclave = New System.Windows.Forms.TextBox
+        Me.TabControl1 = New System.Windows.Forms.TabControl()
+        Me.TabPage1 = New System.Windows.Forms.TabPage()
+        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.TxtDireccion = New System.Windows.Forms.TextBox()
+        Me.DsConfiguracion = New LcPymes_5._2.DsConfiguracion()
+        Me.VTTel2 = New System.Windows.Forms.TextBox()
+        Me.VTFax2 = New System.Windows.Forms.TextBox()
+        Me.VTFax1 = New System.Windows.Forms.TextBox()
+        Me.VTTel1 = New System.Windows.Forms.TextBox()
+        Me.TxtFrase = New System.Windows.Forms.TextBox()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.TxtCedula = New System.Windows.Forms.TextBox()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.TxtEmpresa = New System.Windows.Forms.TextBox()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.TabPage2 = New System.Windows.Forms.TabPage()
+        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.Label22 = New System.Windows.Forms.Label()
+        Me.txtExtranjero = New System.Windows.Forms.TextBox()
+        Me.CheckBox2 = New System.Windows.Forms.CheckBox()
+        Me.ck_regalias = New System.Windows.Forms.CheckBox()
+        Me.txtMascotasCredito = New System.Windows.Forms.TextBox()
+        Me.Label12 = New System.Windows.Forms.Label()
+        Me.Label13 = New System.Windows.Forms.Label()
+        Me.txtMascotasContado = New System.Windows.Forms.TextBox()
+        Me.ck_Mascotas = New System.Windows.Forms.CheckBox()
+        Me.txtTallerCredito = New System.Windows.Forms.TextBox()
+        Me.Label11 = New System.Windows.Forms.Label()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.txtTallerContado = New System.Windows.Forms.TextBox()
+        Me.ck_Taller = New System.Windows.Forms.CheckBox()
+        Me.CheckBoxCambiaPrecio = New System.Windows.Forms.CheckBox()
+        Me.TextBoxNumUnico = New System.Windows.Forms.TextBox()
+        Me.CheckBoxFacturaPersonalizada = New System.Windows.Forms.CheckBox()
+        Me.CheckBoxUnico = New System.Windows.Forms.CheckBox()
+        Me.TextBoxNumCRE = New System.Windows.Forms.TextBox()
+        Me.TextBoxNumPVE = New System.Windows.Forms.TextBox()
+        Me.CheckBoxCredito = New System.Windows.Forms.CheckBox()
+        Me.CheckBoxContadoPVE = New System.Windows.Forms.CheckBox()
+        Me.CheckBoxContado = New System.Windows.Forms.CheckBox()
+        Me.TextBoxNumCON = New System.Windows.Forms.TextBox()
+        Me.TxtCajeros = New System.Windows.Forms.TextBox()
+        Me.TxtInteres = New System.Windows.Forms.TextBox()
+        Me.TxtImpuesto = New System.Windows.Forms.TextBox()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.TabPage3 = New System.Windows.Forms.TabPage()
+        Me.PictureEdit1 = New DevExpress.XtraEditors.PictureEdit()
+        Me.TabPage4 = New System.Windows.Forms.TabPage()
+        Me.txt_dir_correo = New System.Windows.Forms.TextBox()
+        Me.txt_asunto = New System.Windows.Forms.TextBox()
+        Me.Label14 = New System.Windows.Forms.Label()
+        Me.Label18 = New System.Windows.Forms.Label()
+        Me.txt_clave = New System.Windows.Forms.TextBox()
+        Me.Label16 = New System.Windows.Forms.Label()
+        Me.Label17 = New System.Windows.Forms.Label()
+        Me.CheckBox1 = New System.Windows.Forms.CheckBox()
+        Me.txt_mensaje = New System.Windows.Forms.RichTextBox()
+        Me.TabPage5 = New System.Windows.Forms.TabPage()
+        Me.btneliminar = New System.Windows.Forms.Button()
+        Me.cbousuarios = New System.Windows.Forms.ComboBox()
+        Me.Label21 = New System.Windows.Forms.Label()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.Label20 = New System.Windows.Forms.Label()
+        Me.txtclave1 = New System.Windows.Forms.TextBox()
+        Me.Label19 = New System.Windows.Forms.Label()
+        Me.Label15 = New System.Windows.Forms.Label()
+        Me.txtclave = New System.Windows.Forms.TextBox()
         Me.ImageList1 = New System.Windows.Forms.ImageList(Me.components)
         Me.ImageList2 = New System.Windows.Forms.ImageList(Me.components)
-        Me.ToolBar1 = New System.Windows.Forms.ToolBar
-        Me.ToolBarNuevo = New System.Windows.Forms.ToolBarButton
-        Me.ToolBarRegistrar = New System.Windows.Forms.ToolBarButton
-        Me.ToolBarCerrar = New System.Windows.Forms.ToolBarButton
-        Me.DaConfiguracion = New System.Data.SqlClient.SqlDataAdapter
-        Me.SqlDeleteCommand1 = New System.Data.SqlClient.SqlCommand
-        Me.SqlConnection = New System.Data.SqlClient.SqlConnection
-        Me.SqlInsertCommand1 = New System.Data.SqlClient.SqlCommand
-        Me.SqlSelectCommand1 = New System.Data.SqlClient.SqlCommand
-        Me.SqlUpdateCommand1 = New System.Data.SqlClient.SqlCommand
-        Me.dacorreo = New System.Data.SqlClient.SqlDataAdapter
-        Me.SqlDeleteCommand2 = New System.Data.SqlClient.SqlCommand
-        Me.SqlInsertCommand2 = New System.Data.SqlClient.SqlCommand
-        Me.SqlSelectCommand2 = New System.Data.SqlClient.SqlCommand
-        Me.SqlUpdateCommand2 = New System.Data.SqlClient.SqlCommand
-        Me.adpermiso = New System.Data.SqlClient.SqlDataAdapter
-        Me.SqlDeleteCommand3 = New System.Data.SqlClient.SqlCommand
-        Me.SqlInsertCommand3 = New System.Data.SqlClient.SqlCommand
-        Me.SqlSelectCommand3 = New System.Data.SqlClient.SqlCommand
-        Me.SqlUpdateCommand3 = New System.Data.SqlClient.SqlCommand
-        Me.adusuarios = New System.Data.SqlClient.SqlDataAdapter
-        Me.SqlInsertCommand4 = New System.Data.SqlClient.SqlCommand
-        Me.SqlSelectCommand4 = New System.Data.SqlClient.SqlCommand
+        Me.ToolBar1 = New System.Windows.Forms.ToolBar()
+        Me.ToolBarNuevo = New System.Windows.Forms.ToolBarButton()
+        Me.ToolBarRegistrar = New System.Windows.Forms.ToolBarButton()
+        Me.ToolBarCerrar = New System.Windows.Forms.ToolBarButton()
+        Me.DaConfiguracion = New System.Data.SqlClient.SqlDataAdapter()
+        Me.SqlDeleteCommand1 = New System.Data.SqlClient.SqlCommand()
+        Me.SqlConnection = New System.Data.SqlClient.SqlConnection()
+        Me.SqlInsertCommand1 = New System.Data.SqlClient.SqlCommand()
+        Me.SqlSelectCommand1 = New System.Data.SqlClient.SqlCommand()
+        Me.SqlUpdateCommand1 = New System.Data.SqlClient.SqlCommand()
+        Me.dacorreo = New System.Data.SqlClient.SqlDataAdapter()
+        Me.SqlDeleteCommand2 = New System.Data.SqlClient.SqlCommand()
+        Me.SqlInsertCommand2 = New System.Data.SqlClient.SqlCommand()
+        Me.SqlSelectCommand2 = New System.Data.SqlClient.SqlCommand()
+        Me.SqlUpdateCommand2 = New System.Data.SqlClient.SqlCommand()
+        Me.adpermiso = New System.Data.SqlClient.SqlDataAdapter()
+        Me.SqlDeleteCommand3 = New System.Data.SqlClient.SqlCommand()
+        Me.SqlInsertCommand3 = New System.Data.SqlClient.SqlCommand()
+        Me.SqlSelectCommand3 = New System.Data.SqlClient.SqlCommand()
+        Me.SqlUpdateCommand3 = New System.Data.SqlClient.SqlCommand()
+        Me.adusuarios = New System.Data.SqlClient.SqlDataAdapter()
+        Me.SqlInsertCommand4 = New System.Data.SqlClient.SqlCommand()
+        Me.SqlSelectCommand4 = New System.Data.SqlClient.SqlCommand()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
@@ -256,7 +260,7 @@ Public Class FrmConfiguracion
         Me.TabControl1.Multiline = True
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
-        Me.TabControl1.Size = New System.Drawing.Size(408, 256)
+        Me.TabControl1.Size = New System.Drawing.Size(490, 295)
         Me.TabControl1.TabIndex = 0
         '
         'TabPage1
@@ -264,7 +268,7 @@ Public Class FrmConfiguracion
         Me.TabPage1.Controls.Add(Me.GroupBox2)
         Me.TabPage1.Location = New System.Drawing.Point(4, 4)
         Me.TabPage1.Name = "TabPage1"
-        Me.TabPage1.Size = New System.Drawing.Size(400, 230)
+        Me.TabPage1.Size = New System.Drawing.Size(482, 266)
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "Empresas"
         '
@@ -286,7 +290,7 @@ Public Class FrmConfiguracion
         Me.GroupBox2.Controls.Add(Me.Label1)
         Me.GroupBox2.Location = New System.Drawing.Point(0, 0)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(400, 176)
+        Me.GroupBox2.Size = New System.Drawing.Size(480, 203)
         Me.GroupBox2.TabIndex = 0
         Me.GroupBox2.TabStop = False
         '
@@ -296,9 +300,9 @@ Public Class FrmConfiguracion
         Me.TxtDireccion.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.DsConfiguracion, "configuraciones.Direccion", True))
         Me.TxtDireccion.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TxtDireccion.ForeColor = System.Drawing.Color.Blue
-        Me.TxtDireccion.Location = New System.Drawing.Point(12, 150)
+        Me.TxtDireccion.Location = New System.Drawing.Point(14, 173)
         Me.TxtDireccion.Name = "TxtDireccion"
-        Me.TxtDireccion.Size = New System.Drawing.Size(376, 13)
+        Me.TxtDireccion.Size = New System.Drawing.Size(452, 16)
         Me.TxtDireccion.TabIndex = 7
         '
         'DsConfiguracion
@@ -313,9 +317,9 @@ Public Class FrmConfiguracion
         Me.VTTel2.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.DsConfiguracion, "configuraciones.Tel_02", True))
         Me.VTTel2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.VTTel2.ForeColor = System.Drawing.Color.Blue
-        Me.VTTel2.Location = New System.Drawing.Point(316, 70)
+        Me.VTTel2.Location = New System.Drawing.Point(379, 81)
         Me.VTTel2.Name = "VTTel2"
-        Me.VTTel2.Size = New System.Drawing.Size(72, 13)
+        Me.VTTel2.Size = New System.Drawing.Size(87, 16)
         Me.VTTel2.TabIndex = 3
         '
         'VTFax2
@@ -324,9 +328,9 @@ Public Class FrmConfiguracion
         Me.VTFax2.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.DsConfiguracion, "configuraciones.Fax_02", True))
         Me.VTFax2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.VTFax2.ForeColor = System.Drawing.Color.Blue
-        Me.VTFax2.Location = New System.Drawing.Point(316, 110)
+        Me.VTFax2.Location = New System.Drawing.Point(379, 127)
         Me.VTFax2.Name = "VTFax2"
-        Me.VTFax2.Size = New System.Drawing.Size(72, 13)
+        Me.VTFax2.Size = New System.Drawing.Size(87, 16)
         Me.VTFax2.TabIndex = 5
         '
         'VTFax1
@@ -335,9 +339,9 @@ Public Class FrmConfiguracion
         Me.VTFax1.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.DsConfiguracion, "configuraciones.Fax_01", True))
         Me.VTFax1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.VTFax1.ForeColor = System.Drawing.Color.Blue
-        Me.VTFax1.Location = New System.Drawing.Point(228, 110)
+        Me.VTFax1.Location = New System.Drawing.Point(274, 127)
         Me.VTFax1.Name = "VTFax1"
-        Me.VTFax1.Size = New System.Drawing.Size(76, 13)
+        Me.VTFax1.Size = New System.Drawing.Size(91, 16)
         Me.VTFax1.TabIndex = 4
         '
         'VTTel1
@@ -346,9 +350,9 @@ Public Class FrmConfiguracion
         Me.VTTel1.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.DsConfiguracion, "configuraciones.Tel_01", True))
         Me.VTTel1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.VTTel1.ForeColor = System.Drawing.Color.Blue
-        Me.VTTel1.Location = New System.Drawing.Point(228, 70)
+        Me.VTTel1.Location = New System.Drawing.Point(274, 81)
         Me.VTTel1.Name = "VTTel1"
-        Me.VTTel1.Size = New System.Drawing.Size(72, 13)
+        Me.VTTel1.Size = New System.Drawing.Size(86, 16)
         Me.VTTel1.TabIndex = 2
         '
         'TxtFrase
@@ -357,9 +361,9 @@ Public Class FrmConfiguracion
         Me.TxtFrase.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.DsConfiguracion, "configuraciones.Frase", True))
         Me.TxtFrase.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TxtFrase.ForeColor = System.Drawing.Color.Blue
-        Me.TxtFrase.Location = New System.Drawing.Point(12, 110)
+        Me.TxtFrase.Location = New System.Drawing.Point(14, 127)
         Me.TxtFrase.Name = "TxtFrase"
-        Me.TxtFrase.Size = New System.Drawing.Size(176, 13)
+        Me.TxtFrase.Size = New System.Drawing.Size(212, 16)
         Me.TxtFrase.TabIndex = 6
         '
         'Label6
@@ -367,9 +371,9 @@ Public Class FrmConfiguracion
         Me.Label6.BackColor = System.Drawing.SystemColors.ControlLight
         Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.ForeColor = System.Drawing.Color.Blue
-        Me.Label6.Location = New System.Drawing.Point(12, 134)
+        Me.Label6.Location = New System.Drawing.Point(14, 155)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(376, 16)
+        Me.Label6.Size = New System.Drawing.Size(452, 18)
         Me.Label6.TabIndex = 25
         Me.Label6.Text = "Dirección"
         Me.Label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -379,9 +383,9 @@ Public Class FrmConfiguracion
         Me.Label5.BackColor = System.Drawing.SystemColors.ControlLight
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.ForeColor = System.Drawing.Color.Blue
-        Me.Label5.Location = New System.Drawing.Point(228, 94)
+        Me.Label5.Location = New System.Drawing.Point(274, 108)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(160, 16)
+        Me.Label5.Size = New System.Drawing.Size(192, 19)
         Me.Label5.TabIndex = 24
         Me.Label5.Text = "Fax (es)"
         Me.Label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -391,9 +395,9 @@ Public Class FrmConfiguracion
         Me.Label4.BackColor = System.Drawing.SystemColors.ControlLight
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.ForeColor = System.Drawing.Color.Blue
-        Me.Label4.Location = New System.Drawing.Point(12, 94)
+        Me.Label4.Location = New System.Drawing.Point(14, 108)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(176, 16)
+        Me.Label4.Size = New System.Drawing.Size(212, 19)
         Me.Label4.TabIndex = 23
         Me.Label4.Text = "Frase Publicitaria"
         Me.Label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -404,9 +408,9 @@ Public Class FrmConfiguracion
         Me.TxtCedula.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.DsConfiguracion, "configuraciones.Cedula", True))
         Me.TxtCedula.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TxtCedula.ForeColor = System.Drawing.Color.Blue
-        Me.TxtCedula.Location = New System.Drawing.Point(12, 70)
+        Me.TxtCedula.Location = New System.Drawing.Point(14, 81)
         Me.TxtCedula.Name = "TxtCedula"
-        Me.TxtCedula.Size = New System.Drawing.Size(176, 13)
+        Me.TxtCedula.Size = New System.Drawing.Size(212, 16)
         Me.TxtCedula.TabIndex = 1
         '
         'Label3
@@ -414,9 +418,9 @@ Public Class FrmConfiguracion
         Me.Label3.BackColor = System.Drawing.SystemColors.ControlLight
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.Color.Blue
-        Me.Label3.Location = New System.Drawing.Point(228, 54)
+        Me.Label3.Location = New System.Drawing.Point(274, 62)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(160, 16)
+        Me.Label3.Size = New System.Drawing.Size(192, 19)
         Me.Label3.TabIndex = 21
         Me.Label3.Text = "Teléfono (s)"
         Me.Label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -426,9 +430,9 @@ Public Class FrmConfiguracion
         Me.Label2.BackColor = System.Drawing.SystemColors.ControlLight
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.Blue
-        Me.Label2.Location = New System.Drawing.Point(12, 54)
+        Me.Label2.Location = New System.Drawing.Point(14, 62)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(176, 16)
+        Me.Label2.Size = New System.Drawing.Size(212, 19)
         Me.Label2.TabIndex = 20
         Me.Label2.Text = "Cédula Jurídica"
         Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -439,9 +443,9 @@ Public Class FrmConfiguracion
         Me.TxtEmpresa.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.DsConfiguracion, "configuraciones.Empresa", True))
         Me.TxtEmpresa.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TxtEmpresa.ForeColor = System.Drawing.Color.Blue
-        Me.TxtEmpresa.Location = New System.Drawing.Point(12, 30)
+        Me.TxtEmpresa.Location = New System.Drawing.Point(14, 35)
         Me.TxtEmpresa.Name = "TxtEmpresa"
-        Me.TxtEmpresa.Size = New System.Drawing.Size(376, 13)
+        Me.TxtEmpresa.Size = New System.Drawing.Size(452, 16)
         Me.TxtEmpresa.TabIndex = 0
         '
         'Label1
@@ -449,9 +453,9 @@ Public Class FrmConfiguracion
         Me.Label1.BackColor = System.Drawing.SystemColors.ControlLight
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.Blue
-        Me.Label1.Location = New System.Drawing.Point(12, 14)
+        Me.Label1.Location = New System.Drawing.Point(14, 16)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(376, 16)
+        Me.Label1.Size = New System.Drawing.Size(452, 19)
         Me.Label1.TabIndex = 18
         Me.Label1.Text = "Empresa"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -461,12 +465,14 @@ Public Class FrmConfiguracion
         Me.TabPage2.Controls.Add(Me.GroupBox1)
         Me.TabPage2.Location = New System.Drawing.Point(4, 4)
         Me.TabPage2.Name = "TabPage2"
-        Me.TabPage2.Size = New System.Drawing.Size(400, 230)
+        Me.TabPage2.Size = New System.Drawing.Size(482, 266)
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "Valores"
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.Label22)
+        Me.GroupBox1.Controls.Add(Me.txtExtranjero)
         Me.GroupBox1.Controls.Add(Me.CheckBox2)
         Me.GroupBox1.Controls.Add(Me.ck_regalias)
         Me.GroupBox1.Controls.Add(Me.txtMascotasCredito)
@@ -495,11 +501,35 @@ Public Class FrmConfiguracion
         Me.GroupBox1.Controls.Add(Me.Label9)
         Me.GroupBox1.Controls.Add(Me.Label8)
         Me.GroupBox1.Controls.Add(Me.Label7)
-        Me.GroupBox1.Location = New System.Drawing.Point(0, 8)
+        Me.GroupBox1.Location = New System.Drawing.Point(0, 9)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(400, 219)
+        Me.GroupBox1.Size = New System.Drawing.Size(480, 253)
         Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
+        '
+        'Label22
+        '
+        Me.Label22.BackColor = System.Drawing.SystemColors.ControlLight
+        Me.Label22.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label22.ForeColor = System.Drawing.Color.Blue
+        Me.Label22.Location = New System.Drawing.Point(29, 167)
+        Me.Label22.Name = "Label22"
+        Me.Label22.Size = New System.Drawing.Size(166, 19)
+        Me.Label22.TabIndex = 34
+        Me.Label22.Text = "Porcentaje Extranjero"
+        Me.Label22.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'txtExtranjero
+        '
+        Me.txtExtranjero.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.txtExtranjero.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtExtranjero.ForeColor = System.Drawing.Color.Blue
+        Me.txtExtranjero.Location = New System.Drawing.Point(32, 186)
+        Me.txtExtranjero.Name = "txtExtranjero"
+        Me.txtExtranjero.Size = New System.Drawing.Size(163, 16)
+        Me.txtExtranjero.TabIndex = 33
+        Me.txtExtranjero.Text = "0.00"
+        Me.txtExtranjero.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
         'CheckBox2
         '
@@ -507,9 +537,9 @@ Public Class FrmConfiguracion
         Me.CheckBox2.DataBindings.Add(New System.Windows.Forms.Binding("Checked", Me.DsConfiguracion, "configuraciones.editar_nombre", True))
         Me.CheckBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CheckBox2.ForeColor = System.Drawing.Color.Red
-        Me.CheckBox2.Location = New System.Drawing.Point(27, 183)
+        Me.CheckBox2.Location = New System.Drawing.Point(32, 211)
         Me.CheckBox2.Name = "CheckBox2"
-        Me.CheckBox2.Size = New System.Drawing.Size(357, 30)
+        Me.CheckBox2.Size = New System.Drawing.Size(429, 35)
         Me.CheckBox2.TabIndex = 32
         Me.CheckBox2.Text = "Se puede editar el nombre en facturas"
         Me.CheckBox2.UseVisualStyleBackColor = False
@@ -519,9 +549,9 @@ Public Class FrmConfiguracion
         Me.ck_regalias.DataBindings.Add(New System.Windows.Forms.Binding("Checked", Me.DsConfiguracion, "configuraciones.regalias", True))
         Me.ck_regalias.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold)
         Me.ck_regalias.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.ck_regalias.Location = New System.Drawing.Point(24, 112)
+        Me.ck_regalias.Location = New System.Drawing.Point(29, 129)
         Me.ck_regalias.Name = "ck_regalias"
-        Me.ck_regalias.Size = New System.Drawing.Size(104, 24)
+        Me.ck_regalias.Size = New System.Drawing.Size(125, 28)
         Me.ck_regalias.TabIndex = 31
         Me.ck_regalias.Text = "Activar regalias"
         '
@@ -531,9 +561,9 @@ Public Class FrmConfiguracion
         Me.txtMascotasCredito.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.DsConfiguracion, "configuraciones.MascotasCredito", True))
         Me.txtMascotasCredito.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtMascotasCredito.ForeColor = System.Drawing.Color.Blue
-        Me.txtMascotasCredito.Location = New System.Drawing.Point(312, 112)
+        Me.txtMascotasCredito.Location = New System.Drawing.Point(374, 129)
         Me.txtMascotasCredito.Name = "txtMascotasCredito"
-        Me.txtMascotasCredito.Size = New System.Drawing.Size(72, 13)
+        Me.txtMascotasCredito.Size = New System.Drawing.Size(87, 16)
         Me.txtMascotasCredito.TabIndex = 30
         Me.txtMascotasCredito.Text = "0.00"
         Me.txtMascotasCredito.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -543,9 +573,9 @@ Public Class FrmConfiguracion
         Me.Label12.BackColor = System.Drawing.SystemColors.ControlLight
         Me.Label12.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label12.ForeColor = System.Drawing.Color.Blue
-        Me.Label12.Location = New System.Drawing.Point(240, 112)
+        Me.Label12.Location = New System.Drawing.Point(288, 129)
         Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(72, 16)
+        Me.Label12.Size = New System.Drawing.Size(86, 19)
         Me.Label12.TabIndex = 29
         Me.Label12.Text = "Crédito"
         '
@@ -554,9 +584,9 @@ Public Class FrmConfiguracion
         Me.Label13.BackColor = System.Drawing.SystemColors.ControlLight
         Me.Label13.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label13.ForeColor = System.Drawing.Color.Blue
-        Me.Label13.Location = New System.Drawing.Point(240, 128)
+        Me.Label13.Location = New System.Drawing.Point(288, 148)
         Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(72, 16)
+        Me.Label13.Size = New System.Drawing.Size(86, 18)
         Me.Label13.TabIndex = 28
         Me.Label13.Text = "Contado"
         '
@@ -566,9 +596,9 @@ Public Class FrmConfiguracion
         Me.txtMascotasContado.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.DsConfiguracion, "configuraciones.MascotasContado", True))
         Me.txtMascotasContado.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtMascotasContado.ForeColor = System.Drawing.Color.Blue
-        Me.txtMascotasContado.Location = New System.Drawing.Point(312, 128)
+        Me.txtMascotasContado.Location = New System.Drawing.Point(374, 148)
         Me.txtMascotasContado.Name = "txtMascotasContado"
-        Me.txtMascotasContado.Size = New System.Drawing.Size(72, 13)
+        Me.txtMascotasContado.Size = New System.Drawing.Size(87, 16)
         Me.txtMascotasContado.TabIndex = 27
         Me.txtMascotasContado.Text = "0.00"
         Me.txtMascotasContado.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -579,9 +609,9 @@ Public Class FrmConfiguracion
         Me.ck_Mascotas.DataBindings.Add(New System.Windows.Forms.Binding("Checked", Me.DsConfiguracion, "configuraciones.Mascotas", True))
         Me.ck_Mascotas.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ck_Mascotas.ForeColor = System.Drawing.Color.Blue
-        Me.ck_Mascotas.Location = New System.Drawing.Point(168, 112)
+        Me.ck_Mascotas.Location = New System.Drawing.Point(202, 129)
         Me.ck_Mascotas.Name = "ck_Mascotas"
-        Me.ck_Mascotas.Size = New System.Drawing.Size(80, 16)
+        Me.ck_Mascotas.Size = New System.Drawing.Size(96, 19)
         Me.ck_Mascotas.TabIndex = 26
         Me.ck_Mascotas.Text = "Mascotas"
         Me.ck_Mascotas.UseVisualStyleBackColor = False
@@ -592,9 +622,9 @@ Public Class FrmConfiguracion
         Me.txtTallerCredito.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.DsConfiguracion, "configuraciones.TallerCredito", True))
         Me.txtTallerCredito.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtTallerCredito.ForeColor = System.Drawing.Color.Blue
-        Me.txtTallerCredito.Location = New System.Drawing.Point(312, 79)
+        Me.txtTallerCredito.Location = New System.Drawing.Point(374, 91)
         Me.txtTallerCredito.Name = "txtTallerCredito"
-        Me.txtTallerCredito.Size = New System.Drawing.Size(72, 13)
+        Me.txtTallerCredito.Size = New System.Drawing.Size(87, 16)
         Me.txtTallerCredito.TabIndex = 25
         Me.txtTallerCredito.Text = "0.00"
         Me.txtTallerCredito.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -604,9 +634,9 @@ Public Class FrmConfiguracion
         Me.Label11.BackColor = System.Drawing.SystemColors.ControlLight
         Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label11.ForeColor = System.Drawing.Color.Blue
-        Me.Label11.Location = New System.Drawing.Point(240, 79)
+        Me.Label11.Location = New System.Drawing.Point(288, 91)
         Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(72, 16)
+        Me.Label11.Size = New System.Drawing.Size(86, 19)
         Me.Label11.TabIndex = 24
         Me.Label11.Text = "Crédito"
         '
@@ -615,9 +645,9 @@ Public Class FrmConfiguracion
         Me.Label10.BackColor = System.Drawing.SystemColors.ControlLight
         Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label10.ForeColor = System.Drawing.Color.Blue
-        Me.Label10.Location = New System.Drawing.Point(240, 95)
+        Me.Label10.Location = New System.Drawing.Point(288, 110)
         Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(72, 16)
+        Me.Label10.Size = New System.Drawing.Size(86, 18)
         Me.Label10.TabIndex = 23
         Me.Label10.Text = "Contado"
         '
@@ -627,9 +657,9 @@ Public Class FrmConfiguracion
         Me.txtTallerContado.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.DsConfiguracion, "configuraciones.TallerContado", True))
         Me.txtTallerContado.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtTallerContado.ForeColor = System.Drawing.Color.Blue
-        Me.txtTallerContado.Location = New System.Drawing.Point(312, 95)
+        Me.txtTallerContado.Location = New System.Drawing.Point(374, 110)
         Me.txtTallerContado.Name = "txtTallerContado"
-        Me.txtTallerContado.Size = New System.Drawing.Size(72, 13)
+        Me.txtTallerContado.Size = New System.Drawing.Size(87, 16)
         Me.txtTallerContado.TabIndex = 22
         Me.txtTallerContado.Text = "0.00"
         Me.txtTallerContado.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -640,9 +670,9 @@ Public Class FrmConfiguracion
         Me.ck_Taller.DataBindings.Add(New System.Windows.Forms.Binding("Checked", Me.DsConfiguracion, "configuraciones.Taller", True))
         Me.ck_Taller.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ck_Taller.ForeColor = System.Drawing.Color.Blue
-        Me.ck_Taller.Location = New System.Drawing.Point(168, 79)
+        Me.ck_Taller.Location = New System.Drawing.Point(202, 91)
         Me.ck_Taller.Name = "ck_Taller"
-        Me.ck_Taller.Size = New System.Drawing.Size(80, 16)
+        Me.ck_Taller.Size = New System.Drawing.Size(96, 19)
         Me.ck_Taller.TabIndex = 21
         Me.ck_Taller.Text = "Taller"
         Me.ck_Taller.UseVisualStyleBackColor = False
@@ -653,9 +683,9 @@ Public Class FrmConfiguracion
         Me.CheckBoxCambiaPrecio.DataBindings.Add(New System.Windows.Forms.Binding("Checked", Me.DsConfiguracion, "configuraciones.CambiaPrecioCredito", True))
         Me.CheckBoxCambiaPrecio.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CheckBoxCambiaPrecio.ForeColor = System.Drawing.Color.Blue
-        Me.CheckBoxCambiaPrecio.Location = New System.Drawing.Point(168, 145)
+        Me.CheckBoxCambiaPrecio.Location = New System.Drawing.Point(202, 167)
         Me.CheckBoxCambiaPrecio.Name = "CheckBoxCambiaPrecio"
-        Me.CheckBoxCambiaPrecio.Size = New System.Drawing.Size(216, 16)
+        Me.CheckBoxCambiaPrecio.Size = New System.Drawing.Size(259, 19)
         Me.CheckBoxCambiaPrecio.TabIndex = 20
         Me.CheckBoxCambiaPrecio.Text = "Cambia Precio Personalizado"
         Me.CheckBoxCambiaPrecio.UseVisualStyleBackColor = False
@@ -666,9 +696,9 @@ Public Class FrmConfiguracion
         Me.TextBoxNumUnico.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.DsConfiguracion, "configuraciones.NumeroConsecutivo", True))
         Me.TextBoxNumUnico.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBoxNumUnico.ForeColor = System.Drawing.Color.Blue
-        Me.TextBoxNumUnico.Location = New System.Drawing.Point(312, 15)
+        Me.TextBoxNumUnico.Location = New System.Drawing.Point(374, 17)
         Me.TextBoxNumUnico.Name = "TextBoxNumUnico"
-        Me.TextBoxNumUnico.Size = New System.Drawing.Size(72, 13)
+        Me.TextBoxNumUnico.Size = New System.Drawing.Size(87, 16)
         Me.TextBoxNumUnico.TabIndex = 18
         Me.TextBoxNumUnico.Text = "0.00"
         Me.TextBoxNumUnico.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -679,9 +709,9 @@ Public Class FrmConfiguracion
         Me.CheckBoxFacturaPersonalizada.DataBindings.Add(New System.Windows.Forms.Binding("Checked", Me.DsConfiguracion, "configuraciones.Imprimir_en_Factura_Personalizada", True))
         Me.CheckBoxFacturaPersonalizada.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CheckBoxFacturaPersonalizada.ForeColor = System.Drawing.Color.Blue
-        Me.CheckBoxFacturaPersonalizada.Location = New System.Drawing.Point(168, 161)
+        Me.CheckBoxFacturaPersonalizada.Location = New System.Drawing.Point(202, 186)
         Me.CheckBoxFacturaPersonalizada.Name = "CheckBoxFacturaPersonalizada"
-        Me.CheckBoxFacturaPersonalizada.Size = New System.Drawing.Size(216, 16)
+        Me.CheckBoxFacturaPersonalizada.Size = New System.Drawing.Size(259, 18)
         Me.CheckBoxFacturaPersonalizada.TabIndex = 19
         Me.CheckBoxFacturaPersonalizada.Text = "Utilizar Factura Personalizada"
         Me.CheckBoxFacturaPersonalizada.UseVisualStyleBackColor = False
@@ -692,9 +722,9 @@ Public Class FrmConfiguracion
         Me.CheckBoxUnico.DataBindings.Add(New System.Windows.Forms.Binding("Checked", Me.DsConfiguracion, "configuraciones.UnicoConsecutivo", True))
         Me.CheckBoxUnico.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CheckBoxUnico.ForeColor = System.Drawing.Color.Blue
-        Me.CheckBoxUnico.Location = New System.Drawing.Point(168, 15)
+        Me.CheckBoxUnico.Location = New System.Drawing.Point(202, 17)
         Me.CheckBoxUnico.Name = "CheckBoxUnico"
-        Me.CheckBoxUnico.Size = New System.Drawing.Size(144, 16)
+        Me.CheckBoxUnico.Size = New System.Drawing.Size(172, 19)
         Me.CheckBoxUnico.TabIndex = 17
         Me.CheckBoxUnico.Text = "Consecutivo Unico"
         Me.CheckBoxUnico.UseVisualStyleBackColor = False
@@ -705,9 +735,9 @@ Public Class FrmConfiguracion
         Me.TextBoxNumCRE.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.DsConfiguracion, "configuraciones.NumeroCredito", True))
         Me.TextBoxNumCRE.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBoxNumCRE.ForeColor = System.Drawing.Color.Blue
-        Me.TextBoxNumCRE.Location = New System.Drawing.Point(312, 31)
+        Me.TextBoxNumCRE.Location = New System.Drawing.Point(374, 36)
         Me.TextBoxNumCRE.Name = "TextBoxNumCRE"
-        Me.TextBoxNumCRE.Size = New System.Drawing.Size(72, 13)
+        Me.TextBoxNumCRE.Size = New System.Drawing.Size(87, 16)
         Me.TextBoxNumCRE.TabIndex = 16
         Me.TextBoxNumCRE.Text = "0.00"
         Me.TextBoxNumCRE.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -718,9 +748,9 @@ Public Class FrmConfiguracion
         Me.TextBoxNumPVE.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.DsConfiguracion, "configuraciones.NumeroPuntoVenta", True))
         Me.TextBoxNumPVE.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBoxNumPVE.ForeColor = System.Drawing.Color.Blue
-        Me.TextBoxNumPVE.Location = New System.Drawing.Point(312, 63)
+        Me.TextBoxNumPVE.Location = New System.Drawing.Point(374, 73)
         Me.TextBoxNumPVE.Name = "TextBoxNumPVE"
-        Me.TextBoxNumPVE.Size = New System.Drawing.Size(72, 13)
+        Me.TextBoxNumPVE.Size = New System.Drawing.Size(87, 16)
         Me.TextBoxNumPVE.TabIndex = 15
         Me.TextBoxNumPVE.Text = "0.00"
         Me.TextBoxNumPVE.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -731,9 +761,9 @@ Public Class FrmConfiguracion
         Me.CheckBoxCredito.DataBindings.Add(New System.Windows.Forms.Binding("Checked", Me.DsConfiguracion, "configuraciones.ConsCredito", True))
         Me.CheckBoxCredito.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CheckBoxCredito.ForeColor = System.Drawing.Color.Blue
-        Me.CheckBoxCredito.Location = New System.Drawing.Point(168, 31)
+        Me.CheckBoxCredito.Location = New System.Drawing.Point(202, 36)
         Me.CheckBoxCredito.Name = "CheckBoxCredito"
-        Me.CheckBoxCredito.Size = New System.Drawing.Size(144, 16)
+        Me.CheckBoxCredito.Size = New System.Drawing.Size(172, 18)
         Me.CheckBoxCredito.TabIndex = 14
         Me.CheckBoxCredito.Text = "Consecutivo Crédito"
         Me.CheckBoxCredito.UseVisualStyleBackColor = False
@@ -744,9 +774,9 @@ Public Class FrmConfiguracion
         Me.CheckBoxContadoPVE.DataBindings.Add(New System.Windows.Forms.Binding("Checked", Me.DsConfiguracion, "configuraciones.ConsPuntoVenta", True))
         Me.CheckBoxContadoPVE.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CheckBoxContadoPVE.ForeColor = System.Drawing.Color.Blue
-        Me.CheckBoxContadoPVE.Location = New System.Drawing.Point(168, 63)
+        Me.CheckBoxContadoPVE.Location = New System.Drawing.Point(202, 73)
         Me.CheckBoxContadoPVE.Name = "CheckBoxContadoPVE"
-        Me.CheckBoxContadoPVE.Size = New System.Drawing.Size(144, 16)
+        Me.CheckBoxContadoPVE.Size = New System.Drawing.Size(172, 18)
         Me.CheckBoxContadoPVE.TabIndex = 13
         Me.CheckBoxContadoPVE.Text = "Consecutivo PVE"
         Me.CheckBoxContadoPVE.UseVisualStyleBackColor = False
@@ -757,9 +787,9 @@ Public Class FrmConfiguracion
         Me.CheckBoxContado.DataBindings.Add(New System.Windows.Forms.Binding("Checked", Me.DsConfiguracion, "configuraciones.ConsContado", True))
         Me.CheckBoxContado.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CheckBoxContado.ForeColor = System.Drawing.Color.Blue
-        Me.CheckBoxContado.Location = New System.Drawing.Point(168, 47)
+        Me.CheckBoxContado.Location = New System.Drawing.Point(202, 54)
         Me.CheckBoxContado.Name = "CheckBoxContado"
-        Me.CheckBoxContado.Size = New System.Drawing.Size(144, 16)
+        Me.CheckBoxContado.Size = New System.Drawing.Size(172, 19)
         Me.CheckBoxContado.TabIndex = 12
         Me.CheckBoxContado.Text = "Consecutivo Contado"
         Me.CheckBoxContado.UseVisualStyleBackColor = False
@@ -770,9 +800,9 @@ Public Class FrmConfiguracion
         Me.TextBoxNumCON.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.DsConfiguracion, "configuraciones.NumeroContado", True))
         Me.TextBoxNumCON.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBoxNumCON.ForeColor = System.Drawing.Color.Blue
-        Me.TextBoxNumCON.Location = New System.Drawing.Point(312, 47)
+        Me.TextBoxNumCON.Location = New System.Drawing.Point(374, 54)
         Me.TextBoxNumCON.Name = "TextBoxNumCON"
-        Me.TextBoxNumCON.Size = New System.Drawing.Size(72, 13)
+        Me.TextBoxNumCON.Size = New System.Drawing.Size(87, 16)
         Me.TextBoxNumCON.TabIndex = 11
         Me.TextBoxNumCON.Text = "0.00"
         Me.TextBoxNumCON.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -783,9 +813,9 @@ Public Class FrmConfiguracion
         Me.TxtCajeros.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.DsConfiguracion, "configuraciones.Cajeros", True))
         Me.TxtCajeros.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TxtCajeros.ForeColor = System.Drawing.Color.Blue
-        Me.TxtCajeros.Location = New System.Drawing.Point(24, 95)
+        Me.TxtCajeros.Location = New System.Drawing.Point(29, 110)
         Me.TxtCajeros.Name = "TxtCajeros"
-        Me.TxtCajeros.Size = New System.Drawing.Size(128, 13)
+        Me.TxtCajeros.Size = New System.Drawing.Size(153, 16)
         Me.TxtCajeros.TabIndex = 10
         Me.TxtCajeros.Text = "0.00"
         Me.TxtCajeros.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -796,9 +826,9 @@ Public Class FrmConfiguracion
         Me.TxtInteres.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.DsConfiguracion, "configuraciones.Intereses", True))
         Me.TxtInteres.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TxtInteres.ForeColor = System.Drawing.Color.Blue
-        Me.TxtInteres.Location = New System.Drawing.Point(24, 63)
+        Me.TxtInteres.Location = New System.Drawing.Point(29, 73)
         Me.TxtInteres.Name = "TxtInteres"
-        Me.TxtInteres.Size = New System.Drawing.Size(128, 13)
+        Me.TxtInteres.Size = New System.Drawing.Size(153, 16)
         Me.TxtInteres.TabIndex = 9
         Me.TxtInteres.Text = "0.00"
         Me.TxtInteres.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -809,9 +839,9 @@ Public Class FrmConfiguracion
         Me.TxtImpuesto.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.DsConfiguracion, "configuraciones.Imp_Venta", True))
         Me.TxtImpuesto.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TxtImpuesto.ForeColor = System.Drawing.Color.Blue
-        Me.TxtImpuesto.Location = New System.Drawing.Point(24, 31)
+        Me.TxtImpuesto.Location = New System.Drawing.Point(29, 36)
         Me.TxtImpuesto.Name = "TxtImpuesto"
-        Me.TxtImpuesto.Size = New System.Drawing.Size(128, 13)
+        Me.TxtImpuesto.Size = New System.Drawing.Size(153, 16)
         Me.TxtImpuesto.TabIndex = 8
         Me.TxtImpuesto.Text = "0.00"
         Me.TxtImpuesto.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -821,9 +851,9 @@ Public Class FrmConfiguracion
         Me.Label9.BackColor = System.Drawing.SystemColors.ControlLight
         Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label9.ForeColor = System.Drawing.Color.Blue
-        Me.Label9.Location = New System.Drawing.Point(24, 79)
+        Me.Label9.Location = New System.Drawing.Point(29, 91)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(128, 16)
+        Me.Label9.Size = New System.Drawing.Size(153, 19)
         Me.Label9.TabIndex = 2
         Me.Label9.Text = "Número de Cajeros"
         Me.Label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -833,9 +863,9 @@ Public Class FrmConfiguracion
         Me.Label8.BackColor = System.Drawing.SystemColors.ControlLight
         Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label8.ForeColor = System.Drawing.Color.Blue
-        Me.Label8.Location = New System.Drawing.Point(24, 47)
+        Me.Label8.Location = New System.Drawing.Point(29, 54)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(128, 16)
+        Me.Label8.Size = New System.Drawing.Size(153, 19)
         Me.Label8.TabIndex = 1
         Me.Label8.Text = "Intereses"
         Me.Label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -845,9 +875,9 @@ Public Class FrmConfiguracion
         Me.Label7.BackColor = System.Drawing.SystemColors.ControlLight
         Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label7.ForeColor = System.Drawing.Color.Blue
-        Me.Label7.Location = New System.Drawing.Point(24, 15)
+        Me.Label7.Location = New System.Drawing.Point(29, 17)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(128, 16)
+        Me.Label7.Size = New System.Drawing.Size(153, 19)
         Me.Label7.TabIndex = 0
         Me.Label7.Text = "Impuesto Venta"
         Me.Label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -857,15 +887,15 @@ Public Class FrmConfiguracion
         Me.TabPage3.Controls.Add(Me.PictureEdit1)
         Me.TabPage3.Location = New System.Drawing.Point(4, 4)
         Me.TabPage3.Name = "TabPage3"
-        Me.TabPage3.Size = New System.Drawing.Size(400, 230)
+        Me.TabPage3.Size = New System.Drawing.Size(482, 266)
         Me.TabPage3.TabIndex = 2
         Me.TabPage3.Text = "Logo"
         '
         'PictureEdit1
         '
-        Me.PictureEdit1.Location = New System.Drawing.Point(103, 3)
+        Me.PictureEdit1.Location = New System.Drawing.Point(124, 3)
         Me.PictureEdit1.Name = "PictureEdit1"
-        Me.PictureEdit1.Size = New System.Drawing.Size(192, 176)
+        Me.PictureEdit1.Size = New System.Drawing.Size(230, 204)
         Me.PictureEdit1.TabIndex = 21
         '
         'TabPage4
@@ -881,81 +911,81 @@ Public Class FrmConfiguracion
         Me.TabPage4.Controls.Add(Me.txt_mensaje)
         Me.TabPage4.Location = New System.Drawing.Point(4, 4)
         Me.TabPage4.Name = "TabPage4"
-        Me.TabPage4.Size = New System.Drawing.Size(400, 230)
+        Me.TabPage4.Size = New System.Drawing.Size(482, 266)
         Me.TabPage4.TabIndex = 3
         Me.TabPage4.Text = "Notificaciones de correo"
         '
         'txt_dir_correo
         '
         Me.txt_dir_correo.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.DsConfiguracion, "correo.direccion_correo", True))
-        Me.txt_dir_correo.Location = New System.Drawing.Point(120, 32)
+        Me.txt_dir_correo.Location = New System.Drawing.Point(144, 37)
         Me.txt_dir_correo.Name = "txt_dir_correo"
-        Me.txt_dir_correo.Size = New System.Drawing.Size(256, 20)
+        Me.txt_dir_correo.Size = New System.Drawing.Size(307, 22)
         Me.txt_dir_correo.TabIndex = 11
         '
         'txt_asunto
         '
         Me.txt_asunto.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.DsConfiguracion, "correo.asunto", True))
-        Me.txt_asunto.Location = New System.Drawing.Point(120, 80)
+        Me.txt_asunto.Location = New System.Drawing.Point(144, 92)
         Me.txt_asunto.Name = "txt_asunto"
-        Me.txt_asunto.Size = New System.Drawing.Size(256, 20)
+        Me.txt_asunto.Size = New System.Drawing.Size(307, 22)
         Me.txt_asunto.TabIndex = 10
         '
         'Label14
         '
-        Me.Label14.Location = New System.Drawing.Point(72, 80)
+        Me.Label14.Location = New System.Drawing.Point(86, 92)
         Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(40, 23)
+        Me.Label14.Size = New System.Drawing.Size(48, 27)
         Me.Label14.TabIndex = 9
         Me.Label14.Text = "Asunto"
         '
         'Label18
         '
-        Me.Label18.Location = New System.Drawing.Point(8, 104)
+        Me.Label18.Location = New System.Drawing.Point(10, 120)
         Me.Label18.Name = "Label18"
-        Me.Label18.Size = New System.Drawing.Size(100, 23)
+        Me.Label18.Size = New System.Drawing.Size(120, 27)
         Me.Label18.TabIndex = 8
         Me.Label18.Text = "Mensaje"
         '
         'txt_clave
         '
         Me.txt_clave.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.DsConfiguracion, "correo.clave", True))
-        Me.txt_clave.Location = New System.Drawing.Point(120, 56)
+        Me.txt_clave.Location = New System.Drawing.Point(144, 65)
         Me.txt_clave.Name = "txt_clave"
         Me.txt_clave.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.txt_clave.Size = New System.Drawing.Size(256, 20)
+        Me.txt_clave.Size = New System.Drawing.Size(307, 22)
         Me.txt_clave.TabIndex = 7
         '
         'Label16
         '
-        Me.Label16.Location = New System.Drawing.Point(48, 56)
+        Me.Label16.Location = New System.Drawing.Point(58, 65)
         Me.Label16.Name = "Label16"
-        Me.Label16.Size = New System.Drawing.Size(64, 23)
+        Me.Label16.Size = New System.Drawing.Size(76, 26)
         Me.Label16.TabIndex = 6
         Me.Label16.Text = "Contraseña"
         '
         'Label17
         '
-        Me.Label17.Location = New System.Drawing.Point(8, 32)
+        Me.Label17.Location = New System.Drawing.Point(10, 37)
         Me.Label17.Name = "Label17"
-        Me.Label17.Size = New System.Drawing.Size(112, 23)
+        Me.Label17.Size = New System.Drawing.Size(134, 26)
         Me.Label17.TabIndex = 4
         Me.Label17.Text = "Dirección de correo"
         '
         'CheckBox1
         '
-        Me.CheckBox1.Location = New System.Drawing.Point(8, 8)
+        Me.CheckBox1.Location = New System.Drawing.Point(10, 9)
         Me.CheckBox1.Name = "CheckBox1"
-        Me.CheckBox1.Size = New System.Drawing.Size(264, 16)
+        Me.CheckBox1.Size = New System.Drawing.Size(316, 19)
         Me.CheckBox1.TabIndex = 1
         Me.CheckBox1.Text = "Mostrar facturas vencidas al inicio del programa"
         '
         'txt_mensaje
         '
         Me.txt_mensaje.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.DsConfiguracion, "correo.mensaje", True))
-        Me.txt_mensaje.Location = New System.Drawing.Point(8, 128)
+        Me.txt_mensaje.Location = New System.Drawing.Point(10, 148)
         Me.txt_mensaje.Name = "txt_mensaje"
-        Me.txt_mensaje.Size = New System.Drawing.Size(384, 40)
+        Me.txt_mensaje.Size = New System.Drawing.Size(460, 46)
         Me.txt_mensaje.TabIndex = 0
         Me.txt_mensaje.Text = ""
         '
@@ -972,15 +1002,15 @@ Public Class FrmConfiguracion
         Me.TabPage5.Controls.Add(Me.txtclave)
         Me.TabPage5.Location = New System.Drawing.Point(4, 4)
         Me.TabPage5.Name = "TabPage5"
-        Me.TabPage5.Size = New System.Drawing.Size(400, 230)
+        Me.TabPage5.Size = New System.Drawing.Size(482, 266)
         Me.TabPage5.TabIndex = 4
         Me.TabPage5.Text = "Permiso"
         '
         'btneliminar
         '
-        Me.btneliminar.Location = New System.Drawing.Point(264, 136)
+        Me.btneliminar.Location = New System.Drawing.Point(317, 157)
         Me.btneliminar.Name = "btneliminar"
-        Me.btneliminar.Size = New System.Drawing.Size(75, 24)
+        Me.btneliminar.Size = New System.Drawing.Size(90, 28)
         Me.btneliminar.TabIndex = 9
         Me.btneliminar.Text = "Eliminar"
         Me.btneliminar.Visible = False
@@ -990,67 +1020,67 @@ Public Class FrmConfiguracion
         Me.cbousuarios.DataSource = Me.DsConfiguracion
         Me.cbousuarios.DisplayMember = "Usuarios.Nombre"
         Me.cbousuarios.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.cbousuarios.Location = New System.Drawing.Point(160, 56)
+        Me.cbousuarios.Location = New System.Drawing.Point(192, 65)
         Me.cbousuarios.Name = "cbousuarios"
-        Me.cbousuarios.Size = New System.Drawing.Size(176, 21)
+        Me.cbousuarios.Size = New System.Drawing.Size(211, 24)
         Me.cbousuarios.TabIndex = 8
         Me.cbousuarios.ValueMember = "Usuarios.Cedula"
         '
         'Label21
         '
-        Me.Label21.Location = New System.Drawing.Point(112, 64)
+        Me.Label21.Location = New System.Drawing.Point(134, 74)
         Me.Label21.Name = "Label21"
-        Me.Label21.Size = New System.Drawing.Size(48, 16)
+        Me.Label21.Size = New System.Drawing.Size(58, 18)
         Me.Label21.TabIndex = 6
         Me.Label21.Text = "Usuario:"
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(160, 136)
+        Me.Button1.Location = New System.Drawing.Point(192, 157)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(96, 24)
+        Me.Button1.Size = New System.Drawing.Size(115, 28)
         Me.Button1.TabIndex = 5
         Me.Button1.Text = "Guardar"
         '
         'Label20
         '
-        Me.Label20.Location = New System.Drawing.Point(80, 112)
+        Me.Label20.Location = New System.Drawing.Point(96, 129)
         Me.Label20.Name = "Label20"
-        Me.Label20.Size = New System.Drawing.Size(80, 16)
+        Me.Label20.Size = New System.Drawing.Size(96, 19)
         Me.Label20.TabIndex = 4
         Me.Label20.Text = "Repetir Clave:"
         '
         'txtclave1
         '
-        Me.txtclave1.Location = New System.Drawing.Point(160, 112)
+        Me.txtclave1.Location = New System.Drawing.Point(192, 129)
         Me.txtclave1.Name = "txtclave1"
         Me.txtclave1.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.txtclave1.Size = New System.Drawing.Size(100, 20)
+        Me.txtclave1.Size = New System.Drawing.Size(120, 22)
         Me.txtclave1.TabIndex = 3
         '
         'Label19
         '
-        Me.Label19.Location = New System.Drawing.Point(112, 8)
+        Me.Label19.Location = New System.Drawing.Point(134, 9)
         Me.Label19.Name = "Label19"
-        Me.Label19.Size = New System.Drawing.Size(168, 23)
+        Me.Label19.Size = New System.Drawing.Size(202, 27)
         Me.Label19.TabIndex = 2
         Me.Label19.Text = "Permiso para Habilitar inventario"
         '
         'Label15
         '
-        Me.Label15.Location = New System.Drawing.Point(120, 88)
+        Me.Label15.Location = New System.Drawing.Point(144, 102)
         Me.Label15.Name = "Label15"
-        Me.Label15.Size = New System.Drawing.Size(40, 16)
+        Me.Label15.Size = New System.Drawing.Size(48, 18)
         Me.Label15.TabIndex = 1
         Me.Label15.Text = "Clave:"
         '
         'txtclave
         '
         Me.txtclave.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.DsConfiguracion, "permisos.clave", True))
-        Me.txtclave.Location = New System.Drawing.Point(160, 88)
+        Me.txtclave.Location = New System.Drawing.Point(192, 102)
         Me.txtclave.Name = "txtclave"
         Me.txtclave.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.txtclave.Size = New System.Drawing.Size(100, 20)
+        Me.txtclave.Size = New System.Drawing.Size(120, 22)
         Me.txtclave.TabIndex = 0
         '
         'ImageList1
@@ -1113,10 +1143,10 @@ Public Class FrmConfiguracion
         Me.ToolBar1.DropDownArrows = True
         Me.ToolBar1.ImageList = Me.ImageList1
         Me.ToolBar1.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.ToolBar1.Location = New System.Drawing.Point(0, 262)
+        Me.ToolBar1.Location = New System.Drawing.Point(0, 299)
         Me.ToolBar1.Name = "ToolBar1"
         Me.ToolBar1.ShowToolTips = True
-        Me.ToolBar1.Size = New System.Drawing.Size(408, 52)
+        Me.ToolBar1.Size = New System.Drawing.Size(492, 60)
         Me.ToolBar1.TabIndex = 61
         '
         'ToolBarNuevo
@@ -1215,14 +1245,14 @@ Public Class FrmConfiguracion
         'SqlDeleteCommand3
         '
         Me.SqlDeleteCommand3.CommandText = "DELETE FROM permisos WHERE (id = @Original_id) AND (clave = @Original_clave) AND " & _
-            "(usuario = @Original_usuario)"
+    "(usuario = @Original_usuario)"
         Me.SqlDeleteCommand3.Connection = Me.SqlConnection
         Me.SqlDeleteCommand3.Parameters.AddRange(New System.Data.SqlClient.SqlParameter() {New System.Data.SqlClient.SqlParameter("@Original_id", System.Data.SqlDbType.BigInt, 8, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "id", System.Data.DataRowVersion.Original, Nothing), New System.Data.SqlClient.SqlParameter("@Original_clave", System.Data.SqlDbType.NVarChar, 50, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "clave", System.Data.DataRowVersion.Original, Nothing), New System.Data.SqlClient.SqlParameter("@Original_usuario", System.Data.SqlDbType.NVarChar, 50, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "usuario", System.Data.DataRowVersion.Original, Nothing)})
         '
         'SqlInsertCommand3
         '
         Me.SqlInsertCommand3.CommandText = "INSERT INTO permisos(usuario, clave) VALUES (@usuario, @clave); SELECT usuario, c" & _
-            "lave, id FROM permisos WHERE (id = @@IDENTITY)"
+    "lave, id FROM permisos WHERE (id = @@IDENTITY)"
         Me.SqlInsertCommand3.Connection = Me.SqlConnection
         Me.SqlInsertCommand3.Parameters.AddRange(New System.Data.SqlClient.SqlParameter() {New System.Data.SqlClient.SqlParameter("@usuario", System.Data.SqlDbType.NVarChar, 50, "usuario"), New System.Data.SqlClient.SqlParameter("@clave", System.Data.SqlDbType.NVarChar, 50, "clave")})
         '
@@ -1252,14 +1282,14 @@ Public Class FrmConfiguracion
         'SqlSelectCommand4
         '
         Me.SqlSelectCommand4.CommandText = "SELECT Cedula, Id_Usuario, Nombre, Clave_Entrada, Clave_Interna, Perfil, Foto, In" & _
-            "iciales, CambiarPrecio, Porc_Precio, Aplicar_Desc, Porc_Desc, Exist_Negativa FRO" & _
-            "M Usuarios"
+    "iciales, CambiarPrecio, Porc_Precio, Aplicar_Desc, Porc_Desc, Exist_Negativa FRO" & _
+    "M Usuarios"
         Me.SqlSelectCommand4.Connection = Me.SqlConnection
         '
         'FrmConfiguracion
         '
-        Me.AutoScaleBaseSize = New System.Drawing.Size(5, 13)
-        Me.ClientSize = New System.Drawing.Size(408, 314)
+        Me.AutoScaleBaseSize = New System.Drawing.Size(6, 15)
+        Me.ClientSize = New System.Drawing.Size(492, 359)
         Me.Controls.Add(Me.TabControl1)
         Me.Controls.Add(Me.ToolBar1)
         Me.Name = "FrmConfiguracion"
@@ -1314,6 +1344,8 @@ Public Class FrmConfiguracion
             Else
                 Me.CheckBox1.Checked = False
             End If
+
+            Me.txtExtranjero.Text = Me.GetPorcentajeExtranjero
 
         Catch ex As Exception
             MsgBox(ex.Message, MsgBoxStyle.Exclamation, "Mensaje")
@@ -1375,6 +1407,24 @@ Public Class FrmConfiguracion
             System.Windows.Forms.MessageBox.Show(ex.Message)
         End Try
     End Sub
+
+    Private Sub ActualizarPorcentajeExtranjero()
+        If IsNumeric(Me.txtExtranjero.Text) Then
+            Dim db As New OBSoluciones.SQL.Sentencias(CadenaConexionSeePOS)
+            db.Ejecutar("Update configuraciones Set PorcentajeExtranjero = " & Me.txtExtranjero.Text & "  ", CommandType.Text)
+        End If
+    End Sub
+
+    Private Function GetPorcentajeExtranjero() As Decimal
+        Dim dt As New DataTable
+        cFunciones.Llenar_Tabla_Generico("Select top 1 PorcentajeExtranjero from configuraciones", dt, CadenaConexionSeePOS)
+        If dt.Rows.Count > 0 Then
+            Return dt.Rows(0).Item("PorcentajeExtranjero")
+        Else
+            Return 0
+        End If
+    End Function
+
     Private Sub registrar()
 
         'SaveSetting("SeeSOFT", "SeePOs", "clave", Me.txtclave.Text)
@@ -1395,6 +1445,8 @@ Public Class FrmConfiguracion
             Me.DaConfiguracion.Update(Me.DsConfiguracion.configuraciones)
 
             Trans.Commit()
+
+            Me.ActualizarPorcentajeExtranjero()
 
             MsgBox("Los datos fueron ingresados correctamente")
 

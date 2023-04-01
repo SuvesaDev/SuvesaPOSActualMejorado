@@ -2698,6 +2698,7 @@ Public Class CierreCaja
     Private Sub Imprimir()
         Try
             If Me.AplicaCambioenCaja = True Then
+
                 'si es el servidor de liberia
                 Dim rptCierreCaja As New ReporteCierreControlNuevo
                 Dim visor As New frmVisorReportes
@@ -2705,6 +2706,8 @@ Public Class CierreCaja
                 CrystalReportsConexion.LoadReportViewer(visor.rptViewer, rptCierreCaja)
                 rptCierreCaja.SetParameterValue(0, Me.BindingContext(Me.DataSetCierreCaja1, "CierreCaja").Current("NumeroCierre"))
                 rptCierreCaja.SetParameterValue(1, Me.BindingContext(Me.DataSetCierreCaja1, "CierreCaja").Current("Apertura"))
+                rptCierreCaja.SetParameterValue(2, txtEntradas.EditValue)
+                rptCierreCaja.SetParameterValue(3, txtPrepagosAplicados.EditValue)
                 visor.Show()
             Else
                 Dim rptCierreCaja As New ReporteCierreControl
