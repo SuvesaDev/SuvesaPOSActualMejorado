@@ -4241,6 +4241,48 @@ Public Class frmCompra
         Return CInt(_Consecutivo.Substring(10, 10))
     End Function
 
+    Private Function ValidarPrecios() As Boolean
+        Dim PrecioUnit As Decimal = 0
+        Dim Codigo As Long = 0
+        Dim Descripcion As String = ""
+        For i As Integer = 0 To Me.BindingContext(DataSetCompras, "Compras.Comprasarticulos_comprados").Count - 1
+            Me.BindingContext(DataSetCompras, "Compras.Comprasarticulos_comprados").Position = i
+            PrecioUnit = Me.BindingContext(DataSetCompras, "Compras.Comprasarticulos_comprados").Current("Precio_A")
+            Codigo = Me.BindingContext(DataSetCompras, "Compras.Comprasarticulos_comprados").Current("Codigo")
+            Descripcion = Me.BindingContext(DataSetCompras, "Compras.Comprasarticulos_comprados").Current("Codigo")
+
+            Dim dt As New DataTable
+            cFunciones.Llenar_Tabla_Generico("exec [usp_GetArticulosRelaccionados] " & Codigo & ", " & PrecioUnit, dt, CadenaConexionSeePOS)
+            If dt.Rows.Count > 0 Then
+                Try
+                    Dim frm As New frmProductosRelacionados
+                    frm.Codigo = Codigo
+                    frm.PrecioUnit = PrecioUnit
+                    frm.txtDescripcion.Text = Me.txtdescripcion.Text
+                    If frm.ShowDialog = Windows.Forms.DialogResult.OK Then
+                        Dim Trans As New OBSoluciones.SQL.Transaccion(CadenaConexionSeePOS)
+                        Try
+                            Trans.Ejecutar("Update ArticulosRelacionados Set Precio_Unit = " & PrecioUnit & " Where Codigo = " & Codigo, CommandType.Text)
+                            For Each row As DataGridViewRow In frm.viewDatos.Rows
+                                If row.Cells("cAplicar").Value = True Then
+                                    Trans.Ejecutar("Update Inventario set Precio_A = " & CDec(row.Cells("cNuevoPrecio").Value) & " Where Codigo = " & row.Cells("cCodigo").Value, CommandType.Text)
+                                End If
+                            Next
+                        Catch ex As Exception
+                            Trans.Rollback()
+                        End Try
+                        Trans.Commit()
+                        Return True
+                    End If
+                Catch ex As Exception
+                    MsgBox(ex.Message)
+                End Try
+            End If
+
+        Next
+        Return False
+    End Function
+
     Private Sub Cargar_XML_Factura()
         Try
 
@@ -4766,6 +4808,11 @@ Public Class frmCompra
 
 
     Private Sub Registrar()
+
+        If Me.ValidarPrecios() = False Then
+            Exit Sub
+        End If
+
         Try
             If buscar_con_orden() = False Then
                 Exit Sub

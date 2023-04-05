@@ -315,6 +315,9 @@
     <EmbeddedResource Include="Inventarios\frmAplicarCambiosInventario.resx">
       <DependentUpon>frmAplicarCambiosInventario.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Inventarios\Inventario\ActualizaionPrecioProdRelacionado\frmProductosRelacionados.resx">
+      <DependentUpon>frmProductosRelacionados.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Inventarios\Inventario\frmAgregarGarantiaSerie.resx">
       <DependentUpon>frmAgregarGarantiaSerie.vb</DependentUpon>
     </EmbeddedResource>
@@ -3608,6 +3611,12 @@
       <DependentUpon>frmAplicarCambiosInventario.vb</DependentUpon>
     </Compile>
     <Compile Include="Inventarios\frmAplicarCambiosInventario.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventarios\Inventario\ActualizaionPrecioProdRelacionado\frmProductosRelacionados.Designer.vb">
+      <DependentUpon>frmProductosRelacionados.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Inventarios\Inventario\ActualizaionPrecioProdRelacionado\frmProductosRelacionados.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Inventarios\Inventario\DataSetInventario.vb">

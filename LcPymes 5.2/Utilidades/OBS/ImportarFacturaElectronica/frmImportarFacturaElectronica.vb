@@ -119,20 +119,23 @@ Public Class frmImportarFacturaElectronica
                 For i As Integer = 0 To xmlEnvia.GetElementsByTagName("LineaDetalle").Count - 1
 
                     Dim codigolinea As String = ""
+                    Dim descricionlinea As String = ""
 
                     Try
+                        descricionlinea = xmlEnvia.GetElementsByTagName("LineaDetalle")(i)("Detalle").InnerText.ToUpper
                         codigolinea = xmlEnvia.GetElementsByTagName("LineaDetalle")(i)("CodigoComercial")("Codigo").InnerText
                     Catch ex As Exception
-                        MsgBox("El xml del proveedor no contiene el campo Codigo de producto", MsgBoxStyle.Exclamation, "Este xml no se puede procesar")
-                        Me.DialogResult = Windows.Forms.DialogResult.Cancel
+                        'MsgBox("El xml del proveedor no contiene el campo Codigo de producto", MsgBoxStyle.Exclamation, "Este xml no se puede procesar")
+                        'Me.DialogResult = Windows.Forms.DialogResult.Cancel
+                        codigolinea = ""
                     End Try
 
-                    dt = Me.Articulo.GET_ARTICULOS_PROVEEDOR_x_CODIGO_PROVEEDOR(Me.txtCedula.Text, codigolinea)
+                    dt = Me.Articulo.GET_ARTICULOS_PROVEEDOR_x_CODIGO_PROVEEDOR(Me.txtCedula.Text, codigolinea, descricionlinea)
 
                     Me.viewDatos.Rows.Add()
                     Me.viewDatos.Item("cFlete", Index).Value = False
-                    Me.viewDatos.Item("cCodigoProveedor", Index).Value = xmlEnvia.GetElementsByTagName("LineaDetalle")(i)("CodigoComercial")("Codigo").InnerText
-                    Me.viewDatos.Item("cDescripcion", Index).Value = xmlEnvia.GetElementsByTagName("LineaDetalle")(i)("Detalle").InnerText.ToUpper
+                    Me.viewDatos.Item("cCodigoProveedor", Index).Value = codigolinea 'xmlEnvia.GetElementsByTagName("LineaDetalle")(i)("CodigoComercial")("Codigo").InnerText
+                    Me.viewDatos.Item("cDescripcion", Index).Value = descricionlinea
                     Me.viewDatos.Item("cBuscaCodigoInterno", Index).Value = "B"
 
                     If CStr(Me.viewDatos.Item("cDescripcion", Index).Value).Contains("FLETE") = True Or _
@@ -288,7 +291,7 @@ Public Class frmImportarFacturaElectronica
 
             For Each r As DataGridViewRow In Me.viewDatos.Rows
                 If CDec(r.Cells("cId_ArticuloInterno").Value) > 0 Then
-                    Me.Articulo.SAVE_ARTICULO_PROVEEDOR(Me.txtCedula.Text, r.Cells("cCodigoProveedor").Value, r.Cells("cId_ArticuloInterno").Value, r.Cells("cCantidadxPresentacion").Value)
+                    Me.Articulo.SAVE_ARTICULO_PROVEEDOR(Me.txtCedula.Text, r.Cells("cCodigoProveedor").Value, r.Cells("cDescripcion").Value, r.Cells("cId_ArticuloInterno").Value, r.Cells("cCantidadxPresentacion").Value)
                 End If
             Next
 
@@ -421,17 +424,22 @@ Namespace GestionDatos
             End If
         End Function
 
-        Public Sub SAVE_ARTICULO_PROVEEDOR(_Cedula As String, _CodProveedor As String, _CodInterno As String, _CantPresentacion As Decimal)
+        Public Sub SAVE_ARTICULO_PROVEEDOR(_Cedula As String, _CodProveedor As String, _DescProveedor As String, _CodInterno As String, _CantPresentacion As Decimal)
             Dim db As New OBSoluciones.SQL.Sentencias(CadenaConexionSeePOS)
             Dim strSQL As String = "Delete from articulos_proveedor Where Cedula = '" & _Cedula & "' and Codigo_Proveedor = '" & _CodProveedor & "'"
             db.Ejecutar(strSQL, CommandType.Text)
-            strSQL = "Insert Into articulos_proveedor(Cedula, Codigo_Proveedor, Id_Articulo, CantidadxPresentacion) Values('" & _Cedula & "', '" & _CodProveedor & "', " & _CodInterno & ", " & _CantPresentacion & ")"
+            strSQL = "Insert Into articulos_proveedor(Cedula, Codigo_Proveedor, Descripcion_Proveedor, Id_Articulo, CantidadxPresentacion) Values('" & _Cedula & "', '" & _CodProveedor & "', '" & _DescProveedor & "', " & _CodInterno & ", " & _CantPresentacion & ")"
             db.Ejecutar(strSQL, CommandType.Text)
         End Sub
 
-        Public Function GET_ARTICULOS_PROVEEDOR_x_CODIGO_PROVEEDOR(_Cedula As String, _CodProveedor As String) As DataTable
+        Public Function GET_ARTICULOS_PROVEEDOR_x_CODIGO_PROVEEDOR(_Cedula As String, _CodProveedor As String, _DescProveedor As String) As DataTable
             Dim dt As New DataTable
-            cFunciones.Llenar_Tabla_Generico("select ap.ID_ARTICULO, i.Cod_Articulo As CODIGO, i.Descripcion AS DESCRIPCION, cast(i.PresentaCant as nvarchar) + ' ' + p.Presentaciones As PRESENTACION, i.Precio_A As PRECIO_IVA1, i.Precio_B As PRECIO_IVA2, i.Precio_C As PRECIO_IVA3, ap.CANTIDADxPRESENTACION from Inventario i inner join Presentaciones p on  i.CodPresentacion = p.CodPres inner join articulos_proveedor ap on ap.ID_ARTICULO = i.Codigo where AP.CEDULA = '" & _Cedula & "' and ap.CODIGO_PROVEEDOR = '" & _CodProveedor & "'", dt, CadenaConexionSeePOS)
+            If _CodProveedor = "" Then
+                cFunciones.Llenar_Tabla_Generico("select ap.ID_ARTICULO, i.Cod_Articulo As CODIGO, i.Descripcion AS DESCRIPCION, cast(i.PresentaCant as nvarchar) + ' ' + p.Presentaciones As PRESENTACION, i.Precio_A As PRECIO_IVA1, i.Precio_B As PRECIO_IVA2, i.Precio_C As PRECIO_IVA3, ap.CANTIDADxPRESENTACION from Inventario i inner join Presentaciones p on  i.CodPresentacion = p.CodPres inner join articulos_proveedor ap on ap.ID_ARTICULO = i.Codigo where AP.CEDULA = '" & _Cedula & "' and ap.DESCRIPCION_PROVEEDOR = '" & _DescProveedor & "'", dt, CadenaConexionSeePOS)
+            Else
+                cFunciones.Llenar_Tabla_Generico("select ap.ID_ARTICULO, i.Cod_Articulo As CODIGO, i.Descripcion AS DESCRIPCION, cast(i.PresentaCant as nvarchar) + ' ' + p.Presentaciones As PRESENTACION, i.Precio_A As PRECIO_IVA1, i.Precio_B As PRECIO_IVA2, i.Precio_C As PRECIO_IVA3, ap.CANTIDADxPRESENTACION from Inventario i inner join Presentaciones p on  i.CodPresentacion = p.CodPres inner join articulos_proveedor ap on ap.ID_ARTICULO = i.Codigo where AP.CEDULA = '" & _Cedula & "' and ap.CODIGO_PROVEEDOR = '" & _CodProveedor & "'", dt, CadenaConexionSeePOS)
+            End If
+
             Return dt
         End Function
 

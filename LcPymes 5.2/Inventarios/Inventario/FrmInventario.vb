@@ -6161,18 +6161,58 @@ I:
         End If
     End Sub
 
+    Private Function GetPrecioUnitarioArticuloRelaccionado(_Cod As String) As Decimal
+        Dim dt As New DataTable
+        cFunciones.Llenar_Tabla_Generico("Select Precio_A from Inventario where Codigo = " & _Cod, dt, CadenaConexionSeePOS)
+        If dt.Rows.Count > 0 Then
+            Return dt.Rows(0).Item("Precio_A")
+        Else
+            Return 0
+        End If
+    End Function
+
     Private Sub RegistrarProductoRelacionados(_Id As String)
         Dim db As New OBSoluciones.SQL.Sentencias(CadenaConexionSeePOS)
         Dim Id As String = _Id
+        Dim PrecioUnit As Decimal = Me.TxtPrecioVenta_A.Text
+
+        Dim dt As New DataTable
+        cFunciones.Llenar_Tabla_Generico("exec [usp_GetArticulosRelaccionados] " & Id & ", " & PrecioUnit, dt, CadenaConexionSeePOS)
+        If dt.Rows.Count > 0 Then
+            Try
+                Dim frm As New frmProductosRelacionados
+                frm.Codigo = Id
+                frm.PrecioUnit = PrecioUnit
+                frm.txtDescripcion.Text = Me.TxtDescripcion.Text
+                If frm.ShowDialog = Windows.Forms.DialogResult.OK Then
+                    Dim Trans As New OBSoluciones.SQL.Transaccion(CadenaConexionSeePOS)
+                    Try
+                        Trans.Ejecutar("Update ArticulosRelacionados Set Precio_Unit = " & PrecioUnit & " Where Codigo = " & Id, CommandType.Text)
+                        For Each row As DataGridViewRow In frm.viewDatos.Rows
+                            If row.Cells("cAplicar").Value = True Then
+                                Trans.Ejecutar("Update Inventario set Precio_A = " & CDec(row.Cells("cNuevoPrecio").Value) & " Where Codigo = " & row.Cells("cCodigo").Value, CommandType.Text)
+                            End If
+                        Next
+                    Catch ex As Exception
+                        Trans.Rollback()
+                    End Try
+                    Trans.Commit()
+                End If
+            Catch ex As Exception
+                MsgBox(ex.Message)
+            End Try            
+        End If
 
         db.Ejecutar("Delete from ArticulosRelacionados where CodigoPrincipal = " & Id, CommandType.Text)
         Dim Codigo, CodArticulo, Descripcion, Cantidad As String
+        Dim PrecioUnitario As Decimal = 0
         For Each f As DataGridViewRow In Me.viewRelacionados.Rows
             Codigo = f.Cells("cCodigo").Value
             CodArticulo = f.Cells("cCodArticulo").Value
             Descripcion = f.Cells("cDescripcion").Value
             Cantidad = f.Cells("cCantidad").Value
-            db.Ejecutar("Insert into ArticulosRelacionados(CodigoPrincipal, Codigo, CodArticulo, Descripcion, Cantidad) Values(" & Id & ", " & Codigo & ", '" & CodArticulo & "', '" & Descripcion & "', " & Cantidad & ")", CommandType.Text)
+            PrecioUnitario = Me.GetPrecioUnitarioArticuloRelaccionado(Codigo)
+            db.Ejecutar("Insert into ArticulosRelacionados(CodigoPrincipal, Codigo, CodArticulo, Descripcion, Cantidad, Precio_Unit) Values(" & Id & ", " & Codigo & ", '" & CodArticulo & "', '" & Descripcion & "', " & Cantidad & ", " & PrecioUnitario & ")", CommandType.Text)
         Next
 
     End Sub
