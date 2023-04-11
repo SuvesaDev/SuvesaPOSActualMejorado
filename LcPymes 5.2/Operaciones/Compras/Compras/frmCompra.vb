@@ -4179,7 +4179,6 @@ Public Class frmCompra
             BindingContext(DataSetCompras, "compras").AddNew()
             ToolBar1.Buttons(0).ImageIndex = 8
 
-
             ComboBoxProvedor.SelectedIndex = 0
             Dim a As Integer
             a = DataSetCompras.ordencompra.Rows(0).Item("Proveedor")

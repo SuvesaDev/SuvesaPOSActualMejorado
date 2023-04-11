@@ -426,7 +426,7 @@ Namespace GestionDatos
 
         Public Sub SAVE_ARTICULO_PROVEEDOR(_Cedula As String, _CodProveedor As String, _DescProveedor As String, _CodInterno As String, _CantPresentacion As Decimal)
             Dim db As New OBSoluciones.SQL.Sentencias(CadenaConexionSeePOS)
-            Dim strSQL As String = "Delete from articulos_proveedor Where Cedula = '" & _Cedula & "' and Codigo_Proveedor = '" & _CodProveedor & "'"
+            Dim strSQL As String = "Delete from articulos_proveedor Where Cedula = '" & _Cedula & "' and Codigo_Proveedor = '" & _CodProveedor & "' and Codigo_Proveedor <> ''"
             db.Ejecutar(strSQL, CommandType.Text)
             strSQL = "Insert Into articulos_proveedor(Cedula, Codigo_Proveedor, Descripcion_Proveedor, Id_Articulo, CantidadxPresentacion) Values('" & _Cedula & "', '" & _CodProveedor & "', '" & _DescProveedor & "', " & _CodInterno & ", " & _CantPresentacion & ")"
             db.Ejecutar(strSQL, CommandType.Text)
