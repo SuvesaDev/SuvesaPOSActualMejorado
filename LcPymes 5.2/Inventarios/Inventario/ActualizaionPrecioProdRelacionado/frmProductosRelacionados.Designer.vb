@@ -22,19 +22,11 @@ Partial Class frmProductosRelacionados
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.txtDescripcion = New System.Windows.Forms.TextBox()
         Me.viewDatos = New System.Windows.Forms.DataGridView()
-        Me.cCodigo = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.cCodArticulo = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.cDescripccion = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.cPrecioAntes = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.cNuevoCosto = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.cUtilidad = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.cNuevoPrecio = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.cAplicar = New System.Windows.Forms.DataGridViewCheckBoxColumn()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.txtDescripcionSelecionado = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -44,6 +36,15 @@ Partial Class frmProductosRelacionados
         Me.Label4 = New System.Windows.Forms.Label()
         Me.txtPrecioSeleccionado = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
+        Me.cTipo = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.cCodigo = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.cCodArticulo = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.cDescripccion = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.cPrecioAntes = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.cNuevoCosto = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.cUtilidad = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.cNuevoPrecio = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.cAplicar = New System.Windows.Forms.DataGridViewCheckBoxColumn()
         CType(Me.viewDatos, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -76,7 +77,7 @@ Partial Class frmProductosRelacionados
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.viewDatos.BackgroundColor = System.Drawing.Color.White
         Me.viewDatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.viewDatos.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.cCodigo, Me.cCodArticulo, Me.cDescripccion, Me.cPrecioAntes, Me.cNuevoCosto, Me.cUtilidad, Me.cNuevoPrecio, Me.cAplicar})
+        Me.viewDatos.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.cTipo, Me.cCodigo, Me.cCodArticulo, Me.cDescripccion, Me.cPrecioAntes, Me.cNuevoCosto, Me.cUtilidad, Me.cNuevoPrecio, Me.cAplicar})
         Me.viewDatos.Location = New System.Drawing.Point(9, 84)
         Me.viewDatos.MultiSelect = False
         Me.viewDatos.Name = "viewDatos"
@@ -85,65 +86,6 @@ Partial Class frmProductosRelacionados
         Me.viewDatos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.viewDatos.Size = New System.Drawing.Size(892, 407)
         Me.viewDatos.TabIndex = 2
-        '
-        'cCodigo
-        '
-        Me.cCodigo.HeaderText = "Codigo"
-        Me.cCodigo.Name = "cCodigo"
-        Me.cCodigo.ReadOnly = True
-        Me.cCodigo.Visible = False
-        '
-        'cCodArticulo
-        '
-        Me.cCodArticulo.HeaderText = "Cod Articculo"
-        Me.cCodArticulo.Name = "cCodArticulo"
-        Me.cCodArticulo.ReadOnly = True
-        '
-        'cDescripccion
-        '
-        Me.cDescripccion.HeaderText = "Descripcion"
-        Me.cDescripccion.Name = "cDescripccion"
-        Me.cDescripccion.ReadOnly = True
-        Me.cDescripccion.Width = 315
-        '
-        'cPrecioAntes
-        '
-        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        DataGridViewCellStyle3.Format = "N2"
-        Me.cPrecioAntes.DefaultCellStyle = DataGridViewCellStyle3
-        Me.cPrecioAntes.HeaderText = "Precio Actual"
-        Me.cPrecioAntes.Name = "cPrecioAntes"
-        Me.cPrecioAntes.ReadOnly = True
-        Me.cPrecioAntes.Width = 75
-        '
-        'cNuevoCosto
-        '
-        Me.cNuevoCosto.HeaderText = "Nuevo Costo"
-        Me.cNuevoCosto.Name = "cNuevoCosto"
-        Me.cNuevoCosto.Visible = False
-        '
-        'cUtilidad
-        '
-        Me.cUtilidad.HeaderText = "Utilidad"
-        Me.cUtilidad.Name = "cUtilidad"
-        Me.cUtilidad.Visible = False
-        '
-        'cNuevoPrecio
-        '
-        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        DataGridViewCellStyle4.Format = "N2"
-        Me.cNuevoPrecio.DefaultCellStyle = DataGridViewCellStyle4
-        Me.cNuevoPrecio.HeaderText = "Precio Nuevo"
-        Me.cNuevoPrecio.Name = "cNuevoPrecio"
-        Me.cNuevoPrecio.Width = 75
-        '
-        'cAplicar
-        '
-        Me.cAplicar.HeaderText = "Aplicar Cambio"
-        Me.cAplicar.Name = "cAplicar"
-        Me.cAplicar.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.cAplicar.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
-        Me.cAplicar.Width = 75
         '
         'Button1
         '
@@ -230,6 +172,71 @@ Partial Class frmProductosRelacionados
         Me.Label5.TabIndex = 10
         Me.Label5.Text = "Precio Unitario"
         '
+        'cTipo
+        '
+        Me.cTipo.HeaderText = "Tipo"
+        Me.cTipo.Name = "cTipo"
+        Me.cTipo.Visible = False
+        '
+        'cCodigo
+        '
+        Me.cCodigo.HeaderText = "Codigo"
+        Me.cCodigo.Name = "cCodigo"
+        Me.cCodigo.ReadOnly = True
+        Me.cCodigo.Visible = False
+        '
+        'cCodArticulo
+        '
+        Me.cCodArticulo.HeaderText = "Cod Articculo"
+        Me.cCodArticulo.Name = "cCodArticulo"
+        Me.cCodArticulo.ReadOnly = True
+        '
+        'cDescripccion
+        '
+        Me.cDescripccion.HeaderText = "Descripcion"
+        Me.cDescripccion.Name = "cDescripccion"
+        Me.cDescripccion.ReadOnly = True
+        Me.cDescripccion.Width = 315
+        '
+        'cPrecioAntes
+        '
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        DataGridViewCellStyle1.Format = "N2"
+        Me.cPrecioAntes.DefaultCellStyle = DataGridViewCellStyle1
+        Me.cPrecioAntes.HeaderText = "Precio Actual"
+        Me.cPrecioAntes.Name = "cPrecioAntes"
+        Me.cPrecioAntes.ReadOnly = True
+        Me.cPrecioAntes.Width = 75
+        '
+        'cNuevoCosto
+        '
+        Me.cNuevoCosto.HeaderText = "Nuevo Costo"
+        Me.cNuevoCosto.Name = "cNuevoCosto"
+        Me.cNuevoCosto.Visible = False
+        '
+        'cUtilidad
+        '
+        Me.cUtilidad.HeaderText = "Utilidad"
+        Me.cUtilidad.Name = "cUtilidad"
+        Me.cUtilidad.Visible = False
+        '
+        'cNuevoPrecio
+        '
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        DataGridViewCellStyle2.Format = "N2"
+        Me.cNuevoPrecio.DefaultCellStyle = DataGridViewCellStyle2
+        Me.cNuevoPrecio.HeaderText = "Precio Nuevo"
+        Me.cNuevoPrecio.Name = "cNuevoPrecio"
+        Me.cNuevoPrecio.Width = 75
+        '
+        'cAplicar
+        '
+        Me.cAplicar.HeaderText = "Aplicar Cambio"
+        Me.cAplicar.Name = "cAplicar"
+        Me.cAplicar.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.cAplicar.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
+        Me.cAplicar.Width = 75
+        '
         'frmProductosRelacionados
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -269,6 +276,7 @@ Partial Class frmProductosRelacionados
     Friend WithEvents Label4 As System.Windows.Forms.Label
     Friend WithEvents txtPrecioSeleccionado As System.Windows.Forms.TextBox
     Friend WithEvents Label5 As System.Windows.Forms.Label
+    Friend WithEvents cTipo As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents cCodigo As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents cCodArticulo As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents cDescripccion As System.Windows.Forms.DataGridViewTextBoxColumn

@@ -6189,6 +6189,11 @@ I:
                     Try
                         Trans.Ejecutar("Update ArticulosRelacionados Set Precio_Unit = " & PrecioUnit & " Where Codigo = " & Id, CommandType.Text)
                         For Each row As DataGridViewRow In frm.viewDatos.Rows
+
+                            If row.Cells("cTipo").Value = 2 Then 'DescargaOtro
+                                Trans.Ejecutar("Update Inventario set PrecioDescargaOtro = " & PrecioUnit & " Where Codigo = " & row.Cells("cCodigo").Value, CommandType.Text)
+                            End If
+
                             If row.Cells("cAplicar").Value = True Then
                                 Trans.Ejecutar("Update Inventario set Precio_A = " & CDec(row.Cells("cNuevoPrecio").Value) & " Where Codigo = " & row.Cells("cCodigo").Value, CommandType.Text)
                             End If

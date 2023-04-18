@@ -2682,8 +2682,8 @@ Public Class frmCompra
         'colCodCabys
         '
         Me.colCodCabys.AutoFillDown = True
-        Me.colCodCabys.Caption = "Cabys"
-        Me.colCodCabys.FieldName = "CodCabys"
+        Me.colCodCabys.Caption = "Utilidad"
+        Me.colCodCabys.FieldName = "Utilidad"
         Me.colCodCabys.FilterInfo = ColumnFilterInfo2
         Me.colCodCabys.Name = "colCodCabys"
         Me.colCodCabys.Options = CType(((((((DevExpress.XtraGrid.Columns.ColumnOptions.CanMoved Or DevExpress.XtraGrid.Columns.ColumnOptions.CanGrouped) _
@@ -4007,6 +4007,42 @@ Public Class frmCompra
         End Try
     End Sub
 
+    Private Sub PoneUtilidad()
+
+        For i As Integer = 0 To BindingContext(DataSetCompras, "compras.ComprasArticulos_Comprados").Count - 1
+            BindingContext(DataSetCompras, "compras.ComprasArticulos_Comprados").Position = i
+
+
+            Dim Descripccion As String = BindingContext(DataSetCompras, "compras.ComprasArticulos_Comprados").Current("Descripcion")
+            Dim Base As Decimal = BindingContext(DataSetCompras, "compras.ComprasArticulos_Comprados").Current("Base")
+            Dim MontoDescuento As Decimal = BindingContext(DataSetCompras, "compras.ComprasArticulos_Comprados").Current("Descuento")
+            Dim Cantidad As Decimal = BindingContext(DataSetCompras, "compras.ComprasArticulos_Comprados").Current("Cantidad")
+            Dim Precio As Decimal = BindingContext(DataSetCompras, "compras.ComprasArticulos_Comprados").Current("Precio_A")
+            Try
+                If Cantidad > 0 Or Base > 0 Then
+                    Dim CostoReal As Decimal = Base - (MontoDescuento / Cantidad)
+                    If CostoReal > 0 Then
+                        Dim Utilidad As Decimal = ((Precio / CostoReal) - 1) * 100
+
+                        BindingContext(DataSetCompras, "compras.ComprasArticulos_Comprados").Current("Utilidad") = Math.Round(Utilidad, 2)
+                        BindingContext(DataSetCompras, "compras.ComprasArticulos_Comprados").EndCurrentEdit()
+                    Else
+                        BindingContext(DataSetCompras, "compras.ComprasArticulos_Comprados").Current("Utilidad") = 0
+                        BindingContext(DataSetCompras, "compras.ComprasArticulos_Comprados").EndCurrentEdit()
+                    End If
+                   
+                Else
+                    BindingContext(DataSetCompras, "compras.ComprasArticulos_Comprados").Current("Utilidad") = 0
+                    BindingContext(DataSetCompras, "compras.ComprasArticulos_Comprados").EndCurrentEdit()
+                End If
+            Catch ex As Exception
+                MsgBox(ex.InnerException.Message, MsgBoxStyle.Critical, Descripccion)
+            End Try
+            
+        Next
+
+    End Sub
+
     Private Sub CorrigeImpuestos()
         If Me.CK_impuesto.Checked = f Then
             Dim Imp As Decimal = 0
@@ -4019,6 +4055,8 @@ Public Class frmCompra
                 Else
                     SubtotalBonificacion = 0
                 End If
+
+
 
                 If BindingContext(DataSetCompras, "compras.ComprasArticulos_Comprados").Current("Impuesto_P") < 13 And BindingContext(DataSetCompras, "compras.ComprasArticulos_Comprados").Current("Monto_Flete") > 0 Then
                     'si el producto es excento pero tienen flete
@@ -4045,6 +4083,7 @@ Public Class frmCompra
     End Sub
 
     Private Sub Calcular_Totales_Compras()   ' calcula el monto Total de la cotización
+        If Me.ImportandoXMLCompra = True Then Exit Sub
         TxtSubExc.Properties.DisplayFormat.FormatString = TextBox2.Text & "#,#0.00"
         txtsubgra.Properties.DisplayFormat.FormatString = TextBox2.Text & "#,#0.00"
         txtdescuento.Properties.DisplayFormat.FormatString = TextBox2.Text & "#,#0.00"
@@ -4057,6 +4096,8 @@ Public Class frmCompra
             Else
                 Me.CorrigeImpuestos()
             End If
+
+            Me.PoneUtilidad()
 
             If CheckBox1.Checked = False Then
                 BindingContext(DataSetCompras, "compras").Current("TotalFactura") = Math.Round(colGravado.SummaryItem.SummaryValue + colExento.SummaryItem.SummaryValue + BindingContext(DataSetCompras, "compras").Current("Impuesto"), 2)
@@ -4263,6 +4304,11 @@ Public Class frmCompra
                         Try
                             Trans.Ejecutar("Update ArticulosRelacionados Set Precio_Unit = " & PrecioUnit & " Where Codigo = " & Codigo, CommandType.Text)
                             For Each row As DataGridViewRow In frm.viewDatos.Rows
+
+                                If row.Cells("cTipo").Value = 2 Then 'DescargaOtro
+                                    Trans.Ejecutar("Update Inventario set PrecioDescargaOtro = " & PrecioUnit & " Where Codigo = " & row.Cells("cCodigo").Value, CommandType.Text)
+                                End If
+
                                 If row.Cells("cAplicar").Value = True Then
                                     Trans.Ejecutar("Update Inventario set Precio_A = " & CDec(row.Cells("cNuevoPrecio").Value) & " Where Codigo = " & row.Cells("cCodigo").Value, CommandType.Text)
                                 End If
@@ -4276,15 +4322,17 @@ Public Class frmCompra
                 Catch ex As Exception
                     MsgBox(ex.Message)
                 End Try
+            Else
+                Return True
             End If
 
         Next
         Return False
     End Function
 
+    Private ImportandoXMLCompra As Boolean = False
     Private Sub Cargar_XML_Factura()
-        Try
-
+        Try            
             Dim frm As New frmImportarFacturaElectronica(Me.Usua)
             If frm.ShowDialog = Windows.Forms.DialogResult.OK Then
 
@@ -4297,7 +4345,6 @@ Public Class frmCompra
                 ToolBar1.Buttons(0).ImageIndex = 8
 
                 ComboBoxProvedor.SelectedIndex = 0
-
 
                 If frm.NoExisteCedula = False Then
                     Dim a As String
@@ -4345,6 +4392,7 @@ Public Class frmCompra
 
                 GroupBoxOpcionesCompras.Enabled = True
                 BindingContext(DataSetCompras, "compras").EndCurrentEdit()
+                Me.ImportandoXMLCompra = True
                 GroupBoxDetalleArticulo.Enabled = True
                 ComboMonedaCompra.Enabled = False
 
@@ -4422,6 +4470,7 @@ Public Class frmCompra
                             BindingContext(DataSetCompras, "Compras.Comprasarticulos_comprados").Current("Precio_C") = CDec(r.Cells("cPrecioIva1").Value)
                             BindingContext(DataSetCompras, "Compras.Comprasarticulos_comprados").Current("Precio_D") = 0
 
+
                             If CDec(r.Cells("cImpuesto").Value) > 0 Then
                                 Me.CK_impuesto.Checked = True
                                 BindingContext(DataSetCompras, "Compras.Comprasarticulos_comprados").Current("Gravado") = subtotal + FleteUnitario
@@ -4474,13 +4523,18 @@ Public Class frmCompra
                             'Link.DesConectar(Link.sQlconexion)
 
                             BindingContext(DataSetCompras, "Compras.Comprasarticulos_comprados").EndCurrentEdit()
+                            Me.ImportandoXMLCompra = False
                             Calcular_Totales_Compras()
                             Calcular_Totales_Compras()
+                            Me.PoneUtilidad()
+
                         End If
                     End If
                 Next
             End If
+            Me.ImportandoXMLCompra = False
         Catch ex As SystemException
+            Me.ImportandoXMLCompra = False
             MsgBox(ex.Message, MsgBoxStyle.Information, "Atención...")
         End Try
     End Sub
@@ -5401,6 +5455,7 @@ Public Class frmCompra
             GroupBoxDetalleArticulo.Enabled = True
 
             Llenar_Compras(identificador)
+            Me.PoneUtilidad()
             TxtDias.Text = DateDiff(DateInterval.Day, DTP_FechaCompra.Value, DTP_FechaVence.Value)
         Catch ex As SystemException
             MsgBox(ex.Message, MsgBoxStyle.Information, "Atención...")

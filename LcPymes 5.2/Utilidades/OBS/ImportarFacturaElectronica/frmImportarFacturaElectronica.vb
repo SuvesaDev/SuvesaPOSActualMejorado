@@ -19,6 +19,7 @@ Public Class frmImportarFacturaElectronica
                     Continue While
                 End If
                 ':::Agregramos los registros encontrados
+                linea = linea.Replace("'", """")
                 Texto += limpiarCadenaNombreFichero(linea, "")
             End While
             leer.Close()

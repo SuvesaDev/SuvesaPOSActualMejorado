@@ -2460,7 +2460,6 @@ C:\Users\LENOVO\Documents\GitHub\SuvesaPOSActualMejorado\LcPymes 5.2\bin\es-CR\V
 C:\Users\LENOVO\Documents\GitHub\SuvesaPOSActualMejorado\LcPymes 5.2\bin\es\Veterinaria.resources.dll
 C:\Users\LENOVO\Documents\GitHub\SuvesaPOSActualMejorado\LcPymes 5.2\bin\Newtonsoft.Json.dll
 C:\Users\LENOVO\Documents\GitHub\SuvesaPOSActualMejorado\LcPymes 5.2\bin\System.Net.Http.dll
-C:\Users\LENOVO\Documents\GitHub\SuvesaPOSActualMejorado\LcPymes 5.2\obj\Debug\Veterinaria.vbprojResolveAssemblyReference.cache
 C:\Users\LENOVO\Documents\GitHub\SuvesaPOSActualMejorado\LcPymes 5.2\obj\Debug\Interop.Shell32.dll
 C:\Users\LENOVO\Documents\GitHub\SuvesaPOSActualMejorado\LcPymes 5.2\obj\Debug\Veterinaria.vbproj.ResolveComReference.cache
 C:\Users\LENOVO\Documents\GitHub\SuvesaPOSActualMejorado\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmBuscarArticuloMigrador.resources

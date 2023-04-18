@@ -317,14 +317,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Veterinaria.exe" size="29043712">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Veterinaria.exe" size="29045760">
       <assemblyIdentity name="Veterinaria" version="0.0.0.0" language="neutral" processorArchitecture="x86" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>44RlJgTkwA/zzvbRDBW8aHwqelpMGZrW7jZLHxTXRzY=</dsig:DigestValue>
+        <dsig:DigestValue>Gw14RS3Fq21HpPb+P3q6ZHvKqROmhhx8VpYXJfSS1Ks=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -336,7 +336,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>hm3btUANVAle1so55AZR5fFn38IC8LGUxn2sA0nlc1o=</dsig:DigestValue>
+        <dsig:DigestValue>tElWgxtBf4vnlS3e1BaL5x5U4fnORR8ecb84OUhkM2I=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -348,7 +348,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>ieKJ6nlLE94N0KPEEUiR5Hyy9E5DXrMcr+d0CtKeuF4=</dsig:DigestValue>
+        <dsig:DigestValue>szt7itpRKp6CxhhTNZDgEYiX/WlUNBka/SzTKjQrwAI=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -568,13 +568,13 @@
       <dsig:DigestValue>4cM23Qv63dKUEwTGfu52w+EQqYIqkjvIMOYpFPNEMr4=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="Operaciones\Compras\Compras\DataSetCompras.xsd" size="47634">
+  <file name="Operaciones\Compras\Compras\DataSetCompras.xsd" size="47913">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>LKTyDfuE5wJFwgsldBla8bS20SP6abdrhlht2etEIZs=</dsig:DigestValue>
+      <dsig:DigestValue>HpLnBsUmuHio2dGNChbrTpgTfNbPnbR4u7l+neu6ZTI=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Operaciones\Compras\Devoluciones\DataSet_DevCompras.xsd" size="10293">

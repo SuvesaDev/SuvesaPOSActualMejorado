@@ -14,6 +14,7 @@
         Me.viewDatos.Rows.Clear()
         For Each row As System.Data.DataRow In dt.Rows            
             Me.viewDatos.Rows.Add()
+            Me.viewDatos.Item("cTipo", Index).Value = row.Item("Tipo") ' 1 = ArticulosRelacionados 2 = DescargaOtro
             Me.viewDatos.Item("cCodigo", Index).Value = row.Item("Codigo")
             Me.viewDatos.Item("cCodArticulo", Index).Value = row.Item("Cod_Articulo")
             Me.viewDatos.Item("cDescripccion", Index).Value = row.Item("Descripcion")
@@ -47,7 +48,7 @@
         Me.txtDescripcionSelecionado.Text = Me.viewDatos.Item("cDescripccion", Me.viewDatos.CurrentRow.Index).Value
         Me.txtCostoSeleccionado.Text = CDec(Me.viewDatos.Item("cNuevoCosto", Me.viewDatos.CurrentRow.Index).Value)
         Me.txtPrecioSeleccionado.Text = Me.viewDatos.Item("cNuevoPrecio", Me.viewDatos.CurrentRow.Index).Value
-        Me.txtUtilidadSeleccionado.Text = Me.CalcularUtilidad(Me.txtPrecioSeleccionado.Text, Me.txtCostoSeleccionado.Text)
+        Me.txtUtilidadSeleccionado.Text = Me.CalcularUtilidad(Me.txtPrecioSeleccionado.Text, Me.txtCostoSeleccionado.Text).ToString("N2")
     End Sub
 
     Private Sub viewDatos_CellValueChanged(sender As Object, e As DataGridViewCellEventArgs) Handles viewDatos.CellValueChanged
