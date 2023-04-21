@@ -220,6 +220,8 @@ Public Class MainForm
     Friend WithEvents MenuItem137 As System.Windows.Forms.MenuItem
     Friend WithEvents MenuItem150 As System.Windows.Forms.MenuItem
     Friend WithEvents MenuItem159 As System.Windows.Forms.MenuItem
+    Friend WithEvents MenuItem167 As System.Windows.Forms.MenuItem
+    Friend WithEvents MenuItem173 As System.Windows.Forms.MenuItem
     Dim SistemaNormal As Boolean = False
 #End Region
 
@@ -568,6 +570,7 @@ Public Class MainForm
         Me.MenuItem125 = New System.Windows.Forms.MenuItem()
         Me.MenuInventarios = New System.Windows.Forms.MenuItem()
         Me.MenuItemInventario_Catalogo = New System.Windows.Forms.MenuItem()
+        Me.MenuItem167 = New System.Windows.Forms.MenuItem()
         Me.MenuItem72 = New System.Windows.Forms.MenuItem()
         Me.MenuItem73 = New System.Windows.Forms.MenuItem()
         Me.MenuItem71 = New System.Windows.Forms.MenuItem()
@@ -630,6 +633,7 @@ Public Class MainForm
         Me.mnuReporteGraficoVentasAnuales = New System.Windows.Forms.MenuItem()
         Me.mnuReporteCrecimientoCompras = New System.Windows.Forms.MenuItem()
         Me.MenuItem94 = New System.Windows.Forms.MenuItem()
+        Me.MenuItem173 = New System.Windows.Forms.MenuItem()
         Me.MenuItemReporteCompras = New System.Windows.Forms.MenuItem()
         Me.MenuItem174 = New System.Windows.Forms.MenuItem()
         Me.MenuItem142 = New System.Windows.Forms.MenuItem()
@@ -1824,7 +1828,7 @@ Public Class MainForm
         '
         Me.MenuInventarios.Enabled = False
         Me.MenuInventarios.Index = 2
-        Me.MenuInventarios.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.MenuItemInventario_Catalogo, Me.MenuItem72, Me.MenuItemInventario_Familias, Me.MenuItemInventario_Ubicaciones, Me.MenuItemInventario_Presentaciones, Me.MenuItemInventario_Marcas, Me.MenuItemInventario_Ajustes, Me.MenuItemInventario_Etiquetas, Me.MenuItemInventario_Aumentos_X_Categoria, Me.MenuItemRedondeo, Me.MenuItemLinea05, Me.MenuItemControlBodega, Me.MenuItemLinea06, Me.MenuItemInventario_Bodegas, Me.MenuItemInventario_Ajuste_Bodegas, Me.MenuItem8, Me.MenuItem10, Me.MenuItem160, Me.MenuItem13, Me.MenuItem14, Me.MenuItem43, Me.MenuItem75, Me.MenuItem76, Me.MenuItem95, Me.MenuItem96, Me.MenuItem97, Me.MenuItem123, Me.MenuItem124, Me.MenuItem152, Me.MenuItem17, Me.MenuItem168, Me.MenuItem191})
+        Me.MenuInventarios.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.MenuItemInventario_Catalogo, Me.MenuItem167, Me.MenuItem72, Me.MenuItemInventario_Familias, Me.MenuItemInventario_Ubicaciones, Me.MenuItemInventario_Presentaciones, Me.MenuItemInventario_Marcas, Me.MenuItemInventario_Ajustes, Me.MenuItemInventario_Etiquetas, Me.MenuItemInventario_Aumentos_X_Categoria, Me.MenuItemRedondeo, Me.MenuItemLinea05, Me.MenuItemControlBodega, Me.MenuItemLinea06, Me.MenuItemInventario_Bodegas, Me.MenuItemInventario_Ajuste_Bodegas, Me.MenuItem8, Me.MenuItem10, Me.MenuItem160, Me.MenuItem13, Me.MenuItem14, Me.MenuItem43, Me.MenuItem75, Me.MenuItem76, Me.MenuItem95, Me.MenuItem96, Me.MenuItem97, Me.MenuItem123, Me.MenuItem124, Me.MenuItem152, Me.MenuItem17, Me.MenuItem168, Me.MenuItem191})
         Me.MenuInventarios.Text = "Inventario"
         '
         'MenuItemInventario_Catalogo
@@ -1834,10 +1838,16 @@ Public Class MainForm
         Me.MenuItemInventario_Catalogo.Shortcut = System.Windows.Forms.Shortcut.CtrlI
         Me.MenuItemInventario_Catalogo.Text = "Registro de Catálogo Inventario"
         '
+        'MenuItem167
+        '
+        Me.menuExtender.SetImageIndex(Me.MenuItem167, -1)
+        Me.MenuItem167.Index = 1
+        Me.MenuItem167.Text = "Registro articulos Sugeridos"
+        '
         'MenuItem72
         '
         Me.menuExtender.SetImageIndex(Me.MenuItem72, -1)
-        Me.MenuItem72.Index = 1
+        Me.MenuItem72.Index = 2
         Me.MenuItem72.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.MenuItem73, Me.MenuItem71})
         Me.MenuItem72.Text = "Rifa"
         '
@@ -1858,55 +1868,55 @@ Public Class MainForm
         'MenuItemInventario_Familias
         '
         Me.menuExtender.SetImageIndex(Me.MenuItemInventario_Familias, -1)
-        Me.MenuItemInventario_Familias.Index = 2
+        Me.MenuItemInventario_Familias.Index = 3
         Me.MenuItemInventario_Familias.Text = "Registro de Familias"
         '
         'MenuItemInventario_Ubicaciones
         '
         Me.menuExtender.SetImageIndex(Me.MenuItemInventario_Ubicaciones, -1)
-        Me.MenuItemInventario_Ubicaciones.Index = 3
+        Me.MenuItemInventario_Ubicaciones.Index = 4
         Me.MenuItemInventario_Ubicaciones.Text = "Registro de Ubicaciones"
         '
         'MenuItemInventario_Presentaciones
         '
         Me.menuExtender.SetImageIndex(Me.MenuItemInventario_Presentaciones, -1)
-        Me.MenuItemInventario_Presentaciones.Index = 4
+        Me.MenuItemInventario_Presentaciones.Index = 5
         Me.MenuItemInventario_Presentaciones.Text = "Registro de Presentaciones"
         '
         'MenuItemInventario_Marcas
         '
         Me.menuExtender.SetImageIndex(Me.MenuItemInventario_Marcas, -1)
-        Me.MenuItemInventario_Marcas.Index = 5
+        Me.MenuItemInventario_Marcas.Index = 6
         Me.MenuItemInventario_Marcas.Text = "Registro de Pantallas"
         '
         'MenuItemInventario_Ajustes
         '
         Me.menuExtender.SetImageIndex(Me.MenuItemInventario_Ajustes, -1)
-        Me.MenuItemInventario_Ajustes.Index = 6
+        Me.MenuItemInventario_Ajustes.Index = 7
         Me.MenuItemInventario_Ajustes.Text = "Registro de Ajuste Inventario"
         '
         'MenuItemInventario_Etiquetas
         '
         Me.menuExtender.SetImageIndex(Me.MenuItemInventario_Etiquetas, -1)
-        Me.MenuItemInventario_Etiquetas.Index = 7
+        Me.MenuItemInventario_Etiquetas.Index = 8
         Me.MenuItemInventario_Etiquetas.Text = "Etiquetas de  Artículos"
         '
         'MenuItemInventario_Aumentos_X_Categoria
         '
         Me.menuExtender.SetImageIndex(Me.MenuItemInventario_Aumentos_X_Categoria, -1)
-        Me.MenuItemInventario_Aumentos_X_Categoria.Index = 8
+        Me.MenuItemInventario_Aumentos_X_Categoria.Index = 9
         Me.MenuItemInventario_Aumentos_X_Categoria.Text = "Aumento a Categorías"
         '
         'MenuItemRedondeo
         '
         Me.menuExtender.SetImageIndex(Me.MenuItemRedondeo, -1)
-        Me.MenuItemRedondeo.Index = 9
+        Me.MenuItemRedondeo.Index = 10
         Me.MenuItemRedondeo.Text = "Redondeo de Inventarios"
         '
         'MenuItemLinea05
         '
         Me.menuExtender.SetImageIndex(Me.MenuItemLinea05, -1)
-        Me.MenuItemLinea05.Index = 10
+        Me.MenuItemLinea05.Index = 11
         Me.MenuItemLinea05.Text = "-"
         Me.MenuItemLinea05.Visible = False
         '
@@ -1914,105 +1924,105 @@ Public Class MainForm
         '
         Me.MenuItemControlBodega.Enabled = False
         Me.menuExtender.SetImageIndex(Me.MenuItemControlBodega, -1)
-        Me.MenuItemControlBodega.Index = 11
+        Me.MenuItemControlBodega.Index = 12
         Me.MenuItemControlBodega.Text = ">> Control de Bodegas <<"
         Me.MenuItemControlBodega.Visible = False
         '
         'MenuItemLinea06
         '
         Me.menuExtender.SetImageIndex(Me.MenuItemLinea06, -1)
-        Me.MenuItemLinea06.Index = 12
+        Me.MenuItemLinea06.Index = 13
         Me.MenuItemLinea06.Text = "-"
         '
         'MenuItemInventario_Bodegas
         '
         Me.menuExtender.SetImageIndex(Me.MenuItemInventario_Bodegas, -1)
-        Me.MenuItemInventario_Bodegas.Index = 13
+        Me.MenuItemInventario_Bodegas.Index = 14
         Me.MenuItemInventario_Bodegas.Text = "Registro de Bodegas"
         '
         'MenuItemInventario_Ajuste_Bodegas
         '
         Me.menuExtender.SetImageIndex(Me.MenuItemInventario_Ajuste_Bodegas, -1)
-        Me.MenuItemInventario_Ajuste_Bodegas.Index = 14
+        Me.MenuItemInventario_Ajuste_Bodegas.Index = 15
         Me.MenuItemInventario_Ajuste_Bodegas.Text = "Ajuste de Bodegas"
         '
         'MenuItem8
         '
         Me.menuExtender.SetImageIndex(Me.MenuItem8, -1)
-        Me.MenuItem8.Index = 15
+        Me.MenuItem8.Index = 16
         Me.MenuItem8.Text = "Actualizar Lote por Articulo "
         '
         'MenuItem10
         '
         Me.menuExtender.SetImageIndex(Me.MenuItem10, -1)
-        Me.MenuItem10.Index = 16
+        Me.MenuItem10.Index = 17
         Me.MenuItem10.Text = "Bloquea / Desbloquea Bodegas"
         '
         'MenuItem160
         '
         Me.menuExtender.SetImageIndex(Me.MenuItem160, -1)
-        Me.MenuItem160.Index = 17
+        Me.MenuItem160.Index = 18
         Me.MenuItem160.Text = "Bloquea / Desbloquea x Casa Comercial"
         '
         'MenuItem13
         '
         Me.menuExtender.SetImageIndex(Me.MenuItem13, -1)
-        Me.MenuItem13.Index = 18
+        Me.MenuItem13.Index = 19
         Me.MenuItem13.Text = "-"
         '
         'MenuItem14
         '
         Me.menuExtender.SetImageIndex(Me.MenuItem14, -1)
-        Me.MenuItem14.Index = 19
+        Me.MenuItem14.Index = 20
         Me.MenuItem14.Text = "Igualar Bodega Consignacion al Reporte"
         '
         'MenuItem43
         '
         Me.menuExtender.SetImageIndex(Me.MenuItem43, -1)
-        Me.MenuItem43.Index = 20
+        Me.MenuItem43.Index = 21
         Me.MenuItem43.Text = "Traslados "
         '
         'MenuItem75
         '
         Me.menuExtender.SetImageIndex(Me.MenuItem75, -1)
-        Me.MenuItem75.Index = 21
+        Me.MenuItem75.Index = 22
         Me.MenuItem75.Text = "-"
         '
         'MenuItem76
         '
         Me.menuExtender.SetImageIndex(Me.MenuItem76, -1)
-        Me.MenuItem76.Index = 22
+        Me.MenuItem76.Index = 23
         Me.MenuItem76.Text = "Etiquetador"
         '
         'MenuItem95
         '
         Me.menuExtender.SetImageIndex(Me.MenuItem95, -1)
-        Me.MenuItem95.Index = 23
+        Me.MenuItem95.Index = 24
         Me.MenuItem95.Text = "-"
         '
         'MenuItem96
         '
         Me.menuExtender.SetImageIndex(Me.MenuItem96, -1)
-        Me.MenuItem96.Index = 24
+        Me.MenuItem96.Index = 25
         Me.MenuItem96.Text = "Unificar Codigos"
         '
         'MenuItem97
         '
         Me.menuExtender.SetImageIndex(Me.MenuItem97, -1)
-        Me.MenuItem97.Index = 25
+        Me.MenuItem97.Index = 26
         Me.MenuItem97.Text = "Traslados entre Puntos de Venta"
         '
         'MenuItem123
         '
         Me.menuExtender.SetImageIndex(Me.MenuItem123, -1)
-        Me.MenuItem123.Index = 26
+        Me.MenuItem123.Index = 27
         Me.MenuItem123.Text = "-"
         '
         'MenuItem124
         '
         Me.menuExtender.SetExtEnable(Me.MenuItem124, True)
         Me.menuExtender.SetImageIndex(Me.MenuItem124, -1)
-        Me.MenuItem124.Index = 27
+        Me.MenuItem124.Index = 28
         Me.MenuItem124.OwnerDraw = True
         Me.MenuItem124.Text = "Movimientos"
         '
@@ -2020,7 +2030,7 @@ Public Class MainForm
         '
         Me.menuExtender.SetExtEnable(Me.MenuItem152, True)
         Me.menuExtender.SetImageIndex(Me.MenuItem152, -1)
-        Me.MenuItem152.Index = 28
+        Me.MenuItem152.Index = 29
         Me.MenuItem152.OwnerDraw = True
         Me.MenuItem152.Text = "Lista Articulos MAG"
         '
@@ -2028,7 +2038,7 @@ Public Class MainForm
         '
         Me.menuExtender.SetExtEnable(Me.MenuItem17, True)
         Me.menuExtender.SetImageIndex(Me.MenuItem17, -1)
-        Me.MenuItem17.Index = 29
+        Me.MenuItem17.Index = 30
         Me.MenuItem17.OwnerDraw = True
         Me.MenuItem17.Text = "Asignar codigo Cabys"
         '
@@ -2036,14 +2046,14 @@ Public Class MainForm
         '
         Me.menuExtender.SetExtEnable(Me.MenuItem168, True)
         Me.menuExtender.SetImageIndex(Me.MenuItem168, -1)
-        Me.MenuItem168.Index = 30
+        Me.MenuItem168.Index = 31
         Me.MenuItem168.OwnerDraw = True
         Me.MenuItem168.Text = "Asigar Codigo Barras"
         '
         'MenuItem191
         '
         Me.menuExtender.SetImageIndex(Me.MenuItem191, -1)
-        Me.MenuItem191.Index = 31
+        Me.MenuItem191.Index = 32
         Me.MenuItem191.Text = "Importar Cabys XML"
         '
         'MenuReportes
@@ -2057,7 +2067,7 @@ Public Class MainForm
         '
         Me.menuExtender.SetImageIndex(Me.MenuItemReporteVentas, -1)
         Me.MenuItemReporteVentas.Index = 0
-        Me.MenuItemReporteVentas.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.mnuReporteVentas, Me.mnuReporteGeneraeIndividualVentas, Me.mnuReporteArticulosCompradosCliente, Me.mnuReporteTopCliente, Me.mnuReporteVentasUnificado, Me.mnuReporteClientesmasCompran, Me.MenuItem74, Me.mnuReporteUtilidad, Me.MenuItem93, Me.mnuReporteDescuentosProveedor, Me.mnuReporteUtilidadArticulos, Me.mnuReporteD151Proveedores, Me.mnuReporteD151Clientes, Me.mnuReportePanelControl, Me.MenuItem135, Me.mnuReporteUtilidadFactura, Me.mnuReporteUtilidadFechas, Me.mnuReportePorcentajeVenta, Me.mnuReporteCierreCaja, Me.MenuItem166, Me.mnuReporteSinCabys, Me.mnuReporteMovimientoporArticulo, Me.mnuReporteCreditoRecuperacion, Me.mnuReporteDevolucionDetallado, Me.mnuReporteGraficoVentasAnuales, Me.mnuReporteCrecimientoCompras, Me.MenuItem94})
+        Me.MenuItemReporteVentas.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.mnuReporteVentas, Me.mnuReporteGeneraeIndividualVentas, Me.mnuReporteArticulosCompradosCliente, Me.mnuReporteTopCliente, Me.mnuReporteVentasUnificado, Me.mnuReporteClientesmasCompran, Me.MenuItem74, Me.mnuReporteUtilidad, Me.MenuItem93, Me.mnuReporteDescuentosProveedor, Me.mnuReporteUtilidadArticulos, Me.mnuReporteD151Proveedores, Me.mnuReporteD151Clientes, Me.mnuReportePanelControl, Me.MenuItem135, Me.mnuReporteUtilidadFactura, Me.mnuReporteUtilidadFechas, Me.mnuReportePorcentajeVenta, Me.mnuReporteCierreCaja, Me.MenuItem166, Me.mnuReporteSinCabys, Me.mnuReporteMovimientoporArticulo, Me.mnuReporteCreditoRecuperacion, Me.mnuReporteDevolucionDetallado, Me.mnuReporteGraficoVentasAnuales, Me.mnuReporteCrecimientoCompras, Me.MenuItem94, Me.MenuItem173})
         Me.MenuItemReporteVentas.Text = "Reportes de Ventas"
         '
         'mnuReporteVentas
@@ -2229,6 +2239,12 @@ Public Class MainForm
         Me.menuExtender.SetImageIndex(Me.MenuItem94, -1)
         Me.MenuItem94.Index = 26
         Me.MenuItem94.Text = "Rentabilidad Productos"
+        '
+        'MenuItem173
+        '
+        Me.menuExtender.SetImageIndex(Me.MenuItem173, -1)
+        Me.MenuItem173.Index = 27
+        Me.MenuItem173.Text = "Ventas Articulos Sugeridos"
         '
         'MenuItemReporteCompras
         '
@@ -2810,7 +2826,7 @@ Public Class MainForm
         'StatusBar1
         '
         Me.StatusBar1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.StatusBar1.Location = New System.Drawing.Point(0, 331)
+        Me.StatusBar1.Location = New System.Drawing.Point(0, 305)
         Me.StatusBar1.Name = "StatusBar1"
         Me.StatusBar1.Panels.AddRange(New System.Windows.Forms.StatusBarPanel() {Me.StatusBarPanel1, Me.StatusBarPanel4, Me.StatusBarPanel2, Me.StatusBarPanel3, Me.StatusBarPanel5, Me.sbpTCCompra, Me.sbpTCVenta, Me.sbpVersion})
         Me.StatusBar1.ShowPanels = True
@@ -2868,7 +2884,7 @@ Public Class MainForm
         'sbpVersion
         '
         Me.sbpVersion.Name = "sbpVersion"
-        Me.sbpVersion.Text = "*14Abril2023"
+        Me.sbpVersion.Text = "*20Abril2023"
         Me.sbpVersion.Width = 150
         '
         'ImageList1
@@ -3173,7 +3189,7 @@ Public Class MainForm
         '
         Me.AutoScaleBaseSize = New System.Drawing.Size(6, 15)
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(1480, 347)
+        Me.ClientSize = New System.Drawing.Size(1480, 321)
         Me.Controls.Add(Me.ToolStrip1)
         Me.Controls.Add(Me.PictureBoxFondo)
         Me.Controls.Add(Me.StatusBar1)
@@ -5434,6 +5450,19 @@ Contador:
         frm.MdiParent = Me
         frm.Show()
     End Sub
+
+    Private Sub MenuItem167_Click_1(sender As Object, e As EventArgs) Handles MenuItem167.Click
+        Dim frm As New frmArticulosSugeridos
+        frm.MdiParent = Me
+        frm.Show()
+    End Sub
+
+    Private Sub MenuItem173_Click_1(sender As Object, e As EventArgs) Handles MenuItem173.Click
+        Dim frm As New frmReporteVentaSugerida
+        frm.MdiParent = Me
+        frm.Show()
+    End Sub
+
 End Class
 
 Public Module PuntoVentaActual

@@ -72,16 +72,18 @@ Public Class frmOrdendeTrabajo
     Private Sub Imprimir(_IdOT As String)
         Dim PrinterSettings1 As New Printing.PrinterSettings
         Dim PageSettings1 As New Printing.PageSettings
-
-        Dim frm As New frmOpcionCaja
-        frm.ShowDialog()
-        Dim Caja As Integer = frm.Caja
         Dim Impresora As Integer = 0
-
-        Select Case Caja
-            Case 1 : Impresora = 3
-            Case 2 : Impresora = 5
-        End Select
+        If MsgBox("Desea imprimir en una de las cajas", MsgBoxStyle.Question + MsgBoxStyle.YesNo, "") = MsgBoxResult.Yes Then
+            Dim frm As New frmOpcionCaja
+            frm.ShowDialog()
+            Dim Caja As Integer = frm.Caja
+            Select Case Caja
+                Case 1 : Impresora = 3
+                Case 2 : Impresora = 5
+            End Select
+        Else
+            Impresora = 100
+        End If
 
         rptOT.Refresh()
         rptOT.SetParameterValue(0, _IdOT)

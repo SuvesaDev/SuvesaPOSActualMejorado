@@ -318,6 +318,12 @@
     <EmbeddedResource Include="Inventarios\Inventario\ActualizaionPrecioProdRelacionado\frmProductosRelacionados.resx">
       <DependentUpon>frmProductosRelacionados.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Inventarios\Inventario\ArticulosSugeridos\frmArticulosSugeridos.resx">
+      <DependentUpon>frmArticulosSugeridos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventarios\Inventario\ArticulosSugeridos\frmListaSugerido.resx">
+      <DependentUpon>frmListaSugerido.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Inventarios\Inventario\frmAgregarGarantiaSerie.resx">
       <DependentUpon>frmAgregarGarantiaSerie.vb</DependentUpon>
     </EmbeddedResource>
@@ -1148,6 +1154,9 @@
     <EmbeddedResource Include="Reportes\Ventas\a Reportes de Ventas\frmReportePorcentajeVenta.resx">
       <DependentUpon>frmReportePorcentajeVenta.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\Ventas\a Reportes de Ventas\frmReporteVentaSugerida.resx">
+      <DependentUpon>frmReporteVentaSugerida.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reportes\Ventas\a Reportes de Ventas\frmVentasxProveedor.resx">
       <DependentUpon>frmVentasxProveedor.vb</DependentUpon>
     </EmbeddedResource>
@@ -1210,6 +1219,10 @@
     <EmbeddedResource Include="Reportes\Ventas\a Reportes de Ventas\rptVentaCompraArticuloResumen.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>rptVentaCompraArticuloResumen.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\Ventas\a Reportes de Ventas\rptVentaSugerida.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptVentaSugerida.vb</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Reportes\Ventas\Anticipos\frmEntradasAnticipos.resx">
       <DependentUpon>frmEntradasAnticipos.vb</DependentUpon>
@@ -3619,6 +3632,19 @@
     <Compile Include="Inventarios\Inventario\ActualizaionPrecioProdRelacionado\frmProductosRelacionados.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Inventarios\Inventario\ArticulosSugeridos\ArticulosSugeridos.vb" />
+    <Compile Include="Inventarios\Inventario\ArticulosSugeridos\frmArticulosSugeridos.Designer.vb">
+      <DependentUpon>frmArticulosSugeridos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Inventarios\Inventario\ArticulosSugeridos\frmArticulosSugeridos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventarios\Inventario\ArticulosSugeridos\frmListaSugerido.Designer.vb">
+      <DependentUpon>frmListaSugerido.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Inventarios\Inventario\ArticulosSugeridos\frmListaSugerido.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Inventarios\Inventario\DataSetInventario.vb">
       <DependentUpon>DataSetInventario.xsd</DependentUpon>
     </Compile>
@@ -5584,6 +5610,12 @@
     <Compile Include="Reportes\Ventas\a Reportes de Ventas\frmReportesdeVenta.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Reportes\Ventas\a Reportes de Ventas\frmReporteVentaSugerida.Designer.vb">
+      <DependentUpon>frmReporteVentaSugerida.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\Ventas\a Reportes de Ventas\frmReporteVentaSugerida.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Reportes\Ventas\a Reportes de Ventas\frmVentasxProveedor.Designer.vb">
       <DependentUpon>frmVentasxProveedor.vb</DependentUpon>
     </Compile>
@@ -5678,6 +5710,12 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>rptVentaCompraArticuloResumen.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reportes\Ventas\a Reportes de Ventas\rptVentaSugerida.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptVentaSugerida.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Reportes\Ventas\a Reportes de Ventas\rptVentasUtilidad.vb">

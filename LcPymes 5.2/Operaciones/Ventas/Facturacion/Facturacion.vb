@@ -6361,7 +6361,6 @@ Fin:
         Return False
     End Function
     Private Function ValidaPrecio() As Boolean
-        'zoe
         Dim CambiarPrecio As Boolean = Me.PuedeCambiarPrecio(Cedula_usuario)
         Dim Descripcion As String = ""
         Dim pasaValidacion As Boolean = True
@@ -6522,6 +6521,31 @@ Fin:
             Return False
         End If
     End Function
+
+    Private Sub GuardarVentaSugerida()
+        Try
+            Dim cls As New ArticulosSugeridos
+            Dim dt As New DataTable
+            For i As Integer = 0 To BindingContext(Me.DataSet_Facturaciones, "Ventas.VentasVentas_Detalle").Count() - 1
+                BindingContext(Me.DataSet_Facturaciones, "Ventas.VentasVentas_Detalle").Position = i
+
+                dt = cls.GetPrincipal(BindingContext(Me.DataSet_Facturaciones, "Ventas.VentasVentas_Detalle").Current("Codigo"))
+
+                For Each row As DataRow In dt.Rows
+
+                    Dim registro As Decimal = (From x As DataSet_Facturaciones.Ventas_DetalleRow
+                                               In Me.DataSet_Facturaciones.Ventas_Detalle.Rows
+                                               Where x.Codigo = row.Item("CodigoPrincipal")).Count
+
+                    If registro > 0 Then
+                        cls.GuardarVentasSugeridas(BindingContext(Me.DataSet_Facturaciones, "Ventas.VentasVentas_Detalle").Current("id_venta_detalle"), BindingContext(Me.DataSet_Facturaciones, "Ventas.VentasVentas_Detalle").Current("Codigo"), AplicaCambioenCaja)
+                    End If
+                Next
+            Next
+        Catch ex As Exception
+            MsgBox(ex.Message, MsgBoxStyle.Critical, Me.Text)
+        End Try
+    End Sub
 
     Private Sub Registrar(ByVal PV As Boolean, _NumCaja As Integer)
 
@@ -6845,6 +6869,8 @@ Fin:
 
                 Dim id As Long = Me.BindingContext(Me.DataSet_Facturaciones, "Ventas").Current("Id")
                 Dim Tipo As String = Me.BindingContext(Me.DataSet_Facturaciones, "Ventas").Current("Tipo")
+
+                Me.GuardarVentaSugerida()
 
                 If Me.CodigoCupon > 0 Then
                     Dim db As New OBSoluciones.SQL.Sentencias(CadenaConexionSeePOS)
@@ -9409,7 +9435,6 @@ Fin:
             End If
 
             If Me.ckPedido.Checked = True Then
-                'zoe
                 Me.Pedido.Add(New PedidoEditado(BindingContext(DataSet_Facturaciones, "Ventas.VentasVentas_Detalle").Current("Codigo"), BindingContext(DataSet_Facturaciones, "Ventas.VentasVentas_Detalle").Current("Cantidad"), BindingContext(DataSet_Facturaciones, "Ventas.VentasVentas_Detalle").Current("Precio_Unit")))
                 Me.ckPedido.Checked = False
             End If
@@ -9431,6 +9456,32 @@ Fin:
             If DescuentoAutomatico = 0 Then
                 Me.SegundoMitad(CodigoTemporal, Me.txtCantidad.Text)
             End If
+
+            Try
+
+                Dim cls As New ArticulosSugeridos
+                Dim dt As New DataTable
+                dt = cls.GetSugeridos(CodigoTemporal)
+
+                If dt.Rows.Count > 0 Then
+                    Dim frm As New frmListaSugerido
+                    Dim Index As Integer = 0
+                    For Each row As System.Data.DataRow In dt.Rows
+                        frm.viewDatos.Rows.Add()
+                        frm.viewDatos.Item("cId", Index).Value = row.Item("Id")
+                        frm.viewDatos.Item("cCodigo", Index).Value = row.Item("Cod_Articulo")
+                        frm.viewDatos.Item("cDescripccion", Index).Value = row.Item("Descripcion")
+                        Index += 1
+                    Next
+                    If frm.ShowDialog() = Windows.Forms.DialogResult.OK Then
+                        Dim cod_articulo As String = frm.viewDatos.Item("cCodigo", frm.viewDatos.CurrentRow.Index).Value
+                        Me.txtCod_Articulo.Text = cod_articulo
+                    End If
+                End If                
+
+            Catch ex As Exception
+                MsgBox(ex.Message, MsgBoxStyle.Critical, Text)
+            End Try            
 
 
         Catch ex As System.Exception
@@ -12021,7 +12072,6 @@ Contador:
     End Function
 
     Private Function GetPrecio_Unit(_Cod As String) As Decimal
-        'zoe
         Dim dt As New DataTable
         cFunciones.Llenar_Tabla_Generico("select Proveedor, Precio_A, Promo_Activa, Promo_Finaliza, Precio_Promo from Inventario where codigo = " & _Cod, dt, CadenaConexionSeePOS)
         If dt.Rows.Count > 0 Then

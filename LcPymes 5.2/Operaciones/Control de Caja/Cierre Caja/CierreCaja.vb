@@ -2572,6 +2572,18 @@ Public Class CierreCaja
 
 #Region "Guardar"
     Private Sub Guardar()
+
+        Dim dif As String = Me.TextEdit17.EditValue
+        If IsNumeric(dif) Then
+            If Math.Abs(CDec(dif)) > 1500 Then
+                MsgBox("La diferencia de caja es mayor que lo permitido", MsgBoxStyle.Exclamation, Me.Text)
+                Exit Sub
+            End If
+        End If
+
+        If MsgBox("Desea Guardar El cierre de caja", MsgBoxStyle.Question + MsgBoxStyle.YesNo) = MsgBoxResult.No Then
+            Exit Sub
+        End If
         CargarDetalleCierreCaja()
         If Registar() Then
             CambiarEstadoApertura()

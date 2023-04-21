@@ -4019,7 +4019,7 @@ Public Class frmCompra
             Dim Cantidad As Decimal = BindingContext(DataSetCompras, "compras.ComprasArticulos_Comprados").Current("Cantidad")
             Dim Precio As Decimal = BindingContext(DataSetCompras, "compras.ComprasArticulos_Comprados").Current("Precio_A")
             Try
-                If Cantidad > 0 Or Base > 0 Then
+                If Cantidad > 0 And Base > 0 Then
                     Dim CostoReal As Decimal = Base - (MontoDescuento / Cantidad)
                     If CostoReal > 0 Then
                         Dim Utilidad As Decimal = ((Precio / CostoReal) - 1) * 100
@@ -4030,7 +4030,7 @@ Public Class frmCompra
                         BindingContext(DataSetCompras, "compras.ComprasArticulos_Comprados").Current("Utilidad") = 0
                         BindingContext(DataSetCompras, "compras.ComprasArticulos_Comprados").EndCurrentEdit()
                     End If
-                   
+
                 Else
                     BindingContext(DataSetCompras, "compras.ComprasArticulos_Comprados").Current("Utilidad") = 0
                     BindingContext(DataSetCompras, "compras.ComprasArticulos_Comprados").EndCurrentEdit()
