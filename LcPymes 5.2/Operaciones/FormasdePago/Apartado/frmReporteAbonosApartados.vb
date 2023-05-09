@@ -44,13 +44,12 @@ Public Class frmReporteAbonosApartados
     End Sub
 
     Private Sub btnImprimirApartado_Click(sender As Object, e As EventArgs) Handles btnImprimirApartado.Click
-        GeneralCaja.clsImpresion.InicalizaReporte("SeePOS")
-        GeneralCaja.clsImpresion.ImprimirApartado(Me.IdApartado, Me.Caja)
+        GeneralCaja.clsImpresion.ImprimirApartado(Me.IdApartado, "SeePOS", Me.Caja)
     End Sub
 
     Private Sub btnImprimirLista_Click(sender As Object, e As EventArgs) Handles btnImprimirLista.Click
         For Each a As DataGridViewRow In Me.viewDatos.Rows
-            GeneralCaja.clsImpresion.ImprimirAbonoApartado(a.Cells("Id_abonoapartado").Value, Me.Caja)
+            GeneralCaja.clsImpresion.ImprimirAbonoApartado2(a.Cells("Id_abonoapartado").Value, "SeePOS", Me.Caja)
         Next
     End Sub
 

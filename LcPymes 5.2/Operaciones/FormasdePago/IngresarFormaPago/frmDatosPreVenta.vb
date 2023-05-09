@@ -164,9 +164,8 @@ Public Class frmDatosPreVenta
                 Exit Sub
             End Try
 
-            GeneralCaja.clsImpresion.InicalizaReporte(Me.txtPuntoVenta.Text)
-            GeneralCaja.clsImpresion.ImprimirAdelanto(Id_Adelanto, True, Me.Numero_Caja)
-            GeneralCaja.clsImpresion.ImprimirAdelanto(Id_Adelanto, True, Me.Numero_Caja)
+            GeneralCaja.clsImpresion.ImprimirAdelanto(Id_Adelanto, True, Me.Numero_Caja, Me.txtPuntoVenta.Text)
+            GeneralCaja.clsImpresion.ImprimirAdelanto(Id_Adelanto, True, Me.Numero_Caja, Me.txtPuntoVenta.Text)
             '***************************************************************************************                    
             Dim frmFicha As New frmNumeroFicha
             frmFicha.CargarPrimerUsuario(Me.Id_Usuario)
@@ -677,15 +676,14 @@ Public Class frmDatosPreVenta
                 Try
                     Dim clsImpresion As New ImpresionCaja
                     For Each r As DataGridViewRow In Me.viewFichas.Rows
-                        clsImpresion.InicalizaReporte(r.Cells("cPuntoVenta").Value)
                         If r.Cells("cTipo").Value = "CON" Or r.Cells("cTipo").Value = "MCO" Or r.Cells("cTipo").Value = "TCO" Or r.Cells("cTipo").Value = "PVE" Then
-                            clsImpresion.ImprimirFactura(r.Cells("cIdDocumento").Value, True, Caja)
+                            clsImpresion.ImprimirFactura(r.Cells("cIdDocumento").Value, True, r.Cells("cPuntoVenta").Value, Caja)
 
                             Dim Cupones As Integer = Me.GetCupones(r.Cells("cId").Value)
                             If Cupones > 0 Then
                                 Dim index As Integer = 0
                                 While index < Cupones
-                                    clsImpresion.Imprimir_Tiquete_Rifa(Caja, r.Cells("cIdDocumento").Value)
+                                    clsImpresion.Imprimir_Tiquete_Rifa(Caja, r.Cells("cIdDocumento").Value, r.Cells("cPuntoVenta").Value)
                                     index += 1
                                 End While
 
@@ -693,12 +691,12 @@ Public Class frmDatosPreVenta
 
                         End If
                         If r.Cells("cTipo").Value = "ABO" Then
-                            clsImpresion.ImprimirReciboDinero(r.Cells("cIdDocumento").Value, Me.Numero_Caja)
+                            clsImpresion.ImprimirReciboDinero(r.Cells("cIdDocumento").Value, r.Cells("cPuntoVenta").Value, Me.Numero_Caja)
                         End If
                         If r.Cells("cTipo").Value = "APA" Then
-                            clsImpresion.ImprimirApartado(r.Cells("cDocumento").Value, Me.Numero_Caja)
+                            clsImpresion.ImprimirApartado(r.Cells("cDocumento").Value, r.Cells("cPuntoVenta").Value, Me.Numero_Caja)
                             If CDec(r.Cells("cAbono").Value) > 0 Then
-                                clsImpresion.ImprimirAbonoApartado(r.Cells("cIdDocumento").Value, Me.Numero_Caja)
+                                clsImpresion.ImprimirAbonoApartado2(r.Cells("cIdDocumento").Value, r.Cells("cPuntoVenta").Value, Me.Numero_Caja)
                             End If
                         End If
                     Next

@@ -4522,15 +4522,15 @@ Public Class frmCompra
 
                             'Link.DesConectar(Link.sQlconexion)
 
-                            BindingContext(DataSetCompras, "Compras.Comprasarticulos_comprados").EndCurrentEdit()
-                            Me.ImportandoXMLCompra = False
-                            Calcular_Totales_Compras()
-                            Calcular_Totales_Compras()
-                            Me.PoneUtilidad()
-
+                            BindingContext(DataSetCompras, "Compras.Comprasarticulos_comprados").EndCurrentEdit()                          
                         End If
                     End If
                 Next
+                Me.ImportandoXMLCompra = False
+                Calcular_Totales_Compras()
+                Calcular_Totales_Compras()
+                Me.PoneUtilidad()
+
             End If
             Me.ImportandoXMLCompra = False
         Catch ex As SystemException

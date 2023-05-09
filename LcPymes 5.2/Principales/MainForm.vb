@@ -2884,7 +2884,7 @@ Public Class MainForm
         'sbpVersion
         '
         Me.sbpVersion.Name = "sbpVersion"
-        Me.sbpVersion.Text = "*20Abril2023"
+        Me.sbpVersion.Text = "*09Mayo2023"
         Me.sbpVersion.Width = 150
         '
         'ImageList1

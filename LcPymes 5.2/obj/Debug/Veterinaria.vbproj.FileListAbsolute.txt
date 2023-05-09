@@ -2562,6 +2562,7 @@ C:\Users\LENOVO\Documents\GitHub\SuvesaPOSActualMejorado\LcPymes 5.2\obj\Debug\L
 C:\Users\LENOVO\Documents\GitHub\SuvesaPOSActualMejorado\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmFichasporUsuario.resources
 C:\Users\LENOVO\Documents\GitHub\SuvesaPOSActualMejorado\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmEstadoFirmadoContado.resources
 C:\Users\LENOVO\Documents\GitHub\SuvesaPOSActualMejorado\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmPrincipalCaja.resources
+C:\Users\LENOVO\Documents\GitHub\SuvesaPOSActualMejorado\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmImprimirDevoluciones.resources
 C:\Users\LENOVO\Documents\GitHub\SuvesaPOSActualMejorado\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmBuscarFichasActivas.resources
 C:\Users\LENOVO\Documents\GitHub\SuvesaPOSActualMejorado\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmFormaPagoTranferencia.resources
 C:\Users\LENOVO\Documents\GitHub\SuvesaPOSActualMejorado\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmIngresarNumerodeFicha.resources
@@ -2680,6 +2681,7 @@ C:\Users\LENOVO\Documents\GitHub\SuvesaPOSActualMejorado\LcPymes 5.2\obj\Debug\L
 C:\Users\LENOVO\Documents\GitHub\SuvesaPOSActualMejorado\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmReporteDescuentosxProveedor.resources
 C:\Users\LENOVO\Documents\GitHub\SuvesaPOSActualMejorado\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmReporteDevoluciones.resources
 C:\Users\LENOVO\Documents\GitHub\SuvesaPOSActualMejorado\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmReportePorcentajeVenta.resources
+C:\Users\LENOVO\Documents\GitHub\SuvesaPOSActualMejorado\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmReporteVentaSugerida.resources
 C:\Users\LENOVO\Documents\GitHub\SuvesaPOSActualMejorado\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmVentasxProveedor.resources
 C:\Users\LENOVO\Documents\GitHub\SuvesaPOSActualMejorado\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmEntradasAnticipos.resources
 C:\Users\LENOVO\Documents\GitHub\SuvesaPOSActualMejorado\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmMovimientosAnticipos.resources
@@ -2877,4 +2879,3 @@ C:\Users\LENOVO\Documents\GitHub\SuvesaPOSActualMejorado\LcPymes 5.2\obj\Debug\e
 C:\Users\LENOVO\Documents\GitHub\SuvesaPOSActualMejorado\LcPymes 5.2\obj\Debug\Veterinaria.exe.manifest
 C:\Users\LENOVO\Documents\GitHub\SuvesaPOSActualMejorado\LcPymes 5.2\obj\Debug\Veterinaria.application
 C:\Users\LENOVO\Documents\GitHub\SuvesaPOSActualMejorado\LcPymes 5.2\obj\Debug\Veterinaria.xml
-C:\Users\LENOVO\Documents\GitHub\SuvesaPOSActualMejorado\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmReporteVentaSugerida.resources

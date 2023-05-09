@@ -331,17 +331,15 @@ Public Class frmIngresarFomasdePago
                 Exit Sub
             End If
 
-            GeneralCaja.clsImpresion.InicalizaReporte(Me.PuntodeVenta)
-
             If EsApartado = True Then
-                GeneralCaja.clsImpresion.ImprimirApartado(Me.Id_Apartado, Me.Numero_Caja)
+                GeneralCaja.clsImpresion.ImprimirApartado(Me.Id_Apartado, Me.PuntodeVenta, Me.Numero_Caja)
                 If MontoApartado > 0 Then
-                    GeneralCaja.clsImpresion.ImprimirAbonoApartado(Me.Id_AbonoApartado, Me.Numero_Caja)
+                    GeneralCaja.clsImpresion.ImprimirAbonoApartado2(Me.Id_AbonoApartado, Me.PuntodeVenta, Me.Numero_Caja)
                 End If
 
-                GeneralCaja.clsImpresion.ImprimirApartado(Me.Id_Apartado, Me.Numero_Caja)
+                GeneralCaja.clsImpresion.ImprimirApartado(Me.Id_Apartado, Me.PuntodeVenta, Me.Numero_Caja)
                 If MontoApartado > 0 Then
-                    GeneralCaja.clsImpresion.ImprimirAbonoApartado(Me.Id_AbonoApartado, Me.Numero_Caja)
+                    GeneralCaja.clsImpresion.ImprimirAbonoApartado2(Me.Id_AbonoApartado, Me.PuntodeVenta, Me.Numero_Caja)
                 End If
 
                 Me.DialogResult = Windows.Forms.DialogResult.OK
@@ -350,11 +348,11 @@ Public Class frmIngresarFomasdePago
             End If
 
             If esSoloAbonoApartado = True Then
-                GeneralCaja.clsImpresion.ImprimirAbonoApartado(Me.Id_AbonoApartado, Me.Numero_Caja)
+                GeneralCaja.clsImpresion.ImprimirAbonoApartado2(Me.Id_AbonoApartado, Me.PuntodeVenta, Me.Numero_Caja)
 
                 Dim IdFacturaAbono As Long = Me.IdFactura(Me.Id_Apartado)
                 If IdFacturaAbono > 0 Then
-                    GeneralCaja.clsImpresion.ImprimirFactura(IdFacturaAbono, True, Me.Numero_Caja)
+                    GeneralCaja.clsImpresion.ImprimirFactura(IdFacturaAbono, True, Me.PuntodeVenta, Me.Numero_Caja)
                 End If
 
                 Me.DialogResult = Windows.Forms.DialogResult.OK
@@ -363,12 +361,12 @@ Public Class frmIngresarFomasdePago
             End If
 
             If esReciboDinero = True Then
-                GeneralCaja.clsImpresion.ImprimirReciboDinero(IdRecibo, Me.Numero_Caja)
-                GeneralCaja.clsImpresion.ImprimirReciboDinero(IdRecibo, Me.Numero_Caja)
+                GeneralCaja.clsImpresion.ImprimirReciboDinero(IdRecibo, Me.PuntodeVenta, Me.Numero_Caja)
+                GeneralCaja.clsImpresion.ImprimirReciboDinero(IdRecibo, Me.PuntodeVenta, Me.Numero_Caja)
                 Exit Sub
             End If
 
-            GeneralCaja.clsImpresion.ImprimirFactura(Id_Factura, True, Me.Numero_Caja)
+            GeneralCaja.clsImpresion.ImprimirFactura(Id_Factura, True, Me.PuntodeVenta, Me.Numero_Caja)
         End If
     End Sub
 

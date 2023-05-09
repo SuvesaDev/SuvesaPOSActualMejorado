@@ -684,6 +684,9 @@
     <EmbeddedResource Include="Operaciones\FormasdePago\frmPrincipalCaja.resx">
       <DependentUpon>frmPrincipalCaja.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Operaciones\FormasdePago\ImprimrDocumentos\frmImprimirDevoluciones.resx">
+      <DependentUpon>frmImprimirDevoluciones.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Operaciones\FormasdePago\IngresarFormaPago\BuscarFichasActivas\frmBuscarFichasActivas.resx">
       <DependentUpon>frmBuscarFichasActivas.vb</DependentUpon>
     </EmbeddedResource>
@@ -4681,6 +4684,12 @@
       <DependentUpon>frmPrincipalCaja.vb</DependentUpon>
     </Compile>
     <Compile Include="Operaciones\FormasdePago\frmPrincipalCaja.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Operaciones\FormasdePago\ImprimrDocumentos\frmImprimirDevoluciones.Designer.vb">
+      <DependentUpon>frmImprimirDevoluciones.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Operaciones\FormasdePago\ImprimrDocumentos\frmImprimirDevoluciones.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Operaciones\FormasdePago\IngresarFormaPago\BuscarFichasActivas\frmBuscarFichasActivas.Designer.vb">

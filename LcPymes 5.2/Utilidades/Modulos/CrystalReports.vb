@@ -62,7 +62,8 @@ Public Module CrystalReportsConexion
 
             Return True
         Catch ex As System.Exception
-            MsgBox(ex.Message)
+            MsgBox(ex.Message, MsgBoxStyle.Critical, "LoadReportViewer")
+            RegistrarLog(ex.StackTrace)
             Return False
         End Try
     End Function
