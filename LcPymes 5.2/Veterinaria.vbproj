@@ -556,6 +556,9 @@
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>rtpAbonocPagar.vb</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="Operaciones\Compras\Bonificacion\frmRegistroBonificacion.resx">
+      <DependentUpon>frmRegistroBonificacion.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Operaciones\Compras\Compras\frmAsignarCabysCompra.resx">
       <DependentUpon>frmAsignarCabysCompra.vb</DependentUpon>
     </EmbeddedResource>
@@ -771,6 +774,10 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Operaciones\Manejocxp\frmPrepagoCxP.resx">
       <DependentUpon>frmPrepagoCxP.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Operaciones\Manejocxp\rptBonificacionCompras.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptBonificacionCompras.vb</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Operaciones\OrdendeTrabajo\Cierre\frmAsistenteCierre.resx">
       <DependentUpon>frmAsistenteCierre.vb</DependentUpon>
@@ -1166,6 +1173,10 @@
     <EmbeddedResource Include="Reportes\Ventas\a Reportes de Ventas\rptArticulosComprados.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>rptArticulosComprados.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\Ventas\a Reportes de Ventas\rptCrecimientoCompras2.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptCrecimientoCompras2.vb</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Reportes\Ventas\a Reportes de Ventas\rptGraficoVetasMensual.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
@@ -4099,6 +4110,12 @@
       <DependentUpon>rtpAbonocPagar.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Operaciones\Compras\Bonificacion\frmRegistroBonificacion.Designer.vb">
+      <DependentUpon>frmRegistroBonificacion.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Operaciones\Compras\Bonificacion\frmRegistroBonificacion.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Operaciones\Compras\Compras\frmAsignarCabysCompra.Designer.vb">
       <DependentUpon>frmAsignarCabysCompra.vb</DependentUpon>
     </Compile>
@@ -4862,6 +4879,12 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Operaciones\Manejocxp\PrintCheque.vb" />
+    <Compile Include="Operaciones\Manejocxp\rptBonificacionCompras.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptBonificacionCompras.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Operaciones\OrdendeTrabajo\Cierre\CierreOrdenTrabajo.vb" />
     <Compile Include="Operaciones\OrdendeTrabajo\Cierre\frmAsistenteCierre.Designer.vb">
       <DependentUpon>frmAsistenteCierre.vb</DependentUpon>
@@ -5635,6 +5658,12 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>rptArticulosComprados.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reportes\Ventas\a Reportes de Ventas\rptCrecimientoCompras2.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptCrecimientoCompras2.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Reportes\Ventas\a Reportes de Ventas\rptGraficoVetasMensual.vb">

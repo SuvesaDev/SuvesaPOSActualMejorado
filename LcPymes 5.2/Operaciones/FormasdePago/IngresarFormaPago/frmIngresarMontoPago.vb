@@ -35,6 +35,7 @@ Public Class frmIngresarMontoPago
                 If CDec(Me.txtMonto.Text) > 0 Then
                     If esTarjeta = True Then
                         If Me.PasaDigitos = True Then
+                            '***********************************************************************************
                             Dim cls As New Credomatic.Operaciones.Operaciones
                             Dim respuesta As Credomatic.Operaciones.Respuesta
                             Dim Factura = Me.GetNumeroFactura(cls.IdTerminal)
@@ -45,6 +46,7 @@ Public Class frmIngresarMontoPago
                             Else
 
                             End If
+                            '***********************************************************************************
                         End If
                     Else
                         Me.DialogResult = Windows.Forms.DialogResult.OK

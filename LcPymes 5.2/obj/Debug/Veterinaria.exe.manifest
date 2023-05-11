@@ -317,14 +317,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Veterinaria.exe" size="29094400">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Veterinaria.exe" size="29148160">
       <assemblyIdentity name="Veterinaria" version="0.0.0.0" language="neutral" processorArchitecture="x86" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>zlHGdn5YiaaYdRUzTybNe3qwQ+2TxvQynLUJD40XVVM=</dsig:DigestValue>
+        <dsig:DigestValue>H5QfdwingWGvUlJO6HSKdPdDLVP9rhjGW6wFmov8uuo=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -336,7 +336,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>fvNfQr1mBvlIOIz1Ug8cdHJcJo+uXXqOqI6JqTLPbz4=</dsig:DigestValue>
+        <dsig:DigestValue>DlwNTjr2EPi3WTyUNdK9/KObE43qWOG5k97sj3Io/lg=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -348,7 +348,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>pZiYjulc2KZlr5mGQk3PNiYJqv9GFmX824nUFyoZP4A=</dsig:DigestValue>
+        <dsig:DigestValue>qv8m13QuRHkNgockuKUCKn7qG6wWjnJ8VR91rVgDf7s=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

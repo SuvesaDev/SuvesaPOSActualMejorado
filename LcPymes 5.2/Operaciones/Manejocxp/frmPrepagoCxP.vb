@@ -4,6 +4,27 @@ Imports System.Data.SqlClient
 Public Class frmPrepagoCxP
     Dim Tabla As DataTable
 
+    Private Sub MostrarReporteBonificaciones()
+
+    End Sub
+
+    Private Sub MensajeBonificacion(ByVal codigo As String)
+        Try
+            Dim dt As New DataTable
+            cFunciones.Llenar_Tabla_Generico("select Bonificacion, MensajeBonificacion from Proveedores  where CodigoProv = " & codigo, dt, CadenaConexionSeePOS)
+            If dt.Rows.Count > 0 Then
+                If dt.Rows(0).Item("Bonificacion") = True Then
+                    Dim msg As String = dt.Rows(0).Item("MensajeBonificacion")
+                    MsgBox("favor revisar que el proveedor compla con las siguientes bonificaciones o descuentos: " & vbCrLf _
+                           & "" & vbCrLf _
+                           & msg, MsgBoxStyle.Information, Me.Text)
+                End If
+            End If
+        Catch ex As Exception
+
+        End Try
+    End Sub
+
     Private Sub CargarInformacionProveedor(ByVal codigo As String)
         Dim cConexion As New Conexion
         Dim funciones As New cFunciones
@@ -48,6 +69,8 @@ Public Class frmPrepagoCxP
 
                         
                     End If
+
+                    Me.MensajeBonificacion(codigo)
                 Else
                     MsgBox("La identificación del Proveedor no se encuentra", MsgBoxStyle.Information, "Atención...")
                     txtCodigo.Focus()
@@ -145,5 +168,15 @@ Public Class frmPrepagoCxP
 
     Private Sub frmPrepagoCxP_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
+    End Sub
+
+    Private Sub btnBonificacion_Click(sender As Object, e As EventArgs) Handles btnBonificacion.Click
+        If Me.txtNombre.Text <> "" Then
+            Dim ReporteDocumento As New rptBonificacionCompras
+            ReporteDocumento.Refresh()
+            ReporteDocumento.PrintOptions.PaperSize = CrystalDecisions.Shared.PaperSize.DefaultPaperSize
+            ReporteDocumento.SetParameterValue(0, CDbl(Me.txtCodigo.Text))
+            CrystalReportsConexion.LoadShow(ReporteDocumento, MdiParent)
+        End If
     End Sub
 End Class

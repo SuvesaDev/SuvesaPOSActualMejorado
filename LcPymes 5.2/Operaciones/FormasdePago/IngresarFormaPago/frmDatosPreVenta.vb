@@ -521,7 +521,7 @@ Public Class frmDatosPreVenta
                         If r.Cells("cTipo").Value = "APA" Then
                             IdApartdo = 0
                             IdAbonoApartado = 0
-                            trans.SetParametro("@IdPreventa", r.Cells("cId").Value)
+                            trans.SetParametro("@IdPreventa", CLng(r.Cells("cId").Value))
                             trans.SetParametro("@FechaVence", DateAdd(DateInterval.Day, 30, Date.Now))
                             trans.SetParametro("@MontoAbono", CDec(r.Cells("cAbono").Value))
                             trans.SetParametro("@PuntodeVenta", r.Cells("cPuntoVenta").Value)

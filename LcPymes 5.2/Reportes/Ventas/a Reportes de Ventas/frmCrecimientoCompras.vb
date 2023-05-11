@@ -43,13 +43,31 @@ Public Class frmCrecimientoCompras
     End Sub
 
     Private Sub ButtonMostrar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ButtonMostrar.Click
-        If Me.lblProveedor.Text <> "" And Me.txtCodigo.Text <> "" Then
-            Dim rpt As New rptObtenerCrecimientoCompras
-            rpt.SetParameterValue(0, Me.FechaInicio.Value.Year)
-            rpt.SetParameterValue(1, Me.FechaFinal.Value.Year)
-            rpt.SetParameterValue(2, Me.CodProveedor)
-            CrystalReportsConexion.LoadReportViewer(VisorReporte, rpt, , CadenaConexionSeePOS)
-            VisorReporte.Show()
+        If Me.ckMensual.Checked = False Then
+            If Me.lblProveedor.Text <> "" And Me.txtCodigo.Text <> "" Then
+                Dim rpt As New rptObtenerCrecimientoCompras
+                rpt.SetParameterValue(0, Me.FechaInicio.Value.Year)
+                rpt.SetParameterValue(1, Me.FechaFinal.Value.Year)
+                rpt.SetParameterValue(2, Me.CodProveedor)
+                CrystalReportsConexion.LoadReportViewer(VisorReporte, rpt, , CadenaConexionSeePOS)
+                VisorReporte.Show()
+            End If
+        End If
+        If Me.ckMensual.Checked = True Then
+            If Me.ckTodos.Checked = False Then
+                If Me.lblProveedor.Text <> "" And Me.txtCodigo.Text <> "" Then
+                    Dim rpt As New rptCrecimientoCompras2
+                    rpt.Refresh()
+                    rpt.SetParameterValue(0, Me.FechaInicio.Value)
+                    rpt.SetParameterValue(1, Me.FechaFinal.Value)
+                    rpt.SetParameterValue(2, Me.CodProveedor)
+                    rpt.SetParameterValue(3, Me.lblProveedor.Text)
+                    CrystalReportsConexion.LoadReportViewer(VisorReporte, rpt, , CadenaConexionSeePOS)
+                    VisorReporte.Show()
+                End If
+            Else
+                MsgBox("Debe Seleccionar un Proveedor", MsgBoxStyle.Exclamation, Me.Text)
+            End If
         End If
     End Sub
 
@@ -74,4 +92,13 @@ Public Class frmCrecimientoCompras
         End If
     End Sub
 
+    Private Sub ckMensual_CheckedChanged(sender As Object, e As EventArgs) Handles ckMensual.CheckedChanged
+        If Me.ckMensual.Checked = True Then
+            FechaInicio.Format = DateTimePickerFormat.Short
+            FechaFinal.Format = DateTimePickerFormat.Short
+        Else
+            FechaInicio.Format = DateTimePickerFormat.Custom
+            FechaFinal.Format = DateTimePickerFormat.Custom
+        End If
+    End Sub
 End Class

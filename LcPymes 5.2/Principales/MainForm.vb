@@ -222,6 +222,7 @@ Public Class MainForm
     Friend WithEvents MenuItem159 As System.Windows.Forms.MenuItem
     Friend WithEvents MenuItem167 As System.Windows.Forms.MenuItem
     Friend WithEvents MenuItem173 As System.Windows.Forms.MenuItem
+    Friend WithEvents MenuItem175 As System.Windows.Forms.MenuItem
     Dim SistemaNormal As Boolean = False
 #End Region
 
@@ -513,6 +514,7 @@ Public Class MainForm
         Me.MenuItem169 = New System.Windows.Forms.MenuItem()
         Me.MenuItem170 = New System.Windows.Forms.MenuItem()
         Me.MenuItem172 = New System.Windows.Forms.MenuItem()
+        Me.MenuItem175 = New System.Windows.Forms.MenuItem()
         Me.MenuItemLinea04 = New System.Windows.Forms.MenuItem()
         Me.MenuItemControlCaja = New System.Windows.Forms.MenuItem()
         Me.MenuItemOperacion_Caja_Apertura = New System.Windows.Forms.MenuItem()
@@ -1414,7 +1416,7 @@ Public Class MainForm
         Me.menuExtender.SetExtEnable(Me.MenuItemCuentasXPagar, True)
         Me.menuExtender.SetImageIndex(Me.MenuItemCuentasXPagar, -1)
         Me.MenuItemCuentasXPagar.Index = 6
-        Me.MenuItemCuentasXPagar.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.MenuItemOperacion_AbonosCuentaProveedor, Me.MenuItemOperacion_AjusteCuentaProveedor, Me.MenuItemOperacion_EstadoCuentaProveedor, Me.MenuItem148, Me.MenuItem171, Me.MenuItem169, Me.MenuItem170, Me.MenuItem172})
+        Me.MenuItemCuentasXPagar.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.MenuItemOperacion_AbonosCuentaProveedor, Me.MenuItemOperacion_AjusteCuentaProveedor, Me.MenuItemOperacion_EstadoCuentaProveedor, Me.MenuItem148, Me.MenuItem171, Me.MenuItem175, Me.MenuItem169, Me.MenuItem170, Me.MenuItem172})
         Me.MenuItemCuentasXPagar.OwnerDraw = True
         Me.MenuItemCuentasXPagar.Text = "Cuentas  x Pagar"
         '
@@ -1451,20 +1453,26 @@ Public Class MainForm
         'MenuItem169
         '
         Me.menuExtender.SetImageIndex(Me.MenuItem169, -1)
-        Me.MenuItem169.Index = 5
+        Me.MenuItem169.Index = 6
         Me.MenuItem169.Text = "Pagos"
         '
         'MenuItem170
         '
         Me.menuExtender.SetImageIndex(Me.MenuItem170, -1)
-        Me.MenuItem170.Index = 6
+        Me.MenuItem170.Index = 7
         Me.MenuItem170.Text = "Pagos sin Aplicar"
         '
         'MenuItem172
         '
         Me.menuExtender.SetImageIndex(Me.MenuItem172, -1)
-        Me.MenuItem172.Index = 7
+        Me.MenuItem172.Index = 8
         Me.MenuItem172.Text = "-"
+        '
+        'MenuItem175
+        '
+        Me.menuExtender.SetImageIndex(Me.MenuItem175, -1)
+        Me.MenuItem175.Index = 5
+        Me.MenuItem175.Text = "Registro bonificacion"
         '
         'MenuItemLinea04
         '
@@ -2826,7 +2834,7 @@ Public Class MainForm
         'StatusBar1
         '
         Me.StatusBar1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.StatusBar1.Location = New System.Drawing.Point(0, 305)
+        Me.StatusBar1.Location = New System.Drawing.Point(0, 279)
         Me.StatusBar1.Name = "StatusBar1"
         Me.StatusBar1.Panels.AddRange(New System.Windows.Forms.StatusBarPanel() {Me.StatusBarPanel1, Me.StatusBarPanel4, Me.StatusBarPanel2, Me.StatusBarPanel3, Me.StatusBarPanel5, Me.sbpTCCompra, Me.sbpTCVenta, Me.sbpVersion})
         Me.StatusBar1.ShowPanels = True
@@ -3189,7 +3197,7 @@ Public Class MainForm
         '
         Me.AutoScaleBaseSize = New System.Drawing.Size(6, 15)
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(1480, 321)
+        Me.ClientSize = New System.Drawing.Size(1480, 295)
         Me.Controls.Add(Me.ToolStrip1)
         Me.Controls.Add(Me.PictureBoxFondo)
         Me.Controls.Add(Me.StatusBar1)
@@ -5459,6 +5467,12 @@ Contador:
 
     Private Sub MenuItem173_Click_1(sender As Object, e As EventArgs) Handles MenuItem173.Click
         Dim frm As New frmReporteVentaSugerida
+        frm.MdiParent = Me
+        frm.Show()
+    End Sub
+
+    Private Sub MenuItem175_Click_1(sender As Object, e As EventArgs) Handles MenuItem175.Click
+        Dim frm As New frmRegistroBonificacion
         frm.MdiParent = Me
         frm.Show()
     End Sub

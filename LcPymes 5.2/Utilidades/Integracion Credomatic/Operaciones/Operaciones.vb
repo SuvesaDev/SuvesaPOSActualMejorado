@@ -162,6 +162,7 @@ Namespace Credomatic
                     Return 30000.0
                 End If
             End Function
+
             Public Function Venta(_Factura As String, _Total As Decimal) As Respuesta
                 Me.request = New EMVStreamRequest()
                 Me.request.transactionType = "SALE"

@@ -22,18 +22,11 @@ Partial Class frmPrepagoCxP
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.viewDatos = New System.Windows.Forms.DataGridView()
-        Me.btnApliar = New System.Windows.Forms.Button()
-        Me.txtCodigo = New System.Windows.Forms.TextBox()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.txtNombre = New System.Windows.Forms.TextBox()
-        Me.lblTotal = New System.Windows.Forms.Label()
-        Me.btnCalcularMonto = New System.Windows.Forms.Button()
         Me.cIdCompra = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.cFechaAbono = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.cDocumento = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -41,6 +34,14 @@ Partial Class frmPrepagoCxP
         Me.cFactura = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.cFecha = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.cTotal = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.btnApliar = New System.Windows.Forms.Button()
+        Me.txtCodigo = New System.Windows.Forms.TextBox()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.txtNombre = New System.Windows.Forms.TextBox()
+        Me.lblTotal = New System.Windows.Forms.Label()
+        Me.btnCalcularMonto = New System.Windows.Forms.Button()
+        Me.btnBonificacion = New System.Windows.Forms.Button()
         CType(Me.viewDatos, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -58,7 +59,7 @@ Partial Class frmPrepagoCxP
         Me.viewDatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.viewDatos.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.cIdCompra, Me.cFechaAbono, Me.cDocumento, Me.cPagar, Me.cFactura, Me.cFecha, Me.cTotal})
         Me.viewDatos.Location = New System.Drawing.Point(13, 58)
-        Me.viewDatos.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.viewDatos.Margin = New System.Windows.Forms.Padding(4)
         Me.viewDatos.MultiSelect = False
         Me.viewDatos.Name = "viewDatos"
         Me.viewDatos.RowHeadersVisible = False
@@ -67,13 +68,64 @@ Partial Class frmPrepagoCxP
         Me.viewDatos.Size = New System.Drawing.Size(990, 503)
         Me.viewDatos.TabIndex = 3
         '
+        'cIdCompra
+        '
+        Me.cIdCompra.HeaderText = "IdCompra"
+        Me.cIdCompra.Name = "cIdCompra"
+        Me.cIdCompra.Visible = False
+        '
+        'cFechaAbono
+        '
+        DataGridViewCellStyle5.Format = "d"
+        DataGridViewCellStyle5.NullValue = Nothing
+        Me.cFechaAbono.DefaultCellStyle = DataGridViewCellStyle5
+        Me.cFechaAbono.HeaderText = "Fecha Recibo"
+        Me.cFechaAbono.Name = "cFechaAbono"
+        '
+        'cDocumento
+        '
+        Me.cDocumento.HeaderText = "Documento"
+        Me.cDocumento.Name = "cDocumento"
+        '
+        'cPagar
+        '
+        Me.cPagar.HeaderText = "Pagar"
+        Me.cPagar.Name = "cPagar"
+        '
+        'cFactura
+        '
+        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle6.NullValue = Nothing
+        Me.cFactura.DefaultCellStyle = DataGridViewCellStyle6
+        Me.cFactura.HeaderText = "Factura"
+        Me.cFactura.Name = "cFactura"
+        Me.cFactura.ReadOnly = True
+        '
+        'cFecha
+        '
+        DataGridViewCellStyle7.Format = "d"
+        DataGridViewCellStyle7.NullValue = Nothing
+        Me.cFecha.DefaultCellStyle = DataGridViewCellStyle7
+        Me.cFecha.HeaderText = "Fecha"
+        Me.cFecha.Name = "cFecha"
+        Me.cFecha.ReadOnly = True
+        '
+        'cTotal
+        '
+        DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        DataGridViewCellStyle8.Format = "N2"
+        Me.cTotal.DefaultCellStyle = DataGridViewCellStyle8
+        Me.cTotal.HeaderText = "Saldo"
+        Me.cTotal.Name = "cTotal"
+        Me.cTotal.ReadOnly = True
+        '
         'btnApliar
         '
         Me.btnApliar.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.btnApliar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnApliar.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnApliar.Location = New System.Drawing.Point(733, 565)
-        Me.btnApliar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnApliar.Margin = New System.Windows.Forms.Padding(4)
         Me.btnApliar.Name = "btnApliar"
         Me.btnApliar.Size = New System.Drawing.Size(271, 48)
         Me.btnApliar.TabIndex = 4
@@ -86,7 +138,7 @@ Partial Class frmPrepagoCxP
         Me.txtCodigo.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.txtCodigo.ForeColor = System.Drawing.Color.Blue
         Me.txtCodigo.Location = New System.Drawing.Point(13, 26)
-        Me.txtCodigo.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtCodigo.Margin = New System.Windows.Forms.Padding(4)
         Me.txtCodigo.Name = "txtCodigo"
         Me.txtCodigo.Size = New System.Drawing.Size(78, 22)
         Me.txtCodigo.TabIndex = 5
@@ -103,7 +155,7 @@ Partial Class frmPrepagoCxP
         Me.Label5.Location = New System.Drawing.Point(99, 5)
         Me.Label5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(904, 19)
+        Me.Label5.Size = New System.Drawing.Size(626, 19)
         Me.Label5.TabIndex = 8
         Me.Label5.Text = "Nombre"
         Me.Label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -132,9 +184,9 @@ Partial Class frmPrepagoCxP
         Me.txtNombre.Enabled = False
         Me.txtNombre.ForeColor = System.Drawing.Color.Blue
         Me.txtNombre.Location = New System.Drawing.Point(99, 26)
-        Me.txtNombre.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtNombre.Margin = New System.Windows.Forms.Padding(4)
         Me.txtNombre.Name = "txtNombre"
-        Me.txtNombre.Size = New System.Drawing.Size(904, 22)
+        Me.txtNombre.Size = New System.Drawing.Size(626, 22)
         Me.txtNombre.TabIndex = 7
         '
         'lblTotal
@@ -158,62 +210,25 @@ Partial Class frmPrepagoCxP
         Me.btnCalcularMonto.TabIndex = 10
         Me.btnCalcularMonto.UseVisualStyleBackColor = True
         '
-        'cIdCompra
+        'btnBonificacion
         '
-        Me.cIdCompra.HeaderText = "IdCompra"
-        Me.cIdCompra.Name = "cIdCompra"
-        Me.cIdCompra.Visible = False
-        '
-        'cFechaAbono
-        '
-        DataGridViewCellStyle1.Format = "d"
-        DataGridViewCellStyle1.NullValue = Nothing
-        Me.cFechaAbono.DefaultCellStyle = DataGridViewCellStyle1
-        Me.cFechaAbono.HeaderText = "Fecha Recibo"
-        Me.cFechaAbono.Name = "cFechaAbono"
-        '
-        'cDocumento
-        '
-        Me.cDocumento.HeaderText = "Documento"
-        Me.cDocumento.Name = "cDocumento"
-        '
-        'cPagar
-        '
-        Me.cPagar.HeaderText = "Pagar"
-        Me.cPagar.Name = "cPagar"
-        '
-        'cFactura
-        '
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle2.NullValue = Nothing
-        Me.cFactura.DefaultCellStyle = DataGridViewCellStyle2
-        Me.cFactura.HeaderText = "Factura"
-        Me.cFactura.Name = "cFactura"
-        Me.cFactura.ReadOnly = True
-        '
-        'cFecha
-        '
-        DataGridViewCellStyle3.Format = "d"
-        DataGridViewCellStyle3.NullValue = Nothing
-        Me.cFecha.DefaultCellStyle = DataGridViewCellStyle3
-        Me.cFecha.HeaderText = "Fecha"
-        Me.cFecha.Name = "cFecha"
-        Me.cFecha.ReadOnly = True
-        '
-        'cTotal
-        '
-        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        DataGridViewCellStyle4.Format = "N2"
-        Me.cTotal.DefaultCellStyle = DataGridViewCellStyle4
-        Me.cTotal.HeaderText = "Saldo"
-        Me.cTotal.Name = "cTotal"
-        Me.cTotal.ReadOnly = True
+        Me.btnBonificacion.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnBonificacion.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnBonificacion.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnBonificacion.Location = New System.Drawing.Point(733, 2)
+        Me.btnBonificacion.Margin = New System.Windows.Forms.Padding(4)
+        Me.btnBonificacion.Name = "btnBonificacion"
+        Me.btnBonificacion.Size = New System.Drawing.Size(270, 48)
+        Me.btnBonificacion.TabIndex = 11
+        Me.btnBonificacion.Text = "Bonificaciones"
+        Me.btnBonificacion.UseVisualStyleBackColor = True
         '
         'frmPrepagoCxP
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1025, 618)
+        Me.Controls.Add(Me.btnBonificacion)
         Me.Controls.Add(Me.btnCalcularMonto)
         Me.Controls.Add(Me.lblTotal)
         Me.Controls.Add(Me.txtCodigo)
@@ -223,7 +238,7 @@ Partial Class frmPrepagoCxP
         Me.Controls.Add(Me.btnApliar)
         Me.Controls.Add(Me.viewDatos)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "frmPrepagoCxP"
@@ -249,4 +264,5 @@ Partial Class frmPrepagoCxP
     Friend WithEvents cFactura As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents cFecha As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents cTotal As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents btnBonificacion As System.Windows.Forms.Button
 End Class
