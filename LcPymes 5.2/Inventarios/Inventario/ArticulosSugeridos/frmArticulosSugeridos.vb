@@ -104,4 +104,11 @@
         Me.EliminarSugerido()
     End Sub
 
+    Private Sub btnNuevo_Click(sender As Object, e As EventArgs) Handles btnNuevo.Click
+        Me.CodigoPrincipal = 0
+        Me.CodigoSugerido = 0
+        Me.txtDescripccionPrincipal.Text = ""
+        Me.txtDescripccionSugerido.Text = ""
+
+    End Sub
 End Class

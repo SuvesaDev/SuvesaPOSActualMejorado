@@ -8583,12 +8583,12 @@ Fin:
     Private Sub UsaGalon(_Codigo As String)
         If _Codigo <> "" Then
             Dim dt As New DataTable
-            cFunciones.Llenar_Tabla_Generico("select UsaGalon from Inventario Where Codigo = " & _Codigo, dt, CadenaConexionSeePOS)
+            cFunciones.Llenar_Tabla_Generico("select UsaGalon, CodGalon from Inventario Where Codigo = " & _Codigo, dt, CadenaConexionSeePOS)
             If dt.Rows.Count > 0 Then
                 If dt.Rows(0).Item("UsaGalon") = 1 Or dt.Rows(0).Item("UsaGalon") = True Then
                     Dim frm As New frmUsaGalon
                     If frm.ShowDialog = Windows.Forms.DialogResult.Cancel Then
-                        Dim CodArticulo As String = "2011.94"
+                        Dim CodArticulo As String = dt.Rows(0).Item("CodGalon")
                         Me.CargarInformacionArticulo(CodArticulo)
                         Me.meter_al_detalle()
                     End If

@@ -51,6 +51,7 @@ Public Class FrmInventario
     Friend WithEvents ckSoloContado As System.Windows.Forms.CheckBox
     Friend WithEvents lblUltimaCompra As System.Windows.Forms.Label
     Friend WithEvents Label57 As System.Windows.Forms.Label
+    Friend WithEvents ckHabilitaFamilia As System.Windows.Forms.CheckBox
     Friend WithEvents TxtUtilidadR_D As DevExpress.XtraEditors.TextEdit
     Friend WithEvents TxtUtilidadR_C As DevExpress.XtraEditors.TextEdit
     Friend WithEvents TxtUtilidadR_B As DevExpress.XtraEditors.TextEdit
@@ -141,6 +142,7 @@ Public Class FrmInventario
     Friend WithEvents Label30 As System.Windows.Forms.Label
     Friend WithEvents Label4 As System.Windows.Forms.Label
     Friend WithEvents Label5 As System.Windows.Forms.Label
+    'Friend WithEvents ckHabilitaFamilia As System.Windows.Forms.CheckBox
     Friend WithEvents Label6 As System.Windows.Forms.Label
     Friend WithEvents Label8 As System.Windows.Forms.Label
     Friend WithEvents Label9 As System.Windows.Forms.Label
@@ -384,6 +386,7 @@ Public Class FrmInventario
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
+        'Me.ckHabilitaFamilia = New System.Windows.Forms.CheckBox
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Label9 = New System.Windows.Forms.Label()
@@ -405,6 +408,7 @@ Public Class FrmInventario
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.Label29 = New System.Windows.Forms.Label()
         Me.Label57 = New System.Windows.Forms.Label()
+        Me.ckHabilitaFamilia = New System.Windows.Forms.CheckBox()
         Me.TxtUtilidadR_D = New DevExpress.XtraEditors.TextEdit()
         Me.TxtUtilidadR_C = New DevExpress.XtraEditors.TextEdit()
         Me.TxtUtilidadR_B = New DevExpress.XtraEditors.TextEdit()
@@ -819,6 +823,17 @@ Public Class FrmInventario
         Me.Label4.TabIndex = 4
         Me.Label4.Text = "Presentación"
         '
+        'ckHabilitaFamilia
+        '        
+        'Me.ckHabilitaFamilia.DataBindings.Add(New System.Windows.Forms.Binding("Checked", Me.DataSetInventario, "Inventario.Consignacion", True))
+        Me.ckHabilitaFamilia.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ckHabilitaFamilia.ForeColor = System.Drawing.Color.White
+        Me.ckHabilitaFamilia.Location = New System.Drawing.Point(248, 44)
+        Me.ckHabilitaFamilia.Name = "ckHabilitaFamilia"
+        Me.ckHabilitaFamilia.Size = New System.Drawing.Size(20, 16)
+        Me.ckHabilitaFamilia.TabIndex = 2
+        Me.ckHabilitaFamilia.Text = "..."
+        '
         'Label5
         '
         Me.Label5.BackColor = System.Drawing.SystemColors.ControlLight
@@ -827,7 +842,7 @@ Public Class FrmInventario
         Me.Label5.ImeMode = System.Windows.Forms.ImeMode.NoControl
         Me.Label5.Location = New System.Drawing.Point(180, 44)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(80, 16)
+        Me.Label5.Size = New System.Drawing.Size(45, 16)
         Me.Label5.TabIndex = 7
         Me.Label5.Text = "Familia"
         '
@@ -1081,7 +1096,7 @@ Public Class FrmInventario
         '
         Me.GroupBox2.BackColor = System.Drawing.Color.Beige
         Me.GroupBox2.Controls.Add(Me.Label29)
-        Me.GroupBox2.Controls.Add(Me.Label57)
+        Me.GroupBox2.Controls.Add(Me.Label57)        
         Me.GroupBox2.Controls.Add(Me.TxtUtilidadR_D)
         Me.GroupBox2.Controls.Add(Me.TxtUtilidadR_C)
         Me.GroupBox2.Controls.Add(Me.TxtUtilidadR_B)
@@ -2044,6 +2059,7 @@ Public Class FrmInventario
         Me.Panel2.Controls.Add(Me.Label3)
         Me.Panel2.Controls.Add(Me.Label4)
         Me.Panel2.Controls.Add(Me.Label5)
+        Me.Panel2.Controls.Add(Me.ckHabilitaFamilia)
         Me.Panel2.Controls.Add(Me.Label6)
         Me.Panel2.Controls.Add(Me.ComboBoxFamilia)
         Me.Panel2.Controls.Add(Me.ComboBoxMarca)
@@ -4274,6 +4290,8 @@ Public Class FrmInventario
 
     Private Sub FrmInventario_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         Try
+            Me.ckHabilitaFamilia.Checked = False
+            Me.ComboBoxFamilia.Enabled = False
             Me.esKatty()
             PMU = VSM(usua.Cedula, Me.Name)
             VerificandoAcceso_a_Modulos("inventarios", "Inhabilitar", usua.Cedula, "Inventario")
@@ -4569,7 +4587,7 @@ Public Class FrmInventario
 
     Private Sub BuscarRegistros()
         Try
-
+            Me.ckHabilitaFamilia.Checked = False
             If Me.BindingContext(Me.DataSetInventario, "Inventario").Count > 0 Then
                 Me.BindingContext(Me.DataSetInventario, "Inventario").CancelCurrentEdit()
                 BindingContext(Me.DataSetInventario, "Inventario2").CancelCurrentEdit()
@@ -5083,7 +5101,7 @@ Public Class FrmInventario
 
     Private Sub GuardarValidaExistencia(_Id As String)
         Dim db As New OBSoluciones.SQL.Sentencias(CadenaConexionSeePOS)
-        db.Ejecutar("Update Inventario set serie = " & IIf(CheckBox2.Checked = True, 1, 0) & ", ValidaExistencia = " & IIf(Me.ckValidaExistencia.Checked = True, 1, 0) & " Where Codigo = " & _Id, CommandType.Text)
+        db.Ejecutar("Update Inventario set serie = " & IIf(CheckBox2.Checked = True, 1, 0) & ", SoloConExistencia = " & IIf(Me.ckValidaExistencia.Checked = True, 1, 0) & ", ValidaExistencia = " & IIf(Me.ckValidaExistencia.Checked = True, 1, 0) & " Where Codigo = " & _Id, CommandType.Text)
         Try
             db.Ejecutar("Update Inventario Set ActivarBodega2 = " & IIf(Me.ckActivarBodega.Checked = True, 1, 0) & " Where Codigo = " & _Id, CommandType.Text)
         Catch ex As Exception
@@ -6469,5 +6487,9 @@ I:
             End If
         End If
 
+    End Sub
+
+    Private Sub ckHabilitaFamilia_CheckedChanged(sender As Object, e As EventArgs) Handles ckHabilitaFamilia.CheckedChanged
+        Me.ComboBoxFamilia.Enabled = Me.ckHabilitaFamilia.Checked
     End Sub
 End Class

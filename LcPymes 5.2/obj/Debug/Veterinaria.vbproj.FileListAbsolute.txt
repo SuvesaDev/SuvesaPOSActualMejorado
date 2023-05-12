@@ -2880,4 +2880,3 @@ C:\Users\LENOVO\Documents\GitHub\SuvesaPOSActualMejorado\LcPymes 5.2\obj\Debug\V
 C:\Users\LENOVO\Documents\GitHub\SuvesaPOSActualMejorado\LcPymes 5.2\obj\Debug\Veterinaria.exe
 C:\Users\LENOVO\Documents\GitHub\SuvesaPOSActualMejorado\LcPymes 5.2\obj\Debug\Veterinaria.xml
 C:\Users\LENOVO\Documents\GitHub\SuvesaPOSActualMejorado\LcPymes 5.2\obj\Debug\Veterinaria.pdb
-C:\Users\LENOVO\Documents\GitHub\SuvesaPOSActualMejorado\LcPymes 5.2\obj\Debug\Veterinaria.vbprojResolveAssemblyReference.cache

@@ -23,6 +23,9 @@ Partial Class frmArticulosSugeridos
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.viewDatos = New System.Windows.Forms.DataGridView()
+        Me.cId = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.cCodigo = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.cDescripccion = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.txtDescripccionSugerido = New System.Windows.Forms.TextBox()
@@ -32,9 +35,7 @@ Partial Class frmArticulosSugeridos
         Me.Label2 = New System.Windows.Forms.Label()
         Me.txtDescripccionPrincipal = New System.Windows.Forms.TextBox()
         Me.btnBuscarPrincipal = New System.Windows.Forms.Button()
-        Me.cId = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.cCodigo = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.cDescripccion = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.btnNuevo = New System.Windows.Forms.Button()
         CType(Me.viewDatos, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
@@ -57,6 +58,27 @@ Partial Class frmArticulosSugeridos
         Me.viewDatos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.viewDatos.Size = New System.Drawing.Size(713, 282)
         Me.viewDatos.TabIndex = 0
+        '
+        'cId
+        '
+        Me.cId.HeaderText = "Id"
+        Me.cId.Name = "cId"
+        Me.cId.ReadOnly = True
+        Me.cId.Visible = False
+        '
+        'cCodigo
+        '
+        Me.cCodigo.HeaderText = "Codigo"
+        Me.cCodigo.Name = "cCodigo"
+        Me.cCodigo.ReadOnly = True
+        Me.cCodigo.Width = 140
+        '
+        'cDescripccion
+        '
+        Me.cDescripccion.HeaderText = "Descripccion"
+        Me.cDescripccion.Name = "cDescripccion"
+        Me.cDescripccion.ReadOnly = True
+        Me.cDescripccion.Width = 375
         '
         'GroupBox1
         '
@@ -132,7 +154,7 @@ Partial Class frmArticulosSugeridos
         '
         Me.txtDescripccionPrincipal.Location = New System.Drawing.Point(108, 33)
         Me.txtDescripccionPrincipal.Name = "txtDescripccionPrincipal"
-        Me.txtDescripccionPrincipal.Size = New System.Drawing.Size(632, 22)
+        Me.txtDescripccionPrincipal.Size = New System.Drawing.Size(558, 22)
         Me.txtDescripccionPrincipal.TabIndex = 8
         '
         'btnBuscarPrincipal
@@ -145,32 +167,22 @@ Partial Class frmArticulosSugeridos
         Me.btnBuscarPrincipal.Text = "Buscar"
         Me.btnBuscarPrincipal.UseVisualStyleBackColor = True
         '
-        'cId
+        'btnNuevo
         '
-        Me.cId.HeaderText = "Id"
-        Me.cId.Name = "cId"
-        Me.cId.ReadOnly = True
-        Me.cId.Visible = False
-        '
-        'cCodigo
-        '
-        Me.cCodigo.HeaderText = "Codigo"
-        Me.cCodigo.Name = "cCodigo"
-        Me.cCodigo.ReadOnly = True
-        Me.cCodigo.Width = 140
-        '
-        'cDescripccion
-        '
-        Me.cDescripccion.HeaderText = "Descripccion"
-        Me.cDescripccion.Name = "cDescripccion"
-        Me.cDescripccion.ReadOnly = True
-        Me.cDescripccion.Width = 375
+        Me.btnNuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnNuevo.Location = New System.Drawing.Point(672, 30)
+        Me.btnNuevo.Name = "btnNuevo"
+        Me.btnNuevo.Size = New System.Drawing.Size(75, 28)
+        Me.btnNuevo.TabIndex = 7
+        Me.btnNuevo.Text = "Nuevo "
+        Me.btnNuevo.UseVisualStyleBackColor = True
         '
         'frmArticulosSugeridos
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(773, 485)
+        Me.Controls.Add(Me.btnNuevo)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.txtDescripccionPrincipal)
@@ -201,4 +213,5 @@ Partial Class frmArticulosSugeridos
     Friend WithEvents cId As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents cCodigo As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents cDescripccion As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents btnNuevo As System.Windows.Forms.Button
 End Class
