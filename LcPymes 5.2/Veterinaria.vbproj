@@ -1120,6 +1120,13 @@
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>rptVentasAnual.vb</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\Ventas\a Reportes de Ventas\ClientessinVisitas\frmReporteClienteSinVisita.resx">
+      <DependentUpon>frmReporteClienteSinVisita.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\Ventas\a Reportes de Ventas\ClientessinVisitas\rptClientesSinVenta.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptClientesSinVenta.vb</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reportes\Ventas\a Reportes de Ventas\ComprasvsVentasResumenProveedor.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>ComprasvsVentasResumenProveedor.vb</LastGenOutput>
@@ -5550,6 +5557,18 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>rptVentasAnual.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reportes\Ventas\a Reportes de Ventas\ClientessinVisitas\frmReporteClienteSinVisita.Designer.vb">
+      <DependentUpon>frmReporteClienteSinVisita.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\Ventas\a Reportes de Ventas\ClientessinVisitas\frmReporteClienteSinVisita.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\Ventas\a Reportes de Ventas\ClientessinVisitas\rptClientesSinVenta.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptClientesSinVenta.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Reportes\Ventas\a Reportes de Ventas\ComprasvsVentasResumenProveedor.vb">

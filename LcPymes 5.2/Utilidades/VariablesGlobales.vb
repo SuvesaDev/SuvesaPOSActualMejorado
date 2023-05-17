@@ -21,6 +21,20 @@ Module VariablesGlobales
         End Try
     End Sub
 
+    Public Sub RegistrarLogTarjeta(_Texto As String)
+        Try
+            Dim path As String = "c:\Datafono\log" & Date.Now.Day & Date.Now.Month & Date.Now.Year & ".txt"
+            If IO.Directory.Exists("c:\Datafono\") = False Then
+                IO.Directory.CreateDirectory("c:\Datafono\")
+            End If
+
+            Dim escribir As New StreamWriter(path, True)
+            escribir.WriteLine(Date.Now.ToString & " - " & _Texto)
+            escribir.Close()
+        Catch ex As Exception
+        End Try
+    End Sub
+
     Public Sub ObtenerClinica()
         'cargar esta funcion en el inicio del sistema para saber si es o no es clinica
         Dim dt As New System.Data.DataTable

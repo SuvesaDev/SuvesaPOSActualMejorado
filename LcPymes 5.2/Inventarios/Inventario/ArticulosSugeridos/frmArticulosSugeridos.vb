@@ -109,6 +109,7 @@
         Me.CodigoSugerido = 0
         Me.txtDescripccionPrincipal.Text = ""
         Me.txtDescripccionSugerido.Text = ""
-
+        Me.CargarSugeridos(-1)
     End Sub
+
 End Class

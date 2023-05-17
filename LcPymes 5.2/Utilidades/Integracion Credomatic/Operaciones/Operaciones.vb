@@ -164,13 +164,17 @@ Namespace Credomatic
             End Function
 
             Public Function Venta(_Factura As String, _Total As Decimal) As Respuesta
+                RegistrarLogTarjeta("")
+                RegistrarLogTarjeta("  ------  " & Date.Now.ToString)
                 Me.request = New EMVStreamRequest()
                 Me.request.transactionType = "SALE"
                 Me.request.terminalId = Me.IdTerminal
                 Me.request.invoice = _Factura
                 Me.request.totalAmount = _Total.ToString("N2")
                 Dim result As String = Me.request.sendData()
+                RegistrarLogTarjeta(result)
                 Dim respuesta As Respuesta = Me.ProcesaOperacion(result, "SALE", _Factura)
+                RegistrarLogTarjeta(respuesta.Codigo)
                 Select Case respuesta.Codigo
                     Case "96"
                         Dim revercion As New CicloRevercion(10)
@@ -188,6 +192,8 @@ Namespace Credomatic
                         Dim revercion As New CicloRevercion(10)
                         revercion.REVERSE(_Factura)
                 End Select
+                RegistrarLogTarjeta("  ------  " & Date.Now.ToString)
+                RegistrarLogTarjeta("")
                 Return respuesta
             End Function
             Public Function Anulacion(_NumeroAutorizacion As String, _NumeroReferencia As String) As Respuesta
