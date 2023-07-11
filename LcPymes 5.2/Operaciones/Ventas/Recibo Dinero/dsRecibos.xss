@@ -8,13 +8,13 @@
   <Shapes>
     <Shape ID="DesignTable:Moneda" ZOrder="5" X="303" Y="324" Height="124" Width="150" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="120" />
     <Shape ID="DesignTable:detalle_abonoccobrar" ZOrder="4" X="504" Y="66" Height="315" Width="191" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="311" />
-    <Shape ID="DesignTable:abonoccobrar" ZOrder="3" X="70" Y="70" Height="257" Width="150" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="86" />
+    <Shape ID="DesignTable:abonoccobrar" ZOrder="3" X="70" Y="70" Height="391" Width="165" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="387" />
   </Shapes>
   <Connectors>
     <Connector ID="DesignRelation:abonoccobrardetalle_abonoccobrar" ZOrder="2" LineWidth="11">
       <RoutePoints>
         <Point>
-          <X>220</X>
+          <X>235</X>
           <Y>185</Y>
         </Point>
         <Point>
@@ -27,15 +27,11 @@
       <RoutePoints>
         <Point>
           <X>303</X>
-          <Y>341</Y>
+          <Y>386</Y>
         </Point>
         <Point>
-          <X>203</X>
-          <Y>341</Y>
-        </Point>
-        <Point>
-          <X>203</X>
-          <Y>327</Y>
+          <X>235</X>
+          <Y>386</Y>
         </Point>
       </RoutePoints>
     </Connector>

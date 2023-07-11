@@ -73,8 +73,13 @@ Public Class frmEditarDepositos
     End Sub
 
     Private Sub CalcualarMontosDeposito()
-        Dim depcolon As Decimal = (From x As DataGridViewRow In Me.viewDepositos.Rows Where x.Cells("cMonedadeposito").Value = "COLON" Select CDec(x.Cells("cMontoDeposito").Value)).Sum
-        Dim depdolar As Decimal = (From x As DataGridViewRow In Me.viewDepositos.Rows Where x.Cells("cMonedadeposito").Value = "DOLAR" Select CDec(x.Cells("cMontoDeposito").Value)).Sum
+        Dim depcolon As Decimal = (From x As DataGridViewRow In Me.viewDepositos.Rows
+                                   Where x.Cells("cMonedadeposito").Value = "COLON" And x.Cells("cAnulado").Value = False
+                                   Select CDec(x.Cells("cMontoDeposito").Value)).Sum
+
+        Dim depdolar As Decimal = (From x As DataGridViewRow In Me.viewDepositos.Rows
+                                   Where x.Cells("cMonedadeposito").Value = "DOLAR" And x.Cells("cAnulado").Value = False
+                                   Select CDec(x.Cells("cMontoDeposito").Value)).Sum
 
         Me.txtDepositoColones.Text = depcolon.ToString("N2")
         Me.txtDepositoDolares.Text = depdolar.ToString("N2")
@@ -154,9 +159,9 @@ Public Class frmEditarDepositos
         Me.viewDepositos.Rows.Clear()
         Me.IndexDeposito = 0
         Dim dt As New DataTable
-        cFunciones.Llenar_Tabla_Generico("select Banco, Cuenta, Moneda, Numero, Monto, TipoMovimiento, Observaciones from ArqueoDeposito Where IdArqueo = " & _IdArqueo & " And IdApertura = " & Me.IdApertura, dt, CadenaConexionSeePOS)
+        cFunciones.Llenar_Tabla_Generico("select Id, Banco, Cuenta, Moneda, Numero, Monto, TipoMovimiento, Observaciones from ArqueoDeposito Where Anulado = 0 and IdArqueo = " & _IdArqueo & " And IdApertura = " & Me.IdApertura, dt, CadenaConexionSeePOS)
         For Each r As DataRow In dt.Rows
-            Me.AgregarDeposito(r.Item("Banco"), r.Item("Cuenta"), r.Item("Moneda"), r.Item("Numero"), r.Item("Monto"), r.Item("TipoMovimiento"), r.Item("Observaciones"))
+            Me.AgregarDeposito(r.Item("Id"), r.Item("Banco"), r.Item("Cuenta"), r.Item("Moneda"), r.Item("Numero"), r.Item("Monto"), r.Item("TipoMovimiento"), r.Item("Observaciones"))
         Next
     End Sub
 
@@ -165,9 +170,15 @@ Public Class frmEditarDepositos
         Dim trans As OBSoluciones.SQL.Transaccion
         trans = New OBSoluciones.SQL.Transaccion(CadenaConexionSeePOS)
         Try
-            trans.Ejecutar("Delete from ArqueoDeposito where IdArqueo = " & Me.IdArqueo & " And IdApertura = " & Me.IdApertura, CommandType.Text)
+            'trans.Ejecutar("Delete from ArqueoDeposito where IdArqueo = " & Me.IdArqueo & " And IdApertura = " & Me.IdApertura, CommandType.Text)
             For Each f As DataGridViewRow In Me.viewDepositos.Rows
-                trans.Ejecutar("insert into ArqueoDeposito(IdArqueo, IdApertura, Banco, Cuenta, Moneda, Numero, Monto, TipoMovimiento, Observaciones) values(" & Me.IdArqueo & ", " & Me.IdApertura & ", '" & f.Cells("cBanco").Value & "', '" & f.Cells("cCuenta").Value & "', '" & f.Cells("cMonedaDeposito").Value & "', '" & f.Cells("cNumero").Value & "', " & f.Cells("cMontoDeposito").Value & ", '" & f.Cells("cTipo").Value & "', '" & f.Cells("cObservaciones").Value & "')", CommandType.Text)
+                If f.Cells("cId").Value = "0" And f.Cells("cAnulado").Value = False Then
+                    trans.Ejecutar("insert into ArqueoDeposito(IdArqueo, IdApertura, Banco, Cuenta, Moneda, Numero, Monto, TipoMovimiento, Observaciones) values(" & Me.IdArqueo & ", " & Me.IdApertura & ", '" & f.Cells("cBanco").Value & "', '" & f.Cells("cCuenta").Value & "', '" & f.Cells("cMonedaDeposito").Value & "', '" & f.Cells("cNumero").Value & "', " & f.Cells("cMontoDeposito").Value & ", '" & f.Cells("cTipo").Value & "', '" & f.Cells("cObservaciones").Value & "')", CommandType.Text)
+                End If
+
+                If f.Cells("cAnulado").Value = True And CDec(f.Cells("cId").Value) > 0 Then
+                    trans.Ejecutar("Update ArqueoDeposito set Anulado = 1, IdUsuarioAnulo = '" & f.Cells("cIdUsuarioAnulacion").Value & "', MotivoAnulacion = '" & f.Cells("cMotivoAnulacion").Value & "', FechaAnulacion = getdate() where Id = " & f.Cells("cId").Value & ";", CommandType.Text)
+                End If
             Next
             trans.Ejecutar("Update ArqueoCajas Set DepositoCol = " & CDec(Me.txtDepositoColones.Text) & ", DepositoDol = " & CDec(Me.txtDepositoDolares.Text) & " where id = " & Me.IdArqueo, CommandType.Text)
             trans.Ejecutar("update ArqueoCajas set Total = EfectivoColones + (EfectivoDolares * TipoCambioD) + TarjetaColones + (TarjetaDolares *  TipoCambioD) + DepositoCol + (DepositoDol * TipoCambioD) where id = " & Me.IdArqueo, CommandType.Text)
@@ -177,8 +188,10 @@ Public Class frmEditarDepositos
         End Try
     End Sub
 
-    Private Sub AgregarDeposito(_Banco As String, _Cuenta As String, _Moneda As String, _Numero As String, _Monto As Decimal, _Tipo As String, _Observaciones As String)
+
+    Private Sub AgregarDeposito(_Id As Integer, _Banco As String, _Cuenta As String, _Moneda As String, _Numero As String, _Monto As Decimal, _Tipo As String, _Observaciones As String)
         Me.viewDepositos.Rows.Add()
+        Me.viewDepositos.Item("cId", Me.IndexDeposito).Value = _Id
         Me.viewDepositos.Item("cBanco", Me.IndexDeposito).Value = _Banco
         Me.viewDepositos.Item("cCuenta", Me.IndexDeposito).Value = _Cuenta
         Me.viewDepositos.Item("cMonedaDeposito", Me.IndexDeposito).Value = _Moneda
@@ -186,6 +199,11 @@ Public Class frmEditarDepositos
         Me.viewDepositos.Item("cMontoDeposito", Me.IndexDeposito).Value = _Monto
         Me.viewDepositos.Item("cTipo", Me.IndexDeposito).Value = _Tipo
         Me.viewDepositos.Item("cObservaciones", Me.IndexDeposito).Value = _Observaciones
+
+        Me.viewDepositos.Item("cAnulado", Me.IndexDeposito).Value = False
+        Me.viewDepositos.Item("cIdUsuarioAnulacion", Me.IndexDeposito).Value = ""
+        Me.viewDepositos.Item("cMotivoAnulacion", Me.IndexDeposito).Value = ""
+
         Me.IndexDeposito += 1
         Me.CalcualarMontosDeposito()
         Me.txtNumeroDeposito.Text = ""
@@ -234,7 +252,7 @@ Public Class frmEditarDepositos
                             Exit Sub
                         End If
 
-                        Me.AgregarDeposito(Me.cboBanco.Text, Me.cboCuenta.Text, Me.txtMoneda.Text, txtNumeroDeposito.Text, Me.txtMontoDeposito.Text, Me.cboTipo.Text, Me.txtObservaciones.Text)
+                        Me.AgregarDeposito(0, Me.cboBanco.Text, Me.cboCuenta.Text, Me.txtMoneda.Text, txtNumeroDeposito.Text, Me.txtMontoDeposito.Text, Me.cboTipo.Text, Me.txtObservaciones.Text)
                     End If
                 End If
             End If
@@ -267,9 +285,26 @@ Public Class frmEditarDepositos
     End Sub
 
     Private Sub viewDepositos_KeyDown(sender As Object, e As KeyEventArgs) Handles viewDepositos.KeyDown
-        If e.KeyCode = Keys.Back Then
-            Me.viewDepositos.Rows.RemoveAt(Me.viewDepositos.CurrentRow.Index)
-            Me.IndexDeposito -= 1
+        If e.KeyCode = Keys.Back Or e.KeyCode = Keys.Delete Then
+            'Me.viewDepositos.Rows.RemoveAt(Me.viewDepositos.CurrentRow.Index)
+            'Me.IndexDeposito -= 1
+            If MsgBox("Desea quitar el deposito", MsgBoxStyle.Question + MsgBoxStyle.YesNo, "Confirmar Accion") = MsgBoxResult.No Then
+                Exit Sub
+            End If
+            If CDec(Me.viewDepositos.Item("cId", Me.viewDepositos.CurrentRow.Index).Value) > 0 Then
+                Dim frm As New frmMorivoAnulacionDeposito
+                If frm.ShowDialog = Windows.Forms.DialogResult.OK Then
+                    Me.viewDepositos.Item("cAnulado", Me.viewDepositos.CurrentRow.Index).Value = True
+                    Me.viewDepositos.Item("cIdUsuarioAnulacion", Me.viewDepositos.CurrentRow.Index).Value = frm.txtUsuario.Text
+                    Me.viewDepositos.Item("cMotivoAnulacion", Me.viewDepositos.CurrentRow.Index).Value = frm.txtMotivo.Text
+                    Me.viewDepositos.CurrentRow.Visible = False
+                    Me.CalcualarMontosDeposito()
+                End If
+            Else
+                Me.viewDepositos.Item("cAnulado", Me.viewDepositos.CurrentRow.Index).Value = True
+                Me.viewDepositos.CurrentRow.Visible = False
+                Me.CalcualarMontosDeposito()
+            End If
         End If
     End Sub
 

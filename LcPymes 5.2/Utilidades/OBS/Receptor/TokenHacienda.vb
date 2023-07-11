@@ -1,5 +1,6 @@
 ﻿Imports System.Net.Http
 Imports System.Collections.Generic
+Imports System.Net
 
 Public Class TokenHacienda
 
@@ -25,6 +26,13 @@ Public Class TokenHacienda
             End If
 
             Dim http As HttpClient = New HttpClient
+
+            '*********************************************************************************
+            'TLS 1.2 Cambio de seguridad por Hacienda
+            System.Net.ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12 'Or SecurityProtocolType.Tls11 Or SecurityProtocolType.Tls
+            '*********************************************************************************
+
+
             Dim param = New List(Of KeyValuePair(Of String, String))()
             param.Add(New KeyValuePair(Of String, String)("client_id", IDP_CLIENT_ID))
             param.Add(New KeyValuePair(Of String, String)("grant_type", "password"))

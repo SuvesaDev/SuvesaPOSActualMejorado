@@ -224,6 +224,13 @@ Public Class MainForm
     Friend WithEvents MenuItem173 As System.Windows.Forms.MenuItem
     Friend WithEvents MenuItem175 As System.Windows.Forms.MenuItem
     Friend WithEvents MenuItem177 As System.Windows.Forms.MenuItem
+    Friend WithEvents MenuItem179 As System.Windows.Forms.MenuItem
+    Friend WithEvents MenuItem180 As System.Windows.Forms.MenuItem
+    Friend WithEvents MenuItem193 As System.Windows.Forms.MenuItem
+    Friend WithEvents MenuItem194 As System.Windows.Forms.MenuItem
+    Friend WithEvents MenuItem195 As System.Windows.Forms.MenuItem
+    Friend WithEvents MenuItem196 As System.Windows.Forms.MenuItem
+    Friend WithEvents MenuItem197 As System.Windows.Forms.MenuItem
     Dim SistemaNormal As Boolean = False
 #End Region
 
@@ -494,6 +501,7 @@ Public Class MainForm
         Me.MenuItem187 = New System.Windows.Forms.MenuItem()
         Me.MenuItem189 = New System.Windows.Forms.MenuItem()
         Me.MenuItem190 = New System.Windows.Forms.MenuItem()
+        Me.MenuItem193 = New System.Windows.Forms.MenuItem()
         Me.MenuItemLinea02 = New System.Windows.Forms.MenuItem()
         Me.MenuItemCompras = New System.Windows.Forms.MenuItem()
         Me.MenuItemOperacion_ComprasProveedor = New System.Windows.Forms.MenuItem()
@@ -505,6 +513,7 @@ Public Class MainForm
         Me.MenuItem182 = New System.Windows.Forms.MenuItem()
         Me.MenuItem183 = New System.Windows.Forms.MenuItem()
         Me.MenuItem184 = New System.Windows.Forms.MenuItem()
+        Me.MenuItem197 = New System.Windows.Forms.MenuItem()
         Me.MenuItemLinea03 = New System.Windows.Forms.MenuItem()
         Me.MenuItemCuentasXPagar = New System.Windows.Forms.MenuItem()
         Me.MenuItemOperacion_AbonosCuentaProveedor = New System.Windows.Forms.MenuItem()
@@ -516,6 +525,7 @@ Public Class MainForm
         Me.MenuItem169 = New System.Windows.Forms.MenuItem()
         Me.MenuItem170 = New System.Windows.Forms.MenuItem()
         Me.MenuItem172 = New System.Windows.Forms.MenuItem()
+        Me.MenuItem180 = New System.Windows.Forms.MenuItem()
         Me.MenuItemLinea04 = New System.Windows.Forms.MenuItem()
         Me.MenuItemControlCaja = New System.Windows.Forms.MenuItem()
         Me.MenuItemOperacion_Caja_Apertura = New System.Windows.Forms.MenuItem()
@@ -525,12 +535,15 @@ Public Class MainForm
         Me.MenuItemOperacion_Caja_OpcionesPago = New System.Windows.Forms.MenuItem()
         Me.MenuItemOperacion_Caja_Movimientos = New System.Windows.Forms.MenuItem()
         Me.MenuItem12 = New System.Windows.Forms.MenuItem()
+        Me.MenuItem194 = New System.Windows.Forms.MenuItem()
+        Me.MenuItem195 = New System.Windows.Forms.MenuItem()
         Me.MenuItem59 = New System.Windows.Forms.MenuItem()
         Me.MenuItem58 = New System.Windows.Forms.MenuItem()
         Me.MenuItem105 = New System.Windows.Forms.MenuItem()
         Me.mnVentasPendientes = New System.Windows.Forms.MenuItem()
         Me.MenuItem38 = New System.Windows.Forms.MenuItem()
         Me.MenuItem56 = New System.Windows.Forms.MenuItem()
+        Me.MenuItem196 = New System.Windows.Forms.MenuItem()
         Me.MenuItem126 = New System.Windows.Forms.MenuItem()
         Me.MenuItem136 = New System.Windows.Forms.MenuItem()
         Me.MenuItem137 = New System.Windows.Forms.MenuItem()
@@ -607,6 +620,7 @@ Public Class MainForm
         Me.MenuItem17 = New System.Windows.Forms.MenuItem()
         Me.MenuItem168 = New System.Windows.Forms.MenuItem()
         Me.MenuItem191 = New System.Windows.Forms.MenuItem()
+        Me.MenuItem179 = New System.Windows.Forms.MenuItem()
         Me.MenuReportes = New System.Windows.Forms.MenuItem()
         Me.MenuItemReporteVentas = New System.Windows.Forms.MenuItem()
         Me.mnuReporteVentas = New System.Windows.Forms.MenuItem()
@@ -1251,7 +1265,7 @@ Public Class MainForm
         Me.menuExtender.SetExtEnable(Me.MenuItemCuentasXCobrar, True)
         Me.menuExtender.SetImageIndex(Me.MenuItemCuentasXCobrar, -1)
         Me.MenuItemCuentasXCobrar.Index = 2
-        Me.MenuItemCuentasXCobrar.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.MenuItemOperacion_AbonosCXC, Me.MenuItemOperacion_AjustesCXC, Me.MenuItemOperacion_EstadoCuentaCXC, Me.MenuItem106, Me.MenuItem122, Me.MenuItem107, Me.MenuItem149, Me.MenuItem192, Me.MenuItem185, Me.MenuItem186, Me.MenuItem189, Me.MenuItem190})
+        Me.MenuItemCuentasXCobrar.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.MenuItemOperacion_AbonosCXC, Me.MenuItemOperacion_AjustesCXC, Me.MenuItemOperacion_EstadoCuentaCXC, Me.MenuItem106, Me.MenuItem122, Me.MenuItem107, Me.MenuItem149, Me.MenuItem192, Me.MenuItem185, Me.MenuItem186, Me.MenuItem189, Me.MenuItem190, Me.MenuItem193})
         Me.MenuItemCuentasXCobrar.OwnerDraw = True
         Me.MenuItemCuentasXCobrar.Text = "Cuentas x Cobrar"
         '
@@ -1334,6 +1348,12 @@ Public Class MainForm
         Me.MenuItem190.Index = 11
         Me.MenuItem190.Text = "Enviar a Incobrables"
         '
+        'MenuItem193
+        '
+        Me.menuExtender.SetImageIndex(Me.MenuItem193, -1)
+        Me.MenuItem193.Index = 12
+        Me.MenuItem193.Text = "Reporte Incobrable"
+        '
         'MenuItemLinea02
         '
         Me.menuExtender.SetImageIndex(Me.MenuItemLinea02, -1)
@@ -1346,7 +1366,7 @@ Public Class MainForm
         Me.menuExtender.SetExtEnable(Me.MenuItemCompras, True)
         Me.menuExtender.SetImageIndex(Me.MenuItemCompras, -1)
         Me.MenuItemCompras.Index = 4
-        Me.MenuItemCompras.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.MenuItemOperacion_ComprasProveedor, Me.MenuItemOperacion_OrdenCompraManual, Me.MenuItemOperacion_OrdenCompraAutomatica, Me.MenuItemOperacion_DevolucionesProveedor, Me.MenuItem1, Me.MenuItem181})
+        Me.MenuItemCompras.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.MenuItemOperacion_ComprasProveedor, Me.MenuItemOperacion_OrdenCompraManual, Me.MenuItemOperacion_OrdenCompraAutomatica, Me.MenuItemOperacion_DevolucionesProveedor, Me.MenuItem1, Me.MenuItem181, Me.MenuItem197})
         Me.MenuItemCompras.OwnerDraw = True
         Me.MenuItemCompras.Text = "Compras"
         '
@@ -1406,6 +1426,12 @@ Public Class MainForm
         Me.MenuItem184.Index = 2
         Me.MenuItem184.Text = "Reportes de Metas General"
         '
+        'MenuItem197
+        '
+        Me.menuExtender.SetImageIndex(Me.MenuItem197, -1)
+        Me.MenuItem197.Index = 6
+        Me.MenuItem197.Text = "Reporte Compras y Gastos Pagados"
+        '
         'MenuItemLinea03
         '
         Me.menuExtender.SetImageIndex(Me.MenuItemLinea03, -1)
@@ -1418,7 +1444,7 @@ Public Class MainForm
         Me.menuExtender.SetExtEnable(Me.MenuItemCuentasXPagar, True)
         Me.menuExtender.SetImageIndex(Me.MenuItemCuentasXPagar, -1)
         Me.MenuItemCuentasXPagar.Index = 6
-        Me.MenuItemCuentasXPagar.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.MenuItemOperacion_AbonosCuentaProveedor, Me.MenuItemOperacion_AjusteCuentaProveedor, Me.MenuItemOperacion_EstadoCuentaProveedor, Me.MenuItem148, Me.MenuItem171, Me.MenuItem175, Me.MenuItem169, Me.MenuItem170, Me.MenuItem172})
+        Me.MenuItemCuentasXPagar.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.MenuItemOperacion_AbonosCuentaProveedor, Me.MenuItemOperacion_AjusteCuentaProveedor, Me.MenuItemOperacion_EstadoCuentaProveedor, Me.MenuItem148, Me.MenuItem171, Me.MenuItem175, Me.MenuItem169, Me.MenuItem170, Me.MenuItem172, Me.MenuItem180})
         Me.MenuItemCuentasXPagar.OwnerDraw = True
         Me.MenuItemCuentasXPagar.Text = "Cuentas  x Pagar"
         '
@@ -1476,6 +1502,12 @@ Public Class MainForm
         Me.MenuItem172.Index = 8
         Me.MenuItem172.Text = "-"
         '
+        'MenuItem180
+        '
+        Me.menuExtender.SetImageIndex(Me.MenuItem180, -1)
+        Me.MenuItem180.Index = 9
+        Me.MenuItem180.Text = "Movimientos Compras"
+        '
         'MenuItemLinea04
         '
         Me.menuExtender.SetImageIndex(Me.MenuItemLinea04, -1)
@@ -1488,7 +1520,7 @@ Public Class MainForm
         Me.menuExtender.SetExtEnable(Me.MenuItemControlCaja, True)
         Me.menuExtender.SetImageIndex(Me.MenuItemControlCaja, -1)
         Me.MenuItemControlCaja.Index = 8
-        Me.MenuItemControlCaja.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.MenuItemOperacion_Caja_Apertura, Me.MenuItemOperacion_Caja_Arqueo, Me.MenuItemOperacion_Caja_Cierre, Me.MenuItem147, Me.MenuItemOperacion_Caja_OpcionesPago, Me.MenuItemOperacion_Caja_Movimientos, Me.MenuItem12, Me.MenuItem59, Me.MenuItem58, Me.MenuItem105, Me.mnVentasPendientes, Me.MenuItem38, Me.MenuItem56, Me.MenuItem126, Me.MenuItem136, Me.MenuItem137, Me.MenuItem150})
+        Me.MenuItemControlCaja.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.MenuItemOperacion_Caja_Apertura, Me.MenuItemOperacion_Caja_Arqueo, Me.MenuItemOperacion_Caja_Cierre, Me.MenuItem147, Me.MenuItemOperacion_Caja_OpcionesPago, Me.MenuItemOperacion_Caja_Movimientos, Me.MenuItem12, Me.MenuItem194, Me.MenuItem195, Me.MenuItem59, Me.MenuItem58, Me.MenuItem105, Me.mnVentasPendientes, Me.MenuItem38, Me.MenuItem56, Me.MenuItem196, Me.MenuItem126, Me.MenuItem136, Me.MenuItem137, Me.MenuItem150})
         Me.MenuItemControlCaja.OwnerDraw = True
         Me.MenuItemControlCaja.Text = "Control de Caja"
         '
@@ -1534,64 +1566,82 @@ Public Class MainForm
         Me.MenuItem12.Index = 6
         Me.MenuItem12.Text = "Bloqueo Caja"
         '
+        'MenuItem194
+        '
+        Me.menuExtender.SetImageIndex(Me.MenuItem194, -1)
+        Me.MenuItem194.Index = 7
+        Me.MenuItem194.Text = "Agregar Depositos"
+        '
+        'MenuItem195
+        '
+        Me.menuExtender.SetImageIndex(Me.MenuItem195, -1)
+        Me.MenuItem195.Index = 8
+        Me.MenuItem195.Text = "Arqueo de Caja #2"
+        '
         'MenuItem59
         '
         Me.menuExtender.SetImageIndex(Me.MenuItem59, -1)
-        Me.MenuItem59.Index = 7
+        Me.MenuItem59.Index = 9
         Me.MenuItem59.Text = "-"
         '
         'MenuItem58
         '
         Me.menuExtender.SetImageIndex(Me.MenuItem58, -1)
-        Me.MenuItem58.Index = 8
+        Me.MenuItem58.Index = 10
         Me.MenuItem58.Text = "Reporte Cierre de caja"
         '
         'MenuItem105
         '
         Me.menuExtender.SetImageIndex(Me.MenuItem105, -1)
-        Me.MenuItem105.Index = 9
+        Me.MenuItem105.Index = 11
         Me.MenuItem105.Text = "-"
         '
         'mnVentasPendientes
         '
         Me.menuExtender.SetImageIndex(Me.mnVentasPendientes, -1)
-        Me.mnVentasPendientes.Index = 10
+        Me.mnVentasPendientes.Index = 12
         Me.mnVentasPendientes.Text = "Reporte Ventas Pendientes"
         '
         'MenuItem38
         '
         Me.menuExtender.SetImageIndex(Me.MenuItem38, -1)
-        Me.MenuItem38.Index = 11
+        Me.MenuItem38.Index = 13
         Me.MenuItem38.Text = "Reporte de Depositos"
         '
         'MenuItem56
         '
         Me.menuExtender.SetImageIndex(Me.MenuItem56, -1)
-        Me.MenuItem56.Index = 12
+        Me.MenuItem56.Index = 14
         Me.MenuItem56.Text = "Procesar Envio Depositos"
+        '
+        'MenuItem196
+        '
+        Me.menuExtender.SetImageIndex(Me.MenuItem196, -1)
+        Me.MenuItem196.Index = 15
+        Me.MenuItem196.Text = "Depositos Anulados"
         '
         'MenuItem126
         '
         Me.menuExtender.SetImageIndex(Me.MenuItem126, -1)
-        Me.MenuItem126.Index = 13
+        Me.MenuItem126.Index = 16
         Me.MenuItem126.Text = "-"
         '
         'MenuItem136
         '
         Me.menuExtender.SetImageIndex(Me.MenuItem136, -1)
-        Me.MenuItem136.Index = 14
+        Me.MenuItem136.Index = 17
         Me.MenuItem136.Text = "Entradas de Anticipos"
         '
         'MenuItem137
         '
         Me.menuExtender.SetImageIndex(Me.MenuItem137, -1)
-        Me.MenuItem137.Index = 15
+        Me.MenuItem137.Index = 18
         Me.MenuItem137.Text = "Movimientos de Anticipos"
         '
         'MenuItem150
         '
         Me.menuExtender.SetImageIndex(Me.MenuItem150, -1)
-        Me.MenuItem150.Index = 16
+        Me.MenuItem150.Index = 19
         Me.MenuItem150.Text = "Saldos de Anticipos"
         '
         'MenuItem82
@@ -1838,7 +1888,7 @@ Public Class MainForm
         '
         Me.MenuInventarios.Enabled = False
         Me.MenuInventarios.Index = 2
-        Me.MenuInventarios.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.MenuItemInventario_Catalogo, Me.MenuItem167, Me.MenuItem72, Me.MenuItemInventario_Familias, Me.MenuItemInventario_Ubicaciones, Me.MenuItemInventario_Presentaciones, Me.MenuItemInventario_Marcas, Me.MenuItemInventario_Ajustes, Me.MenuItemInventario_Etiquetas, Me.MenuItemInventario_Aumentos_X_Categoria, Me.MenuItemRedondeo, Me.MenuItemLinea05, Me.MenuItemControlBodega, Me.MenuItemLinea06, Me.MenuItemInventario_Bodegas, Me.MenuItemInventario_Ajuste_Bodegas, Me.MenuItem8, Me.MenuItem10, Me.MenuItem160, Me.MenuItem13, Me.MenuItem14, Me.MenuItem43, Me.MenuItem75, Me.MenuItem76, Me.MenuItem95, Me.MenuItem96, Me.MenuItem97, Me.MenuItem123, Me.MenuItem124, Me.MenuItem152, Me.MenuItem17, Me.MenuItem168, Me.MenuItem191})
+        Me.MenuInventarios.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.MenuItemInventario_Catalogo, Me.MenuItem167, Me.MenuItem72, Me.MenuItemInventario_Familias, Me.MenuItemInventario_Ubicaciones, Me.MenuItemInventario_Presentaciones, Me.MenuItemInventario_Marcas, Me.MenuItemInventario_Ajustes, Me.MenuItemInventario_Etiquetas, Me.MenuItemInventario_Aumentos_X_Categoria, Me.MenuItemRedondeo, Me.MenuItemLinea05, Me.MenuItemControlBodega, Me.MenuItemLinea06, Me.MenuItemInventario_Bodegas, Me.MenuItemInventario_Ajuste_Bodegas, Me.MenuItem8, Me.MenuItem10, Me.MenuItem160, Me.MenuItem13, Me.MenuItem14, Me.MenuItem43, Me.MenuItem75, Me.MenuItem76, Me.MenuItem95, Me.MenuItem96, Me.MenuItem97, Me.MenuItem123, Me.MenuItem124, Me.MenuItem152, Me.MenuItem17, Me.MenuItem168, Me.MenuItem191, Me.MenuItem179})
         Me.MenuInventarios.Text = "Inventario"
         '
         'MenuItemInventario_Catalogo
@@ -2065,6 +2115,12 @@ Public Class MainForm
         Me.menuExtender.SetImageIndex(Me.MenuItem191, -1)
         Me.MenuItem191.Index = 32
         Me.MenuItem191.Text = "Importar Cabys XML"
+        '
+        'MenuItem179
+        '
+        Me.menuExtender.SetImageIndex(Me.MenuItem179, -1)
+        Me.MenuItem179.Index = 33
+        Me.MenuItem179.Text = "Inhabilita Existencia Cero"
         '
         'MenuReportes
         '
@@ -2842,11 +2898,11 @@ Public Class MainForm
         'StatusBar1
         '
         Me.StatusBar1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.StatusBar1.Location = New System.Drawing.Point(0, 253)
+        Me.StatusBar1.Location = New System.Drawing.Point(0, 411)
         Me.StatusBar1.Name = "StatusBar1"
         Me.StatusBar1.Panels.AddRange(New System.Windows.Forms.StatusBarPanel() {Me.StatusBarPanel1, Me.StatusBarPanel4, Me.StatusBarPanel2, Me.StatusBarPanel3, Me.StatusBarPanel5, Me.sbpTCCompra, Me.sbpTCVenta, Me.sbpVersion})
         Me.StatusBar1.ShowPanels = True
-        Me.StatusBar1.Size = New System.Drawing.Size(1480, 16)
+        Me.StatusBar1.Size = New System.Drawing.Size(1480, 14)
         Me.StatusBar1.TabIndex = 9
         '
         'StatusBarPanel1
@@ -2877,20 +2933,20 @@ Public Class MainForm
         Me.StatusBarPanel3.BorderStyle = System.Windows.Forms.StatusBarPanelBorderStyle.None
         Me.StatusBarPanel3.Name = "StatusBarPanel3"
         Me.StatusBarPanel3.Text = "XX"
-        Me.StatusBarPanel3.Width = 37
+        Me.StatusBarPanel3.Width = 31
         '
         'StatusBarPanel5
         '
         Me.StatusBarPanel5.AutoSize = System.Windows.Forms.StatusBarPanelAutoSize.Spring
         Me.StatusBarPanel5.Name = "StatusBarPanel5"
-        Me.StatusBarPanel5.Width = 880
+        Me.StatusBarPanel5.Width = 892
         '
         'sbpTCCompra
         '
         Me.sbpTCCompra.AutoSize = System.Windows.Forms.StatusBarPanelAutoSize.Contents
         Me.sbpTCCompra.Name = "sbpTCCompra"
         Me.sbpTCCompra.Text = "0"
-        Me.sbpTCCompra.Width = 24
+        Me.sbpTCCompra.Width = 22
         '
         'sbpTCVenta
         '
@@ -2900,7 +2956,7 @@ Public Class MainForm
         'sbpVersion
         '
         Me.sbpVersion.Name = "sbpVersion"
-        Me.sbpVersion.Text = "*17Mayo2023"
+        Me.sbpVersion.Text = "*11Jul2023"
         Me.sbpVersion.Width = 150
         '
         'ImageList1
@@ -3034,7 +3090,7 @@ Public Class MainForm
         Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.btnInventario, Me.ToolStripSeparator1, Me.btnProveedores, Me.ToolStripSeparator2, Me.btnClientesCredito, Me.ToolStripSeparator3, Me.btnCompras, Me.ToolStripSeparator4, Me.btnFacturacion, Me.ToolStripSeparator5, Me.btnPuntoVenta, Me.lblempresa, Me.ToolStripSeparator9, Me.btnNegativo, Me.ToolStripSeparator8, Me.btnCambio, Me.ToolStripSeparator6, Me.btnAlbaran, Me.ToolStripSeparator7, Me.ToolStripButton1, Me.ToolStripSeparator10, Me.ToolStripButton2})
         Me.ToolStrip1.Location = New System.Drawing.Point(0, 0)
         Me.ToolStrip1.Name = "ToolStrip1"
-        Me.ToolStrip1.Size = New System.Drawing.Size(1480, 57)
+        Me.ToolStrip1.Size = New System.Drawing.Size(1480, 48)
         Me.ToolStrip1.TabIndex = 23
         Me.ToolStrip1.Text = "ToolStrip1"
         '
@@ -3042,72 +3098,72 @@ Public Class MainForm
         '
         Me.btnInventario.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.btnInventario.Name = "btnInventario"
-        Me.btnInventario.Size = New System.Drawing.Size(79, 54)
+        Me.btnInventario.Size = New System.Drawing.Size(64, 45)
         Me.btnInventario.Text = "Inventario"
         Me.btnInventario.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
         '
         'ToolStripSeparator1
         '
         Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
-        Me.ToolStripSeparator1.Size = New System.Drawing.Size(6, 57)
+        Me.ToolStripSeparator1.Size = New System.Drawing.Size(6, 48)
         '
         'btnProveedores
         '
         Me.btnProveedores.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.btnProveedores.Name = "btnProveedores"
-        Me.btnProveedores.Size = New System.Drawing.Size(95, 54)
+        Me.btnProveedores.Size = New System.Drawing.Size(76, 45)
         Me.btnProveedores.Text = "Proveedores"
         Me.btnProveedores.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
         '
         'ToolStripSeparator2
         '
         Me.ToolStripSeparator2.Name = "ToolStripSeparator2"
-        Me.ToolStripSeparator2.Size = New System.Drawing.Size(6, 57)
+        Me.ToolStripSeparator2.Size = New System.Drawing.Size(6, 48)
         '
         'btnClientesCredito
         '
         Me.btnClientesCredito.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.btnClientesCredito.Name = "btnClientesCredito"
-        Me.btnClientesCredito.Size = New System.Drawing.Size(94, 54)
+        Me.btnClientesCredito.Size = New System.Drawing.Size(77, 45)
         Me.btnClientesCredito.Text = "Clientes Cre."
         Me.btnClientesCredito.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
         '
         'ToolStripSeparator3
         '
         Me.ToolStripSeparator3.Name = "ToolStripSeparator3"
-        Me.ToolStripSeparator3.Size = New System.Drawing.Size(6, 57)
+        Me.ToolStripSeparator3.Size = New System.Drawing.Size(6, 48)
         '
         'btnCompras
         '
         Me.btnCompras.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.btnCompras.Name = "btnCompras"
-        Me.btnCompras.Size = New System.Drawing.Size(72, 54)
+        Me.btnCompras.Size = New System.Drawing.Size(59, 45)
         Me.btnCompras.Text = "Compras"
         Me.btnCompras.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
         '
         'ToolStripSeparator4
         '
         Me.ToolStripSeparator4.Name = "ToolStripSeparator4"
-        Me.ToolStripSeparator4.Size = New System.Drawing.Size(6, 57)
+        Me.ToolStripSeparator4.Size = New System.Drawing.Size(6, 48)
         '
         'btnFacturacion
         '
         Me.btnFacturacion.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.btnFacturacion.Name = "btnFacturacion"
-        Me.btnFacturacion.Size = New System.Drawing.Size(88, 54)
+        Me.btnFacturacion.Size = New System.Drawing.Size(73, 45)
         Me.btnFacturacion.Text = "Facturacion"
         Me.btnFacturacion.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
         '
         'ToolStripSeparator5
         '
         Me.ToolStripSeparator5.Name = "ToolStripSeparator5"
-        Me.ToolStripSeparator5.Size = New System.Drawing.Size(6, 57)
+        Me.ToolStripSeparator5.Size = New System.Drawing.Size(6, 48)
         '
         'btnPuntoVenta
         '
         Me.btnPuntoVenta.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.btnPuntoVenta.Name = "btnPuntoVenta"
-        Me.btnPuntoVenta.Size = New System.Drawing.Size(92, 54)
+        Me.btnPuntoVenta.Size = New System.Drawing.Size(75, 45)
         Me.btnPuntoVenta.Text = "Punto Venta"
         Me.btnPuntoVenta.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
         '
@@ -3117,25 +3173,25 @@ Public Class MainForm
         Me.lblempresa.BackColor = System.Drawing.Color.Transparent
         Me.lblempresa.Font = New System.Drawing.Font("Segoe UI", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblempresa.Name = "lblempresa"
-        Me.lblempresa.Size = New System.Drawing.Size(173, 54)
+        Me.lblempresa.Size = New System.Drawing.Size(141, 45)
         Me.lblempresa.Text = "Empresa"
         '
         'ToolStripSeparator9
         '
         Me.ToolStripSeparator9.Name = "ToolStripSeparator9"
-        Me.ToolStripSeparator9.Size = New System.Drawing.Size(6, 57)
+        Me.ToolStripSeparator9.Size = New System.Drawing.Size(6, 48)
         '
         'btnNegativo
         '
         Me.btnNegativo.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.btnNegativo.Name = "btnNegativo"
-        Me.btnNegativo.Size = New System.Drawing.Size(129, 54)
+        Me.btnNegativo.Size = New System.Drawing.Size(104, 45)
         Me.btnNegativo.Text = "Permitir Negativo"
         '
         'ToolStripSeparator8
         '
         Me.ToolStripSeparator8.Name = "ToolStripSeparator8"
-        Me.ToolStripSeparator8.Size = New System.Drawing.Size(6, 57)
+        Me.ToolStripSeparator8.Size = New System.Drawing.Size(6, 48)
         '
         'btnCambio
         '
@@ -3143,25 +3199,25 @@ Public Class MainForm
         Me.btnCambio.Image = CType(resources.GetObject("btnCambio.Image"), System.Drawing.Image)
         Me.btnCambio.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.btnCambio.Name = "btnCambio"
-        Me.btnCambio.Size = New System.Drawing.Size(128, 54)
+        Me.btnCambio.Size = New System.Drawing.Size(102, 45)
         Me.btnCambio.Text = "Registrar Cambio"
         '
         'ToolStripSeparator6
         '
         Me.ToolStripSeparator6.Name = "ToolStripSeparator6"
-        Me.ToolStripSeparator6.Size = New System.Drawing.Size(6, 57)
+        Me.ToolStripSeparator6.Size = New System.Drawing.Size(6, 48)
         '
         'btnAlbaran
         '
         Me.btnAlbaran.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.btnAlbaran.Name = "btnAlbaran"
-        Me.btnAlbaran.Size = New System.Drawing.Size(65, 54)
+        Me.btnAlbaran.Size = New System.Drawing.Size(52, 45)
         Me.btnAlbaran.Text = "Albaran"
         '
         'ToolStripSeparator7
         '
         Me.ToolStripSeparator7.Name = "ToolStripSeparator7"
-        Me.ToolStripSeparator7.Size = New System.Drawing.Size(6, 57)
+        Me.ToolStripSeparator7.Size = New System.Drawing.Size(6, 48)
         '
         'ToolStripButton1
         '
@@ -3169,13 +3225,13 @@ Public Class MainForm
         Me.ToolStripButton1.Image = CType(resources.GetObject("ToolStripButton1.Image"), System.Drawing.Image)
         Me.ToolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.ToolStripButton1.Name = "ToolStripButton1"
-        Me.ToolStripButton1.Size = New System.Drawing.Size(106, 54)
+        Me.ToolStripButton1.Size = New System.Drawing.Size(86, 45)
         Me.ToolStripButton1.Text = "Nuevo Cliente"
         '
         'ToolStripSeparator10
         '
         Me.ToolStripSeparator10.Name = "ToolStripSeparator10"
-        Me.ToolStripSeparator10.Size = New System.Drawing.Size(6, 57)
+        Me.ToolStripSeparator10.Size = New System.Drawing.Size(6, 48)
         '
         'ToolStripButton2
         '
@@ -3183,7 +3239,7 @@ Public Class MainForm
         Me.ToolStripButton2.Image = CType(resources.GetObject("ToolStripButton2.Image"), System.Drawing.Image)
         Me.ToolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.ToolStripButton2.Name = "ToolStripButton2"
-        Me.ToolStripButton2.Size = New System.Drawing.Size(75, 54)
+        Me.ToolStripButton2.Size = New System.Drawing.Size(61, 45)
         Me.ToolStripButton2.Text = "Anticipos"
         '
         'TimerSolicitudes
@@ -3193,9 +3249,9 @@ Public Class MainForm
         'PictureBoxFondo
         '
         Me.PictureBoxFondo.Image = Global.LcPymes_5._2.My.Resources.Resources.fondo2
-        Me.PictureBoxFondo.Location = New System.Drawing.Point(42, 87)
+        Me.PictureBoxFondo.Location = New System.Drawing.Point(35, 75)
         Me.PictureBoxFondo.Name = "PictureBoxFondo"
-        Me.PictureBoxFondo.Size = New System.Drawing.Size(359, 201)
+        Me.PictureBoxFondo.Size = New System.Drawing.Size(299, 175)
         Me.PictureBoxFondo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBoxFondo.TabIndex = 12
         Me.PictureBoxFondo.TabStop = False
@@ -3203,9 +3259,9 @@ Public Class MainForm
         '
         'MainForm
         '
-        Me.AutoScaleBaseSize = New System.Drawing.Size(6, 15)
+        Me.AutoScaleBaseSize = New System.Drawing.Size(5, 13)
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(1480, 269)
+        Me.ClientSize = New System.Drawing.Size(1480, 425)
         Me.Controls.Add(Me.ToolStrip1)
         Me.Controls.Add(Me.PictureBoxFondo)
         Me.Controls.Add(Me.StatusBar1)
@@ -4204,7 +4260,6 @@ Contador:
         End If
     End Sub
 #End Region
-
 
     Private Sub MenuItem1_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MenuItem1.Click
         CargarForm(New frmGasto(usua))
@@ -5489,6 +5544,52 @@ Contador:
         Dim frm As New frmReporteClienteSinVisita
         frm.MdiParent = Me
         frm.Show()
+    End Sub
+
+    Private Sub MenuItem179_Click_1(sender As Object, e As EventArgs) Handles MenuItem179.Click
+        Dim frm As New frmInhabilitarExistenciaCero
+        frm.MdiParent = Me
+        frm.Show()
+    End Sub
+
+    Private Sub MenuItem180_Click_1(sender As Object, e As EventArgs) Handles MenuItem180.Click
+        Dim frm As New frmMovimientosCompra
+        frm.MdiParent = Me
+        frm.Show()
+    End Sub
+
+    Private Sub MenuItem193_Click(sender As Object, e As EventArgs) Handles MenuItem193.Click
+        Dim frm As New frmIncobrableGeneral
+        frm.MdiParent = Me
+        frm.Show()
+    End Sub
+
+    Private Sub MenuItem194_Click(sender As Object, e As EventArgs) Handles MenuItem194.Click
+        Dim frm As New frmAgregarDeposito
+        frm.Id_Usuario = usua.Cedula
+        frm.NombreUsuario = usua.Nombre
+        frm.IdArqueo = 0
+        frm.MdiParent = Me
+        frm.Show()
+    End Sub
+
+    Private Sub MenuItem195_Click(sender As Object, e As EventArgs) Handles MenuItem195.Click
+        Dim frm As New frmArqueoCaja
+        frm.Id_Usuario = usua.Cedula
+        frm.NombreUsuario = usua.Nombre
+        frm.MdiParent = Me
+        frm.Show()
+    End Sub
+
+    Private Sub MenuItem196_Click(sender As Object, e As EventArgs) Handles MenuItem196.Click
+        Dim frm As New frmArqueoDepositoAnulados
+        frm.MdiParent = Me
+        frm.Show()
+    End Sub
+
+    Private Sub MenuItem197_Click(sender As Object, e As EventArgs) Handles MenuItem197.Click
+        Dim frm As New frmComprasTrans
+        frm.ShowDialog()
     End Sub
 
 End Class

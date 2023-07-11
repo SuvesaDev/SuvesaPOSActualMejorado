@@ -22,7 +22,7 @@ Partial Class frmImportarFacturaElectronica
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.btnImportar = New System.Windows.Forms.Button()
         Me.viewDatos = New System.Windows.Forms.DataGridView()
         Me.cCodigoProveedor = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -68,10 +68,9 @@ Partial Class frmImportarFacturaElectronica
         '
         'btnImportar
         '
-        Me.btnImportar.Location = New System.Drawing.Point(16, 14)
-        Me.btnImportar.Margin = New System.Windows.Forms.Padding(4)
+        Me.btnImportar.Location = New System.Drawing.Point(12, 11)
         Me.btnImportar.Name = "btnImportar"
-        Me.btnImportar.Size = New System.Drawing.Size(299, 44)
+        Me.btnImportar.Size = New System.Drawing.Size(224, 36)
         Me.btnImportar.TabIndex = 2
         Me.btnImportar.Text = "Importar  XML de la Factura"
         Me.btnImportar.UseVisualStyleBackColor = True
@@ -82,17 +81,19 @@ Partial Class frmImportarFacturaElectronica
         Me.viewDatos.AllowUserToDeleteRows = False
         Me.viewDatos.AllowUserToResizeColumns = False
         Me.viewDatos.AllowUserToResizeRows = False
+        Me.viewDatos.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.viewDatos.BackgroundColor = System.Drawing.Color.White
         Me.viewDatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.viewDatos.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.cCodigoProveedor, Me.cDescripcion, Me.cBuscaCodigoInterno, Me.cId_ArticuloInterno, Me.cCodigoInterno, Me.cBuscarFamilia, Me.cSubFamilia, Me.cFamilia, Me.cDescripcionInterno, Me.cPresentacion, Me.cCantidad, Me.cCosto, Me.cDescuento, Me.cMontoDescuento, Me.cImpuesto, Me.cPrecioIva1, Me.cPrecioIva2, Me.cPrecioIva3, Me.cCantidadxPresentacion, Me.cCabys, Me.cFlete})
-        Me.viewDatos.Location = New System.Drawing.Point(12, 121)
-        Me.viewDatos.Margin = New System.Windows.Forms.Padding(4)
+        Me.viewDatos.Location = New System.Drawing.Point(4, 98)
         Me.viewDatos.MultiSelect = False
         Me.viewDatos.Name = "viewDatos"
         Me.viewDatos.RowHeadersVisible = False
         Me.viewDatos.RowTemplate.Height = 28
         Me.viewDatos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.viewDatos.Size = New System.Drawing.Size(1499, 435)
+        Me.viewDatos.Size = New System.Drawing.Size(1176, 353)
         Me.viewDatos.TabIndex = 3
         '
         'cCodigoProveedor
@@ -100,7 +101,7 @@ Partial Class frmImportarFacturaElectronica
         Me.cCodigoProveedor.HeaderText = "Codigo proveedor"
         Me.cCodigoProveedor.Name = "cCodigoProveedor"
         Me.cCodigoProveedor.ReadOnly = True
-        Me.cCodigoProveedor.Width = 110
+        Me.cCodigoProveedor.Width = 70
         '
         'cDescripcion
         '
@@ -201,9 +202,9 @@ Partial Class frmImportarFacturaElectronica
         '
         'cPrecioIva1
         '
-        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        DataGridViewCellStyle1.Format = "N2"
-        Me.cPrecioIva1.DefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        DataGridViewCellStyle2.Format = "N2"
+        Me.cPrecioIva1.DefaultCellStyle = DataGridViewCellStyle2
         Me.cPrecioIva1.HeaderText = "PrecioIva1"
         Me.cPrecioIva1.Name = "cPrecioIva1"
         Me.cPrecioIva1.ReadOnly = True
@@ -242,97 +243,87 @@ Partial Class frmImportarFacturaElectronica
         '
         'txtCedula
         '
-        Me.txtCedula.Location = New System.Drawing.Point(16, 89)
-        Me.txtCedula.Margin = New System.Windows.Forms.Padding(4)
+        Me.txtCedula.Location = New System.Drawing.Point(12, 72)
         Me.txtCedula.Name = "txtCedula"
         Me.txtCedula.ReadOnly = True
-        Me.txtCedula.Size = New System.Drawing.Size(165, 22)
+        Me.txtCedula.Size = New System.Drawing.Size(125, 20)
         Me.txtCedula.TabIndex = 7
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(12, 69)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label1.Location = New System.Drawing.Point(9, 56)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(52, 17)
+        Me.Label1.Size = New System.Drawing.Size(40, 13)
         Me.Label1.TabIndex = 6
         Me.Label1.Text = "Cedula"
         '
         'txtProveedor
         '
-        Me.txtProveedor.Location = New System.Drawing.Point(191, 89)
-        Me.txtProveedor.Margin = New System.Windows.Forms.Padding(4)
+        Me.txtProveedor.Location = New System.Drawing.Point(143, 72)
         Me.txtProveedor.Name = "txtProveedor"
         Me.txtProveedor.ReadOnly = True
-        Me.txtProveedor.Size = New System.Drawing.Size(413, 22)
+        Me.txtProveedor.Size = New System.Drawing.Size(311, 20)
         Me.txtProveedor.TabIndex = 8
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(624, 69)
-        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label2.Location = New System.Drawing.Point(468, 56)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(47, 17)
+        Me.Label2.Size = New System.Drawing.Size(37, 13)
         Me.Label2.TabIndex = 9
         Me.Label2.Text = "Fecha"
         '
         'txtFecha
         '
-        Me.txtFecha.Location = New System.Drawing.Point(628, 89)
-        Me.txtFecha.Margin = New System.Windows.Forms.Padding(4)
+        Me.txtFecha.Location = New System.Drawing.Point(471, 72)
         Me.txtFecha.Name = "txtFecha"
         Me.txtFecha.ReadOnly = True
-        Me.txtFecha.Size = New System.Drawing.Size(241, 22)
+        Me.txtFecha.Size = New System.Drawing.Size(182, 20)
         Me.txtFecha.TabIndex = 10
         '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(191, 69)
-        Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label3.Location = New System.Drawing.Point(143, 56)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(74, 17)
+        Me.Label3.Size = New System.Drawing.Size(56, 13)
         Me.Label3.TabIndex = 11
         Me.Label3.Text = "Proveedor"
         '
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(327, 14)
-        Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label4.Location = New System.Drawing.Point(245, 11)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(85, 17)
+        Me.Label4.Size = New System.Drawing.Size(66, 13)
         Me.Label4.TabIndex = 13
         Me.Label4.Text = "Consecutivo"
         '
         'txtConsecutivo
         '
-        Me.txtConsecutivo.Location = New System.Drawing.Point(327, 33)
-        Me.txtConsecutivo.Margin = New System.Windows.Forms.Padding(4)
+        Me.txtConsecutivo.Location = New System.Drawing.Point(245, 27)
         Me.txtConsecutivo.Name = "txtConsecutivo"
         Me.txtConsecutivo.ReadOnly = True
-        Me.txtConsecutivo.Size = New System.Drawing.Size(277, 22)
+        Me.txtConsecutivo.Size = New System.Drawing.Size(209, 20)
         Me.txtConsecutivo.TabIndex = 12
         '
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(628, 14)
-        Me.Label5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label5.Location = New System.Drawing.Point(471, 11)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(43, 17)
+        Me.Label5.Size = New System.Drawing.Size(34, 13)
         Me.Label5.TabIndex = 15
         Me.Label5.Text = "Clave"
         '
         'txtClave
         '
-        Me.txtClave.Location = New System.Drawing.Point(628, 33)
-        Me.txtClave.Margin = New System.Windows.Forms.Padding(4)
+        Me.txtClave.Location = New System.Drawing.Point(471, 27)
         Me.txtClave.Name = "txtClave"
         Me.txtClave.ReadOnly = True
-        Me.txtClave.Size = New System.Drawing.Size(492, 22)
+        Me.txtClave.Size = New System.Drawing.Size(370, 20)
         Me.txtClave.TabIndex = 14
         '
         'OpenFileDialog1
@@ -343,20 +334,20 @@ Partial Class frmImportarFacturaElectronica
         '
         'btnCancelar
         '
-        Me.btnCancelar.Location = New System.Drawing.Point(1274, 564)
-        Me.btnCancelar.Margin = New System.Windows.Forms.Padding(4)
+        Me.btnCancelar.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnCancelar.Location = New System.Drawing.Point(1005, 458)
         Me.btnCancelar.Name = "btnCancelar"
-        Me.btnCancelar.Size = New System.Drawing.Size(233, 44)
+        Me.btnCancelar.Size = New System.Drawing.Size(175, 36)
         Me.btnCancelar.TabIndex = 16
         Me.btnCancelar.Text = "Cancelar"
         Me.btnCancelar.UseVisualStyleBackColor = True
         '
         'btnAceptar
         '
-        Me.btnAceptar.Location = New System.Drawing.Point(1032, 564)
-        Me.btnAceptar.Margin = New System.Windows.Forms.Padding(4)
+        Me.btnAceptar.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnAceptar.Location = New System.Drawing.Point(823, 458)
         Me.btnAceptar.Name = "btnAceptar"
-        Me.btnAceptar.Size = New System.Drawing.Size(233, 44)
+        Me.btnAceptar.Size = New System.Drawing.Size(175, 36)
         Me.btnAceptar.TabIndex = 17
         Me.btnAceptar.Text = "Aceptar"
         Me.btnAceptar.UseVisualStyleBackColor = True
@@ -366,47 +357,43 @@ Partial Class frmImportarFacturaElectronica
         Me.cboEstado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cboEstado.FormattingEnabled = True
         Me.cboEstado.Items.AddRange(New Object() {"ACEPTADO", "RECHAZADO"})
-        Me.cboEstado.Location = New System.Drawing.Point(879, 87)
-        Me.cboEstado.Margin = New System.Windows.Forms.Padding(4)
+        Me.cboEstado.Location = New System.Drawing.Point(659, 71)
         Me.cboEstado.Name = "cboEstado"
-        Me.cboEstado.Size = New System.Drawing.Size(241, 24)
+        Me.cboEstado.Size = New System.Drawing.Size(182, 21)
         Me.cboEstado.TabIndex = 19
         '
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(879, 69)
-        Me.Label6.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label6.Location = New System.Drawing.Point(659, 56)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(125, 17)
+        Me.Label6.Size = New System.Drawing.Size(94, 13)
         Me.Label6.TabIndex = 20
         Me.Label6.Text = "Estado de Compra"
         '
         'btnInventario
         '
-        Me.btnInventario.Location = New System.Drawing.Point(12, 564)
-        Me.btnInventario.Margin = New System.Windows.Forms.Padding(4)
+        Me.btnInventario.Location = New System.Drawing.Point(9, 458)
         Me.btnInventario.Name = "btnInventario"
-        Me.btnInventario.Size = New System.Drawing.Size(299, 44)
+        Me.btnInventario.Size = New System.Drawing.Size(224, 36)
         Me.btnInventario.TabIndex = 21
         Me.btnInventario.Text = "Catalogo de Inventario"
         Me.btnInventario.UseVisualStyleBackColor = True
         '
         'btnFamilia
         '
-        Me.btnFamilia.Location = New System.Drawing.Point(319, 565)
-        Me.btnFamilia.Margin = New System.Windows.Forms.Padding(4)
+        Me.btnFamilia.Location = New System.Drawing.Point(239, 459)
         Me.btnFamilia.Name = "btnFamilia"
-        Me.btnFamilia.Size = New System.Drawing.Size(299, 44)
+        Me.btnFamilia.Size = New System.Drawing.Size(224, 36)
         Me.btnFamilia.TabIndex = 22
         Me.btnFamilia.Text = "Registro de Familias"
         Me.btnFamilia.UseVisualStyleBackColor = True
         '
         'frmImportarFacturaElectronica
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1525, 621)
+        Me.ClientSize = New System.Drawing.Size(1185, 505)
         Me.Controls.Add(Me.btnFamilia)
         Me.Controls.Add(Me.btnInventario)
         Me.Controls.Add(Me.Label6)
@@ -426,7 +413,6 @@ Partial Class frmImportarFacturaElectronica
         Me.Controls.Add(Me.viewDatos)
         Me.Controls.Add(Me.btnImportar)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
-        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "frmImportarFacturaElectronica"
@@ -455,6 +441,7 @@ Partial Class frmImportarFacturaElectronica
     Friend WithEvents cboEstado As System.Windows.Forms.ComboBox
     Friend WithEvents Label6 As System.Windows.Forms.Label
     Friend WithEvents btnInventario As System.Windows.Forms.Button
+    Friend WithEvents btnFamilia As System.Windows.Forms.Button
     Friend WithEvents cCodigoProveedor As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents cDescripcion As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents cBuscaCodigoInterno As System.Windows.Forms.DataGridViewButtonColumn
@@ -476,5 +463,4 @@ Partial Class frmImportarFacturaElectronica
     Friend WithEvents cCantidadxPresentacion As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents cCabys As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents cFlete As System.Windows.Forms.DataGridViewCheckBoxColumn
-    Friend WithEvents btnFamilia As System.Windows.Forms.Button
 End Class

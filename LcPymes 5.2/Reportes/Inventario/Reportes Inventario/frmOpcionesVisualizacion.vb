@@ -596,6 +596,7 @@ Public Class frmOpcionesVisualizacion
                     CrystalReportsConexion.LoadReportViewer(rptViewer, TomaxUbicacion)
 
                 Case 9
+                    'se valida que solo muestre productos inhabilitados
                     Dim TomaxCategoria As New InventarioxCategoria
                     TomaxCategoria.SetParameterValue(0, Me.cbxFamilia.Text)
                     TomaxCategoria.SetParameterValue(1, Me.codigo.Text)     'para codigos de barra o id

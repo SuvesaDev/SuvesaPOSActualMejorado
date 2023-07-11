@@ -2584,6 +2584,7 @@ Public Class CierreCaja
         If MsgBox("Desea Guardar El cierre de caja", MsgBoxStyle.Question + MsgBoxStyle.YesNo) = MsgBoxResult.No Then
             Exit Sub
         End If
+
         CargarDetalleCierreCaja()
         If Registar() Then
             CambiarEstadoApertura()
@@ -2707,12 +2708,13 @@ Public Class CierreCaja
 #End Region
 
 #Region "Imprimir"
+
     Private Sub Imprimir()
         Try
             If Me.AplicaCambioenCaja = True Then
-
                 'si es el servidor de liberia
                 Dim rptCierreCaja As New ReporteCierreControlNuevo
+                rptCierreCaja.Refresh()
                 Dim visor As New frmVisorReportes
                 visor.MdiParent = Me.ParentForm
                 CrystalReportsConexion.LoadReportViewer(visor.rptViewer, rptCierreCaja)

@@ -92,6 +92,7 @@ Public Class frmUtilidadVentasxRangoFechas
                     End If
                 Next
 
+
                 Dim Formula As String = Me.FormulaSeleccion
                 Dim rpt As New rptUlitidadesRangoFechaMensual
                 rpt.SetParameterValue(0, Me.dtpDesde.Value)

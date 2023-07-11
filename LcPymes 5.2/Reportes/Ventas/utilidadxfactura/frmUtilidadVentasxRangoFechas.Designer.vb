@@ -62,7 +62,7 @@ Partial Class frmUtilidadVentasxRangoFechas
         Me.btnMostrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnMostrar.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnMostrar.Location = New System.Drawing.Point(16, 562)
-        Me.btnMostrar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnMostrar.Margin = New System.Windows.Forms.Padding(4)
         Me.btnMostrar.Name = "btnMostrar"
         Me.btnMostrar.Size = New System.Drawing.Size(269, 85)
         Me.btnMostrar.TabIndex = 12
@@ -78,9 +78,9 @@ Partial Class frmUtilidadVentasxRangoFechas
         Me.CrystalReportViewer1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.CrystalReportViewer1.Cursor = System.Windows.Forms.Cursors.Default
         Me.CrystalReportViewer1.Location = New System.Drawing.Point(301, 1)
-        Me.CrystalReportViewer1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.CrystalReportViewer1.Margin = New System.Windows.Forms.Padding(4)
         Me.CrystalReportViewer1.Name = "CrystalReportViewer1"
-        Me.CrystalReportViewer1.Size = New System.Drawing.Size(907, 656)
+        Me.CrystalReportViewer1.Size = New System.Drawing.Size(750, 656)
         Me.CrystalReportViewer1.TabIndex = 11
         Me.CrystalReportViewer1.ToolPanelWidth = 267
         '
@@ -88,7 +88,7 @@ Partial Class frmUtilidadVentasxRangoFechas
         '
         Me.dtpHasta.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
         Me.dtpHasta.Location = New System.Drawing.Point(80, 69)
-        Me.dtpHasta.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.dtpHasta.Margin = New System.Windows.Forms.Padding(4)
         Me.dtpHasta.Name = "dtpHasta"
         Me.dtpHasta.Size = New System.Drawing.Size(204, 22)
         Me.dtpHasta.TabIndex = 13
@@ -97,7 +97,7 @@ Partial Class frmUtilidadVentasxRangoFechas
         '
         Me.dtpDesde.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
         Me.dtpDesde.Location = New System.Drawing.Point(80, 17)
-        Me.dtpDesde.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.dtpDesde.Margin = New System.Windows.Forms.Padding(4)
         Me.dtpDesde.Name = "dtpDesde"
         Me.dtpDesde.Size = New System.Drawing.Size(204, 22)
         Me.dtpDesde.TabIndex = 14
@@ -126,7 +126,7 @@ Partial Class frmUtilidadVentasxRangoFechas
         '
         Me.ckFiltrarAgente.AutoSize = True
         Me.ckFiltrarAgente.Location = New System.Drawing.Point(4, 7)
-        Me.ckFiltrarAgente.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.ckFiltrarAgente.Margin = New System.Windows.Forms.Padding(4)
         Me.ckFiltrarAgente.Name = "ckFiltrarAgente"
         Me.ckFiltrarAgente.Size = New System.Drawing.Size(115, 21)
         Me.ckFiltrarAgente.TabIndex = 17
@@ -139,7 +139,7 @@ Partial Class frmUtilidadVentasxRangoFechas
         Me.rbMostrarAgente.Checked = True
         Me.rbMostrarAgente.Enabled = False
         Me.rbMostrarAgente.Location = New System.Drawing.Point(63, 36)
-        Me.rbMostrarAgente.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.rbMostrarAgente.Margin = New System.Windows.Forms.Padding(4)
         Me.rbMostrarAgente.Name = "rbMostrarAgente"
         Me.rbMostrarAgente.Size = New System.Drawing.Size(173, 21)
         Me.rbMostrarAgente.TabIndex = 18
@@ -152,7 +152,7 @@ Partial Class frmUtilidadVentasxRangoFechas
         Me.rbExcluirAgente.AutoSize = True
         Me.rbExcluirAgente.Enabled = False
         Me.rbExcluirAgente.Location = New System.Drawing.Point(63, 64)
-        Me.rbExcluirAgente.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.rbExcluirAgente.Margin = New System.Windows.Forms.Padding(4)
         Me.rbExcluirAgente.Name = "rbExcluirAgente"
         Me.rbExcluirAgente.Size = New System.Drawing.Size(166, 21)
         Me.rbExcluirAgente.TabIndex = 19
@@ -171,7 +171,7 @@ Partial Class frmUtilidadVentasxRangoFechas
         Me.viewAgentes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.viewAgentes.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.cIdAgente, Me.cMarcarAgente, Me.cAgente})
         Me.viewAgentes.Location = New System.Drawing.Point(4, 89)
-        Me.viewAgentes.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.viewAgentes.Margin = New System.Windows.Forms.Padding(4)
         Me.viewAgentes.Name = "viewAgentes"
         Me.viewAgentes.RowHeadersVisible = False
         Me.viewAgentes.Size = New System.Drawing.Size(264, 44)
@@ -202,7 +202,7 @@ Partial Class frmUtilidadVentasxRangoFechas
         Me.SplitContainer1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.SplitContainer1.Location = New System.Drawing.Point(21, 164)
-        Me.SplitContainer1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.SplitContainer1.Margin = New System.Windows.Forms.Padding(4)
         Me.SplitContainer1.Name = "SplitContainer1"
         Me.SplitContainer1.Orientation = System.Windows.Forms.Orientation.Horizontal
         '
@@ -231,7 +231,7 @@ Partial Class frmUtilidadVentasxRangoFechas
         '
         Me.btnCargarVeterinarias.Enabled = False
         Me.btnCargarVeterinarias.Location = New System.Drawing.Point(7, 91)
-        Me.btnCargarVeterinarias.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnCargarVeterinarias.Margin = New System.Windows.Forms.Padding(4)
         Me.btnCargarVeterinarias.Name = "btnCargarVeterinarias"
         Me.btnCargarVeterinarias.Size = New System.Drawing.Size(264, 28)
         Me.btnCargarVeterinarias.TabIndex = 26
@@ -242,7 +242,7 @@ Partial Class frmUtilidadVentasxRangoFechas
         '
         Me.btnBuscarCliente.Enabled = False
         Me.btnBuscarCliente.Location = New System.Drawing.Point(164, 4)
-        Me.btnBuscarCliente.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnBuscarCliente.Margin = New System.Windows.Forms.Padding(4)
         Me.btnBuscarCliente.Name = "btnBuscarCliente"
         Me.btnBuscarCliente.Size = New System.Drawing.Size(100, 28)
         Me.btnBuscarCliente.TabIndex = 25
@@ -260,7 +260,7 @@ Partial Class frmUtilidadVentasxRangoFechas
         Me.viewClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.viewClientes.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.cIdCliente, Me.cMarcarCliente, Me.cCliente})
         Me.viewClientes.Location = New System.Drawing.Point(7, 121)
-        Me.viewClientes.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.viewClientes.Margin = New System.Windows.Forms.Padding(4)
         Me.viewClientes.MultiSelect = False
         Me.viewClientes.Name = "viewClientes"
         Me.viewClientes.RowHeadersVisible = False
@@ -293,7 +293,7 @@ Partial Class frmUtilidadVentasxRangoFechas
         '
         Me.ckFiltrarCliente.AutoSize = True
         Me.ckFiltrarCliente.Location = New System.Drawing.Point(7, 9)
-        Me.ckFiltrarCliente.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.ckFiltrarCliente.Margin = New System.Windows.Forms.Padding(4)
         Me.ckFiltrarCliente.Name = "ckFiltrarCliente"
         Me.ckFiltrarCliente.Size = New System.Drawing.Size(113, 21)
         Me.ckFiltrarCliente.TabIndex = 21
@@ -306,7 +306,7 @@ Partial Class frmUtilidadVentasxRangoFechas
         Me.rbMostrarCliente.Checked = True
         Me.rbMostrarCliente.Enabled = False
         Me.rbMostrarCliente.Location = New System.Drawing.Point(65, 37)
-        Me.rbMostrarCliente.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.rbMostrarCliente.Margin = New System.Windows.Forms.Padding(4)
         Me.rbMostrarCliente.Name = "rbMostrarCliente"
         Me.rbMostrarCliente.Size = New System.Drawing.Size(173, 21)
         Me.rbMostrarCliente.TabIndex = 22
@@ -319,7 +319,7 @@ Partial Class frmUtilidadVentasxRangoFechas
         Me.rbExcluirCliente.AutoSize = True
         Me.rbExcluirCliente.Enabled = False
         Me.rbExcluirCliente.Location = New System.Drawing.Point(65, 65)
-        Me.rbExcluirCliente.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.rbExcluirCliente.Margin = New System.Windows.Forms.Padding(4)
         Me.rbExcluirCliente.Name = "rbExcluirCliente"
         Me.rbExcluirCliente.Size = New System.Drawing.Size(166, 21)
         Me.rbExcluirCliente.TabIndex = 23
@@ -329,7 +329,7 @@ Partial Class frmUtilidadVentasxRangoFechas
         'btnAgente
         '
         Me.btnAgente.Location = New System.Drawing.Point(21, 129)
-        Me.btnAgente.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnAgente.Margin = New System.Windows.Forms.Padding(4)
         Me.btnAgente.Name = "btnAgente"
         Me.btnAgente.Size = New System.Drawing.Size(132, 28)
         Me.btnAgente.TabIndex = 22
@@ -339,7 +339,7 @@ Partial Class frmUtilidadVentasxRangoFechas
         'btnCliente
         '
         Me.btnCliente.Location = New System.Drawing.Point(153, 129)
-        Me.btnCliente.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnCliente.Margin = New System.Windows.Forms.Padding(4)
         Me.btnCliente.Name = "btnCliente"
         Me.btnCliente.Size = New System.Drawing.Size(132, 28)
         Me.btnCliente.TabIndex = 23
@@ -371,7 +371,7 @@ Partial Class frmUtilidadVentasxRangoFechas
         Me.Controls.Add(Me.dtpHasta)
         Me.Controls.Add(Me.btnMostrar)
         Me.Controls.Add(Me.CrystalReportViewer1)
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "frmUtilidadVentasxRangoFechas"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Utilidad Ventas por Rango Fechas"

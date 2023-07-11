@@ -720,7 +720,7 @@ Public Class FrmBuscarArticulo2
         For Each r As DataGridViewRow In t
             r.DefaultCellStyle.BackColor = MeDeben
             r.DefaultCellStyle.ForeColor = Drawing.Color.White
-            r.DefaultCellStyle.SelectionBackColor = MeDeben
+            'r.DefaultCellStyle.SelectionBackColor = MeDeben
             r.DefaultCellStyle.SelectionForeColor = Drawing.Color.White
         Next
 
@@ -729,7 +729,7 @@ Public Class FrmBuscarArticulo2
         For Each r As DataGridViewRow In t
             r.DefaultCellStyle.BackColor = YoDebo
             r.DefaultCellStyle.ForeColor = Drawing.Color.White
-            r.DefaultCellStyle.SelectionBackColor = YoDebo
+            'r.DefaultCellStyle.SelectionBackColor = YoDebo
             r.DefaultCellStyle.SelectionForeColor = Drawing.Color.White
         Next
 
@@ -738,7 +738,7 @@ Public Class FrmBuscarArticulo2
         For Each r As DataGridViewRow In t
             r.DefaultCellStyle.BackColor = Negativo
             r.DefaultCellStyle.ForeColor = Drawing.Color.White
-            r.DefaultCellStyle.SelectionBackColor = Negativo
+            'r.DefaultCellStyle.SelectionBackColor = Negativo
             r.DefaultCellStyle.SelectionForeColor = Drawing.Color.White
         Next
 
@@ -747,7 +747,7 @@ Public Class FrmBuscarArticulo2
         For Each r As DataGridViewRow In t
             r.DefaultCellStyle.BackColor = EsConsignacion
             r.DefaultCellStyle.ForeColor = Drawing.Color.White
-            r.DefaultCellStyle.SelectionBackColor = EsConsignacion
+            'r.DefaultCellStyle.SelectionBackColor = EsConsignacion
             r.DefaultCellStyle.SelectionForeColor = Drawing.Color.White
         Next
 
@@ -756,7 +756,7 @@ Public Class FrmBuscarArticulo2
         For Each r As DataGridViewRow In t
             r.DefaultCellStyle.BackColor = EnCero
             r.DefaultCellStyle.ForeColor = Drawing.Color.White
-            r.DefaultCellStyle.SelectionBackColor = EnCero
+            'r.DefaultCellStyle.SelectionBackColor = EnCero
             r.DefaultCellStyle.SelectionForeColor = Drawing.Color.White
         Next
 
@@ -768,7 +768,7 @@ Public Class FrmBuscarArticulo2
                 For Each r As DataGridViewRow In t
                     r.DefaultCellStyle.BackColor = PromoActiva
                     r.DefaultCellStyle.ForeColor = Drawing.Color.White
-                    r.DefaultCellStyle.SelectionBackColor = PromoActiva
+                    'r.DefaultCellStyle.SelectionBackColor = PromoActiva
                     r.DefaultCellStyle.SelectionForeColor = Drawing.Color.Blue
                 Next
             Next

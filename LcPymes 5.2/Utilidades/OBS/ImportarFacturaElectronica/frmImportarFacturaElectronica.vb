@@ -193,15 +193,13 @@ Public Class frmImportarFacturaElectronica
                         Me.viewDatos.Item("cId_ArticuloInterno", Index).Value = dt.Rows(0).Item("ID_ARTICULO")
                         Me.viewDatos.Item("cCodigoInterno", Index).Value = dt.Rows(0).Item("CODIGO")
                         Me.viewDatos.Item("cDescripcionInterno", Index).Value = dt.Rows(0).Item("DESCRIPCION")
-
-                        Me.viewDatos.Item("cSubFamilia", Index).Value = dt.Rows(0).Item("CodFamilia")
-                        Me.viewDatos.Item("cFamilia", Index).Value = dt.Rows(0).Item("Familia")
-
                         Me.viewDatos.Item("cPresentacion", Index).Value = dt.Rows(0).Item("PRESENTACION")
                         Me.viewDatos.Item("cPrecioIva1", Index).Value = dt.Rows(0).Item("PRECIO_IVA1")
                         Me.viewDatos.Item("cPrecioIva2", Index).Value = dt.Rows(0).Item("PRECIO_IVA2")
                         Me.viewDatos.Item("cPrecioIva3", Index).Value = dt.Rows(0).Item("PRECIO_IVA3")
                         Me.viewDatos.Item("cCantidadxPresentacion", Index).Value = dt.Rows(0).Item("CANTIDADxPRESENTACION")
+                        Me.viewDatos.Item("cSubFamilia", Index).Value = dt.Rows(0).Item("CodFamilia")
+                        Me.viewDatos.Item("cFamilia", Index).Value = dt.Rows(0).Item("Familia")
                     Else
                         Me.viewDatos.Item("cId_ArticuloInterno", Index).Value = "0"
                         Me.viewDatos.Item("cCodigoInterno", Index).Value = ""
@@ -264,11 +262,13 @@ Public Class frmImportarFacturaElectronica
                             Me.viewDatos.Item("cPrecioIva1", e.RowIndex).Value = Me.Articulo.Precio_IVA1
                             Me.viewDatos.Item("cPrecioIva2", e.RowIndex).Value = Me.Articulo.Precio_IVA2
                             Me.viewDatos.Item("cPrecioIva3", e.RowIndex).Value = Me.Articulo.Precio_IVA3
+                            Me.viewDatos.Item("cSubFamilia", e.RowIndex).Value = Me.Articulo.CodFamilia
+                            Me.viewDatos.Item("cFamilia", e.RowIndex).Value = Me.Articulo.Familia
                         End If
                         'End If
                     End If
                 Case "cBuscarFamilia"
-                    If Me.viewDatos.Item("cSubFamilia", e.RowIndex).Value <> "" Then
+                    If Me.viewDatos.Item("cDescripcionInterno", e.RowIndex).Value <> "" Then
                         Dim Fx As New cFunciones
                         Dim valor As String
                         valor = Fx.BuscarDatos("SELECT SubFamilias.Codigo, Familia.Descripcion + '/' + SubFamilias.Descripcion AS Familiares FROM SubFamilias INNER JOIN Familia ON SubFamilias.CodigoFamilia = Familia.Codigo", "Familia.Descripcion + '/' + SubFamilias.Descripcion", "Buscar Familia...")
@@ -392,6 +392,8 @@ Namespace GestionDatos
         Public Precio_IVA1 As Decimal
         Public Precio_IVA2 As Decimal
         Public Precio_IVA3 As Decimal
+        Public CodFamilia As String = ""
+        Public Familia As String = ""
 
         Public Function BuscarArticulo(Optional ByVal _IdPuntoVenta As Integer = 0) As String
             Dim Codigo As String = ""
@@ -441,7 +443,7 @@ Namespace GestionDatos
 
         Public Function GET_ARTICULO(_IdArticulo As String, Optional ByVal _IdPuntoVenta As Integer = 0) As Boolean
             Dim dt As New DataTable
-            cFunciones.Llenar_Tabla_Generico("select i.Codigo As Id_Articulo, i.Cod_Articulo As Codigo, i.Descripcion, i.PresentaCant As Cantidad_Presentacion, p.Presentaciones As Presentacion, i.Precio_A As Precio_IVA1, i.Precio_B As Precio_IVA2, i.Precio_C As Precio_IVA3 from Inventario i inner join Presentaciones p on  i.CodPresentacion = p.CodPres where i.Cod_Articulo = '" & _IdArticulo & "'", dt, Me.Conexcion(_IdPuntoVenta))
+            cFunciones.Llenar_Tabla_Generico("select i.Codigo As Id_Articulo, i.Cod_Articulo As Codigo, i.Descripcion, i.PresentaCant As Cantidad_Presentacion, p.Presentaciones As Presentacion, i.SubFamilia as CodFamilia, f.Descripcion + '/' + sf.Descripcion as Familia, i.Precio_A As Precio_IVA1, i.Precio_B As Precio_IVA2, i.Precio_C As Precio_IVA3 from Inventario i inner join Presentaciones p on  i.CodPresentacion = p.CodPres inner join SubFamilias sf on i.SubFamilia = sf.Codigo inner join Familia f on sf.CodigoFamilia = f.Codigo where i.Cod_Articulo =  '" & _IdArticulo & "'", dt, Me.Conexcion(_IdPuntoVenta))
             If dt.Rows.Count > 0 Then
                 Me.Id_Articulo = dt.Rows(0).Item("Id_Articulo")
                 Me.Codigo = dt.Rows(0).Item("Codigo")
@@ -451,6 +453,8 @@ Namespace GestionDatos
                 Me.Precio_IVA1 = dt.Rows(0).Item("Precio_IVA1")
                 Me.Precio_IVA2 = dt.Rows(0).Item("Precio_IVA2")
                 Me.Precio_IVA3 = dt.Rows(0).Item("Precio_IVA3")
+                Me.CodFamilia = dt.Rows(0).Item("CodFamilia")
+                Me.Familia = dt.Rows(0).Item("Familia")
                 Return True
             Else
                 Return False

@@ -317,14 +317,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Veterinaria.exe" size="29176320">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Veterinaria.exe" size="28599808">
       <assemblyIdentity name="Veterinaria" version="0.0.0.0" language="neutral" processorArchitecture="x86" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>9fM5s98goApJ4lVti90iwuEoqjIN0bRuYq31ZkjHihw=</dsig:DigestValue>
+        <dsig:DigestValue>p0+RDSaXd0SqvdOcKIkqTzHioTd3Kj4w4BroZiDOwnc=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -336,7 +336,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>djrvvRBspsu1CAiWlWfKTrJkikrfGOqn0geopwHhxcY=</dsig:DigestValue>
+        <dsig:DigestValue>I2E6PPN3BmoCuUREc3pnAiK31WTZ1HwrJpRsuxiX7Zo=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -348,7 +348,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>wXhW7dmG0Kz7oWhE9W4tvO4z8DkOu/M1FFOfZsTH3wM=</dsig:DigestValue>
+        <dsig:DigestValue>NhQ2sk3yKRKC0L9IWXtm8MUOWnJoN1/wbx/+5xN/z3A=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -802,13 +802,13 @@
       <dsig:DigestValue>uebWq58focEHway8TGWVbh0qzfrbTyJstphaqhODJFo=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="Operaciones\Ventas\Recibo Dinero\dsRecibos.xsd" size="14293">
+  <file name="Operaciones\Ventas\Recibo Dinero\dsRecibos.xsd" size="14875">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>a4KoR5S0U1DJbyE5vWdT0V4UtwAySpYCnN9J8wDfeVg=</dsig:DigestValue>
+      <dsig:DigestValue>rexjcIWhRzkXMEeROAth+nPXHlcZs1+Rmy0V0AnyP0A=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Reportes\Compras\dsReporteCompras.xsd" size="1290">

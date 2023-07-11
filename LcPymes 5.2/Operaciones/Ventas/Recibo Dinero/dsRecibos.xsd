@@ -38,6 +38,8 @@
               <xs:element name="Saldo" msprop:Generator_ColumnVarNameInTable="columnSaldo" msprop:Generator_ColumnPropNameInRow="Saldo" msprop:Generator_ColumnPropNameInTable="SaldoColumn" msprop:Generator_UserColumnName="Saldo" type="xs:double" />
               <xs:element name="Fecha" msprop:Generator_ColumnVarNameInTable="columnFecha" msprop:Generator_ColumnPropNameInRow="Fecha" msprop:Generator_ColumnPropNameInTable="FechaColumn" msprop:Generator_UserColumnName="Fecha" type="xs:dateTime" />
               <xs:element name="Num_Caja" msprop:Generator_ColumnVarNameInTable="columnNum_Caja" msprop:Generator_ColumnPropNameInRow="Num_Caja" msprop:Generator_ColumnPropNameInTable="Num_CajaColumn" msprop:Generator_UserColumnName="Num_Caja" type="xs:short" default="0" minOccurs="0" />
+              <xs:element name="Id" msprop:Generator_ColumnVarNameInTable="columnId" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_ColumnPropNameInTable="IdColumn" msprop:Generator_UserColumnName="Id" type="xs:long" minOccurs="0" />
+              <xs:element name="EnProcesoIncobrable" msprop:Generator_ColumnVarNameInTable="columnEnProcesoIncobrable" msprop:Generator_ColumnPropNameInRow="EnProcesoIncobrable" msprop:Generator_ColumnPropNameInTable="EnProcesoIncobrableColumn" msprop:Generator_UserColumnName="EnProcesoIncobrable" type="xs:boolean" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
@@ -77,11 +79,11 @@
       <xs:selector xpath=".//mstns:abonoccobrar" />
       <xs:field xpath="mstns:Id_Recibo" />
     </xs:unique>
-    <xs:keyref name="Monedaabonoccobrar" refer="Constraint1" msprop:rel_Generator_UserChildTable="abonoccobrar" msprop:rel_Generator_ChildPropName="GetabonoccobrarRows" msprop:rel_Generator_UserRelationName="Monedaabonoccobrar" msprop:rel_Generator_RelationVarName="relationMonedaabonoccobrar" msprop:rel_Generator_UserParentTable="Moneda" msprop:rel_Generator_ParentPropName="MonedaRow">
+    <xs:keyref name="Monedaabonoccobrar" refer="Constraint1" msprop:rel_Generator_UserChildTable="abonoccobrar" msprop:rel_Generator_ChildPropName="GetabonoccobrarRows" msprop:rel_Generator_UserRelationName="Monedaabonoccobrar" msprop:rel_Generator_ParentPropName="MonedaRow" msprop:rel_Generator_RelationVarName="relationMonedaabonoccobrar" msprop:rel_Generator_UserParentTable="Moneda">
       <xs:selector xpath=".//mstns:abonoccobrar" />
       <xs:field xpath="mstns:Cod_Moneda" />
     </xs:keyref>
-    <xs:keyref name="abonoccobrardetalle_abonoccobrar" refer="abonoccobrar_Constraint1" msprop:rel_Generator_UserChildTable="detalle_abonoccobrar" msprop:rel_Generator_ChildPropName="Getdetalle_abonoccobrarRows" msprop:rel_Generator_UserRelationName="abonoccobrardetalle_abonoccobrar" msprop:rel_Generator_RelationVarName="relationabonoccobrardetalle_abonoccobrar" msprop:rel_Generator_UserParentTable="abonoccobrar" msprop:rel_Generator_ParentPropName="abonoccobrarRow">
+    <xs:keyref name="abonoccobrardetalle_abonoccobrar" refer="abonoccobrar_Constraint1" msprop:rel_Generator_UserChildTable="detalle_abonoccobrar" msprop:rel_Generator_ChildPropName="Getdetalle_abonoccobrarRows" msprop:rel_Generator_UserRelationName="abonoccobrardetalle_abonoccobrar" msprop:rel_Generator_ParentPropName="abonoccobrarRow" msprop:rel_Generator_RelationVarName="relationabonoccobrardetalle_abonoccobrar" msprop:rel_Generator_UserParentTable="abonoccobrar">
       <xs:selector xpath=".//mstns:detalle_abonoccobrar" />
       <xs:field xpath="mstns:Id_Recibo" />
     </xs:keyref>

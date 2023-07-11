@@ -23,7 +23,6 @@ Partial Class frmUnirCodigosPuntoVenta
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.ViewDatos = New System.Windows.Forms.DataGridView()
-        Me.Button1 = New System.Windows.Forms.Button()
         Me.cId = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.cPuntoVenta1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.cBuscarCodigo1 = New System.Windows.Forms.DataGridViewButtonColumn()
@@ -36,6 +35,8 @@ Partial Class frmUnirCodigosPuntoVenta
         Me.cCodAlterno2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.cDescripcion2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.cEliminar = New System.Windows.Forms.DataGridViewButtonColumn()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.btnEliminar = New System.Windows.Forms.Button()
         CType(Me.ViewDatos, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -51,23 +52,15 @@ Partial Class frmUnirCodigosPuntoVenta
         Me.ViewDatos.BackgroundColor = System.Drawing.Color.White
         Me.ViewDatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.ViewDatos.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.cId, Me.cPuntoVenta1, Me.cBuscarCodigo1, Me.cCodigo1, Me.cCodAlterno1, Me.cDescripcion1, Me.cPuntoVenta2, Me.cBuscarCodigo2, Me.cCodigo2, Me.cCodAlterno2, Me.cDescripcion2, Me.cEliminar})
-        Me.ViewDatos.Location = New System.Drawing.Point(1, 42)
+        Me.ViewDatos.Location = New System.Drawing.Point(1, 52)
+        Me.ViewDatos.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.ViewDatos.MultiSelect = False
         Me.ViewDatos.Name = "ViewDatos"
         Me.ViewDatos.RowHeadersVisible = False
         Me.ViewDatos.RowTemplate.Height = 27
         Me.ViewDatos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.ViewDatos.Size = New System.Drawing.Size(1000, 433)
+        Me.ViewDatos.Size = New System.Drawing.Size(1333, 533)
         Me.ViewDatos.TabIndex = 0
-        '
-        'Button1
-        '
-        Me.Button1.Location = New System.Drawing.Point(5, 13)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
-        Me.Button1.TabIndex = 1
-        Me.Button1.Text = "Agregar"
-        Me.Button1.UseVisualStyleBackColor = True
         '
         'cId
         '
@@ -157,13 +150,35 @@ Partial Class frmUnirCodigosPuntoVenta
         Me.cEliminar.Visible = False
         Me.cEliminar.Width = 50
         '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(7, 16)
+        Me.Button1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(100, 28)
+        Me.Button1.TabIndex = 1
+        Me.Button1.Text = "Agregar"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
+        'btnEliminar
+        '
+        Me.btnEliminar.Location = New System.Drawing.Point(126, 16)
+        Me.btnEliminar.Margin = New System.Windows.Forms.Padding(4)
+        Me.btnEliminar.Name = "btnEliminar"
+        Me.btnEliminar.Size = New System.Drawing.Size(100, 28)
+        Me.btnEliminar.TabIndex = 2
+        Me.btnEliminar.Text = "Eliminar"
+        Me.btnEliminar.UseVisualStyleBackColor = True
+        '
         'frmUnirCodigosPuntoVenta
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1001, 476)
+        Me.ClientSize = New System.Drawing.Size(1335, 586)
+        Me.Controls.Add(Me.btnEliminar)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.ViewDatos)
+        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "frmUnirCodigosPuntoVenta"
@@ -187,4 +202,5 @@ Partial Class frmUnirCodigosPuntoVenta
     Friend WithEvents cCodAlterno2 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents cDescripcion2 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents cEliminar As System.Windows.Forms.DataGridViewButtonColumn
+    Friend WithEvents btnEliminar As System.Windows.Forms.Button
 End Class

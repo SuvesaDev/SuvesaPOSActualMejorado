@@ -1,0 +1,41 @@
+<?xml version="1.0" standalone="yes"?>
+<Configuraciones>
+  <xs:schema id="Configuraciones" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="Configuraciones" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="Terminal">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="Terminal" type="xs:string" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="Impresora">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="Impresora" type="xs:string" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="Datafono">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="Datafono" type="xs:string" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+    </xs:element>
+  </xs:schema>
+  <Terminal>
+    <Terminal>prueba</Terminal>
+  </Terminal>
+  <Impresora>
+    <Impresora>Microsoft Print to PDF</Impresora>
+  </Impresora>
+  <Datafono>
+    <Datafono>False</Datafono>
+  </Datafono>
+</Configuraciones>

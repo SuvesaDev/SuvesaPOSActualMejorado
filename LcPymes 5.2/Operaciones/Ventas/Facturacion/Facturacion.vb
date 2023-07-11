@@ -5526,7 +5526,7 @@ Fin:
 
     Public Function ClienteInactivado(_Identificacion As String) As Boolean
         Dim dt As New DataTable
-        cFunciones.Llenar_Tabla_Generico("select Anulado, Cliente_Moroso, Fallecido from Clientes where identificacion = " & _Identificacion, dt, CadenaConexionSeePOS)
+        cFunciones.Llenar_Tabla_Generico("select Anulado, Cliente_Moroso, Incobrable, Fallecido from Clientes where identificacion = " & _Identificacion, dt, CadenaConexionSeePOS)
         If dt.Rows.Count > 0 Then
             If CBool(dt.Rows(0).Item("Fallecido")) = True Then
                 Me.lblMensaje.Text = "El cliente esta marcado como Fallecido" & vbCrLf _
@@ -5557,6 +5557,16 @@ Fin:
                 frm.ShowDialog()
                 Me.IniciaTiempo()
             End If
+
+            If CBool(dt.Rows(0).Item("Incobrable")) = True Then
+                Me.DetenerTiempo()
+                Dim frm As New frmMensajeClienteMoroso
+                frm.Label1.Text = "Cliente con Facturas Incobrables" & vbCrLf _
+                & "No se puede dar credito de ninguna forma."
+                frm.ShowDialog()
+                Me.IniciaTiempo()
+            End If
+
         End If
     End Function
 
@@ -8583,10 +8593,13 @@ Fin:
     Private Sub UsaGalon(_Codigo As String)
         If _Codigo <> "" Then
             Dim dt As New DataTable
-            cFunciones.Llenar_Tabla_Generico("select UsaGalon, CodGalon from Inventario Where Codigo = " & _Codigo, dt, CadenaConexionSeePOS)
+            cFunciones.Llenar_Tabla_Generico("select UsaGalon, CodGalon, TituloGalon from Inventario Where Codigo = " & _Codigo, dt, CadenaConexionSeePOS)
             If dt.Rows.Count > 0 Then
                 If dt.Rows(0).Item("UsaGalon") = 1 Or dt.Rows(0).Item("UsaGalon") = True Then
                     Dim frm As New frmUsaGalon
+
+                    frm.lblDescripcion.Text = dt.Rows(0).Item("TituloGalon")
+
                     If frm.ShowDialog = Windows.Forms.DialogResult.Cancel Then
                         Dim CodArticulo As String = dt.Rows(0).Item("CodGalon")
                         Me.CargarInformacionArticulo(CodArticulo)
@@ -12404,10 +12417,10 @@ Contador:
             'a futuro lo mejor seria ligarlo con el cabys pero el problema es que el cabys siempre esta perdido
             '*****************************************************************************************************
             Me.Ck_Exonerar.Checked = True
-            'IdTipoExoneracion = dtExoneracion.Rows(0).Item("Id")
-            'NumeroDocumento = dtExoneracion.Rows(0).Item("NumeroDocumento")
-            'PorcentajeCompra = dtExoneracion.Rows(0).Item("PorcentajeCompra")
-            'FechaEmision = dtExoneracion.Rows(0).Item("FechaEmision")
+            IdTipoExoneracion = dtExoneracion.Rows(0).Item("Id")
+            NumeroDocumento = dtExoneracion.Rows(0).Item("NumeroDocumento")
+            PorcentajeCompra = dtExoneracion.Rows(0).Item("PorcentajeCompra")
+            FechaEmision = dtExoneracion.Rows(0).Item("FechaEmision")
             '*****************************************************************************************************
         Else
             Me.Ck_Exonerar.Checked = False
@@ -12418,7 +12431,6 @@ Contador:
                 .Position = i
                 Codigo = .Current("Codigo")
                 IVAArticulo = Me.ImpuestoArticulo(Codigo)
-
                 .Current("IdTipoExoneracion") = 1
                 .Current("NumeroDocumento") = ""
                 .Current("PorcentajeCompra") = 0
@@ -12426,16 +12438,15 @@ Contador:
 
                 If Ck_Exonerar.Checked = True Then
                     'el cliente tiene exoneracion por carta
-
                     '*****************************************************************************************************
                     'En el caso de guanavet, lo mejor es que el usuario marque que productos se deben exonerar y cuales no
                     'a futuro lo mejor seria ligarlo con el cabys pero el problema es que el cabys siempre esta perdido
                     '*****************************************************************************************************
-                    '.Current("IdTipoExoneracion") = IdTipoExoneracion
-                    '.Current("NumeroDocumento") = NumeroDocumento
-                    '.Current("PorcentajeCompra") = PorcentajeCompra
-                    '.Current("FechaEmision") = FechaEmision
-                    '.Current("Impuesto") = IIf(IVAArticulo >= PorcentajeCompra, IVAArticulo - PorcentajeCompra, 0)
+                    .Current("IdTipoExoneracion") = IdTipoExoneracion
+                    .Current("NumeroDocumento") = NumeroDocumento
+                    .Current("PorcentajeCompra") = PorcentajeCompra
+                    .Current("FechaEmision") = FechaEmision
+                    .Current("Impuesto") = IIf(IVAArticulo >= PorcentajeCompra, IVAArticulo - PorcentajeCompra, 0)
                 Else
                     esAgricola = Me.ProductoAgricola(Codigo)
                     If esAgricola = True And MAG = True Then

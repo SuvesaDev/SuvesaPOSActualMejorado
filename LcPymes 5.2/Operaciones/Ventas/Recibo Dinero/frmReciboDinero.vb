@@ -387,6 +387,7 @@ Public Class frmReciboDinero
         Me.ckFiltrarIncobrable.TabIndex = 189
         Me.ckFiltrarIncobrable.Text = "Filtrar Incobrables"
         Me.ckFiltrarIncobrable.UseVisualStyleBackColor = False
+        Me.ckFiltrarIncobrable.Checked = True
         '
         'txtCodigo
         '
@@ -2646,7 +2647,9 @@ Public Class frmReciboDinero
                         txtSaldoAct.Text = Format(CDbl(txtSaldoAnt.Text) - CDbl(txtAbono.Text), "#,#0.00")
                     End If
 
-                    BindingContext(DsRecibos1, "abonoccobrar.abonoccobrardetalle_abonoccobrar").Current("Num_Caja") = "0"
+                    BindingContext(DsRecibos1, "abonoccobrar.abonoccobrardetalle_abonoccobrar").Current("Id") = BindingContext(Tabla).Current("Id")
+                    BindingContext(DsRecibos1, "abonoccobrar.abonoccobrardetalle_abonoccobrar").Current("EnProcesoIncobrable") = BindingContext(Tabla).Current("EnProcesoIncobrable")
+                    BindingContext(DsRecibos1, "abonoccobrar.abonoccobrardetalle_abonoccobrar").Current("Num_Caja") = BindingContext(Tabla).Current("Num_Caja")
 
                     BindingContext(DsRecibos1, "abonoccobrar.abonoccobrardetalle_abonoccobrar").EndCurrentEdit()
                     int = colIntereses.SummaryItem.SummaryValue
@@ -2693,16 +2696,14 @@ Public Class frmReciboDinero
 
         Try 'se intenta hacer
             If BindingContext(DsRecibos1, "abonoccobrar.abonoccobrardetalle_abonoccobrar").Count > 0 Then  ' si hay ubicaciones
-
                 resp = MessageBox.Show("¿Desea eliminar esta factura del Recibo de Dinero?", "Seepos", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1)
                 If resp = 6 Then
                     FilaTabla = Tabla.NewRow
                     FilaTabla("Factura") = BindingContext(DsRecibos1, "abonoccobrar.abonoccobrardetalle_abonoccobrar").Current("Factura")
                     FilaTabla("Tipo") = BindingContext(DsRecibos1, "abonoccobrar.abonoccobrardetalle_abonoccobrar").Current("Tipo")
-                    'Facturatem = FilaTabla("factura")
-                    'Fechatem = Conexion2.SlqExecuteScalar(Conexion2.Conectar, "Select Fecha from Ventas Where Num_Factura =" & Facturatem & " AND Tipo = '" & FilaTabla("Tipo") & "'")
-                    'Conexion2.DesConectar(Conexion2.Conectar)
-                    'FilaTabla("Fecha") = Fechatem
+                    FilaTabla("Id") = BindingContext(DsRecibos1, "abonoccobrar.abonoccobrardetalle_abonoccobrar").Current("Id")
+                    FilaTabla("EnProcesoIncobrable") = BindingContext(DsRecibos1, "abonoccobrar.abonoccobrardetalle_abonoccobrar").Current("EnProcesoIncobrable")
+                    FilaTabla("Num_Caja") = BindingContext(DsRecibos1, "abonoccobrar.abonoccobrardetalle_abonoccobrar").Current("Num_Caja")
                     FilaTabla("Total") = BindingContext(DsRecibos1, "abonoccobrar.abonoccobrardetalle_abonoccobrar").Current("Monto")
                     FilaTabla("Fecha") = BindingContext(DsRecibos1, "abonoccobrar.abonoccobrardetalle_abonoccobrar").Current("Fecha")
                     Tabla.Rows.Add(FilaTabla)

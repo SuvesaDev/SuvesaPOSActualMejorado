@@ -74,6 +74,19 @@ Public Class frmConsultaAlbaran
         End Try
     End Function
 
+    Private Sub BackgroundWorker1_DoWork(sender As Object, e As System.ComponentModel.DoWorkEventArgs) Handles BackgroundWorker1.DoWork
+        Dim service As ServiceController = New ServiceController("Sincronizador")
+        Dim Bandera As Boolean = False
+        While Bandera = False
+            service.Refresh()
+            If (service.Status.Equals(ServiceControllerStatus.Stopped)) Then
+                Bandera = True
+                Me.btnSincronizacion.Enabled = True
+            End If
+        End While
+        Me.BackgroundWorker1.Dispose()
+    End Sub
+
     Private Sub CargarAlbaranes()
 
         Dim dt As New DataTable
@@ -421,18 +434,6 @@ Public Class frmConsultaAlbaran
         CargarForm(New ArqueoCaja)
     End Sub
 
-    Private Sub BackgroundWorker1_DoWork(sender As Object, e As System.ComponentModel.DoWorkEventArgs) Handles BackgroundWorker1.DoWork
-        Dim service As ServiceController = New ServiceController("Sincronizador")
-        Dim Bandera As Boolean = False
-        While Bandera = False
-            service.Refresh()
-            If (service.Status.Equals(ServiceControllerStatus.Stopped)) Then
-                Bandera = True
-                Me.btnSincronizacion.Enabled = True
-            End If
-        End While
-        Me.BackgroundWorker1.Dispose()
-    End Sub
 
     Private Function GetPorcentajeExtranjero() As Decimal
         Dim dt As New DataTable

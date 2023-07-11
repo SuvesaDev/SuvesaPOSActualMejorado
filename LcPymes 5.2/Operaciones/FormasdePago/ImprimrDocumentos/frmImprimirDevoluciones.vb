@@ -33,8 +33,15 @@ Public Class frmImprimirDevoluciones
                 Dim PageSettings1 As New Printing.PageSettings
                 PrinterSettings1.PrinterName = Terminal.Impresora
                 Dim Devolucion As Long = Me.viewDatos("Devolucion", Me.viewDatos.CurrentRow.Index).Value
+                Dim PuntoVenta As String = Me.viewDatos("PV", Me.viewDatos.CurrentRow.Index).Value
+                Dim Conexion As String = ""
+                If PuntoVenta = "Taller" Then
+                    Conexion = CadenaConexionTaller()
+                Else
+                    Conexion = CadenaConexionSeePOS()
+                End If
                 recibo_reportePVE.SetParameterValue(0, CDbl(Devolucion))
-                CrystalReportsConexion.LoadReportViewer(Nothing, recibo_reportePVE, True, CadenaConexionSeePOS)
+                CrystalReportsConexion.LoadReportViewer(Nothing, recibo_reportePVE, True, Conexion)
                 recibo_reportePVE.PrintToPrinter(PrinterSettings1, PageSettings1, False)
                 If MsgBox("Desea imprimir una copia de la devolucion", MsgBoxStyle.Question + MsgBoxStyle.YesNo, "Confirmar Accion") = MsgBoxResult.Yes Then
                     recibo_reportePVE.PrintToPrinter(PrinterSettings1, PageSettings1, False)

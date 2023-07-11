@@ -291,7 +291,7 @@ Public Class frmIngresarFomasdePago
                     End If
 
                     For Each pago As DataGridViewRow In Me.viewDatos.Rows
-                        NApertura = pago.Cells("cNumapertura").Value
+                        NApertura = pago.Cells("cNumapertura").Value                        
                         trans.Ejecutar("INSERT INTO [dbo].[OpcionesDePago] ([Documento],[TipoDocumento],[MontoPago],[FormaPago],[Denominacion],[Usuario],[Nombre],[CodMoneda],[Nombremoneda],[TipoCambio],[Fecha],[Numapertura],[Vuelto],[NumeroDocumento])VALUES(" & Num_Factura & ", '" & pago.Cells("cTipoDocumento").Value & "'," & pago.Cells("cMontoPago").Value & ", '" & pago.Cells("cFormaPago").Value & "'," & pago.Cells("cDenominacion").Value & ", '" & pago.Cells("cUsuario").Value & "','" & pago.Cells("cNombre").Value & "'," & pago.Cells("cCodMoneda").Value & ", '" & pago.Cells("cNombremoneda").Value & "', " & pago.Cells("cTipoCambio").Value & ", getdate()," & pago.Cells("cNumapertura").Value & ", 0, '" & pago.Cells("cNumeroDocumento").Value & "')", CommandType.Text)
 
                         If esReciboDinero = True And Me.IdRecibo > 0 Then
@@ -387,6 +387,7 @@ Public Class frmIngresarFomasdePago
     Private NombreCliente As String = ""
     Public ListaPagosTransferencia As New System.Collections.Generic.List(Of PagoTranferencia)
     Public MontoAnticipo As Decimal = 0
+    Private clsTermina As New Credomatic.Configuracion.Terminal
     Private Sub btnEfectivo_Click(sender As Object, e As EventArgs) Handles btnTarjetaColones.Click, btnEfectivoColones.Click, btnTransferencia.Click, btnChequeColones.Click, btnPendientes.Click, btnEfectivoDolares.Click, btnOtrasTarjetas.Click, btnAnticipo.Click
 
         If sender.name = Me.btnPendientes.Name Then
@@ -511,7 +512,7 @@ Public Class frmIngresarFomasdePago
                 '        Me.Agregar_Forma_Pago(MontoPago, "TAR", 1, "0")
                 '    Case btnOtrasTarjetas.Name
                 '        Me.Agregar_Forma_Pago(MontoPago, "TAR", 1, "0")
-                '    Case btnTransferencia.Name
+                '    Case btnTransferencia.Name                
                 Me.Agregar_Forma_Pago(MontoPago, "TRA", 1, frm.txtNumeroDeposito.Text)
                 Dim PagoTransferencia As New PagoTranferencia(False, frm.cboBanco.Text, frm.cboCuenta.Text, frm.txtMoneda.Text, frm.txtNumeroDeposito.Text, CDec(frm.txtMontoDeposito.Text), frm.cboTipoMovimiento.Text)
                 Me.ListaPagosTransferencia.Add(PagoTransferencia)
@@ -574,8 +575,13 @@ Public Class frmIngresarFomasdePago
 
             Dim frm As New frmIngresarMontoPago
             If sender.Name = Me.btnTarjetaColones.Name Then
-                frm.txtMonto.Text = Me.lblPendienteCobro.Text
-                frm.esTarjeta = True
+                If clsTermina.Datafono = True Then
+                    frm.txtMonto.Text = Me.lblPendienteCobro.Text
+                    frm.esTarjeta = True
+                Else
+                    MsgBox("Seleccione Otras Tarjetas", MsgBoxStyle.Exclamation, "No se puede realizar la operacion.")
+                    Exit Sub
+                End If
             Else
                 frm.esTarjeta = False
             End If
@@ -754,7 +760,7 @@ Public Structure PagoTranferencia
         Me.Moneda = _Moneda
         Me.NumeroDocumento = _NumeroDocumento
         Me.Monto = _Monto
-        If _TipoMovimiento = "Transferencia" Then _TipoMovimiento = "Deposito"
+        'If _TipoMovimiento = "Transferencia" Then _TipoMovimiento = "Deposito"
         Me.TipoMoviminento = _TipoMovimiento
     End Sub
 

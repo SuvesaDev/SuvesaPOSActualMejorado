@@ -14,6 +14,8 @@ Public Class frmGraficoVentasAnuales
             rpt.Refresh()
             rpt.SetParameterValue(0, Me.FechaInicio.Value)
             rpt.SetParameterValue(1, Me.FechaFinal.Value)
+            rpt.SetParameterValue(2, Me.FechaInicio.Value)
+            rpt.SetParameterValue(3, Me.FechaFinal.Value)
             CrystalReportsConexion.LoadReportViewer(VisorReporte, rpt, , CadenaConexionSeePOS)
             VisorReporte.Show()
         End If

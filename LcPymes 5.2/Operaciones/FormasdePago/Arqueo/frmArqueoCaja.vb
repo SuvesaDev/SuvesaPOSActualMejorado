@@ -8,6 +8,7 @@ Public Class frmArqueoCaja
     Public Id_Usuario As String = ""
     Public NombreUsuario As String = ""
     Public IdApertura As String
+    Private clsTerminal As New Credomatic.Configuracion.Terminal
 
     Private Sub CargarLog(_IdTerminal As String)
         Dim dt As New DataTable
@@ -147,7 +148,7 @@ Public Class frmArqueoCaja
         Me.IndexEfectivo = 0
 
         Dim dt As New DataTable
-        cFunciones.Llenar_Tabla_Generico("select dm.Id, dm.CodMoneda, m.MonedaNombre, dm.Tipo, dm.Denominacion from Denominacion_Moneda dm inner join " & TablaSeguridad() & ".dbo.Moneda m on dm.CodMoneda = m.CodMoneda order by CodMoneda, Tipo desc, Denominacion", dt, CadenaConexionSeePOS)
+        cFunciones.Llenar_Tabla_Generico("select dm.Id, dm.CodMoneda, m.MonedaNombre, dm.Tipo, dm.Denominacion from Denominacion_Moneda dm inner join " & TablaSeguridad() & ".dbo.Moneda m on dm.CodMoneda = m.CodMoneda order by dm.CodMoneda, Tipo desc, Denominacion", dt, CadenaConexionSeePOS)
         For Each r As DataRow In dt.Rows
             AgregarDenominacion(r.Item("Id"), r.Item("MonedaNombre"), r.Item("Tipo"), r.Item("Denominacion"), "0")
         Next
@@ -195,17 +196,21 @@ Public Class frmArqueoCaja
     End Function
     Public MontoCierre As Decimal = 0
     Private Function GeneraCierreCredomatic() As Boolean
-        Me.MontoCierre = 0
-        Dim cls As New Credomatic.Operaciones.Operaciones
-        Dim resultado As Credomatic.Operaciones.Respuesta = cls.Cierre()
-        If resultado.Codigo = "00" Or resultado.Codigo = "21" Then
-            Me.MontoCierre = cls.MontoCierre
-            Dim db As New OBSoluciones.SQL.Sentencias(CadenaConexionSeePOS)
-            db.Ejecutar("Update Log set IdApertura = " & Me.txtIdApertura.Text & " where IdTerminal = '" & Me.txtTerminalId.Text & "' and IdApertura = 0", CommandType.Text)
-            cls.ImprimirResumenCierre(Me.txtIdApertura.Text)
-            Return True
+        If Me.clsTerminal.Datafono = True Then
+            Me.MontoCierre = 0
+            Dim cls As New Credomatic.Operaciones.Operaciones
+            Dim resultado As Credomatic.Operaciones.Respuesta = cls.Cierre()
+            If resultado.Codigo = "00" Or resultado.Codigo = "21" Then
+                Me.MontoCierre = cls.MontoCierre
+                Dim db As New OBSoluciones.SQL.Sentencias(CadenaConexionSeePOS)
+                db.Ejecutar("Update Log set IdApertura = " & Me.txtIdApertura.Text & " where IdTerminal = '" & Me.txtTerminalId.Text & "' and IdApertura = 0", CommandType.Text)
+                cls.ImprimirResumenCierre(Me.txtIdApertura.Text)
+                Return True
+            Else
+                Return False
+            End If
         Else
-            Return False
+            Return True
         End If
     End Function
 

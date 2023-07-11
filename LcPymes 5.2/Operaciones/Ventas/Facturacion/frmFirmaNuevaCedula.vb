@@ -3,14 +3,14 @@ Public Class frmFirmaNuevaCedula
 
     Private Function GetNombre(_Cedula As String) As String
         Dim dt As New DataTable
-        cFunciones.Llenar_Tabla_Generico("Select NOMBRECOMPLETO2 from Cedula.dbo.ENTIDADES_FISICAS where cedula2 = '" & _Cedula & "'", dt, CadenaConexionSeePOS)
+        cFunciones.Llenar_Tabla_Generico("Select NOMBRECOMPLETO2 from ENTIDADES_FISICAS where cedula2 = '" & _Cedula & "'", dt, CadenaConexionCedulas)
         If dt.Rows.Count > 0 Then
 
             Return dt.Rows(0).Item("NOMBRECOMPLETO2")
         Else
 
             Dim dt2 As New DataTable
-            cFunciones.Llenar_Tabla_Generico("Select NOMBRE from Cedula.dbo.ENTIDADES_FIRMA where CEDULA = '" & _Cedula & "'", dt2, CadenaConexionSeePOS)
+            cFunciones.Llenar_Tabla_Generico("Select NOMBRE from ENTIDADES_FIRMA where CEDULA = '" & _Cedula & "'", dt2, CadenaConexionCedulas)
             If dt2.Rows.Count > 0 Then
                 Return dt2.Rows(0).Item("NOMBRE")
             Else
@@ -25,7 +25,7 @@ Public Class frmFirmaNuevaCedula
 
         If Len(Cedula) > 9 Then
             If Me.GetNombre(Cedula) = "0" Then
-                Dim db As New OBSoluciones.SQL.Sentencias(GetSetting("seesoft", "seepos", "datos_Cedulas"))
+                Dim db As New OBSoluciones.SQL.Sentencias(CadenaConexionCedulas)
                 db.Ejecutar("Insert into ENTIDADES_FIRMA values('" & Cedula & "', '" & Nombre & "')", CommandType.Text)
                 Me.DialogResult = Windows.Forms.DialogResult.OK
             Else
@@ -35,6 +35,17 @@ Public Class frmFirmaNuevaCedula
             MsgBox("la cedula debe tener almenos 9 numeros")
         End If
 
+    End Sub
+
+    Private Sub txtCedula_KeyDown(sender As Object, e As KeyEventArgs) Handles txtCedula.KeyDown
+        If e.KeyCode = Keys.Enter Then
+            Try
+                Dim ObtenerDatosCliente As api.Hacienda.Entidad = api.Hacienda.Consultar_x_Cedula(Me.txtCedula.Text)
+                Me.txtNombre.Text = ObtenerDatosCliente.nombre
+            Catch ex As Exception
+                MsgBox(ex.Message, MsgBoxStyle.Critical, Me.Text)
+            End Try
+        End If
     End Sub
 
     Private Sub txtCedula_KeyPress(sender As Object, e As Windows.Forms.KeyPressEventArgs) Handles txtCedula.KeyPress

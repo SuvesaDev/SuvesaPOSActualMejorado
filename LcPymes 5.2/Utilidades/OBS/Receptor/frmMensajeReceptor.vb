@@ -358,7 +358,7 @@ Public Class frmMensajeReceptor
                 Me.btnAceptar.Enabled = pasa
             Else
                 Me.btnAceptar.Enabled = True
-                'MsgBox("No se pudo obtener token", MsgBoxStyle.Critical, Text)
+                MsgBox("No se pudo obtener token", MsgBoxStyle.Critical, Text)
             End If
         Catch ex As Exception
             MsgBox(ex.Message, MsgBoxStyle.Exclamation, Text)

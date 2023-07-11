@@ -142,6 +142,22 @@ Public Class frmPrincipalCaja
         frm.MdiParent = Me
         frm.Show()
     End Sub
+
+    Private Sub ToolStripButton6_Click(sender As Object, e As EventArgs) Handles ToolStripButton6.Click
+        Dim frm As New Credomatic.Configuracion.frmConfiguracionTerminal
+        frm.MdiParent = Me
+        frm.Show()
+    End Sub
+
+    Private Sub DevolucionesDeHoy()
+        Dim dt As New System.Data.DataTable
+        cFunciones.Llenar_Tabla_Generico("exec usp_ObtenerDevoluciones '" & Date.Now.ToShortDateString & "', '" & Date.Now.ToShortDateString & "'", dt, CadenaConexionSeePOS)
+
+    End Sub
+
+    Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
+
+    End Sub
 End Class
 
 Public Class ImpresionCaja
@@ -238,7 +254,7 @@ Public Class ImpresionCaja
                 recibodineroPVE.Refresh()
             End If
 
-            If _PuntoVenta.ToUpper = "SEEPOS" Or _PuntoVenta = "MASCOTAS" Then
+            If _PuntoVenta.ToUpper = "SEEPOS" Or _PuntoVenta = "MASCOTAS" Or _PuntoVenta = "SANTACRUZ" Or _PuntoVenta = "CLINICA" Then
                 CrystalReportsConexion.LoadReportViewer(Nothing, recibodineroPVE, True, CadenaConexionSeePOS)
             End If
             If _PuntoVenta.ToUpper = "TALLER" Then
@@ -276,7 +292,7 @@ Public Class ImpresionCaja
                 apartadoPVE.Refresh()
             End If
 
-            If _PuntoVenta.ToUpper = "SEEPOS" Or _PuntoVenta = "MASCOTAS" Then
+            If _PuntoVenta.ToUpper = "SEEPOS" Or _PuntoVenta = "MASCOTAS" Or _PuntoVenta = "SANTACRUZ" Or _PuntoVenta = "CLINICA" Then
                 CrystalReportsConexion.LoadReportViewer(Nothing, apartadoPVE, True, CadenaConexionSeePOS)
             End If
             If _PuntoVenta.ToUpper = "TALLER" Then
@@ -315,7 +331,7 @@ Public Class ImpresionCaja
                 abonoapartadoPVE.Refresh()
             End If
 
-            If _PuntoVenta.ToUpper = "SEEPOS" Or _PuntoVenta = "MASCOTAS" Then
+            If _PuntoVenta.ToUpper = "SEEPOS" Or _PuntoVenta = "MASCOTAS" Or _PuntoVenta = "SANTACRUZ" Or _PuntoVenta = "CLINICA" Then
                 CrystalReportsConexion.LoadReportViewer(Nothing, abonoapartadoPVE, True, CadenaConexionSeePOS)
             End If
             If _PuntoVenta.ToUpper = "TALLER" Then
@@ -342,7 +358,7 @@ Public Class ImpresionCaja
         Dim rptTiquete As New CrystalDecisions.CrystalReports.Engine.ReportDocument
         rptTiquete = New rptTiqueteRifa2
 
-        If _PuntoVenta.ToUpper = "SEEPOS" Then
+        If _PuntoVenta.ToUpper = "SEEPOS" Or _PuntoVenta = "SANTACRUZ" Or _PuntoVenta = "CLINICA" Then
             CrystalReportsConexion.LoadReportViewer(Nothing, rptTiquete, True, CadenaConexionSeePOS)
         End If
         If _PuntoVenta.ToUpper = "TALLER" Then
@@ -386,7 +402,7 @@ Public Class ImpresionCaja
             End If
 
             Proceso = "inicializando reporte"
-            If _PuntoVenta.ToUpper = "SEEPOS" Or _PuntoVenta = "MASCOTAS" Then
+            If _PuntoVenta.ToUpper = "SEEPOS" Or _PuntoVenta = "MASCOTAS" Or _PuntoVenta = "SANTACRUZ" Or _PuntoVenta = "CLINICA" Then
                 CrystalReportsConexion.LoadReportViewer(Nothing, facturaPVE, True, CadenaConexionSeePOS)
             End If
             If _PuntoVenta.ToUpper = "TALLER" Then
@@ -432,7 +448,7 @@ Public Class ImpresionCaja
                 adelantoPVE.Refresh()
             End If
 
-            If _PuntoVenta.ToUpper = "SEEPOS" Or _PuntoVenta = "MASCOTAS" Then
+            If _PuntoVenta.ToUpper = "SEEPOS" Or _PuntoVenta = "MASCOTAS" Or _PuntoVenta = "SANTACRUZ" Or _PuntoVenta = "CLINICA" Then
                 CrystalReportsConexion.LoadReportViewer(Nothing, adelantoPVE, True, CadenaConexionSeePOS)
             End If
             If _PuntoVenta.ToUpper = "TALLER" Then

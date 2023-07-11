@@ -8,11 +8,13 @@ Namespace Credomatic
             Private Sub Cargar()
                 Me.txtTerminar.Text = cls.Terminal
                 Me.txtImpresora.Text = cls.Impresora
+                Me.ckDatafono.Checked = cls.Datafono
             End Sub
 
             Private Sub Guardar()
                 Me.cls.Terminal = Me.txtTerminar.Text
                 Me.cls.Impresora = Me.txtImpresora.Text
+                Me.cls.Datafono = Me.ckDatafono.Checked
                 Me.Close()
             End Sub
 

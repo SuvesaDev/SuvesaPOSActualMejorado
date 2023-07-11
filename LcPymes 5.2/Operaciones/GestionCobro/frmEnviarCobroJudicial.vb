@@ -70,19 +70,24 @@ Public Class frmEnviarCobroJudicial
 
     Private Sub btnEnviarIncobrables_Click(sender As Object, e As EventArgs) Handles btnEnviarIncobrables.Click
         If MsgBox("Confirmar que desea enviar a incobrable las facturas selecionadas", MsgBoxStyle.Question + MsgBoxStyle.YesNo, "Confirmar Accion") = MsgBoxResult.Yes Then
-            Dim db As New OBSoluciones.SQL.Transaccion(CadenaConexionSeePOS)
-            Try
-                For Each r As DataGridViewRow In Me.viewDatos.Rows
-                    If r.Cells("EnProcesoIncobrable").Value = True Then
-                        db.Ejecutar("Update Ventas Set EnProcesoIncobrable = 1 Where Id = " & r.Cells("Id").Value, CommandType.Text)
-                    End If
-                Next
-                db.Commit()
-                MsgBox("Datos procesados correctamente!!!", MsgBoxStyle.Information, "Correcto")
-                CargarInformacionCliente(txtCodigo.Text)
-            Catch ex As Exception
-                db.Rollback()
-            End Try
+
+            Dim frm As New frmResponsableEnvioCobro
+            If frm.ShowDialog = Windows.Forms.DialogResult.OK Then
+                Dim db As New OBSoluciones.SQL.Transaccion(CadenaConexionSeePOS)
+                Try
+                    For Each r As DataGridViewRow In Me.viewDatos.Rows
+                        If r.Cells("EnProcesoIncobrable").Value = True Then
+                            db.Ejecutar("Update Ventas Set EnProcesoIncobrable = 1, FechaIncobrable = '" & frm.dtpFecha.Value & "', CedulaIncobrable = '" & frm.IdUsuario & "' Where Id = " & r.Cells("Id").Value, CommandType.Text)
+                        End If
+                    Next
+                    db.Commit()
+                    MsgBox("Datos procesados correctamente!!!", MsgBoxStyle.Information, "Correcto")
+                    CargarInformacionCliente(txtCodigo.Text)
+                Catch ex As Exception
+                    db.Rollback()
+                End Try
+            End If
+
         End If
     End Sub
 

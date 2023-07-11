@@ -2450,7 +2450,7 @@ C:\Users\LENOVO\Documents\GitHub\SuvesaPOSActualMejorado2\LcPymes 5.2\obj\Debug\
 C:\Users\LENOVO\Documents\GitHub\SuvesaPOSActualMejorado2\LcPymes 5.2\obj\Debug\es\Veterinaria.resources.dll
 C:\Users\LENOVO\Documents\GitHub\SuvesaPOSActualMejorado2\LcPymes 5.2\obj\Debug\Veterinaria.exe.manifest
 C:\Users\LENOVO\Documents\GitHub\SuvesaPOSActualMejorado2\LcPymes 5.2\obj\Debug\Veterinaria.application
-C:\Users\LENOVO\Documents\GitHub\SuvesaPOSActualMejorado\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmAplicarCambiosInventario.resources
+C:\Users\LENOVO\Documents\GitHub\SuvesaPOSActualMejorado\LcPymes 5.2\obj\Debug\Veterinaria.exe
 C:\Users\LENOVO\Documents\GitHub\SuvesaPOSActualMejorado\LcPymes 5.2\obj\Debug\Interop.Shell32.dll
 C:\Users\LENOVO\Documents\GitHub\SuvesaPOSActualMejorado\LcPymes 5.2\obj\Debug\Veterinaria.vbproj.ResolveComReference.cache
 C:\Users\LENOVO\Documents\GitHub\SuvesaPOSActualMejorado\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmBuscarArticuloMigrador.resources
@@ -2472,6 +2472,7 @@ C:\Users\LENOVO\Documents\GitHub\SuvesaPOSActualMejorado\LcPymes 5.2\obj\Debug\L
 C:\Users\LENOVO\Documents\GitHub\SuvesaPOSActualMejorado\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmReporteLotes.resources
 C:\Users\LENOVO\Documents\GitHub\SuvesaPOSActualMejorado\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmAumentarOtro.resources
 C:\Users\LENOVO\Documents\GitHub\SuvesaPOSActualMejorado\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmEtiquetarLiberia.resources
+C:\Users\LENOVO\Documents\GitHub\SuvesaPOSActualMejorado\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmAplicarCambiosInventario.resources
 C:\Users\LENOVO\Documents\GitHub\SuvesaPOSActualMejorado\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmProductosRelacionados.resources
 C:\Users\LENOVO\Documents\GitHub\SuvesaPOSActualMejorado\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmArticulosSugeridos.resources
 C:\Users\LENOVO\Documents\GitHub\SuvesaPOSActualMejorado\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmListaSugerido.resources
@@ -2480,6 +2481,7 @@ C:\Users\LENOVO\Documents\GitHub\SuvesaPOSActualMejorado\LcPymes 5.2\obj\Debug\L
 C:\Users\LENOVO\Documents\GitHub\SuvesaPOSActualMejorado\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmBloqueoxProveedor.resources
 C:\Users\LENOVO\Documents\GitHub\SuvesaPOSActualMejorado\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmBuscarSerie.resources
 C:\Users\LENOVO\Documents\GitHub\SuvesaPOSActualMejorado\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmHistoricoSerie.resources
+C:\Users\LENOVO\Documents\GitHub\SuvesaPOSActualMejorado\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmInhabilitarExistenciaCero.resources
 C:\Users\LENOVO\Documents\GitHub\SuvesaPOSActualMejorado\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmInventarioSinCodigoBarras.resources
 C:\Users\LENOVO\Documents\GitHub\SuvesaPOSActualMejorado\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmReporteMovimietoBodega.resources
 C:\Users\LENOVO\Documents\GitHub\SuvesaPOSActualMejorado\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmListadoMag.resources
@@ -2528,6 +2530,7 @@ C:\Users\LENOVO\Documents\GitHub\SuvesaPOSActualMejorado\LcPymes 5.2\obj\Debug\L
 C:\Users\LENOVO\Documents\GitHub\SuvesaPOSActualMejorado\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmPrincipalClinica.resources
 C:\Users\LENOVO\Documents\GitHub\SuvesaPOSActualMejorado\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmTiposVisita.resources
 C:\Users\LENOVO\Documents\GitHub\SuvesaPOSActualMejorado\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmVisitaClinica.resources
+C:\Users\LENOVO\Documents\GitHub\SuvesaPOSActualMejorado\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmMovimientosCompra.resources
 C:\Users\LENOVO\Documents\GitHub\SuvesaPOSActualMejorado\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmRegistroBonificacion.resources
 C:\Users\LENOVO\Documents\GitHub\SuvesaPOSActualMejorado\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmAsignarCabysCompra.resources
 C:\Users\LENOVO\Documents\GitHub\SuvesaPOSActualMejorado\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmNumeroProveedor.resources
@@ -2668,6 +2671,7 @@ C:\Users\LENOVO\Documents\GitHub\SuvesaPOSActualMejorado\LcPymes 5.2\obj\Debug\L
 C:\Users\LENOVO\Documents\GitHub\SuvesaPOSActualMejorado\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmCxPVencer.resources
 C:\Users\LENOVO\Documents\GitHub\SuvesaPOSActualMejorado\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmArticulosActualizados.resources
 C:\Users\LENOVO\Documents\GitHub\SuvesaPOSActualMejorado\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmReporteInventarioxProveedor.resources
+C:\Users\LENOVO\Documents\GitHub\SuvesaPOSActualMejorado\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmReporteClienteSinVisita.resources
 C:\Users\LENOVO\Documents\GitHub\SuvesaPOSActualMejorado\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmCrecimientoCompras.resources
 C:\Users\LENOVO\Documents\GitHub\SuvesaPOSActualMejorado\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmGraficoVentasAnuales.resources
 C:\Users\LENOVO\Documents\GitHub\SuvesaPOSActualMejorado\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmMovimientoCompras.resources
@@ -2862,6 +2866,8 @@ C:\Users\LENOVO\Documents\GitHub\SuvesaPOSActualMejorado\LcPymes 5.2\obj\Debug\L
 C:\Users\LENOVO\Documents\GitHub\SuvesaPOSActualMejorado\LcPymes 5.2\obj\Debug\LcPymes_5._2.FrmInventario.es.resources
 C:\Users\LENOVO\Documents\GitHub\SuvesaPOSActualMejorado\LcPymes 5.2\obj\Debug\LcPymes_5._2.FrmRedondeoInventario.es.resources
 C:\Users\LENOVO\Documents\GitHub\SuvesaPOSActualMejorado\LcPymes 5.2\obj\Debug\Veterinaria.vbproj.GenerateResource.Cache
+C:\Users\LENOVO\Documents\GitHub\SuvesaPOSActualMejorado\LcPymes 5.2\obj\Debug\Veterinaria.exe.licenses
+C:\Users\LENOVO\Documents\GitHub\SuvesaPOSActualMejorado\LcPymes 5.2\obj\Debug\Veterinaria.pdb
 C:\Users\LENOVO\Documents\GitHub\SuvesaPOSActualMejorado\LcPymes 5.2\bin\Veterinaria.exe.config
 C:\Users\LENOVO\Documents\GitHub\SuvesaPOSActualMejorado\LcPymes 5.2\bin\Veterinaria.exe.manifest
 C:\Users\LENOVO\Documents\GitHub\SuvesaPOSActualMejorado\LcPymes 5.2\bin\Veterinaria.application
@@ -2872,12 +2878,13 @@ C:\Users\LENOVO\Documents\GitHub\SuvesaPOSActualMejorado\LcPymes 5.2\bin\es-CR\V
 C:\Users\LENOVO\Documents\GitHub\SuvesaPOSActualMejorado\LcPymes 5.2\bin\es\Veterinaria.resources.dll
 C:\Users\LENOVO\Documents\GitHub\SuvesaPOSActualMejorado\LcPymes 5.2\bin\Newtonsoft.Json.dll
 C:\Users\LENOVO\Documents\GitHub\SuvesaPOSActualMejorado\LcPymes 5.2\bin\System.Net.Http.dll
-C:\Users\LENOVO\Documents\GitHub\SuvesaPOSActualMejorado\LcPymes 5.2\obj\Debug\Veterinaria.exe.licenses
 C:\Users\LENOVO\Documents\GitHub\SuvesaPOSActualMejorado\LcPymes 5.2\obj\Debug\es-CR\Veterinaria.resources.dll
 C:\Users\LENOVO\Documents\GitHub\SuvesaPOSActualMejorado\LcPymes 5.2\obj\Debug\es\Veterinaria.resources.dll
 C:\Users\LENOVO\Documents\GitHub\SuvesaPOSActualMejorado\LcPymes 5.2\obj\Debug\Veterinaria.exe.manifest
 C:\Users\LENOVO\Documents\GitHub\SuvesaPOSActualMejorado\LcPymes 5.2\obj\Debug\Veterinaria.application
-C:\Users\LENOVO\Documents\GitHub\SuvesaPOSActualMejorado\LcPymes 5.2\obj\Debug\Veterinaria.exe
 C:\Users\LENOVO\Documents\GitHub\SuvesaPOSActualMejorado\LcPymes 5.2\obj\Debug\Veterinaria.xml
-C:\Users\LENOVO\Documents\GitHub\SuvesaPOSActualMejorado\LcPymes 5.2\obj\Debug\Veterinaria.pdb
-C:\Users\LENOVO\Documents\GitHub\SuvesaPOSActualMejorado\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmReporteClienteSinVisita.resources
+C:\Users\LENOVO\Documents\GitHub\SuvesaPOSActualMejorado\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmIncobrableGeneral.resources
+C:\Users\LENOVO\Documents\GitHub\SuvesaPOSActualMejorado\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmResponsableEnvioCobro.resources
+C:\Users\LENOVO\Documents\GitHub\SuvesaPOSActualMejorado\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmMorivoAnulacionDeposito.resources
+C:\Users\LENOVO\Documents\GitHub\SuvesaPOSActualMejorado\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmArqueoDepositoAnulados.resources
+C:\Users\LENOVO\Documents\GitHub\SuvesaPOSActualMejorado\LcPymes 5.2\obj\Debug\LcPymes_5._2.frmComprasTrans.resources

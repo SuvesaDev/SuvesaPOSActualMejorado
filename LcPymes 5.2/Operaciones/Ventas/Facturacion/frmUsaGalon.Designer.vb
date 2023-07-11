@@ -23,49 +23,53 @@ Partial Class frmUsaGalon
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.Button1 = New System.Windows.Forms.Button()
-        Me.Label1 = New System.Windows.Forms.Label()
+        Me.lblDescripcion = New System.Windows.Forms.Label()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'Button1
         '
         Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Location = New System.Drawing.Point(379, 159)
+        Me.Button1.Location = New System.Drawing.Point(505, 196)
+        Me.Button1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(143, 43)
+        Me.Button1.Size = New System.Drawing.Size(191, 53)
         Me.Button1.TabIndex = 0
         Me.Button1.Text = "No"
         Me.Button1.UseVisualStyleBackColor = True
         '
-        'Label1
+        'lblDescripcion
         '
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 26.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(36, 26)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(486, 119)
-        Me.Label1.TabIndex = 1
-        Me.Label1.Text = "El cliente trae el Galon?"
-        Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.lblDescripcion.Font = New System.Drawing.Font("Microsoft Sans Serif", 26.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblDescripcion.Location = New System.Drawing.Point(48, 32)
+        Me.lblDescripcion.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblDescripcion.Name = "lblDescripcion"
+        Me.lblDescripcion.Size = New System.Drawing.Size(648, 146)
+        Me.lblDescripcion.TabIndex = 1
+        Me.lblDescripcion.Text = "El cliente trae el Galon?"
+        Me.lblDescripcion.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Button2
         '
         Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.Location = New System.Drawing.Point(215, 159)
+        Me.Button2.Location = New System.Drawing.Point(287, 196)
+        Me.Button2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(143, 43)
+        Me.Button2.Size = New System.Drawing.Size(191, 53)
         Me.Button2.TabIndex = 2
         Me.Button2.Text = "Si"
         Me.Button2.UseVisualStyleBackColor = True
         '
         'frmUsaGalon
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(536, 210)
+        Me.ClientSize = New System.Drawing.Size(715, 258)
         Me.Controls.Add(Me.Button2)
-        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.lblDescripcion)
         Me.Controls.Add(Me.Button1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
+        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "frmUsaGalon"
@@ -75,6 +79,6 @@ Partial Class frmUsaGalon
 
     End Sub
     Friend WithEvents Button1 As System.Windows.Forms.Button
-    Friend WithEvents Label1 As System.Windows.Forms.Label
+    Friend WithEvents lblDescripcion As System.Windows.Forms.Label
     Friend WithEvents Button2 As System.Windows.Forms.Button
 End Class

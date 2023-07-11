@@ -80,6 +80,7 @@ Partial Class frmArqueoCaja
         Me.Label14 = New System.Windows.Forms.Label()
         Me.btnCierre = New System.Windows.Forms.Button()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
+        Me.btnCargarDepositos = New System.Windows.Forms.Button()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.txtDepositoGeneral = New System.Windows.Forms.TextBox()
         Me.txtDepositoColones = New System.Windows.Forms.TextBox()
@@ -90,7 +91,6 @@ Partial Class frmArqueoCaja
         Me.txtCajero = New System.Windows.Forms.TextBox()
         Me.txtIdApertura = New System.Windows.Forms.TextBox()
         Me.Label10 = New System.Windows.Forms.Label()
-        Me.btnCargarDepositos = New System.Windows.Forms.Button()
         CType(Me.viewEfectivo, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.viewDepositos, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.ToolStrip1.SuspendLayout()
@@ -413,19 +413,23 @@ Partial Class frmArqueoCaja
         '
         Me.ToolStripSeparator2.Name = "ToolStripSeparator2"
         Me.ToolStripSeparator2.Size = New System.Drawing.Size(6, 39)
+        Me.ToolStripSeparator2.Visible = False
         '
         'btnBuscar
         '
+        Me.btnBuscar.Enabled = False
         Me.btnBuscar.Image = Global.LcPymes_5._2.My.Resources.Resources.page_find1
         Me.btnBuscar.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.btnBuscar.Name = "btnBuscar"
         Me.btnBuscar.Size = New System.Drawing.Size(78, 36)
         Me.btnBuscar.Text = "Buscar"
+        Me.btnBuscar.Visible = False
         '
         'ToolStripSeparator3
         '
         Me.ToolStripSeparator3.Name = "ToolStripSeparator3"
         Me.ToolStripSeparator3.Size = New System.Drawing.Size(6, 39)
+        Me.ToolStripSeparator3.Visible = False
         '
         'btnEliminar
         '
@@ -435,6 +439,7 @@ Partial Class frmArqueoCaja
         Me.btnEliminar.Name = "btnEliminar"
         Me.btnEliminar.Size = New System.Drawing.Size(78, 36)
         Me.btnEliminar.Text = "Anular"
+        Me.btnEliminar.Visible = False
         '
         'TabControl1
         '
@@ -615,6 +620,15 @@ Partial Class frmArqueoCaja
         Me.TabPage2.Text = "Lista de Depositos"
         Me.TabPage2.UseVisualStyleBackColor = True
         '
+        'btnCargarDepositos
+        '
+        Me.btnCargarDepositos.Location = New System.Drawing.Point(6, 5)
+        Me.btnCargarDepositos.Name = "btnCargarDepositos"
+        Me.btnCargarDepositos.Size = New System.Drawing.Size(500, 25)
+        Me.btnCargarDepositos.TabIndex = 18
+        Me.btnCargarDepositos.Text = "Cargar Depositos"
+        Me.btnCargarDepositos.UseVisualStyleBackColor = True
+        '
         'Label11
         '
         Me.Label11.AutoSize = True
@@ -709,15 +723,6 @@ Partial Class frmArqueoCaja
         Me.Label10.Size = New System.Drawing.Size(57, 13)
         Me.Label10.TabIndex = 12
         Me.Label10.Text = "# Apertura"
-        '
-        'btnCargarDepositos
-        '
-        Me.btnCargarDepositos.Location = New System.Drawing.Point(6, 5)
-        Me.btnCargarDepositos.Name = "btnCargarDepositos"
-        Me.btnCargarDepositos.Size = New System.Drawing.Size(500, 25)
-        Me.btnCargarDepositos.TabIndex = 18
-        Me.btnCargarDepositos.Text = "Cargar Depositos"
-        Me.btnCargarDepositos.UseVisualStyleBackColor = True
         '
         'frmArqueoCaja
         '

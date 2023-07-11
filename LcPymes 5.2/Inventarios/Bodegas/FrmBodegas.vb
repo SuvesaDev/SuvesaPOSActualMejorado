@@ -423,7 +423,8 @@ Public Class FrmBodegas
             X = Me.SqlDataAdapterBodegas.Fill(Me.DataSetBodegas, "Bodegas")
             If X <> 0 Then Me.SqlDataAdapterInventario.Fill(Me.DataSetBodegas, "Inventario")
         Catch ex As Exception
-            MsgBox(ex.Message, MsgBoxStyle.Exclamation, Text)
+            'MsgBox(ex.Message, MsgBoxStyle.Exclamation, Text)
+            'da error y recclaman
         End Try        
     End Sub
 #End Region

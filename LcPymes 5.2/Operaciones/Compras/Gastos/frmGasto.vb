@@ -10,6 +10,9 @@ Public Class frmGasto
     Dim impuesto As Double
     Dim IdDetalle As Integer
     Dim IdGasto As Integer
+    Friend WithEvents txtTrans As System.Windows.Forms.TextBox
+    Friend WithEvents ckTrans As System.Windows.Forms.CheckBox
+    Friend WithEvents btnAplicar As System.Windows.Forms.Button
     Dim Id_Usuario As String
 
 #Region " Código generado por el Diseñador de Windows Forms "
@@ -103,74 +106,85 @@ Public Class frmGasto
     Friend WithEvents lblMoneda1 As System.Windows.Forms.Label
     Friend WithEvents TxtNombreUsuario As System.Windows.Forms.Label
     <System.Diagnostics.DebuggerStepThrough()> Private Sub InitializeComponent()
-        Me.components = New System.ComponentModel.Container
-        Dim resources As System.Resources.ResourceManager = New System.Resources.ResourceManager(GetType(frmGasto))
-        Me.Label46 = New System.Windows.Forms.Label
-        Me.ToolBar1 = New System.Windows.Forms.ToolBar
-        Me.tlbNuevo = New System.Windows.Forms.ToolBarButton
-        Me.tlbBuscar = New System.Windows.Forms.ToolBarButton
-        Me.tlbRegistrar = New System.Windows.Forms.ToolBarButton
-        Me.tlbEliminar = New System.Windows.Forms.ToolBarButton
-        Me.tlbImprimir = New System.Windows.Forms.ToolBarButton
-        Me.ToolBarExcel = New System.Windows.Forms.ToolBarButton
-        Me.ToolBarButtonSeparador1 = New System.Windows.Forms.ToolBarButton
-        Me.ToolBarImportar = New System.Windows.Forms.ToolBarButton
-        Me.tlbRecalcular = New System.Windows.Forms.ToolBarButton
-        Me.ToolBarButtonSeparador2 = New System.Windows.Forms.ToolBarButton
-        Me.tlbCerrar = New System.Windows.Forms.ToolBarButton
+        Me.components = New System.ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmGasto))
+        Dim ColumnFilterInfo9 As DevExpress.XtraGrid.Columns.ColumnFilterInfo = New DevExpress.XtraGrid.Columns.ColumnFilterInfo()
+        Dim ColumnFilterInfo10 As DevExpress.XtraGrid.Columns.ColumnFilterInfo = New DevExpress.XtraGrid.Columns.ColumnFilterInfo()
+        Dim ColumnFilterInfo11 As DevExpress.XtraGrid.Columns.ColumnFilterInfo = New DevExpress.XtraGrid.Columns.ColumnFilterInfo()
+        Dim ColumnFilterInfo12 As DevExpress.XtraGrid.Columns.ColumnFilterInfo = New DevExpress.XtraGrid.Columns.ColumnFilterInfo()
+        Dim ColumnFilterInfo13 As DevExpress.XtraGrid.Columns.ColumnFilterInfo = New DevExpress.XtraGrid.Columns.ColumnFilterInfo()
+        Dim ColumnFilterInfo14 As DevExpress.XtraGrid.Columns.ColumnFilterInfo = New DevExpress.XtraGrid.Columns.ColumnFilterInfo()
+        Dim ColumnFilterInfo15 As DevExpress.XtraGrid.Columns.ColumnFilterInfo = New DevExpress.XtraGrid.Columns.ColumnFilterInfo()
+        Dim ColumnFilterInfo16 As DevExpress.XtraGrid.Columns.ColumnFilterInfo = New DevExpress.XtraGrid.Columns.ColumnFilterInfo()
+        Me.Label46 = New System.Windows.Forms.Label()
+        Me.ToolBar1 = New System.Windows.Forms.ToolBar()
+        Me.tlbNuevo = New System.Windows.Forms.ToolBarButton()
+        Me.tlbBuscar = New System.Windows.Forms.ToolBarButton()
+        Me.tlbRegistrar = New System.Windows.Forms.ToolBarButton()
+        Me.tlbEliminar = New System.Windows.Forms.ToolBarButton()
+        Me.tlbImprimir = New System.Windows.Forms.ToolBarButton()
+        Me.ToolBarExcel = New System.Windows.Forms.ToolBarButton()
+        Me.ToolBarButtonSeparador1 = New System.Windows.Forms.ToolBarButton()
+        Me.ToolBarImportar = New System.Windows.Forms.ToolBarButton()
+        Me.tlbRecalcular = New System.Windows.Forms.ToolBarButton()
+        Me.ToolBarButtonSeparador2 = New System.Windows.Forms.ToolBarButton()
+        Me.tlbCerrar = New System.Windows.Forms.ToolBarButton()
         Me.ImageList1 = New System.Windows.Forms.ImageList(Me.components)
-        Me.Label2 = New System.Windows.Forms.Label
-        Me.Label1 = New System.Windows.Forms.Label
-        Me.Label3 = New System.Windows.Forms.Label
-        Me.Label39 = New System.Windows.Forms.Label
-        Me.cmbTipo = New System.Windows.Forms.ComboBox
-        Me.txtNumeroFactura = New System.Windows.Forms.TextBox
-        Me.dtpFecha = New System.Windows.Forms.DateTimePicker
-        Me.GroupBox1 = New System.Windows.Forms.GroupBox
-        Me.cmbMoneda = New System.Windows.Forms.ComboBox
-        Me.Label15 = New System.Windows.Forms.Label
-        Me.cmbProveedor = New System.Windows.Forms.ComboBox
-        Me.GroupBox2 = New System.Windows.Forms.GroupBox
-        Me.lblMoneda1 = New System.Windows.Forms.Label
-        Me.lblMoneda2 = New System.Windows.Forms.Label
-        Me.lblMoneda3 = New System.Windows.Forms.Label
-        Me.lblMoneda4 = New System.Windows.Forms.Label
-        Me.txtImpuesto = New System.Windows.Forms.TextBox
-        Me.Label14 = New System.Windows.Forms.Label
-        Me.txtCuentaContableDescripcion = New System.Windows.Forms.TextBox
-        Me.Label13 = New System.Windows.Forms.Label
-        Me.txtCuentaContable = New System.Windows.Forms.TextBox
-        Me.Label12 = New System.Windows.Forms.Label
-        Me.txtTotal = New System.Windows.Forms.TextBox
-        Me.Label11 = New System.Windows.Forms.Label
-        Me.txtTotalImpuesto = New System.Windows.Forms.TextBox
-        Me.Label10 = New System.Windows.Forms.Label
-        Me.txtTotalDescuento = New System.Windows.Forms.TextBox
-        Me.Label9 = New System.Windows.Forms.Label
-        Me.txtDetalleSubTotal = New System.Windows.Forms.TextBox
-        Me.Label8 = New System.Windows.Forms.Label
-        Me.txtDetalleDescuento = New System.Windows.Forms.TextBox
-        Me.txtDetallePrecioUnidad = New System.Windows.Forms.TextBox
-        Me.txtDetalleArticuloDescripcion = New System.Windows.Forms.TextBox
-        Me.txtDetalleCantidad = New System.Windows.Forms.TextBox
-        Me.Label7 = New System.Windows.Forms.Label
-        Me.Label6 = New System.Windows.Forms.Label
-        Me.Label5 = New System.Windows.Forms.Label
-        Me.Label4 = New System.Windows.Forms.Label
-        Me.gridDetalle = New DevExpress.XtraGrid.GridControl
-        Me.dtsGasto = New LcPymes_5._2.DatasetGasto
-        Me.GridView1 = New DevExpress.XtraGrid.Views.Grid.GridView
-        Me.GridColumn1 = New DevExpress.XtraGrid.Columns.GridColumn
-        Me.GridColumn2 = New DevExpress.XtraGrid.Columns.GridColumn
-        Me.GridColumn3 = New DevExpress.XtraGrid.Columns.GridColumn
-        Me.GridColumn4 = New DevExpress.XtraGrid.Columns.GridColumn
-        Me.GridColumn8 = New DevExpress.XtraGrid.Columns.GridColumn
-        Me.GridColumn5 = New DevExpress.XtraGrid.Columns.GridColumn
-        Me.GridColumn6 = New DevExpress.XtraGrid.Columns.GridColumn
-        Me.GridColumn7 = New DevExpress.XtraGrid.Columns.GridColumn
-        Me.Label17 = New System.Windows.Forms.Label
-        Me.txtClave = New System.Windows.Forms.TextBox
-        Me.TxtNombreUsuario = New System.Windows.Forms.Label
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label39 = New System.Windows.Forms.Label()
+        Me.cmbTipo = New System.Windows.Forms.ComboBox()
+        Me.txtNumeroFactura = New System.Windows.Forms.TextBox()
+        Me.dtpFecha = New System.Windows.Forms.DateTimePicker()
+        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.btnAplicar = New System.Windows.Forms.Button()
+        Me.txtTrans = New System.Windows.Forms.TextBox()
+        Me.cmbMoneda = New System.Windows.Forms.ComboBox()
+        Me.Label15 = New System.Windows.Forms.Label()
+        Me.cmbProveedor = New System.Windows.Forms.ComboBox()
+        Me.ckTrans = New System.Windows.Forms.CheckBox()
+        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.lblMoneda1 = New System.Windows.Forms.Label()
+        Me.lblMoneda2 = New System.Windows.Forms.Label()
+        Me.lblMoneda3 = New System.Windows.Forms.Label()
+        Me.lblMoneda4 = New System.Windows.Forms.Label()
+        Me.txtImpuesto = New System.Windows.Forms.TextBox()
+        Me.Label14 = New System.Windows.Forms.Label()
+        Me.txtCuentaContableDescripcion = New System.Windows.Forms.TextBox()
+        Me.Label13 = New System.Windows.Forms.Label()
+        Me.txtCuentaContable = New System.Windows.Forms.TextBox()
+        Me.Label12 = New System.Windows.Forms.Label()
+        Me.txtTotal = New System.Windows.Forms.TextBox()
+        Me.Label11 = New System.Windows.Forms.Label()
+        Me.txtTotalImpuesto = New System.Windows.Forms.TextBox()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.txtTotalDescuento = New System.Windows.Forms.TextBox()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.txtDetalleSubTotal = New System.Windows.Forms.TextBox()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.txtDetalleDescuento = New System.Windows.Forms.TextBox()
+        Me.txtDetallePrecioUnidad = New System.Windows.Forms.TextBox()
+        Me.txtDetalleArticuloDescripcion = New System.Windows.Forms.TextBox()
+        Me.txtDetalleCantidad = New System.Windows.Forms.TextBox()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.gridDetalle = New DevExpress.XtraGrid.GridControl()
+        Me.dtsGasto = New LcPymes_5._2.DatasetGasto()
+        Me.GridView1 = New DevExpress.XtraGrid.Views.Grid.GridView()
+        Me.GridColumn1 = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.GridColumn2 = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.GridColumn3 = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.GridColumn4 = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.GridColumn8 = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.GridColumn5 = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.GridColumn6 = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.GridColumn7 = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.Label17 = New System.Windows.Forms.Label()
+        Me.txtClave = New System.Windows.Forms.TextBox()
+        Me.TxtNombreUsuario = New System.Windows.Forms.Label()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         CType(Me.gridDetalle, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -180,7 +194,7 @@ Public Class frmGasto
         '
         'Label46
         '
-        Me.Label46.BackColor = System.Drawing.Color.FromArgb(CType(56, Byte), CType(91, Byte), CType(165, Byte))
+        Me.Label46.BackColor = System.Drawing.Color.FromArgb(CType(CType(56, Byte), Integer), CType(CType(91, Byte), Integer), CType(CType(165, Byte), Integer))
         Me.Label46.Dock = System.Windows.Forms.DockStyle.Top
         Me.Label46.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!)
         Me.Label46.ForeColor = System.Drawing.Color.White
@@ -188,7 +202,7 @@ Public Class frmGasto
         Me.Label46.ImeMode = System.Windows.Forms.ImeMode.NoControl
         Me.Label46.Location = New System.Drawing.Point(0, 0)
         Me.Label46.Name = "Label46"
-        Me.Label46.Size = New System.Drawing.Size(832, 32)
+        Me.Label46.Size = New System.Drawing.Size(824, 32)
         Me.Label46.TabIndex = 109
         Me.Label46.Text = "Registro de Gastos"
         Me.Label46.TextAlign = System.Drawing.ContentAlignment.TopCenter
@@ -205,52 +219,60 @@ Public Class frmGasto
         Me.ToolBar1.Location = New System.Drawing.Point(0, 344)
         Me.ToolBar1.Name = "ToolBar1"
         Me.ToolBar1.ShowToolTips = True
-        Me.ToolBar1.Size = New System.Drawing.Size(1128, 61)
+        Me.ToolBar1.Size = New System.Drawing.Size(1128, 58)
         Me.ToolBar1.TabIndex = 110
         '
         'tlbNuevo
         '
         Me.tlbNuevo.Enabled = False
         Me.tlbNuevo.ImageIndex = 0
+        Me.tlbNuevo.Name = "tlbNuevo"
         Me.tlbNuevo.Text = "Nuevo"
         '
         'tlbBuscar
         '
         Me.tlbBuscar.Enabled = False
         Me.tlbBuscar.ImageIndex = 1
+        Me.tlbBuscar.Name = "tlbBuscar"
         Me.tlbBuscar.Text = "Buscar"
         '
         'tlbRegistrar
         '
         Me.tlbRegistrar.Enabled = False
         Me.tlbRegistrar.ImageIndex = 2
+        Me.tlbRegistrar.Name = "tlbRegistrar"
         Me.tlbRegistrar.Text = "Registrar"
         '
         'tlbEliminar
         '
         Me.tlbEliminar.Enabled = False
         Me.tlbEliminar.ImageIndex = 3
+        Me.tlbEliminar.Name = "tlbEliminar"
         Me.tlbEliminar.Text = "Eliminar"
         '
         'tlbImprimir
         '
         Me.tlbImprimir.Enabled = False
         Me.tlbImprimir.ImageIndex = 7
+        Me.tlbImprimir.Name = "tlbImprimir"
         Me.tlbImprimir.Text = "Imprimir"
         '
         'ToolBarExcel
         '
         Me.ToolBarExcel.ImageIndex = 5
+        Me.ToolBarExcel.Name = "ToolBarExcel"
         Me.ToolBarExcel.Text = "Exportar"
         Me.ToolBarExcel.Visible = False
         '
         'ToolBarButtonSeparador1
         '
+        Me.ToolBarButtonSeparador1.Name = "ToolBarButtonSeparador1"
         Me.ToolBarButtonSeparador1.Style = System.Windows.Forms.ToolBarButtonStyle.Separator
         '
         'ToolBarImportar
         '
         Me.ToolBarImportar.ImageIndex = 9
+        Me.ToolBarImportar.Name = "ToolBarImportar"
         Me.ToolBarImportar.Text = "Importar"
         Me.ToolBarImportar.Visible = False
         '
@@ -258,35 +280,47 @@ Public Class frmGasto
         '
         Me.tlbRecalcular.Enabled = False
         Me.tlbRecalcular.ImageIndex = 10
+        Me.tlbRecalcular.Name = "tlbRecalcular"
         Me.tlbRecalcular.Text = "ReCalcular"
         Me.tlbRecalcular.Visible = False
         '
         'ToolBarButtonSeparador2
         '
+        Me.ToolBarButtonSeparador2.Name = "ToolBarButtonSeparador2"
         Me.ToolBarButtonSeparador2.Style = System.Windows.Forms.ToolBarButtonStyle.Separator
         '
         'tlbCerrar
         '
         Me.tlbCerrar.ImageIndex = 6
+        Me.tlbCerrar.Name = "tlbCerrar"
         Me.tlbCerrar.Text = "Cerrar"
         '
         'ImageList1
         '
-        Me.ImageList1.ColorDepth = System.Windows.Forms.ColorDepth.Depth32Bit
-        Me.ImageList1.ImageSize = New System.Drawing.Size(32, 32)
         Me.ImageList1.ImageStream = CType(resources.GetObject("ImageList1.ImageStream"), System.Windows.Forms.ImageListStreamer)
         Me.ImageList1.TransparentColor = System.Drawing.Color.Transparent
+        Me.ImageList1.Images.SetKeyName(0, "")
+        Me.ImageList1.Images.SetKeyName(1, "")
+        Me.ImageList1.Images.SetKeyName(2, "")
+        Me.ImageList1.Images.SetKeyName(3, "")
+        Me.ImageList1.Images.SetKeyName(4, "")
+        Me.ImageList1.Images.SetKeyName(5, "")
+        Me.ImageList1.Images.SetKeyName(6, "")
+        Me.ImageList1.Images.SetKeyName(7, "")
+        Me.ImageList1.Images.SetKeyName(8, "")
+        Me.ImageList1.Images.SetKeyName(9, "")
+        Me.ImageList1.Images.SetKeyName(10, "")
         '
         'Label2
         '
         Me.Label2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.RoyalBlue
-        Me.Label2.Location = New System.Drawing.Point(32, 48)
+        Me.Label2.Location = New System.Drawing.Point(10, 54)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(120, 16)
         Me.Label2.TabIndex = 111
-        Me.Label2.Text = "Número factura:"
+        Me.Label2.Text = "Núm. factura:"
         Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Label1
@@ -294,9 +328,9 @@ Public Class frmGasto
         Me.Label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.RoyalBlue
-        Me.Label1.Location = New System.Drawing.Point(272, 48)
+        Me.Label1.Location = New System.Drawing.Point(217, 54)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(120, 16)
+        Me.Label1.Size = New System.Drawing.Size(71, 16)
         Me.Label1.TabIndex = 112
         Me.Label1.Text = "Fecha:"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -306,7 +340,7 @@ Public Class frmGasto
         Me.Label3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.Color.RoyalBlue
-        Me.Label3.Location = New System.Drawing.Point(32, 16)
+        Me.Label3.Location = New System.Drawing.Point(10, 16)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(120, 16)
         Me.Label3.TabIndex = 113
@@ -319,7 +353,7 @@ Public Class frmGasto
         Me.Label39.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Label39.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label39.ForeColor = System.Drawing.Color.RoyalBlue
-        Me.Label39.Location = New System.Drawing.Point(576, 16)
+        Me.Label39.Location = New System.Drawing.Point(571, 16)
         Me.Label39.Name = "Label39"
         Me.Label39.Size = New System.Drawing.Size(58, 15)
         Me.Label39.TabIndex = 114
@@ -331,7 +365,7 @@ Public Class frmGasto
         Me.cmbTipo.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cmbTipo.ForeColor = System.Drawing.Color.Blue
         Me.cmbTipo.Items.AddRange(New Object() {"CON", "CRE"})
-        Me.cmbTipo.Location = New System.Drawing.Point(664, 16)
+        Me.cmbTipo.Location = New System.Drawing.Point(633, 14)
         Me.cmbTipo.Name = "cmbTipo"
         Me.cmbTipo.Size = New System.Drawing.Size(61, 21)
         Me.cmbTipo.TabIndex = 3
@@ -339,22 +373,23 @@ Public Class frmGasto
         '
         'txtNumeroFactura
         '
-        Me.txtNumeroFactura.Location = New System.Drawing.Point(168, 48)
+        Me.txtNumeroFactura.Location = New System.Drawing.Point(133, 49)
         Me.txtNumeroFactura.Name = "txtNumeroFactura"
         Me.txtNumeroFactura.Size = New System.Drawing.Size(80, 20)
         Me.txtNumeroFactura.TabIndex = 1
-        Me.txtNumeroFactura.Text = ""
         '
         'dtpFecha
         '
-        Me.dtpFecha.Format = System.Windows.Forms.DateTimePickerFormat.Short
-        Me.dtpFecha.Location = New System.Drawing.Point(400, 48)
+        Me.dtpFecha.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.dtpFecha.Location = New System.Drawing.Point(293, 51)
         Me.dtpFecha.Name = "dtpFecha"
         Me.dtpFecha.Size = New System.Drawing.Size(104, 20)
         Me.dtpFecha.TabIndex = 2
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.btnAplicar)
+        Me.GroupBox1.Controls.Add(Me.txtTrans)
         Me.GroupBox1.Controls.Add(Me.cmbMoneda)
         Me.GroupBox1.Controls.Add(Me.Label15)
         Me.GroupBox1.Controls.Add(Me.cmbProveedor)
@@ -365,6 +400,7 @@ Public Class frmGasto
         Me.GroupBox1.Controls.Add(Me.Label2)
         Me.GroupBox1.Controls.Add(Me.Label3)
         Me.GroupBox1.Controls.Add(Me.Label39)
+        Me.GroupBox1.Controls.Add(Me.ckTrans)
         Me.GroupBox1.Location = New System.Drawing.Point(7, 40)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(816, 80)
@@ -372,12 +408,29 @@ Public Class frmGasto
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Encabezado"
         '
+        'btnAplicar
+        '
+        Me.btnAplicar.Location = New System.Drawing.Point(745, 53)
+        Me.btnAplicar.Name = "btnAplicar"
+        Me.btnAplicar.Size = New System.Drawing.Size(63, 23)
+        Me.btnAplicar.TabIndex = 119
+        Me.btnAplicar.Text = "Aplicar"
+        Me.btnAplicar.UseVisualStyleBackColor = True
+        '
+        'txtTrans
+        '
+        Me.txtTrans.Enabled = False
+        Me.txtTrans.Location = New System.Drawing.Point(572, 53)
+        Me.txtTrans.Name = "txtTrans"
+        Me.txtTrans.Size = New System.Drawing.Size(167, 20)
+        Me.txtTrans.TabIndex = 118
+        '
         'cmbMoneda
         '
         Me.cmbMoneda.DisplayMember = "CON"
         Me.cmbMoneda.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cmbMoneda.ForeColor = System.Drawing.Color.Blue
-        Me.cmbMoneda.Location = New System.Drawing.Point(664, 48)
+        Me.cmbMoneda.Location = New System.Drawing.Point(462, 51)
         Me.cmbMoneda.Name = "cmbMoneda"
         Me.cmbMoneda.Size = New System.Drawing.Size(104, 21)
         Me.cmbMoneda.TabIndex = 4
@@ -388,7 +441,7 @@ Public Class frmGasto
         Me.Label15.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Label15.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label15.ForeColor = System.Drawing.Color.RoyalBlue
-        Me.Label15.Location = New System.Drawing.Point(576, 48)
+        Me.Label15.Location = New System.Drawing.Point(399, 54)
         Me.Label15.Name = "Label15"
         Me.Label15.Size = New System.Drawing.Size(58, 15)
         Me.Label15.TabIndex = 116
@@ -397,17 +450,27 @@ Public Class frmGasto
         'cmbProveedor
         '
         Me.cmbProveedor.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.cmbProveedor.DisplayMember = "Proveedores.CodigoProv"
         Me.cmbProveedor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cmbProveedor.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cmbProveedor.ForeColor = System.Drawing.Color.Blue
         Me.cmbProveedor.ItemHeight = 13
-        Me.cmbProveedor.Location = New System.Drawing.Point(168, 16)
+        Me.cmbProveedor.Location = New System.Drawing.Point(133, 14)
         Me.cmbProveedor.Name = "cmbProveedor"
-        Me.cmbProveedor.Size = New System.Drawing.Size(392, 21)
+        Me.cmbProveedor.Size = New System.Drawing.Size(433, 21)
         Me.cmbProveedor.TabIndex = 0
         Me.cmbProveedor.ValueMember = "Proveedores.CodigoProv"
+        '
+        'ckTrans
+        '
+        Me.ckTrans.AutoSize = True
+        Me.ckTrans.Location = New System.Drawing.Point(572, 39)
+        Me.ckTrans.Name = "ckTrans"
+        Me.ckTrans.Size = New System.Drawing.Size(53, 17)
+        Me.ckTrans.TabIndex = 117
+        Me.ckTrans.Text = "Trans"
+        Me.ckTrans.UseVisualStyleBackColor = True
         '
         'GroupBox2
         '
@@ -483,7 +546,6 @@ Public Class frmGasto
         Me.txtImpuesto.Name = "txtImpuesto"
         Me.txtImpuesto.Size = New System.Drawing.Size(64, 20)
         Me.txtImpuesto.TabIndex = 8
-        Me.txtImpuesto.Text = ""
         Me.txtImpuesto.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
         'Label14
@@ -506,7 +568,6 @@ Public Class frmGasto
         Me.txtCuentaContableDescripcion.Name = "txtCuentaContableDescripcion"
         Me.txtCuentaContableDescripcion.Size = New System.Drawing.Size(168, 20)
         Me.txtCuentaContableDescripcion.TabIndex = 11
-        Me.txtCuentaContableDescripcion.Text = ""
         '
         'Label13
         '
@@ -526,7 +587,6 @@ Public Class frmGasto
         Me.txtCuentaContable.Name = "txtCuentaContable"
         Me.txtCuentaContable.Size = New System.Drawing.Size(120, 20)
         Me.txtCuentaContable.TabIndex = 10
-        Me.txtCuentaContable.Text = ""
         '
         'Label12
         '
@@ -548,7 +608,6 @@ Public Class frmGasto
         Me.txtTotal.Name = "txtTotal"
         Me.txtTotal.Size = New System.Drawing.Size(120, 20)
         Me.txtTotal.TabIndex = 129
-        Me.txtTotal.Text = ""
         Me.txtTotal.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
         'Label11
@@ -571,7 +630,6 @@ Public Class frmGasto
         Me.txtTotalImpuesto.Name = "txtTotalImpuesto"
         Me.txtTotalImpuesto.Size = New System.Drawing.Size(120, 20)
         Me.txtTotalImpuesto.TabIndex = 127
-        Me.txtTotalImpuesto.Text = ""
         Me.txtTotalImpuesto.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
         'Label10
@@ -594,7 +652,6 @@ Public Class frmGasto
         Me.txtTotalDescuento.Name = "txtTotalDescuento"
         Me.txtTotalDescuento.Size = New System.Drawing.Size(120, 20)
         Me.txtTotalDescuento.TabIndex = 125
-        Me.txtTotalDescuento.Text = ""
         Me.txtTotalDescuento.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
         'Label9
@@ -616,7 +673,6 @@ Public Class frmGasto
         Me.txtDetalleSubTotal.Name = "txtDetalleSubTotal"
         Me.txtDetalleSubTotal.Size = New System.Drawing.Size(120, 20)
         Me.txtDetalleSubTotal.TabIndex = 123
-        Me.txtDetalleSubTotal.Text = ""
         Me.txtDetalleSubTotal.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
         'Label8
@@ -637,7 +693,6 @@ Public Class frmGasto
         Me.txtDetalleDescuento.Name = "txtDetalleDescuento"
         Me.txtDetalleDescuento.Size = New System.Drawing.Size(72, 20)
         Me.txtDetalleDescuento.TabIndex = 9
-        Me.txtDetalleDescuento.Text = ""
         Me.txtDetalleDescuento.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
         'txtDetallePrecioUnidad
@@ -646,7 +701,6 @@ Public Class frmGasto
         Me.txtDetallePrecioUnidad.Name = "txtDetallePrecioUnidad"
         Me.txtDetallePrecioUnidad.Size = New System.Drawing.Size(96, 20)
         Me.txtDetallePrecioUnidad.TabIndex = 7
-        Me.txtDetallePrecioUnidad.Text = ""
         Me.txtDetallePrecioUnidad.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
         'txtDetalleArticuloDescripcion
@@ -657,7 +711,6 @@ Public Class frmGasto
         Me.txtDetalleArticuloDescripcion.Name = "txtDetalleArticuloDescripcion"
         Me.txtDetalleArticuloDescripcion.Size = New System.Drawing.Size(176, 20)
         Me.txtDetalleArticuloDescripcion.TabIndex = 6
-        Me.txtDetalleArticuloDescripcion.Text = ""
         '
         'txtDetalleCantidad
         '
@@ -665,7 +718,6 @@ Public Class frmGasto
         Me.txtDetalleCantidad.Name = "txtDetalleCantidad"
         Me.txtDetalleCantidad.Size = New System.Drawing.Size(56, 20)
         Me.txtDetalleCantidad.TabIndex = 5
-        Me.txtDetalleCantidad.Text = ""
         Me.txtDetalleCantidad.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
         'Label7
@@ -720,14 +772,13 @@ Public Class frmGasto
         '
         Me.gridDetalle.DataSource = Me.dtsGasto.GastoDetalle
         '
-        'gridDetalle.EmbeddedNavigator
+        '
         '
         Me.gridDetalle.EmbeddedNavigator.Name = ""
         Me.gridDetalle.Location = New System.Drawing.Point(8, 64)
         Me.gridDetalle.MainView = Me.GridView1
         Me.gridDetalle.Name = "gridDetalle"
         Me.gridDetalle.Size = New System.Drawing.Size(800, 96)
-        Me.gridDetalle.Styles.AddReplace("ColumnFilterButtonActive", New DevExpress.Utils.ViewStyleEx("ColumnFilterButtonActive", "Grid", System.Drawing.SystemColors.Control, System.Drawing.Color.Blue, System.Drawing.SystemColors.ControlLightLight, System.Drawing.Drawing2D.LinearGradientMode.Horizontal))
         Me.gridDetalle.TabIndex = 0
         Me.gridDetalle.Text = "GridControl1"
         '
@@ -735,6 +786,7 @@ Public Class frmGasto
         '
         Me.dtsGasto.DataSetName = "DatasetGasto"
         Me.dtsGasto.Locale = New System.Globalization.CultureInfo("en-US")
+        Me.dtsGasto.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'GridView1
         '
@@ -746,6 +798,7 @@ Public Class frmGasto
         '
         Me.GridColumn1.Caption = "Cantidad"
         Me.GridColumn1.FieldName = "Cantidad"
+        Me.GridColumn1.FilterInfo = ColumnFilterInfo9
         Me.GridColumn1.Name = "GridColumn1"
         Me.GridColumn1.VisibleIndex = 0
         Me.GridColumn1.Width = 112
@@ -754,6 +807,7 @@ Public Class frmGasto
         '
         Me.GridColumn2.Caption = "Descripcion"
         Me.GridColumn2.FieldName = "Descripcion"
+        Me.GridColumn2.FilterInfo = ColumnFilterInfo10
         Me.GridColumn2.Name = "GridColumn2"
         Me.GridColumn2.VisibleIndex = 1
         Me.GridColumn2.Width = 112
@@ -764,6 +818,7 @@ Public Class frmGasto
         Me.GridColumn3.DisplayFormat.FormatString = "#,#0.00"
         Me.GridColumn3.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric
         Me.GridColumn3.FieldName = "Costo"
+        Me.GridColumn3.FilterInfo = ColumnFilterInfo11
         Me.GridColumn3.Name = "GridColumn3"
         Me.GridColumn3.VisibleIndex = 2
         Me.GridColumn3.Width = 112
@@ -774,6 +829,7 @@ Public Class frmGasto
         Me.GridColumn4.DisplayFormat.FormatString = "#,#0.00"
         Me.GridColumn4.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric
         Me.GridColumn4.FieldName = "Descuento_P"
+        Me.GridColumn4.FilterInfo = ColumnFilterInfo12
         Me.GridColumn4.Name = "GridColumn4"
         Me.GridColumn4.VisibleIndex = 3
         Me.GridColumn4.Width = 108
@@ -784,6 +840,7 @@ Public Class frmGasto
         Me.GridColumn8.DisplayFormat.FormatString = "#,#0.00"
         Me.GridColumn8.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric
         Me.GridColumn8.FieldName = "Impuesto_p"
+        Me.GridColumn8.FilterInfo = ColumnFilterInfo13
         Me.GridColumn8.Name = "GridColumn8"
         Me.GridColumn8.VisibleIndex = 4
         '
@@ -793,6 +850,7 @@ Public Class frmGasto
         Me.GridColumn5.DisplayFormat.FormatString = "#,#0.00"
         Me.GridColumn5.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric
         Me.GridColumn5.FieldName = "Total"
+        Me.GridColumn5.FilterInfo = ColumnFilterInfo14
         Me.GridColumn5.Name = "GridColumn5"
         Me.GridColumn5.VisibleIndex = 5
         Me.GridColumn5.Width = 111
@@ -801,6 +859,7 @@ Public Class frmGasto
         '
         Me.GridColumn6.Caption = "Cuenta contable"
         Me.GridColumn6.FieldName = "CuentaContable"
+        Me.GridColumn6.FilterInfo = ColumnFilterInfo15
         Me.GridColumn6.Name = "GridColumn6"
         Me.GridColumn6.VisibleIndex = 6
         Me.GridColumn6.Width = 111
@@ -809,6 +868,7 @@ Public Class frmGasto
         '
         Me.GridColumn7.Caption = "Descripción"
         Me.GridColumn7.FieldName = "CuentaContableDescripcion"
+        Me.GridColumn7.FilterInfo = ColumnFilterInfo16
         Me.GridColumn7.Name = "GridColumn7"
         Me.GridColumn7.VisibleIndex = 7
         Me.GridColumn7.Width = 120
@@ -832,10 +892,9 @@ Public Class frmGasto
         Me.txtClave.ForeColor = System.Drawing.Color.Blue
         Me.txtClave.Location = New System.Drawing.Point(560, 368)
         Me.txtClave.Name = "txtClave"
-        Me.txtClave.PasswordChar = Microsoft.VisualBasic.ChrW(42)
+        Me.txtClave.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.txtClave.Size = New System.Drawing.Size(72, 13)
         Me.txtClave.TabIndex = 0
-        Me.txtClave.Text = ""
         '
         'TxtNombreUsuario
         '
@@ -850,7 +909,7 @@ Public Class frmGasto
         'frmGasto
         '
         Me.AutoScaleBaseSize = New System.Drawing.Size(5, 13)
-        Me.ClientSize = New System.Drawing.Size(832, 406)
+        Me.ClientSize = New System.Drawing.Size(824, 401)
         Me.Controls.Add(Me.TxtNombreUsuario)
         Me.Controls.Add(Me.Label17)
         Me.Controls.Add(Me.txtClave)
@@ -862,11 +921,14 @@ Public Class frmGasto
         Me.Name = "frmGasto"
         Me.Text = "Registro de gastos"
         Me.GroupBox1.ResumeLayout(False)
+        Me.GroupBox1.PerformLayout()
         Me.GroupBox2.ResumeLayout(False)
+        Me.GroupBox2.PerformLayout()
         CType(Me.gridDetalle, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.dtsGasto, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.GridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
 
@@ -1385,6 +1447,16 @@ Public Class frmGasto
             'llenar las compras
             BuscarEncabezado(IdGasto)
 
+            Dim dtTrans As New DataTable
+            Try
+                cFunciones.Llenar_Tabla_Generico("Select Trans, NumTrans from Compras Where Id_Compra = " & identificador, dtTrans, CadenaConexionSeePOS)
+                If dtTrans.Rows.Count > 0 Then
+                    Me.txtTrans.Text = dtTrans.Rows(0).Item("NumTrans")
+                    Me.ckTrans.Checked = dtTrans.Rows(0).Item("Trans")
+                End If
+            Catch ex As Exception
+            End Try
+
             Me.ToolBar1.Buttons(2).Enabled = True
             Me.ToolBar1.Buttons(3).Enabled = True
             Me.ToolBar1.Buttons(4).Enabled = True
@@ -1866,4 +1938,21 @@ Public Class frmGasto
     Private Sub txtNumeroFactura_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles txtNumeroFactura.TextChanged
 
     End Sub
+
+    Private Sub ckTrans_CheckedChanged(sender As Object, e As EventArgs) Handles ckTrans.CheckedChanged
+        Me.txtTrans.Enabled = Me.ckTrans.Checked
+    End Sub
+
+    Private Sub btnAplicar_Click(sender As Object, e As EventArgs) Handles btnAplicar.Click
+        Try
+            If Me.IdGasto > 0 Then
+                Dim db As New OBSoluciones.SQL.Sentencias(CadenaConexionSeePOS)
+                Dim IdCompra As Long = Me.IdGasto
+                db.Ejecutar("Update Compras set Trans = " & IIf(Me.ckTrans.Checked = True, 1, 0) & ", NumTrans = '" & Me.txtTrans.Text & "' Where Id_Compra = " & IdCompra, CommandType.Text)
+            End If
+        Catch ex As Exception
+            MsgBox(ex.Message, MsgBoxStyle.Critical, "No se pudo realizar la operacion.")
+        End Try
+    End Sub
+
 End Class

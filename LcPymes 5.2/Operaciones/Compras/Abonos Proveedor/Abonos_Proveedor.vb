@@ -2155,7 +2155,7 @@ Public Class Abonos_Proveedor
                         trans.SetParametro("@Factura", Me.BindingContext(DataSetAbonosProveedor, "abonocpagar.abonocpagardetalle_abonocpagar").Current("Factura"))
                         trans.SetParametro("@Cod_Proveedor", Me.BindingContext(DataSetAbonosProveedor, "abonocpagar.abonocpagardetalle_abonocpagar").Current("Cod_Proveedor"))
                         trans.SetParametro("@MontoFactura", Me.BindingContext(DataSetAbonosProveedor, "abonocpagar.abonocpagardetalle_abonocpagar").Current("MontoFactura"))
-                        trans.SetParametro("@Saldo_Ant", Me.BindingContext(DataSetAbonosProveedor, "abonocpagar.abonocpagardetalle_abonocpagar").Current("Saldo_Actual"))
+                        trans.SetParametro("@Saldo_Ant", Me.BindingContext(DataSetAbonosProveedor, "abonocpagar.abonocpagardetalle_abonocpagar").Current("Saldo_Ant"))
                         trans.SetParametro("@Abono", Me.BindingContext(DataSetAbonosProveedor, "abonocpagar.abonocpagardetalle_abonocpagar").Current("Abono"))
                         trans.SetParametro("@Abono_SuMoneda", Me.BindingContext(DataSetAbonosProveedor, "abonocpagar.abonocpagardetalle_abonocpagar").Current("Abono_SuMoneda"))
                         trans.SetParametro("@Saldo_Actual", Me.BindingContext(DataSetAbonosProveedor, "abonocpagar.abonocpagardetalle_abonocpagar").Current("Saldo_Actual"))
@@ -2165,6 +2165,8 @@ Public Class Abonos_Proveedor
                     Next
 
                     trans.Commit()
+
+                    Me.GenerarAjuste()
 
                     Me.DataSetAbonosProveedor.abonocpagar.AcceptChanges()
                     Me.DataSetAbonosProveedor.detalle_abonocpagar.Clear()
@@ -2451,11 +2453,13 @@ Public Class Abonos_Proveedor
         End Select
     End Sub
 
+
     Function imprimir(ByVal Id As Integer)
         Try
-            Dim rptAbono As New rtpAbonocPagar
-            rptAbono.SetParameterValue("Id", Id)
-            CrystalReportsConexion.LoadShow(rptAbono, MdiParent, CadenaConexionSeePOS)
+            Dim rpt As New rptAbonocPagar
+            rpt.Refresh()
+            rpt.SetParameterValue(0, Id)
+            CrystalReportsConexion.LoadShow(rpt, MdiParent, CadenaConexionSeePOS)
         Catch ex As Exception
             MsgBox(ex.Message, MsgBoxStyle.Information, "Atención...")
         End Try
@@ -3008,5 +3012,84 @@ Public Class Abonos_Proveedor
         End If
     End Sub
 
-    
+    Private Function GuardarAjuste(_Descuento As Decimal) As Boolean
+        Dim db As OBSoluciones.SQL.Transaccion
+        Try
+            db = New OBSoluciones.SQL.Transaccion(CadenaConexionSeePOS)
+            Dim IdAjuste As Long = 0
+            db.SetParametro("@AjusteNo", Me.BindingContext(Me.DataSetAbonosProveedor, "abonocpagar").Current("Recibo"))
+            db.SetParametro("@Tipo", "CRE")
+            db.SetParametro("@Cod_Proveedor", Me.BindingContext(Me.DataSetAbonosProveedor, "abonocpagar").Current("Cod_Proveedor"))
+            db.SetParametro("@Nombre_Proveedor", Me.txtNombre.Text)
+            db.SetParametro("@Fecha", Me.BindingContext(Me.DataSetAbonosProveedor, "abonocpagar").Current("Fecha"))
+            '*************************************************************************************************************************************************
+            Dim SaldoAnterior, MontoAjuste, SaldoActual As Decimal
+            SaldoAnterior = Me.BindingContext(Me.DataSetAbonosProveedor, "abonocpagar").Current("Saldo_Actual")
+            For index As Integer = 0 To Me.BindingContext(DataSetAbonosProveedor, "abonocpagar.abonocpagardetalle_abonocpagar").Count - 1
+                Me.BindingContext(DataSetAbonosProveedor, "abonocpagar.abonocpagardetalle_abonocpagar").Position = index
+                MontoAjuste += CDec(Me.BindingContext(DataSetAbonosProveedor, "abonocpagar.abonocpagardetalle_abonocpagar").Current("MontoFactura")) * (_Descuento / 100)
+            Next
+            SaldoActual = CDec(Me.BindingContext(Me.DataSetAbonosProveedor, "abonocpagar").Current("Saldo_Actual")) - MontoAjuste
+            db.SetParametro("@Saldo_Prev", SaldoAnterior)
+            db.SetParametro("@Monto", MontoAjuste)
+            db.SetParametro("@Saldo_Act", SaldoActual)
+            '*************************************************************************************************************************************************
+            db.SetParametro("@Observaciones", Me.BindingContext(Me.DataSetAbonosProveedor, "abonocpagar").Current("Observaciones"))
+            db.SetParametro("@Anula", False)
+            db.SetParametro("@Cod_Usuario", Me.BindingContext(Me.DataSetAbonosProveedor, "abonocpagar").Current("Cedula_Usuario"))
+            db.SetParametro("@Contabilizado", False)
+            db.SetParametro("@Cod_Moneda", Me.BindingContext(Me.DataSetAbonosProveedor, "abonocpagar").Current("cod_Moneda"))
+            db.SetParametro("@Asiento", "")
+            db.SetParametro("@FechaEntrada", Date.Now)
+            IdAjuste = db.EjecutarScalar("Insert Into Ajustescpagar([AjusteNo],[Tipo],[Cod_Proveedor],[Nombre_Proveedor],[Fecha],[Saldo_Prev],[Monto],[Saldo_Act],[Observaciones],[Anula],[Cod_Usuario],[Contabilizado],[Cod_Moneda],[Asiento],[FechaEntrada]) values(@AjusteNo,@Tipo,@Cod_Proveedor,@Nombre_Proveedor,@Fecha,@Saldo_Prev,@Monto,@Saldo_Act,@Observaciones,@Anula,@Cod_Usuario,@Contabilizado,@Cod_Moneda,@Asiento,@FechaEntrada); Select SCOPE_IDENTITY();", CommandType.Text)
+            Dim AjusteFactura As Decimal = 0
+            For index As Integer = 0 To Me.BindingContext(DataSetAbonosProveedor, "abonocpagar.abonocpagardetalle_abonocpagar").Count - 1
+                Me.BindingContext(DataSetAbonosProveedor, "abonocpagar.abonocpagardetalle_abonocpagar").Position = index
+                AjusteFactura = (CDec(Me.BindingContext(DataSetAbonosProveedor, "abonocpagar.abonocpagardetalle_abonocpagar").Current("MontoFactura")) * (_Descuento / 100))
+                db.SetParametro("@Id_AjustecPagar", IdAjuste)
+                db.SetParametro("@Factura", Me.BindingContext(DataSetAbonosProveedor, "abonocpagar.abonocpagardetalle_abonocpagar").Current("Factura"))
+                db.SetParametro("@Tipo", "CRE")
+                db.SetParametro("@Monto", Me.BindingContext(DataSetAbonosProveedor, "abonocpagar.abonocpagardetalle_abonocpagar").Current("MontoFactura"))
+                db.SetParametro("@Saldo_Ant", Me.BindingContext(DataSetAbonosProveedor, "abonocpagar.abonocpagardetalle_abonocpagar").Current("Saldo_Actual"))
+                db.SetParametro("@Ajuste", AjusteFactura)
+                db.SetParametro("@Ajuste_SuMoneda", AjusteFactura)
+                db.SetParametro("@Saldo_Ajustado", CDec(Me.BindingContext(DataSetAbonosProveedor, "abonocpagar.abonocpagardetalle_abonocpagar").Current("Saldo_Actual")) - AjusteFactura)
+                db.SetParametro("@Observaciones", "")
+                db.SetParametro("@TipoNota", "CRE")
+                db.SetParametro("@ID_Compra", Me.BindingContext(DataSetAbonosProveedor, "abonocpagar.abonocpagardetalle_abonocpagar").Current("Id_Compra"))
+                db.SetParametro("@CuentaContable", "1")
+                db.SetParametro("@DescripcionCuentaContable", "GENERAL")
+                db.Ejecutar("Insert Into [dbo].[Detalle_AjustescPagar]([Id_AjustecPagar],[Factura],[Tipo],[Monto],[Saldo_Ant],[Ajuste],[Ajuste_SuMoneda],[Saldo_Ajustado],[Observaciones],[TipoNota],[ID_Compra],[CuentaContable],[DescripcionCuentaContable]) Values(@Id_AjustecPagar,@Factura,@Tipo,@Monto,@Saldo_Ant,@Ajuste,@Ajuste_SuMoneda,@Saldo_Ajustado,@Observaciones,@TipoNota,@ID_Compra,@CuentaContable,@DescripcionCuentaContable)", CommandType.Text)
+            Next
+            db.Commit()
+            Return True
+        Catch ex As Exception
+            db.Rollback()
+        End Try
+        Return False
+    End Function
+
+    Public Sub GenerarAjuste()
+        '        If CDec(Me.BindingContext(Me.DataSetAbonosProveedor, "abonocpagar").Current("Saldo_Actual")) > 0 Then
+        '            If MsgBox("Desea aplicar una nota de credito por descuento?", MsgBoxStyle.Question + MsgBoxStyle.YesNo, "Confirmar Accion") = MsgBoxResult.Yes Then
+
+        'SolicitarDescuento:
+        '                Dim PorcentajeTexto As String = InputBox("Digite el porcentaje de descuento", "Nota de credito por descuento")
+        '                Dim Porcentaje As Decimal = 0
+        '                If IsNumeric(PorcentajeTexto) Then
+        '                    If CDec(PorcentajeTexto) > 0 Then
+        '                        Porcentaje = CDec(PorcentajeTexto)
+        '                    End If
+        '                Else
+        '                    GoTo SolicitarDescuento
+        '                End If
+
+        '                If Porcentaje > 0 Then
+        '                    Me.GuardarAjuste(Porcentaje)
+        '                End If
+        '            End If
+        '        End If
+    End Sub
+
+
 End Class

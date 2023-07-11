@@ -2492,7 +2492,6 @@ Public Class Frmcliente
 
             ElseIf Me.Eliminando Then
                 Me.Tex_Accion.Text = "CLIENTE ELIMINADO"
-
             Else
                 Me.Tex_Accion.Text = "CLIENTE ACTUALIZADO" & IIf(Me.CheckBoxRestriccion.Checked = True, " SIN RESTRI. ACTVADO", "")
             End If
@@ -2639,13 +2638,12 @@ Public Class Frmcliente
     End Sub
 
     Private Sub Txtidentificacion_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles Txtidentificacion.KeyPress
-        If Asc(e.KeyChar) = Keys.Enter Then SendKeys.Send("{TAB}")
 
+        If Asc(e.KeyChar) = Keys.Enter Then SendKeys.Send("{TAB}")
         If (Not e.KeyChar.IsDigit(e.KeyChar)) Then ' valida que en este campo solo se digiten numeros y/o "-"
             If Not (e.KeyChar = Convert.ToChar(Keys.Back)) Then
                 e.Handled = True  ' esto invalida la tecla pulsada
             End If
-
         End If
 
     End Sub
@@ -2656,49 +2654,48 @@ Public Class Frmcliente
             If Not (e.KeyChar = Convert.ToChar(Keys.Back)) And Not (e.KeyChar = "-"c) Then
                 e.Handled = True  ' esto invalida la tecla pulsada
             End If
-
         End If
 
     End Sub
 
     Private Sub Txttel1_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles Txttel1.KeyPress
+
         If (Not e.KeyChar.IsDigit(e.KeyChar)) Then ' valida que en este campo solo se digiten numeros y/o "-"
             If Not (e.KeyChar = Convert.ToChar(Keys.Back)) And Not (e.KeyChar = "-"c) Then
                 e.Handled = True  ' esto invalida la tecla pulsada
             End If
-
         End If
 
     End Sub
 
 
     Private Sub Txttel2_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles Txttel2.KeyPress
+
         If (Not e.KeyChar.IsDigit(e.KeyChar)) Then ' valida que en este campo solo se digiten numeros y/o "-"
             If Not (e.KeyChar = Convert.ToChar(Keys.Back)) And Not (e.KeyChar = "-"c) Then
                 e.Handled = True  ' esto invalida la tecla pulsada
             End If
-
         End If
 
     End Sub
 
 
     Private Sub Txtfax1_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles Txtfax1.KeyPress
+
         If (Not e.KeyChar.IsDigit(e.KeyChar)) Then ' valida que en este campo solo se digiten numeros y/o "-"
             If Not (e.KeyChar = Convert.ToChar(Keys.Back)) And Not (e.KeyChar = "-"c) Then
                 e.Handled = True  ' esto invalida la tecla pulsada
             End If
-
         End If
 
     End Sub
 
     Private Sub Txtfax2_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles Txtfax2.KeyPress
+
         If (Not e.KeyChar.IsDigit(e.KeyChar)) Then ' valida que en este campo solo se digiten numeros y/o "-"
             If Not (e.KeyChar = Convert.ToChar(Keys.Back)) And Not (e.KeyChar = "-"c) Then
                 e.Handled = True  ' esto invalida la tecla pulsada
             End If
-
         End If
 
     End Sub
@@ -2717,6 +2714,7 @@ Public Class Frmcliente
         End Try
     End Sub
 
+    Private Incobrable As Boolean = False
     Private Sub Busca_Clientes(Optional ByVal _Identificacion As String = "")
         Try
             Dim cFunciones As New cFunciones
@@ -2812,7 +2810,7 @@ Public Class Frmcliente
 
         Try
             Dim dt As New DataTable
-            cFunciones.Llenar_Tabla_Generico("Select Cliente_Moroso, Anulado, OrdenCompra, CorreoComprobante, Actualizado, DescuentoEspecial, MAG, EnviarRecibo, CorreoRecibo, Fallecido from Clientes where identificacion = " & Cod_Cliente_Buscar, dt, CadenaConexionSeePOS)
+            cFunciones.Llenar_Tabla_Generico("Select Incobrable, Cliente_Moroso, Anulado, OrdenCompra, CorreoComprobante, Actualizado, DescuentoEspecial, MAG, EnviarRecibo, CorreoRecibo, Fallecido from Clientes where identificacion = " & Cod_Cliente_Buscar, dt, CadenaConexionSeePOS)
             If dt.Rows.Count > 0 Then
                 Me.ckMAG.Checked = CBool(dt.Rows(0).Item("MAG"))
                 Me.ckOrdendeCompra.Checked = CBool(dt.Rows(0).Item("OrdenCompra"))
@@ -2824,8 +2822,10 @@ Public Class Frmcliente
                 Me.ckNotificaRecibo.Checked = CBool(dt.Rows(0).Item("EnviarRecibo"))
                 Me.ckFallecido.Checked = CBool(dt.Rows(0).Item("Fallecido"))
                 Me.txtCorreoRecibo.Text = dt.Rows(0).Item("CorreoRecibo")
+                Me.Incobrable = dt.Rows(0).Item("Incobrable")
             End If
         Catch ex As Exception
+            Me.Incobrable = False
         End Try
 
     End Sub
@@ -3239,6 +3239,12 @@ Public Class Frmcliente
         cFunciones.Llenar_Tabla_Generico("Select Anulado from Clientes where identificacion = " & Cod_Cliente_Buscar, dt, CadenaConexionSeePOS)
         If dt.Rows.Count > 0 Then
             Me.CheckBoxAnular.Checked = dt.Rows(0).Item("Anulado")
+        End If
+    End Sub
+
+    Private Sub TabControl1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles TabControl1.SelectedIndexChanged
+        If Me.TabPage5.Focus = True Then
+            MsgBox("Ojo Credito")
         End If
     End Sub
 

@@ -556,6 +556,8 @@ Public Class frmEstado_CXC
         Me.AdapterMoneda.Fill(Me.DataSet_Estado_CxC, "Moneda")
         Me.DateTimePicker1.Value = Now.Date
         Me.DateTimePicker2.Value = Now.Date
+        Me.CheckBox1.Checked = True
+        Me.CheckBox1.Enabled = True
     End Sub
 
     Private Sub TextBox1_KeyDown(ByVal sender As System.Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles TextBox1.KeyDown

@@ -48,5 +48,12 @@ Public Class frmUnirCodigosPuntoVenta
     End Sub
 
 
+    Private Sub btnEliminar_Click(sender As Object, e As EventArgs) Handles btnEliminar.Click
+        If MsgBox("Desea eliminar el codigo seleccionado", MsgBoxStyle.Question + MsgBoxStyle.YesNo, "Confirmar Accion!!!") = MsgBoxResult.Yes Then
+            Dim db As New OBSoluciones.SQL.Sentencias(CadenaConexionSeePOS)
+            db.Ejecutar("delete from Codigos where id = " & Me.ViewDatos.Item("cId", Me.ViewDatos.CurrentRow.Index).Value, CommandType.Text)
+            Me.Cargar()
+        End If
+    End Sub
 
 End Class

@@ -47,7 +47,12 @@ Public Class frmFormaPagoTranferencia
                            & "Tipo Documento: " & dt.Rows(0).Item("TipoDocumento") & vbCrLf _
                            & "Monto: " & dt.Rows(0).Item("MontoPago") & vbCrLf _
                            & "Cajera: " & dt.Rows(0).Item("Nombre"), MsgBoxStyle.Exclamation, Text)
-                    Return True
+
+                    If MsgBox("Desea Continuar", MsgBoxStyle.YesNo + MsgBoxStyle.DefaultButton2 + vbQuestion, Me.Text) = MsgBoxResult.No Then
+                        Return True
+                    Else
+                        Return False
+                    End If
                 Else
                     Return False
                 End If
@@ -87,7 +92,12 @@ Public Class frmFormaPagoTranferencia
             If Me.txtMontoDeposito.Text <> "" Then
                 If IsNumeric(Me.txtMontoDeposito.Text) = True Then
                     If CDec(Me.txtMontoDeposito.Text) > 0 Then
-                        Me.DialogResult = Windows.Forms.DialogResult.OK
+                        If Me.cboTipoMovimiento.Text <> "" Then
+                            Me.DialogResult = Windows.Forms.DialogResult.OK
+                        Else
+                            MsgBox("Seleccion un tipo de movimiento.", MsgBoxStyle.Exclamation, Text)
+                            Me.cboTipoMovimiento.Focus()
+                        End If
                     Else
                         MsgBox("El valor del Monto de la transferencia debe ser un valor numerico mayor a cero.", MsgBoxStyle.Exclamation, Text)
                     End If

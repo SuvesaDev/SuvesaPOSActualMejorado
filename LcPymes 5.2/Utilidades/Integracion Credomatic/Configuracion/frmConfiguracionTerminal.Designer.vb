@@ -32,6 +32,7 @@
                 Me.txtImpresora = New System.Windows.Forms.TextBox()
                 Me.Label3 = New System.Windows.Forms.Label()
                 Me.btnBuscarImpresora = New System.Windows.Forms.Button()
+                Me.ckDatafono = New System.Windows.Forms.CheckBox()
                 Me.SuspendLayout()
                 '
                 'Label1
@@ -63,7 +64,7 @@
                 'btnCancelar
                 '
                 Me.btnCancelar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-                Me.btnCancelar.Location = New System.Drawing.Point(174, 177)
+                Me.btnCancelar.Location = New System.Drawing.Point(174, 201)
                 Me.btnCancelar.Name = "btnCancelar"
                 Me.btnCancelar.Size = New System.Drawing.Size(107, 41)
                 Me.btnCancelar.TabIndex = 3
@@ -73,7 +74,7 @@
                 'btnAceptar
                 '
                 Me.btnAceptar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-                Me.btnAceptar.Location = New System.Drawing.Point(61, 177)
+                Me.btnAceptar.Location = New System.Drawing.Point(61, 201)
                 Me.btnAceptar.Name = "btnAceptar"
                 Me.btnAceptar.Size = New System.Drawing.Size(107, 41)
                 Me.btnAceptar.TabIndex = 4
@@ -106,11 +107,22 @@
                 Me.btnBuscarImpresora.Text = "..."
                 Me.btnBuscarImpresora.UseVisualStyleBackColor = True
                 '
+                'ckDatafono
+                '
+                Me.ckDatafono.AutoSize = True
+                Me.ckDatafono.Location = New System.Drawing.Point(26, 178)
+                Me.ckDatafono.Name = "ckDatafono"
+                Me.ckDatafono.Size = New System.Drawing.Size(126, 17)
+                Me.ckDatafono.TabIndex = 8
+                Me.ckDatafono.Text = "Datafono Automatico"
+                Me.ckDatafono.UseVisualStyleBackColor = True
+                '
                 'frmConfiguracionTerminal
                 '
                 Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
                 Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-                Me.ClientSize = New System.Drawing.Size(287, 221)
+                Me.ClientSize = New System.Drawing.Size(287, 254)
+                Me.Controls.Add(Me.ckDatafono)
                 Me.Controls.Add(Me.btnBuscarImpresora)
                 Me.Controls.Add(Me.txtImpresora)
                 Me.Controls.Add(Me.Label3)
@@ -137,6 +149,7 @@
             Friend WithEvents txtImpresora As System.Windows.Forms.TextBox
             Friend WithEvents Label3 As System.Windows.Forms.Label
             Friend WithEvents btnBuscarImpresora As System.Windows.Forms.Button
+            Friend WithEvents ckDatafono As System.Windows.Forms.CheckBox
         End Class
 
     End Namespace

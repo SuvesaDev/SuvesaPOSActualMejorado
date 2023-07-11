@@ -26,6 +26,15 @@ Namespace Credomatic
                 End Set
             End Property
 
+            Public Property Datafono As Boolean
+                Get
+                    Return Me.GetDatafono
+                End Get
+                Set(ByVal value As Boolean)
+                    Me.SetDatafono(value)
+                End Set
+            End Property
+
             Private Sub RefrescarDatos()
                 For Each Tabla As DataTable In Me.dts.Tables
                     Tabla.Clear()
@@ -48,6 +57,15 @@ Namespace Credomatic
                     Return Me.dts.Tables(0).Rows(0).Item("Terminal")
                 Catch ex As Exception
                     Return ""
+                End Try
+            End Function
+
+            Private Function GetDatafono() As Boolean
+                Try
+                    Me.dts.ReadXml(Me.Archivo)
+                    Return Me.dts.Tables("Datafono").Rows(0).Item("Datafono")
+                Catch ex As Exception
+                    Return False
                 End Try
             End Function
 
@@ -81,6 +99,24 @@ Namespace Credomatic
                     Else
                         Me.RefrescarDatos()
                         Me.dts.Tables("Impresora").Rows(0).Item("Impresora") = _Impresora
+                    End If
+                    Me.dts.WriteXml(Me.Ubicacion & "configuraciones.xml", XmlWriteMode.WriteSchema)
+                Catch ex As Exception
+                End Try
+            End Sub
+
+            Private Sub SetDatafono(_Datafono As Boolean)
+                Try
+                    If Me.dts.Tables.Count = 2 Then
+                        Me.dts.DataSetName = "Configuraciones"
+                        Dim dt As New DataTable
+                        dt.Columns.Add("Datafono")
+                        dt.Rows.Add(_Datafono)
+                        Me.dts.Tables.Add(dt)
+                        Me.dts.Tables(2).TableName = "Datafono"
+                    Else
+                        Me.RefrescarDatos()
+                        Me.dts.Tables("Datafono").Rows(0).Item("Datafono") = _Datafono
                     End If
                     Me.dts.WriteXml(Me.Ubicacion & "configuraciones.xml", XmlWriteMode.WriteSchema)
                 Catch ex As Exception

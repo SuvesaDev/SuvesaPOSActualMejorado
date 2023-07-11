@@ -20,9 +20,12 @@ Public Class frmArqueoDeposito
                 Case 4 : strWhere += ""
             End Select
 
+
             cFunciones.Llenar_Tabla_Generico(strSQL & strWhere, dt, CadenaConexionSeePOS)
             Me.viewDatos.DataSource = dt
             Me.viewDatos.Columns("Id").Visible = False
+            Me.viewDatos.Columns("Monto").DefaultCellStyle.Format = "N2"
+            Me.viewDatos.Columns("Monto").DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight
         Catch ex As Exception
         End Try
     End Sub
@@ -82,5 +85,14 @@ Public Class frmArqueoDeposito
         Catch ex As Exception
             MsgBox(ex.Message, MsgBoxStyle.Critical, Me.Text)
         End Try
+    End Sub
+
+
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        Dim rpt As New rptProcesoDepositos
+        rpt.Refresh()
+        rpt.SetParameterValue(0, Me.dtpDesde.Value)
+        rpt.SetParameterValue(1, Me.dtpHasta.Value)
+        CrystalReportsConexion.LoadShow(rpt, MdiParent, CadenaConexionSeePOS)
     End Sub
 End Class

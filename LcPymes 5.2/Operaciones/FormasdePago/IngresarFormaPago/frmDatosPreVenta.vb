@@ -626,16 +626,23 @@ Public Class frmDatosPreVenta
 
                             If Transferencia > 0 And CDec(doc.Cells("cTotal").Value) > 0 Then
                                 FormaPago = "TRA"
-                                If CDec(doc.Cells("cTotal").Value) < Transferencia Then
-                                    MontoPago = CDec(doc.Cells("cTotal").Value)
-                                    Transferencia -= CDec(doc.Cells("cTotal").Value)
-                                    doc.Cells("cTotal").Value = 0
-                                Else
-                                    doc.Cells("cTotal").Value = CDec(doc.Cells("cTotal").Value) - Transferencia
-                                    MontoPago = Transferencia
-                                    Transferencia = 0
-                                End If
-                                trans.Ejecutar("INSERT INTO [dbo].[OpcionesDePago] ([Documento],[TipoDocumento],[MontoPago],[FormaPago],[Denominacion],[Usuario],[Nombre],[CodMoneda],[Nombremoneda],[TipoCambio],[Fecha],[Numapertura],[Vuelto],[NumeroDocumento])VALUES(" & doc.Cells("cDocumento").Value & ", '" & TipoDoc & "'," & MontoPago & ", '" & FormaPago & "'," & MontoPago & ", '" & Me.Id_Usuario & "','" & Me.NombreUsuario & "'," & Cod_Moneda & ", '" & NombreMoneda & "', " & TipoCambio & ", getdate()," & NApertura & ", 0, '" & "" & "')", CommandType.Text)
+                                For Each pago As DataGridViewRow In (From x As DataGridViewRow In frm.viewDatos.Rows Where x.Cells("cFormaPago").Value = "TRA" Select x).ToList
+
+                                    If CDec(doc.Cells("cTotal").Value) < Transferencia Then
+                                        MontoPago = CDec(doc.Cells("cTotal").Value)
+                                        Transferencia -= CDec(doc.Cells("cTotal").Value)
+                                        doc.Cells("cTotal").Value = 0
+                                    Else
+                                        doc.Cells("cTotal").Value = CDec(doc.Cells("cTotal").Value) - Transferencia
+                                        MontoPago = Transferencia
+                                        Transferencia = 0
+                                    End If
+
+                                    NApertura = pago.Cells("cNumapertura").Value
+                                    'trans.Ejecutar("INSERT INTO [dbo].[OpcionesDePago] ([Documento],[TipoDocumento],[MontoPago],[FormaPago],[Denominacion],[Usuario],[Nombre],[CodMoneda],[Nombremoneda],[TipoCambio],[Fecha],[Numapertura],[Vuelto],[NumeroDocumento])VALUES(" & doc.Cells("cDocumento").Value & ", '" & TipoDoc & "'," & MontoPago & ", '" & FormaPago & "'," & MontoPago & ", '" & Me.Id_Usuario & "','" & Me.NombreUsuario & "'," & Cod_Moneda & ", '" & NombreMoneda & "', " & TipoCambio & ", getdate()," & NApertura & ", 0, '" & "" & "')", CommandType.Text)
+                                    trans.Ejecutar("INSERT INTO [dbo].[OpcionesDePago] ([Documento],[TipoDocumento],[MontoPago],[FormaPago],[Denominacion],[Usuario],[Nombre],[CodMoneda],[Nombremoneda],[TipoCambio],[Fecha],[Numapertura],[Vuelto],[NumeroDocumento])VALUES(" & doc.Cells("cDocumento").Value & ", '" & TipoDoc & "'," & MontoPago & ", '" & pago.Cells("cFormaPago").Value & "'," & MontoPago & ", '" & pago.Cells("cUsuario").Value & "','" & pago.Cells("cNombre").Value & "'," & pago.Cells("cCodMoneda").Value & ", '" & pago.Cells("cNombremoneda").Value & "', " & pago.Cells("cTipoCambio").Value & ", getdate()," & pago.Cells("cNumapertura").Value & ", 0, '" & pago.Cells("cNumeroDocumento").Value & "')", CommandType.Text)
+                                Next
+
                             End If
 
                             '************************************************************************************************************
@@ -706,7 +713,9 @@ Public Class frmDatosPreVenta
 
                 If frm.PasaVuelto > 0 Then
                     Dim frmVuelto As New frmVueltoCaja
-                    frmVuelto.Vuelto = frm.PasaVuelto
+                    frmVuelto.Vuelto = CDec(frm.PasaVuelto).ToString("N2")
+                    frmVuelto.Pendiente = CDec(frm.lblTotalCobro.Text).ToString("N2")
+                    frmVuelto.Pagocon = CDec(frm.lblPagado.Text).ToString("N2")
                     frmVuelto.ShowDialog()
                 End If
 

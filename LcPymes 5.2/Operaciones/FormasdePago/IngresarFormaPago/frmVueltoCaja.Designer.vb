@@ -24,6 +24,7 @@ Partial Class frmVueltoCaja
     Private Sub InitializeComponent()
         Me.lblVuelto = New System.Windows.Forms.Label()
         Me.Button1 = New System.Windows.Forms.Button()
+        Me.LinkLabel1 = New System.Windows.Forms.LinkLabel()
         Me.SuspendLayout()
         '
         'lblVuelto
@@ -47,12 +48,23 @@ Partial Class frmVueltoCaja
         Me.Button1.Text = "Aceptar"
         Me.Button1.UseVisualStyleBackColor = True
         '
+        'LinkLabel1
+        '
+        Me.LinkLabel1.AutoSize = True
+        Me.LinkLabel1.Location = New System.Drawing.Point(655, 307)
+        Me.LinkLabel1.Name = "LinkLabel1"
+        Me.LinkLabel1.Size = New System.Drawing.Size(40, 13)
+        Me.LinkLabel1.TabIndex = 2
+        Me.LinkLabel1.TabStop = True
+        Me.LinkLabel1.Text = "Detalle"
+        '
         'frmVueltoCaja
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(707, 329)
+        Me.Controls.Add(Me.LinkLabel1)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.lblVuelto)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
@@ -62,8 +74,10 @@ Partial Class frmVueltoCaja
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Vuelto"
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
     Friend WithEvents lblVuelto As System.Windows.Forms.Label
     Friend WithEvents Button1 As System.Windows.Forms.Button
+    Friend WithEvents LinkLabel1 As System.Windows.Forms.LinkLabel
 End Class

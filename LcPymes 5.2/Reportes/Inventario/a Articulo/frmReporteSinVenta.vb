@@ -20,7 +20,6 @@
 
             CrystalReportsConexion.LoadReportViewer(VisorReporte, rpt, , CadenaConexionSeePOS)
 
-
             VisorReporte.Show()
         Catch ex As Exception
 
