@@ -940,7 +940,7 @@ Public Class MovimientoArticulos
         Try
             If codigo <> Nothing Then
                 sqlConexion = cConexion.Conectar
-                rs = cConexion.GetRecorset(sqlConexion, "SELECT Codigo, dbo.Inventario.Descripcion + '( ' + Cast(dbo.Inventario.PresentaCant AS VARCHAR) + ' ' + dbo.Presentaciones.Presentaciones + ') ' AS Descripcion , Cod_Articulo from Inventario INNER JOIN Presentaciones ON Presentaciones.CodPres = Inventario.CodPresentacion WHERE (Inhabilitado = 0) and Cod_Articulo ='" & codigo & "' or Barras = '" & codigo & "'")
+                rs = cConexion.GetRecorset(sqlConexion, "SELECT Codigo, dbo.Inventario.Descripcion + '( ' + Cast(dbo.Inventario.PresentaCant AS VARCHAR) + ' ' + dbo.Presentaciones.Presentaciones + ') ' AS Descripcion , Cod_Articulo from Inventario INNER JOIN Presentaciones ON Presentaciones.CodPres = Inventario.CodPresentacion WHERE Cod_Articulo ='" & codigo & "' or Barras = '" & codigo & "'")
                 Encontrado = False
 
                 While rs.Read

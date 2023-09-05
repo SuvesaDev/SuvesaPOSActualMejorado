@@ -4384,7 +4384,12 @@ Public Class frmCompra
                 Me.TxtFacturaCompraN.Text = Me.GetNumFactura(frm.txtConsecutivo.Text)
 
                 If frm.CondicionVenta = "01" Then
-                    ComboTipoF.Text = "CON"
+                    If MsgBox("Desea registrar la compra de Credito", MsgBoxStyle.Question + MsgBoxStyle.YesNo, "Confirmar Accion") = MsgBoxResult.Yes Then
+                        ComboTipoF.Text = "CRE"
+                        Me.DTP_FechaVence.Value = DateAdd(DateInterval.Day, 30, Me.DTP_FechaCompra.Value)
+                    Else
+                        ComboTipoF.Text = "CON"
+                    End If
                 Else
                     ComboTipoF.Text = "CRE"
                     Me.DTP_FechaVence.Value = DateAdd(DateInterval.Day, frm.PlazoCredito, Me.DTP_FechaCompra.Value)

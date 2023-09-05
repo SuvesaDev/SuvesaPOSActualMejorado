@@ -1348,10 +1348,18 @@ Public Class ArqueoCaja
 
                         'Me.BindingContext(Me.DataSetArqueo1, "ArqueoCajas").Current("Id")
                         Me.RegistrarArqueoDepositos(BindingContext(DataSetArqueo1, "ArqueoCajas").Current("IdApertura"), BindingContext(DataSetArqueo1, "ArqueoCajas").Current("Id"))
-
+                        Try
+                            Dim db As New OBSoluciones.SQL.Sentencias(CadenaConexionSeePOS)
+                            db.Ejecutar("Update ArqueoCajas set Diferencia = " & CDec(Me.txtDiferenciaCaja.Text) & " where Id = " & BindingContext(DataSetArqueo1, "ArqueoCajas").Current("Id"), CommandType.Text)
+                        Catch ex As Exception
+                        End Try
 
                         If (MsgBox("Desea Imprimir el reporte de Arqueo ", MsgBoxStyle.YesNo)) = MsgBoxResult.Yes Then
-                            Imprimir()
+                            Me.Imprimir()
+                        End If
+
+                        If (MsgBox("Desea Imprimir el detale de caja ", MsgBoxStyle.YesNo)) = MsgBoxResult.Yes Then
+                            Me.ImprimirDetalleCaja(NApertura)
                         End If
 
                     Catch eEndEdit As System.Data.NoNullAllowedException
@@ -1376,6 +1384,19 @@ Public Class ArqueoCaja
             MsgBox(ex.Message)
         End Try
     End Function
+
+    Private Sub ImprimirDetalleCaja(_IdCaja As Long)
+        Try
+            Dim frm As New frmVisorReportes
+            Dim rpt As New rptDetallaApertura
+            rpt.Refresh()
+            rpt.SetParameterValue(0, _IdCaja)
+            frm.rptViewer.ReportSource = rpt
+            frm.ShowDialog()
+        Catch ex As Exception
+            MsgBox(ex.Message, MsgBoxStyle.Exclamation)
+        End Try
+    End Sub
 
     Sub evaluarArqueoTarjetas()
         Dim i As Integer = 0

@@ -22,10 +22,10 @@ Partial Class frmMensajeReceptor
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle13 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle14 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle15 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle16 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.viewDatosXML = New System.Windows.Forms.DataGridView()
         Me.btnImportar = New System.Windows.Forms.Button()
         Me.btnCancelar = New System.Windows.Forms.Button()
@@ -42,6 +42,7 @@ Partial Class frmMensajeReceptor
         Me.Label1 = New System.Windows.Forms.Label()
         Me.cTipo = New System.Windows.Forms.DataGridViewComboBoxColumn()
         Me.cClave = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.cConsecutivo = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.cNumeroCedulaEmisor = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.cNombre = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.cMontoTotalImpuesto = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -67,11 +68,11 @@ Partial Class frmMensajeReceptor
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.viewDatosXML.BackgroundColor = System.Drawing.Color.White
         Me.viewDatosXML.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.viewDatosXML.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.cTipo, Me.cClave, Me.cNumeroCedulaEmisor, Me.cNombre, Me.cMontoTotalImpuesto, Me.cTotalFactura, Me.cNumeroCedulaReceptor, Me.cMensaje, Me.cDetalleMensaje, Me.cCodigoActividad, Me.cCondicionImpuesto, Me.cMontoTotalImpuestoAcreditar, Me.cMontoTotaldeGastoAplicable})
+        Me.viewDatosXML.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.cTipo, Me.cClave, Me.cConsecutivo, Me.cNumeroCedulaEmisor, Me.cNombre, Me.cMontoTotalImpuesto, Me.cTotalFactura, Me.cNumeroCedulaReceptor, Me.cMensaje, Me.cDetalleMensaje, Me.cCodigoActividad, Me.cCondicionImpuesto, Me.cMontoTotalImpuestoAcreditar, Me.cMontoTotaldeGastoAplicable})
         Me.viewDatosXML.Location = New System.Drawing.Point(2, 65)
         Me.viewDatosXML.Name = "viewDatosXML"
         Me.viewDatosXML.RowHeadersVisible = False
-        Me.viewDatosXML.Size = New System.Drawing.Size(1138, 336)
+        Me.viewDatosXML.Size = New System.Drawing.Size(1368, 409)
         Me.viewDatosXML.TabIndex = 0
         '
         'btnImportar
@@ -87,7 +88,7 @@ Partial Class frmMensajeReceptor
         '
         Me.btnCancelar.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.btnCancelar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnCancelar.Location = New System.Drawing.Point(953, 405)
+        Me.btnCancelar.Location = New System.Drawing.Point(1183, 478)
         Me.btnCancelar.Name = "btnCancelar"
         Me.btnCancelar.Size = New System.Drawing.Size(187, 36)
         Me.btnCancelar.TabIndex = 2
@@ -99,7 +100,7 @@ Partial Class frmMensajeReceptor
         Me.btnAceptar.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.btnAceptar.Enabled = False
         Me.btnAceptar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnAceptar.Location = New System.Drawing.Point(760, 405)
+        Me.btnAceptar.Location = New System.Drawing.Point(990, 478)
         Me.btnAceptar.Name = "btnAceptar"
         Me.btnAceptar.Size = New System.Drawing.Size(187, 36)
         Me.btnAceptar.TabIndex = 3
@@ -207,6 +208,12 @@ Partial Class frmMensajeReceptor
         Me.cClave.Visible = False
         Me.cClave.Width = 250
         '
+        'cConsecutivo
+        '
+        Me.cConsecutivo.HeaderText = "Consecutivo"
+        Me.cConsecutivo.Name = "cConsecutivo"
+        Me.cConsecutivo.Width = 150
+        '
         'cNumeroCedulaEmisor
         '
         Me.cNumeroCedulaEmisor.HeaderText = "NumeroCedulaEmisor"
@@ -224,20 +231,20 @@ Partial Class frmMensajeReceptor
         '
         'cMontoTotalImpuesto
         '
-        DataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        DataGridViewCellStyle13.Format = "N2"
-        DataGridViewCellStyle13.NullValue = Nothing
-        Me.cMontoTotalImpuesto.DefaultCellStyle = DataGridViewCellStyle13
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        DataGridViewCellStyle1.Format = "N2"
+        DataGridViewCellStyle1.NullValue = Nothing
+        Me.cMontoTotalImpuesto.DefaultCellStyle = DataGridViewCellStyle1
         Me.cMontoTotalImpuesto.HeaderText = "Total Impuesto"
         Me.cMontoTotalImpuesto.Name = "cMontoTotalImpuesto"
         Me.cMontoTotalImpuesto.ReadOnly = True
         '
         'cTotalFactura
         '
-        DataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        DataGridViewCellStyle14.Format = "N2"
-        DataGridViewCellStyle14.NullValue = Nothing
-        Me.cTotalFactura.DefaultCellStyle = DataGridViewCellStyle14
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        DataGridViewCellStyle2.Format = "N2"
+        DataGridViewCellStyle2.NullValue = Nothing
+        Me.cTotalFactura.DefaultCellStyle = DataGridViewCellStyle2
         Me.cTotalFactura.HeaderText = "Total Factura"
         Me.cTotalFactura.Name = "cTotalFactura"
         Me.cTotalFactura.ReadOnly = True
@@ -279,17 +286,17 @@ Partial Class frmMensajeReceptor
         '
         'cMontoTotalImpuestoAcreditar
         '
-        DataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        DataGridViewCellStyle15.Format = "N2"
-        Me.cMontoTotalImpuestoAcreditar.DefaultCellStyle = DataGridViewCellStyle15
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        DataGridViewCellStyle3.Format = "N2"
+        Me.cMontoTotalImpuestoAcreditar.DefaultCellStyle = DataGridViewCellStyle3
         Me.cMontoTotalImpuestoAcreditar.HeaderText = "Impuesto Acreditable"
         Me.cMontoTotalImpuestoAcreditar.Name = "cMontoTotalImpuestoAcreditar"
         '
         'cMontoTotaldeGastoAplicable
         '
-        DataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        DataGridViewCellStyle16.Format = "N2"
-        Me.cMontoTotaldeGastoAplicable.DefaultCellStyle = DataGridViewCellStyle16
+        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        DataGridViewCellStyle4.Format = "N2"
+        Me.cMontoTotaldeGastoAplicable.DefaultCellStyle = DataGridViewCellStyle4
         Me.cMontoTotaldeGastoAplicable.HeaderText = "Gasto Aplicable"
         Me.cMontoTotaldeGastoAplicable.Name = "cMontoTotaldeGastoAplicable"
         '
@@ -297,7 +304,7 @@ Partial Class frmMensajeReceptor
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1142, 444)
+        Me.ClientSize = New System.Drawing.Size(1372, 517)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.cboTipo)
         Me.Controls.Add(Me.ckBorrar)
@@ -336,6 +343,7 @@ Partial Class frmMensajeReceptor
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents cTipo As System.Windows.Forms.DataGridViewComboBoxColumn
     Friend WithEvents cClave As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents cConsecutivo As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents cNumeroCedulaEmisor As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents cNombre As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents cMontoTotalImpuesto As System.Windows.Forms.DataGridViewTextBoxColumn

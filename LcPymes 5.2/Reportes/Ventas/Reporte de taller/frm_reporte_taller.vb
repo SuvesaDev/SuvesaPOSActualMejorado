@@ -59,21 +59,20 @@ Public Class frm_reporte_taller
         Me.VisorReporte.AutoScroll = True
         Me.VisorReporte.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.VisorReporte.Cursor = System.Windows.Forms.Cursors.Default
-        Me.VisorReporte.Location = New System.Drawing.Point(0, 74)
+        Me.VisorReporte.Location = New System.Drawing.Point(0, 64)
         Me.VisorReporte.Name = "VisorReporte"
         Me.VisorReporte.ShowCloseButton = False
-        Me.VisorReporte.Size = New System.Drawing.Size(664, 451)
+        Me.VisorReporte.Size = New System.Drawing.Size(997, 548)
         Me.VisorReporte.TabIndex = 107
-        Me.VisorReporte.ToolPanelWidth = 240
         '
         'Label4
         '
         Me.Label4.BackColor = System.Drawing.SystemColors.ControlLight
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.ForeColor = System.Drawing.Color.RoyalBlue
-        Me.Label4.Location = New System.Drawing.Point(182, 18)
+        Me.Label4.Location = New System.Drawing.Point(152, 16)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(116, 19)
+        Me.Label4.Size = New System.Drawing.Size(96, 16)
         Me.Label4.TabIndex = 112
         Me.Label4.Text = "Hasta"
         '
@@ -82,35 +81,35 @@ Public Class frm_reporte_taller
         Me.Label3.BackColor = System.Drawing.SystemColors.ControlLight
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.Color.RoyalBlue
-        Me.Label3.Location = New System.Drawing.Point(48, 18)
+        Me.Label3.Location = New System.Drawing.Point(40, 16)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(115, 19)
+        Me.Label3.Size = New System.Drawing.Size(96, 16)
         Me.Label3.TabIndex = 111
         Me.Label3.Text = "Desde"
         '
         'FechaFinal
         '
         Me.FechaFinal.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.FechaFinal.Location = New System.Drawing.Point(182, 37)
+        Me.FechaFinal.Location = New System.Drawing.Point(152, 32)
         Me.FechaFinal.Name = "FechaFinal"
-        Me.FechaFinal.Size = New System.Drawing.Size(116, 22)
+        Me.FechaFinal.Size = New System.Drawing.Size(96, 20)
         Me.FechaFinal.TabIndex = 109
         Me.FechaFinal.Value = New Date(2006, 4, 19, 0, 0, 0, 0)
         '
         'FechaInicio
         '
         Me.FechaInicio.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.FechaInicio.Location = New System.Drawing.Point(48, 37)
+        Me.FechaInicio.Location = New System.Drawing.Point(40, 32)
         Me.FechaInicio.Name = "FechaInicio"
-        Me.FechaInicio.Size = New System.Drawing.Size(115, 22)
+        Me.FechaInicio.Size = New System.Drawing.Size(96, 20)
         Me.FechaInicio.TabIndex = 108
         Me.FechaInicio.Value = New Date(2006, 4, 10, 0, 0, 0, 0)
         '
         'ButtonMostrar
         '
-        Me.ButtonMostrar.Location = New System.Drawing.Point(522, 32)
+        Me.ButtonMostrar.Location = New System.Drawing.Point(435, 28)
         Me.ButtonMostrar.Name = "ButtonMostrar"
-        Me.ButtonMostrar.Size = New System.Drawing.Size(106, 28)
+        Me.ButtonMostrar.Size = New System.Drawing.Size(88, 24)
         Me.ButtonMostrar.TabIndex = 110
         Me.ButtonMostrar.Text = "Mostrar"
         '
@@ -125,9 +124,9 @@ Public Class frm_reporte_taller
         Me.cboOpcion.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cboOpcion.FormattingEnabled = True
         Me.cboOpcion.Items.AddRange(New Object() {"Reporte de Ventas Taller", "Reporte de Series Disponibles"})
-        Me.cboOpcion.Location = New System.Drawing.Point(305, 36)
+        Me.cboOpcion.Location = New System.Drawing.Point(254, 31)
         Me.cboOpcion.Name = "cboOpcion"
-        Me.cboOpcion.Size = New System.Drawing.Size(193, 24)
+        Me.cboOpcion.Size = New System.Drawing.Size(161, 21)
         Me.cboOpcion.TabIndex = 113
         '
         'Label1
@@ -135,16 +134,16 @@ Public Class frm_reporte_taller
         Me.Label1.BackColor = System.Drawing.SystemColors.ControlLight
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.RoyalBlue
-        Me.Label1.Location = New System.Drawing.Point(305, 18)
+        Me.Label1.Location = New System.Drawing.Point(254, 16)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(193, 19)
+        Me.Label1.Size = New System.Drawing.Size(161, 16)
         Me.Label1.TabIndex = 114
         Me.Label1.Text = "Opcion"
         '
         'frm_reporte_taller
         '
-        Me.AutoScaleBaseSize = New System.Drawing.Size(6, 15)
-        Me.ClientSize = New System.Drawing.Size(664, 426)
+        Me.AutoScaleBaseSize = New System.Drawing.Size(5, 13)
+        Me.ClientSize = New System.Drawing.Size(1000, 614)
         Me.Controls.Add(Me.cboOpcion)
         Me.Controls.Add(Me.VisorReporte)
         Me.Controls.Add(Me.Label4)
@@ -162,6 +161,7 @@ Public Class frm_reporte_taller
 
 #End Region
     Private Katty As Boolean = False
+    Public Groomming As Boolean = False
     Private Sub esKatty()
 
         Dim katty As String = ""
@@ -189,6 +189,11 @@ Public Class frm_reporte_taller
         SqlConnection1.ConnectionString = CadenaConexionSeePOS()
         FechaInicio.Value = Now.Date
         FechaFinal.Value = Now.Date
+
+        If Me.Groomming = True Then
+            Me.Label1.Visible = False
+            Me.cboOpcion.Visible = False
+        End If
 
         If Me.Obtener_BasedeDatos.ToLower = "mascotas".ToLower Or Me.Obtener_BasedeDatos.ToLower = "clinica".ToLower Then
             Me.Text = "Reporte de ventas Groomer"
@@ -220,23 +225,35 @@ Public Class frm_reporte_taller
     'marlent
     '*******************************************
     '
+
+
     Private Sub ButtonMostrar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ButtonMostrar.Click
-        If Me.cboOpcion.SelectedIndex = 0 Then
-            Dim rpt As New Reporte_ventas_taller
+        If Me.Groomming = True Then
+            Dim rpt As New Reporte_ventas_tallerClinica
+            rpt.Refresh()
             rpt.SetParameterValue(0, Me.FechaInicio.Value)
             rpt.SetParameterValue(1, Me.FechaFinal.Value)
-            If Me.Katty = False Then
-                rpt.SetParameterValue(2, IIf(Obtener_BasedeDatos() = "mascotas", "Groomer".ToUpper, "Taller".ToUpper))
-            Else
-                rpt.SetParameterValue(2, "Shampoo")
-            End If
+            rpt.SetParameterValue(2, "GROOMER")
             CrystalReportsConexion.LoadReportViewer(VisorReporte, rpt, , SqlConnection1.ConnectionString)
             VisorReporte.Show()
         Else
-            Dim rpt As New rptSerie
-            rpt.Refresh()
-            CrystalReportsConexion.LoadReportViewer(VisorReporte, rpt, , SqlConnection1.ConnectionString)
-            VisorReporte.Show()
+            If Me.cboOpcion.SelectedIndex = 0 Then
+                Dim rpt As New Reporte_ventas_taller
+                rpt.SetParameterValue(0, Me.FechaInicio.Value)
+                rpt.SetParameterValue(1, Me.FechaFinal.Value)
+                If Me.Katty = False Then
+                    rpt.SetParameterValue(2, IIf(Obtener_BasedeDatos() = "mascotas", "Groomer".ToUpper, "Taller".ToUpper))
+                Else
+                    rpt.SetParameterValue(2, "Shampoo")
+                End If
+                CrystalReportsConexion.LoadReportViewer(VisorReporte, rpt, , SqlConnection1.ConnectionString)
+                VisorReporte.Show()
+            Else
+                Dim rpt As New rptSerie
+                rpt.Refresh()
+                CrystalReportsConexion.LoadReportViewer(VisorReporte, rpt, , SqlConnection1.ConnectionString)
+                VisorReporte.Show()
+            End If
         End If
     End Sub
 

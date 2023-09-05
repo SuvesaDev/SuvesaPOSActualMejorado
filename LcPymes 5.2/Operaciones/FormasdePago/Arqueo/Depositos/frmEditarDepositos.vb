@@ -161,7 +161,7 @@ Public Class frmEditarDepositos
         Dim dt As New DataTable
         cFunciones.Llenar_Tabla_Generico("select Id, Banco, Cuenta, Moneda, Numero, Monto, TipoMovimiento, Observaciones from ArqueoDeposito Where Anulado = 0 and IdArqueo = " & _IdArqueo & " And IdApertura = " & Me.IdApertura, dt, CadenaConexionSeePOS)
         For Each r As DataRow In dt.Rows
-            Me.AgregarDeposito(r.Item("Id"), r.Item("Banco"), r.Item("Cuenta"), r.Item("Moneda"), r.Item("Numero"), r.Item("Monto"), r.Item("TipoMovimiento"), r.Item("Observaciones"))
+            Me.AgregarDeposito(r.Item("Id"), r.Item("Banco"), r.Item("Cuenta"), r.Item("Moneda"), r.Item("Numero"), r.Item("Monto"), r.Item("TipoMovimiento"), r.Item("Observaciones"), False)
         Next
     End Sub
 
@@ -188,8 +188,25 @@ Public Class frmEditarDepositos
         End Try
     End Sub
 
+    Private Function Duplicado(_Banco As String, _Cuenta As String, _Numero As String) As Boolean
+        Dim dt As New DataTable
+        cFunciones.Llenar_Tabla_Generico("select * from ArqueoDeposito where Banco = '" & _Banco & "' and Cuenta = '" & _Cuenta & "' and Numero = '" & _Numero & "'", dt, CadenaConexionSeePOS)
+        If dt.Rows.Count > 0 Then
+            MsgBox("Ya existe un documento con este consecutivo (" & _Numero & ")", MsgBoxStyle.Exclamation, Me.Text)
+            Return True
+        Else
+            Return False
+        End If
+    End Function
 
-    Private Sub AgregarDeposito(_Id As Integer, _Banco As String, _Cuenta As String, _Moneda As String, _Numero As String, _Monto As Decimal, _Tipo As String, _Observaciones As String)
+
+    Private Sub AgregarDeposito(_Id As Integer, _Banco As String, _Cuenta As String, _Moneda As String, _Numero As String, _Monto As Decimal, _Tipo As String, _Observaciones As String, _ValidaDuplicado As Boolean)
+        If _ValidaDuplicado = True And _Numero <> "0" Then
+            If Me.Duplicado(_Banco, _Cuenta, _Numero) = True Then
+                Exit Sub
+            End If
+        End If
+
         Me.viewDepositos.Rows.Add()
         Me.viewDepositos.Item("cId", Me.IndexDeposito).Value = _Id
         Me.viewDepositos.Item("cBanco", Me.IndexDeposito).Value = _Banco
@@ -252,7 +269,7 @@ Public Class frmEditarDepositos
                             Exit Sub
                         End If
 
-                        Me.AgregarDeposito(0, Me.cboBanco.Text, Me.cboCuenta.Text, Me.txtMoneda.Text, txtNumeroDeposito.Text, Me.txtMontoDeposito.Text, Me.cboTipo.Text, Me.txtObservaciones.Text)
+                        Me.AgregarDeposito(0, Me.cboBanco.Text, Me.cboCuenta.Text, Me.txtMoneda.Text, txtNumeroDeposito.Text, Me.txtMontoDeposito.Text, Me.cboTipo.Text, Me.txtObservaciones.Text, True)
                     End If
                 End If
             End If

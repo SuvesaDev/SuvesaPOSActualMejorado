@@ -20,6 +20,11 @@ Public Class Abonos_Proveedor
     Dim NuevaConexion As String
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents txtTipoCambio As System.Windows.Forms.TextBox
+    Friend WithEvents Label27 As System.Windows.Forms.Label
+    Friend WithEvents txtDescuento As System.Windows.Forms.TextBox
+    Friend WithEvents txtAjusteFac As DevExpress.XtraEditors.CalcEdit
+    Friend WithEvents Label28 As System.Windows.Forms.Label
+    Friend WithEvents cAjuste As DevExpress.XtraGrid.Columns.GridColumn
     Dim strModulo As String = ""
 #End Region
 
@@ -193,8 +198,11 @@ Public Class Abonos_Proveedor
         Dim ColumnFilterInfo5 As DevExpress.XtraGrid.Columns.ColumnFilterInfo = New DevExpress.XtraGrid.Columns.ColumnFilterInfo()
         Dim ColumnFilterInfo6 As DevExpress.XtraGrid.Columns.ColumnFilterInfo = New DevExpress.XtraGrid.Columns.ColumnFilterInfo()
         Dim ColumnFilterInfo7 As DevExpress.XtraGrid.Columns.ColumnFilterInfo = New DevExpress.XtraGrid.Columns.ColumnFilterInfo()
+        Dim ColumnFilterInfo8 As DevExpress.XtraGrid.Columns.ColumnFilterInfo = New DevExpress.XtraGrid.Columns.ColumnFilterInfo()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.GroupBox_Datos_Cliente = New System.Windows.Forms.GroupBox()
+        Me.Label27 = New System.Windows.Forms.Label()
+        Me.txtDescuento = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.txtTipoCambio = New System.Windows.Forms.TextBox()
         Me.Label10 = New System.Windows.Forms.Label()
@@ -231,6 +239,8 @@ Public Class Abonos_Proveedor
         Me.Factura = New DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn()
         Me.Fecha = New DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.txtAjusteFac = New DevExpress.XtraEditors.CalcEdit()
+        Me.Label28 = New System.Windows.Forms.Label()
         Me.TxtAbono = New DevExpress.XtraEditors.CalcEdit()
         Me.Label26 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
@@ -260,6 +270,7 @@ Public Class Abonos_Proveedor
         Me.colSaldo_Ant = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.colAbono = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.colSaldo = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.cAjuste = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.adAbonos = New System.Data.SqlClient.SqlDataAdapter()
         Me.SqlDeleteCommand1 = New System.Data.SqlClient.SqlCommand()
         Me.SqlConnection1 = New System.Data.SqlClient.SqlConnection()
@@ -330,6 +341,7 @@ Public Class Abonos_Proveedor
         CType(Me.gridFacturas, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.AdvBandedGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
+        CType(Me.txtAjusteFac.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TxtAbono.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TextBox1.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.GridControl2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -354,15 +366,17 @@ Public Class Abonos_Proveedor
         Me.Label9.Image = CType(resources.GetObject("Label9.Image"), System.Drawing.Image)
         Me.Label9.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.Label9.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.Label9.Location = New System.Drawing.Point(-16, 0)
+        Me.Label9.Location = New System.Drawing.Point(-3, 0)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(758, 32)
+        Me.Label9.Size = New System.Drawing.Size(817, 32)
         Me.Label9.TabIndex = 67
         Me.Label9.Text = "Abonos a Proveedores"
         Me.Label9.TextAlign = System.Drawing.ContentAlignment.TopCenter
         '
         'GroupBox_Datos_Cliente
         '
+        Me.GroupBox_Datos_Cliente.Controls.Add(Me.Label27)
+        Me.GroupBox_Datos_Cliente.Controls.Add(Me.txtDescuento)
         Me.GroupBox_Datos_Cliente.Controls.Add(Me.Label1)
         Me.GroupBox_Datos_Cliente.Controls.Add(Me.txtTipoCambio)
         Me.GroupBox_Datos_Cliente.Controls.Add(Me.Label10)
@@ -380,11 +394,37 @@ Public Class Abonos_Proveedor
         Me.GroupBox_Datos_Cliente.Enabled = False
         Me.GroupBox_Datos_Cliente.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox_Datos_Cliente.ForeColor = System.Drawing.Color.RoyalBlue
-        Me.GroupBox_Datos_Cliente.Location = New System.Drawing.Point(8, 33)
+        Me.GroupBox_Datos_Cliente.Location = New System.Drawing.Point(6, 33)
         Me.GroupBox_Datos_Cliente.Name = "GroupBox_Datos_Cliente"
-        Me.GroupBox_Datos_Cliente.Size = New System.Drawing.Size(704, 55)
+        Me.GroupBox_Datos_Cliente.Size = New System.Drawing.Size(766, 55)
         Me.GroupBox_Datos_Cliente.TabIndex = 1
         Me.GroupBox_Datos_Cliente.TabStop = False
+        '
+        'Label27
+        '
+        Me.Label27.BackColor = System.Drawing.SystemColors.ControlLight
+        Me.Label27.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Label27.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold)
+        Me.Label27.ForeColor = System.Drawing.Color.RoyalBlue
+        Me.Label27.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.Label27.Location = New System.Drawing.Point(715, 16)
+        Me.Label27.Name = "Label27"
+        Me.Label27.Size = New System.Drawing.Size(48, 16)
+        Me.Label27.TabIndex = 192
+        Me.Label27.Text = "% Des"
+        Me.Label27.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'txtDescuento
+        '
+        Me.txtDescuento.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.txtDescuento.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtDescuento.Location = New System.Drawing.Point(715, 32)
+        Me.txtDescuento.MaxLength = 2
+        Me.txtDescuento.Name = "txtDescuento"
+        Me.txtDescuento.Size = New System.Drawing.Size(48, 20)
+        Me.txtDescuento.TabIndex = 191
+        Me.txtDescuento.Text = "0"
+        Me.txtDescuento.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Label1
         '
@@ -393,9 +433,9 @@ Public Class Abonos_Proveedor
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold)
         Me.Label1.ForeColor = System.Drawing.Color.RoyalBlue
         Me.Label1.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.Label1.Location = New System.Drawing.Point(636, 16)
+        Me.Label1.Location = New System.Drawing.Point(632, 16)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(64, 16)
+        Me.Label1.Size = New System.Drawing.Size(79, 16)
         Me.Label1.TabIndex = 190
         Me.Label1.Text = "Tipo Cambio"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -404,9 +444,9 @@ Public Class Abonos_Proveedor
         '
         Me.txtTipoCambio.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtTipoCambio.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtTipoCambio.Location = New System.Drawing.Point(636, 32)
+        Me.txtTipoCambio.Location = New System.Drawing.Point(632, 32)
         Me.txtTipoCambio.Name = "txtTipoCambio"
-        Me.txtTipoCambio.Size = New System.Drawing.Size(64, 20)
+        Me.txtTipoCambio.Size = New System.Drawing.Size(79, 20)
         Me.txtTipoCambio.TabIndex = 150
         '
         'Label10
@@ -416,7 +456,7 @@ Public Class Abonos_Proveedor
         Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold)
         Me.Label10.ForeColor = System.Drawing.Color.RoyalBlue
         Me.Label10.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.Label10.Location = New System.Drawing.Point(371, 17)
+        Me.Label10.Location = New System.Drawing.Point(369, 17)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(64, 16)
         Me.Label10.TabIndex = 188
@@ -426,7 +466,7 @@ Public Class Abonos_Proveedor
         'dtFecha
         '
         Me.dtFecha.EditValue = New Date(2009, 11, 19, 0, 0, 0, 0)
-        Me.dtFecha.Location = New System.Drawing.Point(443, 33)
+        Me.dtFecha.Location = New System.Drawing.Point(439, 32)
         Me.dtFecha.Name = "dtFecha"
         '
         '
@@ -443,7 +483,7 @@ Public Class Abonos_Proveedor
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold)
         Me.Label3.ForeColor = System.Drawing.Color.RoyalBlue
         Me.Label3.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.Label3.Location = New System.Drawing.Point(443, 17)
+        Me.Label3.Location = New System.Drawing.Point(439, 17)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(88, 15)
         Me.Label3.TabIndex = 186
@@ -467,7 +507,7 @@ Public Class Abonos_Proveedor
         Me.txtCodigo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtCodigo.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.txtCodigo.ForeColor = System.Drawing.Color.Blue
-        Me.txtCodigo.Location = New System.Drawing.Point(8, 33)
+        Me.txtCodigo.Location = New System.Drawing.Point(6, 33)
         Me.txtCodigo.Name = "txtCodigo"
         Me.txtCodigo.Size = New System.Drawing.Size(59, 20)
         Me.txtCodigo.TabIndex = 0
@@ -479,7 +519,7 @@ Public Class Abonos_Proveedor
         Me.Label37.ForeColor = System.Drawing.Color.White
         Me.Label37.Location = New System.Drawing.Point(8, -1)
         Me.Label37.Name = "Label37"
-        Me.Label37.Size = New System.Drawing.Size(688, 16)
+        Me.Label37.Size = New System.Drawing.Size(743, 16)
         Me.Label37.TabIndex = 157
         Me.Label37.Text = "Datos del Proveedor"
         Me.Label37.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -491,7 +531,7 @@ Public Class Abonos_Proveedor
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold)
         Me.Label5.ForeColor = System.Drawing.Color.RoyalBlue
         Me.Label5.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.Label5.Location = New System.Drawing.Point(72, 16)
+        Me.Label5.Location = New System.Drawing.Point(70, 16)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(293, 16)
         Me.Label5.TabIndex = 2
@@ -505,7 +545,7 @@ Public Class Abonos_Proveedor
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold)
         Me.Label2.ForeColor = System.Drawing.Color.RoyalBlue
         Me.Label2.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.Label2.Location = New System.Drawing.Point(8, 16)
+        Me.Label2.Location = New System.Drawing.Point(6, 16)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(60, 16)
         Me.Label2.TabIndex = 0
@@ -518,7 +558,7 @@ Public Class Abonos_Proveedor
         Me.txtNombre.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.txtNombre.Enabled = False
         Me.txtNombre.ForeColor = System.Drawing.Color.Blue
-        Me.txtNombre.Location = New System.Drawing.Point(72, 33)
+        Me.txtNombre.Location = New System.Drawing.Point(70, 33)
         Me.txtNombre.Name = "txtNombre"
         Me.txtNombre.Size = New System.Drawing.Size(293, 20)
         Me.txtNombre.TabIndex = 1
@@ -530,7 +570,7 @@ Public Class Abonos_Proveedor
         Me.ComboMoneda.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.ComboMoneda.Enabled = False
         Me.ComboMoneda.ForeColor = System.Drawing.Color.Blue
-        Me.ComboMoneda.Location = New System.Drawing.Point(539, 32)
+        Me.ComboMoneda.Location = New System.Drawing.Point(533, 32)
         Me.ComboMoneda.Name = "ComboMoneda"
         Me.ComboMoneda.Size = New System.Drawing.Size(95, 21)
         Me.ComboMoneda.TabIndex = 2
@@ -549,7 +589,7 @@ Public Class Abonos_Proveedor
         Me.Label30.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold)
         Me.Label30.ForeColor = System.Drawing.Color.RoyalBlue
         Me.Label30.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.Label30.Location = New System.Drawing.Point(539, 17)
+        Me.Label30.Location = New System.Drawing.Point(533, 17)
         Me.Label30.Name = "Label30"
         Me.Label30.Size = New System.Drawing.Size(95, 15)
         Me.Label30.TabIndex = 164
@@ -560,7 +600,7 @@ Public Class Abonos_Proveedor
         '
         Me.txtNum_Recibo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtNum_Recibo.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtNum_Recibo.Location = New System.Drawing.Point(371, 33)
+        Me.txtNum_Recibo.Location = New System.Drawing.Point(369, 33)
         Me.txtNum_Recibo.Name = "txtNum_Recibo"
         Me.txtNum_Recibo.Size = New System.Drawing.Size(64, 20)
         Me.txtNum_Recibo.TabIndex = 159
@@ -598,7 +638,7 @@ Public Class Abonos_Proveedor
         Me.Panel1.Controls.Add(Me.txtUsuario)
         Me.Panel1.Controls.Add(Me.txtNombreUsuario)
         Me.Panel1.Controls.Add(Me.txtCedulaUsuario)
-        Me.Panel1.Location = New System.Drawing.Point(420, 474)
+        Me.Panel1.Location = New System.Drawing.Point(479, 483)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(291, 16)
         Me.Panel1.TabIndex = 0
@@ -658,10 +698,10 @@ Public Class Abonos_Proveedor
         Me.ToolBar1.DropDownArrows = True
         Me.ToolBar1.ImageList = Me.ImageList1
         Me.ToolBar1.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.ToolBar1.Location = New System.Drawing.Point(0, 432)
+        Me.ToolBar1.Location = New System.Drawing.Point(0, 441)
         Me.ToolBar1.Name = "ToolBar1"
         Me.ToolBar1.ShowToolTips = True
-        Me.ToolBar1.Size = New System.Drawing.Size(716, 58)
+        Me.ToolBar1.Size = New System.Drawing.Size(775, 58)
         Me.ToolBar1.TabIndex = 7
         '
         'ToolBarNuevo
@@ -786,6 +826,8 @@ Public Class Abonos_Proveedor
         'GroupBox1
         '
         Me.GroupBox1.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+        Me.GroupBox1.Controls.Add(Me.txtAjusteFac)
+        Me.GroupBox1.Controls.Add(Me.Label28)
         Me.GroupBox1.Controls.Add(Me.TxtAbono)
         Me.GroupBox1.Controls.Add(Me.Label26)
         Me.GroupBox1.Controls.Add(Me.Label7)
@@ -807,13 +849,40 @@ Public Class Abonos_Proveedor
         Me.GroupBox1.ForeColor = System.Drawing.Color.RoyalBlue
         Me.GroupBox1.Location = New System.Drawing.Point(0, 0)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(512, 128)
+        Me.GroupBox1.Size = New System.Drawing.Size(567, 128)
         Me.GroupBox1.TabIndex = 3
         Me.GroupBox1.TabStop = False
         '
+        'txtAjusteFac
+        '
+        Me.txtAjusteFac.Location = New System.Drawing.Point(352, 17)
+        Me.txtAjusteFac.Name = "txtAjusteFac"
+        '
+        '
+        '
+        Me.txtAjusteFac.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder
+        Me.txtAjusteFac.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
+        Me.txtAjusteFac.Properties.Style = New DevExpress.Utils.ViewStyle("ControlStyle", Nothing, New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold), "", DevExpress.Utils.StyleOptions.StyleEnabled, True, False, False, DevExpress.Utils.HorzAlignment.[Default], DevExpress.Utils.VertAlignment.Center, Nothing, System.Drawing.SystemColors.Window, System.Drawing.Color.Blue)
+        Me.txtAjusteFac.RightToLeft = System.Windows.Forms.RightToLeft.Yes
+        Me.txtAjusteFac.Size = New System.Drawing.Size(152, 21)
+        Me.txtAjusteFac.TabIndex = 193
+        '
+        'Label28
+        '
+        Me.Label28.BackColor = System.Drawing.Color.Silver
+        Me.Label28.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold)
+        Me.Label28.ForeColor = System.Drawing.Color.RoyalBlue
+        Me.Label28.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.Label28.Location = New System.Drawing.Point(239, 18)
+        Me.Label28.Name = "Label28"
+        Me.Label28.Size = New System.Drawing.Size(104, 16)
+        Me.Label28.TabIndex = 192
+        Me.Label28.Text = "Ajuste "
+        Me.Label28.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
         'TxtAbono
         '
-        Me.TxtAbono.Location = New System.Drawing.Point(352, 18)
+        Me.TxtAbono.Location = New System.Drawing.Point(352, 42)
         Me.TxtAbono.Name = "TxtAbono"
         '
         '
@@ -822,7 +891,7 @@ Public Class Abonos_Proveedor
         Me.TxtAbono.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
         Me.TxtAbono.Properties.Style = New DevExpress.Utils.ViewStyle("ControlStyle", Nothing, New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold), "", DevExpress.Utils.StyleOptions.StyleEnabled, True, False, False, DevExpress.Utils.HorzAlignment.[Default], DevExpress.Utils.VertAlignment.Center, Nothing, System.Drawing.SystemColors.Window, System.Drawing.Color.Blue)
         Me.TxtAbono.RightToLeft = System.Windows.Forms.RightToLeft.Yes
-        Me.TxtAbono.Size = New System.Drawing.Size(120, 21)
+        Me.TxtAbono.Size = New System.Drawing.Size(152, 21)
         Me.TxtAbono.TabIndex = 191
         '
         'Label26
@@ -831,7 +900,7 @@ Public Class Abonos_Proveedor
         Me.Label26.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold)
         Me.Label26.ForeColor = System.Drawing.Color.RoyalBlue
         Me.Label26.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.Label26.Location = New System.Drawing.Point(240, 57)
+        Me.Label26.Location = New System.Drawing.Point(240, 84)
         Me.Label26.Name = "Label26"
         Me.Label26.Size = New System.Drawing.Size(104, 16)
         Me.Label26.TabIndex = 184
@@ -930,7 +999,7 @@ Public Class Abonos_Proveedor
         Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold)
         Me.Label11.ForeColor = System.Drawing.Color.RoyalBlue
         Me.Label11.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.Label11.Location = New System.Drawing.Point(240, 18)
+        Me.Label11.Location = New System.Drawing.Point(240, 44)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(104, 16)
         Me.Label11.TabIndex = 169
@@ -944,9 +1013,9 @@ Public Class Abonos_Proveedor
         Me.txtSaldoAct.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.DataSetAbonosProveedor, "abonocpagar.abonocpagardetalle_abonocpagar.Saldo_Actual", True))
         Me.txtSaldoAct.Enabled = False
         Me.txtSaldoAct.ForeColor = System.Drawing.Color.Blue
-        Me.txtSaldoAct.Location = New System.Drawing.Point(352, 39)
+        Me.txtSaldoAct.Location = New System.Drawing.Point(352, 66)
         Me.txtSaldoAct.Name = "txtSaldoAct"
-        Me.txtSaldoAct.Size = New System.Drawing.Size(120, 13)
+        Me.txtSaldoAct.Size = New System.Drawing.Size(152, 13)
         Me.txtSaldoAct.TabIndex = 5
         Me.txtSaldoAct.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
@@ -956,7 +1025,7 @@ Public Class Abonos_Proveedor
         Me.Label12.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold)
         Me.Label12.ForeColor = System.Drawing.Color.RoyalBlue
         Me.Label12.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.Label12.Location = New System.Drawing.Point(239, 39)
+        Me.Label12.Location = New System.Drawing.Point(239, 66)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(104, 16)
         Me.Label12.TabIndex = 171
@@ -969,9 +1038,9 @@ Public Class Abonos_Proveedor
         Me.txtAbonoSuMoneda.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.txtAbonoSuMoneda.Enabled = False
         Me.txtAbonoSuMoneda.ForeColor = System.Drawing.Color.Blue
-        Me.txtAbonoSuMoneda.Location = New System.Drawing.Point(352, 57)
+        Me.txtAbonoSuMoneda.Location = New System.Drawing.Point(352, 84)
         Me.txtAbonoSuMoneda.Name = "txtAbonoSuMoneda"
-        Me.txtAbonoSuMoneda.Size = New System.Drawing.Size(120, 13)
+        Me.txtAbonoSuMoneda.Size = New System.Drawing.Size(152, 13)
         Me.txtAbonoSuMoneda.TabIndex = 183
         Me.txtAbonoSuMoneda.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
@@ -1088,13 +1157,13 @@ Public Class Abonos_Proveedor
         Me.GridControl2.MainView = Me.GridView1
         Me.GridControl2.Name = "GridControl2"
         Me.GridControl2.RepositoryItems.AddRange(New DevExpress.XtraEditors.Repository.RepositoryItem() {Me.RepositoryItemTextEdit1})
-        Me.GridControl2.Size = New System.Drawing.Size(704, 104)
+        Me.GridControl2.Size = New System.Drawing.Size(759, 104)
         Me.GridControl2.TabIndex = 1
         Me.GridControl2.Text = "GridControl2"
         '
         'GridView1
         '
-        Me.GridView1.Columns.AddRange(New DevExpress.XtraGrid.Columns.GridColumn() {Me.colFactura, Me.colMonto, Me.colSaldo_Ant, Me.colAbono, Me.colSaldo})
+        Me.GridView1.Columns.AddRange(New DevExpress.XtraGrid.Columns.GridColumn() {Me.colFactura, Me.colMonto, Me.colSaldo_Ant, Me.colAbono, Me.colSaldo, Me.cAjuste})
         Me.GridView1.Name = "GridView1"
         Me.GridView1.OptionsView.ShowGroupPanel = False
         '
@@ -1207,6 +1276,25 @@ Public Class Abonos_Proveedor
         Me.colSaldo.VisibleIndex = 4
         Me.colSaldo.Width = 163
         '
+        'cAjuste
+        '
+        Me.cAjuste.Caption = "Ajuste"
+        Me.cAjuste.DisplayFormat.FormatString = "#,#0.00"
+        Me.cAjuste.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric
+        Me.cAjuste.FieldName = "Ajuste"
+        Me.cAjuste.FilterInfo = ColumnFilterInfo8
+        Me.cAjuste.MinWidth = 25
+        Me.cAjuste.Name = "cAjuste"
+        Me.cAjuste.Options = CType(((((((((DevExpress.XtraGrid.Columns.ColumnOptions.CanFiltered Or DevExpress.XtraGrid.Columns.ColumnOptions.CanMoved) _
+            Or DevExpress.XtraGrid.Columns.ColumnOptions.CanGrouped) _
+            Or DevExpress.XtraGrid.Columns.ColumnOptions.CanResized) _
+            Or DevExpress.XtraGrid.Columns.ColumnOptions.CanSorted) _
+            Or DevExpress.XtraGrid.Columns.ColumnOptions.[ReadOnly]) _
+            Or DevExpress.XtraGrid.Columns.ColumnOptions.CanFocused) _
+            Or DevExpress.XtraGrid.Columns.ColumnOptions.ShowInCustomizationForm) _
+            Or DevExpress.XtraGrid.Columns.ColumnOptions.NonEditable), DevExpress.XtraGrid.Columns.ColumnOptions)
+        Me.cAjuste.VisibleIndex = 5
+        '
         'adAbonos
         '
         Me.adAbonos.DeleteCommand = Me.SqlDeleteCommand1
@@ -1302,7 +1390,7 @@ Public Class Abonos_Proveedor
         Me.Label16.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold)
         Me.Label16.ForeColor = System.Drawing.Color.RoyalBlue
         Me.Label16.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.Label16.Location = New System.Drawing.Point(608, 384)
+        Me.Label16.Location = New System.Drawing.Point(661, 384)
         Me.Label16.Name = "Label16"
         Me.Label16.Size = New System.Drawing.Size(104, 16)
         Me.Label16.TabIndex = 159
@@ -1316,7 +1404,7 @@ Public Class Abonos_Proveedor
         Me.Label18.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold)
         Me.Label18.ForeColor = System.Drawing.Color.RoyalBlue
         Me.Label18.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.Label18.Location = New System.Drawing.Point(496, 384)
+        Me.Label18.Location = New System.Drawing.Point(549, 384)
         Me.Label18.Name = "Label18"
         Me.Label18.Size = New System.Drawing.Size(104, 16)
         Me.Label18.TabIndex = 161
@@ -1328,7 +1416,7 @@ Public Class Abonos_Proveedor
         Me.Label15.BackColor = System.Drawing.Color.RoyalBlue
         Me.Label15.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label15.ForeColor = System.Drawing.Color.White
-        Me.Label15.Location = New System.Drawing.Point(368, 368)
+        Me.Label15.Location = New System.Drawing.Point(421, 368)
         Me.Label15.Name = "Label15"
         Me.Label15.Size = New System.Drawing.Size(344, 16)
         Me.Label15.TabIndex = 157
@@ -1342,7 +1430,7 @@ Public Class Abonos_Proveedor
         Me.txtSaldoActGen.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.txtSaldoActGen.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.DataSetAbonosProveedor, "abonocpagar.Saldo_Actual", True))
         Me.txtSaldoActGen.ForeColor = System.Drawing.Color.Blue
-        Me.txtSaldoActGen.Location = New System.Drawing.Point(496, 400)
+        Me.txtSaldoActGen.Location = New System.Drawing.Point(549, 400)
         Me.txtSaldoActGen.Name = "txtSaldoActGen"
         Me.txtSaldoActGen.ReadOnly = True
         Me.txtSaldoActGen.Size = New System.Drawing.Size(104, 13)
@@ -1356,7 +1444,7 @@ Public Class Abonos_Proveedor
         Me.txtAbonoGen.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.txtAbonoGen.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.DataSetAbonosProveedor, "abonocpagar.Monto", True))
         Me.txtAbonoGen.ForeColor = System.Drawing.Color.Blue
-        Me.txtAbonoGen.Location = New System.Drawing.Point(608, 400)
+        Me.txtAbonoGen.Location = New System.Drawing.Point(661, 400)
         Me.txtAbonoGen.Name = "txtAbonoGen"
         Me.txtAbonoGen.ReadOnly = True
         Me.txtAbonoGen.Size = New System.Drawing.Size(104, 13)
@@ -1370,7 +1458,7 @@ Public Class Abonos_Proveedor
         Me.txtSaldoAntGen.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.txtSaldoAntGen.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.DataSetAbonosProveedor, "abonocpagar.Saldo_Cuenta", True))
         Me.txtSaldoAntGen.ForeColor = System.Drawing.Color.Blue
-        Me.txtSaldoAntGen.Location = New System.Drawing.Point(368, 400)
+        Me.txtSaldoAntGen.Location = New System.Drawing.Point(421, 400)
         Me.txtSaldoAntGen.Name = "txtSaldoAntGen"
         Me.txtSaldoAntGen.ReadOnly = True
         Me.txtSaldoAntGen.Size = New System.Drawing.Size(120, 13)
@@ -1384,7 +1472,7 @@ Public Class Abonos_Proveedor
         Me.Label17.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold)
         Me.Label17.ForeColor = System.Drawing.Color.RoyalBlue
         Me.Label17.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.Label17.Location = New System.Drawing.Point(368, 384)
+        Me.Label17.Location = New System.Drawing.Point(421, 384)
         Me.Label17.Name = "Label17"
         Me.Label17.Size = New System.Drawing.Size(120, 16)
         Me.Label17.TabIndex = 0
@@ -1397,7 +1485,7 @@ Public Class Abonos_Proveedor
         Me.CheckBox1.Enabled = False
         Me.CheckBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CheckBox1.ForeColor = System.Drawing.Color.Red
-        Me.CheckBox1.Location = New System.Drawing.Point(720, 32)
+        Me.CheckBox1.Location = New System.Drawing.Point(775, 32)
         Me.CheckBox1.Name = "CheckBox1"
         Me.CheckBox1.Size = New System.Drawing.Size(105, 16)
         Me.CheckBox1.TabIndex = 172
@@ -1452,7 +1540,7 @@ Public Class Abonos_Proveedor
         Me.GroupBox_Datos_Abonos.ForeColor = System.Drawing.Color.RoyalBlue
         Me.GroupBox_Datos_Abonos.Location = New System.Drawing.Point(0, -8)
         Me.GroupBox_Datos_Abonos.Name = "GroupBox_Datos_Abonos"
-        Me.GroupBox_Datos_Abonos.Size = New System.Drawing.Size(528, 151)
+        Me.GroupBox_Datos_Abonos.Size = New System.Drawing.Size(567, 151)
         Me.GroupBox_Datos_Abonos.TabIndex = 0
         Me.GroupBox_Datos_Abonos.TabStop = False
         '
@@ -1631,7 +1719,7 @@ Public Class Abonos_Proveedor
         Me.TabControl1.Location = New System.Drawing.Point(192, 91)
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
-        Me.TabControl1.Size = New System.Drawing.Size(520, 157)
+        Me.TabControl1.Size = New System.Drawing.Size(578, 157)
         Me.TabControl1.TabIndex = 3
         '
         'TabPage1
@@ -1639,7 +1727,7 @@ Public Class Abonos_Proveedor
         Me.TabPage1.Controls.Add(Me.GroupBox_Datos_Abonos)
         Me.TabPage1.Location = New System.Drawing.Point(4, 22)
         Me.TabPage1.Name = "TabPage1"
-        Me.TabPage1.Size = New System.Drawing.Size(512, 131)
+        Me.TabPage1.Size = New System.Drawing.Size(570, 131)
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "Datos del Abono"
         '
@@ -1648,7 +1736,7 @@ Public Class Abonos_Proveedor
         Me.TabPage2.Controls.Add(Me.GroupBox1)
         Me.TabPage2.Location = New System.Drawing.Point(4, 22)
         Me.TabPage2.Name = "TabPage2"
-        Me.TabPage2.Size = New System.Drawing.Size(512, 131)
+        Me.TabPage2.Size = New System.Drawing.Size(570, 131)
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "Detalle  de la(s) Factura(s) a Abonar"
         '
@@ -1730,7 +1818,7 @@ Public Class Abonos_Proveedor
         Me.txtTipoCambioD.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.txtTipoCambioD.Enabled = False
         Me.txtTipoCambioD.ForeColor = System.Drawing.Color.Blue
-        Me.txtTipoCambioD.Location = New System.Drawing.Point(720, 64)
+        Me.txtTipoCambioD.Location = New System.Drawing.Point(775, 64)
         Me.txtTipoCambioD.Name = "txtTipoCambioD"
         Me.txtTipoCambioD.Size = New System.Drawing.Size(80, 21)
         Me.txtTipoCambioD.TabIndex = 165
@@ -1741,7 +1829,7 @@ Public Class Abonos_Proveedor
         Me.DataGrid1.DataMember = "abonocpagar"
         Me.DataGrid1.DataSource = Me.DataSetAbonosProveedor
         Me.DataGrid1.HeaderForeColor = System.Drawing.SystemColors.ControlText
-        Me.DataGrid1.Location = New System.Drawing.Point(720, 96)
+        Me.DataGrid1.Location = New System.Drawing.Point(775, 96)
         Me.DataGrid1.Name = "DataGrid1"
         Me.DataGrid1.Size = New System.Drawing.Size(424, 120)
         Me.DataGrid1.TabIndex = 192
@@ -1751,7 +1839,7 @@ Public Class Abonos_Proveedor
         Me.DataGrid2.DataMember = "abonocpagar.abonocpagardetalle_abonocpagar"
         Me.DataGrid2.DataSource = Me.DataSetAbonosProveedor
         Me.DataGrid2.HeaderForeColor = System.Drawing.SystemColors.ControlText
-        Me.DataGrid2.Location = New System.Drawing.Point(720, 224)
+        Me.DataGrid2.Location = New System.Drawing.Point(775, 224)
         Me.DataGrid2.Name = "DataGrid2"
         Me.DataGrid2.Size = New System.Drawing.Size(424, 96)
         Me.DataGrid2.TabIndex = 193
@@ -1795,7 +1883,7 @@ Public Class Abonos_Proveedor
         '
         Me.AutoScaleBaseSize = New System.Drawing.Size(5, 13)
         Me.BackColor = System.Drawing.SystemColors.Control
-        Me.ClientSize = New System.Drawing.Size(716, 490)
+        Me.ClientSize = New System.Drawing.Size(775, 499)
         Me.Controls.Add(Me.txtId)
         Me.Controls.Add(Me.CheckBox2)
         Me.Controls.Add(Me.TextBoxMontoLetras)
@@ -1819,7 +1907,9 @@ Public Class Abonos_Proveedor
         Me.Controls.Add(Me.Label15)
         Me.Controls.Add(Me.Label18)
         Me.Controls.Add(Me.Label16)
-        Me.MaximumSize = New System.Drawing.Size(732, 529)
+        Me.MaximizeBox = False
+        Me.MaximumSize = New System.Drawing.Size(791, 538)
+        Me.MinimumSize = New System.Drawing.Size(791, 538)
         Me.Name = "Abonos_Proveedor"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Abono a Proveedor"
@@ -1833,6 +1923,7 @@ Public Class Abonos_Proveedor
         CType(Me.AdvBandedGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
+        CType(Me.txtAjusteFac.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TxtAbono.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TextBox1.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.GridControl2, System.ComponentModel.ISupportInitialize).EndInit()
@@ -2166,7 +2257,8 @@ Public Class Abonos_Proveedor
 
                     trans.Commit()
 
-                    Me.GenerarAjuste()
+                    Me.IdAjuste = 0
+                    GuardarAjuste()
 
                     Me.DataSetAbonosProveedor.abonocpagar.AcceptChanges()
                     Me.DataSetAbonosProveedor.detalle_abonocpagar.Clear()
@@ -2453,17 +2545,18 @@ Public Class Abonos_Proveedor
         End Select
     End Sub
 
-
     Function imprimir(ByVal Id As Integer)
         Try
             Dim rpt As New rptAbonocPagar
             rpt.Refresh()
             rpt.SetParameterValue(0, Id)
+            rpt.SetParameterValue(1, Me.IdAjuste)
             CrystalReportsConexion.LoadShow(rpt, MdiParent, CadenaConexionSeePOS)
         Catch ex As Exception
             MsgBox(ex.Message, MsgBoxStyle.Information, "Atención...")
         End Try
     End Function
+
 
 #Region "Clientes"
     Private Sub txtCodigo_KeyDown(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles txtCodigo.KeyDown
@@ -2523,7 +2616,6 @@ Public Class Abonos_Proveedor
                         rs.Close()
                         Exit Sub
                     Else
-
                         If VariarInteres = True Then
                             'txtIntereses.Enabled = True
                         Else
@@ -2532,6 +2624,7 @@ Public Class Abonos_Proveedor
                         TxtAbono.Enabled = True
                         Me.txtNum_Recibo.Focus()
                     End If
+
                 Else
                     MsgBox("La identificación del Proveedor no se encuentra", MsgBoxStyle.Information, "Atención...")
                     txtCodigo.Focus()
@@ -2583,6 +2676,8 @@ Public Class Abonos_Proveedor
             Me.txtAbonoSuMoneda.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.DataSetAbonosProveedor, "abonocpagar.abonocpagardetalle_abonocpagar.Abono_SuMoneda"))
             Me.TxtAbono.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.DataSetAbonosProveedor, "abonocpagar.abonocpagardetalle_abonocpagar.Abono"))
             Me.txtFactura.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.DataSetAbonosProveedor, "abonocpagar.abonocpagardetalle_abonocpagar.Factura"))
+            Me.txtAjusteFac.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.DataSetAbonosProveedor, "abonocpagar.abonocpagardetalle_abonocpagar.Ajuste")) 'ojo nuevo
+
             'Me.Label3.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.DataSetAbonosProveedor, "abonocpagar.abonocpagardetalle_abonocpagar.Id_Abonocpagar")) '<<<<<<<<<<
         Catch ex As Exception
             MsgBox(ex.Message, MsgBoxStyle.Information, "Atención...")
@@ -2647,6 +2742,19 @@ Public Class Abonos_Proveedor
                         ' dtEmitida.Text = rs!Fecha
                         txtMonto.Text = Format(rs!TotalFactura, "#,#0.00")
                         txtSaldo.Text = Format(rs!SaldoFactura, "#,#0.00")
+
+                        'Ojo Nuevo
+                        If IsNumeric(Me.txtDescuento.Text) Then
+                            If CDec(Me.txtDescuento.Text) > 0 Then
+                                Dim Desc As Decimal = Me.txtDescuento.Text
+                                Me.txtAjusteFac.Text = CDec(CDec(Me.txtMonto.Text) * (Desc / 100)).ToString("N2")
+                            Else
+                                Me.txtAjusteFac.Text = 0
+                            End If
+                        Else
+                            Me.txtAjusteFac.Text = 0
+                        End If
+
                         'txtSaldoAnt.Text = txtSaldo.Text
                         TxtAbono.Text = Format(CDbl(txtSaldo.Text), "#,#0.00")
                         txtSaldoAct.Text = "0.00"
@@ -2993,14 +3101,7 @@ Public Class Abonos_Proveedor
         If e.KeyCode = Keys.Enter Then
             Try
                 If ComboMoneda.Text <> "" Then
-                    ComboMoneda.Enabled = False
-                    GroupBox_Datos_Cliente.Enabled = True
-                    txtObservaciones.Enabled = True
-                    GroupBox_Datos_Abonos.Enabled = True
-                    ' Me.gridFacturas.Enabled = True
-                    TabControl1.Visible = True
-                    TabControl1.SelectedIndex = 0
-                    ComboBoxBanco.Focus()
+                    Me.txtDescuento.Focus()
                 Else
                     MsgBox("Debe de seleccionar una moneda ...", MsgBoxStyle.Critical)
                     ComboMoneda.Focus()
@@ -3012,84 +3113,96 @@ Public Class Abonos_Proveedor
         End If
     End Sub
 
-    Private Function GuardarAjuste(_Descuento As Decimal) As Boolean
+    Private IdAjuste As Long = 0
+    Private Function GuardarAjuste() As Boolean
+        Me.IdAjuste = 0
         Dim db As OBSoluciones.SQL.Transaccion
         Try
-            db = New OBSoluciones.SQL.Transaccion(CadenaConexionSeePOS)
-            Dim IdAjuste As Long = 0
-            db.SetParametro("@AjusteNo", Me.BindingContext(Me.DataSetAbonosProveedor, "abonocpagar").Current("Recibo"))
-            db.SetParametro("@Tipo", "CRE")
-            db.SetParametro("@Cod_Proveedor", Me.BindingContext(Me.DataSetAbonosProveedor, "abonocpagar").Current("Cod_Proveedor"))
-            db.SetParametro("@Nombre_Proveedor", Me.txtNombre.Text)
-            db.SetParametro("@Fecha", Me.BindingContext(Me.DataSetAbonosProveedor, "abonocpagar").Current("Fecha"))
-            '*************************************************************************************************************************************************
+
             Dim SaldoAnterior, MontoAjuste, SaldoActual As Decimal
-            SaldoAnterior = Me.BindingContext(Me.DataSetAbonosProveedor, "abonocpagar").Current("Saldo_Actual")
             For index As Integer = 0 To Me.BindingContext(DataSetAbonosProveedor, "abonocpagar.abonocpagardetalle_abonocpagar").Count - 1
                 Me.BindingContext(DataSetAbonosProveedor, "abonocpagar.abonocpagardetalle_abonocpagar").Position = index
-                MontoAjuste += CDec(Me.BindingContext(DataSetAbonosProveedor, "abonocpagar.abonocpagardetalle_abonocpagar").Current("MontoFactura")) * (_Descuento / 100)
+                MontoAjuste += CDec(Me.BindingContext(DataSetAbonosProveedor, "abonocpagar.abonocpagardetalle_abonocpagar").Current("Ajuste"))
             Next
-            SaldoActual = CDec(Me.BindingContext(Me.DataSetAbonosProveedor, "abonocpagar").Current("Saldo_Actual")) - MontoAjuste
-            db.SetParametro("@Saldo_Prev", SaldoAnterior)
-            db.SetParametro("@Monto", MontoAjuste)
-            db.SetParametro("@Saldo_Act", SaldoActual)
-            '*************************************************************************************************************************************************
-            db.SetParametro("@Observaciones", Me.BindingContext(Me.DataSetAbonosProveedor, "abonocpagar").Current("Observaciones"))
-            db.SetParametro("@Anula", False)
-            db.SetParametro("@Cod_Usuario", Me.BindingContext(Me.DataSetAbonosProveedor, "abonocpagar").Current("Cedula_Usuario"))
-            db.SetParametro("@Contabilizado", False)
-            db.SetParametro("@Cod_Moneda", Me.BindingContext(Me.DataSetAbonosProveedor, "abonocpagar").Current("cod_Moneda"))
-            db.SetParametro("@Asiento", "")
-            db.SetParametro("@FechaEntrada", Date.Now)
-            IdAjuste = db.EjecutarScalar("Insert Into Ajustescpagar([AjusteNo],[Tipo],[Cod_Proveedor],[Nombre_Proveedor],[Fecha],[Saldo_Prev],[Monto],[Saldo_Act],[Observaciones],[Anula],[Cod_Usuario],[Contabilizado],[Cod_Moneda],[Asiento],[FechaEntrada]) values(@AjusteNo,@Tipo,@Cod_Proveedor,@Nombre_Proveedor,@Fecha,@Saldo_Prev,@Monto,@Saldo_Act,@Observaciones,@Anula,@Cod_Usuario,@Contabilizado,@Cod_Moneda,@Asiento,@FechaEntrada); Select SCOPE_IDENTITY();", CommandType.Text)
-            Dim AjusteFactura As Decimal = 0
-            For index As Integer = 0 To Me.BindingContext(DataSetAbonosProveedor, "abonocpagar.abonocpagardetalle_abonocpagar").Count - 1
-                Me.BindingContext(DataSetAbonosProveedor, "abonocpagar.abonocpagardetalle_abonocpagar").Position = index
-                AjusteFactura = (CDec(Me.BindingContext(DataSetAbonosProveedor, "abonocpagar.abonocpagardetalle_abonocpagar").Current("MontoFactura")) * (_Descuento / 100))
-                db.SetParametro("@Id_AjustecPagar", IdAjuste)
-                db.SetParametro("@Factura", Me.BindingContext(DataSetAbonosProveedor, "abonocpagar.abonocpagardetalle_abonocpagar").Current("Factura"))
+
+            If MontoAjuste > 0 Then
+                db = New OBSoluciones.SQL.Transaccion(CadenaConexionSeePOS)
+                Dim IdAjuste As Long = 0
+                SaldoAnterior = Me.BindingContext(Me.DataSetAbonosProveedor, "abonocpagar").Current("Saldo_Actual")
+                db.SetParametro("@AjusteNo", Me.BindingContext(Me.DataSetAbonosProveedor, "abonocpagar").Current("Recibo"))
                 db.SetParametro("@Tipo", "CRE")
-                db.SetParametro("@Monto", Me.BindingContext(DataSetAbonosProveedor, "abonocpagar.abonocpagardetalle_abonocpagar").Current("MontoFactura"))
-                db.SetParametro("@Saldo_Ant", Me.BindingContext(DataSetAbonosProveedor, "abonocpagar.abonocpagardetalle_abonocpagar").Current("Saldo_Actual"))
-                db.SetParametro("@Ajuste", AjusteFactura)
-                db.SetParametro("@Ajuste_SuMoneda", AjusteFactura)
-                db.SetParametro("@Saldo_Ajustado", CDec(Me.BindingContext(DataSetAbonosProveedor, "abonocpagar.abonocpagardetalle_abonocpagar").Current("Saldo_Actual")) - AjusteFactura)
-                db.SetParametro("@Observaciones", "")
-                db.SetParametro("@TipoNota", "CRE")
-                db.SetParametro("@ID_Compra", Me.BindingContext(DataSetAbonosProveedor, "abonocpagar.abonocpagardetalle_abonocpagar").Current("Id_Compra"))
-                db.SetParametro("@CuentaContable", "1")
-                db.SetParametro("@DescripcionCuentaContable", "GENERAL")
-                db.Ejecutar("Insert Into [dbo].[Detalle_AjustescPagar]([Id_AjustecPagar],[Factura],[Tipo],[Monto],[Saldo_Ant],[Ajuste],[Ajuste_SuMoneda],[Saldo_Ajustado],[Observaciones],[TipoNota],[ID_Compra],[CuentaContable],[DescripcionCuentaContable]) Values(@Id_AjustecPagar,@Factura,@Tipo,@Monto,@Saldo_Ant,@Ajuste,@Ajuste_SuMoneda,@Saldo_Ajustado,@Observaciones,@TipoNota,@ID_Compra,@CuentaContable,@DescripcionCuentaContable)", CommandType.Text)
-            Next
-            db.Commit()
+                db.SetParametro("@Cod_Proveedor", Me.BindingContext(Me.DataSetAbonosProveedor, "abonocpagar").Current("Cod_Proveedor"))
+                db.SetParametro("@Nombre_Proveedor", Me.txtNombre.Text)
+                db.SetParametro("@Fecha", Me.BindingContext(Me.DataSetAbonosProveedor, "abonocpagar").Current("Fecha"))
+                '*************************************************************************************************************************************************
+                SaldoActual = CDec(Me.BindingContext(Me.DataSetAbonosProveedor, "abonocpagar").Current("Saldo_Actual")) - MontoAjuste
+                db.SetParametro("@Saldo_Prev", SaldoAnterior)
+                db.SetParametro("@Monto", MontoAjuste)
+                db.SetParametro("@Saldo_Act", SaldoActual)
+                '*************************************************************************************************************************************************
+                db.SetParametro("@Observaciones", Me.BindingContext(Me.DataSetAbonosProveedor, "abonocpagar").Current("Observaciones"))
+                db.SetParametro("@Anula", False)
+                db.SetParametro("@Cod_Usuario", Me.BindingContext(Me.DataSetAbonosProveedor, "abonocpagar").Current("Cedula_Usuario"))
+                db.SetParametro("@Contabilizado", False)
+                db.SetParametro("@Cod_Moneda", Me.BindingContext(Me.DataSetAbonosProveedor, "abonocpagar").Current("cod_Moneda"))
+                db.SetParametro("@Asiento", "")
+                db.SetParametro("@FechaEntrada", Date.Now)
+                IdAjuste = db.EjecutarScalar("Insert Into Ajustescpagar([AjusteNo],[Tipo],[Cod_Proveedor],[Nombre_Proveedor],[Fecha],[Saldo_Prev],[Monto],[Saldo_Act],[Observaciones],[Anula],[Cod_Usuario],[Contabilizado],[Cod_Moneda],[Asiento],[FechaEntrada]) values(@AjusteNo,@Tipo,@Cod_Proveedor,@Nombre_Proveedor,@Fecha,@Saldo_Prev,@Monto,@Saldo_Act,@Observaciones,@Anula,@Cod_Usuario,@Contabilizado,@Cod_Moneda,@Asiento,@FechaEntrada); Select SCOPE_IDENTITY();", CommandType.Text)
+                Dim AjusteFactura As Decimal = 0
+                For index As Integer = 0 To Me.BindingContext(DataSetAbonosProveedor, "abonocpagar.abonocpagardetalle_abonocpagar").Count - 1
+                    Me.BindingContext(DataSetAbonosProveedor, "abonocpagar.abonocpagardetalle_abonocpagar").Position = index
+                    AjusteFactura = CDec(Me.BindingContext(DataSetAbonosProveedor, "abonocpagar.abonocpagardetalle_abonocpagar").Current("Ajuste"))
+                    If AjusteFactura > 0 Then
+                        db.SetParametro("@Id_AjustecPagar", IdAjuste)
+                        db.SetParametro("@Factura", Me.BindingContext(DataSetAbonosProveedor, "abonocpagar.abonocpagardetalle_abonocpagar").Current("Factura"))
+                        db.SetParametro("@Tipo", "CRE")
+                        db.SetParametro("@Monto", Me.BindingContext(DataSetAbonosProveedor, "abonocpagar.abonocpagardetalle_abonocpagar").Current("MontoFactura"))
+                        db.SetParametro("@Saldo_Ant", Me.BindingContext(DataSetAbonosProveedor, "abonocpagar.abonocpagardetalle_abonocpagar").Current("Saldo_Actual"))
+                        db.SetParametro("@Ajuste", AjusteFactura)
+                        db.SetParametro("@Ajuste_SuMoneda", AjusteFactura)
+                        db.SetParametro("@Saldo_Ajustado", CDec(Me.BindingContext(DataSetAbonosProveedor, "abonocpagar.abonocpagardetalle_abonocpagar").Current("Saldo_Actual")) - AjusteFactura)
+                        db.SetParametro("@Observaciones", "")
+                        db.SetParametro("@TipoNota", "CRE")
+                        db.SetParametro("@ID_Compra", Me.BindingContext(DataSetAbonosProveedor, "abonocpagar.abonocpagardetalle_abonocpagar").Current("Id_Compra"))
+                        db.SetParametro("@CuentaContable", "1")
+                        db.SetParametro("@DescripcionCuentaContable", "GENERAL")
+                        db.Ejecutar("Insert Into [dbo].[Detalle_AjustescPagar]([Id_AjustecPagar],[Factura],[Tipo],[Monto],[Saldo_Ant],[Ajuste],[Ajuste_SuMoneda],[Saldo_Ajustado],[Observaciones],[TipoNota],[ID_Compra],[CuentaContable],[DescripcionCuentaContable]) Values(@Id_AjustecPagar,@Factura,@Tipo,@Monto,@Saldo_Ant,@Ajuste,@Ajuste_SuMoneda,@Saldo_Ajustado,@Observaciones,@TipoNota,@ID_Compra,@CuentaContable,@DescripcionCuentaContable)", CommandType.Text)
+                    End If
+                Next
+                db.Commit()
+                Me.IdAjuste = IdAjuste
+            End If
             Return True
         Catch ex As Exception
+            Me.IdAjuste = 0
             db.Rollback()
         End Try
         Return False
     End Function
 
-    Public Sub GenerarAjuste()
-        '        If CDec(Me.BindingContext(Me.DataSetAbonosProveedor, "abonocpagar").Current("Saldo_Actual")) > 0 Then
-        '            If MsgBox("Desea aplicar una nota de credito por descuento?", MsgBoxStyle.Question + MsgBoxStyle.YesNo, "Confirmar Accion") = MsgBoxResult.Yes Then
-
-        'SolicitarDescuento:
-        '                Dim PorcentajeTexto As String = InputBox("Digite el porcentaje de descuento", "Nota de credito por descuento")
-        '                Dim Porcentaje As Decimal = 0
-        '                If IsNumeric(PorcentajeTexto) Then
-        '                    If CDec(PorcentajeTexto) > 0 Then
-        '                        Porcentaje = CDec(PorcentajeTexto)
-        '                    End If
-        '                Else
-        '                    GoTo SolicitarDescuento
-        '                End If
-
-        '                If Porcentaje > 0 Then
-        '                    Me.GuardarAjuste(Porcentaje)
-        '                End If
-        '            End If
-        '        End If
+    Private Sub txtDescuento_KeyDown(sender As Object, e As KeyEventArgs) Handles txtDescuento.KeyDown
+        If e.KeyCode = Keys.Enter And Me.txtDescuento.Text <> "" Then
+            If IsNumeric(Me.txtDescuento.Text) Then
+                ComboMoneda.Enabled = False
+                GroupBox_Datos_Cliente.Enabled = True
+                txtObservaciones.Enabled = True
+                GroupBox_Datos_Abonos.Enabled = True
+                ' Me.gridFacturas.Enabled = True
+                TabControl1.Visible = True
+                TabControl1.SelectedIndex = 0
+                ComboBoxBanco.Focus()
+            Else
+                MsgBox("El porcentaje de descuento debe ser un valor numerico", MsgBoxStyle.Exclamation, Me.Text)
+            End If
+        End If
     End Sub
 
+    Private Sub txtAjusteFac_KeyDown(sender As Object, e As KeyEventArgs) Handles txtAjusteFac.KeyDown
+        If e.KeyCode = Keys.Enter Then
+            If IsNumeric(Me.txtAjusteFac.Text) Then
+                Me.TxtAbono.Focus()
+            End If
+        End If
+    End Sub
 
 End Class

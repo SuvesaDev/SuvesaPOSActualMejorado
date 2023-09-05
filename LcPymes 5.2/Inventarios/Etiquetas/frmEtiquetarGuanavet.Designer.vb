@@ -43,6 +43,7 @@ Partial Class frmEtiquetarGuanavet
         Me.lblPresentacion = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.pLogo = New System.Windows.Forms.PictureBox()
+        Me.Label8 = New System.Windows.Forms.Label()
         CType(Me.pictBarcode, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtNCopia, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtCantidad, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -256,15 +257,26 @@ Partial Class frmEtiquetarGuanavet
         Me.pLogo.TabIndex = 28
         Me.pLogo.TabStop = False
         '
-        'frmEtiquetar
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label8.Location = New System.Drawing.Point(210, 270)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(92, 25)
+        Me.Label8.TabIndex = 29
+        Me.Label8.Text = "Pruebas"
+        '
+        'frmEtiquetarGuanavet
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(507, 268)
+        Me.ClientSize = New System.Drawing.Size(507, 313)
+        Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.pLogo)
         Me.Controls.Add(Me.Panel1)
         Me.MaximizeBox = False
-        Me.Name = "frmEtiquetar"
+        Me.Name = "frmEtiquetarGuanavet"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Etiquetar"
         CType(Me.pictBarcode, System.ComponentModel.ISupportInitialize).EndInit()
@@ -274,6 +286,7 @@ Partial Class frmEtiquetarGuanavet
         Me.Panel1.PerformLayout()
         CType(Me.pLogo, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
     Private WithEvents cmdPrint As System.Windows.Forms.Button
@@ -297,4 +310,5 @@ Partial Class frmEtiquetarGuanavet
     Friend WithEvents pLogo As System.Windows.Forms.PictureBox
     Private WithEvents lblPresentacion As System.Windows.Forms.Label
     Private WithEvents Label7 As System.Windows.Forms.Label
+    Friend WithEvents Label8 As System.Windows.Forms.Label
 End Class

@@ -31,6 +31,14 @@ Partial Class frmAgregarDeposito
         Me.Label13 = New System.Windows.Forms.Label()
         Me.txtDepositoDolares = New System.Windows.Forms.TextBox()
         Me.viewDepositos = New System.Windows.Forms.DataGridView()
+        Me.cBanco = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.cCuenta = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.cMonedaDeposito = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.cNumero = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.cMontoDeposito = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.cTipo = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.cTipo1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.cObservaciones = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.cboBanco = New System.Windows.Forms.ComboBox()
@@ -52,14 +60,6 @@ Partial Class frmAgregarDeposito
         Me.txtObservaciones = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.cboTipoDeposito = New System.Windows.Forms.ComboBox()
-        Me.cBanco = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.cCuenta = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.cMonedaDeposito = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.cNumero = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.cMontoDeposito = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.cTipo = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.cTipo1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.cObservaciones = New System.Windows.Forms.DataGridViewTextBoxColumn()
         CType(Me.viewDepositos, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
@@ -132,6 +132,70 @@ Partial Class frmAgregarDeposito
         Me.viewDepositos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.viewDepositos.Size = New System.Drawing.Size(660, 160)
         Me.viewDepositos.TabIndex = 24
+        '
+        'cBanco
+        '
+        Me.cBanco.HeaderText = "Banco"
+        Me.cBanco.Name = "cBanco"
+        Me.cBanco.ReadOnly = True
+        Me.cBanco.Width = 63
+        '
+        'cCuenta
+        '
+        Me.cCuenta.HeaderText = "Cuenta"
+        Me.cCuenta.Name = "cCuenta"
+        Me.cCuenta.ReadOnly = True
+        Me.cCuenta.Width = 66
+        '
+        'cMonedaDeposito
+        '
+        Me.cMonedaDeposito.HeaderText = "Moneda"
+        Me.cMonedaDeposito.Name = "cMonedaDeposito"
+        Me.cMonedaDeposito.ReadOnly = True
+        Me.cMonedaDeposito.Width = 71
+        '
+        'cNumero
+        '
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        DataGridViewCellStyle1.Format = "N0"
+        Me.cNumero.DefaultCellStyle = DataGridViewCellStyle1
+        Me.cNumero.HeaderText = "Numero"
+        Me.cNumero.Name = "cNumero"
+        Me.cNumero.ReadOnly = True
+        Me.cNumero.Width = 69
+        '
+        'cMontoDeposito
+        '
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        DataGridViewCellStyle2.Format = "N2"
+        Me.cMontoDeposito.DefaultCellStyle = DataGridViewCellStyle2
+        Me.cMontoDeposito.HeaderText = "Monto"
+        Me.cMontoDeposito.Name = "cMontoDeposito"
+        Me.cMontoDeposito.ReadOnly = True
+        Me.cMontoDeposito.Width = 62
+        '
+        'cTipo
+        '
+        Me.cTipo.HeaderText = "Tipo"
+        Me.cTipo.Name = "cTipo"
+        Me.cTipo.ReadOnly = True
+        Me.cTipo.Width = 53
+        '
+        'cTipo1
+        '
+        Me.cTipo1.HeaderText = "Tipo"
+        Me.cTipo1.Name = "cTipo1"
+        Me.cTipo1.ReadOnly = True
+        Me.cTipo1.Visible = False
+        Me.cTipo1.Width = 53
+        '
+        'cObservaciones
+        '
+        Me.cObservaciones.HeaderText = "Observaciones"
+        Me.cObservaciones.Name = "cObservaciones"
+        Me.cObservaciones.ReadOnly = True
+        Me.cObservaciones.Visible = False
+        Me.cObservaciones.Width = 103
         '
         'Label3
         '
@@ -354,76 +418,12 @@ Partial Class frmAgregarDeposito
         Me.cboTipoDeposito.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cboTipoDeposito.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cboTipoDeposito.FormattingEnabled = True
-        Me.cboTipoDeposito.Items.AddRange(New Object() {"Deposito", "Sinpe", "Otros"})
+        Me.cboTipoDeposito.Items.AddRange(New Object() {"Deposito", "Sinpe", "PayPal", "Ema", "Otros"})
         Me.cboTipoDeposito.Location = New System.Drawing.Point(268, 117)
         Me.cboTipoDeposito.Margin = New System.Windows.Forms.Padding(2)
         Me.cboTipoDeposito.Name = "cboTipoDeposito"
         Me.cboTipoDeposito.Size = New System.Drawing.Size(144, 24)
         Me.cboTipoDeposito.TabIndex = 42
-        '
-        'cBanco
-        '
-        Me.cBanco.HeaderText = "Banco"
-        Me.cBanco.Name = "cBanco"
-        Me.cBanco.ReadOnly = True
-        Me.cBanco.Width = 63
-        '
-        'cCuenta
-        '
-        Me.cCuenta.HeaderText = "Cuenta"
-        Me.cCuenta.Name = "cCuenta"
-        Me.cCuenta.ReadOnly = True
-        Me.cCuenta.Width = 66
-        '
-        'cMonedaDeposito
-        '
-        Me.cMonedaDeposito.HeaderText = "Moneda"
-        Me.cMonedaDeposito.Name = "cMonedaDeposito"
-        Me.cMonedaDeposito.ReadOnly = True
-        Me.cMonedaDeposito.Width = 71
-        '
-        'cNumero
-        '
-        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        DataGridViewCellStyle1.Format = "N0"
-        Me.cNumero.DefaultCellStyle = DataGridViewCellStyle1
-        Me.cNumero.HeaderText = "Numero"
-        Me.cNumero.Name = "cNumero"
-        Me.cNumero.ReadOnly = True
-        Me.cNumero.Width = 69
-        '
-        'cMontoDeposito
-        '
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        DataGridViewCellStyle2.Format = "N2"
-        Me.cMontoDeposito.DefaultCellStyle = DataGridViewCellStyle2
-        Me.cMontoDeposito.HeaderText = "Monto"
-        Me.cMontoDeposito.Name = "cMontoDeposito"
-        Me.cMontoDeposito.ReadOnly = True
-        Me.cMontoDeposito.Width = 62
-        '
-        'cTipo
-        '
-        Me.cTipo.HeaderText = "Tipo"
-        Me.cTipo.Name = "cTipo"
-        Me.cTipo.ReadOnly = True
-        Me.cTipo.Width = 53
-        '
-        'cTipo1
-        '
-        Me.cTipo1.HeaderText = "Tipo"
-        Me.cTipo1.Name = "cTipo1"
-        Me.cTipo1.ReadOnly = True
-        Me.cTipo1.Visible = False
-        Me.cTipo1.Width = 53
-        '
-        'cObservaciones
-        '
-        Me.cObservaciones.HeaderText = "Observaciones"
-        Me.cObservaciones.Name = "cObservaciones"
-        Me.cObservaciones.ReadOnly = True
-        Me.cObservaciones.Visible = False
-        Me.cObservaciones.Width = 103
         '
         'frmAgregarDeposito
         '

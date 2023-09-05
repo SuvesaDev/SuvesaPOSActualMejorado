@@ -11,6 +11,7 @@ Public Class frmMensajeReceptor
     Private Mensaje As String
     Private MontoTotalImpuesto As Decimal
     Private TotalFactura As Decimal
+    Private Consecutivo As String
     Private NumeroCedulaReceptor As String
     Private NumeroConsecutivoReceptor As String
 
@@ -98,6 +99,7 @@ Public Class frmMensajeReceptor
             Me.Mensaje = ""
             Me.TotalFactura = xmlEnvia.GetElementsByTagName("TotalComprobante")(0).InnerText
             Me.NumeroConsecutivoReceptor = ""
+            Me.Consecutivo = xmlEnvia.GetElementsByTagName("NumeroConsecutivo")(0).InnerText
         Catch ex As Exception
             MsgBox(ex.Message, MsgBoxStyle.Exclamation, Me.Text)
             Exit Sub
@@ -120,6 +122,7 @@ Public Class frmMensajeReceptor
             Me.viewDatosXML.Rows.Add()
             Me.viewDatosXML.Item("cTipo", Me.Index).Value = Me.cboTipo.Text
             Me.viewDatosXML.Item("cClave", Me.Index).Value = Me.Clave
+            Me.viewDatosXML.Item("cConsecutivo", Me.Index).Value = Me.Consecutivo
             Me.viewDatosXML.Item("cNumeroCedulaEmisor", Me.Index).Value = Me.NumeroCedulaEmisor
             Me.viewDatosXML.Item("cNombre", Me.Index).Value = Me.Nombre
             Me.viewDatosXML.Item("cMensaje", Me.Index).Value = "ACEPTADO"

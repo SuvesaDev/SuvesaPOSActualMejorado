@@ -633,6 +633,7 @@ Public Class frmOpcionesVisualizacion
                     ReporteListaPrecios.SetParameterValue(2, Me.codigo.Text)    'para codigos de barra o id
                     CrystalReportsConexion.LoadReportViewer(rptViewer, ReporteListaPrecios)
 
+
                 Case 14
                     'HACK AQUI FALTA EL REPORTE DE ArticulosVendidos
                     Dim ArticulosVentas As New ArticulosVendidos

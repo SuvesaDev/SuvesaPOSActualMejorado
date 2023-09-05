@@ -16,8 +16,10 @@ Public Class frmArqueoDeposito
             Select Case Me.cboTipo.SelectedIndex + 1
                 Case 1 : strWhere += "And Tipo = 'deposito'"
                 Case 2 : strWhere += "And Tipo = 'sinpe'"
-                Case 3 : strWhere += "And Tipo = 'otros'"
-                Case 4 : strWhere += ""
+                Case 3 : strWhere += "And Tipo = 'PayPal'"
+                Case 4 : strWhere += "And Tipo = 'Ema'"
+                Case 5 : strWhere += "And Tipo = 'otros'"
+                Case Else : strWhere += ""
             End Select
 
 
@@ -36,7 +38,7 @@ Public Class frmArqueoDeposito
 
     Private Sub frmArqueoDeposito_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Me.cboEstados.SelectedIndex = 0
-        Me.cboTipo.SelectedIndex = 3
+        Me.cboTipo.SelectedIndex = 5
         Dim fecha As Date = CDate("01/" & Date.Now.Month & "/" & Date.Now.Year)
         Me.dtpDesde.Value = fecha
         Me.MostrarDatos()

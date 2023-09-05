@@ -41,7 +41,7 @@ Partial Class frmArqueoDeposito
         Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button1.Location = New System.Drawing.Point(581, 11)
-        Me.Button1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Button1.Margin = New System.Windows.Forms.Padding(2)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(138, 36)
         Me.Button1.TabIndex = 15
@@ -64,7 +64,7 @@ Partial Class frmArqueoDeposito
         Me.cboEstados.FormattingEnabled = True
         Me.cboEstados.Items.AddRange(New Object() {"Solo Pendientes", "Solo Depositados", "Todos"})
         Me.cboEstados.Location = New System.Drawing.Point(398, 28)
-        Me.cboEstados.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.cboEstados.Margin = New System.Windows.Forms.Padding(2)
         Me.cboEstados.Name = "cboEstados"
         Me.cboEstados.Size = New System.Drawing.Size(162, 21)
         Me.cboEstados.TabIndex = 13
@@ -82,7 +82,7 @@ Partial Class frmArqueoDeposito
         Me.viewDatos.BackgroundColor = System.Drawing.Color.White
         Me.viewDatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.viewDatos.Location = New System.Drawing.Point(9, 50)
-        Me.viewDatos.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.viewDatos.Margin = New System.Windows.Forms.Padding(2)
         Me.viewDatos.MultiSelect = False
         Me.viewDatos.Name = "viewDatos"
         Me.viewDatos.ReadOnly = True
@@ -116,7 +116,7 @@ Partial Class frmArqueoDeposito
         '
         Me.dtpHasta.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
         Me.dtpHasta.Location = New System.Drawing.Point(122, 28)
-        Me.dtpHasta.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.dtpHasta.Margin = New System.Windows.Forms.Padding(2)
         Me.dtpHasta.Name = "dtpHasta"
         Me.dtpHasta.Size = New System.Drawing.Size(103, 20)
         Me.dtpHasta.TabIndex = 9
@@ -125,7 +125,7 @@ Partial Class frmArqueoDeposito
         '
         Me.dtpDesde.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
         Me.dtpDesde.Location = New System.Drawing.Point(9, 28)
-        Me.dtpDesde.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.dtpDesde.Margin = New System.Windows.Forms.Padding(2)
         Me.dtpDesde.Name = "dtpDesde"
         Me.dtpDesde.Size = New System.Drawing.Size(103, 20)
         Me.dtpDesde.TabIndex = 8
@@ -144,9 +144,9 @@ Partial Class frmArqueoDeposito
         '
         Me.cboTipo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cboTipo.FormattingEnabled = True
-        Me.cboTipo.Items.AddRange(New Object() {"Solo Depositos", "Solo Sinpe", "Solo Otros", "Todos"})
+        Me.cboTipo.Items.AddRange(New Object() {"Solo Depositos", "Solo Sinpe", "Solo PayPal", "Solo Ema", "Solo Otros", "Todos"})
         Me.cboTipo.Location = New System.Drawing.Point(229, 28)
-        Me.cboTipo.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.cboTipo.Margin = New System.Windows.Forms.Padding(2)
         Me.cboTipo.Name = "cboTipo"
         Me.cboTipo.Size = New System.Drawing.Size(162, 21)
         Me.cboTipo.TabIndex = 16
@@ -178,7 +178,7 @@ Partial Class frmArqueoDeposito
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.dtpHasta)
         Me.Controls.Add(Me.dtpDesde)
-        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "frmArqueoDeposito"
         Me.Text = "frmArqueoDeposito"
         CType(Me.viewDatos, System.ComponentModel.ISupportInitialize).EndInit()

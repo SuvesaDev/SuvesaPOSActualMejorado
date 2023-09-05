@@ -196,10 +196,27 @@ Public Class FrmDatos_Cajeros
 #End Region
 
 #Region "Controles Funciones"
+    Private Function PuedeAbrirCaja(_IdUsuario As String) As Boolean
+        Dim dt As New System.Data.DataTable
+        cFunciones.Llenar_Tabla_Generico("select top 1 DATEDIFF(day,fecha,getdate()) as Dias, * from aperturacaja where Estado = 'M' and Cedula = '" & _IdUsuario & "' order by Fecha", dt, CadenaConexionSeePOS)
+        If dt.Rows.Count > 0 Then
+            If CDec(dt.Rows(0).Item("Dias")) >= 5 Then
+                Return False
+            Else
+                Return True
+            End If
+        End If
+        Return True
+    End Function
+
     Private Sub SimpleButton1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles SimpleButton1.Click
-        nombre_cajero = Me.Combo_nom_cajero.Text
-        cedula_cajero = Me.TxtIdentificacion.Text
-        Me.DialogResult = DialogResult.OK
+        If Me.PuedeAbrirCaja(Me.TxtIdentificacion.Text) Then
+            nombre_cajero = Me.Combo_nom_cajero.Text
+            cedula_cajero = Me.TxtIdentificacion.Text
+            Me.DialogResult = DialogResult.OK
+        Else
+            MsgBox("Tiene cierres pendinetes que superan el maximo de dias permitido." , MsgBoxStyle.Exclamation, "El usuario no puede abrir caja")
+        End If
     End Sub
 
     Private Sub SimpleButton2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles SimpleButton2.Click

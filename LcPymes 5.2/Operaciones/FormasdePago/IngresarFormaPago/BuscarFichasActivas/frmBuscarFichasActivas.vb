@@ -306,4 +306,7 @@ Public Class frmBuscarFichasActivas
         CapturarDatosFicha()
     End Sub
 
+    Private Sub viewFichasActivas_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles viewFichasActivas.CellContentClick
+
+    End Sub
 End Class

@@ -31,10 +31,11 @@ Public Class frmUtilidadVentasxRangoFechas
                             ResultadoAgente += "," & selected(i).Cells("cIdAgente").Value.ToString
                         End If
                     Next
+                    ResultadoAgente += ", 0"
                     ResultadoAgente += "]))"
                 End If                
             Else
-                ResultadoAgente = ""
+                ResultadoAgente = "not({spDesmenuzarFactura;1.cod_agente} in([0]))"
             End If
         End If
 
@@ -81,24 +82,26 @@ Public Class frmUtilidadVentasxRangoFechas
     End Function
 
 
+
     Private Sub btnMostrar_Click(sender As Object, e As EventArgs) Handles btnMostrar.Click
         Try
-            Dim huber As Boolean = False
-            If Me.SplitContainer1.Panel2Collapsed = True And Me.ckFiltrarAgente.Checked = True And Me.rbMostrarAgente.Checked = True Then
+            'Dim huber As Boolean = False
+            If Me.SplitContainer1.Panel2Collapsed = True And Me.ckFiltrarAgente.Checked = True Then
                 'mensual
-                For Each fila As DataGridViewRow In Me.viewAgentes.Rows
-                    If fila.Cells("cIdAgente").Value = 8 Then
-                        huber = fila.Cells("cMarcarAgente").Value
-                    End If
-                Next
+                'For Each fila As DataGridViewRow In Me.viewAgentes.Rows
+                '    If fila.Cells("cIdAgente").Value = 8 Then
+                '        huber = fila.Cells("cMarcarAgente").Value
+                '    End If
+                'Next
+
 
 
                 Dim Formula As String = Me.FormulaSeleccion
-                Dim rpt As New rptUlitidadesRangoFechaMensual
+                Dim rpt As New rptUlitidadesRangoFechaAgenteClinica 'rptUlitidadesRangoFechaMensual
                 rpt.SetParameterValue(0, Me.dtpDesde.Value)
                 rpt.SetParameterValue(1, Me.dtpHasta.Value)
-                rpt.SetParameterValue(2, huber)
-                rpt.SetParameterValue(3, Me.ckSoloServicios.Checked)
+                'rpt.SetParameterValue(2, huber)
+                rpt.SetParameterValue(2, Me.ckSoloServicios.Checked)
                 rpt.RecordSelectionFormula = Formula
                 CrystalReportsConexion.LoadReportViewer(CrystalReportViewer1, rpt, , CadenaConexionSeePOS)
                 'Me.CrystalReportViewer1.SelectionFormula = Formula

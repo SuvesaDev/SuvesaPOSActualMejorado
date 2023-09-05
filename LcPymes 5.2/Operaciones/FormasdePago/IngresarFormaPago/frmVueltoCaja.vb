@@ -15,9 +15,10 @@
     End Sub
 
     Private Sub LinkLabel1_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles LinkLabel1.LinkClicked
-        Dim Detalle As String = "Total por cobrar:      " & Pendiente & vbCrLf _
-                              & "Monto pagado:          " & Pagocon & vbCrLf _
-                              & "Vuelto:                " & Vuelto
+        Dim Detalle As String = "Total Cobrar:      " & Pendiente.ToString("N2") & vbCrLf _
+                              & "Total Pagado:      " & Pagocon.ToString("N2") & vbCrLf _
+                              & "Total Vuelto:      " & Vuelto.ToString("N2")
         MsgBox(Detalle, MsgBoxStyle.Information, Me.Text)
     End Sub
+
 End Class

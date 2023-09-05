@@ -1455,10 +1455,26 @@ Public Class FrmAjusteBodega
 
             registrar_existencias()
             actualizar_eliminados()
-            Imprimir(TextBoxId.Text)
+            'Imprimir(TextBoxId.Text)
+
+            Dim Reporte As New ReporteMovimientoBodega
+            Reporte.SetParameterValue(0, TextBoxId.Text)
+            Dim Visor As New frmVisorReportes
+            Visor.IdCotizacion = "0"
+            LoadReportViewer(Visor.rptViewer, Reporte, , CadenaConexionSeePOS)
+            Visor.rptViewer.Visible = True
+            Visor.ShowDialog()
+
             txtCodigo.Enabled = True
 
-            If MsgBox("Desea agregar un nuevo ajuste de Bodega...", MsgBoxStyle.YesNo) = MsgBoxResult.Yes Then NuevaEntrada() Else Limpiar()
+            If MsgBox("Desea agregar un nuevo ajuste de Bodega...", MsgBoxStyle.YesNo) = MsgBoxResult.Yes Then
+                Dim frm As New FrmAjusteBodega(Usua)
+                frm.MdiParent = Me.MdiParent
+                frm.Show()
+                Me.Close()
+            Else
+                Me.Close()
+            End If
 
         Catch ex As Exception
             MsgBox(ex.Message)

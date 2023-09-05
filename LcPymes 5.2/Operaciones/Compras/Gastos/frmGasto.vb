@@ -108,14 +108,14 @@ Public Class frmGasto
     <System.Diagnostics.DebuggerStepThrough()> Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmGasto))
-        Dim ColumnFilterInfo9 As DevExpress.XtraGrid.Columns.ColumnFilterInfo = New DevExpress.XtraGrid.Columns.ColumnFilterInfo()
-        Dim ColumnFilterInfo10 As DevExpress.XtraGrid.Columns.ColumnFilterInfo = New DevExpress.XtraGrid.Columns.ColumnFilterInfo()
-        Dim ColumnFilterInfo11 As DevExpress.XtraGrid.Columns.ColumnFilterInfo = New DevExpress.XtraGrid.Columns.ColumnFilterInfo()
-        Dim ColumnFilterInfo12 As DevExpress.XtraGrid.Columns.ColumnFilterInfo = New DevExpress.XtraGrid.Columns.ColumnFilterInfo()
-        Dim ColumnFilterInfo13 As DevExpress.XtraGrid.Columns.ColumnFilterInfo = New DevExpress.XtraGrid.Columns.ColumnFilterInfo()
-        Dim ColumnFilterInfo14 As DevExpress.XtraGrid.Columns.ColumnFilterInfo = New DevExpress.XtraGrid.Columns.ColumnFilterInfo()
-        Dim ColumnFilterInfo15 As DevExpress.XtraGrid.Columns.ColumnFilterInfo = New DevExpress.XtraGrid.Columns.ColumnFilterInfo()
-        Dim ColumnFilterInfo16 As DevExpress.XtraGrid.Columns.ColumnFilterInfo = New DevExpress.XtraGrid.Columns.ColumnFilterInfo()
+        Dim ColumnFilterInfo17 As DevExpress.XtraGrid.Columns.ColumnFilterInfo = New DevExpress.XtraGrid.Columns.ColumnFilterInfo()
+        Dim ColumnFilterInfo18 As DevExpress.XtraGrid.Columns.ColumnFilterInfo = New DevExpress.XtraGrid.Columns.ColumnFilterInfo()
+        Dim ColumnFilterInfo19 As DevExpress.XtraGrid.Columns.ColumnFilterInfo = New DevExpress.XtraGrid.Columns.ColumnFilterInfo()
+        Dim ColumnFilterInfo20 As DevExpress.XtraGrid.Columns.ColumnFilterInfo = New DevExpress.XtraGrid.Columns.ColumnFilterInfo()
+        Dim ColumnFilterInfo21 As DevExpress.XtraGrid.Columns.ColumnFilterInfo = New DevExpress.XtraGrid.Columns.ColumnFilterInfo()
+        Dim ColumnFilterInfo22 As DevExpress.XtraGrid.Columns.ColumnFilterInfo = New DevExpress.XtraGrid.Columns.ColumnFilterInfo()
+        Dim ColumnFilterInfo23 As DevExpress.XtraGrid.Columns.ColumnFilterInfo = New DevExpress.XtraGrid.Columns.ColumnFilterInfo()
+        Dim ColumnFilterInfo24 As DevExpress.XtraGrid.Columns.ColumnFilterInfo = New DevExpress.XtraGrid.Columns.ColumnFilterInfo()
         Me.Label46 = New System.Windows.Forms.Label()
         Me.ToolBar1 = New System.Windows.Forms.ToolBar()
         Me.tlbNuevo = New System.Windows.Forms.ToolBarButton()
@@ -202,7 +202,7 @@ Public Class frmGasto
         Me.Label46.ImeMode = System.Windows.Forms.ImeMode.NoControl
         Me.Label46.Location = New System.Drawing.Point(0, 0)
         Me.Label46.Name = "Label46"
-        Me.Label46.Size = New System.Drawing.Size(824, 32)
+        Me.Label46.Size = New System.Drawing.Size(1062, 32)
         Me.Label46.TabIndex = 109
         Me.Label46.Text = "Registro de Gastos"
         Me.Label46.TextAlign = System.Drawing.ContentAlignment.TopCenter
@@ -216,7 +216,7 @@ Public Class frmGasto
         Me.ToolBar1.DropDownArrows = True
         Me.ToolBar1.ImageList = Me.ImageList1
         Me.ToolBar1.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.ToolBar1.Location = New System.Drawing.Point(0, 344)
+        Me.ToolBar1.Location = New System.Drawing.Point(0, 598)
         Me.ToolBar1.Name = "ToolBar1"
         Me.ToolBar1.ShowToolTips = True
         Me.ToolBar1.Size = New System.Drawing.Size(1128, 58)
@@ -259,10 +259,9 @@ Public Class frmGasto
         '
         'ToolBarExcel
         '
-        Me.ToolBarExcel.ImageIndex = 5
+        Me.ToolBarExcel.ImageIndex = 11
         Me.ToolBarExcel.Name = "ToolBarExcel"
-        Me.ToolBarExcel.Text = "Exportar"
-        Me.ToolBarExcel.Visible = False
+        Me.ToolBarExcel.Text = "Importar"
         '
         'ToolBarButtonSeparador1
         '
@@ -310,6 +309,7 @@ Public Class frmGasto
         Me.ImageList1.Images.SetKeyName(8, "")
         Me.ImageList1.Images.SetKeyName(9, "")
         Me.ImageList1.Images.SetKeyName(10, "")
+        Me.ImageList1.Images.SetKeyName(11, "1555975_document_extension_file_format_xml_icon.png")
         '
         'Label2
         '
@@ -474,6 +474,9 @@ Public Class frmGasto
         '
         'GroupBox2
         '
+        Me.GroupBox2.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.GroupBox2.Controls.Add(Me.lblMoneda1)
         Me.GroupBox2.Controls.Add(Me.lblMoneda2)
         Me.GroupBox2.Controls.Add(Me.lblMoneda3)
@@ -503,14 +506,15 @@ Public Class frmGasto
         Me.GroupBox2.Controls.Add(Me.gridDetalle)
         Me.GroupBox2.Location = New System.Drawing.Point(7, 121)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(816, 216)
+        Me.GroupBox2.Size = New System.Drawing.Size(1047, 472)
         Me.GroupBox2.TabIndex = 121
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Detalle"
         '
         'lblMoneda1
         '
-        Me.lblMoneda1.Location = New System.Drawing.Point(16, 184)
+        Me.lblMoneda1.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.lblMoneda1.Location = New System.Drawing.Point(14, 440)
         Me.lblMoneda1.Name = "lblMoneda1"
         Me.lblMoneda1.Size = New System.Drawing.Size(24, 23)
         Me.lblMoneda1.TabIndex = 138
@@ -518,7 +522,8 @@ Public Class frmGasto
         '
         'lblMoneda2
         '
-        Me.lblMoneda2.Location = New System.Drawing.Point(168, 184)
+        Me.lblMoneda2.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.lblMoneda2.Location = New System.Drawing.Point(166, 446)
         Me.lblMoneda2.Name = "lblMoneda2"
         Me.lblMoneda2.Size = New System.Drawing.Size(24, 23)
         Me.lblMoneda2.TabIndex = 137
@@ -526,7 +531,8 @@ Public Class frmGasto
         '
         'lblMoneda3
         '
-        Me.lblMoneda3.Location = New System.Drawing.Point(336, 184)
+        Me.lblMoneda3.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.lblMoneda3.Location = New System.Drawing.Point(334, 446)
         Me.lblMoneda3.Name = "lblMoneda3"
         Me.lblMoneda3.Size = New System.Drawing.Size(24, 23)
         Me.lblMoneda3.TabIndex = 136
@@ -534,7 +540,8 @@ Public Class frmGasto
         '
         'lblMoneda4
         '
-        Me.lblMoneda4.Location = New System.Drawing.Point(576, 184)
+        Me.lblMoneda4.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.lblMoneda4.Location = New System.Drawing.Point(574, 446)
         Me.lblMoneda4.Name = "lblMoneda4"
         Me.lblMoneda4.Size = New System.Drawing.Size(24, 23)
         Me.lblMoneda4.TabIndex = 135
@@ -602,9 +609,10 @@ Public Class frmGasto
         '
         'txtTotal
         '
+        Me.txtTotal.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.txtTotal.BackColor = System.Drawing.Color.White
         Me.txtTotal.Enabled = False
-        Me.txtTotal.Location = New System.Drawing.Point(600, 184)
+        Me.txtTotal.Location = New System.Drawing.Point(598, 446)
         Me.txtTotal.Name = "txtTotal"
         Me.txtTotal.Size = New System.Drawing.Size(120, 20)
         Me.txtTotal.TabIndex = 129
@@ -612,10 +620,11 @@ Public Class frmGasto
         '
         'Label11
         '
+        Me.Label11.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.Label11.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label11.ForeColor = System.Drawing.Color.RoyalBlue
-        Me.Label11.Location = New System.Drawing.Point(600, 168)
+        Me.Label11.Location = New System.Drawing.Point(598, 430)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(120, 16)
         Me.Label11.TabIndex = 128
@@ -624,9 +633,10 @@ Public Class frmGasto
         '
         'txtTotalImpuesto
         '
+        Me.txtTotalImpuesto.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.txtTotalImpuesto.BackColor = System.Drawing.Color.White
         Me.txtTotalImpuesto.Enabled = False
-        Me.txtTotalImpuesto.Location = New System.Drawing.Point(360, 184)
+        Me.txtTotalImpuesto.Location = New System.Drawing.Point(358, 446)
         Me.txtTotalImpuesto.Name = "txtTotalImpuesto"
         Me.txtTotalImpuesto.Size = New System.Drawing.Size(120, 20)
         Me.txtTotalImpuesto.TabIndex = 127
@@ -634,10 +644,11 @@ Public Class frmGasto
         '
         'Label10
         '
+        Me.Label10.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.Label10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label10.ForeColor = System.Drawing.Color.RoyalBlue
-        Me.Label10.Location = New System.Drawing.Point(360, 168)
+        Me.Label10.Location = New System.Drawing.Point(358, 430)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(120, 16)
         Me.Label10.TabIndex = 126
@@ -646,9 +657,10 @@ Public Class frmGasto
         '
         'txtTotalDescuento
         '
+        Me.txtTotalDescuento.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.txtTotalDescuento.BackColor = System.Drawing.Color.White
         Me.txtTotalDescuento.Enabled = False
-        Me.txtTotalDescuento.Location = New System.Drawing.Point(192, 184)
+        Me.txtTotalDescuento.Location = New System.Drawing.Point(190, 446)
         Me.txtTotalDescuento.Name = "txtTotalDescuento"
         Me.txtTotalDescuento.Size = New System.Drawing.Size(120, 20)
         Me.txtTotalDescuento.TabIndex = 125
@@ -656,10 +668,11 @@ Public Class frmGasto
         '
         'Label9
         '
+        Me.Label9.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.Label9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label9.ForeColor = System.Drawing.Color.RoyalBlue
-        Me.Label9.Location = New System.Drawing.Point(192, 168)
+        Me.Label9.Location = New System.Drawing.Point(190, 430)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(120, 16)
         Me.Label9.TabIndex = 124
@@ -668,8 +681,9 @@ Public Class frmGasto
         '
         'txtDetalleSubTotal
         '
+        Me.txtDetalleSubTotal.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.txtDetalleSubTotal.Enabled = False
-        Me.txtDetalleSubTotal.Location = New System.Drawing.Point(40, 184)
+        Me.txtDetalleSubTotal.Location = New System.Drawing.Point(38, 446)
         Me.txtDetalleSubTotal.Name = "txtDetalleSubTotal"
         Me.txtDetalleSubTotal.Size = New System.Drawing.Size(120, 20)
         Me.txtDetalleSubTotal.TabIndex = 123
@@ -677,10 +691,11 @@ Public Class frmGasto
         '
         'Label8
         '
+        Me.Label8.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.Label8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label8.ForeColor = System.Drawing.Color.RoyalBlue
-        Me.Label8.Location = New System.Drawing.Point(40, 168)
+        Me.Label8.Location = New System.Drawing.Point(38, 430)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(120, 16)
         Me.Label8.TabIndex = 122
@@ -770,6 +785,9 @@ Public Class frmGasto
         '
         'gridDetalle
         '
+        Me.gridDetalle.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.gridDetalle.DataSource = Me.dtsGasto.GastoDetalle
         '
         '
@@ -778,7 +796,7 @@ Public Class frmGasto
         Me.gridDetalle.Location = New System.Drawing.Point(8, 64)
         Me.gridDetalle.MainView = Me.GridView1
         Me.gridDetalle.Name = "gridDetalle"
-        Me.gridDetalle.Size = New System.Drawing.Size(800, 96)
+        Me.gridDetalle.Size = New System.Drawing.Size(1031, 352)
         Me.gridDetalle.TabIndex = 0
         Me.gridDetalle.Text = "GridControl1"
         '
@@ -797,20 +815,30 @@ Public Class frmGasto
         'GridColumn1
         '
         Me.GridColumn1.Caption = "Cantidad"
+        Me.GridColumn1.DisplayFormat.FormatString = "#,#0.00"
+        Me.GridColumn1.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric
         Me.GridColumn1.FieldName = "Cantidad"
-        Me.GridColumn1.FilterInfo = ColumnFilterInfo9
+        Me.GridColumn1.FilterInfo = ColumnFilterInfo17
         Me.GridColumn1.Name = "GridColumn1"
+        Me.GridColumn1.Options = CType(((((((((DevExpress.XtraGrid.Columns.ColumnOptions.CanFiltered Or DevExpress.XtraGrid.Columns.ColumnOptions.CanMoved) _
+            Or DevExpress.XtraGrid.Columns.ColumnOptions.CanGrouped) _
+            Or DevExpress.XtraGrid.Columns.ColumnOptions.CanResized) _
+            Or DevExpress.XtraGrid.Columns.ColumnOptions.CanSorted) _
+            Or DevExpress.XtraGrid.Columns.ColumnOptions.[ReadOnly]) _
+            Or DevExpress.XtraGrid.Columns.ColumnOptions.CanFocused) _
+            Or DevExpress.XtraGrid.Columns.ColumnOptions.ShowInCustomizationForm) _
+            Or DevExpress.XtraGrid.Columns.ColumnOptions.NonEditable), DevExpress.XtraGrid.Columns.ColumnOptions)
         Me.GridColumn1.VisibleIndex = 0
-        Me.GridColumn1.Width = 112
+        Me.GridColumn1.Width = 102
         '
         'GridColumn2
         '
         Me.GridColumn2.Caption = "Descripcion"
         Me.GridColumn2.FieldName = "Descripcion"
-        Me.GridColumn2.FilterInfo = ColumnFilterInfo10
+        Me.GridColumn2.FilterInfo = ColumnFilterInfo18
         Me.GridColumn2.Name = "GridColumn2"
         Me.GridColumn2.VisibleIndex = 1
-        Me.GridColumn2.Width = 112
+        Me.GridColumn2.Width = 250
         '
         'GridColumn3
         '
@@ -818,10 +846,18 @@ Public Class frmGasto
         Me.GridColumn3.DisplayFormat.FormatString = "#,#0.00"
         Me.GridColumn3.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric
         Me.GridColumn3.FieldName = "Costo"
-        Me.GridColumn3.FilterInfo = ColumnFilterInfo11
+        Me.GridColumn3.FilterInfo = ColumnFilterInfo19
         Me.GridColumn3.Name = "GridColumn3"
+        Me.GridColumn3.Options = CType(((((((((DevExpress.XtraGrid.Columns.ColumnOptions.CanFiltered Or DevExpress.XtraGrid.Columns.ColumnOptions.CanMoved) _
+            Or DevExpress.XtraGrid.Columns.ColumnOptions.CanGrouped) _
+            Or DevExpress.XtraGrid.Columns.ColumnOptions.CanResized) _
+            Or DevExpress.XtraGrid.Columns.ColumnOptions.CanSorted) _
+            Or DevExpress.XtraGrid.Columns.ColumnOptions.[ReadOnly]) _
+            Or DevExpress.XtraGrid.Columns.ColumnOptions.CanFocused) _
+            Or DevExpress.XtraGrid.Columns.ColumnOptions.ShowInCustomizationForm) _
+            Or DevExpress.XtraGrid.Columns.ColumnOptions.NonEditable), DevExpress.XtraGrid.Columns.ColumnOptions)
         Me.GridColumn3.VisibleIndex = 2
-        Me.GridColumn3.Width = 112
+        Me.GridColumn3.Width = 76
         '
         'GridColumn4
         '
@@ -829,10 +865,18 @@ Public Class frmGasto
         Me.GridColumn4.DisplayFormat.FormatString = "#,#0.00"
         Me.GridColumn4.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric
         Me.GridColumn4.FieldName = "Descuento_P"
-        Me.GridColumn4.FilterInfo = ColumnFilterInfo12
+        Me.GridColumn4.FilterInfo = ColumnFilterInfo20
         Me.GridColumn4.Name = "GridColumn4"
+        Me.GridColumn4.Options = CType(((((((((DevExpress.XtraGrid.Columns.ColumnOptions.CanFiltered Or DevExpress.XtraGrid.Columns.ColumnOptions.CanMoved) _
+            Or DevExpress.XtraGrid.Columns.ColumnOptions.CanGrouped) _
+            Or DevExpress.XtraGrid.Columns.ColumnOptions.CanResized) _
+            Or DevExpress.XtraGrid.Columns.ColumnOptions.CanSorted) _
+            Or DevExpress.XtraGrid.Columns.ColumnOptions.[ReadOnly]) _
+            Or DevExpress.XtraGrid.Columns.ColumnOptions.CanFocused) _
+            Or DevExpress.XtraGrid.Columns.ColumnOptions.ShowInCustomizationForm) _
+            Or DevExpress.XtraGrid.Columns.ColumnOptions.NonEditable), DevExpress.XtraGrid.Columns.ColumnOptions)
         Me.GridColumn4.VisibleIndex = 3
-        Me.GridColumn4.Width = 108
+        Me.GridColumn4.Width = 73
         '
         'GridColumn8
         '
@@ -840,9 +884,18 @@ Public Class frmGasto
         Me.GridColumn8.DisplayFormat.FormatString = "#,#0.00"
         Me.GridColumn8.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric
         Me.GridColumn8.FieldName = "Impuesto_p"
-        Me.GridColumn8.FilterInfo = ColumnFilterInfo13
+        Me.GridColumn8.FilterInfo = ColumnFilterInfo21
         Me.GridColumn8.Name = "GridColumn8"
+        Me.GridColumn8.Options = CType(((((((((DevExpress.XtraGrid.Columns.ColumnOptions.CanFiltered Or DevExpress.XtraGrid.Columns.ColumnOptions.CanMoved) _
+            Or DevExpress.XtraGrid.Columns.ColumnOptions.CanGrouped) _
+            Or DevExpress.XtraGrid.Columns.ColumnOptions.CanResized) _
+            Or DevExpress.XtraGrid.Columns.ColumnOptions.CanSorted) _
+            Or DevExpress.XtraGrid.Columns.ColumnOptions.[ReadOnly]) _
+            Or DevExpress.XtraGrid.Columns.ColumnOptions.CanFocused) _
+            Or DevExpress.XtraGrid.Columns.ColumnOptions.ShowInCustomizationForm) _
+            Or DevExpress.XtraGrid.Columns.ColumnOptions.NonEditable), DevExpress.XtraGrid.Columns.ColumnOptions)
         Me.GridColumn8.VisibleIndex = 4
+        Me.GridColumn8.Width = 50
         '
         'GridColumn5
         '
@@ -850,35 +903,42 @@ Public Class frmGasto
         Me.GridColumn5.DisplayFormat.FormatString = "#,#0.00"
         Me.GridColumn5.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric
         Me.GridColumn5.FieldName = "Total"
-        Me.GridColumn5.FilterInfo = ColumnFilterInfo14
+        Me.GridColumn5.FilterInfo = ColumnFilterInfo22
         Me.GridColumn5.Name = "GridColumn5"
+        Me.GridColumn5.Options = CType(((((((((DevExpress.XtraGrid.Columns.ColumnOptions.CanFiltered Or DevExpress.XtraGrid.Columns.ColumnOptions.CanMoved) _
+            Or DevExpress.XtraGrid.Columns.ColumnOptions.CanGrouped) _
+            Or DevExpress.XtraGrid.Columns.ColumnOptions.CanResized) _
+            Or DevExpress.XtraGrid.Columns.ColumnOptions.CanSorted) _
+            Or DevExpress.XtraGrid.Columns.ColumnOptions.[ReadOnly]) _
+            Or DevExpress.XtraGrid.Columns.ColumnOptions.CanFocused) _
+            Or DevExpress.XtraGrid.Columns.ColumnOptions.ShowInCustomizationForm) _
+            Or DevExpress.XtraGrid.Columns.ColumnOptions.NonEditable), DevExpress.XtraGrid.Columns.ColumnOptions)
         Me.GridColumn5.VisibleIndex = 5
-        Me.GridColumn5.Width = 111
         '
         'GridColumn6
         '
         Me.GridColumn6.Caption = "Cuenta contable"
         Me.GridColumn6.FieldName = "CuentaContable"
-        Me.GridColumn6.FilterInfo = ColumnFilterInfo15
+        Me.GridColumn6.FilterInfo = ColumnFilterInfo23
         Me.GridColumn6.Name = "GridColumn6"
         Me.GridColumn6.VisibleIndex = 6
-        Me.GridColumn6.Width = 111
         '
         'GridColumn7
         '
         Me.GridColumn7.Caption = "Descripción"
         Me.GridColumn7.FieldName = "CuentaContableDescripcion"
-        Me.GridColumn7.FilterInfo = ColumnFilterInfo16
+        Me.GridColumn7.FilterInfo = ColumnFilterInfo24
         Me.GridColumn7.Name = "GridColumn7"
         Me.GridColumn7.VisibleIndex = 7
-        Me.GridColumn7.Width = 120
+        Me.GridColumn7.Width = 85
         '
         'Label17
         '
+        Me.Label17.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.Label17.BackColor = System.Drawing.Color.RoyalBlue
         Me.Label17.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label17.ForeColor = System.Drawing.Color.White
-        Me.Label17.Location = New System.Drawing.Point(480, 368)
+        Me.Label17.Location = New System.Drawing.Point(475, 632)
         Me.Label17.Name = "Label17"
         Me.Label17.Size = New System.Drawing.Size(76, 13)
         Me.Label17.TabIndex = 122
@@ -887,10 +947,11 @@ Public Class frmGasto
         '
         'txtClave
         '
+        Me.txtClave.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.txtClave.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtClave.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtClave.ForeColor = System.Drawing.Color.Blue
-        Me.txtClave.Location = New System.Drawing.Point(560, 368)
+        Me.txtClave.Location = New System.Drawing.Point(555, 632)
         Me.txtClave.Name = "txtClave"
         Me.txtClave.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.txtClave.Size = New System.Drawing.Size(72, 13)
@@ -898,10 +959,11 @@ Public Class frmGasto
         '
         'TxtNombreUsuario
         '
+        Me.TxtNombreUsuario.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.TxtNombreUsuario.BackColor = System.Drawing.SystemColors.Control
         Me.TxtNombreUsuario.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TxtNombreUsuario.ForeColor = System.Drawing.Color.Blue
-        Me.TxtNombreUsuario.Location = New System.Drawing.Point(480, 384)
+        Me.TxtNombreUsuario.Location = New System.Drawing.Point(475, 616)
         Me.TxtNombreUsuario.Name = "TxtNombreUsuario"
         Me.TxtNombreUsuario.Size = New System.Drawing.Size(152, 13)
         Me.TxtNombreUsuario.TabIndex = 126
@@ -909,7 +971,7 @@ Public Class frmGasto
         'frmGasto
         '
         Me.AutoScaleBaseSize = New System.Drawing.Size(5, 13)
-        Me.ClientSize = New System.Drawing.Size(824, 401)
+        Me.ClientSize = New System.Drawing.Size(1062, 656)
         Me.Controls.Add(Me.TxtNombreUsuario)
         Me.Controls.Add(Me.Label17)
         Me.Controls.Add(Me.txtClave)
@@ -917,8 +979,8 @@ Public Class frmGasto
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.ToolBar1)
         Me.Controls.Add(Me.Label46)
-        Me.MaximumSize = New System.Drawing.Size(840, 440)
         Me.Name = "frmGasto"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Registro de gastos"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
@@ -937,8 +999,9 @@ Public Class frmGasto
 #Region "Funciones GUI"
 
     Private Sub frmGasto_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-        cargar()
+        Cargar()
     End Sub
+
 
     Private Sub gridDetalle_KeyDown(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles gridDetalle.KeyDown
         If e.KeyCode = Keys.Delete Then
@@ -958,6 +1021,8 @@ Public Class frmGasto
             Case 3 : If PMU.Delete Then EliminarBD() Else MsgBox("No tiene permiso para eliminar o anular datos...", MsgBoxStyle.Information, "Atención...") : Exit Sub
             Case 4 : If PMU.Print Then Imprimir() Else MsgBox("No tiene permiso para imprimir los datos...", MsgBoxStyle.Information, "Atención...") : Exit Sub
 
+            Case 5 : Me.Cargar_XML_Factura()
+
             Case 8 : Me.CalcularTotales()
 
             Case 10 : Me.Close()
@@ -965,6 +1030,60 @@ Public Class frmGasto
         End Select
 
        
+    End Sub
+
+
+    Private Sub Cargar_XML_Factura()
+        Try
+            Dim frm As New frmImportarFacturaElectronicaGasto
+            If frm.ShowDialog = Windows.Forms.DialogResult.OK Then
+                '********************************************************************************************************************************
+                'Inica el detalle de la compra
+                '********************************************************************************************************************************
+
+                Me.dtsGasto.GastoDetalle.Clear()
+                For Each r As DataGridViewRow In frm.viewDatos.Rows
+
+                    Dim Cantidad As Decimal = CDec(r.Cells("cCantidad").Value) * CDec(r.Cells("cCantidadxPresentacion").Value)
+                    Dim PrecioUnidad As Decimal = (CDec(r.Cells("cCosto").Value) * CDec(r.Cells("cCantidad").Value)) / Cantidad
+                    If PrecioUnidad > 0 Then
+                        Dim MontoDescuento As Decimal = CDec(r.Cells("cMontoDescuento").Value)
+                        Dim descuento As Decimal = Math.Round(100 * (MontoDescuento / (PrecioUnidad * Cantidad)), 4)
+                        impuesto = CDec(r.Cells("cImpuesto").Value)
+
+                        Dim NuevaFila As DatasetGasto.GastoDetalleRow
+                        NuevaFila = Me.dtsGasto.GastoDetalle.NewGastoDetalleRow
+                        NuevaFila.IdCompra = -1
+                        NuevaFila.Descripcion = r.Cells("cDescripcion").Value
+                        NuevaFila.Cantidad = Cantidad
+                        NuevaFila.Descuento = MontoDescuento
+                        NuevaFila.Impuesto = (impuesto / 100) * ((PrecioUnidad * Cantidad) - NuevaFila.Descuento)
+                        NuevaFila.Impuesto_p = impuesto
+                        NuevaFila.Total = (PrecioUnidad * Cantidad) - NuevaFila.Descuento
+                        NuevaFila.CuentaContable = "1"
+                        NuevaFila.CuentaContableDescripcion = "GENERAL"
+                        NuevaFila.Descuento_P = descuento
+
+                        If impuesto = 0 Then
+                            NuevaFila.Gravado = 0
+                            NuevaFila.Exento = NuevaFila.Total
+                        Else
+                            NuevaFila.Gravado = NuevaFila.Total
+                            NuevaFila.Exento = 0
+                        End If
+
+                        NuevaFila.Costo = PrecioUnidad
+                        NuevaFila.NuevoCostoBase = NuevaFila.Total / Cantidad
+
+                        dtsGasto.GastoDetalle.AddGastoDetalleRow(NuevaFila)
+                    End If                   
+
+                Next
+                CalcularTotales()
+            End If
+        Catch ex As SystemException
+            MsgBox(ex.Message, MsgBoxStyle.Information, "Atención...")
+        End Try
     End Sub
 
 

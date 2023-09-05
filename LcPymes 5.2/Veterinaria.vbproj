@@ -100,6 +100,9 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="APIQVET">
+      <HintPath>..\..\..\..\..\..\a\Dll 45\APIQVET.dll</HintPath>
+    </Reference>
     <Reference Include="CrystalDecisions.CrystalReports.Design, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="CrystalDecisions.ReportSource, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
@@ -172,6 +175,14 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\Program Files (x86)\Common Files\DevExpress\.NET\DevExpress.XtraTreeList.Design.dll</HintPath>
     </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\a\Dll 45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\a\Dll 45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="GenCode128">
       <HintPath>..\..\..\Librerias\GenCode128.dll</HintPath>
     </Reference>
@@ -233,6 +244,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Import Include="APIQVET" />
     <Import Include="Microsoft.VisualBasic" />
     <Import Include="System" />
     <Import Include="System.Linq" />
@@ -710,6 +722,12 @@
     <EmbeddedResource Include="Operaciones\FormasdePago\IngresarFormaPago\BuscarFichasActivas\frmBuscarFichasActivas.resx">
       <DependentUpon>frmBuscarFichasActivas.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Operaciones\FormasdePago\IngresarFormaPago\frmBitacoraVuelto.resx">
+      <DependentUpon>frmBitacoraVuelto.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Operaciones\FormasdePago\IngresarFormaPago\frmFacturaElectronica.resx">
+      <DependentUpon>frmFacturaElectronica.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Operaciones\FormasdePago\IngresarFormaPago\frmFormaPagoTranferencia.resx">
       <DependentUpon>frmFormaPagoTranferencia.vb</DependentUpon>
     </EmbeddedResource>
@@ -772,6 +790,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Operaciones\GuanavetClinica\Albaranes\frmPrepagos.resx">
       <DependentUpon>frmPrepagos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Operaciones\GuanavetClinica\Albaranes\frmPruebaAlbaran.resx">
+      <DependentUpon>frmPruebaAlbaran.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Operaciones\GuanavetClinica\Albaranes\frmUsuarioFactura.resx">
       <DependentUpon>frmUsuarioFactura.vb</DependentUpon>
@@ -1162,6 +1183,13 @@
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>cxcVencidas.vb</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\Ventas\a Reportes de Ventas\detalleAperutra\frmDetalleApertura.resx">
+      <DependentUpon>frmDetalleApertura.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\Ventas\a Reportes de Ventas\detalleAperutra\rptDetallaApertura.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptDetallaApertura.vb</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reportes\Ventas\a Reportes de Ventas\frmComprasTrans.resx">
       <DependentUpon>frmComprasTrans.vb</DependentUpon>
     </EmbeddedResource>
@@ -1204,11 +1232,24 @@
     <EmbeddedResource Include="Reportes\Ventas\a Reportes de Ventas\frmReportePorcentajeVenta.resx">
       <DependentUpon>frmReportePorcentajeVenta.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\Ventas\a Reportes de Ventas\frmReporteVentasHoras.resx">
+      <DependentUpon>frmReporteVentasHoras.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reportes\Ventas\a Reportes de Ventas\frmReporteVentaSugerida.resx">
       <DependentUpon>frmReporteVentaSugerida.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\Ventas\a Reportes de Ventas\frmReporteVentasxFamilia.resx">
+      <DependentUpon>frmReporteVentasxFamilia.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reportes\Ventas\a Reportes de Ventas\frmVentasxProveedor.resx">
       <DependentUpon>frmVentasxProveedor.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\Ventas\a Reportes de Ventas\Informes\frmInformeMostrador.resx">
+      <DependentUpon>frmInformeMostrador.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\Ventas\a Reportes de Ventas\Informes\rptInformeMostrador.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptInformeMostrador.vb</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Reportes\Ventas\a Reportes de Ventas\rptArticulosComprados.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
@@ -1221,6 +1262,14 @@
     <EmbeddedResource Include="Reportes\Ventas\a Reportes de Ventas\rptCrecimientoCompras2.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>rptCrecimientoCompras2.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\Ventas\a Reportes de Ventas\rptFamiliaxFamilia.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptFamiliaxFamilia.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\Ventas\a Reportes de Ventas\rptFamiliaxFamilia2.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptFamiliaxFamilia2.vb</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Reportes\Ventas\a Reportes de Ventas\rptGraficoVetasMensual.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
@@ -1286,6 +1335,10 @@
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>rptVentaCompraArticuloResumen.vb</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\Ventas\a Reportes de Ventas\rptVentasHoras.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptVentasHoras.vb</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reportes\Ventas\a Reportes de Ventas\rptVentaSugerida.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>rptVentaSugerida.vb</LastGenOutput>
@@ -1321,6 +1374,14 @@
     <EmbeddedResource Include="Reportes\Ventas\Reporte de Peces\rptPecesMes.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>rptPecesMes.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\Ventas\Reporte de taller\Reporte_ventas_taller.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Reporte_ventas_taller.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\Ventas\Reporte de taller\Reporte_ventas_tallerClinica.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Reporte_ventas_tallerClinica.vb</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Reportes\Ventas\Reporte de taller\rptSerie.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
@@ -1372,6 +1433,10 @@
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>rptUlitidadesRangoFecha.vb</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\Ventas\utilidadxfactura\rptUlitidadesRangoFechaAgenteClinica.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptUlitidadesRangoFechaAgenteClinica.vb</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reportes\Ventas\utilidadxfactura\rptUlitidadesRangoFechaMensual.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>rptUlitidadesRangoFechaMensual.vb</LastGenOutput>
@@ -1411,6 +1476,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Utilidades\OBS\frmConsultasComprobantesReceptor.resx">
       <DependentUpon>frmConsultasComprobantesReceptor.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Utilidades\OBS\ImportarGasto\frmImportarFacturaElectronicaGasto.resx">
+      <DependentUpon>frmImportarFacturaElectronicaGasto.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Utilidades\OBS\Receptor\frmMensajeReceptor.resx">
       <DependentUpon>frmMensajeReceptor.vb</DependentUpon>
@@ -1492,8 +1560,14 @@
     <None Include="Inventarios\UnificarCodigos\UnificarCodigosPuntoVenta.xss">
       <DependentUpon>UnificarCodigosPuntoVenta.xsd</DependentUpon>
     </None>
+    <None Include="Operaciones\Compras\Abonos Proveedor\DataSetAbonosProveedor.xss">
+      <DependentUpon>DataSetAbonosProveedor.xsd</DependentUpon>
+    </None>
     <None Include="Operaciones\Compras\Compras\DataSetCompras.xss">
       <DependentUpon>DataSetCompras.xsd</DependentUpon>
+    </None>
+    <None Include="Operaciones\Compras\Gastos\DatasetGasto.xss">
+      <DependentUpon>DatasetGasto.xsd</DependentUpon>
     </None>
     <None Include="Operaciones\Compras\Orden Compra\DataSetOrden_Compras.xss">
       <DependentUpon>DataSetOrden_Compras.xsd</DependentUpon>
@@ -2622,10 +2696,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Reportes\Ventas\Reporte de taller\frm_reporte_taller.resx">
       <DependentUpon>frm_reporte_taller.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Reportes\Ventas\Reporte de taller\Reporte_ventas_taller.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>Reporte_ventas_taller.vb</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Reportes\Ventas\Reporte de tienda\frm_reporteTienda.resx">
       <DependentUpon>frm_reporteTienda.vb</DependentUpon>
@@ -4165,6 +4235,9 @@
     <Compile Include="Operaciones\Clinica\Visita\frmVisitaClinica.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Operaciones\Compras\Abonos Proveedor\DataSetAbonosProveedor.vb">
+      <DependentUpon>DataSetAbonosProveedor.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Operaciones\Compras\Abonos Proveedor\frmMovimientosCompra.Designer.vb">
       <DependentUpon>frmMovimientosCompra.vb</DependentUpon>
     </Compile>
@@ -4800,6 +4873,18 @@
     <Compile Include="Operaciones\FormasdePago\IngresarFormaPago\BuscarFichasActivas\frmBuscarFichasActivas.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Operaciones\FormasdePago\IngresarFormaPago\frmBitacoraVuelto.Designer.vb">
+      <DependentUpon>frmBitacoraVuelto.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Operaciones\FormasdePago\IngresarFormaPago\frmBitacoraVuelto.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Operaciones\FormasdePago\IngresarFormaPago\frmFacturaElectronica.Designer.vb">
+      <DependentUpon>frmFacturaElectronica.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Operaciones\FormasdePago\IngresarFormaPago\frmFacturaElectronica.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Operaciones\FormasdePago\IngresarFormaPago\frmFormaPagoTranferencia.Designer.vb">
       <DependentUpon>frmFormaPagoTranferencia.vb</DependentUpon>
     </Compile>
@@ -4925,6 +5010,12 @@
       <DependentUpon>frmPrepagos.vb</DependentUpon>
     </Compile>
     <Compile Include="Operaciones\GuanavetClinica\Albaranes\frmPrepagos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Operaciones\GuanavetClinica\Albaranes\frmPruebaAlbaran.Designer.vb">
+      <DependentUpon>frmPruebaAlbaran.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Operaciones\GuanavetClinica\Albaranes\frmPruebaAlbaran.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Operaciones\GuanavetClinica\Albaranes\frmUsuarioFactura.Designer.vb">
@@ -5679,6 +5770,18 @@
       <DependentUpon>cxcVencidas.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Reportes\Ventas\a Reportes de Ventas\detalleAperutra\frmDetalleApertura.Designer.vb">
+      <DependentUpon>frmDetalleApertura.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\Ventas\a Reportes de Ventas\detalleAperutra\frmDetalleApertura.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\Ventas\a Reportes de Ventas\detalleAperutra\rptDetallaApertura.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptDetallaApertura.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Reportes\Ventas\a Reportes de Ventas\frmComprasTrans.Designer.vb">
       <DependentUpon>frmComprasTrans.vb</DependentUpon>
     </Compile>
@@ -5769,10 +5872,22 @@
     <Compile Include="Reportes\Ventas\a Reportes de Ventas\frmReportesdeVenta.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Reportes\Ventas\a Reportes de Ventas\frmReporteVentasHoras.Designer.vb">
+      <DependentUpon>frmReporteVentasHoras.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\Ventas\a Reportes de Ventas\frmReporteVentasHoras.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Reportes\Ventas\a Reportes de Ventas\frmReporteVentaSugerida.Designer.vb">
       <DependentUpon>frmReporteVentaSugerida.vb</DependentUpon>
     </Compile>
     <Compile Include="Reportes\Ventas\a Reportes de Ventas\frmReporteVentaSugerida.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\Ventas\a Reportes de Ventas\frmReporteVentasxFamilia.Designer.vb">
+      <DependentUpon>frmReporteVentasxFamilia.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\Ventas\a Reportes de Ventas\frmReporteVentasxFamilia.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Reportes\Ventas\a Reportes de Ventas\frmVentasxProveedor.Designer.vb">
@@ -5780,6 +5895,18 @@
     </Compile>
     <Compile Include="Reportes\Ventas\a Reportes de Ventas\frmVentasxProveedor.vb">
       <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\Ventas\a Reportes de Ventas\Informes\frmInformeMostrador.Designer.vb">
+      <DependentUpon>frmInformeMostrador.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\Ventas\a Reportes de Ventas\Informes\frmInformeMostrador.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\Ventas\a Reportes de Ventas\Informes\rptInformeMostrador.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptInformeMostrador.rpt</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Reportes\Ventas\a Reportes de Ventas\rptArticulosComprados.vb">
       <AutoGen>True</AutoGen>
@@ -5797,6 +5924,18 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>rptCrecimientoCompras2.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reportes\Ventas\a Reportes de Ventas\rptFamiliaxFamilia.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptFamiliaxFamilia.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reportes\Ventas\a Reportes de Ventas\rptFamiliaxFamilia2.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptFamiliaxFamilia2.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Reportes\Ventas\a Reportes de Ventas\rptGraficoVetasMensual.vb">
@@ -5893,6 +6032,12 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>rptVentaCompraArticuloResumen.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reportes\Ventas\a Reportes de Ventas\rptVentasHoras.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptVentasHoras.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Reportes\Ventas\a Reportes de Ventas\rptVentaSugerida.vb">
@@ -6099,10 +6244,16 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Reportes\Ventas\Reporte de taller\Reporte_ventas_taller.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
       <DependentUpon>Reporte_ventas_taller.rpt</DependentUpon>
       <SubType>Component</SubType>
-      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Reportes\Ventas\Reporte de taller\Reporte_ventas_tallerClinica.vb">
       <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reporte_ventas_tallerClinica.rpt</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Reportes\Ventas\Reporte de taller\rptSerie.vb">
       <AutoGen>True</AutoGen>
@@ -6511,6 +6662,12 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>rptUlitidadesRangoFecha.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reportes\Ventas\utilidadxfactura\rptUlitidadesRangoFechaAgenteClinica.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptUlitidadesRangoFechaAgenteClinica.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Reportes\Ventas\utilidadxfactura\rptUlitidadesRangoFechaMensual.vb">
@@ -7462,6 +7619,12 @@
       <DependentUpon>frmConsultasComprobantesReceptor.vb</DependentUpon>
     </Compile>
     <Compile Include="Utilidades\OBS\frmConsultasComprobantesReceptor.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Utilidades\OBS\ImportarGasto\frmImportarFacturaElectronicaGasto.Designer.vb">
+      <DependentUpon>frmImportarFacturaElectronicaGasto.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Utilidades\OBS\ImportarGasto\frmImportarFacturaElectronicaGasto.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Utilidades\OBS\Receptor\ClasesJson.vb" />

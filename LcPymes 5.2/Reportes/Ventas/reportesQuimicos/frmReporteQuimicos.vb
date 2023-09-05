@@ -9,8 +9,6 @@
         VisorReporte.Show()
     End Sub
 
-
-
     Private Sub FrmReporte_clinica_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         FechaInicio.Value = Now.Date
         FechaFinal.Value = Now.Date

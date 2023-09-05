@@ -14,10 +14,30 @@ Public Class frmPrincipalCaja
         frm.Show()
     End Sub
 
+    Private Sub GuardarInforme(rpt As CrystalDecisions.CrystalReports.Engine.ReportDocument, Nombre As String)
+        Try
+            rpt.SaveAs(Nombre)
+        Catch ex As Exception
+        End Try
+    End Sub
+
+    Private Sub CrearArchivosImprecion()
+        Dim raiz As String = "C:\rpt\"
+        If IO.Directory.Exists(raiz) = False Then
+            IO.Directory.CreateDirectory(raiz)
+            GuardarInforme(New ReciboDineroPV, raiz & "ReciboDineroPV.rpt")
+            GuardarInforme(New Repoteapartado, raiz & "Repoteapartado.rpt")
+            GuardarInforme(New AbonoApartado, raiz & "AbonoApartado.rpt")
+            GuardarInforme(New Reporte_FacturaPVEs, raiz & "Reporte_FacturaPVEs.rpt")
+            GuardarInforme(New Reporte_AdelantosPVEs, raiz & "Reporte_AdelantosPVEs.rpt")
+        End If
+    End Sub
+
     Private Sub frmPrincipalCaja_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Me.Text = "Sistema Control de Caja (08052023)"
+        Me.Text = "Sistema Control de Caja (08/08/2023)"
         Me.lblUsuario.Text = Me.NombreUsuario
         Me.IniciaFormularioFicha()
+        Me.CrearArchivosImprecion()
     End Sub
 
     Private Sub ToolStripButton1_Click(sender As Object, e As EventArgs) Handles ToolStripButton1.Click
@@ -158,6 +178,20 @@ Public Class frmPrincipalCaja
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
 
     End Sub
+
+    Private Sub HistorialVueltosToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles HistorialVueltosToolStripMenuItem.Click
+        Dim dt As New DataTable
+        cFunciones.Llenar_Tabla_Generico("select u.Id_Usuario, u.Nombre, a.Num_Caja from aperturacaja a inner join Usuarios u on a.Cedula = u.Id_Usuario where u.Id_Usuario = '" & Id_Usuario & "' and a.Estado = 'A'", dt, CadenaConexionSeePOS)
+        If dt.Rows.Count > 0 Then
+            Dim frm As New frmBitacoraVuelto
+            frm.caja = dt.Rows(0).Item("Num_Caja")
+            frm.MdiParent = Me
+            frm.Show()
+        Else
+            MsgBox("Usuario no tiene caja abierta", MsgBoxStyle.Exclamation, Me.Text)
+        End If
+    End Sub
+
 End Class
 
 Public Class ImpresionCaja
@@ -244,11 +278,12 @@ Public Class ImpresionCaja
             Dim PrinterSettings1 As New Printing.PrinterSettings
             Dim PageSettings1 As New Printing.PageSettings
             Dim raiz As String = "C:\rpt\"
-            Dim recibodineroPVE As New ReciboDineroPV
+            Dim recibodineroPVE As New CrystalDecisions.CrystalReports.Engine.ReportDocument
             If IsClinica() = True Then _Caja = 1
 
             If IO.File.Exists(raiz & "recibodineroPVE.rpt") = True Then
                 recibodineroPVE.Load(raiz & "recibodineroPVE.rpt")
+                recibodineroPVE.Refresh()
             Else
                 recibodineroPVE = New ReciboDineroPV
                 recibodineroPVE.Refresh()
@@ -271,6 +306,10 @@ Public Class ImpresionCaja
             recibodineroPVE.SetParameterValue(0, _IdRecibo)
             recibodineroPVE.PrintToPrinter(PrinterSettings1, PageSettings1, False)
             recibodineroPVE.PrintToPrinter(PrinterSettings1, PageSettings1, False)
+
+            recibodineroPVE.Close()
+            recibodineroPVE.Dispose()
+            GC.Collect()
         Catch ex As Exception
             RegistrarLog(ex.StackTrace)
             MsgBox(ex.Message, MsgBoxStyle.Exclamation)
@@ -287,6 +326,7 @@ Public Class ImpresionCaja
 
             If IO.File.Exists(raiz & "apartadoPVE.rpt") = True Then
                 apartadoPVE.Load(raiz & "apartadoPVE.rpt")
+                apartadoPVE.Refresh()
             Else
                 apartadoPVE = New Repoteapartado
                 apartadoPVE.Refresh()
@@ -310,6 +350,10 @@ Public Class ImpresionCaja
             apartadoPVE.SetParameterValue(0, _IdApartado)
             apartadoPVE.PrintToPrinter(PrinterSettings1, PageSettings1, False)
             apartadoPVE.PrintToPrinter(PrinterSettings1, PageSettings1, False)
+
+            apartadoPVE.Close()
+            apartadoPVE.Dispose()
+            GC.Collect()
         Catch ex As Exception
             RegistrarLog(ex.StackTrace)
             MsgBox(ex.Message, MsgBoxStyle.Exclamation)
@@ -326,6 +370,7 @@ Public Class ImpresionCaja
 
             If IO.File.Exists(raiz & "abonoapartadoPVE.rpt") = True Then
                 abonoapartadoPVE.Load(raiz & "abonoapartadoPVE.rpt")
+                abonoapartadoPVE.Refresh()
             Else
                 abonoapartadoPVE = New AbonoApartado
                 abonoapartadoPVE.Refresh()
@@ -348,6 +393,9 @@ Public Class ImpresionCaja
             abonoapartadoPVE.SetParameterValue(0, _IdAbonoApartado)
             abonoapartadoPVE.PrintToPrinter(PrinterSettings1, PageSettings1, False)
             abonoapartadoPVE.PrintToPrinter(PrinterSettings1, PageSettings1, False)
+            abonoapartadoPVE.Close()
+            abonoapartadoPVE.Dispose()
+            GC.Collect()
         Catch ex As Exception
             RegistrarLog(ex.StackTrace)
             MsgBox(ex.Message, MsgBoxStyle.Exclamation)
@@ -355,35 +403,43 @@ Public Class ImpresionCaja
     End Sub
 
     Public Sub Imprimir_Tiquete_Rifa(ByVal _Caja As Integer, ByVal _IdFactura As String, _PuntoVenta As String)
-        Dim rptTiquete As New CrystalDecisions.CrystalReports.Engine.ReportDocument
-        rptTiquete = New rptTiqueteRifa2
+        Try
+            Dim rptTiquete As New CrystalDecisions.CrystalReports.Engine.ReportDocument
+            rptTiquete = New rptTiqueteRifa2
 
-        If _PuntoVenta.ToUpper = "SEEPOS" Or _PuntoVenta = "SANTACRUZ" Or _PuntoVenta = "CLINICA" Then
-            CrystalReportsConexion.LoadReportViewer(Nothing, rptTiquete, True, CadenaConexionSeePOS)
-        End If
-        If _PuntoVenta.ToUpper = "TALLER" Then
-            CrystalReportsConexion.LoadReportViewer(Nothing, rptTiquete, True, CadenaConexionTaller)
-        End If
-
-        Dim NombreImpresoraCupones As String = ""
-
-        If NombreImpresoraCupones = "" Then
-            If _Caja = 1 Then
-                NombreImpresoraCupones = Automatic_Printer_Dialog(3)
-                'NombreImpresoraCupones = Automatic_Printer_Dialog(5)
+            If _PuntoVenta.ToUpper = "SEEPOS" Or _PuntoVenta = "SANTACRUZ" Or _PuntoVenta = "CLINICA" Then
+                CrystalReportsConexion.LoadReportViewer(Nothing, rptTiquete, True, CadenaConexionSeePOS)
+            End If
+            If _PuntoVenta.ToUpper = "TALLER" Then
+                CrystalReportsConexion.LoadReportViewer(Nothing, rptTiquete, True, CadenaConexionTaller)
             End If
 
-            If _Caja = 2 Then
-                NombreImpresoraCupones = Automatic_Printer_Dialog(5)
+            Dim NombreImpresoraCupones As String = ""
+
+            If NombreImpresoraCupones = "" Then
+                If _Caja = 1 Then
+                    NombreImpresoraCupones = Automatic_Printer_Dialog(3)
+                    'NombreImpresoraCupones = Automatic_Printer_Dialog(5)
+                End If
+
+                If _Caja = 2 Then
+                    NombreImpresoraCupones = Automatic_Printer_Dialog(5)
+                End If
             End If
-        End If
 
-        Dim PrinterSettings1 As New Printing.PrinterSettings
-        Dim PageSettings1 As New Printing.PageSettings
-        PrinterSettings1.PrinterName = NombreImpresoraCupones
+            Dim PrinterSettings1 As New Printing.PrinterSettings
+            Dim PageSettings1 As New Printing.PageSettings
+            PrinterSettings1.PrinterName = NombreImpresoraCupones
 
-        rptTiquete.SetParameterValue(0, _IdFactura)
-        rptTiquete.PrintToPrinter(PrinterSettings1, PageSettings1, False)
+            rptTiquete.SetParameterValue(0, _IdFactura)
+            rptTiquete.PrintToPrinter(PrinterSettings1, PageSettings1, False)
+            rptTiquete.Close()
+            rptTiquete.Dispose()
+            GC.Collect()
+        Catch ex As Exception
+            RegistrarLog(ex.StackTrace)
+            MsgBox(ex.Message, MsgBoxStyle.Exclamation)
+        End Try
     End Sub
 
     Public Sub ImprimirFactura(ByVal Id_Factura As Double, ByVal PVE As Boolean, _PuntoVenta As String, ByVal Caja As Integer) 'MOD SAJ 01092006
@@ -396,6 +452,7 @@ Public Class ImpresionCaja
             Proceso = "cargando reporte"
             If IO.File.Exists(raiz & "facturaPVE.rpt") = True Then
                 facturaPVE.Load(raiz & "facturaPVE.rpt")
+                facturaPVE.Refresh()
             Else
                 facturaPVE = New Reporte_FacturaPVEs
                 facturaPVE.Refresh()
@@ -427,6 +484,7 @@ Public Class ImpresionCaja
             facturaPVE.PrintToPrinter(PrinterSettings1, PageSettings1, False)
             facturaPVE.Close()
             facturaPVE.Dispose()
+            GC.Collect()
         Catch ex As System.Exception
             RegistrarLog(ex.StackTrace)
             MsgBox(ex.InnerException.Message, MsgBoxStyle.Critical, "ImprimirFactura-" & Proceso)
@@ -443,6 +501,7 @@ Public Class ImpresionCaja
 
             If IO.File.Exists(raiz & "adelantoPVE.rpt") = True Then
                 adelantoPVE.Load(raiz & "adelantoPVE.rpt")
+                adelantoPVE.Refresh()
             Else
                 adelantoPVE = New Reporte_AdelantosPVEs
                 adelantoPVE.Refresh()
@@ -466,6 +525,9 @@ Public Class ImpresionCaja
             adelantoPVE.SetParameterValue(1, False)
             adelantoPVE.SetParameterValue(2, Id_Factura)
             adelantoPVE.PrintToPrinter(PrinterSettings1, PageSettings1, False)
+            adelantoPVE.Close()
+            adelantoPVE.Dispose()
+            GC.Collect()
         Catch ex As System.Exception
             RegistrarLog(ex.StackTrace)
             MsgBox(ex.Message, MsgBoxStyle.Information, "Atención...")

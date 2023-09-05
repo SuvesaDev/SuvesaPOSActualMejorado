@@ -118,7 +118,7 @@ Public Class Albaran
                                          Math.Round(MontoImpuesto, 4),
                                          Math.Round(SubTotalGravado, 4),
                                          Math.Round(SubTotalExcento, 4),
-                                         Math.Round(SubTotal, 4))
+                                         Math.Round(SubTotal, 4), row.Item("Descargar"))
                 Me.AlbaranDetalle.Add(Detalle)
             Next
 
@@ -221,7 +221,8 @@ Public Class Albaran
                               _PlazoCredito As Integer,
                               _NumCaja As Integer,
                               _Cod_Cliente As String,
-                              _NombreCliente As String) As Long
+                              _NombreCliente As String,
+                              _Doctor As Integer) As Long
 
         Dim Tipo As String = ""
         Select Case _TipoFactura
@@ -296,8 +297,8 @@ Public Class Albaran
                     db.SetParametro("@Taller", 0)
                     db.SetParametro("@Mascotas", 0)
                     db.SetParametro("@Num_Caja", _NumCaja)
-                    db.SetParametro("@cod_agente", 0)
-                    db.SetParametro("@agente", 0)
+                    db.SetParametro("@cod_agente", _Doctor)
+                    db.SetParametro("@agente", True)
                     db.SetParametro("@apartado", 0)
                     db.SetParametro("@Cod_Cliente", _Cod_Cliente)
                     db.SetParametro("@EnviadoMH", 0)
@@ -350,7 +351,8 @@ Public Class Albaran
                         db.SetParametro("@FechaEmision", Date.Now)
                         db.SetParametro("@PorcentajeCompra", 0)
                         db.SetParametro("@IdSerie", 0)
-                        db.Ejecutar("INSERT INTO [" & TablaDetalle & "] ([Id_Factura], [Codigo], [Descripcion], [Cantidad], [Precio_Costo], [Precio_Base], [Precio_Flete], [Precio_Otros], [Precio_Unit], [Descuento], [Monto_Descuento], [Impuesto], [Monto_Impuesto], [SubtotalGravado], [SubTotalExcento], [SubTotal], [Devoluciones], [Numero_Entrega], [Max_Descuento], [Tipo_Cambio_ValorCompra], [Cod_MonedaVenta], [CodArticulo], [Lote], [CantVet], [CantBod], [empaquetado], [nota_pantalla], [regalias], [id_bodega], [CostoReal], [IdTipoExoneracion], [NumeroDocumento], [FechaEmision], [PorcentajeCompra], [IdSerie]) VALUES (@Id_Factura, @Codigo, @Descripcion, @Cantidad, @Precio_Costo, @Precio_Base, @Precio_Flete, @Precio_Otros, @Precio_Unit, @Descuento, @Monto_Descuento, @Impuesto, @Monto_Impuesto, @SubtotalGravado, @SubTotalExcento, @SubTotal, @Devoluciones, @Numero_Entrega, @Max_Descuento, @Tipo_Cambio_ValorCompra, @Cod_MonedaVenta, @CodArticulo, @Lote, @CantVet, @CantBod, @empaquetado, @nota_pantalla, @regalias, @id_bodega, @CostoReal, @IdTipoExoneracion, @NumeroDocumento, @FechaEmision, @PorcentajeCompra, @IdSerie);", Data.CommandType.Text)
+                        db.SetParametro("@Descargar", Detalle.Descargar)
+                        db.Ejecutar("INSERT INTO [" & TablaDetalle & "] ([Id_Factura], [Codigo], [Descripcion], [Cantidad], [Precio_Costo], [Precio_Base], [Precio_Flete], [Precio_Otros], [Precio_Unit], [Descuento], [Monto_Descuento], [Impuesto], [Monto_Impuesto], [SubtotalGravado], [SubTotalExcento], [SubTotal], [Devoluciones], [Numero_Entrega], [Max_Descuento], [Tipo_Cambio_ValorCompra], [Cod_MonedaVenta], [CodArticulo], [Lote], [CantVet], [CantBod], [empaquetado], [nota_pantalla], [regalias], [id_bodega], [CostoReal], [IdTipoExoneracion], [NumeroDocumento], [FechaEmision], [PorcentajeCompra], [IdSerie], Descargar) VALUES (@Id_Factura, @Codigo, @Descripcion, @Cantidad, @Precio_Costo, @Precio_Base, @Precio_Flete, @Precio_Otros, @Precio_Unit, @Descuento, @Monto_Descuento, @Impuesto, @Monto_Impuesto, @SubtotalGravado, @SubTotalExcento, @SubTotal, @Devoluciones, @Numero_Entrega, @Max_Descuento, @Tipo_Cambio_ValorCompra, @Cod_MonedaVenta, @CodArticulo, @Lote, @CantVet, @CantBod, @empaquetado, @nota_pantalla, @regalias, @id_bodega, @CostoReal, @IdTipoExoneracion, @NumeroDocumento, @FechaEmision, @PorcentajeCompra, @IdSerie, @Descargar);", Data.CommandType.Text)
                     Next
                     '**************************************************************************  
                     'Marca los albaranes como facturados
@@ -393,8 +395,9 @@ Public Class AlbaranDetalle
     Property SubTotalGravado As Decimal
     Property SubTotalExcento As Decimal
     Property Subtotal As Decimal
+    Property Descargar As Decimal
 
-    Sub New(id As Long, id_albaran As Long, codigo As Long, codarticulo As String, descripcion As String, cantidad As Decimal, precio_costo As Decimal, precio_base As Decimal, precio_flete As Decimal, precio_otros As Decimal, precio_unit As Decimal, descuento As Decimal, monto_descuento As Decimal, impuesto As Decimal, monto_impuesto As Decimal, subtotalgravado As Decimal, subtotalexcento As Decimal, subtotal As Decimal)
+    Sub New(id As Long, id_albaran As Long, codigo As Long, codarticulo As String, descripcion As String, cantidad As Decimal, precio_costo As Decimal, precio_base As Decimal, precio_flete As Decimal, precio_otros As Decimal, precio_unit As Decimal, descuento As Decimal, monto_descuento As Decimal, impuesto As Decimal, monto_impuesto As Decimal, subtotalgravado As Decimal, subtotalexcento As Decimal, subtotal As Decimal, descargar As Boolean)
         Me.Id = id
         Me.Id_Albaran = id_albaran
         Me.Codigo = codigo
@@ -413,6 +416,7 @@ Public Class AlbaranDetalle
         Me.SubTotalGravado = subtotalgravado
         Me.SubTotalExcento = subtotalexcento
         Me.Subtotal = subtotal
+        Me.Descargar = descargar
     End Sub
 End Class
 

@@ -51,6 +51,7 @@ Partial Class frmPrincipalCaja
         Me.ToolStripSeparator9 = New System.Windows.Forms.ToolStripSeparator()
         Me.ToolStripButton6 = New System.Windows.Forms.ToolStripButton()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
+        Me.HistorialVueltosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -103,7 +104,7 @@ Partial Class frmPrincipalCaja
         'ToolStripButton3
         '
         Me.ToolStripButton3.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text
-        Me.ToolStripButton3.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CorteDeCajaToolStripMenuItem, Me.DepositosToolStripMenuItem, Me.ArqueoToolStripMenuItem, Me.ToolStripSeparator4, Me.FirmadoContadoToolStripMenuItem, Me.DetalleTallerToolStripMenuItem})
+        Me.ToolStripButton3.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CorteDeCajaToolStripMenuItem, Me.DepositosToolStripMenuItem, Me.ArqueoToolStripMenuItem, Me.ToolStripSeparator4, Me.FirmadoContadoToolStripMenuItem, Me.DetalleTallerToolStripMenuItem, Me.HistorialVueltosToolStripMenuItem})
         Me.ToolStripButton3.Image = CType(resources.GetObject("ToolStripButton3.Image"), System.Drawing.Image)
         Me.ToolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.ToolStripButton3.Name = "ToolStripButton3"
@@ -236,6 +237,12 @@ Partial Class frmPrincipalCaja
         'Timer1
         '
         '
+        'HistorialVueltosToolStripMenuItem
+        '
+        Me.HistorialVueltosToolStripMenuItem.Name = "HistorialVueltosToolStripMenuItem"
+        Me.HistorialVueltosToolStripMenuItem.Size = New System.Drawing.Size(261, 30)
+        Me.HistorialVueltosToolStripMenuItem.Text = "Historial Vueltos"
+        '
         'frmPrincipalCaja
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -280,4 +287,5 @@ Partial Class frmPrincipalCaja
     Friend WithEvents ToolStripSeparator9 As System.Windows.Forms.ToolStripSeparator
     Friend WithEvents ToolStripButton6 As System.Windows.Forms.ToolStripButton
     Friend WithEvents Timer1 As System.Windows.Forms.Timer
+    Friend WithEvents HistorialVueltosToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
 End Class

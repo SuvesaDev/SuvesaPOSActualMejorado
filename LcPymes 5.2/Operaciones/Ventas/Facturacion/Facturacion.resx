@@ -128,7 +128,7 @@
         AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
         LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
         ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAAAa
-        gwAAAk1TRnQBSQFMAgEBCwEAAdgBBQHYAQUBIAEAASABAAT/ARkBAAj/AUIBTQE2BwABNgMAASgDAAGA
+        gwAAAk1TRnQBSQFMAgEBCwEAAeABBQHgAQUBIAEAASABAAT/ARkBAAj/AUIBTQE2BwABNgMAASgDAAGA
         AwABYAMAAQEBAAEYBgABkN4AA8dCgwOQkAACAQFdAgEBbQIBAXQCAQF0AgEBbQIBAV0CAQFKQgBCPw8A
         A9IDLwM+AzwzOwM9AzcDTYcAAgEBdAIAAYYCAAGJAgABhQIAAYICAAGCAgABgAIAAYACAAGAAgABggIA
         AYICAQFtAgEBODkAASkCIAEoAh8BJwIeAScCHgEnAh0BJwIdAScCHAEmAhwBJgIbASYCGwElAhoBJQIa
@@ -694,7 +694,7 @@
     <value>288, 17</value>
   </metadata>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>117</value>
+    <value>172</value>
   </metadata>
   <metadata name="SqlConnection1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>411, 17</value>
@@ -845,7 +845,12 @@ SELECT cedula, nombre, observaciones, Telefono_01, telefono_02, fax_01, fax_02, 
     <value>False</value>
   </metadata>
   <data name="SqlInsertCommand2.CommandText" xml:space="preserve">
-    <value>INSERT INTO [Ventas_Detalle] ([Id_Factura], [Codigo], [Descripcion], [Cantidad], [Precio_Costo], [Precio_Base], [Precio_Flete], [Precio_Otros], [Precio_Unit], [Descuento], [Monto_Descuento], [Impuesto], [Monto_Impuesto], [SubtotalGravado], [SubTotalExcento], [SubTotal], [Devoluciones], [Numero_Entrega], [Max_Descuento], [Tipo_Cambio_ValorCompra], [Cod_MonedaVenta], [CodArticulo], [Lote], [CantVet], [CantBod], [empaquetado], [nota_pantalla], [regalias], [id_bodega], [CostoReal], [IdTipoExoneracion], [NumeroDocumento], [FechaEmision], [PorcentajeCompra], [IdSerie]) VALUES (@Id_Factura, @Codigo, @Descripcion, @Cantidad, @Precio_Costo, @Precio_Base, @Precio_Flete, @Precio_Otros, @Precio_Unit, @Descuento, @Monto_Descuento, @Impuesto, @Monto_Impuesto, @SubtotalGravado, @SubTotalExcento, @SubTotal, @Devoluciones, @Numero_Entrega, @Max_Descuento, @Tipo_Cambio_ValorCompra, @Cod_MonedaVenta, @CodArticulo, @Lote, @CantVet, @CantBod, @empaquetado, @nota_pantalla, @regalias, @id_bodega, @CostoReal, @IdTipoExoneracion, @NumeroDocumento, @FechaEmision, @PorcentajeCompra, @IdSerie);
+    <value>INSERT INTO Ventas_Detalle
+                         (Id_Factura, Codigo, Descripcion, Cantidad, Precio_Costo, Precio_Base, Precio_Flete, Precio_Otros, Precio_Unit, Descuento, Monto_Descuento, Impuesto, Monto_Impuesto, SubtotalGravado, SubTotalExcento, SubTotal, 
+                         Devoluciones, Numero_Entrega, Max_Descuento, Tipo_Cambio_ValorCompra, Cod_MonedaVenta, CodArticulo, Lote, CantVet, CantBod, empaquetado, nota_pantalla, regalias, id_bodega, CostoReal, IdTipoExoneracion, 
+                         NumeroDocumento, FechaEmision, PorcentajeCompra, IdSerie, Descargar)
+VALUES        (@Id_Factura,@Codigo,@Descripcion,@Cantidad,@Precio_Costo,@Precio_Base,@Precio_Flete,@Precio_Otros,@Precio_Unit,@Descuento,@Monto_Descuento,@Impuesto,@Monto_Impuesto,@SubtotalGravado,@SubTotalExcento,@SubTotal,@Devoluciones,@Numero_Entrega,@Max_Descuento,@Tipo_Cambio_ValorCompra,@Cod_MonedaVenta,@CodArticulo,@Lote,@CantVet,@CantBod,@empaquetado,@nota_pantalla,@regalias,@id_bodega,@CostoReal,@IdTipoExoneracion,@NumeroDocumento,@FechaEmision,@PorcentajeCompra,@IdSerie,
+                          1);  
 SELECT id_venta_detalle, Id_Factura, Codigo, Descripcion, Cantidad, Precio_Costo, Precio_Base, Precio_Flete, Precio_Otros, Precio_Unit, Descuento, Monto_Descuento, Impuesto, Monto_Impuesto, SubtotalGravado, SubTotalExcento, SubTotal, Devoluciones, Numero_Entrega, Max_Descuento, Tipo_Cambio_ValorCompra, Cod_MonedaVenta, CodArticulo, Lote, CantVet, CantBod, empaquetado, nota_pantalla, regalias, id_bodega, CostoReal, IdTipoExoneracion, NumeroDocumento, FechaEmision, PorcentajeCompra, IdSerie FROM Ventas_Detalle WHERE (id_venta_detalle = SCOPE_IDENTITY())</value>
   </data>
   <metadata name="SqlSelectCommand4.DesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">

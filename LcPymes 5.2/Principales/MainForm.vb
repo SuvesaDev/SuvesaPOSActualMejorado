@@ -231,6 +231,14 @@ Public Class MainForm
     Friend WithEvents MenuItem195 As System.Windows.Forms.MenuItem
     Friend WithEvents MenuItem196 As System.Windows.Forms.MenuItem
     Friend WithEvents MenuItem197 As System.Windows.Forms.MenuItem
+    Friend WithEvents MenuItem198 As System.Windows.Forms.MenuItem
+    Friend WithEvents MenuItem199 As System.Windows.Forms.MenuItem
+    Friend WithEvents MenuItem200 As System.Windows.Forms.MenuItem
+    Friend WithEvents MenuItem201 As System.Windows.Forms.MenuItem
+    Friend WithEvents MenuItem202 As System.Windows.Forms.MenuItem
+    Friend WithEvents btnGrooming As System.Windows.Forms.ToolStripButton
+    Friend WithEvents ToolStripSeparator11 As System.Windows.Forms.ToolStripSeparator
+    Friend WithEvents ToolStripButton3 As System.Windows.Forms.ToolStripButton
     Dim SistemaNormal As Boolean = False
 #End Region
 
@@ -548,6 +556,7 @@ Public Class MainForm
         Me.MenuItem136 = New System.Windows.Forms.MenuItem()
         Me.MenuItem137 = New System.Windows.Forms.MenuItem()
         Me.MenuItem150 = New System.Windows.Forms.MenuItem()
+        Me.MenuItem202 = New System.Windows.Forms.MenuItem()
         Me.MenuItem82 = New System.Windows.Forms.MenuItem()
         Me.mnPrestamosBodega = New System.Windows.Forms.MenuItem()
         Me.mnEmpresaPrestamos = New System.Windows.Forms.MenuItem()
@@ -629,6 +638,9 @@ Public Class MainForm
         Me.mnuReporteTopCliente = New System.Windows.Forms.MenuItem()
         Me.mnuReporteVentasUnificado = New System.Windows.Forms.MenuItem()
         Me.mnuReporteClientesmasCompran = New System.Windows.Forms.MenuItem()
+        Me.MenuItem199 = New System.Windows.Forms.MenuItem()
+        Me.MenuItem200 = New System.Windows.Forms.MenuItem()
+        Me.MenuItem201 = New System.Windows.Forms.MenuItem()
         Me.MenuItem74 = New System.Windows.Forms.MenuItem()
         Me.mnuReporteUtilidad = New System.Windows.Forms.MenuItem()
         Me.MenuItem93 = New System.Windows.Forms.MenuItem()
@@ -652,6 +664,7 @@ Public Class MainForm
         Me.MenuItem94 = New System.Windows.Forms.MenuItem()
         Me.MenuItem173 = New System.Windows.Forms.MenuItem()
         Me.MenuItem177 = New System.Windows.Forms.MenuItem()
+        Me.MenuItem198 = New System.Windows.Forms.MenuItem()
         Me.MenuItemReporteCompras = New System.Windows.Forms.MenuItem()
         Me.MenuItem174 = New System.Windows.Forms.MenuItem()
         Me.MenuItem142 = New System.Windows.Forms.MenuItem()
@@ -783,6 +796,9 @@ Public Class MainForm
         Me.ToolStripButton1 = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripSeparator10 = New System.Windows.Forms.ToolStripSeparator()
         Me.ToolStripButton2 = New System.Windows.Forms.ToolStripButton()
+        Me.ToolStripSeparator11 = New System.Windows.Forms.ToolStripSeparator()
+        Me.btnGrooming = New System.Windows.Forms.ToolStripButton()
+        Me.ToolStripButton3 = New System.Windows.Forms.ToolStripButton()
         Me.TimerSolicitudes = New System.Windows.Forms.Timer(Me.components)
         Me.PictureBoxFondo = New System.Windows.Forms.PictureBox()
         CType(Me.StatusBarPanel1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -1520,7 +1536,7 @@ Public Class MainForm
         Me.menuExtender.SetExtEnable(Me.MenuItemControlCaja, True)
         Me.menuExtender.SetImageIndex(Me.MenuItemControlCaja, -1)
         Me.MenuItemControlCaja.Index = 8
-        Me.MenuItemControlCaja.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.MenuItemOperacion_Caja_Apertura, Me.MenuItemOperacion_Caja_Arqueo, Me.MenuItemOperacion_Caja_Cierre, Me.MenuItem147, Me.MenuItemOperacion_Caja_OpcionesPago, Me.MenuItemOperacion_Caja_Movimientos, Me.MenuItem12, Me.MenuItem194, Me.MenuItem195, Me.MenuItem59, Me.MenuItem58, Me.MenuItem105, Me.mnVentasPendientes, Me.MenuItem38, Me.MenuItem56, Me.MenuItem196, Me.MenuItem126, Me.MenuItem136, Me.MenuItem137, Me.MenuItem150})
+        Me.MenuItemControlCaja.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.MenuItemOperacion_Caja_Apertura, Me.MenuItemOperacion_Caja_Arqueo, Me.MenuItemOperacion_Caja_Cierre, Me.MenuItem147, Me.MenuItemOperacion_Caja_OpcionesPago, Me.MenuItemOperacion_Caja_Movimientos, Me.MenuItem12, Me.MenuItem194, Me.MenuItem195, Me.MenuItem59, Me.MenuItem58, Me.MenuItem105, Me.mnVentasPendientes, Me.MenuItem38, Me.MenuItem56, Me.MenuItem196, Me.MenuItem126, Me.MenuItem136, Me.MenuItem137, Me.MenuItem150, Me.MenuItem202})
         Me.MenuItemControlCaja.OwnerDraw = True
         Me.MenuItemControlCaja.Text = "Control de Caja"
         '
@@ -1643,6 +1659,12 @@ Public Class MainForm
         Me.menuExtender.SetImageIndex(Me.MenuItem150, -1)
         Me.MenuItem150.Index = 19
         Me.MenuItem150.Text = "Saldos de Anticipos"
+        '
+        'MenuItem202
+        '
+        Me.menuExtender.SetImageIndex(Me.MenuItem202, -1)
+        Me.MenuItem202.Index = 20
+        Me.MenuItem202.Text = "Reporte Detalle de Caja"
         '
         'MenuItem82
         '
@@ -2133,7 +2155,7 @@ Public Class MainForm
         '
         Me.menuExtender.SetImageIndex(Me.MenuItemReporteVentas, -1)
         Me.MenuItemReporteVentas.Index = 0
-        Me.MenuItemReporteVentas.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.mnuReporteVentas, Me.mnuReporteGeneraeIndividualVentas, Me.mnuReporteArticulosCompradosCliente, Me.mnuReporteTopCliente, Me.mnuReporteVentasUnificado, Me.mnuReporteClientesmasCompran, Me.MenuItem74, Me.mnuReporteUtilidad, Me.MenuItem93, Me.mnuReporteDescuentosProveedor, Me.mnuReporteUtilidadArticulos, Me.mnuReporteD151Proveedores, Me.mnuReporteD151Clientes, Me.mnuReportePanelControl, Me.MenuItem135, Me.mnuReporteUtilidadFactura, Me.mnuReporteUtilidadFechas, Me.mnuReportePorcentajeVenta, Me.mnuReporteCierreCaja, Me.MenuItem166, Me.mnuReporteSinCabys, Me.mnuReporteMovimientoporArticulo, Me.mnuReporteCreditoRecuperacion, Me.mnuReporteDevolucionDetallado, Me.mnuReporteGraficoVentasAnuales, Me.mnuReporteCrecimientoCompras, Me.MenuItem94, Me.MenuItem173, Me.MenuItem177})
+        Me.MenuItemReporteVentas.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.mnuReporteVentas, Me.mnuReporteGeneraeIndividualVentas, Me.mnuReporteArticulosCompradosCliente, Me.mnuReporteTopCliente, Me.mnuReporteVentasUnificado, Me.mnuReporteClientesmasCompran, Me.MenuItem199, Me.MenuItem200, Me.MenuItem201, Me.MenuItem74, Me.mnuReporteUtilidad, Me.MenuItem93, Me.mnuReporteDescuentosProveedor, Me.mnuReporteUtilidadArticulos, Me.mnuReporteD151Proveedores, Me.mnuReporteD151Clientes, Me.mnuReportePanelControl, Me.MenuItem135, Me.mnuReporteUtilidadFactura, Me.mnuReporteUtilidadFechas, Me.mnuReportePorcentajeVenta, Me.mnuReporteCierreCaja, Me.MenuItem166, Me.mnuReporteSinCabys, Me.mnuReporteMovimientoporArticulo, Me.mnuReporteCreditoRecuperacion, Me.mnuReporteDevolucionDetallado, Me.mnuReporteGraficoVentasAnuales, Me.mnuReporteCrecimientoCompras, Me.MenuItem94, Me.MenuItem173, Me.MenuItem177, Me.MenuItem198})
         Me.MenuItemReporteVentas.Text = "Reportes de Ventas"
         '
         'mnuReporteVentas
@@ -2172,67 +2194,85 @@ Public Class MainForm
         Me.mnuReporteClientesmasCompran.Index = 5
         Me.mnuReporteClientesmasCompran.Text = "Reporte de Clientes que compran más"
         '
+        'MenuItem199
+        '
+        Me.menuExtender.SetImageIndex(Me.MenuItem199, -1)
+        Me.MenuItem199.Index = 6
+        Me.MenuItem199.Text = "Reporte de Ventas entre Horas"
+        '
+        'MenuItem200
+        '
+        Me.menuExtender.SetImageIndex(Me.MenuItem200, -1)
+        Me.MenuItem200.Index = 7
+        Me.MenuItem200.Text = "-"
+        '
+        'MenuItem201
+        '
+        Me.menuExtender.SetImageIndex(Me.MenuItem201, -1)
+        Me.MenuItem201.Index = 8
+        Me.MenuItem201.Text = "Informe de Mostrador"
+        '
         'MenuItem74
         '
         Me.menuExtender.SetImageIndex(Me.MenuItem74, -1)
-        Me.MenuItem74.Index = 6
+        Me.MenuItem74.Index = 9
         Me.MenuItem74.Text = "-"
         '
         'mnuReporteUtilidad
         '
         Me.menuExtender.SetImageIndex(Me.mnuReporteUtilidad, -1)
-        Me.mnuReporteUtilidad.Index = 7
+        Me.mnuReporteUtilidad.Index = 10
         Me.mnuReporteUtilidad.Text = "Reporte Utilidad "
         '
         'MenuItem93
         '
         Me.menuExtender.SetImageIndex(Me.MenuItem93, -1)
-        Me.MenuItem93.Index = 8
+        Me.MenuItem93.Index = 11
         Me.MenuItem93.Text = "-"
         '
         'mnuReporteDescuentosProveedor
         '
         Me.menuExtender.SetImageIndex(Me.mnuReporteDescuentosProveedor, -1)
-        Me.mnuReporteDescuentosProveedor.Index = 9
+        Me.mnuReporteDescuentosProveedor.Index = 12
         Me.mnuReporteDescuentosProveedor.Text = "Reporte Descuentos por Proveedor"
         '
         'mnuReporteUtilidadArticulos
         '
         Me.menuExtender.SetImageIndex(Me.mnuReporteUtilidadArticulos, -1)
-        Me.mnuReporteUtilidadArticulos.Index = 10
+        Me.mnuReporteUtilidadArticulos.Index = 13
         Me.mnuReporteUtilidadArticulos.Text = "Utilidad articulos"
         '
         'mnuReporteD151Proveedores
         '
         Me.menuExtender.SetImageIndex(Me.mnuReporteD151Proveedores, -1)
-        Me.mnuReporteD151Proveedores.Index = 11
+        Me.mnuReporteD151Proveedores.Index = 14
         Me.mnuReporteD151Proveedores.Text = "D151 Proveedores"
         '
         'mnuReporteD151Clientes
         '
         Me.menuExtender.SetImageIndex(Me.mnuReporteD151Clientes, -1)
-        Me.mnuReporteD151Clientes.Index = 12
+        Me.mnuReporteD151Clientes.Index = 15
         Me.mnuReporteD151Clientes.Text = "D151 Clientes"
         '
         'mnuReportePanelControl
         '
         Me.menuExtender.SetExtEnable(Me.mnuReportePanelControl, True)
         Me.menuExtender.SetImageIndex(Me.mnuReportePanelControl, -1)
-        Me.mnuReportePanelControl.Index = 13
+        Me.mnuReportePanelControl.Index = 16
         Me.mnuReportePanelControl.OwnerDraw = True
         Me.mnuReportePanelControl.Text = "Panel de Control"
         '
         'MenuItem135
         '
         Me.menuExtender.SetImageIndex(Me.MenuItem135, -1)
-        Me.MenuItem135.Index = 14
+        Me.MenuItem135.Index = 17
         Me.MenuItem135.Text = "-"
         '
         'mnuReporteUtilidadFactura
         '
         Me.menuExtender.SetExtEnable(Me.mnuReporteUtilidadFactura, True)
         Me.menuExtender.SetImageIndex(Me.mnuReporteUtilidadFactura, -1)
-        Me.mnuReporteUtilidadFactura.Index = 15
+        Me.mnuReporteUtilidadFactura.Index = 18
         Me.mnuReporteUtilidadFactura.OwnerDraw = True
         Me.mnuReporteUtilidadFactura.Text = "Utilidad por Factura"
         '
@@ -2240,7 +2280,7 @@ Public Class MainForm
         '
         Me.menuExtender.SetExtEnable(Me.mnuReporteUtilidadFechas, True)
         Me.menuExtender.SetImageIndex(Me.mnuReporteUtilidadFechas, -1)
-        Me.mnuReporteUtilidadFechas.Index = 16
+        Me.mnuReporteUtilidadFechas.Index = 19
         Me.mnuReporteUtilidadFechas.OwnerDraw = True
         Me.mnuReporteUtilidadFechas.Text = "Utilidad Ventas por Rango de Fecha"
         '
@@ -2248,75 +2288,81 @@ Public Class MainForm
         '
         Me.menuExtender.SetExtEnable(Me.mnuReportePorcentajeVenta, True)
         Me.menuExtender.SetImageIndex(Me.mnuReportePorcentajeVenta, -1)
-        Me.mnuReportePorcentajeVenta.Index = 17
+        Me.mnuReportePorcentajeVenta.Index = 20
         Me.mnuReportePorcentajeVenta.OwnerDraw = True
         Me.mnuReportePorcentajeVenta.Text = "Porcentaje de Ventas"
         '
         'mnuReporteCierreCaja
         '
         Me.menuExtender.SetImageIndex(Me.mnuReporteCierreCaja, -1)
-        Me.mnuReporteCierreCaja.Index = 18
+        Me.mnuReporteCierreCaja.Index = 21
         Me.mnuReporteCierreCaja.Text = "Reporte de Cierres de Caja"
         '
         'MenuItem166
         '
         Me.menuExtender.SetImageIndex(Me.MenuItem166, -1)
-        Me.MenuItem166.Index = 19
+        Me.MenuItem166.Index = 22
         Me.MenuItem166.Text = "-"
         '
         'mnuReporteSinCabys
         '
         Me.menuExtender.SetImageIndex(Me.mnuReporteSinCabys, -1)
-        Me.mnuReporteSinCabys.Index = 20
+        Me.mnuReporteSinCabys.Index = 23
         Me.mnuReporteSinCabys.Text = "Reporte sin Cabys"
         '
         'mnuReporteMovimientoporArticulo
         '
         Me.menuExtender.SetImageIndex(Me.mnuReporteMovimientoporArticulo, -1)
-        Me.mnuReporteMovimientoporArticulo.Index = 21
+        Me.mnuReporteMovimientoporArticulo.Index = 24
         Me.mnuReporteMovimientoporArticulo.Text = "Reporte Movimiento por Articulo"
         '
         'mnuReporteCreditoRecuperacion
         '
         Me.menuExtender.SetImageIndex(Me.mnuReporteCreditoRecuperacion, -1)
-        Me.mnuReporteCreditoRecuperacion.Index = 22
+        Me.mnuReporteCreditoRecuperacion.Index = 25
         Me.mnuReporteCreditoRecuperacion.Text = "Credito y Recuperacion"
         '
         'mnuReporteDevolucionDetallado
         '
         Me.menuExtender.SetImageIndex(Me.mnuReporteDevolucionDetallado, -1)
-        Me.mnuReporteDevolucionDetallado.Index = 23
+        Me.mnuReporteDevolucionDetallado.Index = 26
         Me.mnuReporteDevolucionDetallado.Text = "Reporte de Devoluciones Detallado"
         '
         'mnuReporteGraficoVentasAnuales
         '
         Me.menuExtender.SetImageIndex(Me.mnuReporteGraficoVentasAnuales, -1)
-        Me.mnuReporteGraficoVentasAnuales.Index = 24
+        Me.mnuReporteGraficoVentasAnuales.Index = 27
         Me.mnuReporteGraficoVentasAnuales.Text = "Grafico de Ventas Anuales"
         '
         'mnuReporteCrecimientoCompras
         '
         Me.menuExtender.SetImageIndex(Me.mnuReporteCrecimientoCompras, -1)
-        Me.mnuReporteCrecimientoCompras.Index = 25
+        Me.mnuReporteCrecimientoCompras.Index = 28
         Me.mnuReporteCrecimientoCompras.Text = "Crecimiento de Compras"
         '
         'MenuItem94
         '
         Me.menuExtender.SetImageIndex(Me.MenuItem94, -1)
-        Me.MenuItem94.Index = 26
+        Me.MenuItem94.Index = 29
         Me.MenuItem94.Text = "Rentabilidad Productos"
         '
         'MenuItem173
         '
         Me.menuExtender.SetImageIndex(Me.MenuItem173, -1)
-        Me.MenuItem173.Index = 27
+        Me.MenuItem173.Index = 30
         Me.MenuItem173.Text = "Ventas Articulos Sugeridos"
         '
         'MenuItem177
         '
         Me.menuExtender.SetImageIndex(Me.MenuItem177, -1)
-        Me.MenuItem177.Index = 28
+        Me.MenuItem177.Index = 31
         Me.MenuItem177.Text = "Clientes sin Ventas"
+        '
+        'MenuItem198
+        '
+        Me.menuExtender.SetImageIndex(Me.MenuItem198, -1)
+        Me.MenuItem198.Index = 32
+        Me.MenuItem198.Text = "Ventas por Familia"
         '
         'MenuItemReporteCompras
         '
@@ -2898,7 +2944,7 @@ Public Class MainForm
         'StatusBar1
         '
         Me.StatusBar1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.StatusBar1.Location = New System.Drawing.Point(0, 411)
+        Me.StatusBar1.Location = New System.Drawing.Point(0, 390)
         Me.StatusBar1.Name = "StatusBar1"
         Me.StatusBar1.Panels.AddRange(New System.Windows.Forms.StatusBarPanel() {Me.StatusBarPanel1, Me.StatusBarPanel4, Me.StatusBarPanel2, Me.StatusBarPanel3, Me.StatusBarPanel5, Me.sbpTCCompra, Me.sbpTCVenta, Me.sbpVersion})
         Me.StatusBar1.ShowPanels = True
@@ -2956,7 +3002,7 @@ Public Class MainForm
         'sbpVersion
         '
         Me.sbpVersion.Name = "sbpVersion"
-        Me.sbpVersion.Text = "*11Jul2023"
+        Me.sbpVersion.Text = "*31Ago2023"
         Me.sbpVersion.Width = 150
         '
         'ImageList1
@@ -3087,7 +3133,7 @@ Public Class MainForm
         Me.ToolStrip1.BackColor = System.Drawing.Color.White
         Me.ToolStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden
         Me.ToolStrip1.ImageScalingSize = New System.Drawing.Size(32, 32)
-        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.btnInventario, Me.ToolStripSeparator1, Me.btnProveedores, Me.ToolStripSeparator2, Me.btnClientesCredito, Me.ToolStripSeparator3, Me.btnCompras, Me.ToolStripSeparator4, Me.btnFacturacion, Me.ToolStripSeparator5, Me.btnPuntoVenta, Me.lblempresa, Me.ToolStripSeparator9, Me.btnNegativo, Me.ToolStripSeparator8, Me.btnCambio, Me.ToolStripSeparator6, Me.btnAlbaran, Me.ToolStripSeparator7, Me.ToolStripButton1, Me.ToolStripSeparator10, Me.ToolStripButton2})
+        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.btnInventario, Me.ToolStripSeparator1, Me.btnProveedores, Me.ToolStripSeparator2, Me.btnClientesCredito, Me.ToolStripSeparator3, Me.btnCompras, Me.ToolStripSeparator4, Me.btnFacturacion, Me.ToolStripSeparator5, Me.btnPuntoVenta, Me.lblempresa, Me.ToolStripSeparator9, Me.btnNegativo, Me.ToolStripSeparator8, Me.btnCambio, Me.ToolStripSeparator6, Me.btnAlbaran, Me.ToolStripSeparator7, Me.ToolStripButton1, Me.ToolStripSeparator10, Me.ToolStripButton2, Me.ToolStripSeparator11, Me.btnGrooming, Me.ToolStripButton3})
         Me.ToolStrip1.Location = New System.Drawing.Point(0, 0)
         Me.ToolStrip1.Name = "ToolStrip1"
         Me.ToolStrip1.Size = New System.Drawing.Size(1480, 48)
@@ -3242,6 +3288,30 @@ Public Class MainForm
         Me.ToolStripButton2.Size = New System.Drawing.Size(61, 45)
         Me.ToolStripButton2.Text = "Anticipos"
         '
+        'ToolStripSeparator11
+        '
+        Me.ToolStripSeparator11.Name = "ToolStripSeparator11"
+        Me.ToolStripSeparator11.Size = New System.Drawing.Size(6, 48)
+        '
+        'btnGrooming
+        '
+        Me.btnGrooming.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text
+        Me.btnGrooming.Image = CType(resources.GetObject("btnGrooming.Image"), System.Drawing.Image)
+        Me.btnGrooming.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.btnGrooming.Name = "btnGrooming"
+        Me.btnGrooming.Size = New System.Drawing.Size(65, 45)
+        Me.btnGrooming.Text = "Grooming"
+        '
+        'ToolStripButton3
+        '
+        Me.ToolStripButton3.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.ToolStripButton3.Image = CType(resources.GetObject("ToolStripButton3.Image"), System.Drawing.Image)
+        Me.ToolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.ToolStripButton3.Name = "ToolStripButton3"
+        Me.ToolStripButton3.Size = New System.Drawing.Size(36, 45)
+        Me.ToolStripButton3.Text = "ToolStripButton3"
+        Me.ToolStripButton3.Visible = False
+        '
         'TimerSolicitudes
         '
         Me.TimerSolicitudes.Interval = 120000
@@ -3261,7 +3331,7 @@ Public Class MainForm
         '
         Me.AutoScaleBaseSize = New System.Drawing.Size(5, 13)
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(1480, 425)
+        Me.ClientSize = New System.Drawing.Size(1480, 404)
         Me.Controls.Add(Me.ToolStrip1)
         Me.Controls.Add(Me.PictureBoxFondo)
         Me.Controls.Add(Me.StatusBar1)
@@ -3574,12 +3644,16 @@ Contador:
             Me.ToolStripButton1.Visible = True
             Me.ToolStripSeparator10.Visible = True
             Me.ToolStripButton2.Visible = True
+            Me.ToolStripSeparator11.Visible = True
+            Me.btnGrooming.Visible = True
         Else
             Me.btnAlbaran.Visible = False
             Me.ToolStripSeparator7.Visible = False
             Me.ToolStripButton1.Visible = False
             Me.ToolStripSeparator10.Visible = False
             Me.ToolStripButton2.Visible = False
+            Me.ToolStripSeparator11.Visible = False
+            Me.btnGrooming.Visible = False
         End If
 
         Me.ToolStripButton2.Visible = True
@@ -4658,12 +4732,16 @@ Contador:
             Me.ToolStripButton1.Visible = True
             Me.ToolStripSeparator10.Visible = True
             Me.ToolStripButton2.Visible = True
+            Me.ToolStripSeparator11.Visible = True
+            Me.btnGrooming.Visible = True
         Else
             Me.btnAlbaran.Visible = False
             Me.ToolStripSeparator7.Visible = False
             Me.ToolStripButton1.Visible = False
             Me.ToolStripSeparator10.Visible = False
             Me.ToolStripButton2.Visible = False
+            Me.ToolStripSeparator11.Visible = False
+            Me.btnGrooming.Visible = False
         End If
 
     End Sub
@@ -4677,7 +4755,6 @@ Contador:
     End Sub
 
     Private Sub MenuItem76_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MenuItem76.Click
-
         If CadenaConexionSeePOS.IndexOf("192.168.0.2") > 0 Then
             'el servidor de super vet liberia
             Dim frm As New frmEtiquetarGuanavet
@@ -5592,6 +5669,42 @@ Contador:
         frm.ShowDialog()
     End Sub
 
+    Private Sub MenuItem198_Click(sender As Object, e As EventArgs) Handles MenuItem198.Click
+        Dim frm As New frmReporteVentasxFamilia
+        frm.MdiParent = Me
+        frm.Show()
+    End Sub
+
+    Private Sub MenuItem199_Click(sender As Object, e As EventArgs) Handles MenuItem199.Click
+        Dim frm As New frmReporteVentasHoras
+        frm.MdiParent = Me
+        frm.Show()
+    End Sub
+
+    Private Sub MenuItem201_Click(sender As Object, e As EventArgs) Handles MenuItem201.Click
+        Dim frm As New frmInformeMostrador
+        frm.MdiParent = Me
+        frm.Show()
+    End Sub
+
+    Private Sub MenuItem202_Click(sender As Object, e As EventArgs) Handles MenuItem202.Click
+        Dim frm As New frmDetalleApertura
+        frm.MdiParent = Me
+        frm.Show()
+    End Sub
+
+    Private Sub btnGrooming_Click(sender As Object, e As EventArgs) Handles btnGrooming.Click
+        Dim frm As New frm_reporte_taller
+        frm.MdiParent = Me
+        frm.Groomming = True
+        frm.Show()
+    End Sub
+
+    Private Sub ToolStripButton3_Click(sender As Object, e As EventArgs) Handles ToolStripButton3.Click
+        Dim frm As New frmPruebaAlbaran
+        frm.MdiParent = Me
+        frm.Show()
+    End Sub
 End Class
 
 Public Module PuntoVentaActual

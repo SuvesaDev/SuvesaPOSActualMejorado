@@ -1516,22 +1516,6 @@ Public Class Facturacion
         Me.txtTotal.Size = New System.Drawing.Size(202, 41)
         Me.txtTotal.TabIndex = 29
         '
-        'Ck_Extranjero
-        '
-        Me.Ck_Extranjero.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        'Me.Ck_Extranjero.DataBindings.Add(New System.Windows.Forms.Binding("Checked", Me.DataSet_Facturaciones, "Ventas.Exonerar", True))
-        Me.Ck_Extranjero.EditValue = False
-        Me.Ck_Extranjero.Location = New System.Drawing.Point(118, 312)
-        Me.Ck_Extranjero.Name = "Ck_Extranjero"
-        '
-        '
-        '
-        Me.Ck_Extranjero.Properties.Caption = "Extranjero"
-        Me.Ck_Extranjero.Properties.Enabled = True
-        Me.Ck_Extranjero.Properties.Style = New DevExpress.Utils.ViewStyle("ControlStyle", Nothing, New System.Drawing.Font("Trebuchet MS", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte)), "", DevExpress.Utils.StyleOptions.StyleEnabled, True, False, False, DevExpress.Utils.HorzAlignment.[Default], DevExpress.Utils.VertAlignment.Center, Nothing, System.Drawing.Color.Transparent, System.Drawing.Color.Red)
-        Me.Ck_Extranjero.Size = New System.Drawing.Size(90, 21)
-        Me.Ck_Extranjero.TabIndex = 192
-        '
         'Ck_Exonerar
         '
         Me.Ck_Exonerar.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
@@ -1547,6 +1531,20 @@ Public Class Facturacion
         Me.Ck_Exonerar.Properties.Style = New DevExpress.Utils.ViewStyle("ControlStyle", Nothing, New System.Drawing.Font("Trebuchet MS", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte)), "", DevExpress.Utils.StyleOptions.StyleEnabled, True, False, False, DevExpress.Utils.HorzAlignment.[Default], DevExpress.Utils.VertAlignment.Center, Nothing, System.Drawing.Color.Transparent, System.Drawing.Color.Red)
         Me.Ck_Exonerar.Size = New System.Drawing.Size(82, 21)
         Me.Ck_Exonerar.TabIndex = 192
+        '
+        'Ck_Extranjero
+        '
+        Me.Ck_Extranjero.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Ck_Extranjero.EditValue = False
+        Me.Ck_Extranjero.Location = New System.Drawing.Point(118, 312)
+        Me.Ck_Extranjero.Name = "Ck_Extranjero"
+        '
+        '
+        '
+        Me.Ck_Extranjero.Properties.Caption = "Extranjero"
+        Me.Ck_Extranjero.Properties.Style = New DevExpress.Utils.ViewStyle("ControlStyle", Nothing, New System.Drawing.Font("Trebuchet MS", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte)), "", DevExpress.Utils.StyleOptions.StyleEnabled, True, False, False, DevExpress.Utils.HorzAlignment.[Default], DevExpress.Utils.VertAlignment.Center, Nothing, System.Drawing.Color.Transparent, System.Drawing.Color.Red)
+        Me.Ck_Extranjero.Size = New System.Drawing.Size(90, 21)
+        Me.Ck_Extranjero.TabIndex = 192
         '
         'SimpleButton1
         '
@@ -2474,7 +2472,7 @@ Public Class Facturacion
         '
         'SqlConnection1
         '
-        Me.SqlConnection1.ConnectionString = "Data Source=.;Initial Catalog=seepos;Integrated Security=True"
+        Me.SqlConnection1.ConnectionString = "Data Source=guanaserver;Initial Catalog=clinica;Integrated Security=True"
         Me.SqlConnection1.FireInfoMessageEventOnUserErrors = False
         '
         'SqlSelectCommand3
@@ -2945,7 +2943,7 @@ Public Class Facturacion
         '
         'SqlSelectCommand2
         '
-        Me.SqlSelectCommand2.CommandText = "SELECT        Cedula, Nombre, Clave_Entrada, Clave_Interna, CambiarPrecio, Aplica" &
+        Me.SqlSelectCommand2.CommandText = "SELECT        Cedula, Nombre, Clave_Entrada, Clave_Interna, CambiarPrecio, Aplica" & _
     "r_Desc, Exist_Negativa, Porc_Desc, Porc_Precio" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "FROM            Usuarios"
         Me.SqlSelectCommand2.Connection = Me.SqlConnection1
         '
@@ -2983,7 +2981,7 @@ Public Class Facturacion
         '
         'SqlDeleteCommand2
         '
-        Me.SqlDeleteCommand2.CommandText = "DELETE FROM [Ventas_Detalle] WHERE (([id_venta_detalle] = @Original_id_venta_deta" &
+        Me.SqlDeleteCommand2.CommandText = "DELETE FROM [Ventas_Detalle] WHERE (([id_venta_detalle] = @Original_id_venta_deta" & _
     "lle))"
         Me.SqlDeleteCommand2.Connection = Me.SqlConnection1
         Me.SqlDeleteCommand2.Parameters.AddRange(New System.Data.SqlClient.SqlParameter() {New System.Data.SqlClient.SqlParameter("@Original_id_venta_detalle", System.Data.SqlDbType.BigInt, 0, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "id_venta_detalle", System.Data.DataRowVersion.Original, Nothing)})
@@ -2992,7 +2990,7 @@ Public Class Facturacion
         '
         Me.SqlInsertCommand2.CommandText = resources.GetString("SqlInsertCommand2.CommandText")
         Me.SqlInsertCommand2.Connection = Me.SqlConnection1
-        Me.SqlInsertCommand2.Parameters.AddRange(New System.Data.SqlClient.SqlParameter() {New System.Data.SqlClient.SqlParameter("@Id_Factura", System.Data.SqlDbType.BigInt, 0, "Id_Factura"), New System.Data.SqlClient.SqlParameter("@Codigo", System.Data.SqlDbType.BigInt, 0, "Codigo"), New System.Data.SqlClient.SqlParameter("@Descripcion", System.Data.SqlDbType.VarChar, 0, "Descripcion"), New System.Data.SqlClient.SqlParameter("@Cantidad", System.Data.SqlDbType.Float, 0, "Cantidad"), New System.Data.SqlClient.SqlParameter("@Precio_Costo", System.Data.SqlDbType.Float, 0, "Precio_Costo"), New System.Data.SqlClient.SqlParameter("@Precio_Base", System.Data.SqlDbType.Float, 0, "Precio_Base"), New System.Data.SqlClient.SqlParameter("@Precio_Flete", System.Data.SqlDbType.Float, 0, "Precio_Flete"), New System.Data.SqlClient.SqlParameter("@Precio_Otros", System.Data.SqlDbType.Float, 0, "Precio_Otros"), New System.Data.SqlClient.SqlParameter("@Precio_Unit", System.Data.SqlDbType.Float, 0, "Precio_Unit"), New System.Data.SqlClient.SqlParameter("@Descuento", System.Data.SqlDbType.Float, 0, "Descuento"), New System.Data.SqlClient.SqlParameter("@Monto_Descuento", System.Data.SqlDbType.Float, 0, "Monto_Descuento"), New System.Data.SqlClient.SqlParameter("@Impuesto", System.Data.SqlDbType.Float, 0, "Impuesto"), New System.Data.SqlClient.SqlParameter("@Monto_Impuesto", System.Data.SqlDbType.Float, 0, "Monto_Impuesto"), New System.Data.SqlClient.SqlParameter("@SubtotalGravado", System.Data.SqlDbType.Float, 0, "SubtotalGravado"), New System.Data.SqlClient.SqlParameter("@SubTotalExcento", System.Data.SqlDbType.Float, 0, "SubTotalExcento"), New System.Data.SqlClient.SqlParameter("@SubTotal", System.Data.SqlDbType.Float, 0, "SubTotal"), New System.Data.SqlClient.SqlParameter("@Devoluciones", System.Data.SqlDbType.Float, 0, "Devoluciones"), New System.Data.SqlClient.SqlParameter("@Numero_Entrega", System.Data.SqlDbType.Float, 0, "Numero_Entrega"), New System.Data.SqlClient.SqlParameter("@Max_Descuento", System.Data.SqlDbType.Float, 0, "Max_Descuento"), New System.Data.SqlClient.SqlParameter("@Tipo_Cambio_ValorCompra", System.Data.SqlDbType.Float, 0, "Tipo_Cambio_ValorCompra"), New System.Data.SqlClient.SqlParameter("@Cod_MonedaVenta", System.Data.SqlDbType.Int, 0, "Cod_MonedaVenta"), New System.Data.SqlClient.SqlParameter("@CodArticulo", System.Data.SqlDbType.VarChar, 0, "CodArticulo"), New System.Data.SqlClient.SqlParameter("@Lote", System.Data.SqlDbType.VarChar, 0, "Lote"), New System.Data.SqlClient.SqlParameter("@CantVet", System.Data.SqlDbType.Float, 0, "CantVet"), New System.Data.SqlClient.SqlParameter("@CantBod", System.Data.SqlDbType.Float, 0, "CantBod"), New System.Data.SqlClient.SqlParameter("@empaquetado", System.Data.SqlDbType.Bit, 0, "empaquetado"), New System.Data.SqlClient.SqlParameter("@nota_pantalla", System.Data.SqlDbType.VarChar, 0, "nota_pantalla"), New System.Data.SqlClient.SqlParameter("@regalias", System.Data.SqlDbType.Float, 0, "regalias"), New System.Data.SqlClient.SqlParameter("@id_bodega", System.Data.SqlDbType.BigInt, 0, "id_bodega"), New System.Data.SqlClient.SqlParameter("@CostoReal", System.Data.SqlDbType.Float, 0, "CostoReal"), New System.Data.SqlClient.SqlParameter("@IdTipoExoneracion", System.Data.SqlDbType.[Decimal], 0, System.Data.ParameterDirection.Input, False, CType(18, Byte), CType(0, Byte), "IdTipoExoneracion", System.Data.DataRowVersion.Current, Nothing), New System.Data.SqlClient.SqlParameter("@NumeroDocumento", System.Data.SqlDbType.VarChar, 0, "NumeroDocumento"), New System.Data.SqlClient.SqlParameter("@FechaEmision", System.Data.SqlDbType.DateTime, 0, "FechaEmision"), New System.Data.SqlClient.SqlParameter("@PorcentajeCompra", System.Data.SqlDbType.[Decimal], 0, System.Data.ParameterDirection.Input, False, CType(18, Byte), CType(0, Byte), "PorcentajeCompra", System.Data.DataRowVersion.Current, Nothing), New System.Data.SqlClient.SqlParameter("@IdSerie", System.Data.SqlDbType.BigInt, 0, "IdSerie")})
+        Me.SqlInsertCommand2.Parameters.AddRange(New System.Data.SqlClient.SqlParameter() {New System.Data.SqlClient.SqlParameter("@Id_Factura", System.Data.SqlDbType.BigInt, 8, "Id_Factura"), New System.Data.SqlClient.SqlParameter("@Codigo", System.Data.SqlDbType.BigInt, 8, "Codigo"), New System.Data.SqlClient.SqlParameter("@Descripcion", System.Data.SqlDbType.VarChar, 250, "Descripcion"), New System.Data.SqlClient.SqlParameter("@Cantidad", System.Data.SqlDbType.Float, 8, "Cantidad"), New System.Data.SqlClient.SqlParameter("@Precio_Costo", System.Data.SqlDbType.Float, 8, "Precio_Costo"), New System.Data.SqlClient.SqlParameter("@Precio_Base", System.Data.SqlDbType.Float, 8, "Precio_Base"), New System.Data.SqlClient.SqlParameter("@Precio_Flete", System.Data.SqlDbType.Float, 8, "Precio_Flete"), New System.Data.SqlClient.SqlParameter("@Precio_Otros", System.Data.SqlDbType.Float, 8, "Precio_Otros"), New System.Data.SqlClient.SqlParameter("@Precio_Unit", System.Data.SqlDbType.Float, 8, "Precio_Unit"), New System.Data.SqlClient.SqlParameter("@Descuento", System.Data.SqlDbType.Float, 8, "Descuento"), New System.Data.SqlClient.SqlParameter("@Monto_Descuento", System.Data.SqlDbType.Float, 8, "Monto_Descuento"), New System.Data.SqlClient.SqlParameter("@Impuesto", System.Data.SqlDbType.Float, 8, "Impuesto"), New System.Data.SqlClient.SqlParameter("@Monto_Impuesto", System.Data.SqlDbType.Float, 8, "Monto_Impuesto"), New System.Data.SqlClient.SqlParameter("@SubtotalGravado", System.Data.SqlDbType.Float, 8, "SubtotalGravado"), New System.Data.SqlClient.SqlParameter("@SubTotalExcento", System.Data.SqlDbType.Float, 8, "SubTotalExcento"), New System.Data.SqlClient.SqlParameter("@SubTotal", System.Data.SqlDbType.Float, 8, "SubTotal"), New System.Data.SqlClient.SqlParameter("@Devoluciones", System.Data.SqlDbType.Float, 8, "Devoluciones"), New System.Data.SqlClient.SqlParameter("@Numero_Entrega", System.Data.SqlDbType.Float, 8, "Numero_Entrega"), New System.Data.SqlClient.SqlParameter("@Max_Descuento", System.Data.SqlDbType.Float, 8, "Max_Descuento"), New System.Data.SqlClient.SqlParameter("@Tipo_Cambio_ValorCompra", System.Data.SqlDbType.Float, 8, "Tipo_Cambio_ValorCompra"), New System.Data.SqlClient.SqlParameter("@Cod_MonedaVenta", System.Data.SqlDbType.Int, 4, "Cod_MonedaVenta"), New System.Data.SqlClient.SqlParameter("@CodArticulo", System.Data.SqlDbType.VarChar, 250, "CodArticulo"), New System.Data.SqlClient.SqlParameter("@Lote", System.Data.SqlDbType.VarChar, 250, "Lote"), New System.Data.SqlClient.SqlParameter("@CantVet", System.Data.SqlDbType.Float, 8, "CantVet"), New System.Data.SqlClient.SqlParameter("@CantBod", System.Data.SqlDbType.Float, 8, "CantBod"), New System.Data.SqlClient.SqlParameter("@empaquetado", System.Data.SqlDbType.Bit, 1, "empaquetado"), New System.Data.SqlClient.SqlParameter("@nota_pantalla", System.Data.SqlDbType.VarChar, 250, "nota_pantalla"), New System.Data.SqlClient.SqlParameter("@regalias", System.Data.SqlDbType.Float, 8, "regalias"), New System.Data.SqlClient.SqlParameter("@id_bodega", System.Data.SqlDbType.BigInt, 8, "id_bodega"), New System.Data.SqlClient.SqlParameter("@CostoReal", System.Data.SqlDbType.Float, 8, "CostoReal"), New System.Data.SqlClient.SqlParameter("@IdTipoExoneracion", System.Data.SqlDbType.[Decimal], 9, System.Data.ParameterDirection.Input, False, CType(18, Byte), CType(0, Byte), "IdTipoExoneracion", System.Data.DataRowVersion.Current, Nothing), New System.Data.SqlClient.SqlParameter("@NumeroDocumento", System.Data.SqlDbType.VarChar, 100, "NumeroDocumento"), New System.Data.SqlClient.SqlParameter("@FechaEmision", System.Data.SqlDbType.DateTime, 8, "FechaEmision"), New System.Data.SqlClient.SqlParameter("@PorcentajeCompra", System.Data.SqlDbType.Float, 8, "PorcentajeCompra"), New System.Data.SqlClient.SqlParameter("@IdSerie", System.Data.SqlDbType.[Decimal], 9, System.Data.ParameterDirection.Input, False, CType(18, Byte), CType(0, Byte), "IdSerie", System.Data.DataRowVersion.Current, Nothing)})
         '
         'SqlSelectCommand4
         '
@@ -3015,7 +3013,7 @@ Public Class Facturacion
         '
         'SqlDeleteCommand4
         '
-        Me.SqlDeleteCommand4.CommandText = "DELETE FROM [Ventas] WHERE (([Num_Factura] = @Original_Num_Factura) AND ([Tipo] =" &
+        Me.SqlDeleteCommand4.CommandText = "DELETE FROM [Ventas] WHERE (([Num_Factura] = @Original_Num_Factura) AND ([Tipo] =" & _
     " @Original_Tipo) AND ([Num_Caja] = @Original_Num_Caja))"
         Me.SqlDeleteCommand4.Connection = Me.SqlConnection1
         Me.SqlDeleteCommand4.Parameters.AddRange(New System.Data.SqlClient.SqlParameter() {New System.Data.SqlClient.SqlParameter("@Original_Num_Factura", System.Data.SqlDbType.Float, 0, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "Num_Factura", System.Data.DataRowVersion.Original, Nothing), New System.Data.SqlClient.SqlParameter("@Original_Tipo", System.Data.SqlDbType.VarChar, 0, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "Tipo", System.Data.DataRowVersion.Original, Nothing), New System.Data.SqlClient.SqlParameter("@Original_Num_Caja", System.Data.SqlDbType.BigInt, 0, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "Num_Caja", System.Data.DataRowVersion.Original, Nothing)})
@@ -6275,33 +6273,72 @@ Fin:
         Return True
     End Function
 
-    Private db As OBSoluciones.SQL.Transaccion
+    Private db As OBSoluciones.SQL.Sentencias
     Private Consecutivo As Integer
+
+
     Private Sub GuardarPedido()
-        Me.db = New OBSoluciones.SQL.Transaccion(CadenaConexionSeePOS)
         Me.Consecutivo = 0
         Try
             For Each item As PedidoEditado In Me.Pedido
                 Me.InsertarPedidoBodega(Date.Now, Me.Cedula_usuario, item.Codigo, item.Cantidad, "", item.PrecioUnid)
             Next
-            db.Commit()
             Me.Pedido.Clear()
         Catch ex As Exception
-            db.Rollback()
             MsgBox(ex.Message)
         End Try
     End Sub
 
+    Private Function Yapidio(_Codigo As String) As Boolean
+        Dim dt As New DataTable
+        cFunciones.Llenar_Tabla_Generico("select * from PedidoBodega where dbo.DateOnly(FechaSolicitud) = dbo.DateOnly('" & Date.Now & "') and Codigo = " & _Codigo, dt, CadenaConexionSeePOS)
+
+        If dt.Rows.Count > 0 Then
+            Yapidio = True
+        Else
+            Yapidio = False
+        End If
+
+    End Function
+
+    Private Function PuedePedir(_Codigo As String) As Boolean
+        Dim dt As New DataTable
+        cFunciones.Llenar_Tabla_Generico("select DescargaOtro, Consignacion, NoPedir from Inventario where Codigo = " & _Codigo, dt, CadenaConexionSeePOS)
+        If dt.Rows.Count > 0 Then
+            Dim NoPedir As Boolean = CBool(dt.Rows(0).Item("NoPedir"))
+
+            If NoPedir = False Then
+                Dim DescargaOtro As Boolean = CBool(dt.Rows(0).Item("DescargaOtro"))
+                Dim Consignacion As Boolean = CBool(dt.Rows(0).Item("Consignacion"))
+                Dim YaPidio As Boolean = Me.Yapidio(_Codigo)
+
+                If DescargaOtro = True Or Consignacion = True Or YaPidio = True Then
+                    Return False
+                Else
+                    Return True
+                End If
+            Else
+                Return False
+            End If
+
+        Else
+            Return True
+        End If
+    End Function
+
     Private Sub InsertarPedidoBodega(_FechaSolicitud As Date, _IdUsuarioSolicitud As String, _Codigo As String, _CantidadSolicitud As Decimal, _Observaciones As String, _PrecioUnid As Decimal)
-        db.SetParametro("@fechaSolicitud", _FechaSolicitud)
-        db.SetParametro("@IdUsuarioSolicitud", _IdUsuarioSolicitud)
-        db.SetParametro("@Codigo", _Codigo)
-        db.SetParametro("@CantidadSolicitud", _CantidadSolicitud)
-        db.AddParametrosSalidaInt("@Consecutivo", Me.Consecutivo)
-        db.SetParametro("@Observaciones", _Observaciones)
-        db.SetParametro("@PrecioUnid", _PrecioUnid)
-        db.SetParametro("@CantidadPuntos", _CantidadSolicitud)
-        db.Ejecutar("Insertar_PedidoBodega", Me.Consecutivo, 4)
+        If Me.PuedePedir(_Codigo) = True Then
+            Me.db = New OBSoluciones.SQL.Sentencias(CadenaConexionSeePOS)
+            db.AddParametro("@FechaSolicitud", _FechaSolicitud)
+            db.AddParametro("@IdUsuarioSolicitud", _IdUsuarioSolicitud)
+            db.AddParametro("@Codigo", _Codigo)
+            db.AddParametro("@CantidadSolicitud", _CantidadSolicitud)
+            db.AddParametro("@Consecutivo", Me.Consecutivo)
+            db.AddParametro("@Observaciones", _Observaciones)
+            db.AddParametro("@PrecioUnid", _PrecioUnid)
+            db.AddParametro("@CantidadPuntos", _CantidadSolicitud)
+            db.Ejecutar("Insertar_PedidoBodega")
+        End If
     End Sub
 
     Private Function pasaFicha() As Boolean
@@ -6498,7 +6535,7 @@ Fin:
         End If
 
         If Me.Ck_Exonerar.Checked And _PVE Then
-            Resultado = False        
+            Resultado = False
         End If
 
         If Resultado = False Then
@@ -6525,7 +6562,7 @@ Fin:
 
     Private Function IsMascotas() As Boolean
         Dim conexion As String = CadenaConexionSeePOS().ToLower
-        If conexion.IndexOf("mascota") > 0 Then
+        If conexion.IndexOf("mascota") > 0 Then 'Or conexion.IndexOf("clinica") > 0 Then
             Return True
         Else
             Return False
@@ -7928,7 +7965,7 @@ Fin:
                     If DataSet_Facturaciones.Ventas(0).Observaciones <> "" Then
                         Posicion = Posicion + 17
                         Dim Observaciones As RectangleF = New RectangleF(125, Posicion, 600, 15) : ev.Graphics.DrawString(DataSet_Facturaciones.Ventas(0).Observaciones, New System.Drawing.Font("Courier New", 10, FontStyle.Regular), Brushes.Black, Observaciones, New StringFormat)
-                    End If                    
+                    End If
                     ev.HasMorePages = False 'NO IMPRIME MAS PAGINAS
                 Else
                     ev.HasMorePages = True  'MANDA A IMPRIMIR OTRA PAGINA
@@ -9211,7 +9248,7 @@ Fin:
         Me.BindingContext(Me.DataSet_Facturaciones, "Ventas.VentasVentas_Detalle").Current("IdSerie") = 0
         Dim dtSeries As New DataTable
         Dim CodigoInventario As String = Me.txtCodArticulo.Text
-        cFunciones.Llenar_Tabla_Generico("select s.id, s.serie from Inventario i inner join Serie s on s.codigo = i.Codigo and s.vendido = 0 where i.serie = 1 and i.Codigo = " & CodigoInventario, dtSeries, CadenaConexionSeePOS)
+        cFunciones.Llenar_Tabla_Generico("select s.id, s.serie from Inventario i inner join Serie s on s.codigo = i.Codigo and s.vendido = 0 where i.Codigo = " & CodigoInventario, dtSeries, CadenaConexionSeePOS)
         If dtSeries.Rows.Count > 0 Then
             'el producto tiene serie
             Me.DetenerTiempo()
@@ -9412,7 +9449,8 @@ Fin:
             '*******************************************************************************************************************
             'hay que validar que el producto este en una bodega.
             '*******************************************************************************************************************
-            If Consignacion(txtCodArticulo.Text) = True Then
+            Dim TieneConsignacion As Boolean = Consignacion(txtCodArticulo.Text)
+            If TieneConsignacion = True Then
                 If CDbl(txtCantidad.Text) <= CDbl(txtExistencia.Text) Then
                     CantVet = txtCantidad.Text
                 Else
@@ -9445,6 +9483,10 @@ Fin:
             Calcular_totales()
             If BindingContext(DataSet_Facturaciones, "configuraciones").Current("regalias") Then
                 regalias()
+            End If
+
+            If (CDbl(txtExistencia.Text) - CDbl(txtCantidad.Text)) <= 1 And TieneConsignacion = False Then
+                Me.ckPedido.Checked = True
             End If
 
             If Me.ckPedido.Checked = True Then
@@ -9490,11 +9532,11 @@ Fin:
                         Dim cod_articulo As String = frm.viewDatos.Item("cCodigo", frm.viewDatos.CurrentRow.Index).Value
                         Me.txtCod_Articulo.Text = cod_articulo
                     End If
-                End If                
+                End If
 
             Catch ex As Exception
                 MsgBox(ex.Message, MsgBoxStyle.Critical, Text)
-            End Try            
+            End Try
 
 
         Catch ex As System.Exception

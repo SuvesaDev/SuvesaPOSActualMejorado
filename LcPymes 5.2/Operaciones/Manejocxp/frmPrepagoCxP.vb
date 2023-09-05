@@ -55,6 +55,13 @@ Public Class frmPrepagoCxP
                         Me.viewDatos.Item("cFecha", index).Value = r.Item("Fecha")
                         Me.viewDatos.Item("cFechaAbono", index).Value = r.Item("FechaPreabono")
                         Me.viewDatos.Item("cDocumento", index).Value = r.Item("DocumentoPreabono")
+
+                        If CDec(r.Item("PreAbono")) > 0 Then
+                            Me.viewDatos.Item("cAbono", index).Value = r.Item("PreAbono")
+                        Else
+                            Me.viewDatos.Item("cAbono", index).Value = r.Item("Saldo")
+                        End If
+
                         Me.viewDatos.Item("cTotal", index).Value = r.Item("Saldo")
                         index += 1
                     Next
@@ -90,7 +97,7 @@ Public Class frmPrepagoCxP
         Dim Total As Decimal = 0
         For Each row As DataGridViewRow In Me.viewDatos.Rows
             If row.Cells("cPagar").Value = True Then
-                Total += row.Cells("cTotal").Value
+                Total += row.Cells("cAbono").Value
             End If
         Next
         Me.lblTotal.Text = "Total: " & Total.ToString("N2")
@@ -115,18 +122,22 @@ Public Class frmPrepagoCxP
         Dim db As New OBSoluciones.SQL.Sentencias(CadenaConexionSeePOS)
         Dim Prepagar As String = "0"
         Dim Id_Compra As String = "0"
+        Dim Abono As Decimal = 0
         For Each i As DataGridViewRow In Me.viewDatos.Rows
-            Prepagar = IIf(i.Cells("cPagar").Value = True, 1, 0)
-            Id_Compra = i.Cells("cIdCompra").Value
-            If Prepagar = False Then
-                i.Cells("cFechaAbono").Value = ""
-                i.Cells("cDocumento").Value = ""
-                db.Ejecutar("Update Compras set FechaPreabono = null, DocumentoPreabono = '', Preabono = 0, Prepagada = 0 Where Id_Compra = " & Id_Compra, CommandType.Text)
-            Else
-                If i.Cells("cDocumento").Value = "" Then
-                    i.Cells("cFechaAbono").Value = Fecha
-                    i.Cells("cDocumento").Value = Documento
-                    db.Ejecutar("Update Compras set FechaPreabono = '" & Fecha & "', DocumentoPreabono= '" & Documento & "', PreAbono = " & 0 & ", Prepagada = " & Prepagar & " Where Id_Compra = " & Id_Compra, CommandType.Text)
+            If IsNumeric(i.Cells("cAbono").Value) Then
+                Prepagar = IIf(i.Cells("cPagar").Value = True, 1, 0)
+                Id_Compra = i.Cells("cIdCompra").Value
+                Abono = CDec(i.Cells("cAbono").Value)
+                If Prepagar = False Then
+                    i.Cells("cFechaAbono").Value = ""
+                    i.Cells("cDocumento").Value = ""
+                    db.Ejecutar("Update Compras set FechaPreabono = null, DocumentoPreabono = '', Preabono = 0, Prepagada = 0 Where Id_Compra = " & Id_Compra, CommandType.Text)
+                Else
+                    If i.Cells("cDocumento").Value = "" Then
+                        i.Cells("cFechaAbono").Value = Fecha
+                        i.Cells("cDocumento").Value = Documento
+                        db.Ejecutar("Update Compras set FechaPreabono = '" & Fecha & "', DocumentoPreabono= '" & Documento & "', PreAbono = " & Abono & ", Prepagada = " & Prepagar & " Where Id_Compra = " & Id_Compra, CommandType.Text)
+                    End If
                 End If
             End If
         Next

@@ -22,7 +22,7 @@ Partial Class frmConfirmarGenerarFacturas
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.viewDatos = New System.Windows.Forms.DataGridView()
         Me.cIdentificacion = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.cIdentificacion2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -35,6 +35,8 @@ Partial Class frmConfirmarGenerarFacturas
         Me.btnCancelar = New System.Windows.Forms.Button()
         Me.btnGenerarFacturas = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
+        Me.cboDoctorEncargado = New System.Windows.Forms.ComboBox()
+        Me.Label1 = New System.Windows.Forms.Label()
         CType(Me.viewDatos, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -51,15 +53,14 @@ Partial Class frmConfirmarGenerarFacturas
         Me.viewDatos.BackgroundColor = System.Drawing.Color.White
         Me.viewDatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.viewDatos.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.cIdentificacion, Me.cIdentificacion2, Me.cCliente, Me.cCaja, Me.cTipo, Me.cTotal, Me.cPlazo})
-        Me.viewDatos.Location = New System.Drawing.Point(4, 58)
-        Me.viewDatos.Margin = New System.Windows.Forms.Padding(4)
+        Me.viewDatos.Location = New System.Drawing.Point(3, 47)
         Me.viewDatos.MultiSelect = False
         Me.viewDatos.Name = "viewDatos"
         Me.viewDatos.RowHeadersVisible = False
         Me.viewDatos.RowHeadersWidth = 51
         Me.viewDatos.RowTemplate.Height = 27
         Me.viewDatos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.viewDatos.Size = New System.Drawing.Size(840, 279)
+        Me.viewDatos.Size = New System.Drawing.Size(630, 198)
         Me.viewDatos.TabIndex = 72
         '
         'cIdentificacion
@@ -101,9 +102,9 @@ Partial Class frmConfirmarGenerarFacturas
         '
         'cTotal
         '
-        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        DataGridViewCellStyle4.Format = "N2"
-        Me.cTotal.DefaultCellStyle = DataGridViewCellStyle4
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        DataGridViewCellStyle3.Format = "N2"
+        Me.cTotal.DefaultCellStyle = DataGridViewCellStyle3
         Me.cTotal.HeaderText = "Total"
         Me.cTotal.MinimumWidth = 6
         Me.cTotal.Name = "cTotal"
@@ -121,10 +122,9 @@ Partial Class frmConfirmarGenerarFacturas
         Me.Label13.BackColor = System.Drawing.Color.FromArgb(CType(CType(56, Byte), Integer), CType(CType(91, Byte), Integer), CType(CType(165, Byte), Integer))
         Me.Label13.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label13.ForeColor = System.Drawing.Color.White
-        Me.Label13.Location = New System.Drawing.Point(4, 10)
-        Me.Label13.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label13.Location = New System.Drawing.Point(3, 8)
         Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(840, 44)
+        Me.Label13.Size = New System.Drawing.Size(630, 36)
         Me.Label13.TabIndex = 74
         Me.Label13.Text = "Acontinuacion se generaran las siguientes facturas :"
         Me.Label13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -133,10 +133,9 @@ Partial Class frmConfirmarGenerarFacturas
         '
         Me.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnCancelar.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnCancelar.Location = New System.Drawing.Point(539, 345)
-        Me.btnCancelar.Margin = New System.Windows.Forms.Padding(4)
+        Me.btnCancelar.Location = New System.Drawing.Point(404, 280)
         Me.btnCancelar.Name = "btnCancelar"
-        Me.btnCancelar.Size = New System.Drawing.Size(305, 53)
+        Me.btnCancelar.Size = New System.Drawing.Size(229, 43)
         Me.btnCancelar.TabIndex = 85
         Me.btnCancelar.Text = "Cancelar"
         Me.btnCancelar.UseVisualStyleBackColor = True
@@ -147,10 +146,9 @@ Partial Class frmConfirmarGenerarFacturas
         Me.btnGenerarFacturas.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnGenerarFacturas.Image = Global.LcPymes_5._2.My.Resources.Resources.accept_button
         Me.btnGenerarFacturas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnGenerarFacturas.Location = New System.Drawing.Point(228, 345)
-        Me.btnGenerarFacturas.Margin = New System.Windows.Forms.Padding(4)
+        Me.btnGenerarFacturas.Location = New System.Drawing.Point(171, 280)
         Me.btnGenerarFacturas.Name = "btnGenerarFacturas"
-        Me.btnGenerarFacturas.Size = New System.Drawing.Size(305, 53)
+        Me.btnGenerarFacturas.Size = New System.Drawing.Size(229, 43)
         Me.btnGenerarFacturas.TabIndex = 84
         Me.btnGenerarFacturas.Text = "Generar Facturas"
         Me.btnGenerarFacturas.UseVisualStyleBackColor = True
@@ -159,26 +157,46 @@ Partial Class frmConfirmarGenerarFacturas
         '
         Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Location = New System.Drawing.Point(4, 345)
-        Me.Button1.Margin = New System.Windows.Forms.Padding(4)
+        Me.Button1.Location = New System.Drawing.Point(3, 280)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(139, 53)
+        Me.Button1.Size = New System.Drawing.Size(104, 43)
         Me.Button1.TabIndex = 86
         Me.Button1.Text = "Crear Cliente"
         Me.Button1.UseVisualStyleBackColor = True
         '
+        'cboDoctorEncargado
+        '
+        Me.cboDoctorEncargado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cboDoctorEncargado.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cboDoctorEncargado.FormattingEnabled = True
+        Me.cboDoctorEncargado.Location = New System.Drawing.Point(255, 251)
+        Me.cboDoctorEncargado.Name = "cboDoctorEncargado"
+        Me.cboDoctorEncargado.Size = New System.Drawing.Size(379, 24)
+        Me.cboDoctorEncargado.TabIndex = 87
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(168, 254)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(81, 16)
+        Me.Label1.TabIndex = 88
+        Me.Label1.Text = "Encargado :"
+        '
         'frmConfirmarGenerarFacturas
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(860, 402)
+        Me.ClientSize = New System.Drawing.Size(645, 327)
+        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.cboDoctorEncargado)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.btnCancelar)
         Me.Controls.Add(Me.btnGenerarFacturas)
         Me.Controls.Add(Me.Label13)
         Me.Controls.Add(Me.viewDatos)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
-        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "frmConfirmarGenerarFacturas"
@@ -186,6 +204,7 @@ Partial Class frmConfirmarGenerarFacturas
         Me.Text = "Confirmar Accion"
         CType(Me.viewDatos, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
     Friend WithEvents viewDatos As System.Windows.Forms.DataGridView
@@ -200,4 +219,6 @@ Partial Class frmConfirmarGenerarFacturas
     Friend WithEvents cTipo As DataGridViewComboBoxColumn
     Friend WithEvents cTotal As DataGridViewTextBoxColumn
     Friend WithEvents cPlazo As DataGridViewTextBoxColumn
+    Friend WithEvents cboDoctorEncargado As System.Windows.Forms.ComboBox
+    Friend WithEvents Label1 As System.Windows.Forms.Label
 End Class

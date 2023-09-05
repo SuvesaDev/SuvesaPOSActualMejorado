@@ -32,6 +32,7 @@
 
 Imports System.Net.Http
 Imports Newtonsoft.Json.Linq
+Imports System.Net
 
 Public Class Comunicacion
 
@@ -51,6 +52,11 @@ Public Class Comunicacion
 
             Dim http As HttpClient = New HttpClient
 
+            '*********************************************************************************
+            'TLS 1.2 Cambio de seguridad por Hacienda
+            System.Net.ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12 'Or SecurityProtocolType.Tls11 Or SecurityProtocolType.Tls
+            '*********************************************************************************
+
             http.DefaultRequestHeaders.Add("authorization", "Bearer " + TK)
 
             Dim response As HttpResponseMessage = http.GetAsync(URL_RECEPCION & "recepcion/" & claveConsultar).Result
@@ -58,12 +64,17 @@ Public Class Comunicacion
 
             Dim Localizacion = response.StatusCode
 
+
             jsonRespuesta = res.ToString
 
             Dim RH As RespuestaHacienda = Newtonsoft.Json.JsonConvert.DeserializeObject(Of RespuestaHacienda)(res)
 
             estadoFactura = RH.ind_estado
             statusCode = response.StatusCode
+
+            If RH.respuesta_xml <> "" Then
+                xmlRespuesta = Funciones.DecodeBase64ToXML(RH.respuesta_xml)
+            End If
 
             If estadoFactura = "rechazado" Then
                 Try
@@ -80,6 +91,30 @@ Public Class Comunicacion
         Catch ex As Exception
             Return False
         End Try
+    End Function
+
+End Class
+
+Public Class Funciones
+
+    Public Shared Function DecodeBase64ToXML(valor As String) As Xml.XmlDocument
+        Dim myBase64ret As Byte() = Convert.FromBase64String(valor)
+        Dim myStr As String = System.Text.Encoding.UTF8.GetString(myBase64ret)
+        Dim xmlDoc As New Xml.XmlDocument()
+        xmlDoc.LoadXml(myStr)
+        Return xmlDoc
+    End Function
+
+    Public Shared Function DecodeBase64ToString(valor As String) As String
+        Dim myBase64ret As Byte() = Convert.FromBase64String(valor)
+        Dim myStr As String = System.Text.Encoding.UTF8.GetString(myBase64ret)
+        Return myStr
+    End Function
+
+    Public Shared Function EncodeStrToBase64(valor As String) As String
+        Dim myByte As Byte() = System.Text.Encoding.UTF8.GetBytes(valor)
+        Dim myBase64 As String = Convert.ToBase64String(myByte)
+        Return myBase64
     End Function
 
 End Class

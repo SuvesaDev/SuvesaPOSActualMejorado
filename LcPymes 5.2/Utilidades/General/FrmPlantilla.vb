@@ -202,6 +202,7 @@ Public Class FrmPlantilla
             Try
                 BindingContext(DataSet, Tabla).EndCurrentEdit()
                 BindingContext(DataSet, Tabla).AddNew()
+
             Catch ex As Exception
                 System.Windows.Forms.MessageBox.Show(ex.Message)
             End Try

@@ -229,6 +229,18 @@ Public Class frmDatosPreVenta
                 Me.viewFichas.Item("cAbono", e.RowIndex).Value = CDec(frm.txtAbono.Text).ToString("N2")
                 Me.CalcularTotales()
             End If
+        Else
+            Dim frm As New frmFacturaElectronica
+            If frm.ShowDialog = Windows.Forms.DialogResult.OK Then
+                Dim Tipo As String = Me.viewFichas.Item("cTipo", e.RowIndex).Value
+                Dim BasedeDatos As String = Me.viewFichas.Item("cPuntoVenta", e.RowIndex).Value
+                Dim IdFactura As String = Me.viewFichas.Item("cId", e.RowIndex).Value
+
+                Dim db As New OBSoluciones.SQL.Sentencias(CadenaConexionSeePOS)
+                db.Ejecutar("Update " & BasedeDatos & ".dbo.PreVentas Set Tipo = 'CON', Cod_Cliente = " & frm.Identificacion & ", Nombre_Cliente = '" & frm.txtNombre.Text & "' Where Id = " & IdFactura, CommandType.Text)
+                Me.viewFichas.Item("cTipo", e.RowIndex).Value = "CON"
+                Me.viewFichas.Item("cCliente", e.RowIndex).Value = frm.txtNombre.Text
+            End If
         End If
     End Sub
 
@@ -478,6 +490,7 @@ Public Class frmDatosPreVenta
             If dt.Rows.Count > 0 Then
                 NApertura = dt.Rows(0).Item("NApertura")
                 Caja = dt.Rows(0).Item("Num_Caja")
+                Dim DocumentoVitacoraVuelto As String = ""
 
                 Dim trans As OBSoluciones.SQL.Transaccion
                 trans = New OBSoluciones.SQL.Transaccion(CadenaConexionSeePOS)
@@ -546,9 +559,16 @@ Public Class frmDatosPreVenta
                     Dim MontoPago As Decimal = 0
                     Dim Cod_Moneda As Integer = 1
                     Dim NombreMoneda As String = "COLON"
-                    Dim TipoCambio As Decimal = 1
+                    Dim TipoCambio As Decimal = 1                    
 
                     For Each doc As DataGridViewRow In Me.viewFichas.Rows
+
+                        If DocumentoVitacoraVuelto = "" Then
+                            DocumentoVitacoraVuelto = doc.Cells("cDocumento").Value
+                        Else
+                            DocumentoVitacoraVuelto += ", " & doc.Cells("cDocumento").Value
+                        End If
+
                         If doc.Cells("cPendiente").Value = False Then
                             TipoDoc = getTipoDoc(doc.Cells("cTipo").Value)
 
@@ -712,10 +732,18 @@ Public Class frmDatosPreVenta
                 End Try
 
                 If frm.PasaVuelto > 0 Then
+
                     Dim frmVuelto As New frmVueltoCaja
                     frmVuelto.Vuelto = CDec(frm.PasaVuelto).ToString("N2")
                     frmVuelto.Pendiente = CDec(frm.lblTotalCobro.Text).ToString("N2")
                     frmVuelto.Pagocon = CDec(frm.lblPagado.Text).ToString("N2")
+
+                    Try
+                        Dim db As New OBSoluciones.SQL.Sentencias(CadenaConexionSeePOS)
+                        db.Ejecutar("Insert into BitacoraVuelto(NApertura, Caja, Fecha, Documento, TotalCobro, TotalPagado, Vuelto) Values(" & NApertura & ", " & Me.Numero_Caja & ", GetDate(), '" & DocumentoVitacoraVuelto & "', " & frmVuelto.Pendiente & ", " & frmVuelto.Pagocon & ", " & frmVuelto.Vuelto & ")", CommandType.Text)
+                    Catch ex As Exception
+                    End Try
+
                     frmVuelto.ShowDialog()
                 End If
 

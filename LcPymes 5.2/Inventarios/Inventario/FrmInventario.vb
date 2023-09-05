@@ -386,7 +386,6 @@ Public Class FrmInventario
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
-        'Me.ckHabilitaFamilia = New System.Windows.Forms.CheckBox
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Label9 = New System.Windows.Forms.Label()
@@ -408,7 +407,6 @@ Public Class FrmInventario
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.Label29 = New System.Windows.Forms.Label()
         Me.Label57 = New System.Windows.Forms.Label()
-        Me.ckHabilitaFamilia = New System.Windows.Forms.CheckBox()
         Me.TxtUtilidadR_D = New DevExpress.XtraEditors.TextEdit()
         Me.TxtUtilidadR_C = New DevExpress.XtraEditors.TextEdit()
         Me.TxtUtilidadR_B = New DevExpress.XtraEditors.TextEdit()
@@ -435,6 +433,7 @@ Public Class FrmInventario
         Me.Label35 = New System.Windows.Forms.Label()
         Me.TxtPrecioVenta_P = New DevExpress.XtraEditors.TextEdit()
         Me.Label36 = New System.Windows.Forms.Label()
+        Me.ckHabilitaFamilia = New System.Windows.Forms.CheckBox()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
         Me.Label30 = New System.Windows.Forms.Label()
         Me.TxtExistencia = New System.Windows.Forms.TextBox()
@@ -823,17 +822,6 @@ Public Class FrmInventario
         Me.Label4.TabIndex = 4
         Me.Label4.Text = "Presentación"
         '
-        'ckHabilitaFamilia
-        '        
-        'Me.ckHabilitaFamilia.DataBindings.Add(New System.Windows.Forms.Binding("Checked", Me.DataSetInventario, "Inventario.Consignacion", True))
-        Me.ckHabilitaFamilia.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ckHabilitaFamilia.ForeColor = System.Drawing.Color.White
-        Me.ckHabilitaFamilia.Location = New System.Drawing.Point(248, 44)
-        Me.ckHabilitaFamilia.Name = "ckHabilitaFamilia"
-        Me.ckHabilitaFamilia.Size = New System.Drawing.Size(20, 16)
-        Me.ckHabilitaFamilia.TabIndex = 2
-        Me.ckHabilitaFamilia.Text = "..."
-        '
         'Label5
         '
         Me.Label5.BackColor = System.Drawing.SystemColors.ControlLight
@@ -1096,7 +1084,7 @@ Public Class FrmInventario
         '
         Me.GroupBox2.BackColor = System.Drawing.Color.Beige
         Me.GroupBox2.Controls.Add(Me.Label29)
-        Me.GroupBox2.Controls.Add(Me.Label57)        
+        Me.GroupBox2.Controls.Add(Me.Label57)
         Me.GroupBox2.Controls.Add(Me.TxtUtilidadR_D)
         Me.GroupBox2.Controls.Add(Me.TxtUtilidadR_C)
         Me.GroupBox2.Controls.Add(Me.TxtUtilidadR_B)
@@ -1577,6 +1565,16 @@ Public Class FrmInventario
         Me.Label36.TabIndex = 27
         Me.Label36.Text = "P"
         '
+        'ckHabilitaFamilia
+        '
+        Me.ckHabilitaFamilia.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ckHabilitaFamilia.ForeColor = System.Drawing.Color.White
+        Me.ckHabilitaFamilia.Location = New System.Drawing.Point(248, 44)
+        Me.ckHabilitaFamilia.Name = "ckHabilitaFamilia"
+        Me.ckHabilitaFamilia.Size = New System.Drawing.Size(20, 16)
+        Me.ckHabilitaFamilia.TabIndex = 2
+        Me.ckHabilitaFamilia.Text = "..."
+        '
         'GroupBox3
         '
         Me.GroupBox3.BackColor = System.Drawing.Color.Peru
@@ -1755,7 +1753,7 @@ Public Class FrmInventario
         '
         'SqlConnection1
         '
-        Me.SqlConnection1.ConnectionString = "workstation id=""DESKTOP-NCOO4KP"";packet size=4096;integrated security=SSPI;data s" &
+        Me.SqlConnection1.ConnectionString = "workstation id=""DESKTOP-NCOO4KP"";packet size=4096;integrated security=SSPI;data s" & _
     "ource=""."";persist security info=False;initial catalog=Seepos"
         Me.SqlConnection1.FireInfoMessageEventOnUserErrors = False
         '
@@ -1796,8 +1794,8 @@ Public Class FrmInventario
         '
         'SqlSelectCommand3
         '
-        Me.SqlSelectCommand3.CommandText = "SELECT SubFamilias.Codigo, Familia.Descripcion + '/' + SubFamilias.Descripcion AS" &
-    " Familiares FROM SubFamilias INNER JOIN Familia ON SubFamilias.CodigoFamilia = F" &
+        Me.SqlSelectCommand3.CommandText = "SELECT SubFamilias.Codigo, Familia.Descripcion + '/' + SubFamilias.Descripcion AS" & _
+    " Familiares FROM SubFamilias INNER JOIN Familia ON SubFamilias.CodigoFamilia = F" & _
     "amilia.Codigo"
         Me.SqlSelectCommand3.Connection = Me.SqlConnection1
         '
@@ -1818,7 +1816,7 @@ Public Class FrmInventario
         '
         'SqlSelectCommand5
         '
-        Me.SqlSelectCommand5.CommandText = "SELECT Nombre_Bodega, ID_Bodega FROM Bodegas"
+        Me.SqlSelectCommand5.CommandText = "SELECT Nombre_Bodega, ID_Bodega FROM Bodegas where Inactiva = 0"
         Me.SqlSelectCommand5.Connection = Me.SqlConnection1
         '
         'DataNavigator1
@@ -1842,8 +1840,8 @@ Public Class FrmInventario
         '
         'SqlSelectCommand6
         '
-        Me.SqlSelectCommand6.CommandText = "SELECT SubUbicacion.Codigo, Ubicaciones.Descripcion + '/' + SubUbicacion.Descripc" &
-    "ionD AS Ubicaciones FROM SubUbicacion INNER JOIN Ubicaciones ON SubUbicacion.Cod" &
+        Me.SqlSelectCommand6.CommandText = "SELECT SubUbicacion.Codigo, Ubicaciones.Descripcion + '/' + SubUbicacion.Descripc" & _
+    "ionD AS Ubicaciones FROM SubUbicacion INNER JOIN Ubicaciones ON SubUbicacion.Cod" & _
     "_Ubicacion = Ubicaciones.Codigo"
         Me.SqlSelectCommand6.Connection = Me.SqlConnection1
         '
@@ -1858,7 +1856,7 @@ Public Class FrmInventario
         '
         'SqlSelectCommand7
         '
-        Me.SqlSelectCommand7.CommandText = "SELECT        CodMoneda, MonedaNombre, TCCompra AS ValorCompra" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "FROM            M" &
+        Me.SqlSelectCommand7.CommandText = "SELECT        CodMoneda, MonedaNombre, TCCompra AS ValorCompra" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "FROM            M" & _
     "oneda"
         Me.SqlSelectCommand7.Connection = Me.SqlConnection1
         '
@@ -1895,7 +1893,7 @@ Public Class FrmInventario
         '
         'SqlConnection2
         '
-        Me.SqlConnection2.ConnectionString = "workstation id=""DESKTOP-NCOO4KP"";packet size=4096;integrated security=SSPI;data s" &
+        Me.SqlConnection2.ConnectionString = "workstation id=""DESKTOP-NCOO4KP"";packet size=4096;integrated security=SSPI;data s" & _
     "ource=""."";persist security info=False;initial catalog=Seepos"
         Me.SqlConnection2.FireInfoMessageEventOnUserErrors = False
         '
@@ -2001,7 +1999,7 @@ Public Class FrmInventario
         '
         'SqlInsertCommand3
         '
-        Me.SqlInsertCommand3.CommandText = "INSERT INTO Inventario(Codigo) VALUES (@Codigo); SELECT Codigo FROM Inventario WH" &
+        Me.SqlInsertCommand3.CommandText = "INSERT INTO Inventario(Codigo) VALUES (@Codigo); SELECT Codigo FROM Inventario WH" & _
     "ERE (Codigo = @Codigo) ORDER BY Codigo"
         Me.SqlInsertCommand3.Connection = Me.SqlConnection1
         Me.SqlInsertCommand3.Parameters.AddRange(New System.Data.SqlClient.SqlParameter() {New System.Data.SqlClient.SqlParameter("@Codigo", System.Data.SqlDbType.BigInt, 8, "Codigo")})
@@ -2013,7 +2011,7 @@ Public Class FrmInventario
         '
         'SqlUpdateCommand3
         '
-        Me.SqlUpdateCommand3.CommandText = "UPDATE Inventario SET Codigo = @Codigo WHERE (Codigo = @Original_Codigo); SELECT " &
+        Me.SqlUpdateCommand3.CommandText = "UPDATE Inventario SET Codigo = @Codigo WHERE (Codigo = @Original_Codigo); SELECT " & _
     "Codigo FROM Inventario WHERE (Codigo = @Codigo) ORDER BY Codigo"
         Me.SqlUpdateCommand3.Connection = Me.SqlConnection1
         Me.SqlUpdateCommand3.Parameters.AddRange(New System.Data.SqlClient.SqlParameter() {New System.Data.SqlClient.SqlParameter("@Codigo", System.Data.SqlDbType.BigInt, 8, "Codigo"), New System.Data.SqlClient.SqlParameter("@Original_Codigo", System.Data.SqlDbType.BigInt, 8, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "Codigo", System.Data.DataRowVersion.Original, Nothing)})
@@ -2414,7 +2412,7 @@ Public Class FrmInventario
         '
         'SqlSelectCommand11
         '
-        Me.SqlSelectCommand11.CommandText = "SELECT Secuencia, Tabla, Campo_Clave, DescripcionCampo, Accion, Fecha, Usuario, C" &
+        Me.SqlSelectCommand11.CommandText = "SELECT Secuencia, Tabla, Campo_Clave, DescripcionCampo, Accion, Fecha, Usuario, C" & _
     "osto, VentaA, VentaB, VentaC, VentaD FROM Bitacora"
         Me.SqlSelectCommand11.Connection = Me.SqlConnection1
         '
@@ -4007,7 +4005,7 @@ Public Class FrmInventario
         '
         'SqlSelectCommand14
         '
-        Me.SqlSelectCommand14.CommandText = "SELECT Id_Usuario, Nombre, Clave_Entrada, Clave_Interna, CambiarPrecio, Aplicar_D" &
+        Me.SqlSelectCommand14.CommandText = "SELECT Id_Usuario, Nombre, Clave_Entrada, Clave_Interna, CambiarPrecio, Aplicar_D" & _
     "esc, Exist_Negativa, Porc_Desc, Porc_Precio FROM Usuarios"
         Me.SqlSelectCommand14.Connection = Me.SqlConnection1
         '
@@ -4027,8 +4025,8 @@ Public Class FrmInventario
         '
         'SqlInsertCommand6
         '
-        Me.SqlInsertCommand6.CommandText = "INSERT INTO serie(codigo, serie, vendido, factura) VALUES (@codigo, @serie, @vend" &
-    "ido, @factura); SELECT id, codigo, serie, vendido, factura FROM serie WHERE (id " &
+        Me.SqlInsertCommand6.CommandText = "INSERT INTO serie(codigo, serie, vendido, factura) VALUES (@codigo, @serie, @vend" & _
+    "ido, @factura); SELECT id, codigo, serie, vendido, factura FROM serie WHERE (id " & _
     "= @@IDENTITY)"
         Me.SqlInsertCommand6.Connection = Me.SqlConnection1
         Me.SqlInsertCommand6.Parameters.AddRange(New System.Data.SqlClient.SqlParameter() {New System.Data.SqlClient.SqlParameter("@codigo", System.Data.SqlDbType.BigInt, 8, "codigo"), New System.Data.SqlClient.SqlParameter("@serie", System.Data.SqlDbType.NVarChar, 50, "serie"), New System.Data.SqlClient.SqlParameter("@vendido", System.Data.SqlDbType.NVarChar, 50, "vendido"), New System.Data.SqlClient.SqlParameter("@factura", System.Data.SqlDbType.NVarChar, 50, "factura")})
@@ -6121,6 +6119,16 @@ I:
     End Sub
 
     Private Sub Button2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button2.Click
+
+        'Dim serie As String = InputBox("")
+        'Dim db As New OBSoluciones.SQL.Sentencias(CadenaConexionSeePOS)
+        'If MsgBox("Desea seguir", MsgBoxStyle.YesNo + MsgBoxStyle.Question, Me.Text) = MsgBoxResult.Yes Then
+
+        '    db.Ejecutar("Insert into Serie(codigo, serie, vendido, factura) values(" & Me.TxtCodigo.Text & ",'" & serie & "',0,0)", CommandType.Text)
+
+        'End If
+        'Exit Sub
+
         Try
             'zoe
             Me.BindingContext(Me.DataSetInventario, "serie").AddNew()

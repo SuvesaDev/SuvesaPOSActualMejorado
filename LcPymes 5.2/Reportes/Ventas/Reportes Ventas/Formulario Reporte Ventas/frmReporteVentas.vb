@@ -697,6 +697,7 @@ Public Class frmReporteVentas
             SQLConexion.SQLStringConexion = Me.SqlConnection1.ConnectionString  '   CadenaConexionSeePOS
             SQLConexion.Conectar()
 
+
             Select Case Reporte_ID
                 Case 1 '0 Ventas Detalladas
 

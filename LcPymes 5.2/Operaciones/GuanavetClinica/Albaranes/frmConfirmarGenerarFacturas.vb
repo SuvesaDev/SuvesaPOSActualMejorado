@@ -1,6 +1,16 @@
 ﻿Imports System.Data
 Public Class frmConfirmarGenerarFacturas
 
+    Private Sub cargarDortores()
+        Dim dt As New DataTable
+        cFunciones.Llenar_Tabla_Generico("select 0 as Id, 'Seleccione un doctor' as Nombre union select id, nombre from agente_ventas", dt, CadenaConexionSeePOS)
+        If dt.Rows.Count > 0 Then
+            Me.cboDoctorEncargado.DataSource = dt
+            Me.cboDoctorEncargado.DisplayMember = "nombre"
+            Me.cboDoctorEncargado.ValueMember = "id"
+        End If
+    End Sub
+
     Private Sub CrearCliente()
         Dim frm_cliente As New frm_cliente_rapido
         frm_cliente.Frecuente = False
@@ -112,6 +122,12 @@ Public Class frmConfirmarGenerarFacturas
             End If
         Next
 
+        If Me.cboDoctorEncargado.SelectedValue = "0" Then
+            MsgBox("Debe selecccionar un encargado", MsgBoxStyle.Information, Me.Text)
+            Me.cboDoctorEncargado.Focus()
+            Exit Sub
+        End If
+
         If Me.PasaValidacionCredito = False Then
             Exit Sub
         End If
@@ -131,6 +147,10 @@ Public Class frmConfirmarGenerarFacturas
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Me.CrearCliente()
+    End Sub
+
+    Private Sub frmConfirmarGenerarFacturas_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Me.cargarDortores()
     End Sub
 
 End Class
