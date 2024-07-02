@@ -73,10 +73,15 @@
         Me.pAnticipo.Enabled = True
     End Sub
 
+    Public isPreDevolucion As Boolean = False
+
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        If IsClinica() = True And Me.ckDevolverAlbaran.Checked = False Then
-            If MsgBox("Desea habilitar los albaranes para volver a facturar.", MsgBoxStyle.YesNo + MsgBoxStyle.Question, "Confirmar Accion.") = MsgBoxResult.Yes Then
-                Me.ckDevolverAlbaran.Checked = True
+
+        If isPreDevolucion = False Then
+            If IsClinica() = True And Me.ckDevolverAlbaran.Checked = False Then
+                If MsgBox("Desea habilitar los albaranes para volver a facturar.", MsgBoxStyle.YesNo + MsgBoxStyle.Question, "Confirmar Accion.") = MsgBoxResult.Yes Then
+                    Me.ckDevolverAlbaran.Checked = True
+                End If
             End If
         End If
 

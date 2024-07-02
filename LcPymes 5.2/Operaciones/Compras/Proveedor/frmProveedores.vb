@@ -10,6 +10,7 @@ Public Class frmProveedores
     Friend WithEvents ckActualizado As System.Windows.Forms.CheckBox
     Friend WithEvents ckInhabilitado As System.Windows.Forms.CheckBox
     Friend WithEvents ckSerie As System.Windows.Forms.CheckBox
+    Friend WithEvents ckSeguimiento As System.Windows.Forms.CheckBox
     Dim usua As Usuario_Logeado
 
 
@@ -136,13 +137,14 @@ Public Class frmProveedores
     <System.Diagnostics.DebuggerStepThrough()> Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmProveedores))
-        Dim ColumnFilterInfo1 As DevExpress.XtraGrid.Columns.ColumnFilterInfo = New DevExpress.XtraGrid.Columns.ColumnFilterInfo()
+        Dim ColumnFilterInfo5 As DevExpress.XtraGrid.Columns.ColumnFilterInfo = New DevExpress.XtraGrid.Columns.ColumnFilterInfo()
+        Dim ColumnFilterInfo8 As DevExpress.XtraGrid.Columns.ColumnFilterInfo = New DevExpress.XtraGrid.Columns.ColumnFilterInfo()
+        Dim ColumnFilterInfo7 As DevExpress.XtraGrid.Columns.ColumnFilterInfo = New DevExpress.XtraGrid.Columns.ColumnFilterInfo()
         Dim ColumnFilterInfo2 As DevExpress.XtraGrid.Columns.ColumnFilterInfo = New DevExpress.XtraGrid.Columns.ColumnFilterInfo()
         Dim ColumnFilterInfo3 As DevExpress.XtraGrid.Columns.ColumnFilterInfo = New DevExpress.XtraGrid.Columns.ColumnFilterInfo()
-        Dim ColumnFilterInfo4 As DevExpress.XtraGrid.Columns.ColumnFilterInfo = New DevExpress.XtraGrid.Columns.ColumnFilterInfo()
-        Dim ColumnFilterInfo5 As DevExpress.XtraGrid.Columns.ColumnFilterInfo = New DevExpress.XtraGrid.Columns.ColumnFilterInfo()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.ckSerie = New System.Windows.Forms.CheckBox()
         Me.ckInhabilitado = New System.Windows.Forms.CheckBox()
         Me.ckActualizado = New System.Windows.Forms.CheckBox()
         Me.Label15 = New System.Windows.Forms.Label()
@@ -228,7 +230,7 @@ Public Class frmProveedores
         Me.ToolBarCerrar = New System.Windows.Forms.ToolBarButton()
         Me.ImageList1 = New System.Windows.Forms.ImageList(Me.components)
         Me.ToolTip = New System.Windows.Forms.ToolTip(Me.components)
-        Me.ckSerie = New System.Windows.Forms.CheckBox()
+        Me.ckSeguimiento = New System.Windows.Forms.CheckBox()
         Me.Panel1.SuspendLayout()
         CType(Me.DataSet_Proveedores1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox2.SuspendLayout()
@@ -258,6 +260,7 @@ Public Class frmProveedores
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.Transparent
+        Me.Panel1.Controls.Add(Me.ckSeguimiento)
         Me.Panel1.Controls.Add(Me.ckSerie)
         Me.Panel1.Controls.Add(Me.ckInhabilitado)
         Me.Panel1.Controls.Add(Me.ckActualizado)
@@ -303,10 +306,20 @@ Public Class frmProveedores
         Me.Panel1.Size = New System.Drawing.Size(680, 176)
         Me.Panel1.TabIndex = 1
         '
+        'ckSerie
+        '
+        Me.ckSerie.AutoSize = True
+        Me.ckSerie.Location = New System.Drawing.Point(480, 39)
+        Me.ckSerie.Name = "ckSerie"
+        Me.ckSerie.Size = New System.Drawing.Size(147, 17)
+        Me.ckSerie.TabIndex = 158
+        Me.ckSerie.Text = "Productos con Series"
+        Me.ckSerie.UseVisualStyleBackColor = True
+        '
         'ckInhabilitado
         '
         Me.ckInhabilitado.AutoSize = True
-        Me.ckInhabilitado.Location = New System.Drawing.Point(573, 153)
+        Me.ckInhabilitado.Location = New System.Drawing.Point(573, 156)
         Me.ckInhabilitado.Name = "ckInhabilitado"
         Me.ckInhabilitado.Size = New System.Drawing.Size(82, 17)
         Me.ckInhabilitado.TabIndex = 157
@@ -316,7 +329,7 @@ Public Class frmProveedores
         'ckActualizado
         '
         Me.ckActualizado.AutoSize = True
-        Me.ckActualizado.Location = New System.Drawing.Point(480, 153)
+        Me.ckActualizado.Location = New System.Drawing.Point(480, 156)
         Me.ckActualizado.Name = "ckActualizado"
         Me.ckActualizado.Size = New System.Drawing.Size(92, 17)
         Me.ckActualizado.TabIndex = 156
@@ -359,7 +372,7 @@ Public Class frmProveedores
         'CheckBox1
         '
         Me.CheckBox1.DataBindings.Add(New System.Windows.Forms.Binding("Checked", Me.DataSet_Proveedores1, "Proveedores.Utilidad_Fija", True))
-        Me.CheckBox1.Location = New System.Drawing.Point(480, 118)
+        Me.CheckBox1.Location = New System.Drawing.Point(480, 122)
         Me.CheckBox1.Name = "CheckBox1"
         Me.CheckBox1.Size = New System.Drawing.Size(88, 16)
         Me.CheckBox1.TabIndex = 15
@@ -775,7 +788,7 @@ Public Class frmProveedores
         Me.ChecCosto.DataBindings.Add(New System.Windows.Forms.Binding("Checked", Me.DataSet_Proveedores1, "Proveedores.CostoTotal", True))
         Me.ChecCosto.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ChecCosto.ForeColor = System.Drawing.Color.RoyalBlue
-        Me.ChecCosto.Location = New System.Drawing.Point(480, 134)
+        Me.ChecCosto.Location = New System.Drawing.Point(480, 139)
         Me.ChecCosto.Name = "ChecCosto"
         Me.ChecCosto.Size = New System.Drawing.Size(88, 16)
         Me.ChecCosto.TabIndex = 17
@@ -788,7 +801,7 @@ Public Class frmProveedores
         Me.ChecImpIncluido.DataBindings.Add(New System.Windows.Forms.Binding("Checked", Me.DataSet_Proveedores1, "Proveedores.ImpIncluido", True))
         Me.ChecImpIncluido.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ChecImpIncluido.ForeColor = System.Drawing.Color.RoyalBlue
-        Me.ChecImpIncluido.Location = New System.Drawing.Point(584, 134)
+        Me.ChecImpIncluido.Location = New System.Drawing.Point(573, 139)
         Me.ChecImpIncluido.Name = "ChecImpIncluido"
         Me.ChecImpIncluido.Size = New System.Drawing.Size(96, 16)
         Me.ChecImpIncluido.TabIndex = 18
@@ -888,7 +901,7 @@ Public Class frmProveedores
         '
         Me.ColProveedor.Caption = "Proveedor"
         Me.ColProveedor.FieldName = "CodigoProv"
-        Me.ColProveedor.FilterInfo = ColumnFilterInfo1
+        Me.ColProveedor.FilterInfo = ColumnFilterInfo5
         Me.ColProveedor.Name = "ColProveedor"
         Me.ColProveedor.Options = CType(((((((((DevExpress.XtraGrid.Columns.ColumnOptions.CanFiltered Or DevExpress.XtraGrid.Columns.ColumnOptions.CanMoved) _
             Or DevExpress.XtraGrid.Columns.ColumnOptions.CanGrouped) _
@@ -906,7 +919,7 @@ Public Class frmProveedores
         Me.colTipoCuenta.Caption = "Tipo"
         Me.colTipoCuenta.ColumnEdit = Me.RepositoryItemTextEdit1
         Me.colTipoCuenta.FieldName = "TipoCuenta"
-        Me.colTipoCuenta.FilterInfo = ColumnFilterInfo2
+        Me.colTipoCuenta.FilterInfo = ColumnFilterInfo8
         Me.colTipoCuenta.Name = "colTipoCuenta"
         Me.colTipoCuenta.VisibleIndex = 1
         Me.colTipoCuenta.Width = 101
@@ -922,7 +935,7 @@ Public Class frmProveedores
         Me.colBanco.Caption = "Banco"
         Me.colBanco.ColumnEdit = Me.RepositoryItemTextEdit1
         Me.colBanco.FieldName = "Banco"
-        Me.colBanco.FilterInfo = ColumnFilterInfo3
+        Me.colBanco.FilterInfo = ColumnFilterInfo7
         Me.colBanco.Name = "colBanco"
         Me.colBanco.VisibleIndex = 2
         Me.colBanco.Width = 225
@@ -932,7 +945,7 @@ Public Class frmProveedores
         Me.colNum_Cuenta.Caption = "Cuenta"
         Me.colNum_Cuenta.ColumnEdit = Me.RepositoryItemTextEdit1
         Me.colNum_Cuenta.FieldName = "Num_Cuenta"
-        Me.colNum_Cuenta.FilterInfo = ColumnFilterInfo4
+        Me.colNum_Cuenta.FilterInfo = ColumnFilterInfo2
         Me.colNum_Cuenta.Name = "colNum_Cuenta"
         Me.colNum_Cuenta.VisibleIndex = 3
         Me.colNum_Cuenta.Width = 200
@@ -942,7 +955,7 @@ Public Class frmProveedores
         Me.colMonedaNombre.Caption = "Moneda"
         Me.colMonedaNombre.ColumnEdit = Me.RepositoryItemLookUpEdit1
         Me.colMonedaNombre.FieldName = "CodMoneda"
-        Me.colMonedaNombre.FilterInfo = ColumnFilterInfo5
+        Me.colMonedaNombre.FilterInfo = ColumnFilterInfo3
         Me.colMonedaNombre.Name = "colMonedaNombre"
         Me.colMonedaNombre.VisibleIndex = 4
         Me.colMonedaNombre.Width = 100
@@ -1202,15 +1215,16 @@ Public Class frmProveedores
         Me.ImageList1.Images.SetKeyName(7, "")
         Me.ImageList1.Images.SetKeyName(8, "")
         '
-        'ckSerie
+        'ckSeguimiento
         '
-        Me.ckSerie.AutoSize = True
-        Me.ckSerie.Location = New System.Drawing.Point(480, 39)
-        Me.ckSerie.Name = "ckSerie"
-        Me.ckSerie.Size = New System.Drawing.Size(147, 17)
-        Me.ckSerie.TabIndex = 158
-        Me.ckSerie.Text = "Productos con Series"
-        Me.ckSerie.UseVisualStyleBackColor = True
+        Me.ckSeguimiento.AutoSize = True
+        Me.ckSeguimiento.ForeColor = System.Drawing.Color.Tomato
+        Me.ckSeguimiento.Location = New System.Drawing.Point(480, 104)
+        Me.ckSeguimiento.Name = "ckSeguimiento"
+        Me.ckSeguimiento.Size = New System.Drawing.Size(95, 17)
+        Me.ckSeguimiento.TabIndex = 159
+        Me.ckSeguimiento.Text = "Seguimiento"
+        Me.ckSeguimiento.UseVisualStyleBackColor = True
         '
         'frmProveedores
         '
@@ -1368,7 +1382,7 @@ Public Class frmProveedores
                 Try
 
                     Dim db As New GestioDatos
-                    db.Ejecuta("Update Proveedores set inhabilitado = " & IIf(Me.ckInhabilitado.Checked = True, 1, 0) & ", Actualizado = " & IIf(Me.ckActualizado.Checked = True, 1, 0) & ", Serie = " & IIf(Me.ckSerie.Checked = True, 1, 0) & " Where CodigoProv = '" & Me.BindingContext(Me.DataSet_Proveedores1, "Proveedores").Current("CodigoProv") & "'")
+                    db.Ejecuta("Update Proveedores set inhabilitado = " & IIf(Me.ckInhabilitado.Checked = True, 1, 0) & ", Seguimiento = " & IIf(Me.ckSeguimiento.Checked = True, 1, 0) & ", Actualizado = " & IIf(Me.ckActualizado.Checked = True, 1, 0) & ", Serie = " & IIf(Me.ckSerie.Checked = True, 1, 0) & " Where CodigoProv = '" & Me.BindingContext(Me.DataSet_Proveedores1, "Proveedores").Current("CodigoProv") & "'")
 
                 Catch ex As Exception
                 End Try
@@ -1688,11 +1702,12 @@ Public Class frmProveedores
 
     Private Sub CargarActualizado()
         Dim dt As New DataTable
-        cFunciones.Llenar_Tabla_Generico("select inhabilitado, Actualizado, Serie from Proveedores where CodigoProv = " & Me.BindingContext(Me.DataSet_Proveedores1, "Proveedores").Current("CodigoProv"), dt, CadenaConexionSeePOS)
+        cFunciones.Llenar_Tabla_Generico("select inhabilitado, Seguimiento, Actualizado, Serie from Proveedores where CodigoProv = " & Me.BindingContext(Me.DataSet_Proveedores1, "Proveedores").Current("CodigoProv"), dt, CadenaConexionSeePOS)
         If dt.Rows.Count > 0 Then
             Me.ckInhabilitado.Checked = CBool(dt.Rows(0).Item("inhabilitado"))
             Me.ckActualizado.Checked = CBool(dt.Rows(0).Item("Actualizado"))
             Me.ckSerie.Checked = CBool(dt.Rows(0).Item("Serie"))
+            Me.ckSeguimiento.Checked = CBool(dt.Rows(0).Item("Seguimiento"))
         End If
     End Sub
 

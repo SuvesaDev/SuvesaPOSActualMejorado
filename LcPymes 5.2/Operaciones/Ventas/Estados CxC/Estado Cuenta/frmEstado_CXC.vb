@@ -68,6 +68,7 @@ Public Class frmEstado_CXC
     Friend WithEvents ToolGeneralFecha As System.Windows.Forms.ToolBarButton
     Friend WithEvents CheckBox2 As System.Windows.Forms.CheckBox
     Friend WithEvents btnEnviarxOutlook As DevExpress.XtraEditors.SimpleButton
+    Friend WithEvents ckTodos As System.Windows.Forms.CheckBox
     Friend WithEvents ck_rango_fechas As System.Windows.Forms.CheckBox
     <System.Diagnostics.DebuggerStepThrough()> Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
@@ -95,6 +96,7 @@ Public Class frmEstado_CXC
         Me.ToolBarVencidasFecha = New System.Windows.Forms.ToolBarButton()
         Me.ToolGeneralFecha = New System.Windows.Forms.ToolBarButton()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.btnEnviarxOutlook = New DevExpress.XtraEditors.SimpleButton()
         Me.ck_rango_fechas = New System.Windows.Forms.CheckBox()
         Me.CheckBox2 = New System.Windows.Forms.CheckBox()
         Me.DateTimePicker2 = New System.Windows.Forms.DateTimePicker()
@@ -102,7 +104,7 @@ Public Class frmEstado_CXC
         Me.Label5 = New System.Windows.Forms.Label()
         Me.ProgressBarControl1 = New DevExpress.XtraEditors.ProgressBarControl()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
-        Me.btnEnviarxOutlook = New DevExpress.XtraEditors.SimpleButton()
+        Me.ckTodos = New System.Windows.Forms.CheckBox()
         CType(Me.DataSet_Estado_CxC, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
         CType(Me.ProgressBarControl1.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -299,6 +301,7 @@ Public Class frmEstado_CXC
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.LightSteelBlue
+        Me.Panel1.Controls.Add(Me.ckTodos)
         Me.Panel1.Controls.Add(Me.btnEnviarxOutlook)
         Me.Panel1.Controls.Add(Me.ck_rango_fechas)
         Me.Panel1.Controls.Add(Me.CheckBox2)
@@ -317,6 +320,14 @@ Public Class frmEstado_CXC
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(112, 436)
         Me.Panel1.TabIndex = 81
+        '
+        'btnEnviarxOutlook
+        '
+        Me.btnEnviarxOutlook.Location = New System.Drawing.Point(16, 348)
+        Me.btnEnviarxOutlook.Name = "btnEnviarxOutlook"
+        Me.btnEnviarxOutlook.Size = New System.Drawing.Size(80, 33)
+        Me.btnEnviarxOutlook.TabIndex = 34
+        Me.btnEnviarxOutlook.Text = "Correo"
         '
         'ck_rango_fechas
         '
@@ -385,13 +396,15 @@ Public Class frmEstado_CXC
         '
         Me.Timer1.Interval = 50
         '
-        'btnEnviarxOutlook
+        'ckTodos
         '
-        Me.btnEnviarxOutlook.Location = New System.Drawing.Point(16, 348)
-        Me.btnEnviarxOutlook.Name = "btnEnviarxOutlook"
-        Me.btnEnviarxOutlook.Size = New System.Drawing.Size(80, 33)
-        Me.btnEnviarxOutlook.TabIndex = 34
-        Me.btnEnviarxOutlook.Text = "Correo"
+        Me.ckTodos.AutoSize = True
+        Me.ckTodos.Location = New System.Drawing.Point(8, 387)
+        Me.ckTodos.Name = "ckTodos"
+        Me.ckTodos.Size = New System.Drawing.Size(56, 17)
+        Me.ckTodos.TabIndex = 35
+        Me.ckTodos.Text = "Todos"
+        Me.ckTodos.UseVisualStyleBackColor = True
         '
         'frmEstado_CXC
         '
@@ -441,6 +454,7 @@ Public Class frmEstado_CXC
 
             Me.ProgressBarControl1.Text = 0
             Me.Timer1.Enabled = True
+
             Select Case X
                 Case 0 To 2 'Estado de Cuenta General,Vencidas,Pagadas. 
                     If Me.CheckBox2.Checked = True Then
@@ -490,9 +504,12 @@ Public Class frmEstado_CXC
                     Reporte.SetParameterValue(0, CDbl(Moneda.SelectedValue))
                     Reporte.SetParameterValue(1, Me.CheckBox1.Checked)
                     Reporte.SetParameterValue(2, Me.DateTimePicker1.Value)
+                    Reporte.SetParameterValue(3, Me.ckTodos.Checked)
                     CrystalReportsConexion.LoadReportViewer(Me.rptViewer, Reporte)
                     Me.Timer1.Enabled = True
+
                 Case 6
+
                     'MWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWM
                     'ya se aplico el cambio para filtrar incobrables
                     'MWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWM
@@ -503,7 +520,9 @@ Public Class frmEstado_CXC
                     Reporte.SetParameterValue(3, Me.DateTimePicker1.Value)
                     Reporte.SetParameterValue(4, Me.DateTimePicker2.Value)
                     Reporte.SetParameterValue(5, Me.ck_rango_fechas.Checked)
+                    Reporte.SetParameterValue(6, Me.ckTodos.Checked)
                     CrystalReportsConexion.LoadReportViewer(Me.rptViewer, Reporte)
+
                 Case 7
                     Dim Reporte As New Reporte_Facturas_Vencidas
                     Reporte.SetParameterValue(0, CDbl(Label5.Text))      ' TIPO DE CAMBIO $ - c
@@ -537,6 +556,7 @@ Public Class frmEstado_CXC
                         Reporte.SetParameterValue(2, 0)
                         Reporte.SetParameterValue(3, Me.DateTimePicker1.Value.Date)
                         Reporte.SetParameterValue(4, Me.CheckBox1.Checked)
+                        Reporte.SetParameterValue(5, Me.ckTodos.Checked)
                         CrystalReportsConexion.LoadReportViewer(Me.rptViewer, Reporte)
                     End If
 

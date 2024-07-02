@@ -18,24 +18,14 @@
               </xs:sequence>
             </xs:complexType>
           </xs:element>
-          <xs:element name="Datafono">
-            <xs:complexType>
-              <xs:sequence>
-                <xs:element name="Datafono" type="xs:string" minOccurs="0" />
-              </xs:sequence>
-            </xs:complexType>
-          </xs:element>
         </xs:choice>
       </xs:complexType>
     </xs:element>
   </xs:schema>
   <Terminal>
-    <Terminal>prueba</Terminal>
+    <Terminal>SRVETLB2</Terminal>
   </Terminal>
   <Impresora>
-    <Impresora>Microsoft Print to PDF</Impresora>
+    <Impresora>\\Mostrador003-pc\puntoventa</Impresora>
   </Impresora>
-  <Datafono>
-    <Datafono>False</Datafono>
-  </Datafono>
 </Configuraciones>

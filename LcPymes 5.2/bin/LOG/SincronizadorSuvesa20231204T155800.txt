@@ -1,0 +1,7 @@
+﻿
+Hora Inicial: 04/12/2023 03:58:00 pm
+Tipo de procedimiento: Ventas
+Cantidad Albaranes: 0
+Se escribió en la bitacora: SISTEMA
+Hora Final: 04/12/2023 03:58:15 pm
+Tiempo Empleado: 00:00:14.88

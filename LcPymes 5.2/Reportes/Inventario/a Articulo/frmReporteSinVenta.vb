@@ -9,7 +9,6 @@
             rpt.SetParameterValue(1, Me.FechaFin.Value)
             rpt.SetParameterValue(2, Me.cboOpcion.SelectedIndex)
 
-
             If Me.ckPorProveedor.Checked Then
                 If IsNumeric(Me.CodProveedor) Then
                     If CDec(Me.CodProveedor) > 0 Then

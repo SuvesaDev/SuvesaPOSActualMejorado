@@ -55,6 +55,7 @@ Public Class TokenHacienda
             End If
 
         Catch e As Exception
+            MsgBox(e.Message, MsgBoxStyle.Critical, "Error al obtener Token")
             Me.AccesoConcedido = False
             Me.accessToken = ""
             Me.refreshToken = ""

@@ -28,7 +28,8 @@ Public Class Frmcliente
     Friend WithEvents txtCorreoRecibo As System.Windows.Forms.TextBox
     Friend WithEvents lblAdvertenciaMoroso As System.Windows.Forms.Label
     Friend WithEvents btnCambiarEstado As System.Windows.Forms.Button
-    Friend WithEvents ckFallecido As System.Windows.Forms.CheckBox   'Declara la variable Perfil Modulo Usuario
+    Friend WithEvents ckFallecido As System.Windows.Forms.CheckBox
+    Friend WithEvents ckNoCxC As System.Windows.Forms.CheckBox   'Declara la variable Perfil Modulo Usuario
     Dim strMensaje As String = ""
 
 #Region " Windows Form Designer generated code "
@@ -361,6 +362,7 @@ Public Class Frmcliente
         Me.DataSet_MovimientoCaja1 = New LcPymes_5._2.DataSet_MovimientoCaja()
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
         Me.ToolTipController1 = New DevExpress.Utils.ToolTipController()
+        Me.ckNoCxC = New System.Windows.Forms.CheckBox()
         CType(Me.DataSetClientes1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox3.SuspendLayout()
         Me.TabControl1.SuspendLayout()
@@ -391,9 +393,9 @@ Public Class Frmcliente
         Me.Label2.BackColor = System.Drawing.SystemColors.ControlLight
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold)
         Me.Label2.ForeColor = System.Drawing.Color.RoyalBlue
-        Me.Label2.Location = New System.Drawing.Point(6, 57)
+        Me.Label2.Location = New System.Drawing.Point(5, 49)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(752, 17)
+        Me.Label2.Size = New System.Drawing.Size(627, 15)
         Me.Label2.TabIndex = 4
         Me.Label2.Text = "Observaciones:"
         '
@@ -404,9 +406,9 @@ Public Class Frmcliente
         Me.Txtobserv.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.DataSetClientes1, "Clientes.observaciones", True))
         Me.Txtobserv.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Txtobserv.ForeColor = System.Drawing.Color.Blue
-        Me.Txtobserv.Location = New System.Drawing.Point(6, 75)
+        Me.Txtobserv.Location = New System.Drawing.Point(5, 65)
         Me.Txtobserv.Name = "Txtobserv"
-        Me.Txtobserv.Size = New System.Drawing.Size(752, 16)
+        Me.Txtobserv.Size = New System.Drawing.Size(627, 13)
         Me.Txtobserv.TabIndex = 5
         '
         'DataSetClientes1
@@ -423,9 +425,9 @@ Public Class Frmcliente
         Me.Txtnombre.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.DataSetClientes1, "Clientes.nombre", True))
         Me.Txtnombre.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Txtnombre.ForeColor = System.Drawing.Color.Blue
-        Me.Txtnombre.Location = New System.Drawing.Point(6, 29)
+        Me.Txtnombre.Location = New System.Drawing.Point(5, 25)
         Me.Txtnombre.Name = "Txtnombre"
-        Me.Txtnombre.Size = New System.Drawing.Size(551, 16)
+        Me.Txtnombre.Size = New System.Drawing.Size(459, 13)
         Me.Txtnombre.TabIndex = 0
         '
         'Txtcedula
@@ -434,9 +436,9 @@ Public Class Frmcliente
         Me.Txtcedula.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.DataSetClientes1, "Clientes.cedula", True))
         Me.Txtcedula.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Txtcedula.ForeColor = System.Drawing.Color.Blue
-        Me.Txtcedula.Location = New System.Drawing.Point(582, 29)
+        Me.Txtcedula.Location = New System.Drawing.Point(485, 25)
         Me.Txtcedula.Name = "Txtcedula"
-        Me.Txtcedula.Size = New System.Drawing.Size(176, 16)
+        Me.Txtcedula.Size = New System.Drawing.Size(147, 13)
         Me.Txtcedula.TabIndex = 1
         '
         'Label3
@@ -444,9 +446,9 @@ Public Class Frmcliente
         Me.Label3.BackColor = System.Drawing.SystemColors.ControlLight
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold)
         Me.Label3.ForeColor = System.Drawing.Color.RoyalBlue
-        Me.Label3.Location = New System.Drawing.Point(6, 10)
+        Me.Label3.Location = New System.Drawing.Point(5, 9)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(551, 18)
+        Me.Label3.Size = New System.Drawing.Size(459, 15)
         Me.Label3.TabIndex = 0
         Me.Label3.Text = "Nombre:"
         '
@@ -455,9 +457,9 @@ Public Class Frmcliente
         Me.Label4.BackColor = System.Drawing.SystemColors.ControlLight
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold)
         Me.Label4.ForeColor = System.Drawing.Color.RoyalBlue
-        Me.Label4.Location = New System.Drawing.Point(582, 10)
+        Me.Label4.Location = New System.Drawing.Point(485, 9)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(176, 18)
+        Me.Label4.Size = New System.Drawing.Size(147, 15)
         Me.Label4.TabIndex = 2
         Me.Label4.Text = "Cédula:"
         '
@@ -466,9 +468,9 @@ Public Class Frmcliente
         Me.Ckbempresa.BackColor = System.Drawing.SystemColors.ControlLight
         Me.Ckbempresa.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold)
         Me.Ckbempresa.ForeColor = System.Drawing.Color.RoyalBlue
-        Me.Ckbempresa.Location = New System.Drawing.Point(329, 69)
+        Me.Ckbempresa.Location = New System.Drawing.Point(274, 60)
         Me.Ckbempresa.Name = "Ckbempresa"
-        Me.Ckbempresa.Size = New System.Drawing.Size(296, 19)
+        Me.Ckbempresa.Size = New System.Drawing.Size(247, 16)
         Me.Ckbempresa.TabIndex = 9
         Me.Ckbempresa.Text = "Empresa, Asociación, Compañía..."
         Me.Ckbempresa.UseVisualStyleBackColor = False
@@ -478,9 +480,9 @@ Public Class Frmcliente
         Me.Ckbexcento.BackColor = System.Drawing.SystemColors.ControlLight
         Me.Ckbexcento.Font = New System.Drawing.Font("Georgia", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Ckbexcento.ForeColor = System.Drawing.Color.RoyalBlue
-        Me.Ckbexcento.Location = New System.Drawing.Point(772, 59)
+        Me.Ckbexcento.Location = New System.Drawing.Point(643, 51)
         Me.Ckbexcento.Name = "Ckbexcento"
-        Me.Ckbexcento.Size = New System.Drawing.Size(211, 18)
+        Me.Ckbexcento.Size = New System.Drawing.Size(176, 16)
         Me.Ckbexcento.TabIndex = 14
         Me.Ckbexcento.Text = "Excento de Impuesto"
         Me.Ckbexcento.UseVisualStyleBackColor = False
@@ -492,9 +494,9 @@ Public Class Frmcliente
         Me.Cbcredito.Font = New System.Drawing.Font("Georgia", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Cbcredito.ForeColor = System.Drawing.Color.Blue
         Me.Cbcredito.Items.AddRange(New Object() {"NO", "SI"})
-        Me.Cbcredito.Location = New System.Drawing.Point(34, 40)
+        Me.Cbcredito.Location = New System.Drawing.Point(28, 35)
         Me.Cbcredito.Name = "Cbcredito"
-        Me.Cbcredito.Size = New System.Drawing.Size(228, 25)
+        Me.Cbcredito.Size = New System.Drawing.Size(190, 22)
         Me.Cbcredito.TabIndex = 11
         '
         'Txtidentificacion
@@ -504,14 +506,14 @@ Public Class Frmcliente
         Me.Txtidentificacion.FieldReference = Nothing
         Me.Txtidentificacion.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Txtidentificacion.ForeColor = System.Drawing.Color.Red
-        Me.Txtidentificacion.Location = New System.Drawing.Point(812, 9)
+        Me.Txtidentificacion.Location = New System.Drawing.Point(677, 8)
         Me.Txtidentificacion.MaskEdit = ""
         Me.Txtidentificacion.Name = "Txtidentificacion"
         Me.Txtidentificacion.ReadOnly = True
         Me.Txtidentificacion.RegExPattern = ValidText.ValidText.RegularExpressionModes.Custom
         Me.Txtidentificacion.Required = False
         Me.Txtidentificacion.ShowErrorIcon = False
-        Me.Txtidentificacion.Size = New System.Drawing.Size(125, 16)
+        Me.Txtidentificacion.Size = New System.Drawing.Size(104, 13)
         Me.Txtidentificacion.TabIndex = 1
         Me.Txtidentificacion.Text = "00000000"
         Me.Txtidentificacion.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
@@ -525,13 +527,13 @@ Public Class Frmcliente
         Me.Txtimpuesto.FieldReference = Nothing
         Me.Txtimpuesto.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Txtimpuesto.ForeColor = System.Drawing.Color.Blue
-        Me.Txtimpuesto.Location = New System.Drawing.Point(858, 77)
+        Me.Txtimpuesto.Location = New System.Drawing.Point(715, 67)
         Me.Txtimpuesto.MaskEdit = ""
         Me.Txtimpuesto.Name = "Txtimpuesto"
         Me.Txtimpuesto.RegExPattern = ValidText.ValidText.RegularExpressionModes.Custom
         Me.Txtimpuesto.Required = False
         Me.Txtimpuesto.ShowErrorIcon = False
-        Me.Txtimpuesto.Size = New System.Drawing.Size(125, 16)
+        Me.Txtimpuesto.Size = New System.Drawing.Size(104, 13)
         Me.Txtimpuesto.TabIndex = 10
         Me.Txtimpuesto.Text = "100"
         Me.Txtimpuesto.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -560,9 +562,9 @@ Public Class Frmcliente
         Me.GroupBox3.Controls.Add(Me.CheckBoxMoroso)
         Me.GroupBox3.Font = New System.Drawing.Font("Georgia", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox3.ForeColor = System.Drawing.Color.RoyalBlue
-        Me.GroupBox3.Location = New System.Drawing.Point(29, 36)
+        Me.GroupBox3.Location = New System.Drawing.Point(24, 31)
         Me.GroupBox3.Name = "GroupBox3"
-        Me.GroupBox3.Size = New System.Drawing.Size(633, 189)
+        Me.GroupBox3.Size = New System.Drawing.Size(528, 164)
         Me.GroupBox3.TabIndex = 0
         Me.GroupBox3.TabStop = False
         '
@@ -572,9 +574,9 @@ Public Class Frmcliente
         Me.Label20.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.Label20.Font = New System.Drawing.Font("Georgia", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label20.ForeColor = System.Drawing.Color.RoyalBlue
-        Me.Label20.Location = New System.Drawing.Point(34, 22)
+        Me.Label20.Location = New System.Drawing.Point(28, 19)
         Me.Label20.Name = "Label20"
-        Me.Label20.Size = New System.Drawing.Size(228, 17)
+        Me.Label20.Size = New System.Drawing.Size(190, 15)
         Me.Label20.TabIndex = 18
         Me.Label20.Text = "Crédito"
         '
@@ -583,9 +585,9 @@ Public Class Frmcliente
         Me.ckOrdendeCompra.BackColor = System.Drawing.SystemColors.ControlLight
         Me.ckOrdendeCompra.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold)
         Me.ckOrdendeCompra.ForeColor = System.Drawing.Color.Red
-        Me.ckOrdendeCompra.Location = New System.Drawing.Point(329, 143)
+        Me.ckOrdendeCompra.Location = New System.Drawing.Point(274, 124)
         Me.ckOrdendeCompra.Name = "ckOrdendeCompra"
-        Me.ckOrdendeCompra.Size = New System.Drawing.Size(296, 19)
+        Me.ckOrdendeCompra.Size = New System.Drawing.Size(247, 16)
         Me.ckOrdendeCompra.TabIndex = 13
         Me.ckOrdendeCompra.Text = "Obligar Orden de Compra"
         Me.ckOrdendeCompra.UseVisualStyleBackColor = False
@@ -595,9 +597,9 @@ Public Class Frmcliente
         Me.Txtlimitecredito.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.DataSetClientes1, "Clientes.max_credito", True))
         Me.Txtlimitecredito.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Txtlimitecredito.ForeColor = System.Drawing.Color.RoyalBlue
-        Me.Txtlimitecredito.Location = New System.Drawing.Point(173, 125)
+        Me.Txtlimitecredito.Location = New System.Drawing.Point(144, 108)
         Me.Txtlimitecredito.Name = "Txtlimitecredito"
-        Me.Txtlimitecredito.Size = New System.Drawing.Size(86, 23)
+        Me.Txtlimitecredito.Size = New System.Drawing.Size(72, 20)
         Me.Txtlimitecredito.TabIndex = 2
         '
         'Txtdescuento
@@ -605,9 +607,9 @@ Public Class Frmcliente
         Me.Txtdescuento.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.DataSetClientes1, "Clientes.descuento", True))
         Me.Txtdescuento.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Txtdescuento.ForeColor = System.Drawing.Color.RoyalBlue
-        Me.Txtdescuento.Location = New System.Drawing.Point(175, 152)
+        Me.Txtdescuento.Location = New System.Drawing.Point(146, 132)
         Me.Txtdescuento.Name = "Txtdescuento"
-        Me.Txtdescuento.Size = New System.Drawing.Size(87, 23)
+        Me.Txtdescuento.Size = New System.Drawing.Size(72, 20)
         Me.Txtdescuento.TabIndex = 8
         '
         'Txtplazocredito
@@ -615,9 +617,9 @@ Public Class Frmcliente
         Me.Txtplazocredito.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.DataSetClientes1, "Clientes.Plazo_credito", True))
         Me.Txtplazocredito.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Txtplazocredito.ForeColor = System.Drawing.Color.RoyalBlue
-        Me.Txtplazocredito.Location = New System.Drawing.Point(175, 97)
+        Me.Txtplazocredito.Location = New System.Drawing.Point(146, 84)
         Me.Txtplazocredito.Name = "Txtplazocredito"
-        Me.Txtplazocredito.Size = New System.Drawing.Size(87, 23)
+        Me.Txtplazocredito.Size = New System.Drawing.Size(72, 20)
         Me.Txtplazocredito.TabIndex = 3
         '
         'ComboBox1
@@ -626,9 +628,9 @@ Public Class Frmcliente
         Me.ComboBox1.DataSource = Me.DataSetClientes1.Moneda
         Me.ComboBox1.DisplayMember = "MonedaNombre"
         Me.ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.ComboBox1.Location = New System.Drawing.Point(150, 69)
+        Me.ComboBox1.Location = New System.Drawing.Point(125, 60)
         Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(112, 25)
+        Me.ComboBox1.Size = New System.Drawing.Size(93, 22)
         Me.ComboBox1.TabIndex = 1
         Me.ComboBox1.ValueMember = "CodMoneda"
         '
@@ -639,9 +641,9 @@ Public Class Frmcliente
         Me.Label12.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.DataSetClientes1, "Moneda.Simbolo", True))
         Me.Label12.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold)
         Me.Label12.ForeColor = System.Drawing.Color.RoyalBlue
-        Me.Label12.Location = New System.Drawing.Point(155, 122)
+        Me.Label12.Location = New System.Drawing.Point(129, 106)
         Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(19, 23)
+        Me.Label12.Size = New System.Drawing.Size(16, 20)
         Me.Label12.TabIndex = 5
         Me.Label12.Text = "M"
         Me.Label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -650,9 +652,9 @@ Public Class Frmcliente
         '
         Me.Label13.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.Label13.Font = New System.Drawing.Font("Georgia", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label13.Location = New System.Drawing.Point(156, 152)
+        Me.Label13.Location = New System.Drawing.Point(130, 132)
         Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(19, 23)
+        Me.Label13.Size = New System.Drawing.Size(16, 20)
         Me.Label13.TabIndex = 7
         Me.Label13.Text = "%"
         '
@@ -661,9 +663,9 @@ Public Class Frmcliente
         Me.CheckBoxRestriccion.BackColor = System.Drawing.SystemColors.ControlLight
         Me.CheckBoxRestriccion.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold)
         Me.CheckBoxRestriccion.ForeColor = System.Drawing.Color.RoyalBlue
-        Me.CheckBoxRestriccion.Location = New System.Drawing.Point(329, 88)
+        Me.CheckBoxRestriccion.Location = New System.Drawing.Point(274, 76)
         Me.CheckBoxRestriccion.Name = "CheckBoxRestriccion"
-        Me.CheckBoxRestriccion.Size = New System.Drawing.Size(296, 18)
+        Me.CheckBoxRestriccion.Size = New System.Drawing.Size(247, 16)
         Me.CheckBoxRestriccion.TabIndex = 10
         Me.CheckBoxRestriccion.Text = "Permitir la venta sin restriccion de cuenta"
         Me.CheckBoxRestriccion.UseVisualStyleBackColor = False
@@ -674,9 +676,9 @@ Public Class Frmcliente
         Me.Label16.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.Label16.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold)
         Me.Label16.ForeColor = System.Drawing.Color.RoyalBlue
-        Me.Label16.Location = New System.Drawing.Point(31, 69)
+        Me.Label16.Location = New System.Drawing.Point(26, 60)
         Me.Label16.Name = "Label16"
-        Me.Label16.Size = New System.Drawing.Size(231, 23)
+        Me.Label16.Size = New System.Drawing.Size(192, 20)
         Me.Label16.TabIndex = 0
         Me.Label16.Text = "Moneda Crédito"
         Me.Label16.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -687,9 +689,9 @@ Public Class Frmcliente
         Me.Label8.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold)
         Me.Label8.ForeColor = System.Drawing.Color.RoyalBlue
-        Me.Label8.Location = New System.Drawing.Point(31, 97)
+        Me.Label8.Location = New System.Drawing.Point(26, 84)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(231, 23)
+        Me.Label8.Size = New System.Drawing.Size(192, 20)
         Me.Label8.TabIndex = 2
         Me.Label8.Text = "Plazo Crédito (Días)"
         Me.Label8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -700,9 +702,9 @@ Public Class Frmcliente
         Me.Label7.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold)
         Me.Label7.ForeColor = System.Drawing.Color.RoyalBlue
-        Me.Label7.Location = New System.Drawing.Point(31, 122)
+        Me.Label7.Location = New System.Drawing.Point(26, 106)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(231, 23)
+        Me.Label7.Size = New System.Drawing.Size(192, 20)
         Me.Label7.TabIndex = 4
         Me.Label7.Text = "Límite de Crédito"
         Me.Label7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -713,9 +715,9 @@ Public Class Frmcliente
         Me.Label19.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.Label19.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold)
         Me.Label19.ForeColor = System.Drawing.Color.RoyalBlue
-        Me.Label19.Location = New System.Drawing.Point(31, 152)
+        Me.Label19.Location = New System.Drawing.Point(26, 132)
         Me.Label19.Name = "Label19"
-        Me.Label19.Size = New System.Drawing.Size(221, 23)
+        Me.Label19.Size = New System.Drawing.Size(184, 20)
         Me.Label19.TabIndex = 6
         Me.Label19.Text = "Límite Descuento"
         '
@@ -725,9 +727,9 @@ Public Class Frmcliente
         Me.CheckBoxMoroso.DataBindings.Add(New System.Windows.Forms.Binding("Checked", Me.DataSetClientes1, "Clientes.Cliente_Moroso", True))
         Me.CheckBoxMoroso.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold)
         Me.CheckBoxMoroso.ForeColor = System.Drawing.Color.Red
-        Me.CheckBoxMoroso.Location = New System.Drawing.Point(329, 106)
+        Me.CheckBoxMoroso.Location = New System.Drawing.Point(274, 92)
         Me.CheckBoxMoroso.Name = "CheckBoxMoroso"
-        Me.CheckBoxMoroso.Size = New System.Drawing.Size(296, 19)
+        Me.CheckBoxMoroso.Size = New System.Drawing.Size(247, 16)
         Me.CheckBoxMoroso.TabIndex = 11
         Me.CheckBoxMoroso.Text = "Cliente en estado moroso"
         Me.CheckBoxMoroso.UseVisualStyleBackColor = False
@@ -738,9 +740,9 @@ Public Class Frmcliente
         Me.CheckBoxAnular.Enabled = False
         Me.CheckBoxAnular.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold)
         Me.CheckBoxAnular.ForeColor = System.Drawing.Color.Red
-        Me.CheckBoxAnular.Location = New System.Drawing.Point(547, 165)
+        Me.CheckBoxAnular.Location = New System.Drawing.Point(456, 143)
         Me.CheckBoxAnular.Name = "CheckBoxAnular"
-        Me.CheckBoxAnular.Size = New System.Drawing.Size(114, 18)
+        Me.CheckBoxAnular.Size = New System.Drawing.Size(95, 16)
         Me.CheckBoxAnular.TabIndex = 12
         Me.CheckBoxAnular.Text = "Inactivado"
         Me.CheckBoxAnular.UseVisualStyleBackColor = False
@@ -751,9 +753,9 @@ Public Class Frmcliente
         Me.CheckBoxAbrirCredito.Enabled = False
         Me.CheckBoxAbrirCredito.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold)
         Me.CheckBoxAbrirCredito.ForeColor = System.Drawing.Color.RoyalBlue
-        Me.CheckBoxAbrirCredito.Location = New System.Drawing.Point(58, 36)
+        Me.CheckBoxAbrirCredito.Location = New System.Drawing.Point(48, 31)
         Me.CheckBoxAbrirCredito.Name = "CheckBoxAbrirCredito"
-        Me.CheckBoxAbrirCredito.Size = New System.Drawing.Size(124, 17)
+        Me.CheckBoxAbrirCredito.Size = New System.Drawing.Size(104, 15)
         Me.CheckBoxAbrirCredito.TabIndex = 1
         Me.CheckBoxAbrirCredito.Text = "Activar Crédito"
         Me.ToolTip1.SetToolTip(Me.CheckBoxAbrirCredito, "Para activar crédito debe de tener habilitado en seguridad ""Opcional""")
@@ -767,15 +769,16 @@ Public Class Frmcliente
         Me.TabControl1.Controls.Add(Me.TabPage3)
         Me.TabControl1.Controls.Add(Me.TabPage4)
         Me.TabControl1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TabControl1.Location = New System.Drawing.Point(2, 189)
+        Me.TabControl1.Location = New System.Drawing.Point(2, 164)
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
-        Me.TabControl1.Size = New System.Drawing.Size(788, 268)
+        Me.TabControl1.Size = New System.Drawing.Size(656, 232)
         Me.TabControl1.TabIndex = 4
         '
         'TabPage1
         '
         Me.TabPage1.BackColor = System.Drawing.Color.Transparent
+        Me.TabPage1.Controls.Add(Me.ckNoCxC)
         Me.TabPage1.Controls.Add(Me.ckFallecido)
         Me.TabPage1.Controls.Add(Me.btnCambiarEstado)
         Me.TabPage1.Controls.Add(Me.ckNotificaRecibo)
@@ -812,9 +815,9 @@ Public Class Frmcliente
         Me.TabPage1.Controls.Add(Me.ComboBoxAgente)
         Me.TabPage1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TabPage1.ForeColor = System.Drawing.Color.RoyalBlue
-        Me.TabPage1.Location = New System.Drawing.Point(4, 27)
+        Me.TabPage1.Location = New System.Drawing.Point(4, 24)
         Me.TabPage1.Name = "TabPage1"
-        Me.TabPage1.Size = New System.Drawing.Size(780, 237)
+        Me.TabPage1.Size = New System.Drawing.Size(648, 204)
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "Datos Generales"
         '
@@ -822,18 +825,18 @@ Public Class Frmcliente
         '
         Me.ckFallecido.AutoSize = True
         Me.ckFallecido.ForeColor = System.Drawing.Color.Red
-        Me.ckFallecido.Location = New System.Drawing.Point(346, 212)
+        Me.ckFallecido.Location = New System.Drawing.Point(263, 184)
         Me.ckFallecido.Name = "ckFallecido"
-        Me.ckFallecido.Size = New System.Drawing.Size(95, 21)
+        Me.ckFallecido.Size = New System.Drawing.Size(77, 17)
         Me.ckFallecido.TabIndex = 36
         Me.ckFallecido.Text = "Fallecido"
         Me.ckFallecido.UseVisualStyleBackColor = True
         '
         'btnCambiarEstado
         '
-        Me.btnCambiarEstado.Location = New System.Drawing.Point(662, 162)
+        Me.btnCambiarEstado.Location = New System.Drawing.Point(552, 140)
         Me.btnCambiarEstado.Name = "btnCambiarEstado"
-        Me.btnCambiarEstado.Size = New System.Drawing.Size(100, 26)
+        Me.btnCambiarEstado.Size = New System.Drawing.Size(83, 23)
         Me.btnCambiarEstado.TabIndex = 35
         Me.btnCambiarEstado.Text = "Cambiar"
         Me.btnCambiarEstado.UseVisualStyleBackColor = True
@@ -841,9 +844,9 @@ Public Class Frmcliente
         'ckNotificaRecibo
         '
         Me.ckNotificaRecibo.AutoSize = True
-        Me.ckNotificaRecibo.Location = New System.Drawing.Point(547, 9)
+        Me.ckNotificaRecibo.Location = New System.Drawing.Point(456, 8)
         Me.ckNotificaRecibo.Name = "ckNotificaRecibo"
-        Me.ckNotificaRecibo.Size = New System.Drawing.Size(197, 21)
+        Me.ckNotificaRecibo.Size = New System.Drawing.Size(157, 17)
         Me.ckNotificaRecibo.TabIndex = 34
         Me.ckNotificaRecibo.Text = "Envia Recibo al Correo"
         Me.ckNotificaRecibo.UseVisualStyleBackColor = True
@@ -855,17 +858,17 @@ Public Class Frmcliente
         Me.txtCorreoRecibo.Enabled = False
         Me.txtCorreoRecibo.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtCorreoRecibo.ForeColor = System.Drawing.Color.Blue
-        Me.txtCorreoRecibo.Location = New System.Drawing.Point(547, 28)
+        Me.txtCorreoRecibo.Location = New System.Drawing.Point(456, 24)
         Me.txtCorreoRecibo.Name = "txtCorreoRecibo"
-        Me.txtCorreoRecibo.Size = New System.Drawing.Size(214, 16)
+        Me.txtCorreoRecibo.Size = New System.Drawing.Size(178, 13)
         Me.txtCorreoRecibo.TabIndex = 32
         '
         'ckMAG
         '
         Me.ckMAG.AutoSize = True
-        Me.ckMAG.Location = New System.Drawing.Point(547, 192)
+        Me.ckMAG.Location = New System.Drawing.Point(456, 166)
         Me.ckMAG.Name = "ckMAG"
-        Me.ckMAG.Size = New System.Drawing.Size(226, 21)
+        Me.ckMAG.Size = New System.Drawing.Size(179, 17)
         Me.ckMAG.TabIndex = 31
         Me.ckMAG.Text = "Esta Registrado en el MAG"
         Me.ckMAG.UseVisualStyleBackColor = True
@@ -875,9 +878,9 @@ Public Class Frmcliente
         Me.GroupBox1.Controls.Add(Me.txtDescuentoEspecial)
         Me.GroupBox1.Controls.Add(Me.Label24)
         Me.GroupBox1.Controls.Add(Me.Label25)
-        Me.GroupBox1.Location = New System.Drawing.Point(547, 105)
+        Me.GroupBox1.Location = New System.Drawing.Point(456, 91)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(214, 53)
+        Me.GroupBox1.Size = New System.Drawing.Size(178, 46)
         Me.GroupBox1.TabIndex = 30
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Descuentos Especiales"
@@ -886,9 +889,9 @@ Public Class Frmcliente
         '
         Me.txtDescuentoEspecial.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtDescuentoEspecial.ForeColor = System.Drawing.Color.RoyalBlue
-        Me.txtDescuentoEspecial.Location = New System.Drawing.Point(115, 22)
+        Me.txtDescuentoEspecial.Location = New System.Drawing.Point(96, 19)
         Me.txtDescuentoEspecial.Name = "txtDescuentoEspecial"
-        Me.txtDescuentoEspecial.Size = New System.Drawing.Size(75, 23)
+        Me.txtDescuentoEspecial.Size = New System.Drawing.Size(62, 20)
         Me.txtDescuentoEspecial.TabIndex = 11
         Me.txtDescuentoEspecial.Text = "0.00"
         Me.txtDescuentoEspecial.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -897,9 +900,9 @@ Public Class Frmcliente
         '
         Me.Label24.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.Label24.Font = New System.Drawing.Font("Georgia", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label24.Location = New System.Drawing.Point(91, 22)
+        Me.Label24.Location = New System.Drawing.Point(76, 19)
         Me.Label24.Name = "Label24"
-        Me.Label24.Size = New System.Drawing.Size(23, 23)
+        Me.Label24.Size = New System.Drawing.Size(19, 20)
         Me.Label24.TabIndex = 10
         Me.Label24.Text = "%"
         '
@@ -909,18 +912,18 @@ Public Class Frmcliente
         Me.Label25.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.Label25.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold)
         Me.Label25.ForeColor = System.Drawing.Color.RoyalBlue
-        Me.Label25.Location = New System.Drawing.Point(12, 22)
+        Me.Label25.Location = New System.Drawing.Point(10, 19)
         Me.Label25.Name = "Label25"
-        Me.Label25.Size = New System.Drawing.Size(175, 23)
+        Me.Label25.Size = New System.Drawing.Size(146, 20)
         Me.Label25.TabIndex = 9
         Me.Label25.Text = "Descuento"
         '
         'ckActualizado
         '
         Me.ckActualizado.AutoSize = True
-        Me.ckActualizado.Location = New System.Drawing.Point(228, 213)
+        Me.ckActualizado.Location = New System.Drawing.Point(169, 185)
         Me.ckActualizado.Name = "ckActualizado"
-        Me.ckActualizado.Size = New System.Drawing.Size(114, 21)
+        Me.ckActualizado.Size = New System.Drawing.Size(92, 17)
         Me.ckActualizado.TabIndex = 28
         Me.ckActualizado.Text = "Actualizado"
         Me.ckActualizado.UseVisualStyleBackColor = True
@@ -931,9 +934,9 @@ Public Class Frmcliente
         Me.Label23.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.Label23.Font = New System.Drawing.Font("Georgia", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label23.ForeColor = System.Drawing.Color.RoyalBlue
-        Me.Label23.Location = New System.Drawing.Point(8, 166)
+        Me.Label23.Location = New System.Drawing.Point(7, 144)
         Me.Label23.Name = "Label23"
-        Me.Label23.Size = New System.Drawing.Size(300, 21)
+        Me.Label23.Size = New System.Drawing.Size(250, 18)
         Me.Label23.TabIndex = 27
         Me.Label23.Text = "Correo  Facturacion Electronica"
         '
@@ -943,9 +946,9 @@ Public Class Frmcliente
         Me.txtCorreoComprobante.CharacterCasing = System.Windows.Forms.CharacterCasing.Lower
         Me.txtCorreoComprobante.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtCorreoComprobante.ForeColor = System.Drawing.Color.Blue
-        Me.txtCorreoComprobante.Location = New System.Drawing.Point(8, 194)
+        Me.txtCorreoComprobante.Location = New System.Drawing.Point(7, 168)
         Me.txtCorreoComprobante.Name = "txtCorreoComprobante"
-        Me.txtCorreoComprobante.Size = New System.Drawing.Size(300, 16)
+        Me.txtCorreoComprobante.Size = New System.Drawing.Size(250, 13)
         Me.txtCorreoComprobante.TabIndex = 26
         '
         'Label22
@@ -954,9 +957,9 @@ Public Class Frmcliente
         Me.Label22.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.Label22.Font = New System.Drawing.Font("Georgia", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label22.ForeColor = System.Drawing.Color.RoyalBlue
-        Me.Label22.Location = New System.Drawing.Point(772, 105)
+        Me.Label22.Location = New System.Drawing.Point(643, 91)
         Me.Label22.Name = "Label22"
-        Me.Label22.Size = New System.Drawing.Size(211, 17)
+        Me.Label22.Size = New System.Drawing.Size(176, 15)
         Me.Label22.TabIndex = 25
         Me.Label22.Text = "Motivo Exoneracion"
         Me.Label22.Visible = False
@@ -968,9 +971,9 @@ Public Class Frmcliente
         Me.cboExoneracion.DropDownWidth = 400
         Me.cboExoneracion.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cboExoneracion.ForeColor = System.Drawing.Color.Blue
-        Me.cboExoneracion.Location = New System.Drawing.Point(772, 123)
+        Me.cboExoneracion.Location = New System.Drawing.Point(643, 107)
         Me.cboExoneracion.Name = "cboExoneracion"
-        Me.cboExoneracion.Size = New System.Drawing.Size(211, 25)
+        Me.cboExoneracion.Size = New System.Drawing.Size(176, 21)
         Me.cboExoneracion.TabIndex = 24
         Me.cboExoneracion.Visible = False
         '
@@ -980,9 +983,9 @@ Public Class Frmcliente
         Me.Label21.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.Label21.Font = New System.Drawing.Font("Georgia", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label21.ForeColor = System.Drawing.Color.RoyalBlue
-        Me.Label21.Location = New System.Drawing.Point(317, 111)
+        Me.Label21.Location = New System.Drawing.Point(264, 96)
         Me.Label21.Name = "Label21"
-        Me.Label21.Size = New System.Drawing.Size(211, 17)
+        Me.Label21.Size = New System.Drawing.Size(176, 15)
         Me.Label21.TabIndex = 23
         Me.Label21.Text = "Tipo Cliente"
         '
@@ -993,9 +996,9 @@ Public Class Frmcliente
         Me.cboTipoCliente.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cboTipoCliente.ForeColor = System.Drawing.Color.Blue
         Me.cboTipoCliente.Items.AddRange(New Object() {"FISICA", "JURIDICA", "DIMEX"})
-        Me.cboTipoCliente.Location = New System.Drawing.Point(317, 129)
+        Me.cboTipoCliente.Location = New System.Drawing.Point(264, 112)
         Me.cboTipoCliente.Name = "cboTipoCliente"
-        Me.cboTipoCliente.Size = New System.Drawing.Size(211, 25)
+        Me.cboTipoCliente.Size = New System.Drawing.Size(176, 21)
         Me.cboTipoCliente.TabIndex = 22
         '
         'ck_notificacion
@@ -1004,9 +1007,9 @@ Public Class Frmcliente
         Me.ck_notificacion.DataBindings.Add(New System.Windows.Forms.Binding("Checked", Me.DataSetClientes1, "Clientes.notificar", True))
         Me.ck_notificacion.Font = New System.Drawing.Font("Georgia", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ck_notificacion.ForeColor = System.Drawing.Color.Red
-        Me.ck_notificacion.Location = New System.Drawing.Point(10, 213)
+        Me.ck_notificacion.Location = New System.Drawing.Point(8, 185)
         Me.ck_notificacion.Name = "ck_notificacion"
-        Me.ck_notificacion.Size = New System.Drawing.Size(211, 19)
+        Me.ck_notificacion.Size = New System.Drawing.Size(157, 16)
         Me.ck_notificacion.TabIndex = 21
         Me.ck_notificacion.Text = "Notificar por correo"
         Me.ck_notificacion.UseVisualStyleBackColor = False
@@ -1017,9 +1020,9 @@ Public Class Frmcliente
         Me.ckSugerido.DataBindings.Add(New System.Windows.Forms.Binding("Checked", Me.DataSetClientes1, "Clientes.PrecioSugerido", True))
         Me.ckSugerido.Font = New System.Drawing.Font("Georgia", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ckSugerido.ForeColor = System.Drawing.Color.RoyalBlue
-        Me.ckSugerido.Location = New System.Drawing.Point(547, 213)
+        Me.ckSugerido.Location = New System.Drawing.Point(456, 185)
         Me.ckSugerido.Name = "ckSugerido"
-        Me.ckSugerido.Size = New System.Drawing.Size(210, 19)
+        Me.ckSugerido.Size = New System.Drawing.Size(175, 16)
         Me.ckSugerido.TabIndex = 20
         Me.ckSugerido.Text = "Imprimir Precio Sugerido"
         Me.ckSugerido.UseVisualStyleBackColor = False
@@ -1027,9 +1030,9 @@ Public Class Frmcliente
         'chkbEliminaAgente
         '
         Me.chkbEliminaAgente.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.chkbEliminaAgente.Location = New System.Drawing.Point(437, 166)
+        Me.chkbEliminaAgente.Location = New System.Drawing.Point(364, 144)
         Me.chkbEliminaAgente.Name = "chkbEliminaAgente"
-        Me.chkbEliminaAgente.Size = New System.Drawing.Size(96, 19)
+        Me.chkbEliminaAgente.Size = New System.Drawing.Size(80, 16)
         Me.chkbEliminaAgente.TabIndex = 17
         Me.chkbEliminaAgente.Text = "Sin Agente"
         '
@@ -1039,9 +1042,9 @@ Public Class Frmcliente
         Me.Label18.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.Label18.Font = New System.Drawing.Font("Georgia", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label18.ForeColor = System.Drawing.Color.RoyalBlue
-        Me.Label18.Location = New System.Drawing.Point(317, 166)
+        Me.Label18.Location = New System.Drawing.Point(264, 144)
         Me.Label18.Name = "Label18"
-        Me.Label18.Size = New System.Drawing.Size(211, 19)
+        Me.Label18.Size = New System.Drawing.Size(176, 16)
         Me.Label18.TabIndex = 10
         Me.Label18.Text = "Agente Asignado"
         '
@@ -1050,9 +1053,9 @@ Public Class Frmcliente
         Me.Label17.BackColor = System.Drawing.SystemColors.ControlLight
         Me.Label17.Font = New System.Drawing.Font("Georgia", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label17.ForeColor = System.Drawing.Color.RoyalBlue
-        Me.Label17.Location = New System.Drawing.Point(772, 77)
+        Me.Label17.Location = New System.Drawing.Point(643, 67)
         Me.Label17.Name = "Label17"
-        Me.Label17.Size = New System.Drawing.Size(92, 15)
+        Me.Label17.Size = New System.Drawing.Size(77, 13)
         Me.Label17.TabIndex = 8
         Me.Label17.Text = " %  de  I.V."
         Me.Label17.Visible = False
@@ -1063,9 +1066,9 @@ Public Class Frmcliente
         Me.Label10.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.Label10.Font = New System.Drawing.Font("Georgia", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label10.ForeColor = System.Drawing.Color.RoyalBlue
-        Me.Label10.Location = New System.Drawing.Point(547, 55)
+        Me.Label10.Location = New System.Drawing.Point(456, 48)
         Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(211, 18)
+        Me.Label10.Size = New System.Drawing.Size(176, 15)
         Me.Label10.TabIndex = 12
         Me.Label10.Text = "Tipo Precio"
         '
@@ -1075,9 +1078,9 @@ Public Class Frmcliente
         Me.Label14.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.Label14.Font = New System.Drawing.Font("Georgia", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label14.ForeColor = System.Drawing.Color.RoyalBlue
-        Me.Label14.Location = New System.Drawing.Point(10, 9)
+        Me.Label14.Location = New System.Drawing.Point(8, 8)
         Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(249, 18)
+        Me.Label14.Size = New System.Drawing.Size(208, 15)
         Me.Label14.TabIndex = 0
         Me.Label14.Text = "Teléfono"
         '
@@ -1087,9 +1090,9 @@ Public Class Frmcliente
         Me.Txtfax1.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.DataSetClientes1, "Clientes.fax_01", True))
         Me.Txtfax1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Txtfax1.ForeColor = System.Drawing.Color.Blue
-        Me.Txtfax1.Location = New System.Drawing.Point(269, 28)
+        Me.Txtfax1.Location = New System.Drawing.Point(224, 24)
         Me.Txtfax1.Name = "Txtfax1"
-        Me.Txtfax1.Size = New System.Drawing.Size(125, 16)
+        Me.Txtfax1.Size = New System.Drawing.Size(104, 13)
         Me.Txtfax1.TabIndex = 2
         '
         'Txttel1
@@ -1098,9 +1101,9 @@ Public Class Frmcliente
         Me.Txttel1.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.DataSetClientes1, "Clientes.Telefono_01", True))
         Me.Txttel1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Txttel1.ForeColor = System.Drawing.Color.Blue
-        Me.Txttel1.Location = New System.Drawing.Point(10, 28)
+        Me.Txttel1.Location = New System.Drawing.Point(8, 24)
         Me.Txttel1.Name = "Txttel1"
-        Me.Txttel1.Size = New System.Drawing.Size(115, 16)
+        Me.Txttel1.Size = New System.Drawing.Size(96, 13)
         Me.Txttel1.TabIndex = 0
         '
         'Txdireccion
@@ -1110,9 +1113,9 @@ Public Class Frmcliente
         Me.Txdireccion.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.DataSetClientes1, "Clientes.direccion", True))
         Me.Txdireccion.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Txdireccion.ForeColor = System.Drawing.Color.Blue
-        Me.Txdireccion.Location = New System.Drawing.Point(10, 78)
+        Me.Txdireccion.Location = New System.Drawing.Point(8, 68)
         Me.Txdireccion.Name = "Txdireccion"
-        Me.Txdireccion.Size = New System.Drawing.Size(518, 16)
+        Me.Txdireccion.Size = New System.Drawing.Size(432, 13)
         Me.Txdireccion.TabIndex = 4
         '
         'Label11
@@ -1121,9 +1124,9 @@ Public Class Frmcliente
         Me.Label11.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.Label11.Font = New System.Drawing.Font("Georgia", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label11.ForeColor = System.Drawing.Color.RoyalBlue
-        Me.Label11.Location = New System.Drawing.Point(269, 9)
+        Me.Label11.Location = New System.Drawing.Point(224, 8)
         Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(259, 18)
+        Me.Label11.Size = New System.Drawing.Size(216, 15)
         Me.Label11.TabIndex = 3
         Me.Label11.Text = "Fax (es):"
         '
@@ -1133,9 +1136,9 @@ Public Class Frmcliente
         Me.Label6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.Label6.Font = New System.Drawing.Font("Georgia", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.ForeColor = System.Drawing.Color.RoyalBlue
-        Me.Label6.Location = New System.Drawing.Point(10, 55)
+        Me.Label6.Location = New System.Drawing.Point(8, 48)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(518, 19)
+        Me.Label6.Size = New System.Drawing.Size(432, 16)
         Me.Label6.TabIndex = 6
         Me.Label6.Text = "Dirección"
         '
@@ -1145,9 +1148,9 @@ Public Class Frmcliente
         Me.Label5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.Label5.Font = New System.Drawing.Font("Georgia", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.ForeColor = System.Drawing.Color.RoyalBlue
-        Me.Label5.Location = New System.Drawing.Point(10, 111)
+        Me.Label5.Location = New System.Drawing.Point(8, 96)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(300, 21)
+        Me.Label5.Size = New System.Drawing.Size(250, 18)
         Me.Label5.TabIndex = 8
         Me.Label5.Text = "Correo Cuentas por Cobrar"
         '
@@ -1158,9 +1161,9 @@ Public Class Frmcliente
         Me.TxtEmail.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.DataSetClientes1, "Clientes.e_mail", True))
         Me.TxtEmail.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TxtEmail.ForeColor = System.Drawing.Color.Blue
-        Me.TxtEmail.Location = New System.Drawing.Point(10, 138)
+        Me.TxtEmail.Location = New System.Drawing.Point(8, 120)
         Me.TxtEmail.Name = "TxtEmail"
-        Me.TxtEmail.Size = New System.Drawing.Size(300, 16)
+        Me.TxtEmail.Size = New System.Drawing.Size(250, 13)
         Me.TxtEmail.TabIndex = 5
         '
         'Txtfax2
@@ -1169,9 +1172,9 @@ Public Class Frmcliente
         Me.Txtfax2.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.DataSetClientes1, "Clientes.fax_02", True))
         Me.Txtfax2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Txtfax2.ForeColor = System.Drawing.Color.Blue
-        Me.Txtfax2.Location = New System.Drawing.Point(413, 28)
+        Me.Txtfax2.Location = New System.Drawing.Point(344, 24)
         Me.Txtfax2.Name = "Txtfax2"
-        Me.Txtfax2.Size = New System.Drawing.Size(115, 16)
+        Me.Txtfax2.Size = New System.Drawing.Size(96, 13)
         Me.Txtfax2.TabIndex = 3
         '
         'Txttel2
@@ -1180,9 +1183,9 @@ Public Class Frmcliente
         Me.Txttel2.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.DataSetClientes1, "Clientes.telefono_02", True))
         Me.Txttel2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Txttel2.ForeColor = System.Drawing.Color.Blue
-        Me.Txttel2.Location = New System.Drawing.Point(144, 28)
+        Me.Txttel2.Location = New System.Drawing.Point(120, 24)
         Me.Txttel2.Name = "Txttel2"
-        Me.Txttel2.Size = New System.Drawing.Size(115, 16)
+        Me.Txttel2.Size = New System.Drawing.Size(96, 13)
         Me.Txttel2.TabIndex = 1
         '
         'CbTipoPrecio
@@ -1192,9 +1195,9 @@ Public Class Frmcliente
         Me.CbTipoPrecio.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CbTipoPrecio.ForeColor = System.Drawing.Color.Blue
         Me.CbTipoPrecio.Items.AddRange(New Object() {"PRECIO A", "PRECIO B", "PRECIO C", "PRECIO D"})
-        Me.CbTipoPrecio.Location = New System.Drawing.Point(547, 74)
+        Me.CbTipoPrecio.Location = New System.Drawing.Point(456, 64)
         Me.CbTipoPrecio.Name = "CbTipoPrecio"
-        Me.CbTipoPrecio.Size = New System.Drawing.Size(211, 25)
+        Me.CbTipoPrecio.Size = New System.Drawing.Size(176, 21)
         Me.CbTipoPrecio.TabIndex = 7
         '
         'ComboBoxAgente
@@ -1202,9 +1205,9 @@ Public Class Frmcliente
         Me.ComboBoxAgente.DataBindings.Add(New System.Windows.Forms.Binding("SelectedValue", Me.DataSetClientes1, "Clientes.agente", True))
         Me.ComboBoxAgente.DataSource = Me.DataSetClientes1.Usuarios
         Me.ComboBoxAgente.DisplayMember = "Nombre"
-        Me.ComboBoxAgente.Location = New System.Drawing.Point(317, 185)
+        Me.ComboBoxAgente.Location = New System.Drawing.Point(264, 160)
         Me.ComboBoxAgente.Name = "ComboBoxAgente"
-        Me.ComboBoxAgente.Size = New System.Drawing.Size(211, 25)
+        Me.ComboBoxAgente.Size = New System.Drawing.Size(176, 21)
         Me.ComboBoxAgente.TabIndex = 6
         Me.ComboBoxAgente.ValueMember = "Nombre"
         '
@@ -1214,17 +1217,17 @@ Public Class Frmcliente
         Me.TabPage5.Controls.Add(Me.btnIdentificarse)
         Me.TabPage5.Controls.Add(Me.CheckBoxAbrirCredito)
         Me.TabPage5.Controls.Add(Me.GroupBox3)
-        Me.TabPage5.Location = New System.Drawing.Point(4, 27)
+        Me.TabPage5.Location = New System.Drawing.Point(4, 24)
         Me.TabPage5.Name = "TabPage5"
-        Me.TabPage5.Size = New System.Drawing.Size(780, 237)
+        Me.TabPage5.Size = New System.Drawing.Size(648, 204)
         Me.TabPage5.TabIndex = 4
         Me.TabPage5.Text = "Crédito y Descuento"
         '
         'btnIdentificarse
         '
-        Me.btnIdentificarse.Location = New System.Drawing.Point(60, 3)
+        Me.btnIdentificarse.Location = New System.Drawing.Point(50, 3)
         Me.btnIdentificarse.Name = "btnIdentificarse"
-        Me.btnIdentificarse.Size = New System.Drawing.Size(228, 27)
+        Me.btnIdentificarse.Size = New System.Drawing.Size(190, 23)
         Me.btnIdentificarse.TabIndex = 2
         Me.btnIdentificarse.Text = "Activar opciones de Credito"
         Me.btnIdentificarse.UseVisualStyleBackColor = True
@@ -1233,9 +1236,9 @@ Public Class Frmcliente
         '
         Me.TabPage2.Controls.Add(Me.Grid_Encargado_Compras)
         Me.TabPage2.ForeColor = System.Drawing.Color.RoyalBlue
-        Me.TabPage2.Location = New System.Drawing.Point(4, 27)
+        Me.TabPage2.Location = New System.Drawing.Point(4, 24)
         Me.TabPage2.Name = "TabPage2"
-        Me.TabPage2.Size = New System.Drawing.Size(780, 237)
+        Me.TabPage2.Size = New System.Drawing.Size(648, 204)
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "Encargado de Compras"
         '
@@ -1247,11 +1250,11 @@ Public Class Frmcliente
         '
         '
         Me.Grid_Encargado_Compras.EmbeddedNavigator.Name = ""
-        Me.Grid_Encargado_Compras.Location = New System.Drawing.Point(5, 6)
+        Me.Grid_Encargado_Compras.Location = New System.Drawing.Point(4, 5)
         Me.Grid_Encargado_Compras.MainView = Me.GridView2
         Me.Grid_Encargado_Compras.Name = "Grid_Encargado_Compras"
         Me.Grid_Encargado_Compras.RepositoryItems.AddRange(New DevExpress.XtraEditors.Repository.RepositoryItem() {Me.RepositoryItemTextEdit1})
-        Me.Grid_Encargado_Compras.Size = New System.Drawing.Size(768, 225)
+        Me.Grid_Encargado_Compras.Size = New System.Drawing.Size(640, 195)
         Me.Grid_Encargado_Compras.TabIndex = 185
         Me.Grid_Encargado_Compras.Text = "GridControl2"
         '
@@ -1312,9 +1315,9 @@ Public Class Frmcliente
         '
         Me.TabPage3.Controls.Add(Me.Grid_Ref_Banc)
         Me.TabPage3.ForeColor = System.Drawing.Color.RoyalBlue
-        Me.TabPage3.Location = New System.Drawing.Point(4, 27)
+        Me.TabPage3.Location = New System.Drawing.Point(4, 24)
         Me.TabPage3.Name = "TabPage3"
-        Me.TabPage3.Size = New System.Drawing.Size(780, 237)
+        Me.TabPage3.Size = New System.Drawing.Size(648, 204)
         Me.TabPage3.TabIndex = 2
         Me.TabPage3.Text = "Referencias Bancarias"
         '
@@ -1326,11 +1329,11 @@ Public Class Frmcliente
         '
         '
         Me.Grid_Ref_Banc.EmbeddedNavigator.Name = ""
-        Me.Grid_Ref_Banc.Location = New System.Drawing.Point(5, 3)
+        Me.Grid_Ref_Banc.Location = New System.Drawing.Point(4, 3)
         Me.Grid_Ref_Banc.MainView = Me.GridView1
         Me.Grid_Ref_Banc.Name = "Grid_Ref_Banc"
         Me.Grid_Ref_Banc.RepositoryItems.AddRange(New DevExpress.XtraEditors.Repository.RepositoryItem() {Me.RepositoryItemTextEdit3, Me.RepositoryItemTextEdit4})
-        Me.Grid_Ref_Banc.Size = New System.Drawing.Size(768, 228)
+        Me.Grid_Ref_Banc.Size = New System.Drawing.Size(640, 197)
         Me.Grid_Ref_Banc.TabIndex = 184
         Me.Grid_Ref_Banc.Text = "GridControl1"
         '
@@ -1394,9 +1397,9 @@ Public Class Frmcliente
         '
         Me.TabPage4.Controls.Add(Me.Grid_Ref_Comer)
         Me.TabPage4.ForeColor = System.Drawing.Color.RoyalBlue
-        Me.TabPage4.Location = New System.Drawing.Point(4, 27)
+        Me.TabPage4.Location = New System.Drawing.Point(4, 24)
         Me.TabPage4.Name = "TabPage4"
-        Me.TabPage4.Size = New System.Drawing.Size(780, 237)
+        Me.TabPage4.Size = New System.Drawing.Size(648, 204)
         Me.TabPage4.TabIndex = 3
         Me.TabPage4.Text = "Referencias Comerciales"
         '
@@ -1408,11 +1411,11 @@ Public Class Frmcliente
         '
         '
         Me.Grid_Ref_Comer.EmbeddedNavigator.Name = ""
-        Me.Grid_Ref_Comer.Location = New System.Drawing.Point(4, 0)
+        Me.Grid_Ref_Comer.Location = New System.Drawing.Point(3, 0)
         Me.Grid_Ref_Comer.MainView = Me.GridView3
         Me.Grid_Ref_Comer.Name = "Grid_Ref_Comer"
         Me.Grid_Ref_Comer.RepositoryItems.AddRange(New DevExpress.XtraEditors.Repository.RepositoryItem() {Me.RepositoryItemTextEdit2})
-        Me.Grid_Ref_Comer.Size = New System.Drawing.Size(768, 231)
+        Me.Grid_Ref_Comer.Size = New System.Drawing.Size(640, 200)
         Me.Grid_Ref_Comer.TabIndex = 185
         Me.Grid_Ref_Comer.Text = "GridControl3"
         '
@@ -1475,17 +1478,17 @@ Public Class Frmcliente
         Me.ComboBoxRestricciones.Font = New System.Drawing.Font("Georgia", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ComboBoxRestricciones.ForeColor = System.Drawing.Color.Blue
         Me.ComboBoxRestricciones.Items.AddRange(New Object() {"NO", "SI"})
-        Me.ComboBoxRestricciones.Location = New System.Drawing.Point(547, 443)
+        Me.ComboBoxRestricciones.Location = New System.Drawing.Point(456, 384)
         Me.ComboBoxRestricciones.Name = "ComboBoxRestricciones"
-        Me.ComboBoxRestricciones.Size = New System.Drawing.Size(77, 25)
+        Me.ComboBoxRestricciones.Size = New System.Drawing.Size(64, 22)
         Me.ComboBoxRestricciones.TabIndex = 59
         '
         'LabelID_TipoPrecio
         '
         Me.LabelID_TipoPrecio.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.DataSetClientes1, "Clientes.tipoprecio", True))
-        Me.LabelID_TipoPrecio.Location = New System.Drawing.Point(202, 442)
+        Me.LabelID_TipoPrecio.Location = New System.Drawing.Point(168, 383)
         Me.LabelID_TipoPrecio.Name = "LabelID_TipoPrecio"
-        Me.LabelID_TipoPrecio.Size = New System.Drawing.Size(78, 18)
+        Me.LabelID_TipoPrecio.Size = New System.Drawing.Size(65, 16)
         Me.LabelID_TipoPrecio.TabIndex = 72
         Me.LabelID_TipoPrecio.Text = "0"
         '
@@ -1494,9 +1497,9 @@ Public Class Frmcliente
         Me.TxtID_Usuario.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.TxtID_Usuario.Enabled = False
         Me.TxtID_Usuario.ForeColor = System.Drawing.Color.Blue
-        Me.TxtID_Usuario.Location = New System.Drawing.Point(115, 442)
+        Me.TxtID_Usuario.Location = New System.Drawing.Point(96, 383)
         Me.TxtID_Usuario.Name = "TxtID_Usuario"
-        Me.TxtID_Usuario.Size = New System.Drawing.Size(77, 15)
+        Me.TxtID_Usuario.Size = New System.Drawing.Size(64, 13)
         Me.TxtID_Usuario.TabIndex = 71
         '
         'Label15
@@ -1508,9 +1511,9 @@ Public Class Frmcliente
         Me.Label15.ForeColor = System.Drawing.Color.White
         Me.Label15.Image = CType(resources.GetObject("Label15.Image"), System.Drawing.Image)
         Me.Label15.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.Label15.Location = New System.Drawing.Point(0, -6)
+        Me.Label15.Location = New System.Drawing.Point(0, -5)
         Me.Label15.Name = "Label15"
-        Me.Label15.Size = New System.Drawing.Size(790, 46)
+        Me.Label15.Size = New System.Drawing.Size(658, 40)
         Me.Label15.TabIndex = 0
         Me.Label15.Text = "Formulario de Clientes"
         Me.Label15.TextAlign = System.Drawing.ContentAlignment.TopCenter
@@ -1525,10 +1528,10 @@ Public Class Frmcliente
         Me.ToolBar1.DropDownArrows = True
         Me.ToolBar1.ImageList = Me.ImageList1
         Me.ToolBar1.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.ToolBar1.Location = New System.Drawing.Point(0, 459)
+        Me.ToolBar1.Location = New System.Drawing.Point(0, 400)
         Me.ToolBar1.Name = "ToolBar1"
         Me.ToolBar1.ShowToolTips = True
-        Me.ToolBar1.Size = New System.Drawing.Size(779, 65)
+        Me.ToolBar1.Size = New System.Drawing.Size(648, 56)
         Me.ToolBar1.TabIndex = 71
         '
         'ToolBarNuevo
@@ -1591,9 +1594,9 @@ Public Class Frmcliente
         Me.Panel1.Controls.Add(Me.Label36)
         Me.Panel1.Controls.Add(Me.txtNombreUsuario)
         Me.Panel1.Controls.Add(Me.txtUsuario)
-        Me.Panel1.Location = New System.Drawing.Point(425, 523)
+        Me.Panel1.Location = New System.Drawing.Point(354, 455)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(355, 18)
+        Me.Panel1.Size = New System.Drawing.Size(296, 16)
         Me.Panel1.TabIndex = 0
         '
         'Label36
@@ -1601,9 +1604,9 @@ Public Class Frmcliente
         Me.Label36.BackColor = System.Drawing.Color.RoyalBlue
         Me.Label36.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label36.ForeColor = System.Drawing.Color.White
-        Me.Label36.Location = New System.Drawing.Point(-10, 0)
+        Me.Label36.Location = New System.Drawing.Point(-8, 0)
         Me.Label36.Name = "Label36"
-        Me.Label36.Size = New System.Drawing.Size(87, 15)
+        Me.Label36.Size = New System.Drawing.Size(72, 13)
         Me.Label36.TabIndex = 0
         Me.Label36.Text = "Usuario->"
         Me.Label36.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -1614,20 +1617,20 @@ Public Class Frmcliente
         Me.txtNombreUsuario.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtNombreUsuario.Enabled = False
         Me.txtNombreUsuario.ForeColor = System.Drawing.Color.Blue
-        Me.txtNombreUsuario.Location = New System.Drawing.Point(148, 0)
+        Me.txtNombreUsuario.Location = New System.Drawing.Point(123, 0)
         Me.txtNombreUsuario.Name = "txtNombreUsuario"
         Me.txtNombreUsuario.ReadOnly = True
-        Me.txtNombreUsuario.Size = New System.Drawing.Size(207, 15)
+        Me.txtNombreUsuario.Size = New System.Drawing.Size(173, 13)
         Me.txtNombreUsuario.TabIndex = 2
         '
         'txtUsuario
         '
         Me.txtUsuario.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtUsuario.ForeColor = System.Drawing.Color.Blue
-        Me.txtUsuario.Location = New System.Drawing.Point(77, 0)
+        Me.txtUsuario.Location = New System.Drawing.Point(64, 0)
         Me.txtUsuario.Name = "txtUsuario"
         Me.txtUsuario.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.txtUsuario.Size = New System.Drawing.Size(67, 15)
+        Me.txtUsuario.Size = New System.Drawing.Size(56, 13)
         Me.txtUsuario.TabIndex = 1
         '
         'SqlConnection1
@@ -1804,9 +1807,9 @@ Public Class Frmcliente
         Me.Label9.BackColor = System.Drawing.Color.White
         Me.Label9.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.DataSetClientes1, "Table.Cliente_No", True))
         Me.Label9.ForeColor = System.Drawing.Color.Red
-        Me.Label9.Location = New System.Drawing.Point(7, 16)
+        Me.Label9.Location = New System.Drawing.Point(6, 14)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(127, 19)
+        Me.Label9.Size = New System.Drawing.Size(106, 16)
         Me.Label9.TabIndex = 1
         Me.Label9.Text = "00000000"
         Me.Label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -1821,9 +1824,9 @@ Public Class Frmcliente
         Me.PanelDatosBasicos.Controls.Add(Me.Txtnombre)
         Me.PanelDatosBasicos.Controls.Add(Me.Txtcedula)
         Me.PanelDatosBasicos.Controls.Add(Me.Label2)
-        Me.PanelDatosBasicos.Location = New System.Drawing.Point(7, 37)
+        Me.PanelDatosBasicos.Location = New System.Drawing.Point(6, 32)
         Me.PanelDatosBasicos.Name = "PanelDatosBasicos"
-        Me.PanelDatosBasicos.Size = New System.Drawing.Size(765, 148)
+        Me.PanelDatosBasicos.Size = New System.Drawing.Size(637, 128)
         Me.PanelDatosBasicos.TabIndex = 0
         '
         'lblAdvertenciaMoroso
@@ -1831,9 +1834,9 @@ Public Class Frmcliente
         Me.lblAdvertenciaMoroso.BackColor = System.Drawing.SystemColors.ControlLight
         Me.lblAdvertenciaMoroso.Font = New System.Drawing.Font("Microsoft Sans Serif", 26.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblAdvertenciaMoroso.ForeColor = System.Drawing.Color.Red
-        Me.lblAdvertenciaMoroso.Location = New System.Drawing.Point(6, 93)
+        Me.lblAdvertenciaMoroso.Location = New System.Drawing.Point(5, 81)
         Me.lblAdvertenciaMoroso.Name = "lblAdvertenciaMoroso"
-        Me.lblAdvertenciaMoroso.Size = New System.Drawing.Size(752, 49)
+        Me.lblAdvertenciaMoroso.Size = New System.Drawing.Size(627, 42)
         Me.lblAdvertenciaMoroso.TabIndex = 6
         Me.lblAdvertenciaMoroso.Text = "<<<<<  Cliente Moroso!!! >>>>>"
         Me.lblAdvertenciaMoroso.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -1841,9 +1844,9 @@ Public Class Frmcliente
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(835, 92)
+        Me.Button1.Location = New System.Drawing.Point(696, 80)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(77, 28)
+        Me.Button1.Size = New System.Drawing.Size(64, 24)
         Me.Button1.TabIndex = 75
         Me.Button1.Text = "Validar"
         '
@@ -1852,9 +1855,9 @@ Public Class Frmcliente
         Me.Label1.BackColor = System.Drawing.SystemColors.ControlText
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold)
         Me.Label1.ForeColor = System.Drawing.Color.RoyalBlue
-        Me.Label1.Location = New System.Drawing.Point(835, 129)
+        Me.Label1.Location = New System.Drawing.Point(696, 112)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(77, 18)
+        Me.Label1.Size = New System.Drawing.Size(64, 15)
         Me.Label1.TabIndex = 76
         '
         'SqlSelectCommand8
@@ -1892,9 +1895,9 @@ Public Class Frmcliente
         'Tex_Accion
         '
         Me.Tex_Accion.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.DataSetClientes1, "Bitacora.Accion", True))
-        Me.Tex_Accion.Location = New System.Drawing.Point(595, 471)
+        Me.Tex_Accion.Location = New System.Drawing.Point(496, 408)
         Me.Tex_Accion.Name = "Tex_Accion"
-        Me.Tex_Accion.Size = New System.Drawing.Size(183, 22)
+        Me.Tex_Accion.Size = New System.Drawing.Size(152, 20)
         Me.Tex_Accion.TabIndex = 16
         '
         'DataSet_MovimientoCaja1
@@ -1909,10 +1912,21 @@ Public Class Frmcliente
         Me.ToolTipController1.ShowBeak = True
         Me.ToolTipController1.Style = New DevExpress.Utils.ViewStyle("ToolTip style")
         '
+        'ckNoCxC
+        '
+        Me.ckNoCxC.AutoSize = True
+        Me.ckNoCxC.ForeColor = System.Drawing.Color.Red
+        Me.ckNoCxC.Location = New System.Drawing.Point(363, 184)
+        Me.ckNoCxC.Name = "ckNoCxC"
+        Me.ckNoCxC.Size = New System.Drawing.Size(68, 17)
+        Me.ckNoCxC.TabIndex = 37
+        Me.ckNoCxC.Text = "No CxC"
+        Me.ckNoCxC.UseVisualStyleBackColor = True
+        '
         'Frmcliente
         '
-        Me.AutoScaleBaseSize = New System.Drawing.Size(6, 15)
-        Me.ClientSize = New System.Drawing.Size(779, 524)
+        Me.AutoScaleBaseSize = New System.Drawing.Size(5, 13)
+        Me.ClientSize = New System.Drawing.Size(648, 456)
         Me.Controls.Add(Me.TabControl1)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.ToolBar1)
@@ -1930,8 +1944,8 @@ Public Class Frmcliente
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.KeyPreview = True
         Me.MaximizeBox = False
-        Me.MaximumSize = New System.Drawing.Size(797, 571)
-        Me.MinimumSize = New System.Drawing.Size(797, 526)
+        Me.MaximumSize = New System.Drawing.Size(664, 495)
+        Me.MinimumSize = New System.Drawing.Size(664, 456)
         Me.Name = "Frmcliente"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Administrador de Clientes"
@@ -2018,6 +2032,10 @@ Public Class Frmcliente
     Public CadenaConexionTemp As String = ""
     Private Sub Frmadmincliente_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         'Establece la conexión a la base de datos al cargar el formulario
+
+        Me.Txtdescuento.MaxLength = 3
+        Me.Txtplazocredito.MaxLength = 3
+
         Try
 
             If Me.txtUsuario.Text <> "" Then
@@ -2518,7 +2536,7 @@ Public Class Frmcliente
                     End If
 
                     Dim db As New GestioDatos
-                    db.Ejecuta("Update Clientes set EnviarRecibo = " & IIf(Me.ckNotificaRecibo.Checked = True, 1, 0) & ", Fallecido = " & IIf(Me.ckFallecido.Checked = True, 1, 0) & ", CorreoRecibo = '" & Me.txtCorreoRecibo.Text & "', MAG = " & IIf(Me.ckMAG.Checked = True, 1, 0) & ", Actualizado = " & IIf(Me.ckActualizado.Checked = True, 1, 0) & ", CorreoComprobante = '" & Me.txtCorreoComprobante.Text & "', OrdenCompra = " & IIf(Me.ckOrdendeCompra.Checked = True, 1, 0) & ", DescuentoEspecial = " & Me.txtDescuentoEspecial.Text & " Where Identificacion = '" & BindingContext(Me.DataSetClientes1, "Clientes").Current("Identificacion") & "'")
+                    db.Ejecuta("Update Clientes set EnviarRecibo = " & IIf(Me.ckNotificaRecibo.Checked = True, 1, 0) & ", Fallecido = " & IIf(Me.ckFallecido.Checked = True, 1, 0) & ", CorreoRecibo = '" & Me.txtCorreoRecibo.Text & "', MAG = " & IIf(Me.ckMAG.Checked = True, 1, 0) & ", NoCxC = " & IIf(Me.ckNoCxC.Checked = True, 1, 0) & ", Actualizado = " & IIf(Me.ckActualizado.Checked = True, 1, 0) & ", CorreoComprobante = '" & Me.txtCorreoComprobante.Text & "', OrdenCompra = " & IIf(Me.ckOrdendeCompra.Checked = True, 1, 0) & ", DescuentoEspecial = " & Me.txtDescuentoEspecial.Text & " Where Identificacion = '" & BindingContext(Me.DataSetClientes1, "Clientes").Current("Identificacion") & "'")
 
                 Catch ex As Exception
                 End Try
@@ -2810,7 +2828,7 @@ Public Class Frmcliente
 
         Try
             Dim dt As New DataTable
-            cFunciones.Llenar_Tabla_Generico("Select Incobrable, Cliente_Moroso, Anulado, OrdenCompra, CorreoComprobante, Actualizado, DescuentoEspecial, MAG, EnviarRecibo, CorreoRecibo, Fallecido from Clientes where identificacion = " & Cod_Cliente_Buscar, dt, CadenaConexionSeePOS)
+            cFunciones.Llenar_Tabla_Generico("Select Incobrable, Cliente_Moroso, Anulado, OrdenCompra, CorreoComprobante, Actualizado, DescuentoEspecial, MAG, EnviarRecibo, CorreoRecibo, Fallecido, NoCXC from Clientes where identificacion = " & Cod_Cliente_Buscar, dt, CadenaConexionSeePOS)
             If dt.Rows.Count > 0 Then
                 Me.ckMAG.Checked = CBool(dt.Rows(0).Item("MAG"))
                 Me.ckOrdendeCompra.Checked = CBool(dt.Rows(0).Item("OrdenCompra"))
@@ -2823,6 +2841,7 @@ Public Class Frmcliente
                 Me.ckFallecido.Checked = CBool(dt.Rows(0).Item("Fallecido"))
                 Me.txtCorreoRecibo.Text = dt.Rows(0).Item("CorreoRecibo")
                 Me.Incobrable = dt.Rows(0).Item("Incobrable")
+                Me.ckNoCxC.Checked = CBool(dt.Rows(0).Item("NoCXC"))
             End If
         Catch ex As Exception
             Me.Incobrable = False

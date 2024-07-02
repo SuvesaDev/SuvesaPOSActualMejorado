@@ -157,6 +157,12 @@ Public Class frmEditarPrecioVenta_FacturaElectronica
         Me.TxtPrecioVenta_A_KeyPress(Me.TxtPrecioVenta_C, New KeyPressEventArgs(Convert.ToChar(Keys.Enter)))
         SendKeys.Send("{TAB}")
 
+        If IsClinica() = True Then
+            Me.Label35.Text = "W"
+            Me.Label35.BackColor = System.Drawing.Color.RoyalBlue
+            Me.Label35.ForeColor = System.Drawing.Color.Yellow
+        End If
+
     End Sub
 
     Private Sub SimpleButton2_Click(sender As Object, e As EventArgs) Handles SimpleButton2.Click

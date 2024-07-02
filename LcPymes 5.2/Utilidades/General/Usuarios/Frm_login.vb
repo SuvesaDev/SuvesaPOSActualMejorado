@@ -232,7 +232,7 @@ Public Class Frm_login
         'SqlSelectCommand1
         '
         Me.SqlSelectCommand1.CommandText = "SELECT Id_Usuario AS Cedula, Nombre, Clave_Entrada, Clave_Interna, Foto, CambiarP" & _
-            "recio, Porc_Precio, Aplicar_Desc, Porc_Desc, Exist_Negativa FROM Usuarios"
+            "recio, Porc_Precio, Aplicar_Desc, Porc_Desc, Exist_Negativa FROM Usuarios where Fuera = 0"
         Me.SqlSelectCommand1.Connection = Me.SqlConnection1
         '
         'lnkCambiarContrasena

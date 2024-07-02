@@ -1981,7 +1981,7 @@ Public Class frmReciboDinero
                     If BindingContext(DsRecibos1, "abonoccobrar.abonoccobrardetalle_abonoccobrar").Current("Saldo") = 0 Then
                         FactTemp = BindingContext(DsRecibos1, "abonoccobrar.abonoccobrardetalle_abonoccobrar").Current("Factura")
                         If (Funciones.UpdateRecords("Ventas", "FacturaCancelado = 1", "Num_Factura =" & FactTemp & " and Tipo = '" & BindingContext(DsRecibos1, "abonoccobrar.abonoccobrardetalle_abonoccobrar").Current("Tipo") & "'")) <> "" Then
-                            MsgBox("Problemas al Registrar las facturas como canceladas, reintente hacer el abono", MsgBoxStyle.Critical)
+                            MsgBox("Problemas al Registrar las facturas como canceladas, reintente hacer el abono", MsgBoxStyle.Critical, " " & FactTemp & "")
                             Exit Sub
                         End If
                     End If
@@ -2419,6 +2419,17 @@ Public Class frmReciboDinero
         End If
     End Sub
 
+    Private Sub InactivarFichaPrevia(_Identificacion As String)
+        Dim dt As New DataTable
+        cFunciones.Llenar_Tabla_Generico("select * from PreAbonocCobrar where Estado = 'PreAbono' and Cod_Cliente = " & _Identificacion, dt, CadenaConexionSeePOS)
+        If dt.Rows.Count > 0 Then
+            If MsgBox("Existe un PreAbono activo de este cliente, desea inactivarla", MsgBoxStyle.Question + MsgBoxStyle.YesNo, "Confirmar Accion") = MsgBoxResult.Yes Then
+                Dim db As New OBSoluciones.SQL.Sentencias(CadenaConexionSeePOS)
+                db.Ejecutar("Update PreAbonocCobrar Set Estado = 'Inactivo' where Estado = 'PreAbono' and Cod_Cliente = " & _Identificacion, CommandType.Text)
+            End If
+        End If
+    End Sub
+
     Private Sub CargarInformacionCliente(ByVal codigo As String)
         Dim cConexion As New Conexion
         Dim funciones As New cFunciones
@@ -2427,6 +2438,9 @@ Public Class frmReciboDinero
         Dim fila As DataRow
         Dim factura As Long
         If codigo <> Nothing Then
+
+            Me.InactivarFichaPrevia(codigo)
+
             rs = cConexion.GetRecorset(cConexion.Conectar, "SELECT Identificacion, Nombre from Clientes where Identificacion ='" & codigo & "'")
             Try
                 If rs.Read Then

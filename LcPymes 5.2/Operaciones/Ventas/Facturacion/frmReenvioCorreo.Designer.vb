@@ -38,6 +38,9 @@ Partial Class frmReenvioCorreo
         Me.Label3 = New System.Windows.Forms.Label()
         Me.txtDetalle = New System.Windows.Forms.TextBox()
         Me.ckPVE = New System.Windows.Forms.CheckBox()
+        Me.txtMonto = New System.Windows.Forms.TextBox()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.Button1 = New System.Windows.Forms.Button()
         CType(Me.viewComprobantes, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
@@ -201,24 +204,53 @@ Partial Class frmReenvioCorreo
         '
         Me.txtDetalle.Location = New System.Drawing.Point(74, 45)
         Me.txtDetalle.Name = "txtDetalle"
-        Me.txtDetalle.Size = New System.Drawing.Size(463, 20)
+        Me.txtDetalle.Size = New System.Drawing.Size(379, 20)
         Me.txtDetalle.TabIndex = 8
         '
         'ckPVE
         '
         Me.ckPVE.AutoSize = True
-        Me.ckPVE.Location = New System.Drawing.Point(543, 47)
+        Me.ckPVE.Location = New System.Drawing.Point(459, 48)
         Me.ckPVE.Name = "ckPVE"
         Me.ckPVE.Size = New System.Drawing.Size(78, 17)
         Me.ckPVE.TabIndex = 9
         Me.ckPVE.Text = "Incluir PVE"
         Me.ckPVE.UseVisualStyleBackColor = True
         '
+        'txtMonto
+        '
+        Me.txtMonto.Location = New System.Drawing.Point(621, 45)
+        Me.txtMonto.Name = "txtMonto"
+        Me.txtMonto.Size = New System.Drawing.Size(96, 20)
+        Me.txtMonto.TabIndex = 11
+        Me.txtMonto.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Location = New System.Drawing.Point(566, 48)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(43, 13)
+        Me.Label5.TabIndex = 10
+        Me.Label5.Text = "Monto :"
+        '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(723, 42)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(102, 25)
+        Me.Button1.TabIndex = 12
+        Me.Button1.Text = "Cargar Datos"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
         'frmReenvioCorreo
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(837, 485)
+        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.txtMonto)
+        Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.ckPVE)
         Me.Controls.Add(Me.txtDetalle)
         Me.Controls.Add(Me.Label3)
@@ -257,4 +289,7 @@ Partial Class frmReenvioCorreo
     Friend WithEvents Label4 As System.Windows.Forms.Label
     Friend WithEvents ckPVE As System.Windows.Forms.CheckBox
     Friend WithEvents btnImprimirPVE As System.Windows.Forms.Button
+    Friend WithEvents txtMonto As System.Windows.Forms.TextBox
+    Friend WithEvents Label5 As System.Windows.Forms.Label
+    Friend WithEvents Button1 As System.Windows.Forms.Button
 End Class

@@ -43,14 +43,14 @@ Partial Class frmDocumentosRelacionados
         Me.viewDatos.RowHeadersVisible = False
         Me.viewDatos.RowTemplate.Height = 28
         Me.viewDatos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.viewDatos.Size = New System.Drawing.Size(586, 315)
+        Me.viewDatos.Size = New System.Drawing.Size(883, 315)
         Me.viewDatos.TabIndex = 0
         '
         'frmDocumentosRelacionados
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(586, 315)
+        Me.ClientSize = New System.Drawing.Size(883, 315)
         Me.Controls.Add(Me.viewDatos)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D
         Me.MaximizeBox = False

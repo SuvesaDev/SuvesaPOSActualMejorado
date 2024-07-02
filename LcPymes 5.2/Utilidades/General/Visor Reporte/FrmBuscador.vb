@@ -5,6 +5,8 @@ Imports System.Windows.Forms
 Public Class FrmBuscador
     Inherits System.Windows.Forms.Form
 
+    Public DevCompra As Boolean = False
+
 #Region "Variables Globales"
     Dim DV As DataView 'Vista del contenedor y Busqueda 
     Public CampoFecha As String 'Nombre del campo que contiene la fecha para efectuar el Filtro
@@ -692,8 +694,17 @@ Public Class FrmBuscador
 
             Else '#2
                 If Me.radbNumeroFactura.Checked = True Then '#3
-                    strCampoFiltro = strNumeroDocumento
-                    DV.RowFilter = strCampoFiltro & " lIKE '%" & Descripcion & "%'" & IIf(Me.CkeckBuscaFecha.Checked = True, " AND " & CampoFecha & " >= '" & CType(Fecha1.Value, Date) & "' AND " & CampoFecha & " <= '" & DateAdd(DateInterval.Day, 1, Fecha2.Value) & "'", "")
+                        strCampoFiltro = strNumeroDocumento
+                        If Me.DevCompra = True Then
+                            ' parche buscar factura compra desde devoluciones compras.
+                            If Descripcion <> "" Then
+                                DV.RowFilter = strCampoFiltro & " = " & Descripcion & " " & IIf(Me.CkeckBuscaFecha.Checked = True, " AND " & CampoFecha & " >= '" & CType(Fecha1.Value, Date) & "' AND " & CampoFecha & " <= '" & DateAdd(DateInterval.Day, 1, Fecha2.Value) & "'", "")
+                            Else
+                                DV.RowFilter = IIf(Me.CkeckBuscaFecha.Checked = True, " AND " & CampoFecha & " >= '" & CType(Fecha1.Value, Date) & "' AND " & CampoFecha & " <= '" & DateAdd(DateInterval.Day, 1, Fecha2.Value) & "'", "")
+                            End If
+                        Else
+                            DV.RowFilter = strCampoFiltro & " lIKE '%" & Descripcion & "%'" & IIf(Me.CkeckBuscaFecha.Checked = True, " AND " & CampoFecha & " >= '" & CType(Fecha1.Value, Date) & "' AND " & CampoFecha & " <= '" & DateAdd(DateInterval.Day, 1, Fecha2.Value) & "'", "")
+                        End If
                 End If '#3
             End If '#2
         End If '#1

@@ -1,0 +1,8 @@
+﻿
+Hora Inicial: 05/04/2024 03:40:18 pm
+Tipo de procedimiento: Ventas
+Cantidad Albaranes: 1
+Cantidad Lineas Albaranes: 2
+Se escribió en la bitacora: SISTEMA
+Hora Final: 05/04/2024 03:40:33 pm
+Tiempo Empleado: 00:00:15.22

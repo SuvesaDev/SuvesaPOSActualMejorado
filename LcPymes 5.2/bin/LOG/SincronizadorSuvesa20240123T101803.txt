@@ -1,0 +1,8 @@
+﻿
+Hora Inicial: 23/01/2024 10:18:03 am
+Tipo de procedimiento: Ventas
+Cantidad Albaranes: 1
+Cantidad Lineas Albaranes: 17
+Se escribió en la bitacora: ANA JANCI  HERNANDEZ MARTINEZ
+Hora Final: 23/01/2024 10:18:25 am
+Tiempo Empleado: 00:00:21.77

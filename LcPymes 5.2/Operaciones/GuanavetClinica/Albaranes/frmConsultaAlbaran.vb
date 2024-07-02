@@ -12,6 +12,46 @@ Public Class frmConsultaAlbaran
     Private MaxDescuento As Decimal = 0
     Private CambiarPrecios As Boolean = False
 
+    Private dlgExportar As New SaveFileDialog With {.Title = "Guardar Documentos", .Filter = "Archivos Excel(*.xls;*.xlsx)|*.xls;*xlsx|Todos los archivos(*.*)|*.*", .InitialDirectory = My.Computer.FileSystem.SpecialDirectories.MyDocuments}
+
+    Public Sub Exportar_Excel(ByVal dgv As DataGridView, ByVal pth As String)
+        Dim xlApp As Object = CreateObject("Excel.Application")
+        'crear una nueva hoja de calculo
+        Dim xlWB As Object = xlApp.WorkBooks.add
+        Dim xlWS As Object = xlWB.WorkSheets(1)
+        'exportamos los caracteres de las columnas
+        Dim columns As Integer = 0
+        For c As Integer = 0 To dgv.Columns.Count - 1
+            If dgv.Columns(c).Visible = True Then
+                xlWS.cells(1, columns + 1).value = dgv.Columns(c).HeaderText
+                columns += 1
+            End If
+        Next
+        'exportamos las cabeceras de columnas
+        For r As Integer = 0 To dgv.RowCount - 1
+            columns = 0
+            For c As Integer = 0 To dgv.Columns.Count - 1
+                If dgv.Columns(c).Visible = True Then
+                    xlWS.cells(r + 2, columns + 1).value = dgv.Item(c, r).Value
+                    columns += 1
+                End If
+            Next
+        Next
+        'guardamos la hoja de calculo en la ruta especificada
+        xlWB.saveas(pth)
+        xlWS = Nothing
+        xlWB = Nothing
+        xlApp.quit()
+        xlApp = Nothing
+    End Sub
+
+    Private Sub btnExportar_Click(sender As Object, e As EventArgs) Handles btnExportar.Click
+        Dim frm As New frmReporteAlbaranSinFacturar
+        frm.WindowState = FormWindowState.Maximized
+        frm.Show()
+    End Sub
+
+
     Private Sub Login(_Clave As String)
         Dim dt As New DataTable
         cFunciones.Llenar_Tabla_Generico("select Id_Usuario, Nombre, Porc_Desc, CambiarPrecio from Usuarios where Clave_Interna = '" & _Clave & "'", dt, CadenaConexionSeePOS)
@@ -32,6 +72,68 @@ Public Class frmConsultaAlbaran
     End Sub
 
     Private BanderaGeneralEjecucion As Boolean = False
+
+
+    Private Function RecursoDisponible() As Boolean
+        Dim dt As New System.Data.DataTable
+        cFunciones.Llenar_Tabla_Generico("select * from accesoDLL where Id = 1", dt, CadenaConexionSeePOS)
+        If dt.Rows.Count > 0 Then
+            If CBool(dt.Rows(0).Item("Disponible")) = True Then
+                Return True
+            Else
+                MsgBox("Intentelo mas tarde", MsgBoxStyle.Exclamation, "No se puede procesar la operacion.")
+                Return False
+            End If
+        Else
+            MsgBox("Intentelo mas tarde", MsgBoxStyle.Exclamation, "No se puede procesar la operacion.")
+            Return False
+        End If
+    End Function
+
+    Private Function ActualizaEstadoRecurso(_Disponible As Boolean) As Boolean
+        Dim db As OBSoluciones.SQL.Transaccion
+        Try
+            db = New OBSoluciones.SQL.Transaccion(CadenaConexionSeePOS)
+            db.Ejecutar("update accesoDLL set Disponible = " & IIf(_Disponible = True, 1, 0) & ", Usuario = '" & Me.txtNombreUsuario.Text & "', Equipo = '" & My.Computer.Name & "', Fecha = getdate() where Id = 1", CommandType.Text)
+            db.Commit()
+            Return True
+        Catch ex As Exception
+            db.Rollback()
+        End Try
+        Return False
+    End Function
+
+    Private Function Sincronizador() As Boolean
+        Dim dlg As WaitDialogForm
+        Try
+
+            If Me.RecursoDisponible = True Then
+                dlg = New WaitDialogForm("Buscando nuevos albaranes.")
+                If Me.ActualizaEstadoRecurso(False) = True Then
+
+                    Dim dll = New APIQVET.main()
+                    Dim str = dll.ejecutarAPIQVET(Me.txtNombreUsuario.Text, "1")
+
+                    Me.ActualizaEstadoRecurso(True)
+                    If str.Responses() = True Then
+                        Me.CargarAlbaranes()
+                    Else
+                        MsgBox(str.currentException(), MsgBoxStyle.Critical, Me.Text)
+                        MsgBox("No se pudo obtener los albaranes", MsgBoxStyle.Critical, Me.Text)
+                    End If
+                    dlg.Close()
+                End If
+                Return True
+            Else
+                Return False
+            End If
+        Catch ex As Exception
+            Me.ActualizaEstadoRecurso(True)
+            dlg.Close()
+            Return False
+        End Try
+    End Function
+
     Private Function ServicioSincronizador() As Boolean
         If Me.BanderaGeneralEjecucion = True Then Exit Function
 
@@ -89,40 +191,64 @@ Public Class frmConsultaAlbaran
 
     Private Sub CargarAlbaranes()
 
+        'viewDatos
+
+        If Me.ckFiltrarxFecha.Checked = False And Me.txtMascota.Text = "" And Me.txtCliente.Text = "" Then
+            MsgBox("Ingrese el nombre del cliente o de la mascotas", MsgBoxStyle.Exclamation, Me.Text)
+            Exit Sub
+        End If
+
         Dim dt As New DataTable
-        Dim strSQL As String = "Select Id, Identificacion, Cliente, Mascota, Fecha, Subtotal, Descuento, Impuesto, Total, Facturado, UsuarioClinica as Responsable, cast(0 as bit) as Facturar, cast(0 as bit) as Extranjero from viewAlbaran"
+        Dim strSQL As String = "Select top 100 Id, Identificacion, Cliente, Mascota, Fecha, Subtotal, Descuento, Impuesto, Total, Facturado, UsuarioClinica as Responsable, cast(0 as bit) as Facturar, cast(0 as bit) as Extranjero from clinica.dbo.viewAlbaran"
         Dim strWhere As String = ""
 
-        strWhere = " Where dbo.dateonly(Fecha) >= dbo.dateonly('" & Me.dtpDesde.Value.ToShortDateString & "') and dbo.dateonly(Fecha) <= dbo.dateonly('" & Me.dtpHasta.Value.ToShortDateString & "')" & IIf(Me.ckSoloPendientes.Checked = True, " And Facturado = 0 ", "")
+        If Me.ckSoloPendientes.Checked = True Then
+            strWhere = " Where  Facturado = 0 "
+        End If
+
+        If Me.ckFiltrarxFecha.Checked = True Then
+            If strWhere <> "" Then strWhere += " And " Else strWhere += " Where "
+            strWhere += "dbo.dateonly(Fecha) >= dbo.dateonly('" & Me.dtpDesde.Value.ToShortDateString & "') and dbo.dateonly(Fecha) <= dbo.dateonly('" & Me.dtpHasta.Value.ToShortDateString & "')"
+        End If
 
         If Me.txtCliente.Text <> "" Then
-            strWhere += " And Cliente like '%" & Me.txtCliente.Text & "%'"
+            If strWhere <> "" Then strWhere += " And " Else strWhere += " Where "
+            strWhere += "Cliente like '%" & Me.txtCliente.Text & "%'"
         End If
 
         If Me.txtMascota.Text <> "" Then
-            strWhere += " And Mascota like '%" & Me.txtMascota.Text & "%'"
+            If strWhere <> "" Then strWhere += " And " Else strWhere += " Where "
+            strWhere += "Identificacion = '" & Me.txtMascota.Text & "'"
         End If
 
-        cFunciones.Llenar_Tabla_Generico(strSQL & strWhere & " Order By Fecha Desc", dt, CadenaConexionSeePOS)
+        dt = New DataTable
+        'cFunciones.Llenar_Tabla_Generico(strSQL & strWhere & " Order By Fecha Desc", dt, CadenaConexionSeePOS)
+
+        Dim db As New OBSoluciones.SQL.Sentencias(CadenaConexionSeePOS)
+        dt = db.Ejecutar(strSQL & strWhere & " Order By Fecha Desc", CommandType.Text)
+
         Try
             Me.viewDatos.DataSource = dt
             Me.ckTodos.Checked = False
             Me.viewDatos.Columns("Id").Visible = False
-            Me.viewDatos.Columns("Identificacion").Visible = False
+            'Me.viewDatos.Columns("Identificacion").Visible = False
             Me.viewDatos.Columns("Cliente").ReadOnly = True
             Me.viewDatos.Columns("Mascota").ReadOnly = True
 
             Me.viewDatos.Columns("Fecha").ReadOnly = True
-            Me.viewDatos.Columns("Fecha").DefaultCellStyle.Format = "d"
+            'Me.viewDatos.Columns("Fecha").DefaultCellStyle.Format = "d"
 
+            Me.viewDatos.Columns("Subtotal").Visible = False
             Me.viewDatos.Columns("Subtotal").ReadOnly = True
             Me.viewDatos.Columns("Subtotal").DefaultCellStyle.Format = "N2"
             Me.viewDatos.Columns("Subtotal").DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight
 
+            Me.viewDatos.Columns("Descuento").Visible = False
             Me.viewDatos.Columns("Descuento").ReadOnly = True
             Me.viewDatos.Columns("Descuento").DefaultCellStyle.Format = "N2"
             Me.viewDatos.Columns("Descuento").DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight
 
+            Me.viewDatos.Columns("Impuesto").Visible = False
             Me.viewDatos.Columns("Impuesto").ReadOnly = True
             Me.viewDatos.Columns("Impuesto").DefaultCellStyle.Format = "N2"
             Me.viewDatos.Columns("Impuesto").DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight
@@ -148,15 +274,31 @@ Public Class frmConsultaAlbaran
 
     Private Sub GenerarFacturas()
         Dim Identificaciones As New System.Collections.Generic.List(Of String)
+        Dim Pendientes As New System.Collections.Generic.List(Of DataGridViewRow)
+
         Identificaciones = (From x As DataGridViewRow In Me.viewDatos.Rows
                             Where x.Cells("Facturar").Value = True
                             Select CStr(x.Cells("Identificacion").Value)).Distinct.ToList
+
+        For Each i As String In Identificaciones
+            Pendientes = (From x As DataGridViewRow In Me.viewDatos.Rows
+                    Where x.Cells("Facturar").Value = False And x.Cells("Identificacion").Value = i
+                    Select x).Distinct.ToList
+
+            If Pendientes.Count > 0 Then
+                If MsgBox("Existen " & Pendientes.Count & " albaranes del mismo cliente sin Marcar" & vbCrLf _
+                          & " Desea continuar.", MsgBoxStyle.YesNo + MsgBoxStyle.Question, "Confirmar Acccion") = MsgBoxResult.No Then
+                    Exit Sub
+                End If
+            End If
+        Next
 
         If Identificaciones.Count > 0 Then
             Dim Nombre As String = ""
             Dim Total As Decimal = 0
             Dim Index As Integer = 0
             Dim frm As New frmConfirmarGenerarFacturas
+            frm.Id_Usuario = Me.IdUsuario
             For Each Id As String In Identificaciones
                 Nombre = (From x As DataGridViewRow In Me.viewDatos.Rows
                           Where x.Cells("Identificacion").Value = Id And x.Cells("Facturar").Value = True
@@ -196,8 +338,7 @@ Public Class frmConsultaAlbaran
                                                Clientes.Cells("cCaja").Value,
                                                Clientes.Cells("cIdentificacion2").Value,
                                                Clientes.Cells("cCliente").Value,
-                                               frm.cboDoctorEncargado.SelectedValue)
-                        '681896
+                                               0)
 
                         If IdFactura > 0 And Clientes.Cells("cTipo").Value = "CREDITO" Then Me.ImprimirFactura(IdFactura, Clientes.Cells("cCaja").Value)
                     Next
@@ -291,7 +432,9 @@ Public Class frmConsultaAlbaran
 
             rptGenerica.SetParameterValue(0, _Id)
             rptGenerica.PrintToPrinter(PrinterSettings1, PageSettings1, False)
-            rptGenerica.PrintToPrinter(PrinterSettings1, PageSettings1, False)
+            If MsgBox("Desea imprimir una copia", MsgBoxStyle.Question + MsgBoxStyle.YesNo, "Confirmar Accion") = MsgBoxResult.Yes Then
+                rptGenerica.PrintToPrinter(PrinterSettings1, PageSettings1, False)
+            End If            
         End If
     End Sub
 
@@ -303,7 +446,7 @@ Public Class frmConsultaAlbaran
     Private esTermica As Boolean = False
     Private Sub frmConsultaAlbaran_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Me.dtpDesde.Value = CDate("01/" & Date.Now.Month & "/" & Date.Now.Year)
-        Me.CargarAlbaranes()
+        'Me.CargarAlbaranes()
 
         Try
             If GetSetting("SeeSoft", "SeePOS", "estermica") = "" Then
@@ -332,9 +475,7 @@ Public Class frmConsultaAlbaran
     End Sub
 
     Private Sub btnObtenerDatos_Click(sender As Object, e As EventArgs) Handles btnSincronizacion.Click
-        If Me.ServicioSincronizador() = True Then
-            Me.CargarAlbaranes()
-        End If
+        Me.Sincronizador()
     End Sub
 
     Private Sub btnGenerarFacturas_Click(sender As Object, e As EventArgs) Handles btnGenerarFacturas.Click
@@ -347,20 +488,23 @@ Public Class frmConsultaAlbaran
         frm.MaxDescuento = Me.MaxDescuento
         frm.CambiarPrecio = Me.CambiarPrecios
         frm.IdAlbaran = IdAlbaran
+        frm.IdUsuario = Me.IdUsuario
         If frm.ShowDialog() = Windows.Forms.DialogResult.OK Then
             Dim db As New OBSoluciones.SQL.Transaccion(CadenaConexionSeePOS)
             Try
                 For Each row As DataGridViewRow In frm.viewDatos.Rows
                     Dim PrecioUnitario As Decimal = (CDec(row.Cells("cTotal").Value) / CDec(row.Cells("cCantidad").Value))
+                    'PrecioUnitario = PrecioUnitario * (1 + (CDec(row.Cells("cIva").Value) / 100))
+
                     If row.Visible = True Then
                         'datos a agregar o modificar
                         If row.Cells("cId").Value > 0 Then
                             'modificar
-                            db.Ejecutar("Update Albaran_Detalle set  CodigoInternoQvet = " & row.Cells("cCodigo").Value & ", Descripcion = '" & row.Cells("cDescripcion").Value & "', Cantidad = " & row.Cells("cCantidad").Value & ", PrecioVenta = " & PrecioUnitario & ", IVA = " & row.Cells("cIva").Value & ", descuento = " & row.Cells("cDescuento").Value & ",Total = " & row.Cells("cTotal").Value & " Where Id = " & row.Cells("cId").Value, CommandType.Text)
+                            'db.Ejecutar("Update Albaran_Detalle set  CodigoInternoQvet = " & row.Cells("cCodigo").Value & ", Descripcion = '" & row.Cells("cDescripcion").Value & "', Cantidad = " & row.Cells("cCantidad").Value & ", PrecioVenta = " & PrecioUnitario & ", IVA = " & row.Cells("cIva").Value & ", descuento = " & row.Cells("cDescuento").Value & ",Total = " & row.Cells("cTotal").Value & " Where Id = " & row.Cells("cId").Value, CommandType.Text)
                         Else
                             'agregar
                             db.Ejecutar("Insert Into Bitacora_Albaran(Id_Albaran, Usuario_Suvesa, Fecha_Hora, Accion, Observaciones) Values(" & frm.IdAlbaran & ", '" & Me.IdUsuario & "', getdate(), 'Adicion', '" & row.Cells("cDescripcion").Value & ", Cant: " & row.Cells("cCantidad").Value & ", Total: " & row.Cells("cTotal").Value & "')", CommandType.Text)
-                            db.Ejecutar("Insert into Albaran_Detalle(idEncabezado, CodigoInternoQvet, Descripcion, Cantidad, PrecioVenta, IVA, descuento, Unidad,Total,Descargar) Values(" & frm.IdAlbaran & ", " & row.Cells("cCodigo").Value & ", '" & row.Cells("cDescripcion").Value & "', " & CDec(row.Cells("cCantidad").Value) & ", " & PrecioUnitario & ", " & CDec(row.Cells("cIva").Value) & ", " & CDec(row.Cells("cDescuento").Value) & ", '" & row.Cells("cUnidad").Value & "', " & CDec(row.Cells("cTotal").Value) & ",1)", CommandType.Text)
+                            db.Ejecutar("Insert into Albaran_Detalle(idEncabezado, CodigoInternoQvet, Descripcion, Cantidad, PrecioVenta, IVA, descuento, Unidad,Total,Descargar,ResponsableVenta) Values(" & frm.IdAlbaran & ", " & row.Cells("cCodigo").Value & ", '" & row.Cells("cDescripcion").Value & "', " & CDec(row.Cells("cCantidad").Value) & ", " & PrecioUnitario & ", " & CDec(row.Cells("cIva").Value) & ", " & CDec(row.Cells("cDescuento").Value) & ", '" & row.Cells("cUnidad").Value & "', " & CDec(row.Cells("cTotal").Value) & ",1, '" & Me.txtNombreUsuario.Text & "')", CommandType.Text)
                         End If
                     Else
                         'datos a borrar
@@ -427,7 +571,9 @@ Public Class frmConsultaAlbaran
     End Sub
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
-        CargarForm(New FrmDevolucionesVentas)
+        Dim frm As New FrmDevolucionesVentas
+        frm.IsPreDevolucion = True
+        CargarForm(frm)
     End Sub
 
     Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
@@ -492,6 +638,11 @@ Public Class frmConsultaAlbaran
         For Each row As DataGridViewRow In Me.viewDatos.Rows
             row.Cells("Extranjero").Value = Me.ckExtranjero.Checked
         Next
+    End Sub
+
+    Private Sub CheckBox1_CheckedChanged(sender As Object, e As EventArgs) Handles ckFiltrarxFecha.CheckedChanged
+        Me.dtpDesde.Enabled = Me.ckFiltrarxFecha.Checked
+        Me.dtpHasta.Enabled = Me.ckFiltrarxFecha.Checked
     End Sub
 
 End Class

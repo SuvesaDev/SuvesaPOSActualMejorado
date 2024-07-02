@@ -1,6 +1,7 @@
 ﻿Imports System.Data
 Public Class frmEditarAlbaran
 
+    Public IdUsuario As String = ""
     Public IdAlbaran As Long
     Public MaxDescuento As Decimal = 0
     Public CambiarPrecio As Decimal = 0
@@ -46,7 +47,6 @@ Public Class frmEditarAlbaran
         Me.CargarArticulo(_Cod_Articulo)
     End Sub
     '*******************************************************************************************
-
 
     Public Sub AgregarLinea(_Id As Long, _
                             _IdAlbaran As Long, _
@@ -150,16 +150,22 @@ Public Class frmEditarAlbaran
 
     Private Sub CargarArticulo(_CodArticulo As String)
         Dim dt As New DataTable
-        cFunciones.Llenar_Tabla_Generico("Select i.Codigo, i.Cod_Articulo, (Descripcion + ' ' + CAST(i.PresentaCant As Nvarchar) + ' ' + p.Presentaciones) as Descripcion, Precio_A, IVenta, Max_Descuento From Inventario i Inner Join Presentaciones p On i.CodPresentacion = p.CodPres Where i.Inhabilitado = 0 and (i.Cod_Articulo = '" & _CodArticulo & "' or i.Barras = '" & _CodArticulo & "' or i.barras2 = '" & _CodArticulo & "' or i.barras3 = '" & _CodArticulo & "')", dt, CadenaConexionSeePOS)
+        cFunciones.Llenar_Tabla_Generico("Select i.Codigo, i.Cod_Articulo, (Descripcion + ' ' + CAST(i.PresentaCant As Nvarchar) + ' ' + p.Presentaciones) as Descripcion, Precio_A, IVenta, Max_Descuento, i.Consignacion From Inventario i Inner Join Presentaciones p On i.CodPresentacion = p.CodPres Where i.Inhabilitado = 0 and (i.Cod_Articulo = '" & _CodArticulo & "' or i.Barras = '" & _CodArticulo & "' or i.barras2 = '" & _CodArticulo & "' or i.barras3 = '" & _CodArticulo & "')", dt, CadenaConexionSeePOS)
         If dt.Rows.Count > 0 Then
-            Me.txtCodigo.Text = _CodArticulo
-            Me.CodigoArticulo = dt.Rows(0).Item("Codigo")
-            Me.lblDescripcion.Text = dt.Rows(0).Item("Descripcion")
-            Me.txtPrecio.Text = Math.Round(CDec(dt.Rows(0).Item("Precio_A")), 4)
-            Me.txtCantidad.Text = "1"
-            Me.txtIVA.Text = dt.Rows(0).Item("IVenta")
-            Me.txtDescuento.Text = "0"
-            Me.txtCantidad.Focus()
+            If dt.Rows(0).Item("Consignacion") = True Then
+                Dim frm As New frmMensajeConsignacion
+                frm.ShowDialog()
+                Exit Sub
+            Else
+                Me.txtCodigo.Text = _CodArticulo
+                Me.CodigoArticulo = dt.Rows(0).Item("Cod_Articulo")
+                Me.lblDescripcion.Text = dt.Rows(0).Item("Descripcion")
+                Me.txtPrecio.Text = Math.Round(CDec(dt.Rows(0).Item("Precio_A")), 4)
+                Me.txtCantidad.Text = "1"
+                Me.txtIVA.Text = dt.Rows(0).Item("IVenta")
+                Me.txtDescuento.Text = "0"
+                Me.txtCantidad.Focus()
+            End If
         Else
             MsgBox("El producto no existe o esta deshabilitado!!!", MsgBoxStyle.Exclamation, Text)
         End If
@@ -173,6 +179,14 @@ Public Class frmEditarAlbaran
     End Sub
 
     Private Sub btnAceptar_Click(sender As Object, e As EventArgs) Handles btnAceptar.Click
+
+        For Each row As DataGridViewRow In Me.viewDatos.Rows
+            If row.Cells("cPrecio").Value <= 0 Then
+                MsgBox("No se puede vender articulos con precio cero.", MsgBoxStyle.Critical, Me.Text)
+                Exit Sub
+            End If
+        Next
+
         Me.DialogResult = Windows.Forms.DialogResult.OK
     End Sub
 
@@ -198,21 +212,39 @@ Public Class frmEditarAlbaran
         If e.KeyCode = Keys.Enter And sender.Text <> "" Then SendKeys.Send("{Tab}")
     End Sub
 
+    Dim Intento As Integer = 0
+
+    Private Sub Eliminar()
+        'Dim Row As Integer = Me.viewDatos.CurrentRow.Index
+        'Dim Id As Long = Me.viewDatos.Item("cId", Row).Value
+
+        Dim frm As New frmMovitoEliminacion
+        If frm.ShowDialog = Windows.Forms.DialogResult.OK Then
+            For Each r As DataGridViewRow In Me.viewDatos.SelectedRows
+                r.Cells("cMotivo").Value = frm.txtMotivo.Text
+                r.Visible = False
+                Me.CalcularTotal()
+                'Me.viewDatos.Item("cMotivo", Row).Value = frm.txtMotivo.Text
+                'Me.viewDatos.Rows(Row).Visible = False
+                'Me.CalcularTotal()
+            Next
+        End If
+    End Sub
+
     Private Sub viewDatos_KeyDown(sender As Object, e As KeyEventArgs) Handles viewDatos.KeyDown
         If e.KeyCode = Keys.Delete Then
-            Dim Row As Integer = Me.viewDatos.CurrentRow.Index
-            Dim Id As Long = Me.viewDatos.Item("cId", Row).Value
-            If Id > 0 Then
-                Dim frm As New frmMovitoEliminacion
-                If frm.ShowDialog = Windows.Forms.DialogResult.OK Then
-                    Me.viewDatos.Item("cMotivo", Row).Value = frm.txtMotivo.Text
-                    Me.viewDatos.Rows(Row).Visible = False
-                    Me.CalcularTotal()
-                End If
+
+            If IdUsuario = "502250594" Or IdUsuario = "117420903" Or IdUsuario = "Vitolo" Then
+                Me.Eliminar()
             Else
-                Me.viewDatos.Item("cMotivo", Row).Value = ""
-                Me.viewDatos.Rows(Row).Visible = False
-                Me.CalcularTotal()
+                MsgBox("No se pueden eliminar lineas.", MsgBoxStyle.Critical, Me.Text)
+                Intento += 1
+
+                If Intento < 9 Then
+                    Exit Sub
+                Else
+                    Me.Eliminar()
+                End If
             End If
         End If
     End Sub

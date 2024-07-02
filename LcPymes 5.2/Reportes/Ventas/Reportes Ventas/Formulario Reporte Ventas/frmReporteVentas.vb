@@ -701,7 +701,6 @@ Public Class frmReporteVentas
             Select Case Reporte_ID
                 Case 1 '0 Ventas Detalladas
 
-
                     If CBTipo.SelectedIndex = 7 Then
                         Dim Formula As String = ""
                         Dim Reporte As New Ventas_Detalladas_General

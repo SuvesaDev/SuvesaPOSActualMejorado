@@ -22,6 +22,7 @@ Partial Class frmBuscarFichasActivas
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.viewFichasActivas = New System.Windows.Forms.DataGridView()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.btnInactivar = New System.Windows.Forms.Button()
@@ -32,6 +33,7 @@ Partial Class frmBuscarFichasActivas
         Me.Label2 = New System.Windows.Forms.Label()
         Me.btnDevolver = New System.Windows.Forms.Button()
         Me.btnFacturar = New System.Windows.Forms.Button()
+        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         CType(Me.viewFichasActivas, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -51,7 +53,7 @@ Partial Class frmBuscarFichasActivas
         Me.viewFichasActivas.Name = "viewFichasActivas"
         Me.viewFichasActivas.ReadOnly = True
         Me.viewFichasActivas.RowHeadersVisible = False
-        Me.viewFichasActivas.RowTemplate.Height = 30
+        Me.viewFichasActivas.RowTemplate.Height = 33
         Me.viewFichasActivas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.viewFichasActivas.Size = New System.Drawing.Size(754, 409)
         Me.viewFichasActivas.TabIndex = 0
@@ -159,6 +161,10 @@ Partial Class frmBuscarFichasActivas
         Me.btnFacturar.Text = "Cobrar Fichas"
         Me.btnFacturar.UseVisualStyleBackColor = True
         '
+        'Timer1
+        '
+        Me.Timer1.Interval = 7500
+        '
         'frmBuscarFichasActivas
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -195,4 +201,5 @@ End Sub
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents btnDevolver As System.Windows.Forms.Button
     Friend WithEvents btnFacturar As System.Windows.Forms.Button
+    Friend WithEvents Timer1 As System.Windows.Forms.Timer
 End Class

@@ -814,7 +814,7 @@ Public Class MovimientoArticulos
 #End Region
 
 #Region "Funciones"
-    Private Sub MostrarVentas()
+    Public Sub MostrarVentas()
         Try
             If txtCodigo.Text = "" Or txtCodigo.Text = "0" Then
                 MsgBox("Debe seleccionar un artículo!!", MsgBoxStyle.Exclamation)
@@ -867,7 +867,7 @@ Public Class MovimientoArticulos
         End Try
     End Sub
 
-    Private Sub MostrarCompras()
+    Public Sub MostrarCompras()
         Try
             If txtCodigo.Text = "" Or txtCodigo.Text = "0" Then
                 MsgBox("Debe seleccionar un artículo!!", MsgBoxStyle.Exclamation)
@@ -977,6 +977,15 @@ Public Class MovimientoArticulos
 #End Region
 
 #Region "Funciones Controles"
+
+    Public Sub BuscarCodigoExterno()
+        If CargarInformacionArticulo(txtCodigo.Text) Then
+            DsMovimientoArticulos1.MovimientoArticulosCompra.Clear()
+            DsMovimientoArticulos1.MovimientoArticuloVentas.Clear()
+            DT_Inicio.Focus()
+        End If
+    End Sub
+
     Private Sub txtCodigo_KeyDown(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles txtCodigo.KeyDown
         If e.KeyCode = Windows.Forms.Keys.F1 Then
             consultar()

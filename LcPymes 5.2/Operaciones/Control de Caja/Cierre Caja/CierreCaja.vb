@@ -2964,6 +2964,7 @@ Public Class CierreCaja
 
         ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
         'Llenar las Operaciones
+        Me.txtPrepagosAplicados.EditValue = 0
         For I = 0 To (Me.DataSetCierreCaja1.OpcionesDePago.Count - 1)
             If DataSetCierreCaja1.OpcionesDePago.Rows(I).Item("FormaPago") = "TAR" Then
                 For K = 0 To (Me.DataSetCierreCaja1.Detalle_pago_caja.Count - 1)
@@ -3000,6 +3001,8 @@ Public Class CierreCaja
                     txtDepDolSistema.EditValue += Me.DataSetCierreCaja1.OpcionesDePago.Rows(I).Item("MontoPago")
                 End If
             End If
+
+
 
             If DataSetCierreCaja1.OpcionesDePago.Rows(I).Item("FormaPago") = "PRE" Then
                 txtPrepagosAplicados.EditValue += Me.DataSetCierreCaja1.OpcionesDePago.Rows(I).Item("MontoPago")
@@ -3245,6 +3248,7 @@ Public Class CierreCaja
         txtChequesDolCajero.EditValue = 0 : txtChequesDolSistema.EditValue = 0
         txtDepoColCajero.EditValue = 0 : TxtDepoColSistena.EditValue = 0
         txtDepDolCajero.EditValue = 0 : txtDepDolSistema.EditValue = 0
+        txtPrepagosAplicados.EditValue = 0
     End Sub
 
     Private Sub IniciarEdicion()

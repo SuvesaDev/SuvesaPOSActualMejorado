@@ -7,7 +7,8 @@ Public Class AjusteInventario
     Inherits System.Windows.Forms.Form
     Dim usua As Usuario_Logeado
     Dim PMU As New PerfilModulo_Class
-    Friend WithEvents ckProductoActualizado As System.Windows.Forms.CheckBox   'Declara la variable Perfil Modulo Usuario
+    Friend WithEvents ckProductoActualizado As System.Windows.Forms.CheckBox
+    Friend WithEvents btnKardex As System.Windows.Forms.Button   'Declara la variable Perfil Modulo Usuario
     Dim Lote As New DsAjusteInv
 
 #Region " Windows Form Designer generated code "
@@ -151,6 +152,7 @@ Public Class AjusteInventario
         Me.txtNumero = New System.Windows.Forms.Label()
         Me.DsAjusteInv2 = New LcPymes_5._2.DsAjusteInv()
         Me.grpBox_Inventario = New System.Windows.Forms.GroupBox()
+        Me.ckProductoActualizado = New System.Windows.Forms.CheckBox()
         Me.Label13 = New System.Windows.Forms.Label()
         Me.cbo_gasto = New System.Windows.Forms.ComboBox()
         Me.Label12 = New System.Windows.Forms.Label()
@@ -240,7 +242,7 @@ Public Class AjusteInventario
         Me.SqlUpdateCommand3 = New System.Data.SqlClient.SqlCommand()
         Me.SqlConnection2 = New System.Data.SqlClient.SqlConnection()
         Me.SqlConnection3 = New System.Data.SqlClient.SqlConnection()
-        Me.ckProductoActualizado = New System.Windows.Forms.CheckBox()
+        Me.btnKardex = New System.Windows.Forms.Button()
         CType(Me.DsAjusteInv2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.grpBox_Inventario.SuspendLayout()
         CType(Me.TXtExistenciaLote.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -292,6 +294,7 @@ Public Class AjusteInventario
         '
         Me.grpBox_Inventario.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.grpBox_Inventario.Controls.Add(Me.btnKardex)
         Me.grpBox_Inventario.Controls.Add(Me.ckProductoActualizado)
         Me.grpBox_Inventario.Controls.Add(Me.Label13)
         Me.grpBox_Inventario.Controls.Add(Me.cbo_gasto)
@@ -332,6 +335,17 @@ Public Class AjusteInventario
         Me.grpBox_Inventario.TabIndex = 1
         Me.grpBox_Inventario.TabStop = False
         Me.grpBox_Inventario.Text = "Datos de Inventario"
+        '
+        'ckProductoActualizado
+        '
+        Me.ckProductoActualizado.AutoSize = True
+        Me.ckProductoActualizado.DataBindings.Add(New System.Windows.Forms.Binding("Checked", Me.DsAjusteInv2, "AjusteInventario.AjusteInventarioAjusteInventario_Detalle.Actualizado", True))
+        Me.ckProductoActualizado.Location = New System.Drawing.Point(555, 136)
+        Me.ckProductoActualizado.Name = "ckProductoActualizado"
+        Me.ckProductoActualizado.Size = New System.Drawing.Size(147, 17)
+        Me.ckProductoActualizado.TabIndex = 181
+        Me.ckProductoActualizado.Text = "Producto Actualizado"
+        Me.ckProductoActualizado.UseVisualStyleBackColor = True
         '
         'Label13
         '
@@ -1340,16 +1354,15 @@ Public Class AjusteInventario
         Me.SqlConnection3.ConnectionString = "Data Source=192.168.0.2;Initial Catalog=Pruebas;Integrated Security=True"
         Me.SqlConnection3.FireInfoMessageEventOnUserErrors = False
         '
-        'ckProductoActualizado
+        'btnKardex
         '
-        Me.ckProductoActualizado.AutoSize = True
-        Me.ckProductoActualizado.DataBindings.Add(New System.Windows.Forms.Binding("Checked", Me.DsAjusteInv2, "AjusteInventario.AjusteInventarioAjusteInventario_Detalle.Actualizado", True))
-        Me.ckProductoActualizado.Location = New System.Drawing.Point(555, 136)
-        Me.ckProductoActualizado.Name = "ckProductoActualizado"
-        Me.ckProductoActualizado.Size = New System.Drawing.Size(147, 17)
-        Me.ckProductoActualizado.TabIndex = 181
-        Me.ckProductoActualizado.Text = "Producto Actualizado"
-        Me.ckProductoActualizado.UseVisualStyleBackColor = True
+        Me.btnKardex.FlatAppearance.BorderSize = 0
+        Me.btnKardex.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnKardex.Location = New System.Drawing.Point(716, 160)
+        Me.btnKardex.Name = "btnKardex"
+        Me.btnKardex.Size = New System.Drawing.Size(38, 23)
+        Me.btnKardex.TabIndex = 182
+        Me.btnKardex.UseVisualStyleBackColor = True
         '
         'AjusteInventario
         '
@@ -1396,8 +1409,8 @@ Public Class AjusteInventario
 
 #Region "Load"
     Private Sub AjusteInventario_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-        SqlConnection1.ConnectionString = CadenaConexionSeePOS
-        sqlConnectionLote.ConnectionString = CadenaConexionSeePOS
+        SqlConnection1.ConnectionString = CadenaConexionSeePOS()
+        SqlConnectionLote.ConnectionString = CadenaConexionSeePOS()
         AdapterLotes.Fill(Lote, "Lotes")
 
         If GetSetting("seesoft", "seepos", "EsVeterinaria") = 0 Then
@@ -1797,7 +1810,7 @@ Public Class AjusteInventario
     End Function
 #End Region
 
-    
+
 #Region "Cargar Articulo"
     Private Sub txtCodigo_KeyDown(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles txtCodArticulo.KeyDown
         Try
@@ -2557,4 +2570,13 @@ Public Class AjusteInventario
             Me.op_Salida.Checked = False
         End If
     End Sub
+
+    Private Sub btnKardex_Click(sender As Object, e As EventArgs) Handles btnKardex.Click
+        Dim frm As New FrmKardex
+        frm.txtCodigo.Text = Me.txtCodigo.Text
+        frm.FechaInicio.Value = CDate("01/" & Date.Now.Month & "/" & Date.Now.Year)
+        frm.FechaFinal.Value = Date.Now
+        frm.ShowDialog()
+    End Sub
+
 End Class

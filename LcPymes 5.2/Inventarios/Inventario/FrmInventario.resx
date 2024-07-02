@@ -120,19 +120,42 @@
   <metadata name="DataSetInventario.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
-  <metadata name="DataSetInventario.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
   <metadata name="ErrorProvider.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>363, 56</value>
   </metadata>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>25</value>
   </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="PictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAf9JREFUWEft
+        lrFLm0EYxjNpYureQRFBEKQgSIn/gEn/gy4ODlkcgiB16aRDkQ4hLo5aKkmH0ooYiEOUYMBSDC2GUuzu
+        IIjQlttzj8+9Fvrl44jfeW2i4PC7L9/d+zz35A4+3hiAniJDLpeDIbjQLWToeQBfTtemC0SFKNhqw1gn
+        XfmeTymoJvCzfg1/mzlyYwgZfK/g2+unCj9eAMczJI3WSVbjogwz3wEJJwa+AZqvphQ+cfPdPqCcQKsy
+        pNF4DpxtAZc8kTC/mxANtVZDV74uTyocMsAHBvgYB7aTDPMY2E+hVUvrVi1D0lrXWHPIE/qyqKk5N1qr
+        oSuNl08UqjQvMkCxHygxBJ+6GIcuJaHfDfL5iPMJQVefgZpfRisG4Stwff+8NKFQYYANBhAYwrDJIG8G
+        CE/EPM27YS8D0VD7TwIcLYwr7DDAOjdvgyHa+DPPWtFQKwa+1OfHFN4zQJ7mUWCtaKi1GrpSy44qlBhg
+        leZRYK1oqBWD8JG6cjA3ovCWAVZoHgXWioZaMYgSgOttBNeqs8MFohz5+yGKQqcAPlgnbfzXADT0ugIf
+        ZDCbG4ILYYKbG2w1t8E6aeNOBzDNR6gZcWtIaOh1BV1pSIKbG4JrpsHwakii0CnA/W9I+I/arsD1/f43
+        JL48NCTeDYkv3g2JL6a5CDUbUeCHCLErk2QkONNbxAMAAAAASUVORK5CYII=
+</value>
+  </data>
+  <metadata name="cCodigo.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="cCodArticulo.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="cDescripcion.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="cCantidad.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <metadata name="ContextMenu1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 95</value>
   </metadata>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="Button1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
@@ -153,7 +176,7 @@
         AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
         LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
         ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAAA6
-        fQAAAk1TRnQBSQFMAgEBCgEAAeQBAgHkAQIBIAEAASABAAT/ARkBAAj/AUIBTQE2BwABNgMAASgDAAGA
+        fQAAAk1TRnQBSQFMAgEBCgEAASQBAwEkAQMBIAEAASABAAT/ARkBAAj/AUIBTQE2BwABNgMAASgDAAGA
         AwABYAMAAQEBAAEYBgABkP8A/wASAAFyAnEBawJlAWsCZQFrAmUBYgJeAWsCZQFrAmUBawJlAWsCZQZS
         A04DUgFaAlcBWgJXAWsCZQNu2wABaQ4AATQ1AAE0BQABNBoAAYMCgQFrAmUBjAKDAa4CogHHAb0BvAHb
         AtMB7gHpAeoB9AHxAfIB+gH0AfMB+gH0AfMB/AH6AfsB/AH6AfsB/AH6AfsB9AHxAfID4AHUAtIDtAGQ
@@ -6450,44 +6473,6 @@ SELECT Codigo, Barras, Descripcion, PresentaCant, CodPresentacion, CodMarca, Sub
   </metadata>
   <metadata name="SqlSelectCommand13.CommandDesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
-  </metadata>
-  <data name="PictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAf9JREFUWEft
-        lrFLm0EYxjNpYureQRFBEKQgSIn/gEn/gy4ODlkcgiB16aRDkQ4hLo5aKkmH0ooYiEOUYMBSDC2GUuzu
-        IIjQlttzj8+9Fvrl44jfeW2i4PC7L9/d+zz35A4+3hiAniJDLpeDIbjQLWToeQBfTtemC0SFKNhqw1gn
-        XfmeTymoJvCzfg1/mzlyYwgZfK/g2+unCj9eAMczJI3WSVbjogwz3wEJJwa+AZqvphQ+cfPdPqCcQKsy
-        pNF4DpxtAZc8kTC/mxANtVZDV74uTyocMsAHBvgYB7aTDPMY2E+hVUvrVi1D0lrXWHPIE/qyqKk5N1qr
-        oSuNl08UqjQvMkCxHygxBJ+6GIcuJaHfDfL5iPMJQVefgZpfRisG4Stwff+8NKFQYYANBhAYwrDJIG8G
-        CE/EPM27YS8D0VD7TwIcLYwr7DDAOjdvgyHa+DPPWtFQKwa+1OfHFN4zQJ7mUWCtaKi1GrpSy44qlBhg
-        leZRYK1oqBWD8JG6cjA3ovCWAVZoHgXWioZaMYgSgOttBNeqs8MFohz5+yGKQqcAPlgnbfzXADT0ugIf
-        ZDCbG4ILYYKbG2w1t8E6aeNOBzDNR6gZcWtIaOh1BV1pSIKbG4JrpsHwakii0CnA/W9I+I/arsD1/f43
-        JL48NCTeDYkv3g2JL6a5CDUbUeCHCLErk2QkONNbxAMAAAAASUVORK5CYII=
-</value>
-  </data>
-  <metadata name="cCodigo.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="cCodArticulo.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="cDescripcion.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="cCantidad.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="cCodigo.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="cCodArticulo.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="cDescripcion.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="cCantidad.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
   </metadata>
   <metadata name="adUsuario.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>269, 134</value>

@@ -1,0 +1,8 @@
+﻿
+Hora Inicial: 28/05/2024 08:51:48 am
+Tipo de procedimiento: Ventas
+Cantidad Albaranes: 8
+Cantidad Lineas Albaranes: 182
+Se escribió en la bitacora: SISTEMA
+Hora Final: 28/05/2024 08:52:19 am
+Tiempo Empleado: 00:00:31.21

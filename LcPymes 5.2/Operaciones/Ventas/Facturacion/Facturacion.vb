@@ -130,6 +130,8 @@ Public Class Facturacion
     Friend WithEvents btnCartaExoneracion As System.Windows.Forms.Button
     Friend WithEvents Timer2 As System.Windows.Forms.Timer
     Friend WithEvents btnMAG As System.Windows.Forms.Button
+    Friend WithEvents btnKardex As System.Windows.Forms.Button
+    Friend WithEvents Button2 As System.Windows.Forms.Button
     Private ImpuestoCalc As Double
 #End Region
 
@@ -382,15 +384,15 @@ Public Class Facturacion
     <System.Diagnostics.DebuggerStepThrough()> Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Facturacion))
-        Dim ColumnFilterInfo1 As DevExpress.XtraGrid.Columns.ColumnFilterInfo = New DevExpress.XtraGrid.Columns.ColumnFilterInfo()
-        Dim ColumnFilterInfo2 As DevExpress.XtraGrid.Columns.ColumnFilterInfo = New DevExpress.XtraGrid.Columns.ColumnFilterInfo()
-        Dim ColumnFilterInfo3 As DevExpress.XtraGrid.Columns.ColumnFilterInfo = New DevExpress.XtraGrid.Columns.ColumnFilterInfo()
-        Dim ColumnFilterInfo4 As DevExpress.XtraGrid.Columns.ColumnFilterInfo = New DevExpress.XtraGrid.Columns.ColumnFilterInfo()
-        Dim ColumnFilterInfo5 As DevExpress.XtraGrid.Columns.ColumnFilterInfo = New DevExpress.XtraGrid.Columns.ColumnFilterInfo()
-        Dim ColumnFilterInfo6 As DevExpress.XtraGrid.Columns.ColumnFilterInfo = New DevExpress.XtraGrid.Columns.ColumnFilterInfo()
-        Dim ColumnFilterInfo7 As DevExpress.XtraGrid.Columns.ColumnFilterInfo = New DevExpress.XtraGrid.Columns.ColumnFilterInfo()
-        Dim ColumnFilterInfo8 As DevExpress.XtraGrid.Columns.ColumnFilterInfo = New DevExpress.XtraGrid.Columns.ColumnFilterInfo()
-        Dim ColumnFilterInfo9 As DevExpress.XtraGrid.Columns.ColumnFilterInfo = New DevExpress.XtraGrid.Columns.ColumnFilterInfo()
+        Dim ColumnFilterInfo19 As DevExpress.XtraGrid.Columns.ColumnFilterInfo = New DevExpress.XtraGrid.Columns.ColumnFilterInfo()
+        Dim ColumnFilterInfo20 As DevExpress.XtraGrid.Columns.ColumnFilterInfo = New DevExpress.XtraGrid.Columns.ColumnFilterInfo()
+        Dim ColumnFilterInfo21 As DevExpress.XtraGrid.Columns.ColumnFilterInfo = New DevExpress.XtraGrid.Columns.ColumnFilterInfo()
+        Dim ColumnFilterInfo22 As DevExpress.XtraGrid.Columns.ColumnFilterInfo = New DevExpress.XtraGrid.Columns.ColumnFilterInfo()
+        Dim ColumnFilterInfo23 As DevExpress.XtraGrid.Columns.ColumnFilterInfo = New DevExpress.XtraGrid.Columns.ColumnFilterInfo()
+        Dim ColumnFilterInfo24 As DevExpress.XtraGrid.Columns.ColumnFilterInfo = New DevExpress.XtraGrid.Columns.ColumnFilterInfo()
+        Dim ColumnFilterInfo25 As DevExpress.XtraGrid.Columns.ColumnFilterInfo = New DevExpress.XtraGrid.Columns.ColumnFilterInfo()
+        Dim ColumnFilterInfo26 As DevExpress.XtraGrid.Columns.ColumnFilterInfo = New DevExpress.XtraGrid.Columns.ColumnFilterInfo()
+        Dim ColumnFilterInfo27 As DevExpress.XtraGrid.Columns.ColumnFilterInfo = New DevExpress.XtraGrid.Columns.ColumnFilterInfo()
         Me.txtCostoBase = New System.Windows.Forms.TextBox()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.btnBuscarFicha = New System.Windows.Forms.Button()
@@ -406,6 +408,7 @@ Public Class Facturacion
         Me.txtSGravado = New System.Windows.Forms.TextBox()
         Me.txtSubFamilia = New System.Windows.Forms.TextBox()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
+        Me.btnKardex = New System.Windows.Forms.Button()
         Me.btnAgregarExoneracion = New System.Windows.Forms.Button()
         Me.Label14 = New System.Windows.Forms.Label()
         Me.txtregalias = New DevExpress.XtraEditors.TextEdit()
@@ -619,6 +622,7 @@ Public Class Facturacion
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.lblListaPromocion = New System.Windows.Forms.Label()
         Me.Timer2 = New System.Windows.Forms.Timer(Me.components)
+        Me.Button2 = New System.Windows.Forms.Button()
         Me.Panel2.SuspendLayout()
         CType(Me.DataSet_Facturaciones, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox3.SuspendLayout()
@@ -817,6 +821,7 @@ Public Class Facturacion
         Me.GroupBox3.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.GroupBox3.BackColor = System.Drawing.Color.White
+        Me.GroupBox3.Controls.Add(Me.btnKardex)
         Me.GroupBox3.Controls.Add(Me.btnAgregarExoneracion)
         Me.GroupBox3.Controls.Add(Me.Label14)
         Me.GroupBox3.Controls.Add(Me.txtregalias)
@@ -862,6 +867,16 @@ Public Class Facturacion
         Me.GroupBox3.TabIndex = 4
         Me.GroupBox3.TabStop = False
         Me.GroupBox3.Text = "Artículos a Cotizar"
+        '
+        'btnKardex
+        '
+        Me.btnKardex.FlatAppearance.BorderSize = 0
+        Me.btnKardex.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnKardex.Location = New System.Drawing.Point(9, 19)
+        Me.btnKardex.Name = "btnKardex"
+        Me.btnKardex.Size = New System.Drawing.Size(11, 14)
+        Me.btnKardex.TabIndex = 212
+        Me.btnKardex.UseVisualStyleBackColor = True
         '
         'btnAgregarExoneracion
         '
@@ -2813,7 +2828,7 @@ Public Class Facturacion
         '
         Me.colCodigo.Caption = "Codigo"
         Me.colCodigo.FieldName = "CodArticulo"
-        Me.colCodigo.FilterInfo = ColumnFilterInfo1
+        Me.colCodigo.FilterInfo = ColumnFilterInfo19
         Me.colCodigo.Name = "colCodigo"
         Me.colCodigo.Options = CType((((DevExpress.XtraGrid.Columns.ColumnOptions.CanResized Or DevExpress.XtraGrid.Columns.ColumnOptions.CanFocused) _
             Or DevExpress.XtraGrid.Columns.ColumnOptions.ShowInCustomizationForm) _
@@ -2825,7 +2840,7 @@ Public Class Facturacion
         '
         Me.colDescripcion.Caption = "Descripcion"
         Me.colDescripcion.FieldName = "Descripcion"
-        Me.colDescripcion.FilterInfo = ColumnFilterInfo2
+        Me.colDescripcion.FilterInfo = ColumnFilterInfo20
         Me.colDescripcion.Name = "colDescripcion"
         Me.colDescripcion.Options = CType(((((DevExpress.XtraGrid.Columns.ColumnOptions.CanResized Or DevExpress.XtraGrid.Columns.ColumnOptions.[ReadOnly]) _
             Or DevExpress.XtraGrid.Columns.ColumnOptions.CanFocused) _
@@ -2840,7 +2855,7 @@ Public Class Facturacion
         Me.colCantidad.DisplayFormat.FormatString = "#,#0.00"
         Me.colCantidad.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric
         Me.colCantidad.FieldName = "Cantidad"
-        Me.colCantidad.FilterInfo = ColumnFilterInfo3
+        Me.colCantidad.FilterInfo = ColumnFilterInfo21
         Me.colCantidad.Name = "colCantidad"
         Me.colCantidad.Options = CType((((DevExpress.XtraGrid.Columns.ColumnOptions.[ReadOnly] Or DevExpress.XtraGrid.Columns.ColumnOptions.CanFocused) _
             Or DevExpress.XtraGrid.Columns.ColumnOptions.ShowInCustomizationForm) _
@@ -2854,7 +2869,7 @@ Public Class Facturacion
         Me.colPrecio_Unit.DisplayFormat.FormatString = "#,#0.00"
         Me.colPrecio_Unit.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric
         Me.colPrecio_Unit.FieldName = "Precio_Unit"
-        Me.colPrecio_Unit.FilterInfo = ColumnFilterInfo4
+        Me.colPrecio_Unit.FilterInfo = ColumnFilterInfo22
         Me.colPrecio_Unit.Name = "colPrecio_Unit"
         Me.colPrecio_Unit.Options = CType((((DevExpress.XtraGrid.Columns.ColumnOptions.[ReadOnly] Or DevExpress.XtraGrid.Columns.ColumnOptions.CanFocused) _
             Or DevExpress.XtraGrid.Columns.ColumnOptions.ShowInCustomizationForm) _
@@ -2868,7 +2883,7 @@ Public Class Facturacion
         Me.colMonto_Descuento.DisplayFormat.FormatString = "#,#0.00"
         Me.colMonto_Descuento.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric
         Me.colMonto_Descuento.FieldName = "Descuento"
-        Me.colMonto_Descuento.FilterInfo = ColumnFilterInfo5
+        Me.colMonto_Descuento.FilterInfo = ColumnFilterInfo23
         Me.colMonto_Descuento.Name = "colMonto_Descuento"
         Me.colMonto_Descuento.Options = CType((((DevExpress.XtraGrid.Columns.ColumnOptions.[ReadOnly] Or DevExpress.XtraGrid.Columns.ColumnOptions.CanFocused) _
             Or DevExpress.XtraGrid.Columns.ColumnOptions.ShowInCustomizationForm) _
@@ -2884,7 +2899,7 @@ Public Class Facturacion
         Me.colMonto_Impuesto.DisplayFormat.FormatString = "#,#0.00"
         Me.colMonto_Impuesto.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric
         Me.colMonto_Impuesto.FieldName = "Monto_Impuesto"
-        Me.colMonto_Impuesto.FilterInfo = ColumnFilterInfo6
+        Me.colMonto_Impuesto.FilterInfo = ColumnFilterInfo24
         Me.colMonto_Impuesto.Name = "colMonto_Impuesto"
         Me.colMonto_Impuesto.Options = CType((((DevExpress.XtraGrid.Columns.ColumnOptions.[ReadOnly] Or DevExpress.XtraGrid.Columns.ColumnOptions.CanFocused) _
             Or DevExpress.XtraGrid.Columns.ColumnOptions.ShowInCustomizationForm) _
@@ -2899,7 +2914,7 @@ Public Class Facturacion
         Me.colSubtotalGravado.DisplayFormat.FormatString = "#,#0.00"
         Me.colSubtotalGravado.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric
         Me.colSubtotalGravado.FieldName = "SubtotalGravado"
-        Me.colSubtotalGravado.FilterInfo = ColumnFilterInfo7
+        Me.colSubtotalGravado.FilterInfo = ColumnFilterInfo25
         Me.colSubtotalGravado.Name = "colSubtotalGravado"
         Me.colSubtotalGravado.Options = CType((((DevExpress.XtraGrid.Columns.ColumnOptions.[ReadOnly] Or DevExpress.XtraGrid.Columns.ColumnOptions.CanFocused) _
             Or DevExpress.XtraGrid.Columns.ColumnOptions.ShowInCustomizationForm) _
@@ -2913,7 +2928,7 @@ Public Class Facturacion
         Me.colSubTotalExcento.DisplayFormat.FormatString = "#,#0.00"
         Me.colSubTotalExcento.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric
         Me.colSubTotalExcento.FieldName = "SubTotalExcento"
-        Me.colSubTotalExcento.FilterInfo = ColumnFilterInfo8
+        Me.colSubTotalExcento.FilterInfo = ColumnFilterInfo26
         Me.colSubTotalExcento.Name = "colSubTotalExcento"
         Me.colSubTotalExcento.Options = CType((((DevExpress.XtraGrid.Columns.ColumnOptions.[ReadOnly] Or DevExpress.XtraGrid.Columns.ColumnOptions.CanFocused) _
             Or DevExpress.XtraGrid.Columns.ColumnOptions.ShowInCustomizationForm) _
@@ -2927,7 +2942,7 @@ Public Class Facturacion
         Me.colSubTotal.DisplayFormat.FormatString = "#,#0.00"
         Me.colSubTotal.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric
         Me.colSubTotal.FieldName = "SubTotal"
-        Me.colSubTotal.FilterInfo = ColumnFilterInfo9
+        Me.colSubTotal.FilterInfo = ColumnFilterInfo27
         Me.colSubTotal.Name = "colSubTotal"
         Me.colSubTotal.Options = CType((((DevExpress.XtraGrid.Columns.ColumnOptions.[ReadOnly] Or DevExpress.XtraGrid.Columns.ColumnOptions.CanFocused) _
             Or DevExpress.XtraGrid.Columns.ColumnOptions.ShowInCustomizationForm) _
@@ -3360,11 +3375,22 @@ Public Class Facturacion
         '
         Me.Timer2.Interval = 50500
         '
+        'Button2
+        '
+        Me.Button2.FlatAppearance.BorderSize = 0
+        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button2.Location = New System.Drawing.Point(725, 12)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(31, 23)
+        Me.Button2.TabIndex = 202
+        Me.Button2.UseVisualStyleBackColor = True
+        '
         'Facturacion
         '
         Me.AutoScaleBaseSize = New System.Drawing.Size(5, 13)
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(1130, 550)
+        Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.lblMensaje)
         Me.Controls.Add(Me.GroupBox4)
         Me.Controls.Add(Me.Panel2)
@@ -3478,6 +3504,10 @@ Public Class Facturacion
         End Try
     End Sub
 
+    Private Sub Facturacion_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
+        Me.DesbloquePreventa()
+    End Sub
+
     Private Sub Facturacion_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         'Me.WindowState = FormWindowState.Maximized
         Me.OcultaMAG()
@@ -3587,6 +3617,7 @@ Public Class Facturacion
             logeado = False
             AgregandoNuevoItem = True
 
+
             CrystalReportsConexion.LoadReportViewer(Nothing, facturaPVE, True)
             CrystalReportsConexion.LoadReportViewer(Nothing, rptTiquete, True)
             CrystalReportsConexion.LoadReportViewer(Nothing, rptGenerica, True)
@@ -3665,9 +3696,8 @@ Public Class Facturacion
 #End Region
 
     Public Sub ValidarExistenciaBodega2()
-        Dim dt As New DataTable
-        cFunciones.Llenar_Tabla_Generico("", dt, CadenaConexionSeePOS)
-
+        'Dim dt As New DataTable
+        'cFunciones.Llenar_Tabla_Generico("", dt, CadenaConexionSeePOS)
     End Sub
 
     Private Sub Position_Changed(ByVal sender As System.Object, ByVal e As System.EventArgs)
@@ -3682,7 +3712,6 @@ Public Class Facturacion
         If Me.txtCostoBase.Text <> "" And Me.txtPrecioUnit.Text <> "" And Me.txtFlete.Text <> "0" And Me.txtOtros.Text <> "" Then
             TxtUtilidad.Text = Utilidad(Me.txtCostoBase.Text, (Me.txtPrecioUnit.Text - txtFlete.Text - txtOtros.Text))
         End If
-
     End Sub
 
     Private Sub Current_Changed(ByVal sender As System.Object, ByVal e As System.EventArgs)
@@ -4200,6 +4229,7 @@ Public Class Facturacion
         Me.txt_cedula.Text = ""
         Me.borrar()
         Me.Pedido.Clear()
+        Me.DesbloquePreventa()
         Try
             cbo_tipo_cliente.Text = "Fisica"
             txtcodigo.Text = 0
@@ -4495,6 +4525,7 @@ Public Class Facturacion
             Me.txtFicha.Text = ""
             Me.txtHecho.Text = ""
             Me.EstadoPreventa = "PreVenta"
+            Me.DesbloquePreventa()
             If Me.ToolBar1.Buttons(0).Text = "Nuevo" Then 'n si ya hay un registropendiente por agregar
                 Me.IniciaTiempo()
                 Me.ToolBar1.Buttons(0).Text = "Cancelar"
@@ -5413,6 +5444,28 @@ Fin:
                 cFunciones.Llenar_Tabla_Generico("select * from PreVentas where Id = " & identificador, dtestado, CadenaConexionSeePOS)
                 If dtestado.Rows.Count > 0 Then
                     Me.EstadoPreventa = dtestado.Rows(0).Item("Estado")
+
+                    If Me.IdPreventaBloqueado > 0 Then
+                        Me.DesbloquePreventa()
+                    End If
+
+                    If CBool(dtestado.Rows(0).Item("Bloqueado")) = True Then
+                        If dtestado.Rows(0).Item("UsuarioBloqueo") <> Me.txtNombreUsuario.Text Then
+                            Me.IdPreventaBloqueado = 0
+                            MsgBox("Esta preventa esta bloqueado por el usuario :" & vbCrLf _
+                                   & dtestado.Rows(0).Item("UsuarioBloqueo") & "", MsgBoxStyle.Exclamation, "No se puede realizar la operacion.")
+                            Exit Sub
+                        Else
+                            Dim db As New OBSoluciones.SQL.Sentencias(CadenaConexionSeePOS)
+                            db.Ejecutar("Update PreVentas Set Bloqueado = 1, UsuarioBloqueo = '" & Me.txtNombreUsuario.Text & "' where Id = " & identificador, CommandType.Text)
+                            Me.IdPreventaBloqueado = identificador
+                        End If
+                    Else
+                        Dim db As New OBSoluciones.SQL.Sentencias(CadenaConexionSeePOS)
+                        db.Ejecutar("Update PreVentas Set Bloqueado = 1, UsuarioBloqueo = '" & Me.txtNombreUsuario.Text & "' where Id = " & identificador, CommandType.Text)
+                        Me.IdPreventaBloqueado = identificador
+                    End If
+
                 Else
                     Me.EstadoPreventa = "PreVenta"
                 End If
@@ -6145,13 +6198,15 @@ Fin:
         Return resultado
     End Function
 
-    Private Function ValidaNombreQuimicos(_Nombre As String) As Boolean
+    Private Function ValidaNombreQuimicos() As Boolean
         Dim Resultado As Boolean = True
-
-        Dim Nombre As String = _Nombre
         Dim PasaNombre As Boolean = True
 
-        If Nombre = "CLIENTE DE CONTADO" Or Nombre.Length < 7 Then
+        Dim dt As New DataTable
+        cFunciones.Llenar_Tabla_Generico("select * from Clientes where identificacion = " & Me.BindingContext(Me.DataSet_Facturaciones, "Ventas").Current("Cod_Cliente"), dt, CadenaConexionSeePOS)
+        If dt.Rows.Count > 0 Then
+            PasaNombre = True
+        Else
             PasaNombre = False
         End If
 
@@ -6166,17 +6221,24 @@ Fin:
         End With
 
         If Resultado = False Then
-            MsgBox("Debe ingresar el nombre completo.", MsgBoxStyle.Exclamation, "Producto Quimico con Receta")
+            MsgBox("Debe registrar el cliente para poder facturarle productos quimicos con receta.", MsgBoxStyle.Exclamation, "Producto Quimico con Receta")
         End If
 
         Return Resultado
     End Function
 
+    Private CopiaExtra As Boolean = False
     Private Sub Revisa_Error_Bodegas_VeterinariaLiberia()
+        Me.CopiaExtra = False
         With BindingContext(Me.DataSet_Facturaciones, "Ventas.VentasVentas_Detalle")
             .EndCurrentEdit()
             For i As Integer = 0 To .Count() - 1
                 .Position = i
+
+                If Me.ImprimeCopia(.Current("Codigo")) = True Then
+                    Me.CopiaExtra = True
+                End If
+
                 If Me.Consignacion(.Current("Codigo")) = True Then
                     If CDec(.Current("Cantidad")) <> CDec((.Current("CantVet") + .Current("CantBod"))) Then
                         Dim Existencia As Decimal = GetExistencia(.Current("Codigo"))
@@ -6276,7 +6338,6 @@ Fin:
     Private db As OBSoluciones.SQL.Sentencias
     Private Consecutivo As Integer
 
-
     Private Sub GuardarPedido()
         Me.Consecutivo = 0
         Try
@@ -6303,11 +6364,12 @@ Fin:
 
     Private Function PuedePedir(_Codigo As String) As Boolean
         Dim dt As New DataTable
-        cFunciones.Llenar_Tabla_Generico("select DescargaOtro, Consignacion, NoPedir from Inventario where Codigo = " & _Codigo, dt, CadenaConexionSeePOS)
+        cFunciones.Llenar_Tabla_Generico("select DescargaOtro, Consignacion, NoPedir, ListaNegra from Inventario where Codigo = " & _Codigo, dt, CadenaConexionSeePOS)
         If dt.Rows.Count > 0 Then
             Dim NoPedir As Boolean = CBool(dt.Rows(0).Item("NoPedir"))
+            Dim ListaNegra As Boolean = CBool(dt.Rows(0).Item("ListaNegra"))
 
-            If NoPedir = False Then
+            If NoPedir = False And ListaNegra = False Then
                 Dim DescargaOtro As Boolean = CBool(dt.Rows(0).Item("DescargaOtro"))
                 Dim Consignacion As Boolean = CBool(dt.Rows(0).Item("Consignacion"))
                 Dim YaPidio As Boolean = Me.Yapidio(_Codigo)
@@ -6408,6 +6470,23 @@ Fin:
         Return False
     End Function
     Private Function ValidaPrecio() As Boolean
+
+        If IsClinica() = True Then
+            Return True
+        End If
+
+        Dim vetLiberia As String = "3101105432"
+        Dim vetGuanavet As String = "3101696098"
+        Dim vetSta As String = "3101353624"
+        Dim vetCañas As String = "3101340440"
+
+        If Me.BindingContext(Me.DataSet_Facturaciones, "Ventas").Current("Cedula") = vetLiberia Or _
+           Me.BindingContext(Me.DataSet_Facturaciones, "Ventas").Current("Cedula") = vetGuanavet Or _
+           Me.BindingContext(Me.DataSet_Facturaciones, "Ventas").Current("Cedula") = vetSta Or _
+           Me.BindingContext(Me.DataSet_Facturaciones, "Ventas").Current("Cedula") = vetCañas Then
+            Return True
+        End If
+
         Dim CambiarPrecio As Boolean = Me.PuedeCambiarPrecio(Cedula_usuario)
         Dim Descripcion As String = ""
         Dim pasaValidacion As Boolean = True
@@ -6604,13 +6683,10 @@ Fin:
         Me.codigo_cliente = txtcodigo.Text
         Me.nombre_cliente = txtNombre.Text
 
-        If IsMascotas() = True Then
-
+        If IsMascotas() = True Or IsClinica() = True Then
             If nombre_cliente = "CLIENTE DE CONTADO" Or nombre_cliente.IndexOf("CLIENTE") > 0 Or nombre_cliente.IndexOf("CONTADO") > 0 Or nombre_cliente.Length < 3 Then
-
                 MsgBox("Debe ingresar un nombre en la factura.", MsgBoxStyle.Critical, Me.Text)
                 Exit Sub
-
             End If
         End If
 
@@ -6711,7 +6787,7 @@ Fin:
             Me.BindingContext(Me.DataSet_Facturaciones, "Ventas.VentasVentas_Detalle").EndCurrentEdit()
             Me.QuitaLineasenBlanco()
 
-            If Me.ValidaNombreQuimicos(Me.nombre_cliente) = False Then
+            If Me.ValidaNombreQuimicos() = False Then
                 Me.lblMensaje.Height = 0
                 Me.YaEstaFacturando = False
                 Exit Sub
@@ -6913,6 +6989,8 @@ Fin:
                 buscar_rifa()
                 Me.GuardarPedido()
                 Me.DataSet_Facturaciones.AcceptChanges()
+
+                Me.DesbloquePreventa()
 
                 Dim id As Long = Me.BindingContext(Me.DataSet_Facturaciones, "Ventas").Current("Id")
                 Dim Tipo As String = Me.BindingContext(Me.DataSet_Facturaciones, "Ventas").Current("Tipo")
@@ -7339,7 +7417,10 @@ Fin:
                     rptGenerica.Refresh()
                     rptGenerica.SetParameterValue(0, Id_Factura)
                     rptGenerica.PrintToPrinter(PrinterSettings1, PageSettings1, False)
-                    rptGenerica.PrintToPrinter(PrinterSettings1, PageSettings1, False)
+
+                    If MsgBox("Desea imprimir una copia", MsgBoxStyle.Question + MsgBoxStyle.YesNo, "Confirmar Accion") = MsgBoxResult.Yes Then
+                        rptGenerica.PrintToPrinter(PrinterSettings1, PageSettings1, False)
+                    End If
                 End If
                 Exit Sub
             Else
@@ -7376,6 +7457,9 @@ Fin:
                     If esTermica = True Then
                         facturaPVE.PrintToPrinter(PrinterSettings1, PageSettings1, False)
                     End If
+                    If CopiaExtra = True Then
+                        facturaPVE.PrintToPrinter(PrinterSettings1, PageSettings1, False)
+                    End If
                 End If
                 If Caja = 2 Or Caja = 12 Then
                     Dim PrinterSettings1 As New Printing.PrinterSettings
@@ -7387,6 +7471,9 @@ Fin:
                     facturaPVE.SetParameterValue(2, Id_Factura)
                     facturaPVE.PrintToPrinter(PrinterSettings1, PageSettings1, False)
                     If esTermica = True Then
+                        facturaPVE.PrintToPrinter(PrinterSettings1, PageSettings1, False)
+                    End If
+                    If CopiaExtra = True Then
                         facturaPVE.PrintToPrinter(PrinterSettings1, PageSettings1, False)
                     End If
                 End If
@@ -7406,6 +7493,9 @@ Fin:
                         If esTermica = True Then
                             facturaPVE.PrintToPrinter(PrinterSettings1, PageSettings1, False)
                         End If
+                        If CopiaExtra = True Then
+                            facturaPVE.PrintToPrinter(PrinterSettings1, PageSettings1, False)
+                        End If
                     End If
                     If Caja = 2 Or Caja = 12 Then
                         Dim PrinterSettings1 As New Printing.PrinterSettings
@@ -7417,6 +7507,9 @@ Fin:
                         facturaPVE.SetParameterValue(2, Id_Factura)
                         facturaPVE.PrintToPrinter(PrinterSettings1, PageSettings1, False)
                         If esTermica = True Then
+                            facturaPVE.PrintToPrinter(PrinterSettings1, PageSettings1, False)
+                        End If
+                        If CopiaExtra = True Then
                             facturaPVE.PrintToPrinter(PrinterSettings1, PageSettings1, False)
                         End If
                     End If
@@ -7463,6 +7556,9 @@ Fin:
                             If esTermica = True Then
                                 facturaPVE.PrintToPrinter(PrinterSettings1, PageSettings1, False)
                             End If
+                            If CopiaExtra = True Then
+                                facturaPVE.PrintToPrinter(PrinterSettings1, PageSettings1, False)
+                            End If
                         End If
                         If Caja = 2 Or Caja = 12 Then
                             Dim PrinterSettings1 As New Printing.PrinterSettings
@@ -7474,6 +7570,9 @@ Fin:
                             facturaPVE.SetParameterValue(2, Id_Factura)
                             facturaPVE.PrintToPrinter(PrinterSettings1, PageSettings1, False)
                             If esTermica = True Then
+                                facturaPVE.PrintToPrinter(PrinterSettings1, PageSettings1, False)
+                            End If
+                            If CopiaExtra = True Then
                                 facturaPVE.PrintToPrinter(PrinterSettings1, PageSettings1, False)
                             End If
                         End If
@@ -8672,7 +8771,7 @@ Fin:
                         If ValidaExistencia = True Then
                             'valida que tenga existencia
                             If CDec(rs("Existencia")) <= 0 Then
-                                MsgBox("El articulo no tiene Existencias", "No se puede realizar la operacion")
+                                MsgBox("El articulo no tiene Existencias", MsgBoxStyle.Exclamation, "No se puede realizar la operacion")
                                 Exit Sub
                             End If
                         End If
@@ -8787,26 +8886,32 @@ Fin:
                             PrecioD = rs("Precio_D")
 
                             If Me.ckPD.Checked = True Then
-                                Dim IdAgente As String = Me.txtagente.Text
-                                Dim dtPD As New DataTable
-                                Dim Tipo As String
-                                Dim Pocentaje As Decimal
-                                Dim casa As String = Me.GetCasa(rs("Codigo"))
-                                cFunciones.Llenar_Tabla_Generico("select * from PrecioDiferenciado where IdAgente = " & IdAgente & " and CodProveedor = " & casa, dtPD, CadenaConexionSeePOS)
-                                If dtPD.Rows.Count > 0 Then
-                                    Tipo = dtPD.Rows(0).Item("Tipo")
-                                    Pocentaje = dtPD.Rows(0).Item("Porcentaje")
 
-                                    If Tipo.ToLower = "aumento" Then
-                                        PrecioA = PrecioA * (1 + (Pocentaje / 100))
-                                    End If
+                                If IsClinica() = True Then
+                                    'Guanavet Clinica
+                                    Me.tipoprecio = 2
+                                    'usa el precio definido en el precio B o precio pagina Web
+                                Else
+                                    Dim IdAgente As String = Me.txtagente.Text
+                                    Dim dtPD As New DataTable
+                                    Dim Tipo As String
+                                    Dim Pocentaje As Decimal
+                                    Dim casa As String = Me.GetCasa(rs("Codigo"))
+                                    cFunciones.Llenar_Tabla_Generico("select * from PrecioDiferenciado where IdAgente = " & IdAgente & " and CodProveedor = " & casa, dtPD, CadenaConexionSeePOS)
+                                    If dtPD.Rows.Count > 0 Then
+                                        Tipo = dtPD.Rows(0).Item("Tipo")
+                                        Pocentaje = dtPD.Rows(0).Item("Porcentaje")
 
-                                    If Tipo.ToLower = "descuento" Then
-                                        PrecioA -= PrecioA * (Pocentaje / 100)
+                                        If Tipo.ToLower = "aumento" Then
+                                            PrecioA = PrecioA * (1 + (Pocentaje / 100))
+                                        End If
+
+                                        If Tipo.ToLower = "descuento" Then
+                                            PrecioA -= PrecioA * (Pocentaje / 100)
+                                        End If
                                     End If
+                                    'hay que aplicar el nuevo precio
                                 End If
-                                'hay que aplicar el nuevo precio
-
                             End If
 
                         End If
@@ -9240,6 +9345,19 @@ Fin:
             Return consigna
         End If
         Return False
+    End Function
+
+    Private Function ImprimeCopia(_Codigo As String) As Boolean
+        Try
+            Dim dt As New DataTable
+            cFunciones.Llenar_Tabla_Generico("Select ImprimeCopia from Inventario where Codigo = " & _Codigo, dt, CadenaConexionSeePOS)
+            If dt.Rows.Count > 0 Then
+                Return dt.Rows(0).Item("ImprimeCopia")
+            Else
+                Return False
+            End If
+        Catch ex As Exception
+        End Try
     End Function
 
     Private Sub meter_al_detalle()
@@ -11571,6 +11689,12 @@ Fin:
                 If c = 8 Then 'solo para huber
                     Me.ckPD.Checked = Me.AutoActivaPD(c)
                 End If
+
+                If IsClinica() = True Then
+                    Me.ckPD.Checked = True
+                    Me.tipoprecio = 2
+                End If
+
             Else
                 Me.ck_agente.Checked = False
                 Exit Sub
@@ -12269,7 +12393,17 @@ Contador:
         End Try
     End Sub
 
+    Private IdPreventaBloqueado As Long = 0
     Dim EstadoPreventa As String = "PreVenta"
+
+    Private Sub DesbloquePreventa()
+        If Me.IdPreventaBloqueado > 0 Then
+            Dim db As New OBSoluciones.SQL.Sentencias(CadenaConexionSeePOS)
+            db.Ejecutar("Update Preventas set Bloqueado = 0, UsuarioBloqueo = '' where Id = " & Me.IdPreventaBloqueado, CommandType.Text)
+            Me.IdPreventaBloqueado = 0
+        End If
+    End Sub
+
     Private Sub btnBuscarFicha_Click(sender As Object, e As EventArgs) Handles btnBuscarFicha.Click
         Try
             If Me.txtFicha.Text <> "" And IsNumeric(Me.txtFicha.Text) Then
@@ -12294,14 +12428,40 @@ Contador:
                     txtHecho.Text = ""
                     Dim identificador As Double
 
+                    Dim Bloqueado As Boolean = False
+                    Dim UsuarioBloqueo As String = ""
                     Dim dt As New DataTable
                     cFunciones.Llenar_Tabla_Generico("select * from PreVentas where Ficha = " & Me.txtFicha.Text & " and Estado = 'Preventa'", dt, CadenaConexionSeePOS)
                     If dt.Rows.Count > 0 Then
+
+                        If Me.IdPreventaBloqueado > 0 Then
+                            Me.DesbloquePreventa()
+                        End If
+
                         identificador = dt.Rows(0).Item("Id")
                         Me.EstadoPreventa = dt.Rows(0).Item("Estado")
+                        Bloqueado = dt.Rows(0).Item("Bloqueado")
+                        UsuarioBloqueo = dt.Rows(0).Item("UsuarioBloqueo")
                     Else
                         identificador = 0.0
                         Me.EstadoPreventa = "PreVenta"
+                    End If
+
+                    If Bloqueado = True Then
+                        Me.IdPreventaBloqueado = 0
+                        If UsuarioBloqueo <> Me.txtNombreUsuario.Text Then
+                            MsgBox("Esta preventa esta bloqueado por el usuario :" & vbCrLf _
+                                & UsuarioBloqueo & "", MsgBoxStyle.Exclamation, "No se puede realizar la operacion.")
+                            Exit Sub
+                        Else
+                            Dim db As New OBSoluciones.SQL.Sentencias(CadenaConexionSeePOS)
+                            db.Ejecutar("Update PreVentas Set Bloqueado = 1, UsuarioBloqueo = '" & Me.txtNombreUsuario.Text & "' where Id = " & identificador, CommandType.Text)
+                            Me.IdPreventaBloqueado = identificador
+                        End If
+                    Else
+                        Dim db As New OBSoluciones.SQL.Sentencias(CadenaConexionSeePOS)
+                        db.Ejecutar("Update PreVentas Set Bloqueado = 1, UsuarioBloqueo = '" & Me.txtNombreUsuario.Text & "' where Id = " & identificador, CommandType.Text)
+                        Me.IdPreventaBloqueado = identificador
                     End If
 
                     buscando = True
@@ -12591,6 +12751,18 @@ Contador:
             Next
             Me.Calcular_totales()
         End If
+    End Sub
+
+    Private Sub btnKardex_Click(sender As Object, e As EventArgs) Handles btnKardex.Click
+        Dim frm As New FrmKardex
+        frm.txtCodigo.Text = Me.BindingContext(Me.DataSet_Facturaciones, "Ventas.VentasVentas_Detalle").Current("Codigo")
+        frm.FechaInicio.Value = CDate("01/" & Date.Now.Month & "/" & Date.Now.Year)
+        frm.FechaFinal.Value = Date.Now
+        frm.ShowDialog()
+    End Sub
+
+    Private Sub Button2_Click_1(sender As Object, e As EventArgs) Handles Button2.Click
+        Me.SimpleButton2.Enabled = True
     End Sub
 End Class
 

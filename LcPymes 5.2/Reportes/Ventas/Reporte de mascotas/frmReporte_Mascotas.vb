@@ -35,6 +35,7 @@ Public Class frmReporte_Mascotas
     Friend WithEvents FechaInicio As System.Windows.Forms.DateTimePicker
     Friend WithEvents ButtonMostrar As DevExpress.XtraEditors.SimpleButton
     Friend WithEvents VisorReporte As CrystalDecisions.Windows.Forms.CrystalReportViewer
+    Friend WithEvents ckResumenMensual As System.Windows.Forms.CheckBox
     Friend WithEvents SqlConnection1 As System.Data.SqlClient.SqlConnection
     <System.Diagnostics.DebuggerStepThrough()> Private Sub InitializeComponent()
         Me.Label4 = New System.Windows.Forms.Label()
@@ -44,6 +45,7 @@ Public Class frmReporte_Mascotas
         Me.ButtonMostrar = New DevExpress.XtraEditors.SimpleButton()
         Me.VisorReporte = New CrystalDecisions.Windows.Forms.CrystalReportViewer()
         Me.SqlConnection1 = New System.Data.SqlClient.SqlConnection()
+        Me.ckResumenMensual = New System.Windows.Forms.CheckBox()
         Me.SuspendLayout()
         '
         'Label4
@@ -88,7 +90,7 @@ Public Class frmReporte_Mascotas
         '
         'ButtonMostrar
         '
-        Me.ButtonMostrar.Location = New System.Drawing.Point(264, 16)
+        Me.ButtonMostrar.Location = New System.Drawing.Point(353, 20)
         Me.ButtonMostrar.Name = "ButtonMostrar"
         Me.ButtonMostrar.Size = New System.Drawing.Size(88, 24)
         Me.ButtonMostrar.TabIndex = 98
@@ -115,10 +117,21 @@ Public Class frmReporte_Mascotas
     "192.168.0.2;persist security info=False;initial catalog=Seepos"
         Me.SqlConnection1.FireInfoMessageEventOnUserErrors = False
         '
+        'ckResumenMensual
+        '
+        Me.ckResumenMensual.AutoSize = True
+        Me.ckResumenMensual.Location = New System.Drawing.Point(230, 27)
+        Me.ckResumenMensual.Name = "ckResumenMensual"
+        Me.ckResumenMensual.Size = New System.Drawing.Size(117, 17)
+        Me.ckResumenMensual.TabIndex = 108
+        Me.ckResumenMensual.Text = "Resumen Mensual "
+        Me.ckResumenMensual.UseVisualStyleBackColor = True
+        '
         'frmReporte_Mascotas
         '
         Me.AutoScaleBaseSize = New System.Drawing.Size(5, 13)
         Me.ClientSize = New System.Drawing.Size(640, 509)
+        Me.Controls.Add(Me.ckResumenMensual)
         Me.Controls.Add(Me.VisorReporte)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label3)
@@ -130,22 +143,60 @@ Public Class frmReporte_Mascotas
         Me.Text = "Reporte de Maceteras"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
 
 #End Region
 
+    Private Tipo As String = "Maceteras"
+    Private Function Obtener_BasedeDatos() As String
+        Dim Conexion() As String = CadenaConexionSeePOS.Split(";")
+        Dim Texto As String = Conexion(1)
+
+        Dim Resultado As String = ""
+        Dim inicia As Boolean = False
+        For Each c As Char In Texto
+            If inicia = True Then
+                If c <> ";" Then
+                    Resultado += c
+                End If
+            End If
+            If c = "=" Then inicia = True
+        Next
+        Return Resultado
+    End Function
+
+
     Private Sub ButtonMostrar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ButtonMostrar.Click
-        Dim rpt As New Reporte_ventas_mascotas
-        rpt.SetParameterValue(0, Me.FechaInicio.Value)
-        rpt.SetParameterValue(1, Me.FechaFinal.Value)
-        CrystalReportsConexion.LoadReportViewer(VisorReporte, rpt, , SqlConnection1.ConnectionString)
-        VisorReporte.Show()
+        If Me.ckResumenMensual.Checked = True Then
+            Dim rpt As New rptMascotaMes
+            rpt.SetParameterValue(0, Me.FechaInicio.Value)
+            rpt.SetParameterValue(1, Me.FechaFinal.Value)
+            rpt.SetParameterValue(2, Me.Tipo.ToUpper)
+            CrystalReportsConexion.LoadReportViewer(VisorReporte, rpt, , SqlConnection1.ConnectionString)
+            VisorReporte.Show()
+        Else
+            Dim rpt As New Reporte_ventas_mascotas
+            rpt.SetParameterValue(0, Me.FechaInicio.Value)
+            rpt.SetParameterValue(1, Me.FechaFinal.Value)
+            rpt.SetParameterValue(2, Me.Tipo.ToUpper)
+            CrystalReportsConexion.LoadReportViewer(VisorReporte, rpt, , SqlConnection1.ConnectionString)
+            VisorReporte.Show()
+        End If
     End Sub
+
 
     Private Sub frmReporte_Mascotas_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         SqlConnection1.ConnectionString = CadenaConexionSeePOS
         FechaInicio.Value = Now.Date
         FechaFinal.Value = Now.Date
+
+        Me.Text = "Reporte de Maceteras"
+        If Obtener_BasedeDatos() = "clinica" Then
+            Me.Text = "Reporte de Laboratorio"
+            Me.Tipo = "Laboratorio"
+        End If
     End Sub
+
 End Class

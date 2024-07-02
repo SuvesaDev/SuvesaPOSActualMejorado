@@ -712,6 +712,7 @@ Public Class FrmBuscarArticulo2
         Dim EnCero As Drawing.Color = Drawing.Color.OliveDrab
         Dim EsConsignacion As Drawing.Color = Drawing.Color.Purple
         Dim PromoActiva As Drawing.Color = Drawing.Color.Black 'ojo cambiar color
+        Dim ArticuloRelacionado As Drawing.Color = Drawing.Color.BlueViolet 'ojo cambiar color
 
         Dim t As List(Of DataGridViewRow)
 
@@ -767,6 +768,20 @@ Public Class FrmBuscarArticulo2
                 t = (From x As DataGridViewRow In Me.viewDatos.Rows Where CDec(x.Cells("CodigoDataGridViewTextBoxColumn").Value) = CDec(row.Item("Codigo")) Select x).ToList
                 For Each r As DataGridViewRow In t
                     r.DefaultCellStyle.BackColor = PromoActiva
+                    r.DefaultCellStyle.ForeColor = Drawing.Color.White
+                    'r.DefaultCellStyle.SelectionBackColor = PromoActiva
+                    r.DefaultCellStyle.SelectionForeColor = Drawing.Color.Blue
+                Next
+            Next
+        End If
+
+        Dim dt2 As New DataTable
+        cFunciones.Llenar_Tabla_Generico("select distinct CodigoPrincipal as Codigo from ArticulosRelacionados", dt2, CadenaConexionSeePOS)
+        If dt2.Rows.Count > 0 Then
+            For Each row As DataRow In dt2.Rows
+                t = (From x As DataGridViewRow In Me.viewDatos.Rows Where CDec(x.Cells("CodigoDataGridViewTextBoxColumn").Value) = CDec(row.Item("Codigo")) Select x).ToList
+                For Each r As DataGridViewRow In t
+                    r.DefaultCellStyle.BackColor = ArticuloRelacionado
                     r.DefaultCellStyle.ForeColor = Drawing.Color.White
                     'r.DefaultCellStyle.SelectionBackColor = PromoActiva
                     r.DefaultCellStyle.SelectionForeColor = Drawing.Color.Blue

@@ -1,6 +1,7 @@
 Imports System.Data.SqlClient
 Imports System.Data
 Imports System.Windows.Forms
+Imports System.Collections.Generic
 
 Public Class FrmBuscador2
     Inherits System.Windows.Forms.Form
@@ -19,6 +20,7 @@ Public Class FrmBuscador2
     Friend WithEvents btnAdelanto As System.Windows.Forms.Button
     Friend WithEvents btnPreVenta As System.Windows.Forms.Button
     Friend WithEvents btnVenta As System.Windows.Forms.Button
+    Friend WithEvents DataGridView1 As System.Windows.Forms.DataGridView
     Dim logeado As Boolean
 
 #End Region
@@ -90,11 +92,11 @@ Public Class FrmBuscador2
 
     <System.Diagnostics.DebuggerStepThrough()> Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim ColumnFilterInfo16 As DevExpress.XtraGrid.Columns.ColumnFilterInfo = New DevExpress.XtraGrid.Columns.ColumnFilterInfo()
-        Dim ColumnFilterInfo17 As DevExpress.XtraGrid.Columns.ColumnFilterInfo = New DevExpress.XtraGrid.Columns.ColumnFilterInfo()
-        Dim ColumnFilterInfo18 As DevExpress.XtraGrid.Columns.ColumnFilterInfo = New DevExpress.XtraGrid.Columns.ColumnFilterInfo()
-        Dim ColumnFilterInfo19 As DevExpress.XtraGrid.Columns.ColumnFilterInfo = New DevExpress.XtraGrid.Columns.ColumnFilterInfo()
-        Dim ColumnFilterInfo20 As DevExpress.XtraGrid.Columns.ColumnFilterInfo = New DevExpress.XtraGrid.Columns.ColumnFilterInfo()
+        Dim ColumnFilterInfo11 As DevExpress.XtraGrid.Columns.ColumnFilterInfo = New DevExpress.XtraGrid.Columns.ColumnFilterInfo()
+        Dim ColumnFilterInfo12 As DevExpress.XtraGrid.Columns.ColumnFilterInfo = New DevExpress.XtraGrid.Columns.ColumnFilterInfo()
+        Dim ColumnFilterInfo13 As DevExpress.XtraGrid.Columns.ColumnFilterInfo = New DevExpress.XtraGrid.Columns.ColumnFilterInfo()
+        Dim ColumnFilterInfo14 As DevExpress.XtraGrid.Columns.ColumnFilterInfo = New DevExpress.XtraGrid.Columns.ColumnFilterInfo()
+        Dim ColumnFilterInfo15 As DevExpress.XtraGrid.Columns.ColumnFilterInfo = New DevExpress.XtraGrid.Columns.ColumnFilterInfo()
         Me.TxtCodigo = New ValidText.ValidText()
         Me.TextBoxBuscar = New System.Windows.Forms.TextBox()
         Me.ButtonCancelar = New DevExpress.XtraEditors.SimpleButton()
@@ -134,12 +136,14 @@ Public Class FrmBuscador2
         Me.btnVenta = New System.Windows.Forms.Button()
         Me.btnPreVenta = New System.Windows.Forms.Button()
         Me.btnAdelanto = New System.Windows.Forms.Button()
+        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.Panel1.SuspendLayout()
         CType(Me.DataView, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.GridControl1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.GridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ErrorProvider, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.CheckBox2.SuspendLayout()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'TxtCodigo
@@ -259,10 +263,10 @@ Public Class FrmBuscador2
         '
         '
         Me.GridControl1.EmbeddedNavigator.Name = ""
-        Me.GridControl1.Location = New System.Drawing.Point(8, 26)
+        Me.GridControl1.Location = New System.Drawing.Point(746, 25)
         Me.GridControl1.MainView = Me.GridView1
         Me.GridControl1.Name = "GridControl1"
-        Me.GridControl1.Size = New System.Drawing.Size(728, 263)
+        Me.GridControl1.Size = New System.Drawing.Size(515, 263)
         Me.GridControl1.TabIndex = 86
         Me.GridControl1.Text = "GridControl"
         '
@@ -277,7 +281,7 @@ Public Class FrmBuscador2
         '
         'GridColumn1
         '
-        Me.GridColumn1.FilterInfo = ColumnFilterInfo16
+        Me.GridColumn1.FilterInfo = ColumnFilterInfo11
         Me.GridColumn1.Name = "GridColumn1"
         Me.GridColumn1.Options = CType((((((((DevExpress.XtraGrid.Columns.ColumnOptions.CanFiltered Or DevExpress.XtraGrid.Columns.ColumnOptions.CanMoved) _
             Or DevExpress.XtraGrid.Columns.ColumnOptions.CanGrouped) _
@@ -291,7 +295,7 @@ Public Class FrmBuscador2
         '
         'GridColumn4
         '
-        Me.GridColumn4.FilterInfo = ColumnFilterInfo17
+        Me.GridColumn4.FilterInfo = ColumnFilterInfo12
         Me.GridColumn4.Name = "GridColumn4"
         Me.GridColumn4.Options = CType(((((((((DevExpress.XtraGrid.Columns.ColumnOptions.CanFiltered Or DevExpress.XtraGrid.Columns.ColumnOptions.CanMoved) _
             Or DevExpress.XtraGrid.Columns.ColumnOptions.CanGrouped) _
@@ -306,7 +310,7 @@ Public Class FrmBuscador2
         '
         'GridColumn2
         '
-        Me.GridColumn2.FilterInfo = ColumnFilterInfo18
+        Me.GridColumn2.FilterInfo = ColumnFilterInfo13
         Me.GridColumn2.Name = "GridColumn2"
         Me.GridColumn2.Options = CType((((((((DevExpress.XtraGrid.Columns.ColumnOptions.CanFiltered Or DevExpress.XtraGrid.Columns.ColumnOptions.CanMoved) _
             Or DevExpress.XtraGrid.Columns.ColumnOptions.CanGrouped) _
@@ -321,7 +325,7 @@ Public Class FrmBuscador2
         'GridColumn3
         '
         Me.GridColumn3.Caption = "Fecha"
-        Me.GridColumn3.FilterInfo = ColumnFilterInfo19
+        Me.GridColumn3.FilterInfo = ColumnFilterInfo14
         Me.GridColumn3.Name = "GridColumn3"
         Me.GridColumn3.Options = CType((((((((DevExpress.XtraGrid.Columns.ColumnOptions.CanFiltered Or DevExpress.XtraGrid.Columns.ColumnOptions.CanMoved) _
             Or DevExpress.XtraGrid.Columns.ColumnOptions.CanGrouped) _
@@ -336,7 +340,7 @@ Public Class FrmBuscador2
         'GridColumn5
         '
         Me.GridColumn5.Caption = "Monto"
-        Me.GridColumn5.FilterInfo = ColumnFilterInfo20
+        Me.GridColumn5.FilterInfo = ColumnFilterInfo15
         Me.GridColumn5.Name = "GridColumn5"
         Me.GridColumn5.Options = CType((((((((DevExpress.XtraGrid.Columns.ColumnOptions.CanFiltered Or DevExpress.XtraGrid.Columns.ColumnOptions.CanMoved) _
             Or DevExpress.XtraGrid.Columns.ColumnOptions.CanGrouped) _
@@ -516,7 +520,7 @@ Public Class FrmBuscador2
         'btnVenta
         '
         Me.btnVenta.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnVenta.Location = New System.Drawing.Point(8, 0)
+        Me.btnVenta.Location = New System.Drawing.Point(8, 2)
         Me.btnVenta.Name = "btnVenta"
         Me.btnVenta.Size = New System.Drawing.Size(93, 23)
         Me.btnVenta.TabIndex = 105
@@ -526,7 +530,7 @@ Public Class FrmBuscador2
         'btnPreVenta
         '
         Me.btnPreVenta.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnPreVenta.Location = New System.Drawing.Point(107, 0)
+        Me.btnPreVenta.Location = New System.Drawing.Point(107, 2)
         Me.btnPreVenta.Name = "btnPreVenta"
         Me.btnPreVenta.Size = New System.Drawing.Size(93, 23)
         Me.btnPreVenta.TabIndex = 106
@@ -536,17 +540,36 @@ Public Class FrmBuscador2
         'btnAdelanto
         '
         Me.btnAdelanto.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnAdelanto.Location = New System.Drawing.Point(211, 0)
+        Me.btnAdelanto.Location = New System.Drawing.Point(211, 2)
         Me.btnAdelanto.Name = "btnAdelanto"
         Me.btnAdelanto.Size = New System.Drawing.Size(93, 23)
         Me.btnAdelanto.TabIndex = 107
         Me.btnAdelanto.Text = "Adelanto"
         Me.btnAdelanto.UseVisualStyleBackColor = True
         '
+        'DataGridView1
+        '
+        Me.DataGridView1.AllowUserToAddRows = False
+        Me.DataGridView1.AllowUserToDeleteRows = False
+        Me.DataGridView1.AllowUserToResizeColumns = False
+        Me.DataGridView1.AllowUserToResizeRows = False
+        Me.DataGridView1.BackgroundColor = System.Drawing.Color.White
+        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView1.Location = New System.Drawing.Point(8, 27)
+        Me.DataGridView1.MultiSelect = False
+        Me.DataGridView1.Name = "DataGridView1"
+        Me.DataGridView1.ReadOnly = True
+        Me.DataGridView1.RowHeadersVisible = False
+        Me.DataGridView1.RowTemplate.Height = 29
+        Me.DataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.DataGridView1.Size = New System.Drawing.Size(721, 263)
+        Me.DataGridView1.TabIndex = 108
+        '
         'FrmBuscador2
         '
         Me.AutoScaleBaseSize = New System.Drawing.Size(5, 13)
-        Me.ClientSize = New System.Drawing.Size(738, 391)
+        Me.ClientSize = New System.Drawing.Size(731, 391)
+        Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.btnAdelanto)
         Me.Controls.Add(Me.btnPreVenta)
         Me.Controls.Add(Me.btnVenta)
@@ -583,6 +606,7 @@ Public Class FrmBuscador2
         CType(Me.GridView1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ErrorProvider, System.ComponentModel.ISupportInitialize).EndInit()
         Me.CheckBox2.ResumeLayout(False)
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -729,6 +753,9 @@ Public Class FrmBuscador2
         End If
 
         Me.GridControl1.DataSource = DV
+        Me.DataGridView1.DataSource = DV
+        Me.FomartoTabla()
+
         Me.TxtCodigo.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.DV, DataSet.Tables(0).Columns(0).Caption()))
         DataSet = Nothing
         Fecha1.Value = "01/" & Date.Now.Month & "/" & Date.Now.Year
@@ -736,6 +763,20 @@ Public Class FrmBuscador2
         'Me.CkeckBuscaFecha.Checked = True
     End Sub
 #End Region
+
+    Private Sub FomartoTabla()
+        Try
+            With Me.DataGridView1
+                .Columns("Id").Visible = False
+                .Columns("Nombre del Cliente").Width = 350
+                .Columns("Fecha").DefaultCellStyle.Format = "d"
+                .Columns("Monto").DefaultCellStyle.Format = "N2"
+                .Columns("Monto").DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight
+                .Columns("primera").Visible = False
+            End With
+        Catch ex As Exception
+        End Try
+    End Sub
 
 #Region "Buscar"
     Private Sub BuscarDatos(ByVal Descripcion As String)
@@ -760,6 +801,8 @@ Public Class FrmBuscador2
             Descripcion = ""
             DV.RowFilter = strCampoFiltro & " lIKE '%" & Descripcion & "%'" & IIf(Me.CheckBox1.Checked = True, " AND Factura ='" + Me.TextBox1.Text + "-" + Me.cbxTipo.Text + "'", "")
         End If
+        Me.FomartoTabla()
+        Me.pone_color()
     End Sub
 #End Region
 
@@ -893,16 +936,17 @@ Public Class FrmBuscador2
                         If _Tabla = "PreVentas" Then
                             SQLString = "Select Id, convert(Varchar, convert(bigint,Num_Factura,0),1) + '-' + TIPO As Factura,Nombre_Cliente AS [Nombre del Cliente],Fecha, Total as Monto  from " & _Tabla & " where Estado = 'PreVenta' and dbo.dateonly(fecha) = dbo.dateonly(getdate()) Order by Id DESC"
                         Else
-                            SQLString = "Select Id, convert(Varchar, convert(bigint,Num_Factura,0),1) + '-' + TIPO As Factura,Nombre_Cliente AS [Nombre del Cliente],Fecha, Total as Monto  from " & _Tabla & " where dbo.dateonly(fecha) = dbo.dateonly(getdate()) Order by Id DESC"
+                            SQLString = "Select Id, convert(Varchar, convert(bigint,Num_Factura,0),1) + '-' + TIPO As Factura,Nombre_Cliente AS [Nombre del Cliente],Fecha, Total as Monto, primera  from " & _Tabla & " where dbo.dateonly(fecha) = dbo.dateonly(getdate()) Order by Id DESC"
                         End If
                     Else
-                        SQLString = "Select Id, convert(Varchar, convert(bigint,Num_Factura,0),1) + '-' + TIPO As Factura,Nombre_Cliente AS [Nombre del Cliente],Fecha, Total as Monto  from Ventas where dbo.dateonly(fecha) = dbo.dateonly(getdate()) Order by Id DESC"
+                        SQLString = "Select Id, convert(Varchar, convert(bigint,Num_Factura,0),1) + '-' + TIPO As Factura,Nombre_Cliente AS [Nombre del Cliente],Fecha, Total as Monto, primera  from Ventas where dbo.dateonly(fecha) = dbo.dateonly(getdate()) Order by Id DESC"
                     End If
 
                     Dim myCommand1 As SqlDataAdapter = New SqlDataAdapter(SQLString, Me.SqlConnection)
                     myCommand1.Fill(DataSet, SqlDataAdapter.DefaultSourceTableName.ToString)
                     DV = DataSet.Tables(0).DefaultView
                     Me.GridControl1.DataSource = DV
+                    Me.DataGridView1.DataSource = DV
                     Me.TxtCodigo.DataBindings.Clear()
                     Me.TxtCodigo.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.DV, DataSet.Tables(0).Columns(0).Caption()))
                 End If
@@ -912,16 +956,17 @@ Public Class FrmBuscador2
                         If _Tabla = "PreVentas" Then
                             SQLString = "Select Id, convert(Varchar, convert(bigint,Num_Factura,0),1) + '-' + TIPO As Factura,Nombre_Cliente AS [Nombre del Cliente],Fecha, Total as Monto  from " & _Tabla & " where Estado = 'PreVenta' and dbo.dateonly(fecha) = dbo.dateonly(getdate()) Order by Id DESC"
                         Else
-                            SQLString = "Select Id, convert(Varchar, convert(bigint,Num_Factura,0),1) + '-' + TIPO As Factura,Nombre_Cliente AS [Nombre del Cliente],Fecha, Total as Monto  from " & _Tabla & " where Month(fecha) = Month(getdate()) and Year(fecha) = year(getdate()) Order by Id DESC"
+                            SQLString = "Select Id, convert(Varchar, convert(bigint,Num_Factura,0),1) + '-' + TIPO As Factura,Nombre_Cliente AS [Nombre del Cliente],Fecha, Total as Monto, primera  from " & _Tabla & " where Month(fecha) = Month(getdate()) and Year(fecha) = year(getdate()) Order by Id DESC"
                         End If
                     Else
-                        SQLString = "Select Id, convert(Varchar, convert(bigint,Num_Factura,0),1) + '-' + TIPO As Factura,Nombre_Cliente AS [Nombre del Cliente],Fecha, Total as Monto  from Ventas where MONTH(fecha) = MONTH(getdate()) and YEAR(Fecha) = YEAR(GETDATE()) Order by Id DESC"
+                        SQLString = "Select Id, convert(Varchar, convert(bigint,Num_Factura,0),1) + '-' + TIPO As Factura,Nombre_Cliente AS [Nombre del Cliente],Fecha, Total as Monto, primera  from Ventas where MONTH(fecha) = MONTH(getdate()) and YEAR(Fecha) = YEAR(GETDATE()) Order by Id DESC"
                     End If
 
                     Dim myCommand1 As SqlDataAdapter = New SqlDataAdapter(SQLString, Me.SqlConnection)
                     myCommand1.Fill(DataSet, SqlDataAdapter.DefaultSourceTableName.ToString)
                     DV = DataSet.Tables(0).DefaultView
                     Me.GridControl1.DataSource = DV
+                    Me.DataGridView1.DataSource = DV
                     Me.TxtCodigo.DataBindings.Clear()
                     Me.TxtCodigo.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.DV, DataSet.Tables(0).Columns(0).Caption()))
                 End If
@@ -931,23 +976,61 @@ Public Class FrmBuscador2
                         If _Tabla = "PreVentas" Then
                             SQLString = "Select Id, convert(Varchar, convert(bigint,Num_Factura,0),1) + '-' + TIPO As Factura,Nombre_Cliente AS [Nombre del Cliente],Fecha, Total as Monto  from " & _Tabla & " where Estado = 'PreVenta' Order by Id DESC"
                         Else
-                            SQLString = "Select Id, convert(Varchar, convert(bigint,Num_Factura,0),1) + '-' + TIPO As Factura,Nombre_Cliente AS [Nombre del Cliente],Fecha, Total as Monto  from " & _Tabla & " Order by Id DESC"
+                            SQLString = "Select Id, convert(Varchar, convert(bigint,Num_Factura,0),1) + '-' + TIPO As Factura,Nombre_Cliente AS [Nombre del Cliente],Fecha, Total as Monto, primera  from " & _Tabla & " Order by Id DESC"
                         End If
                     Else
-                        SQLString = "Select Id, convert(Varchar, convert(bigint,Num_Factura,0),1) + '-' + TIPO As Factura,Nombre_Cliente AS [Nombre del Cliente],Fecha, Total as Monto  from Ventas Order by Id DESC"
+                        SQLString = "Select Id, convert(Varchar, convert(bigint,Num_Factura,0),1) + '-' + TIPO As Factura,Nombre_Cliente AS [Nombre del Cliente],Fecha, Total as Monto, primera  from Ventas Order by Id DESC"
                     End If
 
                     Dim myCommand1 As SqlDataAdapter = New SqlDataAdapter(SQLString, Me.SqlConnection)
                     myCommand1.Fill(DataSet, SqlDataAdapter.DefaultSourceTableName.ToString)
                     DV = DataSet.Tables(0).DefaultView
                     Me.GridControl1.DataSource = DV
+                    Me.DataGridView1.DataSource = DV
                     Me.TxtCodigo.DataBindings.Clear()
                     Me.TxtCodigo.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.DV, DataSet.Tables(0).Columns(0).Caption()))
                 End If
             Catch ex As Exception
-
             End Try
         End If
+
+        Me.FomartoTabla()
+        Me.pone_color()
+    End Sub
+
+    Private Sub pone_color()
+        Try
+            Dim Negativo As Drawing.Color = Drawing.Color.Red
+            Dim MeDeben As Drawing.Color = Drawing.Color.Green
+            Dim YoDebo As Drawing.Color = Drawing.Color.Orange
+            Dim EnCero As Drawing.Color = Drawing.Color.OliveDrab
+            Dim EsConsignacion As Drawing.Color = Drawing.Color.Purple
+            Dim PromoActiva As Drawing.Color = Drawing.Color.Black 'ojo cambiar color
+            Dim ArticuloRelacionado As Drawing.Color = Drawing.Color.BlueViolet 'ojo cambiar color
+
+            Dim t As List(Of DataGridViewRow)
+
+            t = (From x As DataGridViewRow In Me.DataGridView1.Rows Where CDec(x.Cells("primera").Value) = True Select x).ToList
+
+            For Each r As DataGridViewRow In t
+                r.DefaultCellStyle.BackColor = MeDeben
+                r.DefaultCellStyle.ForeColor = Drawing.Color.White
+                r.DefaultCellStyle.SelectionBackColor = MeDeben
+                r.DefaultCellStyle.SelectionForeColor = Drawing.Color.White
+            Next
+
+            't = (From x As DataGridViewRow In Me.viewDatos.Rows Where CDec(x.Cells("PrestamoDataGridViewTextBoxColumn").Value) > 0 Select x).ToList
+
+            'For Each r As DataGridViewRow In t
+            '    r.DefaultCellStyle.BackColor = YoDebo
+            '    r.DefaultCellStyle.ForeColor = Drawing.Color.White
+            '    'r.DefaultCellStyle.SelectionBackColor = YoDebo
+            '    r.DefaultCellStyle.SelectionForeColor = Drawing.Color.White
+            'Next
+
+        Catch ex As Exception
+
+        End Try
     End Sub
 
     Private Sub chk_Monto_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles chk_Monto.CheckedChanged

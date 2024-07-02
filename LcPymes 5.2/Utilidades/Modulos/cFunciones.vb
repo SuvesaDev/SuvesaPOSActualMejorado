@@ -58,9 +58,10 @@ Public Class cFunciones
         End If
     End Function
 
-    Public Function Buscar_X_Descripcion_Fecha(ByVal SQLString As String, ByVal CampoFiltro As String, ByVal CampoFechaFiltro As String, Optional ByVal NombreBuscador As String = "Buscar...", Optional ByVal NuevaConexion As String = "", Optional ByVal todos As Boolean = False) As String
-        Dim frmBuscar As New FrmBuscador
+    Public Function Buscar_X_Descripcion_Fecha(ByVal SQLString As String, ByVal CampoFiltro As String, ByVal CampoFechaFiltro As String, Optional ByVal NombreBuscador As String = "Buscar...", Optional ByVal NuevaConexion As String = "", Optional ByVal todos As Boolean = False, Optional ByVal _DevCompra As Boolean = False) As String
         Dim codigo As String
+        Dim frmBuscar As New FrmBuscador
+        frmBuscar.DevCompra = _DevCompra
         frmBuscar.SQLString = SQLString
         frmBuscar.Text = NombreBuscador
         frmBuscar.CheckBox2.Visible = todos

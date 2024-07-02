@@ -1,0 +1,8 @@
+﻿
+Hora Inicial: 24/06/2024 09:26:04 am
+Tipo de procedimiento: Ventas
+Cantidad Albaranes: 1
+Cantidad Lineas Albaranes: 2
+Se escribió en la bitacora: EMILCE ANGULO
+Hora Final: 24/06/2024 09:26:21 am
+Tiempo Empleado: 00:00:16.31

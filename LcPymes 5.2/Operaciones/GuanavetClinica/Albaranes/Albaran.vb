@@ -14,6 +14,7 @@ Public Class Albaran
     Private TipoCedula As String = ""
     Private Cedula As String = ""
     Private Correo As String = ""
+    Private Mascota As String = ""
     Private AlbaranDetalle As System.Collections.Generic.List(Of AlbaranDetalle)
 
     Sub New()
@@ -24,6 +25,7 @@ Public Class Albaran
         Me.TipoCedula = ""
         Me.Cedula = ""
         Me.Correo = ""
+        Me.Mascota = ""
         Me.AlbaranDetalle = New System.Collections.Generic.List(Of AlbaranDetalle)
     End Sub
 
@@ -49,6 +51,7 @@ Public Class Albaran
             Me.TipoCedula = dtEncabezado.Rows(0).Item("Tipo")
             Me.Cedula = dtEncabezado.Rows(0).Item("Identificacion")
             Me.Correo = dtEncabezado.Rows(0).Item("Correo")
+            Me.Mascota = dtEncabezado.Rows(0).Item("Mascota")
 
             Me.Cod_Cliente = Me.Cod_Cliente.Replace(" ", "0")
             Me.Cod_Cliente = Me.Cod_Cliente.Replace("-", "")
@@ -81,9 +84,9 @@ Public Class Albaran
                 Dim porcentaje As Decimal = Me.GetPorcentajeExtranjero()
 
                 Descripcion = row.Item("Descripcion")
-                If Descripcion.Length > 21 Then
-                    Descripcion = Descripcion.Substring(0, 20)
-                End If
+                'If Descripcion.Length > 21 Then
+                '    Descripcion = Descripcion.Substring(0, 20)
+                'End If
 
                 If _Extranjero Then
                     PrecioUnit = PrecioUnit * (1 + (porcentaje / 100))
@@ -118,7 +121,10 @@ Public Class Albaran
                                          Math.Round(MontoImpuesto, 4),
                                          Math.Round(SubTotalGravado, 4),
                                          Math.Round(SubTotalExcento, 4),
-                                         Math.Round(SubTotal, 4), row.Item("Descargar"))
+                                         Math.Round(SubTotal, 4), row.Item("Descargar"),
+                                         row.Item("ResponsableVenta"),
+                                         Nombre_Cliente,
+                                         Mascota)
                 Me.AlbaranDetalle.Add(Detalle)
             Next
 
@@ -133,35 +139,29 @@ Public Class Albaran
     End Sub
 
     Private Function ValidarCliente() As Boolean
-        Return True
+        Dim dt As New DataTable
+        cFunciones.Llenar_Tabla_Generico("select * from Clientes where identificacion = " & Me.Cod_Cliente & " or Cedula = '" & Me.Cod_Cliente & "'", dt, CadenaConexionSeePOS)
+        If dt.Rows.Count > 0 Then
+            'El cliente existe
+            Return True
+        Else
+            'El cliente no existe
+            Dim db As New OBSoluciones.SQL.Transaccion(CadenaConexionSeePOS)
+            Try
+                db.SetParametro("@cedula", Me.Cod_Cliente)
+                db.SetParametro("@nombre", Me.Nombre_Cliente)
+                db.SetParametro("@Telefono_01", "")
+                db.SetParametro("@e_mail", "")
+                db.SetParametro("@direccion", Me.Direccion)
+                db.SetParametro("@tipo", "FISICA")
+                db.Ejecutar("Insertar_Cliente_rapido", CommandType.StoredProcedure)
+                db.Commit()
+            Catch ex As Exception
+                db.Rollback()
+            End Try
+        End If
 
-        'antes guardaba el cliente pero no ingresan la info correcta.
-
-        'Dim dt As New DataTable
-        'cFunciones.Llenar_Tabla_Generico("select * from Clientes where identificacion = " & Me.Cod_Cliente, dt, CadenaConexionSeePOS)
-        'If dt.Rows.Count > 0 Then
-        '    'El cliente existe
-
-        '    'podria actualizar? pero por ahora creo que mejor no
-        '    Return True
-        'Else
-        '    'El cliente no existe
-        '    Dim db As New OBSoluciones.SQL.Transaccion(CadenaConexionSeePOS)
-        '    Try
-        '        db.SetParametro("@cedula", Me.Cod_Cliente)
-        '        db.SetParametro("@nombre", Me.Nombre_Cliente)
-        '        db.SetParametro("@Telefono_01", Me.Telefono)
-        '        db.SetParametro("@e_mail", Me.Correo)
-        '        db.SetParametro("@direccion", Me.Direccion)
-        '        db.SetParametro("@tipo", Me.TipoCedula)
-        '        db.Ejecutar("Insertar_Cliente_rapido", CommandType.StoredProcedure)
-        '        db.Commit()
-        '        Return True
-        '    Catch ex As Exception
-        '        db.Rollback()
-        '        Return False
-        '    End Try
-        'End If
+        Return True 'Simpre debe continuar
     End Function
 
     Private Function AplicaCambioenCaja() As Boolean
@@ -298,7 +298,7 @@ Public Class Albaran
                     db.SetParametro("@Mascotas", 0)
                     db.SetParametro("@Num_Caja", _NumCaja)
                     db.SetParametro("@cod_agente", _Doctor)
-                    db.SetParametro("@agente", True)
+                    db.SetParametro("@agente", False)
                     db.SetParametro("@apartado", 0)
                     db.SetParametro("@Cod_Cliente", _Cod_Cliente)
                     db.SetParametro("@EnviadoMH", 0)
@@ -352,7 +352,10 @@ Public Class Albaran
                         db.SetParametro("@PorcentajeCompra", 0)
                         db.SetParametro("@IdSerie", 0)
                         db.SetParametro("@Descargar", Detalle.Descargar)
-                        db.Ejecutar("INSERT INTO [" & TablaDetalle & "] ([Id_Factura], [Codigo], [Descripcion], [Cantidad], [Precio_Costo], [Precio_Base], [Precio_Flete], [Precio_Otros], [Precio_Unit], [Descuento], [Monto_Descuento], [Impuesto], [Monto_Impuesto], [SubtotalGravado], [SubTotalExcento], [SubTotal], [Devoluciones], [Numero_Entrega], [Max_Descuento], [Tipo_Cambio_ValorCompra], [Cod_MonedaVenta], [CodArticulo], [Lote], [CantVet], [CantBod], [empaquetado], [nota_pantalla], [regalias], [id_bodega], [CostoReal], [IdTipoExoneracion], [NumeroDocumento], [FechaEmision], [PorcentajeCompra], [IdSerie], Descargar) VALUES (@Id_Factura, @Codigo, @Descripcion, @Cantidad, @Precio_Costo, @Precio_Base, @Precio_Flete, @Precio_Otros, @Precio_Unit, @Descuento, @Monto_Descuento, @Impuesto, @Monto_Impuesto, @SubtotalGravado, @SubTotalExcento, @SubTotal, @Devoluciones, @Numero_Entrega, @Max_Descuento, @Tipo_Cambio_ValorCompra, @Cod_MonedaVenta, @CodArticulo, @Lote, @CantVet, @CantBod, @empaquetado, @nota_pantalla, @regalias, @id_bodega, @CostoReal, @IdTipoExoneracion, @NumeroDocumento, @FechaEmision, @PorcentajeCompra, @IdSerie, @Descargar);", Data.CommandType.Text)
+                        db.SetParametro("@ResponsableVenta", Detalle.Responsable)
+                        db.SetParametro("@Propetario", Detalle.Propetario)
+                        db.SetParametro("@Mascota", Detalle.Mascota)
+                        db.Ejecutar("INSERT INTO [" & TablaDetalle & "] ([Id_Factura], [Codigo], [Descripcion], [Cantidad], [Precio_Costo], [Precio_Base], [Precio_Flete], [Precio_Otros], [Precio_Unit], [Descuento], [Monto_Descuento], [Impuesto], [Monto_Impuesto], [SubtotalGravado], [SubTotalExcento], [SubTotal], [Devoluciones], [Numero_Entrega], [Max_Descuento], [Tipo_Cambio_ValorCompra], [Cod_MonedaVenta], [CodArticulo], [Lote], [CantVet], [CantBod], [empaquetado], [nota_pantalla], [regalias], [id_bodega], [CostoReal], [IdTipoExoneracion], [NumeroDocumento], [FechaEmision], [PorcentajeCompra], [IdSerie], Descargar, ResponsableVenta, Propetario, Mascota) VALUES (@Id_Factura, @Codigo, @Descripcion, @Cantidad, @Precio_Costo, @Precio_Base, @Precio_Flete, @Precio_Otros, @Precio_Unit, @Descuento, @Monto_Descuento, @Impuesto, @Monto_Impuesto, @SubtotalGravado, @SubTotalExcento, @SubTotal, @Devoluciones, @Numero_Entrega, @Max_Descuento, @Tipo_Cambio_ValorCompra, @Cod_MonedaVenta, @CodArticulo, @Lote, @CantVet, @CantBod, @empaquetado, @nota_pantalla, @regalias, @id_bodega, @CostoReal, @IdTipoExoneracion, @NumeroDocumento, @FechaEmision, @PorcentajeCompra, @IdSerie, @Descargar, @ResponsableVenta, @Propetario, @Mascota);", Data.CommandType.Text)
                     Next
                     '**************************************************************************  
                     'Marca los albaranes como facturados
@@ -396,8 +399,11 @@ Public Class AlbaranDetalle
     Property SubTotalExcento As Decimal
     Property Subtotal As Decimal
     Property Descargar As Decimal
+    Property Responsable As String
+    Property Propetario As String
+    Property Mascota As String
 
-    Sub New(id As Long, id_albaran As Long, codigo As Long, codarticulo As String, descripcion As String, cantidad As Decimal, precio_costo As Decimal, precio_base As Decimal, precio_flete As Decimal, precio_otros As Decimal, precio_unit As Decimal, descuento As Decimal, monto_descuento As Decimal, impuesto As Decimal, monto_impuesto As Decimal, subtotalgravado As Decimal, subtotalexcento As Decimal, subtotal As Decimal, descargar As Boolean)
+    Sub New(id As Long, id_albaran As Long, codigo As Long, codarticulo As String, descripcion As String, cantidad As Decimal, precio_costo As Decimal, precio_base As Decimal, precio_flete As Decimal, precio_otros As Decimal, precio_unit As Decimal, descuento As Decimal, monto_descuento As Decimal, impuesto As Decimal, monto_impuesto As Decimal, subtotalgravado As Decimal, subtotalexcento As Decimal, subtotal As Decimal, descargar As Boolean, responsable As String, propetario As String, mascota As String)
         Me.Id = id
         Me.Id_Albaran = id_albaran
         Me.Codigo = codigo
@@ -417,6 +423,10 @@ Public Class AlbaranDetalle
         Me.SubTotalExcento = subtotalexcento
         Me.Subtotal = subtotal
         Me.Descargar = descargar
+        Me.Responsable = responsable
+        Me.Propetario = propetario
+        Me.Mascota = mascota
     End Sub
+
 End Class
 

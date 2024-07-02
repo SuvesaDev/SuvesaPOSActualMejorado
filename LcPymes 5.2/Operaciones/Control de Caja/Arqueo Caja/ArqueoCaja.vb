@@ -1753,7 +1753,7 @@ Public Class ArqueoCaja
             cFunciones.Llenar_Tabla_Generico("select att.Monto_Tope as MontoApertura from aperturacaja ap inner join Apertura_Total_Tope att on ap.NApertura = att.NApertura and att.CodMoneda = 1 where ap.NApertura = " & _IdAperturaCaja, dtAperturaCaja, CadenaConexionSeePOS)
             AperturaCaja = dtAperturaCaja.Rows(0).Item("MontoApertura")
             If dtAperturaCaja.Rows.Count > 0 Then
-                cFunciones.Llenar_Tabla_Generico("select TipoDocumento, SUM(MontoPago) as MontoPago from OpcionesDePago where Numapertura = " & _IdAperturaCaja & " and FormaPago not in('ANU','PRE') group by TipoDocumento", dtOpcionesdePago, CadenaConexionSeePOS)
+                cFunciones.Llenar_Tabla_Generico("select TipoDocumento, SUM(MontoPago * TipoCambio) as MontoPago from OpcionesDePago where Numapertura = " & _IdAperturaCaja & " and FormaPago not in('ANU','PRE') group by TipoDocumento", dtOpcionesdePago, CadenaConexionSeePOS)
                 If dtOpcionesdePago.Rows.Count > 0 Then
                     For Each row As DataRow In dtOpcionesdePago.Rows
                         Select Case row.Item("TipoDocumento").ToString

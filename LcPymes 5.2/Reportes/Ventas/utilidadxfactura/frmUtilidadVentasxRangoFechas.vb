@@ -9,33 +9,34 @@ Public Class frmUtilidadVentasxRangoFechas
         If Me.ckFiltrarAgente.Checked = False Then
             ResultadoAgente = ""
         Else
+
             Dim selected As System.Collections.Generic.List(Of DataGridViewRow) = (From x As DataGridViewRow In Me.viewAgentes.Rows Where x.Cells("cMarcarAgente").Value = True).ToList
             If selected.Count > 0 Then
                 ResultadoAgente = ""
                 If Me.rbMostrarAgente.Checked = True Then
-                    ResultadoAgente = "{spDesmenuzarFactura;1.cod_agente} in(["
+                    ResultadoAgente = "{spDesmenuzarFactura;1.Agente} in(["
                     For i As Integer = 0 To selected.Count - 1
                         If i = 0 Then
-                            ResultadoAgente += selected(i).Cells("cIdAgente").Value.ToString
+                            ResultadoAgente += """" & selected(i).Cells("cAgente").Value.ToString & """"
                         Else
-                            ResultadoAgente += "," & selected(i).Cells("cIdAgente").Value.ToString
+                            ResultadoAgente += ", """ & selected(i).Cells("cAgente").Value.ToString & """"
                         End If
                     Next
                     ResultadoAgente += "])"
                 Else
-                    ResultadoAgente = "not({spDesmenuzarFactura;1.cod_agente} in(["
+                    ResultadoAgente = "not({spDesmenuzarFactura;1.Agente} in(["
                     For i As Integer = 0 To selected.Count - 1
                         If i = 0 Then
-                            ResultadoAgente += selected(i).Cells("cIdAgente").Value.ToString
+                            ResultadoAgente += """" & selected(i).Cells("cAgente").Value.ToString & """"
                         Else
-                            ResultadoAgente += "," & selected(i).Cells("cIdAgente").Value.ToString
+                            ResultadoAgente += ", """ & selected(i).Cells("cAgente").Value.ToString & """"
                         End If
                     Next
-                    ResultadoAgente += ", 0"
+                    ResultadoAgente += ", """""
                     ResultadoAgente += "]))"
-                End If                
+                End If
             Else
-                ResultadoAgente = "not({spDesmenuzarFactura;1.cod_agente} in([0]))"
+                ResultadoAgente = "not({spDesmenuzarFactura;1.Agente} in([""""]))"
             End If
         End If
 
@@ -84,6 +85,10 @@ Public Class frmUtilidadVentasxRangoFechas
 
 
     Private Sub btnMostrar_Click(sender As Object, e As EventArgs) Handles btnMostrar.Click
+
+        Dim Nuevo As Boolean = Me.Doctor
+
+
         Try
             'Dim huber As Boolean = False
             If Me.SplitContainer1.Panel2Collapsed = True And Me.ckFiltrarAgente.Checked = True Then
@@ -94,14 +99,13 @@ Public Class frmUtilidadVentasxRangoFechas
                 '    End If
                 'Next
 
-
-
                 Dim Formula As String = Me.FormulaSeleccion
                 Dim rpt As New rptUlitidadesRangoFechaAgenteClinica 'rptUlitidadesRangoFechaMensual
                 rpt.SetParameterValue(0, Me.dtpDesde.Value)
                 rpt.SetParameterValue(1, Me.dtpHasta.Value)
                 'rpt.SetParameterValue(2, huber)
                 rpt.SetParameterValue(2, Me.ckSoloServicios.Checked)
+                rpt.SetParameterValue(3, Nuevo)
                 rpt.RecordSelectionFormula = Formula
                 CrystalReportsConexion.LoadReportViewer(CrystalReportViewer1, rpt, , CadenaConexionSeePOS)
                 'Me.CrystalReportViewer1.SelectionFormula = Formula
@@ -114,6 +118,7 @@ Public Class frmUtilidadVentasxRangoFechas
                 rpt.SetParameterValue(0, Me.dtpDesde.Value)
                 rpt.SetParameterValue(1, Me.dtpHasta.Value)
                 rpt.SetParameterValue(2, Me.ckSoloServicios.Checked)
+                rpt.SetParameterValue(3, Nuevo)
                 'rpt.SetParameterValue(2, huber)
                 rpt.RecordSelectionFormula = Formula
                 CrystalReportsConexion.LoadReportViewer(CrystalReportViewer1, rpt, , CadenaConexionSeePOS)
@@ -126,18 +131,35 @@ Public Class frmUtilidadVentasxRangoFechas
         End Try
     End Sub
 
+    Private Doctor As Boolean = False
+
     Private Sub CargarAgentes()
-        Dim Index As Integer = 0
-        Dim dt As New DataTable
-        cFunciones.Llenar_Tabla_Generico("select id, nombre from agente_ventas where activo = 1", dt, CadenaConexionSeePOS)
-        Me.viewAgentes.Rows.Clear()
-        For i As Integer = 0 To dt.Rows.Count - 1
-            Me.viewAgentes.Rows.Add()
-            Me.viewAgentes.Item("cIdAgente", Index).Value = dt.Rows(i).Item("id")
-            Me.viewAgentes.Item("cMarcarAgente", Index).Value = False
-            Me.viewAgentes.Item("cAgente", Index).Value = dt.Rows(i).Item("nombre")
-            Index += 1
-        Next
+
+        If Doctor = False Then
+            Dim Index As Integer = 0
+            Dim dt As New DataTable
+            cFunciones.Llenar_Tabla_Generico("select id, nombre from agente_ventas where activo = 1", dt, CadenaConexionSeePOS)
+            Me.viewAgentes.Rows.Clear()
+            For i As Integer = 0 To dt.Rows.Count - 1
+                Me.viewAgentes.Rows.Add()
+                Me.viewAgentes.Item("cIdAgente", Index).Value = dt.Rows(i).Item("id")
+                Me.viewAgentes.Item("cMarcarAgente", Index).Value = False
+                Me.viewAgentes.Item("cAgente", Index).Value = dt.Rows(i).Item("nombre")
+                Index += 1
+            Next
+        Else
+            Dim Index As Integer = 0
+            Dim dt As New DataTable
+            cFunciones.Llenar_Tabla_Generico("exec uspObtenerDoctores", dt, CadenaConexionSeePOS)
+            Me.viewAgentes.Rows.Clear()
+            For i As Integer = 0 To dt.Rows.Count - 1
+                Me.viewAgentes.Rows.Add()
+                Me.viewAgentes.Item("cIdAgente", Index).Value = dt.Rows(i).Item("ResponsableVenta")
+                Me.viewAgentes.Item("cMarcarAgente", Index).Value = False
+                Me.viewAgentes.Item("cAgente", Index).Value = dt.Rows(i).Item("ResponsableVenta")
+                Index += 1
+            Next
+        End If
     End Sub
 
     Private Sub frmUtilidadVentasxRangoFechas_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -158,6 +180,7 @@ Public Class frmUtilidadVentasxRangoFechas
     Private Sub MostrarFiltrosAgentes()
         SplitContainer1.Panel2Collapsed = True
         SplitContainer1.Panel1Collapsed = False
+        Me.CargarAgentes()
     End Sub
 
     Private Sub MostrarFiltrosClientes()
@@ -165,12 +188,27 @@ Public Class frmUtilidadVentasxRangoFechas
         SplitContainer1.Panel1Collapsed = True
     End Sub
 
+    Private Sub Button1_Click_1(sender As Object, e As EventArgs) Handles Button1.Click
+        Me.ckFiltrarCliente.Checked = False
+        Me.ckFiltrarAgente.Checked = True
+        Me.ckFiltrarAgente.Text = "Filtrar Doctor"
+        Me.Doctor = True
+        Me.MostrarFiltrosAgentes()
+        Me.ckFiltrarCliente.Checked = False
+    End Sub
+
     Private Sub btnAgente_Click(sender As Object, e As EventArgs) Handles btnAgente.Click
+        Me.ckFiltrarCliente.Checked = False
+        Me.ckFiltrarAgente.Checked = True
+        Me.ckFiltrarAgente.Text = "Filtrar Agente"
+        Me.Doctor = False
         Me.MostrarFiltrosAgentes()
         Me.ckFiltrarCliente.Checked = False
     End Sub
 
     Private Sub btnCliente_Click(sender As Object, e As EventArgs) Handles btnCliente.Click
+        Me.ckFiltrarCliente.Checked = True
+        Me.ckFiltrarAgente.Checked = False
         Me.MostrarFiltrosClientes()
         Me.ckFiltrarAgente.Checked = False
     End Sub
@@ -221,5 +259,7 @@ Public Class frmUtilidadVentasxRangoFechas
             Me.AgregarCliente(r.Item("Identificacion"))
         Next
     End Sub
+
+
 
 End Class

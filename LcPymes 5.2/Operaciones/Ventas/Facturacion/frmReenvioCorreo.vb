@@ -8,7 +8,24 @@ Public Class frmReenvioCorreo
     Private Sub CargarFacturas_x_Fechas()
         Dim PVE As String = IIf(Me.ckPVE.Checked = False, "PVE", "")
         Dim dt As New DataTable
-        cFunciones.Llenar_Tabla_Generico("select Id, Fecha, Num_Factura, Cod_Cliente, Nombre_Cliente, Tipo, Total, ConsecutivoMH, ClaveMH, EstadoMH, isnull(CorreoComprobante,'') as Correo from Ventas left join Clientes  on Ventas.Cod_Cliente = Clientes.identificacion where dbo.DateOnly(Fecha) >= dbo.dateonly('" & Me.dtpDesde.Value.ToShortDateString & "') and dbo.DateOnly(Fecha) <= dbo.DateOnly('" & Me.dtpHasta.Value.ToShortDateString & "') and Tipo not in('APA','" & PVE & "') and Nombre_Cliente like '%" & Me.txtDetalle.Text & "%'", dt, CadenaConexionSeePOS)
+
+        Dim strSQL As String = ""
+
+        If IsNumeric(Me.txtMonto.Text) Then
+            If CDec(Me.txtMonto.Text) > 0 Then
+
+                Dim Desde As Decimal = CDec(Me.txtMonto.Text) - 4
+                Dim Hasta As Decimal = CDec(Me.txtMonto.Text) + 4
+
+                strSQL = "select Id, Fecha, Num_Factura, Cod_Cliente, Nombre_Cliente, Tipo, Total, ConsecutivoMH, ClaveMH, EstadoMH, isnull(CorreoComprobante,'') as Correo from Ventas left join Clientes  on Ventas.Cod_Cliente = Clientes.identificacion where Total between " & Desde & " and " & Hasta
+            End If
+        End If
+
+        If strSQL = "" Then
+            strSQL = "select Id, Fecha, Num_Factura, Cod_Cliente, Nombre_Cliente, Tipo, Total, ConsecutivoMH, ClaveMH, EstadoMH, isnull(CorreoComprobante,'') as Correo from Ventas left join Clientes  on Ventas.Cod_Cliente = Clientes.identificacion where dbo.DateOnly(Fecha) >= dbo.dateonly('" & Me.dtpDesde.Value.ToShortDateString & "') and dbo.DateOnly(Fecha) <= dbo.DateOnly('" & Me.dtpHasta.Value.ToShortDateString & "') and Tipo not in('APA','" & PVE & "') and Nombre_Cliente like '%" & Me.txtDetalle.Text & "%'"
+        End If
+
+        cFunciones.Llenar_Tabla_Generico(strSQL, dt, CadenaConexionSeePOS)
 
         Me.viewComprobantes.Columns.Clear()
         Me.viewComprobantes.Columns.Add("Id", "Id")
@@ -291,4 +308,7 @@ Public Class frmReenvioCorreo
         frm.AbreDesdeAfuera(id)
     End Sub
 
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Me.CargarFacturas_x_Fechas()
+    End Sub
 End Class

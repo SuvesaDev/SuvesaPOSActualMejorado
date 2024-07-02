@@ -334,7 +334,7 @@ Public Class FrmKardex
             SqlConnection.ConnectionString = CadenaConexionSeePOS
             Me.daMonedas.Fill(Me.DataSet_Kardex1.Moneda)
 
-            Me.FechaInicio.Text = Date.Today
+            Me.FechaInicio.Value = CDate("01/" & Date.Now.Month & "/" & Date.Now.Year)
             Me.FechaFinal.Text = Date.Today
         Catch ex As Exception
             MsgBox(ex.Message)

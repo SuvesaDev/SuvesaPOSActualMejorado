@@ -1,0 +1,3350 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+Veterinaria
+</name>
+</assembly>
+<members>
+<member name="T:LcPymes_5._2.dtsBloqueBodega.BodegasDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:LcPymes_5._2.dtsBloqueBodega.BodegasRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:LcPymes_5._2.dtsBloqueBodega.BodegasRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:LcPymes_5._2.dtsBloqueBodega">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="P:LcPymes_5._2.My.Resources.Resources.ResourceManager">
+	<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member><member name="P:LcPymes_5._2.My.Resources.Resources.Culture">
+	<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member><member name="P:LcPymes_5._2.My.Resources.Resources._001_exit">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:LcPymes_5._2.My.Resources.Resources._001_file">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:LcPymes_5._2.My.Resources.Resources._002_business">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:LcPymes_5._2.My.Resources.Resources._002_pen">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:LcPymes_5._2.My.Resources.Resources._002_settings">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:LcPymes_5._2.My.Resources.Resources._003_food">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:LcPymes_5._2.My.Resources.Resources._003_search_engine">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:LcPymes_5._2.My.Resources.Resources._004_delete">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:LcPymes_5._2.My.Resources.Resources._005_floppy_disk">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:LcPymes_5._2.My.Resources.Resources.add">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:LcPymes_5._2.My.Resources.Resources.business">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:LcPymes_5._2.My.Resources.Resources.checked">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:LcPymes_5._2.My.Resources.Resources.coins">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:LcPymes_5._2.My.Resources.Resources.floppy_disk">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:LcPymes_5._2.My.Resources.Resources.fondo">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:LcPymes_5._2.My.Resources.Resources.fondo__1_">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:LcPymes_5._2.My.Resources.Resources.fondo2">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:LcPymes_5._2.My.Resources.Resources.if_18_330400">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:LcPymes_5._2.My.Resources.Resources.info">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:LcPymes_5._2.My.Resources.Resources.intro">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:LcPymes_5._2.My.Resources.Resources.inventarios_comunes_en_tiendas">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:LcPymes_5._2.My.Resources.Resources.logoMM">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:LcPymes_5._2.My.Resources.Resources.page_add">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:LcPymes_5._2.My.Resources.Resources.page_edit">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:LcPymes_5._2.My.Resources.Resources.receipt">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:LcPymes_5._2.My.Resources.Resources.research">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="T:LcPymes_5._2.My.Resources.Resources">
+	<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetAbonosProveedor.MonedaDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetAbonosProveedor.BancosDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetAbonosProveedor.Cuentas_bancariasDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetAbonosProveedor.Cuentas_Bancarias_ProveedorDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetAbonosProveedor.MonedasDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetAbonosProveedor.ProveedoresDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetAbonosProveedor.abonocpagarDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetAbonosProveedor.detalle_abonocpagarDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetAbonosProveedor.MonedaRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetAbonosProveedor.BancosRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetAbonosProveedor.Cuentas_bancariasRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetAbonosProveedor.Cuentas_Bancarias_ProveedorRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetAbonosProveedor.MonedasRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetAbonosProveedor.ProveedoresRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetAbonosProveedor.abonocpagarRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetAbonosProveedor.detalle_abonocpagarRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetAbonosProveedor.MonedaRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetAbonosProveedor.BancosRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetAbonosProveedor.Cuentas_bancariasRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetAbonosProveedor.Cuentas_Bancarias_ProveedorRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetAbonosProveedor.MonedasRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetAbonosProveedor.ProveedoresRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetAbonosProveedor.abonocpagarRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetAbonosProveedor.detalle_abonocpagarRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetAbonosProveedor">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetCatalogoInventario.CatalogoInventarioDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetCatalogoInventario.CatalogoInventarioRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetCatalogoInventario.CatalogoInventarioRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetCatalogoInventario">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:LcPymes_5._2.DtsAgentes.UsuariosDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:LcPymes_5._2.DtsAgentes.agente_ventasDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:LcPymes_5._2.DtsAgentes.UsuariosRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:LcPymes_5._2.DtsAgentes.agente_ventasRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:LcPymes_5._2.DtsAgentes.UsuariosRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:LcPymes_5._2.DtsAgentes.agente_ventasRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:LcPymes_5._2.DtsAgentes">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSet_Cotizaciones2.ClientesDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSet_Cotizaciones2.MonedaDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSet_Cotizaciones2.UsuariosDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSet_Cotizaciones2.Detalle_ArticuloDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSet_Cotizaciones2.Cotizacion_DetalleDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSet_Cotizaciones2.CotizacionDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSet_Cotizaciones2.ClientesRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSet_Cotizaciones2.MonedaRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSet_Cotizaciones2.UsuariosRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSet_Cotizaciones2.Detalle_ArticuloRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSet_Cotizaciones2.Cotizacion_DetalleRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSet_Cotizaciones2.CotizacionRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSet_Cotizaciones2.ClientesRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:LcPymes_5._2.DataSet_Cotizaciones2.MonedaRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:LcPymes_5._2.DataSet_Cotizaciones2.UsuariosRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:LcPymes_5._2.DataSet_Cotizaciones2.Detalle_ArticuloRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:LcPymes_5._2.DataSet_Cotizaciones2.Cotizacion_DetalleRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:LcPymes_5._2.DataSet_Cotizaciones2.CotizacionRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:LcPymes_5._2.DataSet_Cotizaciones2">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetUsuario_logging.UsuariosDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetUsuario_logging.configuracionesDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetUsuario_logging.UsuariosRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetUsuario_logging.configuracionesRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetUsuario_logging.UsuariosRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetUsuario_logging.configuracionesRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetUsuario_logging">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetArqueo.aperturacajaDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetArqueo.ArqueoEfectivoDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetArqueo.ArqueoTarjetaDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetArqueo.Denominacion_MonedaDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetArqueo.MonedaDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetArqueo.TipoTarjetaDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetArqueo.ArqueoCajasDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetArqueo.aperturacajaRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetArqueo.ArqueoEfectivoRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetArqueo.ArqueoTarjetaRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetArqueo.Denominacion_MonedaRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetArqueo.MonedaRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetArqueo.TipoTarjetaRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetArqueo.ArqueoCajasRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetArqueo.aperturacajaRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetArqueo.ArqueoEfectivoRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetArqueo.ArqueoTarjetaRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetArqueo.Denominacion_MonedaRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetArqueo.MonedaRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetArqueo.TipoTarjetaRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetArqueo.ArqueoCajasRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetArqueo">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetCierreCaja.ImprimirDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetCierreCaja.configuracionesDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetCierreCaja.UsuariosDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetCierreCaja.Apertura_Total_TopeDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetCierreCaja.aperturacajaDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetCierreCaja.MonedaDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetCierreCaja.OpcionesDePagoDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetCierreCaja.ArqueoTarjetaDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetCierreCaja.TipoTarjetaDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetCierreCaja.Detalle_pago_cajaDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetCierreCaja.VentasContadoDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetCierreCaja.VentasCreditoDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetCierreCaja.CierreCaja_DetMonDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetCierreCaja.CierreCaja_DetTarjDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetCierreCaja.ArqueoCajasDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetCierreCaja.cierrecajaDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetCierreCaja.ImprimirRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetCierreCaja.configuracionesRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetCierreCaja.UsuariosRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetCierreCaja.Apertura_Total_TopeRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetCierreCaja.aperturacajaRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetCierreCaja.MonedaRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetCierreCaja.OpcionesDePagoRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetCierreCaja.ArqueoTarjetaRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetCierreCaja.TipoTarjetaRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetCierreCaja.Detalle_pago_cajaRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetCierreCaja.VentasContadoRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetCierreCaja.VentasCreditoRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetCierreCaja.CierreCaja_DetMonRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetCierreCaja.CierreCaja_DetTarjRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetCierreCaja.ArqueoCajasRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetCierreCaja.cierrecajaRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetCierreCaja.ImprimirRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetCierreCaja.configuracionesRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetCierreCaja.UsuariosRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetCierreCaja.Apertura_Total_TopeRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetCierreCaja.aperturacajaRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetCierreCaja.MonedaRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetCierreCaja.OpcionesDePagoRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetCierreCaja.ArqueoTarjetaRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetCierreCaja.TipoTarjetaRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetCierreCaja.Detalle_pago_cajaRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetCierreCaja.VentasContadoRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetCierreCaja.VentasCreditoRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetCierreCaja.CierreCaja_DetMonRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetCierreCaja.CierreCaja_DetTarjRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetCierreCaja.ArqueoCajasRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetCierreCaja.cierrecajaRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetCierreCaja">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSet_Traslados_Inv.MonedaDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSet_Traslados_Inv.UsuariosDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSet_Traslados_Inv.Traslado_InventarioDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSet_Traslados_Inv.Traslado_Inv_DetalleDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSet_Traslados_Inv.MonedaRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSet_Traslados_Inv.UsuariosRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSet_Traslados_Inv.Traslado_InventarioRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSet_Traslados_Inv.Traslado_Inv_DetalleRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSet_Traslados_Inv.MonedaRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:LcPymes_5._2.DataSet_Traslados_Inv.UsuariosRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:LcPymes_5._2.DataSet_Traslados_Inv.Traslado_InventarioRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:LcPymes_5._2.DataSet_Traslados_Inv.Traslado_Inv_DetalleRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:LcPymes_5._2.DataSet_Traslados_Inv">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSet_Movimiento_Bodega.BodegasDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSet_Movimiento_Bodega.LotesDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSet_Movimiento_Bodega.MovimientosBodegaDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSet_Movimiento_Bodega.MovimientosBodega_DetalleDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSet_Movimiento_Bodega.BodegasRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSet_Movimiento_Bodega.LotesRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSet_Movimiento_Bodega.MovimientosBodegaRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSet_Movimiento_Bodega.MovimientosBodega_DetalleRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSet_Movimiento_Bodega.BodegasRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:LcPymes_5._2.DataSet_Movimiento_Bodega.LotesRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:LcPymes_5._2.DataSet_Movimiento_Bodega.MovimientosBodegaRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:LcPymes_5._2.DataSet_Movimiento_Bodega.MovimientosBodega_DetalleRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:LcPymes_5._2.DataSet_Movimiento_Bodega">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSet_Proveedores.UsuariosDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSet_Proveedores.MonedaDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSet_Proveedores.AutoNumericoDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSet_Proveedores.Cuentas_Bancarias_ProveedorDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSet_Proveedores.ProveedoresDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSet_Proveedores.UsuariosRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSet_Proveedores.MonedaRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSet_Proveedores.AutoNumericoRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSet_Proveedores.Cuentas_Bancarias_ProveedorRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSet_Proveedores.ProveedoresRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSet_Proveedores.UsuariosRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:LcPymes_5._2.DataSet_Proveedores.MonedaRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:LcPymes_5._2.DataSet_Proveedores.AutoNumericoRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:LcPymes_5._2.DataSet_Proveedores.Cuentas_Bancarias_ProveedorRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:LcPymes_5._2.DataSet_Proveedores.ProveedoresRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:LcPymes_5._2.DataSet_Proveedores">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:LcPymes_5._2.dsRecibos.MonedaDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:LcPymes_5._2.dsRecibos.detalle_abonoccobrarDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:LcPymes_5._2.dsRecibos.abonoccobrarDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:LcPymes_5._2.dsRecibos.MonedaRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:LcPymes_5._2.dsRecibos.detalle_abonoccobrarRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:LcPymes_5._2.dsRecibos.abonoccobrarRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:LcPymes_5._2.dsRecibos.MonedaRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:LcPymes_5._2.dsRecibos.detalle_abonoccobrarRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:LcPymes_5._2.dsRecibos.abonoccobrarRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:LcPymes_5._2.dsRecibos">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetConfiguracionMoneda.Denominacion_MonedaDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetConfiguracionMoneda.Articulos_x_ProveedorDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetConfiguracionMoneda.BitacoraDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetConfiguracionMoneda.BodegasDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetConfiguracionMoneda.InventarioDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetConfiguracionMoneda.Inventario2DataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetConfiguracionMoneda.LotesDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetConfiguracionMoneda.MarcasDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetConfiguracionMoneda.MonedaDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetConfiguracionMoneda.PresentacionesDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetConfiguracionMoneda.ProveedoresDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetConfiguracionMoneda.SubFamiliasDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetConfiguracionMoneda.SubUbicacionDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetConfiguracionMoneda.agente_ventasDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetConfiguracionMoneda.AjusteInventario_DetalleDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetConfiguracionMoneda.Denominacion_MonedaRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetConfiguracionMoneda.Articulos_x_ProveedorRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetConfiguracionMoneda.BitacoraRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetConfiguracionMoneda.BodegasRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetConfiguracionMoneda.InventarioRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetConfiguracionMoneda.Inventario2Row">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetConfiguracionMoneda.LotesRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetConfiguracionMoneda.MarcasRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetConfiguracionMoneda.MonedaRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetConfiguracionMoneda.PresentacionesRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetConfiguracionMoneda.ProveedoresRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetConfiguracionMoneda.SubFamiliasRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetConfiguracionMoneda.SubUbicacionRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetConfiguracionMoneda.agente_ventasRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetConfiguracionMoneda.AjusteInventario_DetalleRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetConfiguracionMoneda.Denominacion_MonedaRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetConfiguracionMoneda.Articulos_x_ProveedorRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetConfiguracionMoneda.BitacoraRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetConfiguracionMoneda.BodegasRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetConfiguracionMoneda.InventarioRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetConfiguracionMoneda.Inventario2RowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetConfiguracionMoneda.LotesRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetConfiguracionMoneda.MarcasRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetConfiguracionMoneda.MonedaRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetConfiguracionMoneda.PresentacionesRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetConfiguracionMoneda.ProveedoresRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetConfiguracionMoneda.SubFamiliasRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetConfiguracionMoneda.SubUbicacionRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetConfiguracionMoneda.agente_ventasRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetConfiguracionMoneda.AjusteInventario_DetalleRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetConfiguracionMoneda">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSet_Opciones_Pago.MonedaDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSet_Opciones_Pago.OpcionesDePagoDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSet_Opciones_Pago.aperturacajaDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSet_Opciones_Pago.Detalle_pago_cajaDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSet_Opciones_Pago.MonedaRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSet_Opciones_Pago.OpcionesDePagoRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSet_Opciones_Pago.aperturacajaRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSet_Opciones_Pago.Detalle_pago_cajaRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSet_Opciones_Pago.MonedaRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:LcPymes_5._2.DataSet_Opciones_Pago.OpcionesDePagoRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:LcPymes_5._2.DataSet_Opciones_Pago.aperturacajaRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:LcPymes_5._2.DataSet_Opciones_Pago.Detalle_pago_cajaRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:LcPymes_5._2.DataSet_Opciones_Pago">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:LcPymes_5._2.Dsfactura2.VentasDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:LcPymes_5._2.Dsfactura2.VentasRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:LcPymes_5._2.Dsfactura2.VentasRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:LcPymes_5._2.Dsfactura2">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:LcPymes_5._2.DsBloqueaCaja.viewCajasBloqueadasDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:LcPymes_5._2.DsBloqueaCaja.viewCajasBloqueadasRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:LcPymes_5._2.DsBloqueaCaja.viewCajasBloqueadasRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:LcPymes_5._2.DsBloqueaCaja">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSet_MovimientoCaja.aperturacajaDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSet_MovimientoCaja.MonedaDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSet_MovimientoCaja.Movimiento_CajaDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSet_MovimientoCaja.encargadocomprasDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSet_MovimientoCaja.MovimientosBodega_DetalleDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSet_MovimientoCaja.aperturacajaRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSet_MovimientoCaja.MonedaRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSet_MovimientoCaja.Movimiento_CajaRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSet_MovimientoCaja.encargadocomprasRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSet_MovimientoCaja.MovimientosBodega_DetalleRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSet_MovimientoCaja.aperturacajaRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:LcPymes_5._2.DataSet_MovimientoCaja.MonedaRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:LcPymes_5._2.DataSet_MovimientoCaja.Movimiento_CajaRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:LcPymes_5._2.DataSet_MovimientoCaja.encargadocomprasRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:LcPymes_5._2.DataSet_MovimientoCaja.MovimientosBodega_DetalleRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:LcPymes_5._2.DataSet_MovimientoCaja">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetOrden_Compras.MonedaDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetOrden_Compras.UsuariosDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetOrden_Compras.ordencompraDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetOrden_Compras.detalle_ordencompraDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetOrden_Compras.MonedaRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetOrden_Compras.UsuariosRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetOrden_Compras.ordencompraRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetOrden_Compras.detalle_ordencompraRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetOrden_Compras.MonedaRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetOrden_Compras.UsuariosRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetOrden_Compras.ordencompraRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetOrden_Compras.detalle_ordencompraRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetOrden_Compras">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:LcPymes_5._2.AjusteCxC.MonedaDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:LcPymes_5._2.AjusteCxC.ajustesccobrarDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:LcPymes_5._2.AjusteCxC.detalle_ajustesccobrarDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:LcPymes_5._2.AjusteCxC.MonedaRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:LcPymes_5._2.AjusteCxC.ajustesccobrarRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:LcPymes_5._2.AjusteCxC.detalle_ajustesccobrarRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:LcPymes_5._2.AjusteCxC.MonedaRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:LcPymes_5._2.AjusteCxC.ajustesccobrarRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:LcPymes_5._2.AjusteCxC.detalle_ajustesccobrarRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:LcPymes_5._2.AjusteCxC">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetPresentaciones.PresentacionesDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetPresentaciones.PresentacionesRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetPresentaciones.PresentacionesRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetPresentaciones">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetCompras.UsuariosDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetCompras.MonedasDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetCompras.ordencompraDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetCompras.detalle_ordencompraDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetCompras.MonedaDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetCompras.ProveedoresDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetCompras.LotesDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetCompras.articulos_compradosDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetCompras.comprasDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetCompras.UsuariosRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetCompras.MonedasRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetCompras.ordencompraRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetCompras.detalle_ordencompraRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetCompras.MonedaRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetCompras.ProveedoresRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetCompras.LotesRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetCompras.articulos_compradosRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetCompras.comprasRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetCompras.UsuariosRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetCompras.MonedasRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetCompras.ordencompraRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetCompras.detalle_ordencompraRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetCompras.MonedaRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetCompras.ProveedoresRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetCompras.LotesRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetCompras.articulos_compradosRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetCompras.comprasRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetCompras">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSet_Aper_Caja.Vista_Cajeros_Disponibles_Abrir_CajaDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSet_Aper_Caja.Vista_Cajeros_Disponibles_Abrir_CajaRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSet_Aper_Caja.Vista_Cajeros_Disponibles_Abrir_CajaRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:LcPymes_5._2.DataSet_Aper_Caja">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:LcPymes_5._2.dsReporteGastos.MonedaDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:LcPymes_5._2.dsReporteGastos.MonedaRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:LcPymes_5._2.dsReporteGastos.MonedaRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:LcPymes_5._2.dsReporteGastos">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSet_DevCompras.UsuariosDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSet_DevCompras.MonedaDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSet_DevCompras.comprasDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSet_DevCompras.articulos_compradosDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSet_DevCompras.articulos_Compras_devueltosDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSet_DevCompras.LotesDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSet_DevCompras.devoluciones_ComprasDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSet_DevCompras.UsuariosRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSet_DevCompras.MonedaRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSet_DevCompras.comprasRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSet_DevCompras.articulos_compradosRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSet_DevCompras.articulos_Compras_devueltosRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSet_DevCompras.LotesRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSet_DevCompras.devoluciones_ComprasRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSet_DevCompras.UsuariosRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:LcPymes_5._2.DataSet_DevCompras.MonedaRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:LcPymes_5._2.DataSet_DevCompras.comprasRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:LcPymes_5._2.DataSet_DevCompras.articulos_compradosRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:LcPymes_5._2.DataSet_DevCompras.articulos_Compras_devueltosRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:LcPymes_5._2.DataSet_DevCompras.LotesRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:LcPymes_5._2.DataSet_DevCompras.devoluciones_ComprasRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:LcPymes_5._2.DataSet_DevCompras">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSet_EncargadoCompras.encargadocomprasDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSet_EncargadoCompras.encargadocomprasRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSet_EncargadoCompras.encargadocomprasRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:LcPymes_5._2.DataSet_EncargadoCompras">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:LcPymes_5._2.DsEtiquetasArticulos.Articulos_x_ProveedorDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:LcPymes_5._2.DsEtiquetasArticulos.InventarioDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:LcPymes_5._2.DsEtiquetasArticulos.Articulos_x_ProveedorRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:LcPymes_5._2.DsEtiquetasArticulos.InventarioRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:LcPymes_5._2.DsEtiquetasArticulos.Articulos_x_ProveedorRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:LcPymes_5._2.DsEtiquetasArticulos.InventarioRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:LcPymes_5._2.DsEtiquetasArticulos">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetClienteFrecuente._TableDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetClienteFrecuente.BitacoraDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetClienteFrecuente.UsuariosDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetClienteFrecuente.Clientes_frecuentesDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetClienteFrecuente._TableRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetClienteFrecuente.BitacoraRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetClienteFrecuente.UsuariosRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetClienteFrecuente.Clientes_frecuentesRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetClienteFrecuente._TableRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetClienteFrecuente.BitacoraRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetClienteFrecuente.UsuariosRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetClienteFrecuente.Clientes_frecuentesRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetClienteFrecuente">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSet_Estado_CxC.MonedaDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSet_Estado_CxC.MonedaRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSet_Estado_CxC.MonedaRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:LcPymes_5._2.DataSet_Estado_CxC">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:LcPymes_5._2.dsPrestamos.Clientes_frecuentesDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:LcPymes_5._2.dsPrestamos.UsuariosDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:LcPymes_5._2.dsPrestamos.detalle_prestamoDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:LcPymes_5._2.dsPrestamos.PrestamoDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:LcPymes_5._2.dsPrestamos.Clientes_frecuentesRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:LcPymes_5._2.dsPrestamos.UsuariosRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:LcPymes_5._2.dsPrestamos.detalle_prestamoRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:LcPymes_5._2.dsPrestamos.PrestamoRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:LcPymes_5._2.dsPrestamos.Clientes_frecuentesRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:LcPymes_5._2.dsPrestamos.UsuariosRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:LcPymes_5._2.dsPrestamos.detalle_prestamoRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:LcPymes_5._2.dsPrestamos.PrestamoRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:LcPymes_5._2.dsPrestamos">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="M:LcPymes_5._2.OBSoluciones.ComprobantesElectronicos.Comunicacion.EnvioDatos(System.String,LcPymes_5._2.OBSoluciones.ComprobantesElectronicos.Recepcion)">
+	<summary>
+ Envia los datos a los servidores de Hacienda y obtiene las respuestas necesarias
+ </summary>
+	<param name="TK">Token que generó Hacienda</param>
+	<param name="objRecepcion">Objeto que contiene todos las variables de comunicación</param>
+</member><member name="T:LcPymes_5._2.DsConfiguracion.correoDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:LcPymes_5._2.DsConfiguracion.permisosDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:LcPymes_5._2.DsConfiguracion.UsuariosDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:LcPymes_5._2.DsConfiguracion.configuracionesDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:LcPymes_5._2.DsConfiguracion.correoRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:LcPymes_5._2.DsConfiguracion.permisosRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:LcPymes_5._2.DsConfiguracion.UsuariosRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:LcPymes_5._2.DsConfiguracion.configuracionesRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:LcPymes_5._2.DsConfiguracion.correoRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:LcPymes_5._2.DsConfiguracion.permisosRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:LcPymes_5._2.DsConfiguracion.UsuariosRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:LcPymes_5._2.DsConfiguracion.configuracionesRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:LcPymes_5._2.DsConfiguracion">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetActualizaLotes.articulos_compradosDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetActualizaLotes.CatalogoInventarioDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetActualizaLotes.LotesDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetActualizaLotes.articulos_compradosRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetActualizaLotes.CatalogoInventarioRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetActualizaLotes.LotesRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetActualizaLotes.articulos_compradosRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetActualizaLotes.CatalogoInventarioRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetActualizaLotes.LotesRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetActualizaLotes">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetRedondeoInventario.InventarioDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetRedondeoInventario.Inventario1DataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetRedondeoInventario.MonedaDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetRedondeoInventario.InventarioRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetRedondeoInventario.Inventario1Row">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetRedondeoInventario.MonedaRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetRedondeoInventario.InventarioRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetRedondeoInventario.Inventario1RowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetRedondeoInventario.MonedaRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetRedondeoInventario">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:LcPymes_5._2.DsReportesApartados.Clientes_frecuentesDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:LcPymes_5._2.DsReportesApartados.MonedaDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:LcPymes_5._2.DsReportesApartados.Clientes_frecuentesRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:LcPymes_5._2.DsReportesApartados.MonedaRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:LcPymes_5._2.DsReportesApartados.Clientes_frecuentesRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:LcPymes_5._2.DsReportesApartados.MonedaRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:LcPymes_5._2.DsReportesApartados">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:LcPymes_5._2.DsMovimientoArticulos.MovimientoArticuloVentasDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:LcPymes_5._2.DsMovimientoArticulos.MovimientoArticulosCompraDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:LcPymes_5._2.DsMovimientoArticulos.MovimientoArticuloVentasRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:LcPymes_5._2.DsMovimientoArticulos.MovimientoArticulosCompraRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:LcPymes_5._2.DsMovimientoArticulos.MovimientoArticuloVentasRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:LcPymes_5._2.DsMovimientoArticulos.MovimientoArticulosCompraRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:LcPymes_5._2.DsMovimientoArticulos">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetClientes.MonedaDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetClientes.referenciabancariaDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetClientes.TableDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetClientes.BitacoraDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetClientes.encargadocomprasDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetClientes.referenciacomercialDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetClientes.UsuariosDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetClientes.ClientesDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetClientes.MonedaRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetClientes.referenciabancariaRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetClientes.TableRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetClientes.BitacoraRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetClientes.encargadocomprasRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetClientes.referenciacomercialRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetClientes.UsuariosRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetClientes.ClientesRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetClientes.MonedaRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetClientes.referenciabancariaRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetClientes.TableRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetClientes.BitacoraRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetClientes.encargadocomprasRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetClientes.referenciacomercialRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetClientes.UsuariosRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetClientes.ClientesRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetClientes">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetTipoTarjeta.MonedaDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetTipoTarjeta.TipoTarjetaDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetTipoTarjeta.MonedaRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetTipoTarjeta.TipoTarjetaRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetTipoTarjeta.MonedaRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetTipoTarjeta.TipoTarjetaRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetTipoTarjeta">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetUsuarioHabi.UsuariosDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetUsuarioHabi.UsuariosRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetUsuarioHabi.UsuariosRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetUsuarioHabi">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:LcPymes_5._2.dsAumento.FamiliaDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:LcPymes_5._2.dsAumento.InventarioDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:LcPymes_5._2.dsAumento.SubFamiliasDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:LcPymes_5._2.dsAumento.MonedaDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:LcPymes_5._2.dsAumento.FamiliaRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:LcPymes_5._2.dsAumento.InventarioRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:LcPymes_5._2.dsAumento.SubFamiliasRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:LcPymes_5._2.dsAumento.MonedaRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:LcPymes_5._2.dsAumento.FamiliaRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:LcPymes_5._2.dsAumento.InventarioRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:LcPymes_5._2.dsAumento.SubFamiliasRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:LcPymes_5._2.dsAumento.MonedaRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:LcPymes_5._2.dsAumento">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSet_Ubicaciones.SubUbicacionDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSet_Ubicaciones.UbicacionesDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSet_Ubicaciones.SubUbicacionRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSet_Ubicaciones.UbicacionesRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSet_Ubicaciones.SubUbicacionRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:LcPymes_5._2.DataSet_Ubicaciones.UbicacionesRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:LcPymes_5._2.DataSet_Ubicaciones">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:LcPymes_5._2.DsReporteVentas.ClientesDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:LcPymes_5._2.DsReporteVentas.MonedaDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:LcPymes_5._2.DsReporteVentas.Clientes_frecuentesDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:LcPymes_5._2.DsReporteVentas.ClientesRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:LcPymes_5._2.DsReporteVentas.MonedaRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:LcPymes_5._2.DsReporteVentas.Clientes_frecuentesRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:LcPymes_5._2.DsReporteVentas.ClientesRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:LcPymes_5._2.DsReporteVentas.MonedaRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:LcPymes_5._2.DsReporteVentas.Clientes_frecuentesRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:LcPymes_5._2.DsReporteVentas">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetFamilia.Familia1DataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetFamilia.SubFamiliasDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetFamilia.FamiliaDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetFamilia.Familia1Row">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetFamilia.SubFamiliasRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetFamilia.FamiliaRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetFamilia.Familia1RowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetFamilia.SubFamiliasRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetFamilia.FamiliaRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetFamilia">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetAperturaCaja.MonedaDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetAperturaCaja.Apertura_Total_TopeDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetAperturaCaja.UsuariosDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetAperturaCaja.aperturacajaDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetAperturaCaja.Cajas_CantidadDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetAperturaCaja.Denominacion_MonedaDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetAperturaCaja.Apertura_DenominacionesDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetAperturaCaja.MonedaRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetAperturaCaja.Apertura_Total_TopeRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetAperturaCaja.UsuariosRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetAperturaCaja.aperturacajaRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetAperturaCaja.Cajas_CantidadRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetAperturaCaja.Denominacion_MonedaRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetAperturaCaja.Apertura_DenominacionesRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetAperturaCaja.MonedaRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetAperturaCaja.Apertura_Total_TopeRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetAperturaCaja.UsuariosRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetAperturaCaja.aperturacajaRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetAperturaCaja.Cajas_CantidadRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetAperturaCaja.Denominacion_MonedaRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetAperturaCaja.Apertura_DenominacionesRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetAperturaCaja">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetInventario.Inventario1DataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetInventario.Articulos_x_ProveedorDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetInventario.BitacoraDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetInventario.BodegasDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetInventario.Inventario2DataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetInventario.LotesDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetInventario.MarcasDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetInventario.MonedaDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetInventario.PresentacionesDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetInventario.ProveedoresDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetInventario.SubFamiliasDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetInventario.SubUbicacionDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetInventario.UsuariosDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetInventario.serieDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetInventario.InventarioDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetInventario.Inventario1Row">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetInventario.Articulos_x_ProveedorRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetInventario.BitacoraRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetInventario.BodegasRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetInventario.Inventario2Row">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetInventario.LotesRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetInventario.MarcasRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetInventario.MonedaRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetInventario.PresentacionesRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetInventario.ProveedoresRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetInventario.SubFamiliasRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetInventario.SubUbicacionRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetInventario.UsuariosRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetInventario.serieRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetInventario.InventarioRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetInventario.Inventario1RowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetInventario.Articulos_x_ProveedorRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetInventario.BitacoraRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetInventario.BodegasRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetInventario.Inventario2RowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetInventario.LotesRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetInventario.MarcasRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetInventario.MonedaRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetInventario.PresentacionesRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetInventario.ProveedoresRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetInventario.SubFamiliasRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetInventario.SubUbicacionRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetInventario.UsuariosRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetInventario.serieRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetInventario.InventarioRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetInventario">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:LcPymes_5._2.dsReciboAbonos.MonedaDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:LcPymes_5._2.dsReciboAbonos.MonedaRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:LcPymes_5._2.dsReciboAbonos.MonedaRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:LcPymes_5._2.dsReciboAbonos">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:LcPymes_5._2.dsReporteCompras.MonedaDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:LcPymes_5._2.dsReporteCompras.MonedaRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:LcPymes_5._2.dsReporteCompras.MonedaRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:LcPymes_5._2.dsReporteCompras">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSet_dasboard.dasboard_aperturasDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSet_dasboard.dasboard_aperturasRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSet_dasboard.dasboard_aperturasRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:LcPymes_5._2.DataSet_dasboard">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetReporteInventario.MonedaDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetReporteInventario.ProveedoresDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetReporteInventario.BodegasDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetReporteInventario.MonedaRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetReporteInventario.ProveedoresRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetReporteInventario.BodegasRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetReporteInventario.MonedaRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetReporteInventario.ProveedoresRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetReporteInventario.BodegasRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetReporteInventario">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="M:LcPymes_5._2.OBSoluciones.ComprobantesElectronicos.Firma.FirmaXML_Xades(System.String,System.String,System.Boolean,System.String)">
+	<summary>
+ Firma XAdES EPES para la Factura Electrónica de Costa Rica
+ </summary>
+	<param name="pathXML">Ruta del folder donde se va a escribir el documento firmado</param>
+</member><member name="M:LcPymes_5._2.OBSoluciones.ComprobantesElectronicos.Firma.GetCertificateByThumbprint(System.String)">
+	<summary>
+ El Certificado debe de estar instalado en la computadora o servidor.
+ El valor Thumbprint lo encuentras en el tab Details, al final de las propiedades. 
+ </summary>
+	<param name="thumbprintCertificado">Debe estar en mayúscula y sin espacios en blanco</param>
+	<returns></returns>
+</member><member name="T:LcPymes_5._2.dsrifa.rifaDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:LcPymes_5._2.dsrifa.rifaRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:LcPymes_5._2.dsrifa.rifaRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:LcPymes_5._2.dsrifa">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:LcPymes_5._2.DsAjusteInv.InventarioDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:LcPymes_5._2.DsAjusteInv.LotesDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:LcPymes_5._2.DsAjusteInv.AjusteInventarioDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:LcPymes_5._2.DsAjusteInv.AjusteInventario_DetalleDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:LcPymes_5._2.DsAjusteInv.InventarioRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:LcPymes_5._2.DsAjusteInv.LotesRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:LcPymes_5._2.DsAjusteInv.AjusteInventarioRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:LcPymes_5._2.DsAjusteInv.AjusteInventario_DetalleRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:LcPymes_5._2.DsAjusteInv.InventarioRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:LcPymes_5._2.DsAjusteInv.LotesRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:LcPymes_5._2.DsAjusteInv.AjusteInventarioRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:LcPymes_5._2.DsAjusteInv.AjusteInventario_DetalleRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:LcPymes_5._2.DsAjusteInv">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSet_Facturaciones.encargadocomprasDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSet_Facturaciones.MonedaDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSet_Facturaciones.UsuariosDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSet_Facturaciones.CotizacionDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSet_Facturaciones.Cotizacion_DetalleDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSet_Facturaciones.LotesDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSet_Facturaciones.configuracionesDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSet_Facturaciones.Clientes_frecuentesDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSet_Facturaciones.Ventas_DetalleDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSet_Facturaciones.VentasDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSet_Facturaciones.ClientesDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSet_Facturaciones.encargadocomprasRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSet_Facturaciones.MonedaRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSet_Facturaciones.UsuariosRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSet_Facturaciones.CotizacionRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSet_Facturaciones.Cotizacion_DetalleRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSet_Facturaciones.LotesRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSet_Facturaciones.configuracionesRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSet_Facturaciones.Clientes_frecuentesRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSet_Facturaciones.Ventas_DetalleRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSet_Facturaciones.VentasRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSet_Facturaciones.ClientesRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSet_Facturaciones.encargadocomprasRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:LcPymes_5._2.DataSet_Facturaciones.MonedaRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:LcPymes_5._2.DataSet_Facturaciones.UsuariosRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:LcPymes_5._2.DataSet_Facturaciones.CotizacionRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:LcPymes_5._2.DataSet_Facturaciones.Cotizacion_DetalleRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:LcPymes_5._2.DataSet_Facturaciones.LotesRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:LcPymes_5._2.DataSet_Facturaciones.configuracionesRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:LcPymes_5._2.DataSet_Facturaciones.Clientes_frecuentesRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:LcPymes_5._2.DataSet_Facturaciones.Ventas_DetalleRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:LcPymes_5._2.DataSet_Facturaciones.VentasRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:LcPymes_5._2.DataSet_Facturaciones.ClientesRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:LcPymes_5._2.DataSet_Facturaciones">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:LcPymes_5._2.DatasetGasto.GastoDetalleDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:LcPymes_5._2.DatasetGasto.GastoDetalleRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:LcPymes_5._2.DatasetGasto.GastoDetalleRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:LcPymes_5._2.DatasetGasto">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="M:LcPymes_5._2.Wscedulas.Service1.#ctor">
+	<remarks/>
+</member><member name="E:LcPymes_5._2.Wscedulas.Service1.ObtenerDatosCompleted">
+	<remarks/>
+</member><member name="M:LcPymes_5._2.Wscedulas.Service1.ObtenerDatos(LcPymes_5._2.Wscedulas.OrigenConsulta,System.String,System.String,System.String,System.String,System.String,System.String,System.String)">
+	<remarks/>
+</member><member name="M:LcPymes_5._2.Wscedulas.Service1.ObtenerDatosAsync(LcPymes_5._2.Wscedulas.OrigenConsulta,System.String,System.String,System.String,System.String,System.String,System.String,System.String)">
+	<remarks/>
+</member><member name="M:LcPymes_5._2.Wscedulas.Service1.ObtenerDatosAsync(LcPymes_5._2.Wscedulas.OrigenConsulta,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.Object)">
+	<remarks/>
+</member><member name="M:LcPymes_5._2.Wscedulas.Service1.CancelAsync(System.Object)">
+	<remarks/>
+</member><member name="T:LcPymes_5._2.Wscedulas.Service1">
+	<remarks/>
+</member><member name="F:LcPymes_5._2.Wscedulas.OrigenConsulta.Fisico">
+	<remarks/>
+</member><member name="F:LcPymes_5._2.Wscedulas.OrigenConsulta.Juridico">
+	<remarks/>
+</member><member name="F:LcPymes_5._2.Wscedulas.OrigenConsulta.DIMEX">
+	<remarks/>
+</member><member name="T:LcPymes_5._2.Wscedulas.OrigenConsulta">
+	<remarks/>
+</member><member name="T:LcPymes_5._2.Wscedulas.ObtenerDatosCompletedEventHandler">
+	<remarks/>
+</member><member name="P:LcPymes_5._2.Wscedulas.ObtenerDatosCompletedEventArgs.Result">
+	<remarks/>
+</member><member name="T:LcPymes_5._2.Wscedulas.ObtenerDatosCompletedEventArgs">
+	<remarks/>
+</member><member name="T:LcPymes_5._2.Dscierrecaja.UsuariosDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:LcPymes_5._2.Dscierrecaja.Apertura_Total_TopeDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:LcPymes_5._2.Dscierrecaja.OpcionesDePagoDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:LcPymes_5._2.Dscierrecaja.denominacionesaperturaDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:LcPymes_5._2.Dscierrecaja.MonedaDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:LcPymes_5._2.Dscierrecaja.VentasDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:LcPymes_5._2.Dscierrecaja.Detalle_CierrecajaDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:LcPymes_5._2.Dscierrecaja.cierrecajaDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:LcPymes_5._2.Dscierrecaja.aperturacajaDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:LcPymes_5._2.Dscierrecaja.DenominacionesAperturasDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:LcPymes_5._2.Dscierrecaja.UsuariosRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:LcPymes_5._2.Dscierrecaja.Apertura_Total_TopeRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:LcPymes_5._2.Dscierrecaja.OpcionesDePagoRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:LcPymes_5._2.Dscierrecaja.denominacionesaperturaRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:LcPymes_5._2.Dscierrecaja.MonedaRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:LcPymes_5._2.Dscierrecaja.VentasRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:LcPymes_5._2.Dscierrecaja.Detalle_CierrecajaRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:LcPymes_5._2.Dscierrecaja.cierrecajaRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:LcPymes_5._2.Dscierrecaja.aperturacajaRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:LcPymes_5._2.Dscierrecaja.DenominacionesAperturasRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:LcPymes_5._2.Dscierrecaja.UsuariosRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:LcPymes_5._2.Dscierrecaja.Apertura_Total_TopeRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:LcPymes_5._2.Dscierrecaja.OpcionesDePagoRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:LcPymes_5._2.Dscierrecaja.denominacionesaperturaRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:LcPymes_5._2.Dscierrecaja.MonedaRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:LcPymes_5._2.Dscierrecaja.VentasRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:LcPymes_5._2.Dscierrecaja.Detalle_CierrecajaRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:LcPymes_5._2.Dscierrecaja.cierrecajaRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:LcPymes_5._2.Dscierrecaja.aperturacajaRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:LcPymes_5._2.Dscierrecaja.DenominacionesAperturasRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:LcPymes_5._2.Dscierrecaja">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetBodegas.BodegasDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetBodegas.MonedaDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetBodegas.InventarioDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetBodegas.BodegasRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetBodegas.MonedaRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetBodegas.InventarioRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetBodegas.BodegasRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetBodegas.MonedaRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetBodegas.InventarioRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetBodegas">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:LcPymes_5._2.Dataset_ReporteABC.MonedaDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:LcPymes_5._2.Dataset_ReporteABC.MonedaRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:LcPymes_5._2.Dataset_ReporteABC.MonedaRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:LcPymes_5._2.Dataset_ReporteABC">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:LcPymes_5._2.dsAjustePagar.MonedaDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:LcPymes_5._2.dsAjustePagar.Detalle_AjustescPagarDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:LcPymes_5._2.dsAjustePagar.MonedasDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:LcPymes_5._2.dsAjustePagar.AjustescpagarDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:LcPymes_5._2.dsAjustePagar.MonedaRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:LcPymes_5._2.dsAjustePagar.Detalle_AjustescPagarRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:LcPymes_5._2.dsAjustePagar.MonedasRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:LcPymes_5._2.dsAjustePagar.AjustescpagarRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:LcPymes_5._2.dsAjustePagar.MonedaRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:LcPymes_5._2.dsAjustePagar.Detalle_AjustescPagarRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:LcPymes_5._2.dsAjustePagar.MonedasRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:LcPymes_5._2.dsAjustePagar.AjustescpagarRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:LcPymes_5._2.dsAjustePagar">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:LcPymes_5._2.dsOrdenAutomatica.detalle_ordencompraDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:LcPymes_5._2.dsOrdenAutomatica.MonedaDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:LcPymes_5._2.dsOrdenAutomatica.ordencompraDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:LcPymes_5._2.dsOrdenAutomatica.SubUbicacionDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:LcPymes_5._2.dsOrdenAutomatica.UbicacionesDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:LcPymes_5._2.dsOrdenAutomatica.UsuariosDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:LcPymes_5._2.dsOrdenAutomatica.Vista_OrdenC_Auto_X_ProveedorDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:LcPymes_5._2.dsOrdenAutomatica.Orden_Compras_AutomaticasDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:LcPymes_5._2.dsOrdenAutomatica.Table1DataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:LcPymes_5._2.dsOrdenAutomatica.Table2DataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:LcPymes_5._2.dsOrdenAutomatica.ProveedoresDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:LcPymes_5._2.dsOrdenAutomatica.detalle_ordencompraRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:LcPymes_5._2.dsOrdenAutomatica.MonedaRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:LcPymes_5._2.dsOrdenAutomatica.ordencompraRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:LcPymes_5._2.dsOrdenAutomatica.SubUbicacionRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:LcPymes_5._2.dsOrdenAutomatica.UbicacionesRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:LcPymes_5._2.dsOrdenAutomatica.UsuariosRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:LcPymes_5._2.dsOrdenAutomatica.Vista_OrdenC_Auto_X_ProveedorRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:LcPymes_5._2.dsOrdenAutomatica.Orden_Compras_AutomaticasRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:LcPymes_5._2.dsOrdenAutomatica.Table1Row">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:LcPymes_5._2.dsOrdenAutomatica.Table2Row">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:LcPymes_5._2.dsOrdenAutomatica.ProveedoresRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:LcPymes_5._2.dsOrdenAutomatica.detalle_ordencompraRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:LcPymes_5._2.dsOrdenAutomatica.MonedaRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:LcPymes_5._2.dsOrdenAutomatica.ordencompraRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:LcPymes_5._2.dsOrdenAutomatica.SubUbicacionRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:LcPymes_5._2.dsOrdenAutomatica.UbicacionesRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:LcPymes_5._2.dsOrdenAutomatica.UsuariosRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:LcPymes_5._2.dsOrdenAutomatica.Vista_OrdenC_Auto_X_ProveedorRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:LcPymes_5._2.dsOrdenAutomatica.Orden_Compras_AutomaticasRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:LcPymes_5._2.dsOrdenAutomatica.Table1RowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:LcPymes_5._2.dsOrdenAutomatica.Table2RowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:LcPymes_5._2.dsOrdenAutomatica.ProveedoresRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:LcPymes_5._2.dsOrdenAutomatica">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetMarca._TableDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetMarca.MarcasDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetMarca._TableRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetMarca.MarcasRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetMarca._TableRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetMarca.MarcasRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetMarca">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSet_Kardex.MonedaDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSet_Kardex.MonedaRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSet_Kardex.MonedaRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:LcPymes_5._2.DataSet_Kardex">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetDevolucionVentas.MonedaDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetDevolucionVentas.UsuariosDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetDevolucionVentas.KardexDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetDevolucionVentas.devoluciones_ventasDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetDevolucionVentas.OpcionesDePagoDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetDevolucionVentas.VentasDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetDevolucionVentas.articulos_ventas_devueltosDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetDevolucionVentas.Ventas_DetalleDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetDevolucionVentas.MonedaRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetDevolucionVentas.UsuariosRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetDevolucionVentas.KardexRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetDevolucionVentas.devoluciones_ventasRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetDevolucionVentas.OpcionesDePagoRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetDevolucionVentas.VentasRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetDevolucionVentas.articulos_ventas_devueltosRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetDevolucionVentas.Ventas_DetalleRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetDevolucionVentas.MonedaRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetDevolucionVentas.UsuariosRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetDevolucionVentas.KardexRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetDevolucionVentas.devoluciones_ventasRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetDevolucionVentas.OpcionesDePagoRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetDevolucionVentas.VentasRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetDevolucionVentas.articulos_ventas_devueltosRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetDevolucionVentas.Ventas_DetalleRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:LcPymes_5._2.DataSetDevolucionVentas">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member>
+</members>
+</doc>

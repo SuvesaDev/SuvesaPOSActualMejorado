@@ -53,7 +53,7 @@ Public Class frmMensajeReceptor
 
         tamanoCadena = Len(cadenaTexto)
         If tamanoCadena > 0 Then
-            caracteresValidos = " 0123456789abcdefghijklmnñopqrstuvwxyzABCDEFGHIJKLMNÑOPQRSTUVWXYZ-_.:<>/?""=#@,+"
+            caracteresValidos = " 0123456789abcdefghijklmnñopqrstuvwxyzABCDEFGHIJKLMNÑOPQRSTUVWXYZ-_.:<>/?""'=#@,+"
             For i As Integer = 1 To tamanoCadena
                 caracterActual = Mid(cadenaTexto, i, 1)
                 If InStr(caracteresValidos, caracterActual) Then
@@ -87,11 +87,13 @@ Public Class frmMensajeReceptor
 
         Dim xmlEnvia As New Xml.XmlDocument
         Try
-            xmlEnvia.LoadXml(Me.LeerArchivo(_xml))
-            If xmlEnvia.DocumentElement.InnerXml.IndexOf("mensajeHacienda") > 0 Then
+            Dim strResultado As String = Me.LeerArchivo(_xml)
+            If strResultado.ToLower.IndexOf("mensajehacienda") > 0 Then
+                IO.File.Delete(_xml)
                 Exit Sub
             End If
 
+            xmlEnvia.LoadXml(strResultado)
             Me.Clave = xmlEnvia.GetElementsByTagName("Clave")(0).InnerText
             Me.NumeroCedulaEmisor = xmlEnvia.GetElementsByTagName("Emisor")(0)("Identificacion")("Numero").InnerText
             Me.Nombre = xmlEnvia.GetElementsByTagName("Emisor")(0)("Nombre").InnerText

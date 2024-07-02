@@ -315,7 +315,13 @@ Public Class Firma
         If nombre <> "0" Then
             Me.txtNombre.Text = nombre
         Else
-            Me.txtNombre.Text = ""
+            Try
+                Me.txtNombre.Text = ""
+                Dim ObtenerDatosCliente As api.Hacienda.Entidad = api.Hacienda.Consultar_x_Cedula(Me.txtCedula.Text)
+                Me.txtNombre.Text = ObtenerDatosCliente.nombre
+            Catch ex As Exception
+            End Try
+
         End If
     End Sub
 

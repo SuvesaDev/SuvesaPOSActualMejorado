@@ -81,15 +81,13 @@ Partial Class frmEditarAlbaran
         Me.viewDatos.BackgroundColor = System.Drawing.Color.White
         Me.viewDatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.viewDatos.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.cId, Me.cIdAlbaran, Me.cCodigo, Me.cDescripcion, Me.cCantidad, Me.cPrecio, Me.cIva, Me.cDescuento, Me.cUnidad, Me.cTotal, Me.cMotivo})
-        Me.viewDatos.Location = New System.Drawing.Point(13, 144)
-        Me.viewDatos.Margin = New System.Windows.Forms.Padding(4)
-        Me.viewDatos.MultiSelect = False
+        Me.viewDatos.Location = New System.Drawing.Point(10, 117)
         Me.viewDatos.Name = "viewDatos"
         Me.viewDatos.ReadOnly = True
         Me.viewDatos.RowHeadersVisible = False
         Me.viewDatos.RowTemplate.Height = 27
         Me.viewDatos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.viewDatos.Size = New System.Drawing.Size(1045, 370)
+        Me.viewDatos.Size = New System.Drawing.Size(784, 301)
         Me.viewDatos.TabIndex = 72
         '
         'cId
@@ -121,7 +119,7 @@ Partial Class frmEditarAlbaran
         Me.cDescripcion.HeaderText = "Descripcion"
         Me.cDescripcion.Name = "cDescripcion"
         Me.cDescripcion.ReadOnly = True
-        Me.cDescripcion.Width = 111
+        Me.cDescripcion.Width = 88
         '
         'cCantidad
         '
@@ -131,7 +129,7 @@ Partial Class frmEditarAlbaran
         Me.cCantidad.HeaderText = "Cantidad"
         Me.cCantidad.Name = "cCantidad"
         Me.cCantidad.ReadOnly = True
-        Me.cCantidad.Width = 93
+        Me.cCantidad.Width = 74
         '
         'cPrecio
         '
@@ -141,7 +139,7 @@ Partial Class frmEditarAlbaran
         Me.cPrecio.HeaderText = "Precio Unit"
         Me.cPrecio.Name = "cPrecio"
         Me.cPrecio.ReadOnly = True
-        Me.cPrecio.Width = 106
+        Me.cPrecio.Width = 84
         '
         'cIva
         '
@@ -151,7 +149,7 @@ Partial Class frmEditarAlbaran
         Me.cIva.HeaderText = "IVA"
         Me.cIva.Name = "cIva"
         Me.cIva.ReadOnly = True
-        Me.cIva.Width = 58
+        Me.cIva.Width = 49
         '
         'cDescuento
         '
@@ -161,7 +159,7 @@ Partial Class frmEditarAlbaran
         Me.cDescuento.HeaderText = "Desc"
         Me.cDescuento.Name = "cDescuento"
         Me.cDescuento.ReadOnly = True
-        Me.cDescuento.Width = 69
+        Me.cDescuento.Width = 57
         '
         'cUnidad
         '
@@ -179,7 +177,7 @@ Partial Class frmEditarAlbaran
         Me.cTotal.HeaderText = "Total"
         Me.cTotal.Name = "cTotal"
         Me.cTotal.ReadOnly = True
-        Me.cTotal.Width = 69
+        Me.cTotal.Width = 56
         '
         'cMotivo
         '
@@ -191,11 +189,10 @@ Partial Class frmEditarAlbaran
         '
         'txtCliente
         '
-        Me.txtCliente.Location = New System.Drawing.Point(16, 26)
-        Me.txtCliente.Margin = New System.Windows.Forms.Padding(4)
+        Me.txtCliente.Location = New System.Drawing.Point(12, 21)
         Me.txtCliente.Name = "txtCliente"
         Me.txtCliente.ReadOnly = True
-        Me.txtCliente.Size = New System.Drawing.Size(413, 22)
+        Me.txtCliente.Size = New System.Drawing.Size(311, 20)
         Me.txtCliente.TabIndex = 78
         '
         'Label13
@@ -203,10 +200,9 @@ Partial Class frmEditarAlbaran
         Me.Label13.BackColor = System.Drawing.Color.FromArgb(CType(CType(56, Byte), Integer), CType(CType(91, Byte), Integer), CType(CType(165, Byte), Integer))
         Me.Label13.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label13.ForeColor = System.Drawing.Color.White
-        Me.Label13.Location = New System.Drawing.Point(16, 6)
-        Me.Label13.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label13.Location = New System.Drawing.Point(12, 5)
         Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(415, 20)
+        Me.Label13.Size = New System.Drawing.Size(311, 16)
         Me.Label13.TabIndex = 79
         Me.Label13.Text = "Cliente"
         Me.Label13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -216,21 +212,19 @@ Partial Class frmEditarAlbaran
         Me.Label2.BackColor = System.Drawing.Color.FromArgb(CType(CType(56, Byte), Integer), CType(CType(91, Byte), Integer), CType(CType(165, Byte), Integer))
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.White
-        Me.Label2.Location = New System.Drawing.Point(861, 6)
-        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label2.Location = New System.Drawing.Point(646, 5)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(205, 20)
+        Me.Label2.Size = New System.Drawing.Size(154, 16)
         Me.Label2.TabIndex = 83
         Me.Label2.Text = "Fecha"
         Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'txtMascota
         '
-        Me.txtMascota.Location = New System.Drawing.Point(439, 26)
-        Me.txtMascota.Margin = New System.Windows.Forms.Padding(4)
+        Me.txtMascota.Location = New System.Drawing.Point(329, 21)
         Me.txtMascota.Name = "txtMascota"
         Me.txtMascota.ReadOnly = True
-        Me.txtMascota.Size = New System.Drawing.Size(413, 22)
+        Me.txtMascota.Size = New System.Drawing.Size(311, 20)
         Me.txtMascota.TabIndex = 80
         '
         'Label1
@@ -238,10 +232,9 @@ Partial Class frmEditarAlbaran
         Me.Label1.BackColor = System.Drawing.Color.FromArgb(CType(CType(56, Byte), Integer), CType(CType(91, Byte), Integer), CType(CType(165, Byte), Integer))
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.White
-        Me.Label1.Location = New System.Drawing.Point(439, 6)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label1.Location = New System.Drawing.Point(329, 5)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(415, 20)
+        Me.Label1.Size = New System.Drawing.Size(311, 16)
         Me.Label1.TabIndex = 81
         Me.Label1.Text = "Mascota"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -250,29 +243,26 @@ Partial Class frmEditarAlbaran
         '
         Me.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnCancelar.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnCancelar.Location = New System.Drawing.Point(796, 570)
-        Me.btnCancelar.Margin = New System.Windows.Forms.Padding(4)
+        Me.btnCancelar.Location = New System.Drawing.Point(597, 463)
         Me.btnCancelar.Name = "btnCancelar"
-        Me.btnCancelar.Size = New System.Drawing.Size(263, 50)
+        Me.btnCancelar.Size = New System.Drawing.Size(197, 41)
         Me.btnCancelar.TabIndex = 86
         Me.btnCancelar.Text = "Cancelar"
         Me.btnCancelar.UseVisualStyleBackColor = True
         '
         'txtFecha
         '
-        Me.txtFecha.Location = New System.Drawing.Point(861, 26)
-        Me.txtFecha.Margin = New System.Windows.Forms.Padding(4)
+        Me.txtFecha.Location = New System.Drawing.Point(646, 21)
         Me.txtFecha.Name = "txtFecha"
         Me.txtFecha.ReadOnly = True
-        Me.txtFecha.Size = New System.Drawing.Size(204, 22)
+        Me.txtFecha.Size = New System.Drawing.Size(154, 20)
         Me.txtFecha.TabIndex = 87
         '
         'txtCodigo
         '
-        Me.txtCodigo.Location = New System.Drawing.Point(13, 49)
-        Me.txtCodigo.Margin = New System.Windows.Forms.Padding(4)
+        Me.txtCodigo.Location = New System.Drawing.Point(10, 40)
         Me.txtCodigo.Name = "txtCodigo"
-        Me.txtCodigo.Size = New System.Drawing.Size(149, 22)
+        Me.txtCodigo.Size = New System.Drawing.Size(113, 20)
         Me.txtCodigo.TabIndex = 1
         '
         'Label4
@@ -280,10 +270,9 @@ Partial Class frmEditarAlbaran
         Me.Label4.BackColor = System.Drawing.Color.FromArgb(CType(CType(56, Byte), Integer), CType(CType(91, Byte), Integer), CType(CType(165, Byte), Integer))
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.ForeColor = System.Drawing.Color.White
-        Me.Label4.Location = New System.Drawing.Point(13, 30)
-        Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label4.Location = New System.Drawing.Point(10, 24)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(151, 20)
+        Me.Label4.Size = New System.Drawing.Size(113, 16)
         Me.Label4.TabIndex = 88
         Me.Label4.Text = "Codigo"
         Me.Label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -293,19 +282,17 @@ Partial Class frmEditarAlbaran
         Me.lblDescripcion.BackColor = System.Drawing.Color.FromArgb(CType(CType(56, Byte), Integer), CType(CType(91, Byte), Integer), CType(CType(165, Byte), Integer))
         Me.lblDescripcion.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblDescripcion.ForeColor = System.Drawing.Color.White
-        Me.lblDescripcion.Location = New System.Drawing.Point(12, 4)
-        Me.lblDescripcion.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblDescripcion.Location = New System.Drawing.Point(9, 3)
         Me.lblDescripcion.Name = "lblDescripcion"
-        Me.lblDescripcion.Size = New System.Drawing.Size(776, 21)
+        Me.lblDescripcion.Size = New System.Drawing.Size(582, 17)
         Me.lblDescripcion.TabIndex = 90
         Me.lblDescripcion.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'txtCantidad
         '
-        Me.txtCantidad.Location = New System.Drawing.Point(169, 49)
-        Me.txtCantidad.Margin = New System.Windows.Forms.Padding(4)
+        Me.txtCantidad.Location = New System.Drawing.Point(127, 40)
         Me.txtCantidad.Name = "txtCantidad"
-        Me.txtCantidad.Size = New System.Drawing.Size(149, 22)
+        Me.txtCantidad.Size = New System.Drawing.Size(113, 20)
         Me.txtCantidad.TabIndex = 2
         Me.txtCantidad.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
@@ -314,20 +301,18 @@ Partial Class frmEditarAlbaran
         Me.Label5.BackColor = System.Drawing.Color.FromArgb(CType(CType(56, Byte), Integer), CType(CType(91, Byte), Integer), CType(CType(165, Byte), Integer))
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.ForeColor = System.Drawing.Color.White
-        Me.Label5.Location = New System.Drawing.Point(169, 30)
-        Me.Label5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label5.Location = New System.Drawing.Point(127, 24)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(151, 20)
+        Me.Label5.Size = New System.Drawing.Size(113, 16)
         Me.Label5.TabIndex = 91
         Me.Label5.Text = "Cantidad"
         Me.Label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'txtPrecio
         '
-        Me.txtPrecio.Location = New System.Drawing.Point(325, 49)
-        Me.txtPrecio.Margin = New System.Windows.Forms.Padding(4)
+        Me.txtPrecio.Location = New System.Drawing.Point(244, 40)
         Me.txtPrecio.Name = "txtPrecio"
-        Me.txtPrecio.Size = New System.Drawing.Size(149, 22)
+        Me.txtPrecio.Size = New System.Drawing.Size(113, 20)
         Me.txtPrecio.TabIndex = 3
         Me.txtPrecio.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
@@ -336,20 +321,18 @@ Partial Class frmEditarAlbaran
         Me.Label6.BackColor = System.Drawing.Color.FromArgb(CType(CType(56, Byte), Integer), CType(CType(91, Byte), Integer), CType(CType(165, Byte), Integer))
         Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.ForeColor = System.Drawing.Color.White
-        Me.Label6.Location = New System.Drawing.Point(325, 30)
-        Me.Label6.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label6.Location = New System.Drawing.Point(244, 24)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(151, 20)
+        Me.Label6.Size = New System.Drawing.Size(113, 16)
         Me.Label6.TabIndex = 93
         Me.Label6.Text = "Precio"
         Me.Label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'txtDescuento
         '
-        Me.txtDescuento.Location = New System.Drawing.Point(481, 49)
-        Me.txtDescuento.Margin = New System.Windows.Forms.Padding(4)
+        Me.txtDescuento.Location = New System.Drawing.Point(361, 40)
         Me.txtDescuento.Name = "txtDescuento"
-        Me.txtDescuento.Size = New System.Drawing.Size(149, 22)
+        Me.txtDescuento.Size = New System.Drawing.Size(113, 20)
         Me.txtDescuento.TabIndex = 4
         Me.txtDescuento.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
@@ -358,20 +341,18 @@ Partial Class frmEditarAlbaran
         Me.Label7.BackColor = System.Drawing.Color.FromArgb(CType(CType(56, Byte), Integer), CType(CType(91, Byte), Integer), CType(CType(165, Byte), Integer))
         Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label7.ForeColor = System.Drawing.Color.White
-        Me.Label7.Location = New System.Drawing.Point(481, 30)
-        Me.Label7.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label7.Location = New System.Drawing.Point(361, 24)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(151, 20)
+        Me.Label7.Size = New System.Drawing.Size(113, 16)
         Me.Label7.TabIndex = 95
         Me.Label7.Text = "Descuento"
         Me.Label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'txtIVA
         '
-        Me.txtIVA.Location = New System.Drawing.Point(637, 49)
-        Me.txtIVA.Margin = New System.Windows.Forms.Padding(4)
+        Me.txtIVA.Location = New System.Drawing.Point(478, 40)
         Me.txtIVA.Name = "txtIVA"
-        Me.txtIVA.Size = New System.Drawing.Size(149, 22)
+        Me.txtIVA.Size = New System.Drawing.Size(113, 20)
         Me.txtIVA.TabIndex = 5
         Me.txtIVA.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
@@ -380,21 +361,19 @@ Partial Class frmEditarAlbaran
         Me.Label8.BackColor = System.Drawing.Color.FromArgb(CType(CType(56, Byte), Integer), CType(CType(91, Byte), Integer), CType(CType(165, Byte), Integer))
         Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label8.ForeColor = System.Drawing.Color.White
-        Me.Label8.Location = New System.Drawing.Point(637, 30)
-        Me.Label8.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label8.Location = New System.Drawing.Point(478, 24)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(151, 20)
+        Me.Label8.Size = New System.Drawing.Size(113, 16)
         Me.Label8.TabIndex = 97
         Me.Label8.Text = "IVA"
         Me.Label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'txtTotalAlbaran
         '
-        Me.txtTotalAlbaran.Location = New System.Drawing.Point(796, 539)
-        Me.txtTotalAlbaran.Margin = New System.Windows.Forms.Padding(4)
+        Me.txtTotalAlbaran.Location = New System.Drawing.Point(597, 438)
         Me.txtTotalAlbaran.Name = "txtTotalAlbaran"
         Me.txtTotalAlbaran.ReadOnly = True
-        Me.txtTotalAlbaran.Size = New System.Drawing.Size(261, 22)
+        Me.txtTotalAlbaran.Size = New System.Drawing.Size(197, 20)
         Me.txtTotalAlbaran.TabIndex = 100
         Me.txtTotalAlbaran.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
@@ -403,10 +382,9 @@ Partial Class frmEditarAlbaran
         Me.Label3.BackColor = System.Drawing.Color.FromArgb(CType(CType(56, Byte), Integer), CType(CType(91, Byte), Integer), CType(CType(165, Byte), Integer))
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.Color.White
-        Me.Label3.Location = New System.Drawing.Point(796, 519)
-        Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label3.Location = New System.Drawing.Point(597, 422)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(263, 20)
+        Me.Label3.Size = New System.Drawing.Size(197, 16)
         Me.Label3.TabIndex = 99
         Me.Label3.Text = "Total Albaran"
         Me.Label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -415,10 +393,9 @@ Partial Class frmEditarAlbaran
         '
         Me.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnAgregar.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnAgregar.Location = New System.Drawing.Point(796, 4)
-        Me.btnAgregar.Margin = New System.Windows.Forms.Padding(4)
+        Me.btnAgregar.Location = New System.Drawing.Point(597, 3)
         Me.btnAgregar.Name = "btnAgregar"
-        Me.btnAgregar.Size = New System.Drawing.Size(263, 70)
+        Me.btnAgregar.Size = New System.Drawing.Size(197, 57)
         Me.btnAgregar.TabIndex = 6
         Me.btnAgregar.Text = "Agregar Linea"
         Me.btnAgregar.UseVisualStyleBackColor = True
@@ -437,10 +414,9 @@ Partial Class frmEditarAlbaran
         Me.Panel1.Controls.Add(Me.Label6)
         Me.Panel1.Controls.Add(Me.Label7)
         Me.Panel1.Controls.Add(Me.txtPrecio)
-        Me.Panel1.Location = New System.Drawing.Point(0, 63)
-        Me.Panel1.Margin = New System.Windows.Forms.Padding(4)
+        Me.Panel1.Location = New System.Drawing.Point(0, 51)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(1079, 78)
+        Me.Panel1.Size = New System.Drawing.Size(809, 63)
         Me.Panel1.TabIndex = 102
         '
         'btnDescuentoTeleton
@@ -448,13 +424,13 @@ Partial Class frmEditarAlbaran
         Me.btnDescuentoTeleton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnDescuentoTeleton.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnDescuentoTeleton.ImageAlign = System.Drawing.ContentAlignment.TopLeft
-        Me.btnDescuentoTeleton.Location = New System.Drawing.Point(13, 570)
-        Me.btnDescuentoTeleton.Margin = New System.Windows.Forms.Padding(4)
+        Me.btnDescuentoTeleton.Location = New System.Drawing.Point(10, 463)
         Me.btnDescuentoTeleton.Name = "btnDescuentoTeleton"
-        Me.btnDescuentoTeleton.Size = New System.Drawing.Size(263, 50)
+        Me.btnDescuentoTeleton.Size = New System.Drawing.Size(197, 41)
         Me.btnDescuentoTeleton.TabIndex = 103
         Me.btnDescuentoTeleton.Text = "Descuento Teleton"
         Me.btnDescuentoTeleton.UseVisualStyleBackColor = True
+        Me.btnDescuentoTeleton.Visible = False
         '
         'btnAceptar
         '
@@ -462,10 +438,9 @@ Partial Class frmEditarAlbaran
         Me.btnAceptar.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnAceptar.Image = Global.LcPymes_5._2.My.Resources.Resources.accept_button
         Me.btnAceptar.ImageAlign = System.Drawing.ContentAlignment.TopLeft
-        Me.btnAceptar.Location = New System.Drawing.Point(525, 570)
-        Me.btnAceptar.Margin = New System.Windows.Forms.Padding(4)
+        Me.btnAceptar.Location = New System.Drawing.Point(394, 463)
         Me.btnAceptar.Name = "btnAceptar"
-        Me.btnAceptar.Size = New System.Drawing.Size(263, 50)
+        Me.btnAceptar.Size = New System.Drawing.Size(197, 41)
         Me.btnAceptar.TabIndex = 85
         Me.btnAceptar.Text = "Aceptar"
         Me.btnAceptar.UseVisualStyleBackColor = True
@@ -473,9 +448,10 @@ Partial Class frmEditarAlbaran
         'ckExtranjero
         '
         Me.ckExtranjero.AutoSize = True
-        Me.ckExtranjero.Location = New System.Drawing.Point(15, 521)
+        Me.ckExtranjero.Location = New System.Drawing.Point(12, 423)
+        Me.ckExtranjero.Margin = New System.Windows.Forms.Padding(2)
         Me.ckExtranjero.Name = "ckExtranjero"
-        Me.ckExtranjero.Size = New System.Drawing.Size(94, 21)
+        Me.ckExtranjero.Size = New System.Drawing.Size(73, 17)
         Me.ckExtranjero.TabIndex = 104
         Me.ckExtranjero.Text = "Extranjero"
         Me.ckExtranjero.UseVisualStyleBackColor = True
@@ -483,9 +459,9 @@ Partial Class frmEditarAlbaran
         '
         'frmEditarAlbaran
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1083, 622)
+        Me.ClientSize = New System.Drawing.Size(812, 505)
         Me.Controls.Add(Me.ckExtranjero)
         Me.Controls.Add(Me.btnDescuentoTeleton)
         Me.Controls.Add(Me.Panel1)
@@ -501,7 +477,6 @@ Partial Class frmEditarAlbaran
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.viewDatos)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
-        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "frmEditarAlbaran"

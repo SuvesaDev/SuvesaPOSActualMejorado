@@ -58,6 +58,9 @@ Public Class FrmInventario
     Friend WithEvents TxtUtilidadR_A As DevExpress.XtraEditors.TextEdit
     Friend WithEvents TxtUtilidadR_P As DevExpress.XtraEditors.TextEdit
     Friend WithEvents btnDuplicar As Button
+    Friend WithEvents ckLaboratorio As System.Windows.Forms.CheckBox
+    Friend WithEvents btnRelacionados As System.Windows.Forms.Button
+    Friend WithEvents ckListaNegra As System.Windows.Forms.CheckBox
 
 #Region " Windows Form Designer generated code "
     Dim dlg As WaitDialogForm
@@ -359,23 +362,23 @@ Public Class FrmInventario
 
     <System.Diagnostics.DebuggerStepThrough()> Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim ColumnFilterInfo16 As DevExpress.XtraGrid.Columns.ColumnFilterInfo = New DevExpress.XtraGrid.Columns.ColumnFilterInfo()
-        Dim ColumnFilterInfo17 As DevExpress.XtraGrid.Columns.ColumnFilterInfo = New DevExpress.XtraGrid.Columns.ColumnFilterInfo()
-        Dim ColumnFilterInfo18 As DevExpress.XtraGrid.Columns.ColumnFilterInfo = New DevExpress.XtraGrid.Columns.ColumnFilterInfo()
-        Dim ColumnFilterInfo19 As DevExpress.XtraGrid.Columns.ColumnFilterInfo = New DevExpress.XtraGrid.Columns.ColumnFilterInfo()
-        Dim ColumnFilterInfo20 As DevExpress.XtraGrid.Columns.ColumnFilterInfo = New DevExpress.XtraGrid.Columns.ColumnFilterInfo()
-        Dim ColumnFilterInfo21 As DevExpress.XtraGrid.Columns.ColumnFilterInfo = New DevExpress.XtraGrid.Columns.ColumnFilterInfo()
-        Dim ColumnFilterInfo22 As DevExpress.XtraGrid.Columns.ColumnFilterInfo = New DevExpress.XtraGrid.Columns.ColumnFilterInfo()
-        Dim ColumnFilterInfo23 As DevExpress.XtraGrid.Columns.ColumnFilterInfo = New DevExpress.XtraGrid.Columns.ColumnFilterInfo()
-        Dim ColumnFilterInfo24 As DevExpress.XtraGrid.Columns.ColumnFilterInfo = New DevExpress.XtraGrid.Columns.ColumnFilterInfo()
-        Dim ColumnFilterInfo25 As DevExpress.XtraGrid.Columns.ColumnFilterInfo = New DevExpress.XtraGrid.Columns.ColumnFilterInfo()
-        Dim ColumnFilterInfo26 As DevExpress.XtraGrid.Columns.ColumnFilterInfo = New DevExpress.XtraGrid.Columns.ColumnFilterInfo()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim ColumnFilterInfo27 As DevExpress.XtraGrid.Columns.ColumnFilterInfo = New DevExpress.XtraGrid.Columns.ColumnFilterInfo()
-        Dim ColumnFilterInfo28 As DevExpress.XtraGrid.Columns.ColumnFilterInfo = New DevExpress.XtraGrid.Columns.ColumnFilterInfo()
-        Dim ColumnFilterInfo29 As DevExpress.XtraGrid.Columns.ColumnFilterInfo = New DevExpress.XtraGrid.Columns.ColumnFilterInfo()
-        Dim ColumnFilterInfo30 As DevExpress.XtraGrid.Columns.ColumnFilterInfo = New DevExpress.XtraGrid.Columns.ColumnFilterInfo()
+        Dim ColumnFilterInfo10 As DevExpress.XtraGrid.Columns.ColumnFilterInfo = New DevExpress.XtraGrid.Columns.ColumnFilterInfo()
+        Dim ColumnFilterInfo11 As DevExpress.XtraGrid.Columns.ColumnFilterInfo = New DevExpress.XtraGrid.Columns.ColumnFilterInfo()
+        Dim ColumnFilterInfo12 As DevExpress.XtraGrid.Columns.ColumnFilterInfo = New DevExpress.XtraGrid.Columns.ColumnFilterInfo()
+        Dim ColumnFilterInfo2 As DevExpress.XtraGrid.Columns.ColumnFilterInfo = New DevExpress.XtraGrid.Columns.ColumnFilterInfo()
+        Dim ColumnFilterInfo3 As DevExpress.XtraGrid.Columns.ColumnFilterInfo = New DevExpress.XtraGrid.Columns.ColumnFilterInfo()
+        Dim ColumnFilterInfo4 As DevExpress.XtraGrid.Columns.ColumnFilterInfo = New DevExpress.XtraGrid.Columns.ColumnFilterInfo()
+        Dim ColumnFilterInfo5 As DevExpress.XtraGrid.Columns.ColumnFilterInfo = New DevExpress.XtraGrid.Columns.ColumnFilterInfo()
+        Dim ColumnFilterInfo6 As DevExpress.XtraGrid.Columns.ColumnFilterInfo = New DevExpress.XtraGrid.Columns.ColumnFilterInfo()
+        Dim ColumnFilterInfo7 As DevExpress.XtraGrid.Columns.ColumnFilterInfo = New DevExpress.XtraGrid.Columns.ColumnFilterInfo()
+        Dim ColumnFilterInfo8 As DevExpress.XtraGrid.Columns.ColumnFilterInfo = New DevExpress.XtraGrid.Columns.ColumnFilterInfo()
+        Dim ColumnFilterInfo9 As DevExpress.XtraGrid.Columns.ColumnFilterInfo = New DevExpress.XtraGrid.Columns.ColumnFilterInfo()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmInventario))
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim ColumnFilterInfo1 As DevExpress.XtraGrid.Columns.ColumnFilterInfo = New DevExpress.XtraGrid.Columns.ColumnFilterInfo()
+        Dim ColumnFilterInfo13 As DevExpress.XtraGrid.Columns.ColumnFilterInfo = New DevExpress.XtraGrid.Columns.ColumnFilterInfo()
+        Dim ColumnFilterInfo14 As DevExpress.XtraGrid.Columns.ColumnFilterInfo = New DevExpress.XtraGrid.Columns.ColumnFilterInfo()
+        Dim ColumnFilterInfo15 As DevExpress.XtraGrid.Columns.ColumnFilterInfo = New DevExpress.XtraGrid.Columns.ColumnFilterInfo()
         Me.TxtCodigo = New System.Windows.Forms.Label()
         Me.DataSetInventario = New LcPymes_5._2.DataSetInventario()
         Me.TxtBarras = New System.Windows.Forms.TextBox()
@@ -435,6 +438,7 @@ Public Class FrmInventario
         Me.Label36 = New System.Windows.Forms.Label()
         Me.ckHabilitaFamilia = New System.Windows.Forms.CheckBox()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
+        Me.btnRelacionados = New System.Windows.Forms.Button()
         Me.Label30 = New System.Windows.Forms.Label()
         Me.TxtExistencia = New System.Windows.Forms.TextBox()
         Me.TxtMin = New System.Windows.Forms.TextBox()
@@ -661,6 +665,8 @@ Public Class FrmInventario
         Me.SqlUpdateCommand2 = New System.Data.SqlClient.SqlCommand()
         Me.ckValidaExistencia = New System.Windows.Forms.CheckBox()
         Me.btnDuplicar = New System.Windows.Forms.Button()
+        Me.ckLaboratorio = New System.Windows.Forms.CheckBox()
+        Me.ckListaNegra = New System.Windows.Forms.CheckBox()
         CType(Me.DataSetInventario, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TxtPrecioVenta_A.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TxtPrecioVenta_B.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -723,7 +729,7 @@ Public Class FrmInventario
         Me.TxtCodigo.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.DataSetInventario, "Inventario.Codigo", True))
         Me.TxtCodigo.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TxtCodigo.ForeColor = System.Drawing.Color.Red
-        Me.TxtCodigo.Location = New System.Drawing.Point(50, 11)
+        Me.TxtCodigo.Location = New System.Drawing.Point(39, 11)
         Me.TxtCodigo.Name = "TxtCodigo"
         Me.TxtCodigo.Size = New System.Drawing.Size(82, 15)
         Me.TxtCodigo.TabIndex = 2
@@ -1578,6 +1584,7 @@ Public Class FrmInventario
         'GroupBox3
         '
         Me.GroupBox3.BackColor = System.Drawing.Color.Peru
+        Me.GroupBox3.Controls.Add(Me.btnRelacionados)
         Me.GroupBox3.Controls.Add(Me.Label30)
         Me.GroupBox3.Controls.Add(Me.TxtExistencia)
         Me.GroupBox3.Controls.Add(Me.TxtMin)
@@ -1595,6 +1602,15 @@ Public Class FrmInventario
         Me.GroupBox3.TabIndex = 7
         Me.GroupBox3.TabStop = False
         Me.GroupBox3.Text = "Existencias"
+        '
+        'btnRelacionados
+        '
+        Me.btnRelacionados.Location = New System.Drawing.Point(284, 29)
+        Me.btnRelacionados.Name = "btnRelacionados"
+        Me.btnRelacionados.Size = New System.Drawing.Size(46, 23)
+        Me.btnRelacionados.TabIndex = 8
+        Me.btnRelacionados.Text = "..."
+        Me.btnRelacionados.UseVisualStyleBackColor = True
         '
         'Label30
         '
@@ -1938,7 +1954,7 @@ Public Class FrmInventario
         Me.colFechaUltimaCompra.DisplayFormat.FormatString = "dd/MM/yyyy"
         Me.colFechaUltimaCompra.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime
         Me.colFechaUltimaCompra.FieldName = "FechaUltimaCompra"
-        Me.colFechaUltimaCompra.FilterInfo = ColumnFilterInfo16
+        Me.colFechaUltimaCompra.FilterInfo = ColumnFilterInfo10
         Me.colFechaUltimaCompra.Name = "colFechaUltimaCompra"
         Me.colFechaUltimaCompra.Visible = True
         Me.colFechaUltimaCompra.Width = 48
@@ -1947,7 +1963,7 @@ Public Class FrmInventario
         '
         Me.colCodigoProveedor.Caption = "Proveedor"
         Me.colCodigoProveedor.FieldName = "CodigoProveedor"
-        Me.colCodigoProveedor.FilterInfo = ColumnFilterInfo17
+        Me.colCodigoProveedor.FilterInfo = ColumnFilterInfo11
         Me.colCodigoProveedor.Name = "colCodigoProveedor"
         Me.colCodigoProveedor.Visible = True
         Me.colCodigoProveedor.Width = 205
@@ -1957,7 +1973,7 @@ Public Class FrmInventario
         Me.colUltimoCosto.Caption = "Costo"
         Me.colUltimoCosto.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric
         Me.colUltimoCosto.FieldName = "CodigoArticulo"
-        Me.colUltimoCosto.FilterInfo = ColumnFilterInfo18
+        Me.colUltimoCosto.FilterInfo = ColumnFilterInfo12
         Me.colUltimoCosto.Name = "colUltimoCosto"
         Me.colUltimoCosto.Visible = True
         Me.colUltimoCosto.Width = 63
@@ -2436,9 +2452,9 @@ Public Class FrmInventario
         '
         Me.ckVerCodBarraInv.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.ckVerCodBarraInv.Location = New System.Drawing.Point(371, 520)
+        Me.ckVerCodBarraInv.Location = New System.Drawing.Point(437, 515)
         Me.ckVerCodBarraInv.Name = "ckVerCodBarraInv"
-        Me.ckVerCodBarraInv.Size = New System.Drawing.Size(173, 16)
+        Me.ckVerCodBarraInv.Size = New System.Drawing.Size(118, 16)
         Me.ckVerCodBarraInv.TabIndex = 69
         Me.ckVerCodBarraInv.Text = "Verificar Cód. Barra"
         '
@@ -3287,7 +3303,7 @@ Public Class FrmInventario
         Me.GridColumn6.DisplayFormat.FormatString = "d"
         Me.GridColumn6.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime
         Me.GridColumn6.FieldName = "FechaUltimaCompra"
-        Me.GridColumn6.FilterInfo = ColumnFilterInfo19
+        Me.GridColumn6.FilterInfo = ColumnFilterInfo2
         Me.GridColumn6.Name = "GridColumn6"
         Me.GridColumn6.Options = CType(((((((DevExpress.XtraGrid.Columns.ColumnOptions.CanFiltered Or DevExpress.XtraGrid.Columns.ColumnOptions.CanGrouped) _
             Or DevExpress.XtraGrid.Columns.ColumnOptions.CanSorted) _
@@ -3301,7 +3317,7 @@ Public Class FrmInventario
         '
         Me.GridColumn7.Caption = "Id P."
         Me.GridColumn7.FieldName = "CodigoProveedor"
-        Me.GridColumn7.FilterInfo = ColumnFilterInfo20
+        Me.GridColumn7.FilterInfo = ColumnFilterInfo3
         Me.GridColumn7.Name = "GridColumn7"
         Me.GridColumn7.Options = CType(((((((DevExpress.XtraGrid.Columns.ColumnOptions.CanFiltered Or DevExpress.XtraGrid.Columns.ColumnOptions.CanGrouped) _
             Or DevExpress.XtraGrid.Columns.ColumnOptions.CanSorted) _
@@ -3315,7 +3331,7 @@ Public Class FrmInventario
         '
         Me.GridColumn8.Caption = "Proveedor"
         Me.GridColumn8.FieldName = "Nombre"
-        Me.GridColumn8.FilterInfo = ColumnFilterInfo21
+        Me.GridColumn8.FilterInfo = ColumnFilterInfo4
         Me.GridColumn8.Name = "GridColumn8"
         Me.GridColumn8.Options = CType(((((((DevExpress.XtraGrid.Columns.ColumnOptions.CanFiltered Or DevExpress.XtraGrid.Columns.ColumnOptions.CanGrouped) _
             Or DevExpress.XtraGrid.Columns.ColumnOptions.CanSorted) _
@@ -3330,7 +3346,7 @@ Public Class FrmInventario
         '
         Me.GridColumn9.Caption = "M"
         Me.GridColumn9.FieldName = "Simbolo"
-        Me.GridColumn9.FilterInfo = ColumnFilterInfo22
+        Me.GridColumn9.FilterInfo = ColumnFilterInfo5
         Me.GridColumn9.Name = "GridColumn9"
         Me.GridColumn9.Options = CType(((((((DevExpress.XtraGrid.Columns.ColumnOptions.CanFiltered Or DevExpress.XtraGrid.Columns.ColumnOptions.CanGrouped) _
             Or DevExpress.XtraGrid.Columns.ColumnOptions.CanSorted) _
@@ -3347,7 +3363,7 @@ Public Class FrmInventario
         Me.GridColumn10.DisplayFormat.FormatString = "#,#0.00"
         Me.GridColumn10.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric
         Me.GridColumn10.FieldName = "UltimoCosto"
-        Me.GridColumn10.FilterInfo = ColumnFilterInfo23
+        Me.GridColumn10.FilterInfo = ColumnFilterInfo6
         Me.GridColumn10.Name = "GridColumn10"
         Me.GridColumn10.Options = CType(((((((DevExpress.XtraGrid.Columns.ColumnOptions.CanFiltered Or DevExpress.XtraGrid.Columns.ColumnOptions.CanGrouped) _
             Or DevExpress.XtraGrid.Columns.ColumnOptions.CanSorted) _
@@ -3393,7 +3409,7 @@ Public Class FrmInventario
         '
         Me.GridColumn1.Caption = "Lote"
         Me.GridColumn1.FieldName = "Numero"
-        Me.GridColumn1.FilterInfo = ColumnFilterInfo24
+        Me.GridColumn1.FilterInfo = ColumnFilterInfo7
         Me.GridColumn1.Name = "GridColumn1"
         Me.GridColumn1.Options = CType(((((((((DevExpress.XtraGrid.Columns.ColumnOptions.CanFiltered Or DevExpress.XtraGrid.Columns.ColumnOptions.CanMoved) _
             Or DevExpress.XtraGrid.Columns.ColumnOptions.CanGrouped) _
@@ -3411,7 +3427,7 @@ Public Class FrmInventario
         Me.GridColumn2.DisplayFormat.FormatString = "d"
         Me.GridColumn2.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime
         Me.GridColumn2.FieldName = "Vencimiento"
-        Me.GridColumn2.FilterInfo = ColumnFilterInfo25
+        Me.GridColumn2.FilterInfo = ColumnFilterInfo8
         Me.GridColumn2.Name = "GridColumn2"
         Me.GridColumn2.Options = CType(((((((((DevExpress.XtraGrid.Columns.ColumnOptions.CanFiltered Or DevExpress.XtraGrid.Columns.ColumnOptions.CanMoved) _
             Or DevExpress.XtraGrid.Columns.ColumnOptions.CanGrouped) _
@@ -3428,7 +3444,7 @@ Public Class FrmInventario
         Me.GridColumn3.Caption = "Existencia"
         Me.GridColumn3.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric
         Me.GridColumn3.FieldName = "Cant_Actual"
-        Me.GridColumn3.FilterInfo = ColumnFilterInfo26
+        Me.GridColumn3.FilterInfo = ColumnFilterInfo9
         Me.GridColumn3.Name = "GridColumn3"
         Me.GridColumn3.Options = CType(((((((((DevExpress.XtraGrid.Columns.ColumnOptions.CanFiltered Or DevExpress.XtraGrid.Columns.ColumnOptions.CanMoved) _
             Or DevExpress.XtraGrid.Columns.ColumnOptions.CanGrouped) _
@@ -3736,9 +3752,9 @@ Public Class FrmInventario
         '
         'cCantidad
         '
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        DataGridViewCellStyle2.Format = "N2"
-        Me.cCantidad.DefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        DataGridViewCellStyle1.Format = "N2"
+        Me.cCantidad.DefaultCellStyle = DataGridViewCellStyle1
         Me.cCantidad.HeaderText = "Cantidad"
         Me.cCantidad.Name = "cCantidad"
         Me.cCantidad.ReadOnly = True
@@ -3842,7 +3858,7 @@ Public Class FrmInventario
         '
         Me.GridColumn4.Caption = "Serie"
         Me.GridColumn4.FieldName = "serie"
-        Me.GridColumn4.FilterInfo = ColumnFilterInfo27
+        Me.GridColumn4.FilterInfo = ColumnFilterInfo1
         Me.GridColumn4.Name = "GridColumn4"
         Me.GridColumn4.VisibleIndex = 0
         '
@@ -3896,7 +3912,7 @@ Public Class FrmInventario
         '
         Me.colCodigoProveedor1.Caption = "Id P."
         Me.colCodigoProveedor1.FieldName = "CodigoProveedor"
-        Me.colCodigoProveedor1.FilterInfo = ColumnFilterInfo28
+        Me.colCodigoProveedor1.FilterInfo = ColumnFilterInfo13
         Me.colCodigoProveedor1.Name = "colCodigoProveedor1"
         Me.colCodigoProveedor1.Options = CType(((((((DevExpress.XtraGrid.Columns.ColumnOptions.CanFiltered Or DevExpress.XtraGrid.Columns.ColumnOptions.CanGrouped) _
             Or DevExpress.XtraGrid.Columns.ColumnOptions.CanSorted) _
@@ -3911,7 +3927,7 @@ Public Class FrmInventario
         '
         Me.colLote.Caption = "Lote"
         Me.colLote.FieldName = "Numero"
-        Me.colLote.FilterInfo = ColumnFilterInfo29
+        Me.colLote.FilterInfo = ColumnFilterInfo14
         Me.colLote.Name = "colLote"
         Me.colLote.Options = CType(((((((((DevExpress.XtraGrid.Columns.ColumnOptions.CanFiltered Or DevExpress.XtraGrid.Columns.ColumnOptions.CanMoved) _
             Or DevExpress.XtraGrid.Columns.ColumnOptions.CanGrouped) _
@@ -3928,7 +3944,7 @@ Public Class FrmInventario
         Me.colCant_Actual.Caption = "Existencia"
         Me.colCant_Actual.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric
         Me.colCant_Actual.FieldName = "Cant_Actual"
-        Me.colCant_Actual.FilterInfo = ColumnFilterInfo30
+        Me.colCant_Actual.FilterInfo = ColumnFilterInfo15
         Me.colCant_Actual.Name = "colCant_Actual"
         Me.colCant_Actual.Options = CType(((((((((DevExpress.XtraGrid.Columns.ColumnOptions.CanFiltered Or DevExpress.XtraGrid.Columns.ColumnOptions.CanMoved) _
             Or DevExpress.XtraGrid.Columns.ColumnOptions.CanGrouped) _
@@ -4057,18 +4073,43 @@ Public Class FrmInventario
         '
         'btnDuplicar
         '
-        Me.btnDuplicar.Location = New System.Drawing.Point(144, 6)
+        Me.btnDuplicar.Location = New System.Drawing.Point(-17, 6)
         Me.btnDuplicar.Name = "btnDuplicar"
-        Me.btnDuplicar.Size = New System.Drawing.Size(75, 23)
+        Me.btnDuplicar.Size = New System.Drawing.Size(0, 23)
         Me.btnDuplicar.TabIndex = 222
         Me.btnDuplicar.Text = "Duplicar "
         Me.btnDuplicar.UseVisualStyleBackColor = True
+        '
+        'ckLaboratorio
+        '
+        Me.ckLaboratorio.AutoSize = True
+        Me.ckLaboratorio.BackColor = System.Drawing.Color.SlateGray
+        Me.ckLaboratorio.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ckLaboratorio.ForeColor = System.Drawing.Color.White
+        Me.ckLaboratorio.Location = New System.Drawing.Point(131, 10)
+        Me.ckLaboratorio.Name = "ckLaboratorio"
+        Me.ckLaboratorio.Size = New System.Drawing.Size(96, 20)
+        Me.ckLaboratorio.TabIndex = 223
+        Me.ckLaboratorio.Text = "Laboratorio"
+        Me.ckLaboratorio.UseVisualStyleBackColor = False
+        '
+        'ckListaNegra
+        '
+        Me.ckListaNegra.AutoSize = True
+        Me.ckListaNegra.Location = New System.Drawing.Point(437, 536)
+        Me.ckListaNegra.Name = "ckListaNegra"
+        Me.ckListaNegra.Size = New System.Drawing.Size(80, 17)
+        Me.ckListaNegra.TabIndex = 224
+        Me.ckListaNegra.Text = "Lista Negra"
+        Me.ckListaNegra.UseVisualStyleBackColor = True
         '
         'FrmInventario
         '
         Me.AutoScaleBaseSize = New System.Drawing.Size(5, 13)
         Me.BackColor = System.Drawing.SystemColors.Control
         Me.ClientSize = New System.Drawing.Size(698, 561)
+        Me.Controls.Add(Me.ckListaNegra)
+        Me.Controls.Add(Me.ckLaboratorio)
         Me.Controls.Add(Me.btnDuplicar)
         Me.Controls.Add(Me.ckValidaExistencia)
         Me.Controls.Add(Me.contenedor)
@@ -4402,7 +4443,6 @@ Public Class FrmInventario
             ToolBar1.Buttons(5).Enabled = False
             Me.txtUsuario.Focus()
 
-
             If Me.Obtener_BasedeDatos.ToLower = "mascotas".ToLower Then
                 Me.ck_taller.Text = "Groomer"
             End If
@@ -4412,11 +4452,23 @@ Public Class FrmInventario
             End If
 
             If Me.Obtener_BasedeDatos.ToLower = "clinica".ToLower Then
-                Me.ck_peces.Text = "Ultrasonido"
-            End If
+                'Opciones Libres
+                Me.ckclinica.Text = "--"
+                Me.ckarmamento.Text = "--"
+                Me.ckProductosOrganicos.Text = "--"
 
-            If Me.Obtener_BasedeDatos.ToLower = "clinica".ToLower Then
+                'Opciones Usadas
+                Me.ck_taller.Text = "Grooming"
+                Me.ckMaquinaria.Text = "Clinica"
+                Me.ck_tienda.Text = "Tienda"
                 Me.ckmascotas.Text = "Laboratori"
+                Me.ck_peces.Text = "Imagenes" '"Ultrasonido" 'Imagenes
+                Me.Label20.Text = "W"
+                Me.Label20.BackColor = System.Drawing.Color.RoyalBlue
+                Me.Label20.ForeColor = System.Drawing.Color.Yellow
+                Me.Label20.Width = Me.Label20.Width + 4
+                Me.Label20.Left = Me.Label20.Left - 1
+
             End If
 
         Catch ex As SystemException
@@ -4711,8 +4763,11 @@ Public Class FrmInventario
             Me.RevisaUltimaCompra(Id)
             '*************************************************************************************************************************
             Dim dtPromo As New DataTable
-            cFunciones.Llenar_Tabla_Generico("Select Muestra, SinDecimal, SoloContado, MAG, PromoCON, PromoCRE, Id_Impuesto from Inventario where Codigo = " & Id, dtPromo, CadenaConexionSeePOS)
+            cFunciones.Llenar_Tabla_Generico("Select Muestra, SinDecimal, SoloContado, MAG, PromoCON, PromoCRE, Id_Impuesto, ImprimeCopia, ListaNegra from Inventario where Codigo = " & Id, dtPromo, CadenaConexionSeePOS)
             If dtPromo.Rows.Count > 0 Then
+                Me.ckLaboratorio.Checked = dtPromo.Rows(0).Item("ImprimeCopia")
+                'Lista negra = son articulos que no hay que pedir mucho o no pedir
+                Me.ckListaNegra.Checked = dtPromo.Rows(0).Item("ListaNegra")
                 Me.ckSinDecimales.Checked = dtPromo.Rows(0).Item("SinDecimal")
                 Me.ckSoloContado.Checked = dtPromo.Rows(0).Item("SoloContado")
                 Me.ckMostrar.Checked = dtPromo.Rows(0).Item("Muestra")
@@ -4913,6 +4968,27 @@ Public Class FrmInventario
         Dim SQL As New GestioDatos
         SQL.Ejecuta(sentencia)
     End Sub
+
+    Private Function PuedeInhabilitar(_Cod As String) As Boolean
+        Dim dt As New System.Data.DataTable
+        Dim db As New OBSoluciones.SQL.Sentencias(CadenaConexionSeePOS)
+        dt = db.Ejecutar("select i.Codigo, i.Cod_Articulo, i.Descripcion from ArticulosRelacionados a inner join Inventario i on i.Codigo = a.CodigoPrincipal where a.Codigo = " & _Cod, CommandType.Text)
+
+        If dt.Rows.Count > 0 Then
+
+            MsgBox("El articulo esta relacionado a otros articulos o servicios", MsgBoxStyle.Exclamation, "No se puede realizar la operacion.")
+
+            Dim frm As New frmDetalleArticulosRelacionados
+            frm.Codigo = _Cod
+            frm.txtDescripcion.Text = Me.TxtDescripcion.Text
+            frm.ShowDialog()
+
+            Return False
+        Else
+            Return True
+        End If
+    End Function
+
     Private Sub Habilitar_Inhabilitar()
         Dim resp As Integer
         Dim funciones As New Conexion
@@ -4920,6 +4996,11 @@ Public Class FrmInventario
         Dim Descripcion_Accion As String
         Dim mensaje2 As String
 
+        If Me.BindingContext(Me.DataSetInventario, "Inventario").Current("inhabilitado") = False Then
+            If PuedeInhabilitar(Me.TxtCodigo.Text) = False Then
+                Exit Sub
+            End If
+        End If
 
         If logeado = False Then
             MsgBox("Debe estar logeado para realizar cualquier operación en este modulo.", MsgBoxStyle.Information, "Login")
@@ -5112,6 +5193,20 @@ Public Class FrmInventario
             Dim datos As String
             Dim strActualiza As String = ""
 
+            If IsClinica() = True Then
+                If Me.txtCod_Articulo.Text.IndexOf(".") > 0 And Me.Ck_Consignacion.Checked = False Then
+                    MsgBox("El codigo del produto debe ser un valor numerico", MsgBoxStyle.Exclamation, Me.Text)
+                    Exit Sub
+                End If
+                If Me.txtCod_Articulo.Text.IndexOf(" ") > 0 Then
+                    MsgBox("El codigo del produto debe ser un valor numerico", MsgBoxStyle.Exclamation, Me.Text)
+                    Exit Sub
+                End If
+                If IsNumeric(Me.txtCod_Articulo.Text) = False Then
+                    MsgBox("El codigo del produto debe ser un valor numerico", MsgBoxStyle.Exclamation, Me.Text)
+                    Exit Sub
+                End If
+            End If
 
             Me.AdapterInventario.SelectCommand.Connection = Me.SqlConnection1
             Me.AdapterInventario.UpdateCommand.Connection = Me.SqlConnection1
@@ -5275,7 +5370,7 @@ Public Class FrmInventario
 
             Try
                 Dim db As New GestioDatos
-                db.Ejecuta("Update Inventario set Muestra = " & IIf(Me.ckMostrar.Checked = True, 1, 0) & ", SinDecimal = " & IIf(Me.ckSinDecimales.Checked = True, 1, 0) & ", SoloContado = " & IIf(Me.ckSoloContado.Checked = True, 1, 0) & ", MAG = " & IIf(Me.ckMAG.Checked = True, 1, 0) & ", PromoCON = " & IIf(Me.ckContado.Checked = True, 1, 0) & ", PromoCRE = " & IIf(Me.ckCredito.Checked = True, 1, 0) & ", Id_Impuesto = " & Me.cboTipoImpuesto.SelectedValue & " Where Codigo = " & Me.BindingContext(Me.DataSetInventario, "Inventario").Current("codigo"))
+                db.Ejecuta("Update Inventario set Muestra = " & IIf(Me.ckMostrar.Checked = True, 1, 0) & ", ListaNegra = " & IIf(Me.ckListaNegra.Checked = True, 1, 0) & ", ImprimeCopia = " & IIf(Me.ckLaboratorio.Checked = True, 1, 0) & ", SinDecimal = " & IIf(Me.ckSinDecimales.Checked = True, 1, 0) & ", SoloContado = " & IIf(Me.ckSoloContado.Checked = True, 1, 0) & ", MAG = " & IIf(Me.ckMAG.Checked = True, 1, 0) & ", PromoCON = " & IIf(Me.ckContado.Checked = True, 1, 0) & ", PromoCRE = " & IIf(Me.ckCredito.Checked = True, 1, 0) & ", Id_Impuesto = " & Me.cboTipoImpuesto.SelectedValue & " Where Codigo = " & Me.BindingContext(Me.DataSetInventario, "Inventario").Current("codigo"))
             Catch ex As Exception
             End Try
 
@@ -6164,9 +6259,11 @@ I:
         Me.txtExistenciaBodega2.Text = ""
         Try
             Dim dts As New DataTable
-            cFunciones.Llenar_Tabla_Generico("select actualizado, isnull(FechaActualizacion,'') as FechaActualizacion, ActivarBodega2, ExistenciaBodega2 from inventario where codigo = " & _Id, dts)
+            cFunciones.Llenar_Tabla_Generico("select actualizado, isnull(FechaActualizacion,'') as FechaActualizacion, ActivarBodega2, ExistenciaBodega2, ImprimeCopia, ListaNegra from inventario where codigo = " & _Id, dts)
             If dts.Rows.Count > 0 Then
                 Me.ckActualizado.Checked = dts.Rows(0).Item("actualizado")
+                Me.ckLaboratorio.Checked = dts.Rows(0).Item("ImprimeCopia")
+                Me.ckListaNegra.Checked = dts.Rows(0).Item("ListaNegra")
                 Dim fecha As String = CDate(dts.Rows(0).Item("FechaActualizacion")).ToString("d")
                 Me.lblFechaActualizacion.Text = IIf(fecha = "1/1/1900", "", fecha)
                 Me.ckActivarBodega.Checked = dts.Rows(0).Item("ActivarBodega2")
@@ -6231,7 +6328,7 @@ I:
                 End If
             Catch ex As Exception
                 MsgBox(ex.Message)
-            End Try            
+            End Try
         End If
 
         db.Ejecutar("Delete from ArticulosRelacionados where CodigoPrincipal = " & Id, CommandType.Text)
@@ -6499,5 +6596,21 @@ I:
 
     Private Sub ckHabilitaFamilia_CheckedChanged(sender As Object, e As EventArgs) Handles ckHabilitaFamilia.CheckedChanged
         Me.ComboBoxFamilia.Enabled = Me.ckHabilitaFamilia.Checked
+    End Sub
+
+    Private Sub btnRelacionados_Click(sender As Object, e As EventArgs) Handles btnRelacionados.Click
+        Try
+            Dim frm As New frmDetalleArticulosRelacionados
+            frm.Codigo = Me.TxtCodigo.Text
+            frm.txtDescripcion.Text = Me.TxtDescripcion.Text
+            frm.ShowDialog()
+        Catch ex As Exception
+        End Try
+    End Sub
+
+    Private Sub Label20_Click(sender As Object, e As EventArgs) Handles Label20.Click
+        If IsClinica() = True Then
+            MsgBox("Tipo de precio para la pagina Web", MsgBoxStyle.Information, Me.Text)
+        End If
     End Sub
 End Class

@@ -33,6 +33,7 @@ Partial Class frmConsultaAlbaran
         Me.Label3 = New System.Windows.Forms.Label()
         Me.dtpHasta = New System.Windows.Forms.DateTimePicker()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.ckFiltrarxFecha = New System.Windows.Forms.CheckBox()
         Me.ckExtranjero = New System.Windows.Forms.CheckBox()
         Me.btnArqueo = New System.Windows.Forms.Button()
         Me.btnApertura = New System.Windows.Forms.Button()
@@ -45,6 +46,7 @@ Partial Class frmConsultaAlbaran
         Me.ckTodos = New System.Windows.Forms.CheckBox()
         Me.ckSoloPendientes = New System.Windows.Forms.CheckBox()
         Me.btnSincronizacion = New System.Windows.Forms.Button()
+        Me.btnExportar = New System.Windows.Forms.Button()
         Me.txtClave = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.txtNombreUsuario = New System.Windows.Forms.TextBox()
@@ -72,7 +74,7 @@ Partial Class frmConsultaAlbaran
         '
         Me.ToolBar1.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.ToolBar1.Dock = System.Windows.Forms.DockStyle.None
-        Me.ToolBar1.Location = New System.Drawing.Point(-1, 448)
+        Me.ToolBar1.Location = New System.Drawing.Point(-1, 447)
         Me.ToolBar1.Size = New System.Drawing.Size(779, 53)
         Me.ToolBar1.Visible = False
         '
@@ -82,11 +84,11 @@ Partial Class frmConsultaAlbaran
         Me.DataNavigator.Buttons.CancelEdit.Visible = False
         Me.DataNavigator.Buttons.EndEdit.Visible = False
         Me.DataNavigator.Buttons.Remove.Visible = False
-        Me.DataNavigator.Location = New System.Drawing.Point(1236, 564)
+        Me.DataNavigator.Location = New System.Drawing.Point(1232, 563)
         '
         'TituloModulo
         '
-        Me.TituloModulo.Size = New System.Drawing.Size(1079, 32)
+        Me.TituloModulo.Size = New System.Drawing.Size(1075, 32)
         Me.TituloModulo.Text = "Consulta Albaranes"
         '
         'viewDatos
@@ -105,9 +107,9 @@ Partial Class frmConsultaAlbaran
         Me.viewDatos.MultiSelect = False
         Me.viewDatos.Name = "viewDatos"
         Me.viewDatos.RowHeadersVisible = False
-        Me.viewDatos.RowTemplate.Height = 27
+        Me.viewDatos.RowTemplate.Height = 26
         Me.viewDatos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.viewDatos.Size = New System.Drawing.Size(1055, 354)
+        Me.viewDatos.Size = New System.Drawing.Size(1051, 353)
         Me.viewDatos.TabIndex = 71
         '
         'txtCliente
@@ -138,7 +140,7 @@ Partial Class frmConsultaAlbaran
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(334, 16)
         Me.Label1.TabIndex = 75
-        Me.Label1.Text = "Mascota"
+        Me.Label1.Text = "Cedula"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'txtMascota
@@ -150,6 +152,7 @@ Partial Class frmConsultaAlbaran
         '
         'dtpDesde
         '
+        Me.dtpDesde.Enabled = False
         Me.dtpDesde.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
         Me.dtpDesde.Location = New System.Drawing.Point(10, 94)
         Me.dtpDesde.Name = "dtpDesde"
@@ -182,6 +185,7 @@ Partial Class frmConsultaAlbaran
         '
         'dtpHasta
         '
+        Me.dtpHasta.Enabled = False
         Me.dtpHasta.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
         Me.dtpHasta.Location = New System.Drawing.Point(167, 94)
         Me.dtpHasta.Name = "dtpHasta"
@@ -193,6 +197,7 @@ Partial Class frmConsultaAlbaran
         Me.Panel1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Panel1.Controls.Add(Me.ckFiltrarxFecha)
         Me.Panel1.Controls.Add(Me.ckExtranjero)
         Me.Panel1.Controls.Add(Me.btnArqueo)
         Me.Panel1.Controls.Add(Me.btnApertura)
@@ -217,8 +222,18 @@ Partial Class frmConsultaAlbaran
         Me.Panel1.Enabled = False
         Me.Panel1.Location = New System.Drawing.Point(3, 42)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(1075, 493)
+        Me.Panel1.Size = New System.Drawing.Size(1071, 492)
         Me.Panel1.TabIndex = 3
+        '
+        'ckFiltrarxFecha
+        '
+        Me.ckFiltrarxFecha.AutoSize = True
+        Me.ckFiltrarxFecha.Location = New System.Drawing.Point(327, 80)
+        Me.ckFiltrarxFecha.Name = "ckFiltrarxFecha"
+        Me.ckFiltrarxFecha.Size = New System.Drawing.Size(102, 17)
+        Me.ckFiltrarxFecha.TabIndex = 95
+        Me.ckFiltrarxFecha.Text = "Filtrar por Fecha"
+        Me.ckFiltrarxFecha.UseVisualStyleBackColor = True
         '
         'ckExtranjero
         '
@@ -335,7 +350,7 @@ Partial Class frmConsultaAlbaran
         Me.ckSoloPendientes.AutoSize = True
         Me.ckSoloPendientes.Checked = True
         Me.ckSoloPendientes.CheckState = System.Windows.Forms.CheckState.Checked
-        Me.ckSoloPendientes.Location = New System.Drawing.Point(327, 94)
+        Me.ckSoloPendientes.Location = New System.Drawing.Point(327, 100)
         Me.ckSoloPendientes.Name = "ckSoloPendientes"
         Me.ckSoloPendientes.Size = New System.Drawing.Size(248, 17)
         Me.ckSoloPendientes.TabIndex = 82
@@ -353,10 +368,22 @@ Partial Class frmConsultaAlbaran
         Me.btnSincronizacion.Text = "Obtener Datos"
         Me.btnSincronizacion.UseVisualStyleBackColor = True
         '
+        'btnExportar
+        '
+        Me.btnExportar.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnExportar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnExportar.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnExportar.Location = New System.Drawing.Point(886, 537)
+        Me.btnExportar.Name = "btnExportar"
+        Me.btnExportar.Size = New System.Drawing.Size(176, 36)
+        Me.btnExportar.TabIndex = 94
+        Me.btnExportar.Text = "Sin Facturar"
+        Me.btnExportar.UseVisualStyleBackColor = True
+        '
         'txtClave
         '
         Me.txtClave.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.txtClave.Location = New System.Drawing.Point(13, 554)
+        Me.txtClave.Location = New System.Drawing.Point(13, 553)
         Me.txtClave.Name = "txtClave"
         Me.txtClave.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.txtClave.Size = New System.Drawing.Size(157, 20)
@@ -368,7 +395,7 @@ Partial Class frmConsultaAlbaran
         Me.Label4.BackColor = System.Drawing.Color.FromArgb(CType(CType(56, Byte), Integer), CType(CType(91, Byte), Integer), CType(CType(165, Byte), Integer))
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.ForeColor = System.Drawing.Color.White
-        Me.Label4.Location = New System.Drawing.Point(13, 538)
+        Me.Label4.Location = New System.Drawing.Point(13, 537)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(157, 16)
         Me.Label4.TabIndex = 83
@@ -378,7 +405,7 @@ Partial Class frmConsultaAlbaran
         'txtNombreUsuario
         '
         Me.txtNombreUsuario.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.txtNombreUsuario.Location = New System.Drawing.Point(176, 554)
+        Me.txtNombreUsuario.Location = New System.Drawing.Point(176, 553)
         Me.txtNombreUsuario.Name = "txtNombreUsuario"
         Me.txtNombreUsuario.ReadOnly = True
         Me.txtNombreUsuario.Size = New System.Drawing.Size(488, 20)
@@ -391,7 +418,7 @@ Partial Class frmConsultaAlbaran
         Me.Label5.BackColor = System.Drawing.Color.FromArgb(CType(CType(56, Byte), Integer), CType(CType(91, Byte), Integer), CType(CType(165, Byte), Integer))
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.ForeColor = System.Drawing.Color.White
-        Me.Label5.Location = New System.Drawing.Point(176, 538)
+        Me.Label5.Location = New System.Drawing.Point(176, 537)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(488, 16)
         Me.Label5.TabIndex = 83
@@ -400,9 +427,10 @@ Partial Class frmConsultaAlbaran
         '
         'btnGenerarFacturas
         '
+        Me.btnGenerarFacturas.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.btnGenerarFacturas.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnGenerarFacturas.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnGenerarFacturas.Location = New System.Drawing.Point(673, 538)
+        Me.btnGenerarFacturas.Location = New System.Drawing.Point(669, 537)
         Me.btnGenerarFacturas.Name = "btnGenerarFacturas"
         Me.btnGenerarFacturas.Size = New System.Drawing.Size(197, 36)
         Me.btnGenerarFacturas.TabIndex = 83
@@ -416,7 +444,8 @@ Partial Class frmConsultaAlbaran
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1079, 574)
+        Me.ClientSize = New System.Drawing.Size(1075, 573)
+        Me.Controls.Add(Me.btnExportar)
         Me.Controls.Add(Me.btnGenerarFacturas)
         Me.Controls.Add(Me.txtNombreUsuario)
         Me.Controls.Add(Me.Label5)
@@ -437,6 +466,7 @@ Partial Class frmConsultaAlbaran
         Me.Controls.SetChildIndex(Me.Label5, 0)
         Me.Controls.SetChildIndex(Me.txtNombreUsuario, 0)
         Me.Controls.SetChildIndex(Me.btnGenerarFacturas, 0)
+        Me.Controls.SetChildIndex(Me.btnExportar, 0)
         CType(Me.viewDatos, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
@@ -472,4 +502,6 @@ Partial Class frmConsultaAlbaran
     Friend WithEvents btnApertura As System.Windows.Forms.Button
     Friend WithEvents BackgroundWorker1 As System.ComponentModel.BackgroundWorker
     Friend WithEvents ckExtranjero As System.Windows.Forms.CheckBox
+    Friend WithEvents btnExportar As System.Windows.Forms.Button
+    Friend WithEvents ckFiltrarxFecha As System.Windows.Forms.CheckBox
 End Class

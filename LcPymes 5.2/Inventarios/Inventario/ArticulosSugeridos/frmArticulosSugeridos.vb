@@ -24,23 +24,20 @@
 
     Private Sub BuscarCodigo(ByRef txt As TextBox)
         Dim codigo As String = BuscarF1()
-
-        Dim dt As New Data.DataTable
-        cFunciones.Llenar_Tabla_Generico("SELECT Codigo, dbo.Inventario.Descripcion + '( ' + Cast(dbo.Inventario.PresentaCant AS VARCHAR) + ' ' + dbo.Presentaciones.Presentaciones + ') ' AS Descripcion, Cod_Articulo from Inventario INNER JOIN Presentaciones ON Presentaciones.CodPres = Inventario.CodPresentacion WHERE Inhabilitado = 0 and (Cod_Articulo ='" & codigo & "' or Barras = '" & codigo & "' or barras2 = '" & codigo & "' or barras3 = '" & codigo & "')", dt, CadenaConexionSeePOS)
-        If dt.Rows.Count > 0 Then
-
-            Select Case txt.Name
-                Case Me.txtDescripccionPrincipal.Name
-                    Me.CodigoPrincipal = dt.Rows(0).Item("Codigo")
-                    Me.txtDescripccionPrincipal.Text = dt.Rows(0).Item("Descripcion")
-                    Me.CargarSugeridos(Me.CodigoPrincipal)
-
-                Case Me.txtDescripccionSugerido.Name
-                    Me.CodigoSugerido = dt.Rows(0).Item("Codigo")
-                    Me.txtDescripccionSugerido.Text = dt.Rows(0).Item("Descripcion")
-
-            End Select
-
+        If codigo <> "0" Then
+            Dim dt As New Data.DataTable
+            cFunciones.Llenar_Tabla_Generico("SELECT Codigo, dbo.Inventario.Descripcion + '( ' + Cast(dbo.Inventario.PresentaCant AS VARCHAR) + ' ' + dbo.Presentaciones.Presentaciones + ') ' AS Descripcion, Cod_Articulo from Inventario INNER JOIN Presentaciones ON Presentaciones.CodPres = Inventario.CodPresentacion WHERE Inhabilitado = 0 and (Cod_Articulo ='" & codigo & "' or Barras = '" & codigo & "' or barras2 = '" & codigo & "' or barras3 = '" & codigo & "')", dt, CadenaConexionSeePOS)
+            If dt.Rows.Count > 0 Then
+                Select Case txt.Name
+                    Case Me.txtDescripccionPrincipal.Name
+                        Me.CodigoPrincipal = dt.Rows(0).Item("Codigo")
+                        Me.txtDescripccionPrincipal.Text = dt.Rows(0).Item("Descripcion")
+                        Me.CargarSugeridos(Me.CodigoPrincipal)
+                    Case Me.txtDescripccionSugerido.Name
+                        Me.CodigoSugerido = dt.Rows(0).Item("Codigo")
+                        Me.txtDescripccionSugerido.Text = dt.Rows(0).Item("Descripcion")
+                End Select
+            End If
         End If
     End Sub
 

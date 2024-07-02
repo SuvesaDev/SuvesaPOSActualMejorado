@@ -26,7 +26,23 @@
             Index += 1
         Next
 
+        Dim PrecioMenor As Drawing.Color = Drawing.Color.Tomato
+
+        Dim t As System.Collections.Generic.List(Of DataGridViewRow)
+
+        t = (From x As DataGridViewRow In Me.viewDatos.Rows
+                    Where CDec(x.Cells("cNuevoPrecio").Value) < CDec(x.Cells("cPrecioAntes").Value)
+                    Select x).ToList
+
+        For Each r As DataGridViewRow In t
+            r.DefaultCellStyle.BackColor = PrecioMenor
+            r.DefaultCellStyle.ForeColor = System.Drawing.Color.Black
+            r.DefaultCellStyle.SelectionBackColor = PrecioMenor
+            r.DefaultCellStyle.SelectionForeColor = Drawing.Color.White
+        Next
+
     End Sub
+
 
     Private Sub frmProductosRelacionados_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         If Codigo <> "0" Then Me.CargarProductosRelacionados(Me.Codigo)        

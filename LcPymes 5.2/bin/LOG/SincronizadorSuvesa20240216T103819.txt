@@ -1,0 +1,8 @@
+﻿
+Hora Inicial: 16/02/2024 10:38:19 am
+Tipo de procedimiento: Ventas
+Cantidad Albaranes: 1
+Cantidad Lineas Albaranes: 7
+Se escribió en la bitacora: SILVIA MENDOZA
+Hora Final: 16/02/2024 10:38:35 am
+Tiempo Empleado: 00:00:16.30

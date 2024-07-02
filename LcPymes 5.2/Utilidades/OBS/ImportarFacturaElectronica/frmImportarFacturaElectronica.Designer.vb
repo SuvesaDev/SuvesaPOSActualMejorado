@@ -22,9 +22,27 @@ Partial Class frmImportarFacturaElectronica
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.btnImportar = New System.Windows.Forms.Button()
         Me.viewDatos = New System.Windows.Forms.DataGridView()
+        Me.txtCedula = New System.Windows.Forms.TextBox()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.txtProveedor = New System.Windows.Forms.TextBox()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.txtFecha = New System.Windows.Forms.TextBox()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.txtConsecutivo = New System.Windows.Forms.TextBox()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.txtClave = New System.Windows.Forms.TextBox()
+        Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
+        Me.btnCancelar = New System.Windows.Forms.Button()
+        Me.btnAceptar = New System.Windows.Forms.Button()
+        Me.cboEstado = New System.Windows.Forms.ComboBox()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.btnInventario = New System.Windows.Forms.Button()
+        Me.btnFamilia = New System.Windows.Forms.Button()
+        Me.btnDesvincular = New System.Windows.Forms.Button()
         Me.cCodigoProveedor = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.cDescripcion = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.cBuscaCodigoInterno = New System.Windows.Forms.DataGridViewButtonColumn()
@@ -46,23 +64,7 @@ Partial Class frmImportarFacturaElectronica
         Me.cCantidadxPresentacion = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.cCabys = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.cFlete = New System.Windows.Forms.DataGridViewCheckBoxColumn()
-        Me.txtCedula = New System.Windows.Forms.TextBox()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.txtProveedor = New System.Windows.Forms.TextBox()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.txtFecha = New System.Windows.Forms.TextBox()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.txtConsecutivo = New System.Windows.Forms.TextBox()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.txtClave = New System.Windows.Forms.TextBox()
-        Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
-        Me.btnCancelar = New System.Windows.Forms.Button()
-        Me.btnAceptar = New System.Windows.Forms.Button()
-        Me.cboEstado = New System.Windows.Forms.ComboBox()
-        Me.Label6 = New System.Windows.Forms.Label()
-        Me.btnInventario = New System.Windows.Forms.Button()
-        Me.btnFamilia = New System.Windows.Forms.Button()
+        Me.cExistencia = New System.Windows.Forms.DataGridViewTextBoxColumn()
         CType(Me.viewDatos, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -86,7 +88,7 @@ Partial Class frmImportarFacturaElectronica
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.viewDatos.BackgroundColor = System.Drawing.Color.White
         Me.viewDatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.viewDatos.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.cCodigoProveedor, Me.cDescripcion, Me.cBuscaCodigoInterno, Me.cId_ArticuloInterno, Me.cCodigoInterno, Me.cBuscarFamilia, Me.cSubFamilia, Me.cFamilia, Me.cDescripcionInterno, Me.cPresentacion, Me.cCantidad, Me.cCosto, Me.cDescuento, Me.cMontoDescuento, Me.cImpuesto, Me.cPrecioIva1, Me.cPrecioIva2, Me.cPrecioIva3, Me.cCantidadxPresentacion, Me.cCabys, Me.cFlete})
+        Me.viewDatos.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.cCodigoProveedor, Me.cDescripcion, Me.cBuscaCodigoInterno, Me.cId_ArticuloInterno, Me.cCodigoInterno, Me.cBuscarFamilia, Me.cSubFamilia, Me.cFamilia, Me.cDescripcionInterno, Me.cPresentacion, Me.cCantidad, Me.cCosto, Me.cDescuento, Me.cMontoDescuento, Me.cImpuesto, Me.cPrecioIva1, Me.cPrecioIva2, Me.cPrecioIva3, Me.cCantidadxPresentacion, Me.cCabys, Me.cFlete, Me.cExistencia})
         Me.viewDatos.Location = New System.Drawing.Point(4, 98)
         Me.viewDatos.MultiSelect = False
         Me.viewDatos.Name = "viewDatos"
@@ -95,151 +97,6 @@ Partial Class frmImportarFacturaElectronica
         Me.viewDatos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.viewDatos.Size = New System.Drawing.Size(1176, 353)
         Me.viewDatos.TabIndex = 3
-        '
-        'cCodigoProveedor
-        '
-        Me.cCodigoProveedor.HeaderText = "Codigo proveedor"
-        Me.cCodigoProveedor.Name = "cCodigoProveedor"
-        Me.cCodigoProveedor.ReadOnly = True
-        Me.cCodigoProveedor.Width = 70
-        '
-        'cDescripcion
-        '
-        Me.cDescripcion.HeaderText = "Descripcion Proveedor"
-        Me.cDescripcion.Name = "cDescripcion"
-        Me.cDescripcion.ReadOnly = True
-        Me.cDescripcion.Width = 240
-        '
-        'cBuscaCodigoInterno
-        '
-        Me.cBuscaCodigoInterno.HeaderText = ""
-        Me.cBuscaCodigoInterno.Name = "cBuscaCodigoInterno"
-        Me.cBuscaCodigoInterno.ReadOnly = True
-        Me.cBuscaCodigoInterno.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.cBuscaCodigoInterno.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
-        Me.cBuscaCodigoInterno.Width = 25
-        '
-        'cId_ArticuloInterno
-        '
-        Me.cId_ArticuloInterno.HeaderText = "IdArticuloInterno"
-        Me.cId_ArticuloInterno.Name = "cId_ArticuloInterno"
-        Me.cId_ArticuloInterno.ReadOnly = True
-        Me.cId_ArticuloInterno.Visible = False
-        '
-        'cCodigoInterno
-        '
-        Me.cCodigoInterno.HeaderText = "Codigo Interno"
-        Me.cCodigoInterno.Name = "cCodigoInterno"
-        Me.cCodigoInterno.ReadOnly = True
-        Me.cCodigoInterno.Width = 110
-        '
-        'cBuscarFamilia
-        '
-        Me.cBuscarFamilia.HeaderText = ""
-        Me.cBuscarFamilia.Name = "cBuscarFamilia"
-        Me.cBuscarFamilia.Width = 25
-        '
-        'cSubFamilia
-        '
-        Me.cSubFamilia.HeaderText = "SubFamilia"
-        Me.cSubFamilia.Name = "cSubFamilia"
-        Me.cSubFamilia.Visible = False
-        '
-        'cFamilia
-        '
-        Me.cFamilia.HeaderText = "Familia"
-        Me.cFamilia.Name = "cFamilia"
-        Me.cFamilia.Width = 175
-        '
-        'cDescripcionInterno
-        '
-        Me.cDescripcionInterno.HeaderText = "Descripcion Interna"
-        Me.cDescripcionInterno.Name = "cDescripcionInterno"
-        Me.cDescripcionInterno.ReadOnly = True
-        Me.cDescripcionInterno.Width = 240
-        '
-        'cPresentacion
-        '
-        Me.cPresentacion.HeaderText = "Presentacion"
-        Me.cPresentacion.Name = "cPresentacion"
-        Me.cPresentacion.ReadOnly = True
-        Me.cPresentacion.Width = 75
-        '
-        'cCantidad
-        '
-        Me.cCantidad.HeaderText = "Cantidad"
-        Me.cCantidad.Name = "cCantidad"
-        Me.cCantidad.ReadOnly = True
-        Me.cCantidad.Visible = False
-        '
-        'cCosto
-        '
-        Me.cCosto.HeaderText = "Costo"
-        Me.cCosto.Name = "cCosto"
-        Me.cCosto.ReadOnly = True
-        Me.cCosto.Visible = False
-        '
-        'cDescuento
-        '
-        Me.cDescuento.HeaderText = "Descuento"
-        Me.cDescuento.Name = "cDescuento"
-        Me.cDescuento.ReadOnly = True
-        Me.cDescuento.Visible = False
-        '
-        'cMontoDescuento
-        '
-        Me.cMontoDescuento.HeaderText = "MontoDescuento"
-        Me.cMontoDescuento.Name = "cMontoDescuento"
-        Me.cMontoDescuento.ReadOnly = True
-        Me.cMontoDescuento.Visible = False
-        '
-        'cImpuesto
-        '
-        Me.cImpuesto.HeaderText = "Impuesto"
-        Me.cImpuesto.Name = "cImpuesto"
-        Me.cImpuesto.ReadOnly = True
-        Me.cImpuesto.Visible = False
-        '
-        'cPrecioIva1
-        '
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        DataGridViewCellStyle2.Format = "N2"
-        Me.cPrecioIva1.DefaultCellStyle = DataGridViewCellStyle2
-        Me.cPrecioIva1.HeaderText = "PrecioIva1"
-        Me.cPrecioIva1.Name = "cPrecioIva1"
-        Me.cPrecioIva1.ReadOnly = True
-        Me.cPrecioIva1.Visible = False
-        '
-        'cPrecioIva2
-        '
-        Me.cPrecioIva2.HeaderText = "PrecioIva2"
-        Me.cPrecioIva2.Name = "cPrecioIva2"
-        Me.cPrecioIva2.ReadOnly = True
-        Me.cPrecioIva2.Visible = False
-        '
-        'cPrecioIva3
-        '
-        Me.cPrecioIva3.HeaderText = "PrecioIva3"
-        Me.cPrecioIva3.Name = "cPrecioIva3"
-        Me.cPrecioIva3.ReadOnly = True
-        Me.cPrecioIva3.Visible = False
-        '
-        'cCantidadxPresentacion
-        '
-        Me.cCantidadxPresentacion.HeaderText = "Cantidad por Presentacion"
-        Me.cCantidadxPresentacion.Name = "cCantidadxPresentacion"
-        '
-        'cCabys
-        '
-        Me.cCabys.HeaderText = "Cabys"
-        Me.cCabys.Name = "cCabys"
-        Me.cCabys.Visible = False
-        '
-        'cFlete
-        '
-        Me.cFlete.HeaderText = "Flete"
-        Me.cFlete.Name = "cFlete"
-        Me.cFlete.Visible = False
         '
         'txtCedula
         '
@@ -389,11 +246,172 @@ Partial Class frmImportarFacturaElectronica
         Me.btnFamilia.Text = "Registro de Familias"
         Me.btnFamilia.UseVisualStyleBackColor = True
         '
+        'btnDesvincular
+        '
+        Me.btnDesvincular.Location = New System.Drawing.Point(874, 69)
+        Me.btnDesvincular.Name = "btnDesvincular"
+        Me.btnDesvincular.Size = New System.Drawing.Size(214, 23)
+        Me.btnDesvincular.TabIndex = 23
+        Me.btnDesvincular.Text = "Desvincular Linea Seleccionada"
+        Me.btnDesvincular.UseVisualStyleBackColor = True
+        '
+        'cCodigoProveedor
+        '
+        Me.cCodigoProveedor.HeaderText = "Codigo proveedor"
+        Me.cCodigoProveedor.Name = "cCodigoProveedor"
+        Me.cCodigoProveedor.ReadOnly = True
+        Me.cCodigoProveedor.Width = 70
+        '
+        'cDescripcion
+        '
+        Me.cDescripcion.HeaderText = "Descripcion Proveedor"
+        Me.cDescripcion.Name = "cDescripcion"
+        Me.cDescripcion.ReadOnly = True
+        Me.cDescripcion.Width = 240
+        '
+        'cBuscaCodigoInterno
+        '
+        Me.cBuscaCodigoInterno.HeaderText = ""
+        Me.cBuscaCodigoInterno.Name = "cBuscaCodigoInterno"
+        Me.cBuscaCodigoInterno.ReadOnly = True
+        Me.cBuscaCodigoInterno.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.cBuscaCodigoInterno.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
+        Me.cBuscaCodigoInterno.Width = 25
+        '
+        'cId_ArticuloInterno
+        '
+        Me.cId_ArticuloInterno.HeaderText = "IdArticuloInterno"
+        Me.cId_ArticuloInterno.Name = "cId_ArticuloInterno"
+        Me.cId_ArticuloInterno.ReadOnly = True
+        Me.cId_ArticuloInterno.Visible = False
+        '
+        'cCodigoInterno
+        '
+        Me.cCodigoInterno.HeaderText = "Codigo Interno"
+        Me.cCodigoInterno.Name = "cCodigoInterno"
+        Me.cCodigoInterno.ReadOnly = True
+        Me.cCodigoInterno.Width = 110
+        '
+        'cBuscarFamilia
+        '
+        Me.cBuscarFamilia.HeaderText = ""
+        Me.cBuscarFamilia.Name = "cBuscarFamilia"
+        Me.cBuscarFamilia.Width = 25
+        '
+        'cSubFamilia
+        '
+        Me.cSubFamilia.HeaderText = "SubFamilia"
+        Me.cSubFamilia.Name = "cSubFamilia"
+        Me.cSubFamilia.Visible = False
+        '
+        'cFamilia
+        '
+        Me.cFamilia.HeaderText = "Familia"
+        Me.cFamilia.Name = "cFamilia"
+        Me.cFamilia.Width = 175
+        '
+        'cDescripcionInterno
+        '
+        Me.cDescripcionInterno.HeaderText = "Descripcion Interna"
+        Me.cDescripcionInterno.Name = "cDescripcionInterno"
+        Me.cDescripcionInterno.ReadOnly = True
+        Me.cDescripcionInterno.Width = 240
+        '
+        'cPresentacion
+        '
+        Me.cPresentacion.HeaderText = "Presentacion"
+        Me.cPresentacion.Name = "cPresentacion"
+        Me.cPresentacion.ReadOnly = True
+        Me.cPresentacion.Width = 75
+        '
+        'cCantidad
+        '
+        Me.cCantidad.HeaderText = "Cantidad"
+        Me.cCantidad.Name = "cCantidad"
+        Me.cCantidad.ReadOnly = True
+        Me.cCantidad.Visible = False
+        '
+        'cCosto
+        '
+        Me.cCosto.HeaderText = "Costo"
+        Me.cCosto.Name = "cCosto"
+        Me.cCosto.ReadOnly = True
+        Me.cCosto.Visible = False
+        '
+        'cDescuento
+        '
+        Me.cDescuento.HeaderText = "Descuento"
+        Me.cDescuento.Name = "cDescuento"
+        Me.cDescuento.ReadOnly = True
+        Me.cDescuento.Visible = False
+        '
+        'cMontoDescuento
+        '
+        Me.cMontoDescuento.HeaderText = "MontoDescuento"
+        Me.cMontoDescuento.Name = "cMontoDescuento"
+        Me.cMontoDescuento.ReadOnly = True
+        Me.cMontoDescuento.Visible = False
+        '
+        'cImpuesto
+        '
+        Me.cImpuesto.HeaderText = "Impuesto"
+        Me.cImpuesto.Name = "cImpuesto"
+        Me.cImpuesto.ReadOnly = True
+        Me.cImpuesto.Visible = False
+        '
+        'cPrecioIva1
+        '
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        DataGridViewCellStyle1.Format = "N2"
+        Me.cPrecioIva1.DefaultCellStyle = DataGridViewCellStyle1
+        Me.cPrecioIva1.HeaderText = "PrecioIva1"
+        Me.cPrecioIva1.Name = "cPrecioIva1"
+        Me.cPrecioIva1.ReadOnly = True
+        Me.cPrecioIva1.Visible = False
+        '
+        'cPrecioIva2
+        '
+        Me.cPrecioIva2.HeaderText = "PrecioIva2"
+        Me.cPrecioIva2.Name = "cPrecioIva2"
+        Me.cPrecioIva2.ReadOnly = True
+        Me.cPrecioIva2.Visible = False
+        '
+        'cPrecioIva3
+        '
+        Me.cPrecioIva3.HeaderText = "PrecioIva3"
+        Me.cPrecioIva3.Name = "cPrecioIva3"
+        Me.cPrecioIva3.ReadOnly = True
+        Me.cPrecioIva3.Visible = False
+        '
+        'cCantidadxPresentacion
+        '
+        Me.cCantidadxPresentacion.HeaderText = "Cantidad por Presentacion"
+        Me.cCantidadxPresentacion.Name = "cCantidadxPresentacion"
+        '
+        'cCabys
+        '
+        Me.cCabys.HeaderText = "Cabys"
+        Me.cCabys.Name = "cCabys"
+        Me.cCabys.Visible = False
+        '
+        'cFlete
+        '
+        Me.cFlete.HeaderText = "Flete"
+        Me.cFlete.Name = "cFlete"
+        Me.cFlete.Visible = False
+        '
+        'cExistencia
+        '
+        Me.cExistencia.HeaderText = "Existencia"
+        Me.cExistencia.Name = "cExistencia"
+        Me.cExistencia.Width = 75
+        '
         'frmImportarFacturaElectronica
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1185, 505)
+        Me.Controls.Add(Me.btnDesvincular)
         Me.Controls.Add(Me.btnFamilia)
         Me.Controls.Add(Me.btnInventario)
         Me.Controls.Add(Me.Label6)
@@ -442,6 +460,7 @@ Partial Class frmImportarFacturaElectronica
     Friend WithEvents Label6 As System.Windows.Forms.Label
     Friend WithEvents btnInventario As System.Windows.Forms.Button
     Friend WithEvents btnFamilia As System.Windows.Forms.Button
+    Friend WithEvents btnDesvincular As System.Windows.Forms.Button
     Friend WithEvents cCodigoProveedor As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents cDescripcion As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents cBuscaCodigoInterno As System.Windows.Forms.DataGridViewButtonColumn
@@ -463,4 +482,5 @@ Partial Class frmImportarFacturaElectronica
     Friend WithEvents cCantidadxPresentacion As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents cCabys As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents cFlete As System.Windows.Forms.DataGridViewCheckBoxColumn
+    Friend WithEvents cExistencia As System.Windows.Forms.DataGridViewTextBoxColumn
 End Class

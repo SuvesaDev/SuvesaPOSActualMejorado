@@ -49,6 +49,7 @@ Public Class frmEstadoCuentaAlbaran
         End Select
     End Sub
 
+
     Private Sub frmEstadoCuentaAlbaran_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Me.WindowState = FormWindowState.Maximized
     End Sub

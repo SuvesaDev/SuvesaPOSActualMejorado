@@ -1983,7 +1983,7 @@ Public Class Devoluciones_Compras
             Try
                 '"SELECT Id_Compra FROM COMPRAS where FACTURA = '"& ComboTipo.text &"' AND TIPODOCOMPRA = '"TextNumero.text "'"
                 'identificador = CDbl(Cfunciones.Buscar_X_Descripcion_Fecha("Select Id_Compra as Id, cast(Factura as varchar) + '-' + TipoCompra AS Factura ,Proveedores.nombre as Proveedor,Fecha from compras inner join Proveedores on compras.CodigoProv = Proveedores.CodigoProv Order by Fecha DESC", "Proveedor", "Fecha", "Buscar Factura de Compra", Conex.ConnectionString))
-                identificador = CDbl(Cfunciones.Buscar_X_Descripcion_Fecha("Select Id_Compra as Id, Factura AS Factura ,Proveedores.nombre + '-' + TipoCompra as Proveedor,Fecha from compras inner join Proveedores on compras.CodigoProv = Proveedores.CodigoProv Order by Fecha DESC", "Proveedor", "Fecha", "Buscar Factura de Compra", Conex.ConnectionString))
+                identificador = CDbl(Cfunciones.Buscar_X_Descripcion_Fecha("Select Id_Compra as Id, Factura AS Factura ,Proveedores.nombre + '-' + TipoCompra as Proveedor,Fecha from compras inner join Proveedores on compras.CodigoProv = Proveedores.CodigoProv Order by Fecha DESC", "Proveedor", "Fecha", "Buscar Factura de Compra", Conex.ConnectionString, False, True))
                 If Conex.State = ConnectionState.Open Then
                     Conex.Close()
                     Conex.Open()

@@ -68,8 +68,6 @@ Public Module CrystalReportsConexion
         End Try
     End Function
 
-
-
     Public Sub LoadShow(ByRef Reporte As CrystalDecisions.CrystalReports.Engine.ReportDocument, ByRef MDIForm As Form, Optional ByVal NuevaConexion As String = "", Optional ByVal _IdCotizacion As String = "0")
         Dim Visor As New frmVisorReportes
         Visor.IdCotizacion = _IdCotizacion

@@ -137,6 +137,20 @@ Public Class frmConsultaPedidosBodega
         Me.ConsultaBodega()
     End Sub
 
+    Private Sub viewDatos_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles viewDatos.CellDoubleClick
+        Try
+            Dim Cod_Aticulo As String = Me.viewDatos.Item("Cod_Articulo", Me.viewDatos.CurrentRow.Index).Value
+            Dim frm As New MovimientoArticulos
+            frm.txtCodigo.Text = Cod_Aticulo
+            frm.BuscarCodigoExterno()
+            frm.Show()
+            frm.DT_Inicio.EditValue = CDate("01/" & Date.Now.Month & "/" & Date.Now.Year)
+            frm.MostrarCompras()
+            frm.MostrarVentas()
+        Catch ex As Exception
+        End Try
+    End Sub
+
     Private Sub viewDatos_CellClick(sender As Object, e As Windows.Forms.DataGridViewCellEventArgs) Handles viewDatos.CellClick, viewDatos.CellEnter
         Try
             Dim Estado As String = Me.viewDatos.Item("Estado", e.RowIndex).Value
@@ -170,6 +184,12 @@ Public Class frmConsultaPedidosBodega
     Private IdUsuario As String = ""
     Private Sub btnPedido_Click(sender As Object, e As EventArgs) Handles btnPedido.Click
         Try
+
+            If Me.viewDatos.SelectedRows.Count > 1 Then
+                MsgBox("Solo puede seleccionar una fila", MsgBoxStyle.Exclamation, Me.Text)
+                Exit Sub
+            End If
+
             Dim Id As String = Me.viewDatos.Item("IdPedido", Me.viewDatos.CurrentRow.Index).Value
             Dim frm As New frmRegistrarPedido
             If frm.ShowDialog = Windows.Forms.DialogResult.OK Then
@@ -184,6 +204,12 @@ Public Class frmConsultaPedidosBodega
 
     Private Sub btnRecibido_Click(sender As Object, e As EventArgs) Handles btnRecibido.Click
         Try
+
+            If Me.viewDatos.SelectedRows.Count > 1 Then
+                MsgBox("Solo puede seleccionar una fila", MsgBoxStyle.Exclamation, Me.Text)
+                Exit Sub
+            End If
+
             Dim Id As String = Me.viewDatos.Item("IdPedido", Me.viewDatos.CurrentRow.Index).Value
             Dim frm As New frmMarcarEstado
             frm.lblEstado.Text = "Cambiar Estado a Recibido"
@@ -199,12 +225,14 @@ Public Class frmConsultaPedidosBodega
 
     Private Sub btnAnulado_Click(sender As Object, e As EventArgs) Handles btnAnulado.Click
         Try
-            Dim Id As String = Me.viewDatos.Item("IdPedido", Me.viewDatos.CurrentRow.Index).Value
             Dim frm As New frmMarcarEstado
             frm.lblEstado.Text = "Cambiar Estado a Anulado"
             If frm.ShowDialog = Windows.Forms.DialogResult.OK Then
-                Dim db As New OBSoluciones.SQL.Sentencias(CadenaConexionSeePOS)
-                db.Ejecutar("Update PedidoBodega  Set Estado = 'ANULADO' Where IdPedido = " & Id, CommandType.Text)
+                'Dim Id As String = Me.viewDatos.Item("IdPedido", Me.viewDatos.CurrentRow.Index).Value
+                For Each row As DataGridViewRow In Me.viewDatos.SelectedRows
+                    Dim db As New OBSoluciones.SQL.Sentencias(CadenaConexionSeePOS)
+                    db.Ejecutar("Update PedidoBodega  Set Estado = 'ANULADO' Where IdPedido = " & row.Cells("IdPedido").Value, CommandType.Text)
+                Next
                 Me.ConsultaBodega()
             End If
         Catch ex As Exception
@@ -264,6 +292,12 @@ Public Class frmConsultaPedidosBodega
 
     Private Sub btnAgotado_Click(sender As Object, e As EventArgs) Handles btnAgotado.Click
         Try
+
+            If Me.viewDatos.SelectedRows.Count > 1 Then
+                MsgBox("Solo puede seleccionar una fila", MsgBoxStyle.Exclamation, Me.Text)
+                Exit Sub
+            End If
+
             Dim Id As String = Me.viewDatos.Item("IdPedido", Me.viewDatos.CurrentRow.Index).Value
             Dim frm As New frmMarcarEstado
             frm.lblEstado.Text = "Cambiar Estado a Agotado"

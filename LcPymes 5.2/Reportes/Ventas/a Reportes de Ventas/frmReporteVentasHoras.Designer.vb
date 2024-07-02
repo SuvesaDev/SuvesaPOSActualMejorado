@@ -32,6 +32,7 @@ Partial Class frmReporteVentasHoras
         Me.Label2 = New System.Windows.Forms.Label()
         Me.dtpHastaHora = New System.Windows.Forms.DateTimePicker()
         Me.dtpDesdeHora = New System.Windows.Forms.DateTimePicker()
+        Me.ckDetalle = New System.Windows.Forms.CheckBox()
         Me.SuspendLayout()
         '
         'Label4
@@ -141,11 +142,22 @@ Partial Class frmReporteVentasHoras
         Me.dtpDesdeHora.TabIndex = 119
         Me.dtpDesdeHora.Value = New Date(2006, 4, 10, 0, 0, 0, 0)
         '
+        'ckDetalle
+        '
+        Me.ckDetalle.AutoSize = True
+        Me.ckDetalle.Location = New System.Drawing.Point(675, 23)
+        Me.ckDetalle.Name = "ckDetalle"
+        Me.ckDetalle.Size = New System.Drawing.Size(102, 17)
+        Me.ckDetalle.TabIndex = 123
+        Me.ckDetalle.Text = "Detalle Articulos"
+        Me.ckDetalle.UseVisualStyleBackColor = True
+        '
         'frmReporteVentasHoras
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(831, 483)
+        Me.Controls.Add(Me.ckDetalle)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.dtpHastaHora)
@@ -160,6 +172,7 @@ Partial Class frmReporteVentasHoras
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Reporte de ventas entre Fechas y Horas"
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
     Friend WithEvents Label4 As System.Windows.Forms.Label
@@ -172,4 +185,5 @@ Partial Class frmReporteVentasHoras
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents dtpHastaHora As System.Windows.Forms.DateTimePicker
     Friend WithEvents dtpDesdeHora As System.Windows.Forms.DateTimePicker
+    Friend WithEvents ckDetalle As System.Windows.Forms.CheckBox
 End Class

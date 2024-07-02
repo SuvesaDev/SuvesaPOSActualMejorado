@@ -40,29 +40,26 @@ Partial Class frmReporteSinVenta
         Me.Label3.BackColor = System.Drawing.SystemColors.ControlLight
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.Color.RoyalBlue
-        Me.Label3.Location = New System.Drawing.Point(12, 9)
-        Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label3.Location = New System.Drawing.Point(9, 7)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(128, 20)
+        Me.Label3.Size = New System.Drawing.Size(96, 16)
         Me.Label3.TabIndex = 111
         Me.Label3.Text = "Desde"
         '
         'FechaInicio
         '
         Me.FechaInicio.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.FechaInicio.Location = New System.Drawing.Point(12, 28)
-        Me.FechaInicio.Margin = New System.Windows.Forms.Padding(4)
+        Me.FechaInicio.Location = New System.Drawing.Point(9, 23)
         Me.FechaInicio.Name = "FechaInicio"
-        Me.FechaInicio.Size = New System.Drawing.Size(127, 22)
+        Me.FechaInicio.Size = New System.Drawing.Size(96, 20)
         Me.FechaInicio.TabIndex = 108
         Me.FechaInicio.Value = New Date(2006, 4, 10, 0, 0, 0, 0)
         '
         'ButtonMostrar
         '
-        Me.ButtonMostrar.Location = New System.Drawing.Point(1141, 23)
-        Me.ButtonMostrar.Margin = New System.Windows.Forms.Padding(4)
+        Me.ButtonMostrar.Location = New System.Drawing.Point(856, 19)
         Me.ButtonMostrar.Name = "ButtonMostrar"
-        Me.ButtonMostrar.Size = New System.Drawing.Size(117, 30)
+        Me.ButtonMostrar.Size = New System.Drawing.Size(88, 24)
         Me.ButtonMostrar.TabIndex = 110
         Me.ButtonMostrar.Text = "Mostrar"
         '
@@ -75,14 +72,12 @@ Partial Class frmReporteSinVenta
         Me.VisorReporte.AutoScroll = True
         Me.VisorReporte.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.VisorReporte.Cursor = System.Windows.Forms.Cursors.Default
-        Me.VisorReporte.Location = New System.Drawing.Point(1, 63)
-        Me.VisorReporte.Margin = New System.Windows.Forms.Padding(4)
+        Me.VisorReporte.Location = New System.Drawing.Point(1, 51)
         Me.VisorReporte.Name = "VisorReporte"
         Me.VisorReporte.SelectionFormula = ""
         Me.VisorReporte.ShowCloseButton = False
-        Me.VisorReporte.Size = New System.Drawing.Size(1268, 523)
+        Me.VisorReporte.Size = New System.Drawing.Size(952, 425)
         Me.VisorReporte.TabIndex = 107
-        Me.VisorReporte.ToolPanelWidth = 267
         Me.VisorReporte.ViewTimeSelectionFormula = ""
         '
         'Label1
@@ -90,20 +85,18 @@ Partial Class frmReporteSinVenta
         Me.Label1.BackColor = System.Drawing.SystemColors.ControlLight
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.RoyalBlue
-        Me.Label1.Location = New System.Drawing.Point(148, 9)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label1.Location = New System.Drawing.Point(111, 7)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(128, 20)
+        Me.Label1.Size = New System.Drawing.Size(96, 16)
         Me.Label1.TabIndex = 113
         Me.Label1.Text = "Hasta"
         '
         'FechaFin
         '
         Me.FechaFin.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.FechaFin.Location = New System.Drawing.Point(148, 28)
-        Me.FechaFin.Margin = New System.Windows.Forms.Padding(4)
+        Me.FechaFin.Location = New System.Drawing.Point(111, 23)
         Me.FechaFin.Name = "FechaFin"
-        Me.FechaFin.Size = New System.Drawing.Size(127, 22)
+        Me.FechaFin.Size = New System.Drawing.Size(96, 20)
         Me.FechaFin.TabIndex = 112
         Me.FechaFin.Value = New Date(2006, 4, 10, 0, 0, 0, 0)
         '
@@ -112,10 +105,9 @@ Partial Class frmReporteSinVenta
         Me.Label2.BackColor = System.Drawing.SystemColors.ControlLight
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.RoyalBlue
-        Me.Label2.Location = New System.Drawing.Point(284, 9)
-        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label2.Location = New System.Drawing.Point(213, 7)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(187, 20)
+        Me.Label2.Size = New System.Drawing.Size(140, 16)
         Me.Label2.TabIndex = 114
         Me.Label2.Text = "Opcion de Reporte"
         '
@@ -124,30 +116,27 @@ Partial Class frmReporteSinVenta
         Me.cboOpcion.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cboOpcion.FormattingEnabled = True
         Me.cboOpcion.Items.AddRange(New Object() {"Todos ", "Solo Veterinaria", "Solo Consignados"})
-        Me.cboOpcion.Location = New System.Drawing.Point(288, 30)
-        Me.cboOpcion.Margin = New System.Windows.Forms.Padding(4)
+        Me.cboOpcion.Location = New System.Drawing.Point(216, 24)
         Me.cboOpcion.Name = "cboOpcion"
-        Me.cboOpcion.Size = New System.Drawing.Size(181, 24)
+        Me.cboOpcion.Size = New System.Drawing.Size(137, 21)
         Me.cboOpcion.TabIndex = 115
         '
         'lblProveedor
         '
         Me.lblProveedor.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.lblProveedor.FlatStyle = System.Windows.Forms.FlatStyle.System
-        Me.lblProveedor.Location = New System.Drawing.Point(603, 29)
-        Me.lblProveedor.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblProveedor.Location = New System.Drawing.Point(452, 24)
         Me.lblProveedor.Name = "lblProveedor"
-        Me.lblProveedor.Size = New System.Drawing.Size(493, 24)
+        Me.lblProveedor.Size = New System.Drawing.Size(370, 20)
         Me.lblProveedor.TabIndex = 118
         Me.lblProveedor.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'txtCodigo
         '
         Me.txtCodigo.Enabled = False
-        Me.txtCodigo.Location = New System.Drawing.Point(484, 30)
-        Me.txtCodigo.Margin = New System.Windows.Forms.Padding(4)
+        Me.txtCodigo.Location = New System.Drawing.Point(363, 24)
         Me.txtCodigo.Name = "txtCodigo"
-        Me.txtCodigo.Size = New System.Drawing.Size(116, 22)
+        Me.txtCodigo.Size = New System.Drawing.Size(88, 20)
         Me.txtCodigo.TabIndex = 117
         '
         'ckPorProveedor
@@ -156,18 +145,19 @@ Partial Class frmReporteSinVenta
         Me.ckPorProveedor.BackColor = System.Drawing.SystemColors.ControlLight
         Me.ckPorProveedor.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold)
         Me.ckPorProveedor.ForeColor = System.Drawing.Color.RoyalBlue
-        Me.ckPorProveedor.Location = New System.Drawing.Point(482, 8)
+        Me.ckPorProveedor.Location = New System.Drawing.Point(362, 6)
+        Me.ckPorProveedor.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.ckPorProveedor.Name = "ckPorProveedor"
-        Me.ckPorProveedor.Size = New System.Drawing.Size(116, 24)
+        Me.ckPorProveedor.Size = New System.Drawing.Size(100, 20)
         Me.ckPorProveedor.TabIndex = 120
         Me.ckPorProveedor.Text = "Proveedor"
         Me.ckPorProveedor.UseVisualStyleBackColor = False
         '
         'frmReporteSinVenta
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1271, 594)
+        Me.ClientSize = New System.Drawing.Size(953, 483)
         Me.Controls.Add(Me.txtCodigo)
         Me.Controls.Add(Me.ckPorProveedor)
         Me.Controls.Add(Me.lblProveedor)
@@ -179,7 +169,6 @@ Partial Class frmReporteSinVenta
         Me.Controls.Add(Me.FechaInicio)
         Me.Controls.Add(Me.ButtonMostrar)
         Me.Controls.Add(Me.VisorReporte)
-        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "frmReporteSinVenta"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Articulos sin Ventas"

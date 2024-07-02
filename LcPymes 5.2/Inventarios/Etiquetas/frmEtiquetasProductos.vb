@@ -21,6 +21,9 @@ Public Class frmEtiquetasProductos
     Dim usua As Usuario_Logeado
 
 
+
+
+
 #Region " Código generado por el Diseñador de Windows Forms "
 
     Public Sub New(ByVal f As Boolean, ByVal s() As Integer, ByVal w() As Integer, ByVal z() As Integer)
@@ -843,7 +846,7 @@ Public Class frmEtiquetasProductos
                     row!ImporteUnitario = 0
                     row!descripcion = fila.Cells("Descripcion").Value '***
                     row!factorConversion = 0
-                    row!idArticulo = fila.Cells("Codigo").Value '***
+                    row!idArticulo = Me.CodArticulo(fila.Cells("Codigo").Value) '***
                     row!orden = ""
                     row!PVP1 = 0 '***
                     row!Moneda = 1 '***
@@ -853,28 +856,30 @@ Public Class frmEtiquetasProductos
                     dts.DatosEtiquetasAlbaranesCompra_Crystal.Rows.Add(row)
                     vueltas += 1
                     lineas += 1
-                End While
-                If lineas >= 2 Then
+
+                    'If lineas >= 2 Then
                     EtiquetasGuanavet.SetDataSource(dts)
                     'EtiquetasGuanavet.ExportToDisk(CrystalDecisions.Shared.ExportFormatType.CrystalReport, "C:\a\algo.rpt")
                     Me.rptViewer.ReportSource = EtiquetasGuanavet
                     EtiquetasGuanavet.PrintToPrinter(cant, True, 1, 1)
                     dts = New DataSetEtiquetasGuanavetClinica
                     lineas = 0
-                End If
+                    'End If
+                End While
             Next
 
-            If lineas > 0 Then
-                EtiquetasGuanavet.SetDataSource(dts)
-                EtiquetasGuanavet.ExportToDisk(CrystalDecisions.Shared.ExportFormatType.CrystalReport, "C:\a\algo.rpt")
-                Me.rptViewer.ReportSource = EtiquetasGuanavet
-                EtiquetasGuanavet.PrintToPrinter(cant, True, 1, 1)
-            End If
+            ''If lineas > 0 Then
+            ''    EtiquetasGuanavet.SetDataSource(dts)
+            ''    EtiquetasGuanavet.ExportToDisk(CrystalDecisions.Shared.ExportFormatType.CrystalReport, "C:\a\algo.rpt")
+            ''    Me.rptViewer.ReportSource = EtiquetasGuanavet
+            ''    EtiquetasGuanavet.PrintToPrinter(cant, True, 1, 1)
+            ''End If
 
         Catch ex As SystemException
             MsgBox(ex.Message)
         End Try
     End Sub
+
 
     Private Function CodArticulo(_Cod As String) As String
         Dim dt As New DataTable
@@ -896,6 +901,17 @@ Public Class frmEtiquetasProductos
         End If
     End Function
 
+
+    Private Function Presentacion(_Cod As String) As String
+        Dim dt As New DataTable
+        cFunciones.Llenar_Tabla_Generico("Select CAST(i.PresentaCant as nvarchar) + ' ' + p.Presentaciones as Presentacion from Inventario i inner join Presentaciones p on i.CodPresentacion = p.CodPres where Codigo = " & _Cod, dt, CadenaConexionSeePOS)
+        If dt.Rows.Count > 0 Then
+            Return dt.Rows(0).Item("Presentacion")
+        Else
+            Return ""
+        End If
+    End Function
+
     Private Sub ImprimrEtiquetasSUVELISA()
         Dim i As Integer
         Dim codigo As Integer
@@ -912,40 +928,54 @@ Public Class frmEtiquetasProductos
                 IncluirPrecio = False
             End If
 
+
+            Dim frm As New frmEtiquetarGuanavet
+            frm.I = 0
+            frm.IncluirPrecio = IncluirPrecio
+            frm.LineasBarCode.Clear()
+            Dim Linea As LineaImprecion
+
             For Each fila As DataGridViewRow In Me.dgEtiquetas.Rows
 
                 vueltas = 0
                 While vueltas < CInt(fila.Cells("Cantidad").Value)
-                    Dim dts As New DataSetEtiquetasGuanavetClinica
-                    Dim row As DataRow = dts.DatosEtiquetasAlbaranesCompra_Crystal.NewRow
-                    row!idAlbaran = 0
-                    row!cantidad = 0
-                    row!ImporteUnitario = 0
-                    row!descripcion = fila.Cells("Descripcion").Value '***
-                    row!factorConversion = 0
-                    row!idArticulo = Me.CodArticulo(fila.Cells("Codigo").Value) '***
-                    row!orden = ""
-                    If IncluirPrecio = True Then
-                        row!UnidadMedida = " ₡ " & Me.Precio(fila.Cells("Codigo").Value).ToString("N2") '***
-                    Else
-                        row!UnidadMedida = ""
-                    End If
-                    row!PVP1 = 0
-                    row!Moneda = 1 '***
-                    row!PesoEnvase = ""
-                    dts.DatosEtiquetasAlbaranesCompra_Crystal.Rows.Add(row)
+
+                    Linea = New LineaImprecion(Me.CodArticulo(fila.Cells("Codigo").Value), fila.Cells("Descripcion").Value, Me.Presentacion(fila.Cells("Codigo").Value), Me.Precio(fila.Cells("Codigo").Value), 1)
+                    frm.LineasBarCode.Add(Linea)
+
+                    'Dim dts As New DataSetEtiquetasGuanavetClinica
+                    'Dim row As DataRow = dts.DatosEtiquetasAlbaranesCompra_Crystal.NewRow
+                    'row!idAlbaran = 0
+                    'row!cantidad = 0
+                    'row!ImporteUnitario = 0
+                    'row!descripcion = fila.Cells("Descripcion").Value '***
+                    'row!factorConversion = 0
+                    'row!idArticulo = Me.CodArticulo(fila.Cells("Codigo").Value) '***
+                    'row!orden = ""
+                    'If IncluirPrecio = True Then
+                    '    row!UnidadMedida = " ₡ " & Me.Precio(fila.Cells("Codigo").Value).ToString("N2") '***
+                    'Else
+                    '    row!UnidadMedida = ""
+                    'End If
+                    'row!PVP1 = 0
+                    'row!Moneda = 1 '***
+                    'row!PesoEnvase = ""
+                    'dts.DatosEtiquetasAlbaranesCompra_Crystal.Rows.Add(row)
                     vueltas += 1
 
 
-                    EtiquetasSUVELISA.SetDataSource(dts)
-                    Me.rptViewer.ReportSource = EtiquetasSUVELISA
-                    EtiquetasSUVELISA.PrintToPrinter(cant, True, 1, 1)
-                    dts.Clear()
+                    'EtiquetasSUVELISA.SetDataSource(dts)
+                    'Me.rptViewer.ReportSource = EtiquetasSUVELISA
+                    'EtiquetasSUVELISA.PrintToPrinter(cant, True, 1, 1)
+                    'dts.Clear()
                 End While
 
             Next
 
-
+            frm.WindowState = FormWindowState.Minimized
+            frm.CerrarAlTerminar = True
+            frm.Show()
+            frm.printDocument1.Print()            
 
         Catch ex As SystemException
             MsgBox(ex.Message)
@@ -1032,6 +1062,7 @@ Public Class frmEtiquetasProductos
                             Me.ImprimrEtiquetasSUVELISA()
                         Case "3101696098" 'Guanavet Clinica
                             Me.ImprimrEtiquetasGuanavet()
+                            'Me.ImprimrEtiquetasSUVELISA()
                         Case Else
                             MsgBox("No se reconoce el formato de las etiquetas", MsgBoxStyle.Exclamation, Me.Text)
                     End Select

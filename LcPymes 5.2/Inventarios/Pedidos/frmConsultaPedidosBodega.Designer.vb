@@ -74,7 +74,6 @@ Partial Class frmConsultaPedidosBodega
         Me.viewDatos.BackgroundColor = System.Drawing.Color.White
         Me.viewDatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.viewDatos.Location = New System.Drawing.Point(4, 43)
-        Me.viewDatos.MultiSelect = False
         Me.viewDatos.Name = "viewDatos"
         Me.viewDatos.ReadOnly = True
         Me.viewDatos.RowHeadersVisible = False

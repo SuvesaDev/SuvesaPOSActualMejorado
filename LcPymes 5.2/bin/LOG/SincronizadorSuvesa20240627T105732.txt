@@ -1,0 +1,8 @@
+﻿
+Hora Inicial: 27/06/2024 10:57:32 am
+Tipo de procedimiento: Ventas
+Cantidad Albaranes: 3
+Cantidad Lineas Albaranes: 17
+Se escribió en la bitacora: DAYANA AJUN ANCHIA
+Hora Final: 27/06/2024 10:57:49 am
+Tiempo Empleado: 00:00:16.89

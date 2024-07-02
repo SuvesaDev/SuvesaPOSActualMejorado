@@ -407,7 +407,7 @@ Public Class ImpresionCaja
             Dim rptTiquete As New CrystalDecisions.CrystalReports.Engine.ReportDocument
             rptTiquete = New rptTiqueteRifa2
 
-            If _PuntoVenta.ToUpper = "SEEPOS" Or _PuntoVenta = "SANTACRUZ" Or _PuntoVenta = "CLINICA" Then
+            If _PuntoVenta.ToUpper = "SEEPOS" Or _PuntoVenta.ToUpper = "MASCOTAS" Or _PuntoVenta = "SANTACRUZ" Or _PuntoVenta = "CLINICA" Then
                 CrystalReportsConexion.LoadReportViewer(Nothing, rptTiquete, True, CadenaConexionSeePOS)
             End If
             If _PuntoVenta.ToUpper = "TALLER" Then
@@ -480,8 +480,16 @@ Public Class ImpresionCaja
             facturaPVE.SetParameterValue(0, reimprimir)
             facturaPVE.SetParameterValue(1, False)
             facturaPVE.SetParameterValue(2, Id_Factura)
-            facturaPVE.PrintToPrinter(PrinterSettings1, PageSettings1, False)
-            facturaPVE.PrintToPrinter(PrinterSettings1, PageSettings1, False)
+            If IsClinica() = True Then
+                facturaPVE.PrintToPrinter(PrinterSettings1, PageSettings1, False)
+                If MsgBox("Desea imprimir una copia", MsgBoxStyle.Question + MsgBoxStyle.YesNo, "Confirmar Accion") = MsgBoxResult.Yes Then
+                    facturaPVE.PrintToPrinter(PrinterSettings1, PageSettings1, False)
+                End If
+            Else
+                facturaPVE.PrintToPrinter(PrinterSettings1, PageSettings1, False)
+                facturaPVE.PrintToPrinter(PrinterSettings1, PageSettings1, False)
+            End If
+
             facturaPVE.Close()
             facturaPVE.Dispose()
             GC.Collect()

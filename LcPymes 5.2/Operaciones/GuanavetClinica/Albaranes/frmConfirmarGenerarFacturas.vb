@@ -1,14 +1,44 @@
 ﻿Imports System.Data
 Public Class frmConfirmarGenerarFacturas
 
-    Private Sub cargarDortores()
+    Public Id_Usuario As String = ""
+
+    Private Sub CargarCajaDefecto()
         Dim dt As New DataTable
-        cFunciones.Llenar_Tabla_Generico("select 0 as Id, 'Seleccione un doctor' as Nombre union select id, nombre from agente_ventas", dt, CadenaConexionSeePOS)
+        cFunciones.Llenar_Tabla_Generico("select Num_Caja from aperturacaja where Estado = 'A' and Cedula = '" & Me.Id_Usuario & "'", dt, CadenaConexionSeePOS)
         If dt.Rows.Count > 0 Then
-            Me.cboDoctorEncargado.DataSource = dt
-            Me.cboDoctorEncargado.DisplayMember = "nombre"
-            Me.cboDoctorEncargado.ValueMember = "id"
+            Select Case dt.Rows(0).Item("Num_Caja")
+                Case 1
+                    For Each row As DataGridViewRow In Me.viewDatos.Rows
+                        row.Cells("cCaja").Value = "1"
+                    Next
+                Case 2
+                    For Each row As DataGridViewRow In Me.viewDatos.Rows
+                        row.Cells("cCaja").Value = "2"
+                    Next
+                Case 3
+                    For Each row As DataGridViewRow In Me.viewDatos.Rows
+                        row.Cells("cCaja").Value = "3"
+                    Next
+            End Select
         End If
+
+        For Each row As DataGridViewRow In Me.viewDatos.Rows
+            row.Cells("cTipo").Value = "CONTADO"
+        Next
+    End Sub
+
+    Private Sub cargarDortores()
+        'Try
+        '    Dim dt As New DataTable
+        '    cFunciones.Llenar_Tabla_Generico("select 0 as Id, 'Seleccione un doctor' as Nombre union select id, nombre from agente_ventas", dt, CadenaConexionSeePOS)
+        '    If dt.Rows.Count > 0 Then
+        '        Me.cboDoctorEncargado.DataSource = dt
+        '        Me.cboDoctorEncargado.DisplayMember = "nombre"
+        '        Me.cboDoctorEncargado.ValueMember = "id"
+        '    End If
+        'Catch ex As Exception
+        'End Try
     End Sub
 
     Private Sub CrearCliente()
@@ -122,11 +152,11 @@ Public Class frmConfirmarGenerarFacturas
             End If
         Next
 
-        If Me.cboDoctorEncargado.SelectedValue = "0" Then
-            MsgBox("Debe selecccionar un encargado", MsgBoxStyle.Information, Me.Text)
-            Me.cboDoctorEncargado.Focus()
-            Exit Sub
-        End If
+        'If Me.cboDoctorEncargado.SelectedValue = "0" Then
+        '    MsgBox("Debe selecccionar un encargado", MsgBoxStyle.Information, Me.Text)
+        '    Me.cboDoctorEncargado.Focus()
+        '    Exit Sub
+        'End If
 
         If Me.PasaValidacionCredito = False Then
             Exit Sub
@@ -151,6 +181,7 @@ Public Class frmConfirmarGenerarFacturas
 
     Private Sub frmConfirmarGenerarFacturas_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Me.cargarDortores()
+        Me.CargarCajaDefecto()
     End Sub
 
 End Class

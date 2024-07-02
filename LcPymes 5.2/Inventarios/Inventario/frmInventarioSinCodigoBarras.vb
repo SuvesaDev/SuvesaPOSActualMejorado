@@ -1,6 +1,9 @@
 ﻿Imports System.Data
 Public Class frmInventarioSinCodigoBarras
 
+
+
+
     Private Sub Buscar()
         Dim dt As New DataTable
         Dim SoloconBarras As String = ""
@@ -9,7 +12,7 @@ Public Class frmInventarioSinCodigoBarras
         Else
             SoloconBarras = ""
         End If
-        Dim strSQL As String = "select i.Codigo, i.Cod_Articulo, i.Barras, i.Descripcion + ' (' + CAST(i.PresentaCant as nvarchar) + ' ' + p.Presentaciones + ' )' as Descripcion from Inventario i inner join Presentaciones p on i.CodPresentacion = p.CodPres where i.Servicio = 0 and i.Mascotas = 0 and i.Clinica = 0 and i.Peces = 0 and  i.Inhabilitado = 0 " & SoloconBarras & " and i.Descripcion like '%" & Me.txtDescripcion.Text & "%' order by i.Descripcion"
+        Dim strSQL As String = "select i.Codigo, i.Cod_Articulo, i.Barras, i.Descripcion + ' (' + CAST(i.PresentaCant as nvarchar) + ' ' + p.Presentaciones + ' )' as Descripcion from Inventario i inner join Presentaciones p on i.CodPresentacion = p.CodPres where i.Servicio = 0 and i.Mascotas = 0 and i.Clinica = 0 and i.Peces = 0 " & IIf(Me.ckInhactivos.Checked = True, "", " and i.Inhabilitado = 0") & " " & SoloconBarras & " and i.Descripcion like '%" & Me.txtDescripcion.Text & "%' order by i.Descripcion"
         cFunciones.Llenar_Tabla_Generico(strSQL, dt, CadenaConexionSeePOS)
         Me.viewDatos.DataSource = dt
         Me.viewDatos.Columns("Codigo").Visible = False

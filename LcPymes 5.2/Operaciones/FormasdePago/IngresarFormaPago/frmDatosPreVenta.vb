@@ -426,14 +426,38 @@ Public Class frmDatosPreVenta
         End Try
     End Function
 
+    Private Function GetId(_Cedula As String) As String
+        Dim dt As New DataTable
+        cFunciones.Llenar_Tabla_Generico("select identificacion from Clientes where cedula = '" & _Cedula & "'", dt, CadenaConexionSeePOS)
+        If dt.Rows.Count > 0 Then
+            Return dt.Rows(0).Item("identificacion")
+        Else
+            Return "-1"
+        End If
+    End Function
+
     Private Function CargarSaldoPrepago(_Identificacion As String) As Decimal
         Dim dt As New DataTable
-        cFunciones.Llenar_Tabla_Generico("select IsNull(Sum(debitos - creditos),0) as Saldo from viewMovimientosPrepagos where identificacion = " & _Identificacion, dt, CadenaConexionSeePOS)
+        Dim cedula2 As String = Me.GetId(_Identificacion)
+        cFunciones.Llenar_Tabla_Generico("select IsNull(Sum(debitos - creditos),0) as Saldo from viewMovimientosPrepagos where identificacion = " & _Identificacion & " or identificacion = " & cedula2, dt, CadenaConexionSeePOS)
         If dt.Rows.Count > 0 Then
             Return dt.Rows(0).Item("Saldo")
         Else
-            Return 0
+        Return 0
         End If
+    End Function
+
+    Private Function TieneCredito(_Identificacion As String) As Boolean
+        Dim dt As New DataTable
+        cFunciones.Llenar_Tabla_Generico("select abierto from Clientes where identificacion = " & _Identificacion, dt, CadenaConexionSeePOS)
+        If dt.Rows.Count > 0 Then
+            If dt.Rows(0).Item("Abierto") = "Si" Then
+                Return True
+            Else
+                Return False
+            End If
+        End If
+        Return False
     End Function
 
     Private Sub CobrarUnificado()
@@ -446,8 +470,13 @@ Public Class frmDatosPreVenta
         Next
 
         Dim Id_Factura, Num_Factura, IdRecibo, NumRecibo, IdApartdo, IdAbonoApartado As Long
-
         If CDec(Me.txtTotalPendiente.Text) > 0 Then
+
+            'If TieneCredito(Me.Cod_Cliente) = True Then
+            '    MsgBox("El cliente tiene credito activado", MsgBoxStyle.Exclamation, "No se puede realizar la Factura Firmado Contado")
+            '    Exit Sub
+            'End If
+
             Dim frmPendiente As New frmFacturaPendiente
             frmPendiente.Id_Usuario = Me.Id_Usuario
             If frmPendiente.ShowDialog = Windows.Forms.DialogResult.OK Then

@@ -22,8 +22,14 @@ Partial Class frmConfirmarGenerarFacturas
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.viewDatos = New System.Windows.Forms.DataGridView()
+        Me.Label13 = New System.Windows.Forms.Label()
+        Me.btnCancelar = New System.Windows.Forms.Button()
+        Me.btnGenerarFacturas = New System.Windows.Forms.Button()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.cboDoctorEncargado = New System.Windows.Forms.ComboBox()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.cIdentificacion = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.cIdentificacion2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.cCliente = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -31,12 +37,6 @@ Partial Class frmConfirmarGenerarFacturas
         Me.cTipo = New System.Windows.Forms.DataGridViewComboBoxColumn()
         Me.cTotal = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.cPlazo = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Label13 = New System.Windows.Forms.Label()
-        Me.btnCancelar = New System.Windows.Forms.Button()
-        Me.btnGenerarFacturas = New System.Windows.Forms.Button()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.cboDoctorEncargado = New System.Windows.Forms.ComboBox()
-        Me.Label1 = New System.Windows.Forms.Label()
         CType(Me.viewDatos, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -60,62 +60,8 @@ Partial Class frmConfirmarGenerarFacturas
         Me.viewDatos.RowHeadersWidth = 51
         Me.viewDatos.RowTemplate.Height = 27
         Me.viewDatos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.viewDatos.Size = New System.Drawing.Size(630, 198)
+        Me.viewDatos.Size = New System.Drawing.Size(630, 228)
         Me.viewDatos.TabIndex = 72
-        '
-        'cIdentificacion
-        '
-        Me.cIdentificacion.HeaderText = "Identificacion"
-        Me.cIdentificacion.MinimumWidth = 6
-        Me.cIdentificacion.Name = "cIdentificacion"
-        Me.cIdentificacion.Visible = False
-        '
-        'cIdentificacion2
-        '
-        Me.cIdentificacion2.HeaderText = "Identificacion2"
-        Me.cIdentificacion2.MinimumWidth = 6
-        Me.cIdentificacion2.Name = "cIdentificacion2"
-        Me.cIdentificacion2.Visible = False
-        '
-        'cCliente
-        '
-        Me.cCliente.HeaderText = "Cliente"
-        Me.cCliente.MinimumWidth = 6
-        Me.cCliente.Name = "cCliente"
-        Me.cCliente.ReadOnly = True
-        '
-        'cCaja
-        '
-        Me.cCaja.HeaderText = "Caja"
-        Me.cCaja.Items.AddRange(New Object() {"1", "2", "3"})
-        Me.cCaja.MinimumWidth = 6
-        Me.cCaja.Name = "cCaja"
-        '
-        'cTipo
-        '
-        Me.cTipo.HeaderText = "Tipo"
-        Me.cTipo.Items.AddRange(New Object() {"TIQUETE", "CONTADO", "CREDITO"})
-        Me.cTipo.MinimumWidth = 6
-        Me.cTipo.Name = "cTipo"
-        Me.cTipo.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.cTipo.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
-        '
-        'cTotal
-        '
-        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        DataGridViewCellStyle3.Format = "N2"
-        Me.cTotal.DefaultCellStyle = DataGridViewCellStyle3
-        Me.cTotal.HeaderText = "Total"
-        Me.cTotal.MinimumWidth = 6
-        Me.cTotal.Name = "cTotal"
-        Me.cTotal.ReadOnly = True
-        '
-        'cPlazo
-        '
-        Me.cPlazo.HeaderText = "Plazo"
-        Me.cPlazo.MinimumWidth = 6
-        Me.cPlazo.Name = "cPlazo"
-        Me.cPlazo.Visible = False
         '
         'Label13
         '
@@ -173,6 +119,7 @@ Partial Class frmConfirmarGenerarFacturas
         Me.cboDoctorEncargado.Name = "cboDoctorEncargado"
         Me.cboDoctorEncargado.Size = New System.Drawing.Size(379, 24)
         Me.cboDoctorEncargado.TabIndex = 87
+        Me.cboDoctorEncargado.Visible = False
         '
         'Label1
         '
@@ -183,19 +130,74 @@ Partial Class frmConfirmarGenerarFacturas
         Me.Label1.Size = New System.Drawing.Size(81, 16)
         Me.Label1.TabIndex = 88
         Me.Label1.Text = "Encargado :"
+        Me.Label1.Visible = False
+        '
+        'cIdentificacion
+        '
+        Me.cIdentificacion.HeaderText = "Identificacion"
+        Me.cIdentificacion.MinimumWidth = 6
+        Me.cIdentificacion.Name = "cIdentificacion"
+        Me.cIdentificacion.Visible = False
+        '
+        'cIdentificacion2
+        '
+        Me.cIdentificacion2.HeaderText = "Identificacion2"
+        Me.cIdentificacion2.MinimumWidth = 6
+        Me.cIdentificacion2.Name = "cIdentificacion2"
+        Me.cIdentificacion2.Visible = False
+        '
+        'cCliente
+        '
+        Me.cCliente.HeaderText = "Cliente"
+        Me.cCliente.MinimumWidth = 6
+        Me.cCliente.Name = "cCliente"
+        Me.cCliente.ReadOnly = True
+        '
+        'cCaja
+        '
+        Me.cCaja.HeaderText = "Caja"
+        Me.cCaja.Items.AddRange(New Object() {"1", "2", "3"})
+        Me.cCaja.MinimumWidth = 6
+        Me.cCaja.Name = "cCaja"
+        '
+        'cTipo
+        '
+        Me.cTipo.HeaderText = "Tipo"
+        Me.cTipo.Items.AddRange(New Object() {"CONTADO", "CREDITO", "TIQUETE"})
+        Me.cTipo.MinimumWidth = 6
+        Me.cTipo.Name = "cTipo"
+        Me.cTipo.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.cTipo.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
+        '
+        'cTotal
+        '
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        DataGridViewCellStyle1.Format = "N2"
+        Me.cTotal.DefaultCellStyle = DataGridViewCellStyle1
+        Me.cTotal.HeaderText = "Total"
+        Me.cTotal.MinimumWidth = 6
+        Me.cTotal.Name = "cTotal"
+        Me.cTotal.ReadOnly = True
+        '
+        'cPlazo
+        '
+        Me.cPlazo.HeaderText = "Plazo"
+        Me.cPlazo.MinimumWidth = 6
+        Me.cPlazo.Name = "cPlazo"
+        Me.cPlazo.Visible = False
         '
         'frmConfirmarGenerarFacturas
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(645, 327)
+        Me.Controls.Add(Me.viewDatos)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.cboDoctorEncargado)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.btnCancelar)
         Me.Controls.Add(Me.btnGenerarFacturas)
         Me.Controls.Add(Me.Label13)
-        Me.Controls.Add(Me.viewDatos)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
         Me.MaximizeBox = False
         Me.MinimizeBox = False
@@ -212,13 +214,13 @@ Partial Class frmConfirmarGenerarFacturas
     Friend WithEvents btnGenerarFacturas As System.Windows.Forms.Button
     Friend WithEvents btnCancelar As System.Windows.Forms.Button
     Friend WithEvents Button1 As Button
-    Friend WithEvents cIdentificacion As DataGridViewTextBoxColumn
-    Friend WithEvents cIdentificacion2 As DataGridViewTextBoxColumn
-    Friend WithEvents cCliente As DataGridViewTextBoxColumn
-    Friend WithEvents cCaja As DataGridViewComboBoxColumn
-    Friend WithEvents cTipo As DataGridViewComboBoxColumn
-    Friend WithEvents cTotal As DataGridViewTextBoxColumn
-    Friend WithEvents cPlazo As DataGridViewTextBoxColumn
     Friend WithEvents cboDoctorEncargado As System.Windows.Forms.ComboBox
     Friend WithEvents Label1 As System.Windows.Forms.Label
+    Friend WithEvents cIdentificacion As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents cIdentificacion2 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents cCliente As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents cCaja As System.Windows.Forms.DataGridViewComboBoxColumn
+    Friend WithEvents cTipo As System.Windows.Forms.DataGridViewComboBoxColumn
+    Friend WithEvents cTotal As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents cPlazo As System.Windows.Forms.DataGridViewTextBoxColumn
 End Class

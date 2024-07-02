@@ -11,6 +11,7 @@ Public Class FrmDevolucionesVentas
     Dim buscando As Boolean = False
     Dim PMU As New PerfilModulo_Class
     Dim recibo_reportePVE As New ReporteDevolucionesVentas_PVE
+    Dim Prerecibo_reportePVE As New ReportePreDevolucionesVentas_PVE
 
 #Region " Variable "                 'Definicion de Variable 
     Private sqlConexion As SqlConnection
@@ -2112,39 +2113,81 @@ Public Class FrmDevolucionesVentas
     Private Sub txtUsuario_KeyDown(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles txtUsuario.KeyDown
         If e.KeyCode = Keys.Enter Then
             Try
-                If Me.BindingContext(Me.DataSetDevolucionVentas1.Usuarios).Count > 0 Then
-                    Dim Usuario_autorizadores() As System.Data.DataRow
-                    Dim Usua As System.Data.DataRow
-                    Usuario_autorizadores = Me.DataSetDevolucionVentas1.Usuarios.Select("Clave_Interna ='" & txtUsuario.Text & "'")
-                    If Usuario_autorizadores.Length <> 0 Then
-                        Usua = Usuario_autorizadores(0)
 
-                        PMU = VSM(Usua("Cedula"), Me.Name) 'Carga los privilegios del usuario con el modulo 
-                        If Not PMU.Execute Then MsgBox("No tiene permiso de acceso en el módulo " & Me.Text, MsgBoxStyle.Information, "Atención...") : Exit Sub
+                If IsPreDevolucion = True Then
 
-                        txtNombreUsuario.Text = Usua("Nombre")
-                        Me.Cedula_usuario = Usua("Cedula")
-                        txtUsuario.Enabled = False ' se inabilita el campo de la contraseña
-                        HabilitarControlesDevolucion()
-                        Agregar()
-                        Me.txtUsuario.Enabled = False
+                    If Me.BindingContext(Me.DataSetDevolucionVentas1.Usuarios).Count > 0 Then
+                        Dim Usuario_autorizadores() As System.Data.DataRow
+                        Dim Usua As System.Data.DataRow
+                        Usuario_autorizadores = Me.DataSetDevolucionVentas1.Usuarios.Select("Clave_Interna ='" & txtUsuario.Text & "'")
+                        If Usuario_autorizadores.Length <> 0 Then
+                            Usua = Usuario_autorizadores(0)
 
-                        Me.DataSetDevolucionVentas1.articulos_ventas_devueltos.Clear()
-                        Me.DataSetDevolucionVentas1.devoluciones_ventas.Clear()
-                        Me.DataSetDevolucionVentas1.Ventas_Detalle.Clear()
-                        Me.DataSetDevolucionVentas1.Ventas.Clear()
+                            PMU = VSM(Usua("Cedula"), Me.Name) 'Carga los privilegios del usuario con el modulo 
+                            'If Not PMU.Execute Then MsgBox("No tiene permiso de acceso en el módulo " & Me.Text, MsgBoxStyle.Information, "Atención...") : Exit Sub
 
-                        Me.BindingContext(Me.DataSetDevolucionVentas1, "devoluciones_ventas").CancelCurrentEdit()
+                            txtNombreUsuario.Text = Usua("Nombre")
+                            Me.Cedula_usuario = Usua("Cedula")
+                            txtUsuario.Enabled = False ' se inabilita el campo de la contraseña
+                            HabilitarControlesDevolucion()
+                            Agregar()
+                            Me.txtUsuario.Enabled = False
 
-                        Me.BindingContext(Me.DataSetDevolucionVentas1, "devoluciones_ventas").EndCurrentEdit()
-                        Me.BindingContext(Me.DataSetDevolucionVentas1, "devoluciones_ventas").AddNew()
-                        Me.ComboTipo.Focus()
-                    Else ' si no existe una contraseñla como esta
-                        MsgBox("Contraseña interna incorrecta", MsgBoxStyle.Exclamation)
-                        txtUsuario.Text = ""
+                            Me.DataSetDevolucionVentas1.articulos_ventas_devueltos.Clear()
+                            Me.DataSetDevolucionVentas1.devoluciones_ventas.Clear()
+                            Me.DataSetDevolucionVentas1.Ventas_Detalle.Clear()
+                            Me.DataSetDevolucionVentas1.Ventas.Clear()
+
+                            Me.BindingContext(Me.DataSetDevolucionVentas1, "devoluciones_ventas").CancelCurrentEdit()
+
+                            Me.BindingContext(Me.DataSetDevolucionVentas1, "devoluciones_ventas").EndCurrentEdit()
+                            Me.BindingContext(Me.DataSetDevolucionVentas1, "devoluciones_ventas").AddNew()
+                            Me.ComboTipo.Focus()
+                        Else ' si no existe una contraseñla como esta
+                            MsgBox("Contraseña interna incorrecta", MsgBoxStyle.Exclamation)
+                            txtUsuario.Text = ""
+                        End If
+                    Else
+                        MsgBox("No Existen Usuarios,ingrese datos")
                     End If
+
                 Else
-                    MsgBox("No Existen Usuarios,ingrese datos")
+
+                    If Me.BindingContext(Me.DataSetDevolucionVentas1.Usuarios).Count > 0 Then
+                        Dim Usuario_autorizadores() As System.Data.DataRow
+                        Dim Usua As System.Data.DataRow
+                        Usuario_autorizadores = Me.DataSetDevolucionVentas1.Usuarios.Select("Clave_Interna ='" & txtUsuario.Text & "'")
+                        If Usuario_autorizadores.Length <> 0 Then
+                            Usua = Usuario_autorizadores(0)
+
+                            PMU = VSM(Usua("Cedula"), Me.Name) 'Carga los privilegios del usuario con el modulo 
+                            If Not PMU.Execute Then MsgBox("No tiene permiso de acceso en el módulo " & Me.Text, MsgBoxStyle.Information, "Atención...") : Exit Sub
+
+                            txtNombreUsuario.Text = Usua("Nombre")
+                            Me.Cedula_usuario = Usua("Cedula")
+                            txtUsuario.Enabled = False ' se inabilita el campo de la contraseña
+                            HabilitarControlesDevolucion()
+                            Agregar()
+                            Me.txtUsuario.Enabled = False
+
+                            Me.DataSetDevolucionVentas1.articulos_ventas_devueltos.Clear()
+                            Me.DataSetDevolucionVentas1.devoluciones_ventas.Clear()
+                            Me.DataSetDevolucionVentas1.Ventas_Detalle.Clear()
+                            Me.DataSetDevolucionVentas1.Ventas.Clear()
+
+                            Me.BindingContext(Me.DataSetDevolucionVentas1, "devoluciones_ventas").CancelCurrentEdit()
+
+                            Me.BindingContext(Me.DataSetDevolucionVentas1, "devoluciones_ventas").EndCurrentEdit()
+                            Me.BindingContext(Me.DataSetDevolucionVentas1, "devoluciones_ventas").AddNew()
+                            Me.ComboTipo.Focus()
+                        Else ' si no existe una contraseñla como esta
+                            MsgBox("Contraseña interna incorrecta", MsgBoxStyle.Exclamation)
+                            txtUsuario.Text = ""
+                        End If
+                    Else
+                        MsgBox("No Existen Usuarios,ingrese datos")
+                    End If
+
                 End If
             Catch ex As SystemException
                 MsgBox(ex.Message)
@@ -2203,6 +2246,9 @@ Public Class FrmDevolucionesVentas
 #End Region
 
 #Region "Codigo General"
+
+    Public IsPreDevolucion As Boolean = False
+
     Private Sub FrmDevolucionesVentas_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         Try
             Me.SqlConnection1.ConnectionString = CadenaConexionSeePOS()
@@ -2826,49 +2872,67 @@ Public Class FrmDevolucionesVentas
     End Function
 
     Function imprimir(ByVal Num_Devo As Long)
-        Dim opcaja As New frmOpcionCaja
+        If Me.IsPreDevolucion = True Then
 
-        Dim Recibo_reporte As New ReporteDevolucionesVentas
+            Dim PrinterSettings1 As New Printing.PrinterSettings
+            Dim PageSettings1 As New Printing.PageSettings
+            'PrinterSettings1.PrinterName = Automatic_Printer_Dialog(5)
+            PrinterSettings1.PrinterName = Automatic_Printer_Dialog(3)
 
-        Dim visor As New frmVisorReportes
-        If MessageBox.Show("¿Desea Imprimir en Grande?", "Impresión", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1) = DialogResult.Yes Then
-            Recibo_reporte.SetParameterValue(0, CDbl(Num_Devo))
-            CrystalReportsConexion.LoadReportViewer(visor.rptViewer, Recibo_reporte)
-            visor.rptViewer.Visible = True
-            Recibo_reporte = Nothing
-            visor.ShowDialog()
+            Prerecibo_reportePVE.SetParameterValue(0, CDbl(Num_Devo))
+            CrystalReportsConexion.LoadReportViewer(Nothing, Prerecibo_reportePVE, True, CadenaConexionSeePOS)
+            Prerecibo_reportePVE.PrintToPrinter(PrinterSettings1, PageSettings1, False)
+
+            If MsgBox("Desea imprimir una copia de la devolucion", MsgBoxStyle.Question + MsgBoxStyle.YesNo, "Confirmar Accion") = MsgBoxResult.Yes Then
+                Prerecibo_reportePVE.PrintToPrinter(PrinterSettings1, PageSettings1, False)
+            End If
+
         Else
-            opcaja.Text = "Elija a la caja que desea mandar la impresión"
-            opcaja.ShowDialog()
-            If opcaja.Caja = 1 Then
-                Dim PrinterSettings1 As New Printing.PrinterSettings
-                Dim PageSettings1 As New Printing.PageSettings
-                'PrinterSettings1.PrinterName = Automatic_Printer_Dialog(5)
-                PrinterSettings1.PrinterName = Automatic_Printer_Dialog(3)
 
-                recibo_reportePVE.SetParameterValue(0, CDbl(Num_Devo))
-                CrystalReportsConexion.LoadReportViewer(Nothing, recibo_reportePVE, True, CadenaConexionSeePOS)
-                recibo_reportePVE.PrintToPrinter(PrinterSettings1, PageSettings1, False)
 
-                If MsgBox("Desea imprimir una copia de la devolucion", MsgBoxStyle.Question + MsgBoxStyle.YesNo, "Confirmar Accion") = MsgBoxResult.Yes Then
-                    recibo_reportePVE.PrintToPrinter(PrinterSettings1, PageSettings1, False)
-                End If
+            Dim opcaja As New frmOpcionCaja
 
+            Dim Recibo_reporte As New ReporteDevolucionesVentas
+
+            Dim visor As New frmVisorReportes
+            If MessageBox.Show("¿Desea Imprimir en Grande?", "Impresión", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1) = DialogResult.Yes Then
+                Recibo_reporte.SetParameterValue(0, CDbl(Num_Devo))
+                CrystalReportsConexion.LoadReportViewer(visor.rptViewer, Recibo_reporte)
+                visor.rptViewer.Visible = True
+                Recibo_reporte = Nothing
+                visor.ShowDialog()
             Else
-                opcaja.Caja = 2
-                Dim PrinterSettings1 As New Printing.PrinterSettings
-                Dim PageSettings1 As New Printing.PageSettings
-                PrinterSettings1.PrinterName = Automatic_Printer_Dialog(5)
+                opcaja.Text = "Elija a la caja que desea mandar la impresión"
+                opcaja.ShowDialog()
+                If opcaja.Caja = 1 Then
+                    Dim PrinterSettings1 As New Printing.PrinterSettings
+                    Dim PageSettings1 As New Printing.PageSettings
+                    'PrinterSettings1.PrinterName = Automatic_Printer_Dialog(5)
+                    PrinterSettings1.PrinterName = Automatic_Printer_Dialog(3)
 
-                recibo_reportePVE.SetParameterValue(0, CDbl(Num_Devo))
-                CrystalReportsConexion.LoadReportViewer(Nothing, recibo_reportePVE, True, CadenaConexionSeePOS)
-                recibo_reportePVE.PrintToPrinter(PrinterSettings1, PageSettings1, False)
-                If MsgBox("Desea imprimir una copia de la devolucion", MsgBoxStyle.Question + MsgBoxStyle.YesNo, "Confirmar Accion") = MsgBoxResult.Yes Then
+                    recibo_reportePVE.SetParameterValue(0, CDbl(Num_Devo))
+                    CrystalReportsConexion.LoadReportViewer(Nothing, recibo_reportePVE, True, CadenaConexionSeePOS)
                     recibo_reportePVE.PrintToPrinter(PrinterSettings1, PageSettings1, False)
+
+                    If MsgBox("Desea imprimir una copia de la devolucion", MsgBoxStyle.Question + MsgBoxStyle.YesNo, "Confirmar Accion") = MsgBoxResult.Yes Then
+                        recibo_reportePVE.PrintToPrinter(PrinterSettings1, PageSettings1, False)
+                    End If
+
+                Else
+                    opcaja.Caja = 2
+                    Dim PrinterSettings1 As New Printing.PrinterSettings
+                    Dim PageSettings1 As New Printing.PageSettings
+                    PrinterSettings1.PrinterName = Automatic_Printer_Dialog(5)
+
+                    recibo_reportePVE.SetParameterValue(0, CDbl(Num_Devo))
+                    CrystalReportsConexion.LoadReportViewer(Nothing, recibo_reportePVE, True, CadenaConexionSeePOS)
+                    recibo_reportePVE.PrintToPrinter(PrinterSettings1, PageSettings1, False)
+                    If MsgBox("Desea imprimir una copia de la devolucion", MsgBoxStyle.Question + MsgBoxStyle.YesNo, "Confirmar Accion") = MsgBoxResult.Yes Then
+                        recibo_reportePVE.PrintToPrinter(PrinterSettings1, PageSettings1, False)
+                    End If
                 End If
             End If
         End If
-
     End Function
     Private Function Automatic_Printer_Dialog(ByVal PrinterToSelect As Byte) As String 'SAJ 01092006 
         Dim PrintDocument1 As New PrintDocument
@@ -3301,12 +3365,14 @@ Public Class FrmDevolucionesVentas
             End If
         End If
 
+        Dim DevolverAlbaran As Boolean = False
         '******************** SI LA FACTURA ES DE CONTADO O ES DE CREDITO PERO YA SE PAGO ********************
         If (ComboTipo.Text <> "CRE" And ComboTipo.Text <> "TCR") Or ((ComboTipo.Text = "CRE" Or ComboTipo.Text = "TCR") And CheckBox2.Checked = True) Then
             Try
 
                 If Me.BanderaYaMarco = False Then
                     Dim frmOptDev As New frmOpcionDevolucion
+                    frmOptDev.isPreDevolucion = Me.IsPreDevolucion
                     If frmOptDev.ShowDialog() = Windows.Forms.DialogResult.OK Then
                         Me.OpcionDevolucion = frmOptDev.FormaDevolucion
                         Me.CedulaCliente = frmOptDev.txtCedula.Text
@@ -3323,6 +3389,9 @@ Public Class FrmDevolucionesVentas
                                 Exit Sub
                             End If
                         End If
+
+                        DevolverAlbaran = frmOptDev.ckDevolverAlbaran.Checked
+
                     Else
                         Exit Sub
                     End If
@@ -3343,8 +3412,14 @@ Public Class FrmDevolucionesVentas
                         MsgBox("Articulo ya fue devuelto.", MsgBoxStyle.Exclamation, "No se puede realizar la operacion")
                         Exit Sub
                     End If
-                    Me.AdapterDevoluciones.Update(Me.DataSetDevolucionVentas1.devoluciones_ventas)
 
+                    '************************************
+                    If IsClinica() = True And Me.IsPreDevolucion = True Then
+                        Me.SqlInsertCommand3.CommandText = Me.SqlInsertCommand3.CommandText.Replace("devoluciones_ventas", "PreDevoluciones_Ventas")
+                        Me.SqlInsertCommand5.CommandText = Me.SqlInsertCommand5.CommandText.Replace("articulos_ventas_devueltos", "PreArticulos_Ventas_Devueltos")
+                    End If
+
+                    Me.AdapterDevoluciones.Update(Me.DataSetDevolucionVentas1.devoluciones_ventas)
                     NumDevo = Me.BindingContext(Me.DataSetDevolucionVentas1, "devoluciones_ventas").Current("Devolucion")
                     '================================================================================
                     'ARTICULOS VENTAS DEVUELTOS
@@ -3365,6 +3440,17 @@ Public Class FrmDevolucionesVentas
 
                     End Try
 
+                    If IsPreDevolucion = False Then
+                        If DevolverAlbaran = True Then
+                            Dim db As New GestioDatos
+                            Try
+                                'habilita los albaranes para volver a facturar
+                                db.Ejecuta("exec usp_HabiliarAlbaran " & Me.BindingContext(Me.DataSetDevolucionVentas1, "devoluciones_ventas").Current("Devolucion"))
+                            Catch ex As Exception
+                            End Try
+                        End If
+                    End If
+
                     If Me.esFirmadoContado = False Then
                         If Me.OpcionDevolucion = Tipo.Efectivo Then
                             Me.InsertarOpicion_Pago()
@@ -3375,22 +3461,33 @@ Public Class FrmDevolucionesVentas
                     Me.DataSetDevolucionVentas1.AcceptChanges()
 
                     Dim dbo As New GestioDatos
+                    Dim Tabla As String = "devoluciones_ventas"
 
-                    Try
-                        'habilita los albaranes para volver a facturar
-                        dbo.Ejecuta("exec usp_HabiliarAlbaran " & Me.BindingContext(Me.DataSetDevolucionVentas1, "devoluciones_ventas").Current("Devolucion"))
-                    Catch ex As Exception
-                    End Try
+                    If IsClinica() = True And Me.IsPreDevolucion = True Then
+                        Tabla = "PreDevoluciones_Ventas"
+                    End If
 
                     If Me.esFirmadoContado = False Then
                         If Me.OpcionDevolucion = Tipo.Efectivo Then
-                            dbo.Ejecuta("Update devoluciones_ventas set Caja = " & Me.Caja_Factura & ", Num_Apertura = " & Num_Apertura & " where Devolucion = " & Me.BindingContext(Me.DataSetDevolucionVentas1, "devoluciones_ventas").Current("Devolucion"))
+                            dbo.Ejecuta("Update " & Tabla & " set Caja = " & Me.Caja_Factura & ", Num_Apertura = " & Num_Apertura & " where Devolucion = " & Me.BindingContext(Me.DataSetDevolucionVentas1, "devoluciones_ventas").Current("Devolucion"))
                         End If
                     End If
-                    dbo.Ejecuta("Update devoluciones_ventas Set NotasDevolucion = '" & Me.NotasDevolucion & "', UsuarioRecibio = '" & Me.UsuarioRecibo & "', MontoDevolucion = " & Me.MontoDevolucion & " where Devolucion = " & Me.BindingContext(Me.DataSetDevolucionVentas1, "devoluciones_ventas").Current("Devolucion"))
+                    dbo.Ejecuta("Update " & Tabla & " Set NotasDevolucion = '" & Me.NotasDevolucion & "', UsuarioRecibio = '" & Me.UsuarioRecibo & "', MontoDevolucion = " & Me.MontoDevolucion & " where Devolucion = " & Me.BindingContext(Me.DataSetDevolucionVentas1, "devoluciones_ventas").Current("Devolucion"))
 
                     Try
-                        dbo.Ejecuta("Update devoluciones_ventas Set FormaDevolucion = '" & Me.OpcionDevolucion.ToString & "', CedulaCliente = '" & Me.CedulaCliente & "', NombreCliente = '" & Me.NombreCliente & "', CuentaCliente = '" & Me.CuentaCliente & "', CodCliente = " & Me.CodCliente & " where Devolucion = " & Me.BindingContext(Me.DataSetDevolucionVentas1, "devoluciones_ventas").Current("Devolucion"))
+                        dbo.Ejecuta("Update " & Tabla & " Set FormaDevolucion = '" & Me.OpcionDevolucion.ToString & "', CedulaCliente = '" & Me.CedulaCliente & "', NombreCliente = '" & Me.NombreCliente & "', CuentaCliente = '" & Me.CuentaCliente & "', CodCliente = " & Me.CodCliente & " where Devolucion = " & Me.BindingContext(Me.DataSetDevolucionVentas1, "devoluciones_ventas").Current("Devolucion"))
+                    Catch ex As Exception
+                    End Try
+
+                    Try
+                        'If IsClinica() = True Then
+
+                        If Me.Caja_Factura = 0 Then
+                            Me.Caja_Factura = 1
+                        End If
+
+                        dbo.Ejecuta("Update " & Tabla & " set Caja = " & Me.Caja_Factura & " where Devolucion = " & Me.BindingContext(Me.DataSetDevolucionVentas1, "devoluciones_ventas").Current("Devolucion"))
+                        'End If
                     Catch ex As Exception
                     End Try
 
@@ -3429,20 +3526,33 @@ Public Class FrmDevolucionesVentas
                 REST = MsgBox("Deseas devolver la siguiente cantidad --> " & Me.BindingContext(Me.DataSetDevolucionVentas1, "devoluciones_ventas").Current("Monto").ToString & "<--", MsgBoxStyle.YesNo, "SeePos")
                 If REST = 6 Then
 
+                    '************************************
+                    Dim Tabla As String = "devoluciones_ventas"
+
+                    If IsClinica() = True And Me.IsPreDevolucion = True Then
+                        Tabla = "PreDevoluciones_Ventas"
+                    End If
+                    If IsClinica() = True And Me.IsPreDevolucion = True Then
+                        Me.SqlInsertCommand3.CommandText = Me.SqlInsertCommand3.CommandText.Replace("devoluciones_ventas", "PreDevoluciones_Ventas")
+                        Me.SqlInsertCommand5.CommandText = Me.SqlInsertCommand5.CommandText.Replace("articulos_ventas_devueltos", "PreArticulos_Ventas_Devueltos")
+                    End If
+
                     Me.AdapterDevoluciones.Update(Me.DataSetDevolucionVentas1.devoluciones_ventas)
                     NumDevo = Me.BindingContext(Me.DataSetDevolucionVentas1, "devoluciones_ventas").Current("Devolucion")
                     AdapterDetalleDevolucion.Update(Me.DataSetDevolucionVentas1.articulos_ventas_devueltos)
                     AdapterVentas.Update(Me.DataSetDevolucionVentas1.Ventas)
-                    AdapterDetalleVentas.Update(Me.DataSetDevolucionVentas1.Ventas_Detalle)
+                    If IsPreDevolucion = False Then
+                        AdapterDetalleVentas.Update(Me.DataSetDevolucionVentas1.Ventas_Detalle)
+                    End If
 
                     Dim dbo As New GestioDatos
                     If Me.MontoDevolucion > 0 Then
                         Me.InsertarOpicion_Pago()
-                        dbo.Ejecuta("Update devoluciones_ventas set Caja = " & IIf(Me.Caja_Factura = 0, 1, Me.Caja_Factura) & ", Num_Apertura = " & Num_Apertura & " where Devolucion = " & Me.BindingContext(Me.DataSetDevolucionVentas1, "devoluciones_ventas").Current("Devolucion"))
-                        dbo.Ejecuta("Update devoluciones_ventas Set MontoDevolucion = " & Me.MontoDevolucion & " where Devolucion = " & Me.BindingContext(Me.DataSetDevolucionVentas1, "devoluciones_ventas").Current("Devolucion"))
+                        dbo.Ejecuta("Update " & Tabla & " set Caja = " & IIf(Me.Caja_Factura = 0, 1, Me.Caja_Factura) & ", Num_Apertura = " & Num_Apertura & " where Devolucion = " & Me.BindingContext(Me.DataSetDevolucionVentas1, "devoluciones_ventas").Current("Devolucion"))
+                        dbo.Ejecuta("Update " & Tabla & " Set MontoDevolucion = " & Me.MontoDevolucion & " where Devolucion = " & Me.BindingContext(Me.DataSetDevolucionVentas1, "devoluciones_ventas").Current("Devolucion"))
                     End If
 
-                    dbo.Ejecuta("Update devoluciones_ventas Set NotasDevolucion = '" & Me.NotasDevolucion & "', UsuarioRecibio = '" & Me.UsuarioRecibo & "' where Devolucion = " & Me.BindingContext(Me.DataSetDevolucionVentas1, "devoluciones_ventas").Current("Devolucion"))
+                    dbo.Ejecuta("Update " & Tabla & " Set NotasDevolucion = '" & Me.NotasDevolucion & "', UsuarioRecibio = '" & Me.UsuarioRecibo & "' where Devolucion = " & Me.BindingContext(Me.DataSetDevolucionVentas1, "devoluciones_ventas").Current("Devolucion"))
 
                     Me.AdapterOpcionesPago.Update(Me.DataSetDevolucionVentas1.OpcionesDePago)
                     Me.DataSetDevolucionVentas1.AcceptChanges()
@@ -3771,39 +3881,22 @@ Public Class FrmDevolucionesVentas
         Me.BindingContext(Me.DataSetDevolucionVentas1, "devoluciones_ventas").EndCurrentEdit()
     End Sub
 
-    Private Sub TextNumero_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TextNumero.TextChanged
-
-    End Sub
-
-    Private Sub ValidText1_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ValidText1.TextChanged
-
-    End Sub
-
-    Private Sub TituloModulo_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TituloModulo.Click
-
-    End Sub
-
     Private Sub CantBod2_KeyDown(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles CantBod2.KeyDown
         Dim resp As Integer
         Dim Cancelar As Double
-
         If e.KeyCode = Keys.Enter Then
             If Me.CantBod2.Text.Length > 0 Then
                 Cancelar = CDbl(ValidText1.Text)
-
                 If Cancelar > 0 Then
                     resp = MessageBox.Show("¿Desea que la información sea enviada al detalle de la Devolución?", "SeePos", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2)
-
                     If resp = 6 Then
                         IniciarEdionDetalleDevolucion()
                     End If
-
                 End If
             Else
                 MsgBox("Debes digitar una cantidad mayor que 0", MsgBoxStyle.Information, "Atencion...............")
             End If
         End If
-
     End Sub
 
     Private Sub txtNum_Caja_KeyDown(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles txtNum_Caja.KeyDown

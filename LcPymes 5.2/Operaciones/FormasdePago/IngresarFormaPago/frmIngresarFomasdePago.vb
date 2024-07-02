@@ -291,7 +291,7 @@ Public Class frmIngresarFomasdePago
                     End If
 
                     For Each pago As DataGridViewRow In Me.viewDatos.Rows
-                        NApertura = pago.Cells("cNumapertura").Value                        
+                        NApertura = pago.Cells("cNumapertura").Value
                         trans.Ejecutar("INSERT INTO [dbo].[OpcionesDePago] ([Documento],[TipoDocumento],[MontoPago],[FormaPago],[Denominacion],[Usuario],[Nombre],[CodMoneda],[Nombremoneda],[TipoCambio],[Fecha],[Numapertura],[Vuelto],[NumeroDocumento])VALUES(" & Num_Factura & ", '" & pago.Cells("cTipoDocumento").Value & "'," & pago.Cells("cMontoPago").Value & ", '" & pago.Cells("cFormaPago").Value & "'," & pago.Cells("cDenominacion").Value & ", '" & pago.Cells("cUsuario").Value & "','" & pago.Cells("cNombre").Value & "'," & pago.Cells("cCodMoneda").Value & ", '" & pago.Cells("cNombremoneda").Value & "', " & pago.Cells("cTipoCambio").Value & ", getdate()," & pago.Cells("cNumapertura").Value & ", 0, '" & pago.Cells("cNumeroDocumento").Value & "')", CommandType.Text)
 
                         If esReciboDinero = True And Me.IdRecibo > 0 Then
@@ -390,6 +390,12 @@ Public Class frmIngresarFomasdePago
     Private clsTermina As New Credomatic.Configuracion.Terminal
     Private Sub btnEfectivo_Click(sender As Object, e As EventArgs) Handles btnTarjetaColones.Click, btnEfectivoColones.Click, btnTransferencia.Click, btnChequeColones.Click, btnPendientes.Click, btnEfectivoDolares.Click, btnOtrasTarjetas.Click, btnAnticipo.Click
 
+
+        If sender.name <> Me.btnAnticipo.Name And Me.MontoAnticipo > 0 Then
+            MsgBox("El cliente tiene anticipos disponibles", MsgBoxStyle.Critical, "Use los anticipos antes")
+            Exit Sub
+        End If
+
         If sender.name = Me.btnPendientes.Name Then
 
             Dim frmPendiente As New frmFacturaPendiente
@@ -438,7 +444,7 @@ Public Class frmIngresarFomasdePago
                     Me.PoneMontos()
                 End If
 
-               
+
 
                 If Me.TotalCobro <= Me.MontoPagado Then
                     '***************************************************************************************

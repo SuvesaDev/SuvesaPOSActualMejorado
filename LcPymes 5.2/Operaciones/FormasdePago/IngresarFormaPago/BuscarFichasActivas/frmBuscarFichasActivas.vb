@@ -40,6 +40,7 @@ Public Class frmBuscarFichasActivas
     End Sub
 
     Private Sub frmBuscarFichasActivas_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Me.Timer1.Start()
         Me.BuscarFichasActivas()
         Me.btnDevolver.Enabled = IsClinica()
     End Sub
@@ -71,9 +72,11 @@ Public Class frmBuscarFichasActivas
         End Try
     End Sub
 
+
+    Private ContadorBloqueo As Integer = 0
     Private Sub CapturarDatosFicha()
         If Factura = False Then Exit Sub
-
+        Dim db As New OBSoluciones.SQL.Sentencias(CadenaConexionSeePOS)
         Dim ficha As String = ""
         For Each row As DataGridViewRow In Me.viewFichasActivas.SelectedRows
             If ficha = "" Then
@@ -88,7 +91,29 @@ Public Class frmBuscarFichasActivas
         Dim soloAPA As Boolean = True
 
         cFunciones.Llenar_Tabla_Generico("Select * From viewPreventasActivas Where Ficha in(" & ficha & ")", dtPreventasActivas, CadenaConexionSeePOS)
+
         If dtPreventasActivas.Rows.Count > 0 Then
+
+            Try                
+                For Each row As DataRow In dtPreventasActivas.Rows
+                    If CBool(row.Item("Bloqueado")) = True Then
+                        If ContadorBloqueo = 2 Then
+                            'permite la facturacion de la ficha bloqueada.
+                        Else
+                            MsgBox("Esta preventa esta bloqueado por el usuario :" & vbCrLf _
+                                & row.Item("UsuarioBloqueo") & "", MsgBoxStyle.Exclamation, "No se puede realizar la operacion.")
+                            ContadorBloqueo += 1
+                            Exit Sub
+                        End If
+                    End If
+                Next
+                For Each row As DataRow In dtPreventasActivas.Rows
+                    db.Ejecutar("Update " & row.Item("BasedeDatos") & ".dbo.Preventas Set Bloqueado = 1, UsuarioBloqueo = '" & Me.NombreUsuario & "' where Id = " & row.Item("Id"), CommandType.Text)
+                Next
+            Catch ex As Exception
+            End Try
+
+            ContadorBloqueo = 0
 
             Dim indexFichas As Integer = 0
             Dim frm As New frmDatosPreVenta
@@ -264,6 +289,10 @@ Public Class frmBuscarFichasActivas
             Me.BuscarFichasActivas()
             'Me.Close()
 
+            For Each row As DataRow In dtPreventasActivas.Rows
+                db.Ejecutar("Update " & row.Item("BasedeDatos") & ".dbo.Preventas Set Bloqueado = 0, UsuarioBloqueo = '' where Id = " & row.Item("Id"), CommandType.Text)
+            Next
+
         Else
 
         End If
@@ -308,5 +337,9 @@ Public Class frmBuscarFichasActivas
 
     Private Sub viewFichasActivas_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles viewFichasActivas.CellContentClick
 
+    End Sub
+
+    Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
+        Me.BuscarFichasActivas()
     End Sub
 End Class

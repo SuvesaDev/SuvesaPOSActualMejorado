@@ -21,6 +21,7 @@
                 Me.Codigo1 = Me.Articulo.Id_Articulo
                 Me.txtCodigo1.Text = Me.Articulo.Codigo
                 Me.txtDescripcion1.Text = Me.Articulo.Descripcion
+                Me.cboPuntoVenta2.Focus()
             End If
         End If
     End Sub
@@ -36,6 +37,7 @@
                 Me.Codigo2 = Me.Articulo.Id_Articulo
                 Me.txtCodigo2.Text = Me.Articulo.Codigo
                 Me.txtDescripcion2.Text = Me.Articulo.Descripcion
+                Me.btnAceptar.Focus()
             End If
         End If
     End Sub
@@ -83,4 +85,17 @@
         Me.txtCodigo1.Text = ""
         Me.txtDescripcion1.Text = ""        
     End Sub
+
+    Private Sub cboPuntoVenta2_KeyDown(sender As Object, e As KeyEventArgs) Handles cboPuntoVenta2.KeyDown
+        If e.KeyCode = Keys.Enter Then
+            Me.btnBuscar2.Focus()
+        End If
+    End Sub
+
+    Private Sub cboPuntoVenta1_KeyDown(sender As Object, e As KeyEventArgs) Handles cboPuntoVenta1.KeyDown
+        If e.KeyCode = Keys.Enter Then
+            Me.btnBuscar1.Focus()
+        End If
+    End Sub
+
 End Class

@@ -138,9 +138,13 @@ Public Class frmTrasladosDepartamentos
         Return Codigo
     End Function
 
-    Private Sub cargar_datos_inventario()
-
-        Dim codigo As String = Me.BuscarF1
+    Private Sub cargar_datos_inventario(Optional ByVal _CodArticulo As String = "")
+        Dim codigo As String = ""
+        If _CodArticulo = "" Then
+            codigo = Me.BuscarF1
+        Else
+            codigo = _CodArticulo
+        End If
         If codigo <> "" Then
             txt_codigo.Text = ""
             txt_cantidad.Value = 1
@@ -148,7 +152,6 @@ Public Class frmTrasladosDepartamentos
             Dim dt As New DataTable
             cFunciones.Llenar_Tabla_Generico("Select Codigo, Descripcion, Existencia, Precio_A, Prestamo from Inventario where Cod_Articulo = '" & codigo & "' and inhabilitado = 0", dt, CadenaConexionSeePOS)
             If dt.Rows.Count > 0 Then
-
                 txt_codigo.Text = dt.Rows(0).Item("Codigo")
                 txt_descripcion.Text = dt.Rows(0).Item("Descripcion")
                 txt_existencia_act.Text = dt.Rows(0).Item("Existencia")
@@ -166,6 +169,14 @@ Public Class frmTrasladosDepartamentos
         If e.KeyCode = Keys.F1 Then
             Try
                 Me.cargar_datos_inventario()
+            Catch ex As Exception
+                MsgBox(ex.ToString)
+            End Try
+        End If
+
+        If e.KeyCode = Keys.Enter Then
+            Try
+                Me.cargar_datos_inventario(Me.txt_codigo.Text)
             Catch ex As Exception
                 MsgBox(ex.ToString)
             End Try

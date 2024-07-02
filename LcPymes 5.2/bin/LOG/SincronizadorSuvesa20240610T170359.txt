@@ -1,0 +1,7 @@
+﻿
+Hora Inicial: 10/06/2024 05:03:59 pm
+Tipo de procedimiento: Ventas
+Cantidad Albaranes: 0
+Se escribió en la bitacora: ANA JANCI  HERNANDEZ MARTINEZ
+Hora Final: 10/06/2024 05:04:17 pm
+Tiempo Empleado: 00:00:17.86

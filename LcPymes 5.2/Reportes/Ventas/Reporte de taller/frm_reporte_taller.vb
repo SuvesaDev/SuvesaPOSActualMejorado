@@ -37,6 +37,7 @@ Public Class frm_reporte_taller
     Friend WithEvents ButtonMostrar As DevExpress.XtraEditors.SimpleButton
     Friend WithEvents cboOpcion As System.Windows.Forms.ComboBox
     Friend WithEvents Label1 As System.Windows.Forms.Label
+    Friend WithEvents ckMes As System.Windows.Forms.CheckBox
     Friend WithEvents SqlConnection1 As System.Data.SqlClient.SqlConnection
     <System.Diagnostics.DebuggerStepThrough()> Private Sub InitializeComponent()
         Me.VisorReporte = New CrystalDecisions.Windows.Forms.CrystalReportViewer()
@@ -48,6 +49,7 @@ Public Class frm_reporte_taller
         Me.SqlConnection1 = New System.Data.SqlClient.SqlConnection()
         Me.cboOpcion = New System.Windows.Forms.ComboBox()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.ckMes = New System.Windows.Forms.CheckBox()
         Me.SuspendLayout()
         '
         'VisorReporte
@@ -107,7 +109,7 @@ Public Class frm_reporte_taller
         '
         'ButtonMostrar
         '
-        Me.ButtonMostrar.Location = New System.Drawing.Point(435, 28)
+        Me.ButtonMostrar.Location = New System.Drawing.Point(549, 24)
         Me.ButtonMostrar.Name = "ButtonMostrar"
         Me.ButtonMostrar.Size = New System.Drawing.Size(88, 24)
         Me.ButtonMostrar.TabIndex = 110
@@ -140,10 +142,21 @@ Public Class frm_reporte_taller
         Me.Label1.TabIndex = 114
         Me.Label1.Text = "Opcion"
         '
+        'ckMes
+        '
+        Me.ckMes.AutoSize = True
+        Me.ckMes.Location = New System.Drawing.Point(421, 31)
+        Me.ckMes.Name = "ckMes"
+        Me.ckMes.Size = New System.Drawing.Size(65, 17)
+        Me.ckMes.TabIndex = 115
+        Me.ckMes.Text = "Por Mes"
+        Me.ckMes.UseVisualStyleBackColor = True
+        '
         'frm_reporte_taller
         '
         Me.AutoScaleBaseSize = New System.Drawing.Size(5, 13)
         Me.ClientSize = New System.Drawing.Size(1000, 614)
+        Me.Controls.Add(Me.ckMes)
         Me.Controls.Add(Me.cboOpcion)
         Me.Controls.Add(Me.VisorReporte)
         Me.Controls.Add(Me.Label4)
@@ -156,6 +169,7 @@ Public Class frm_reporte_taller
         Me.Text = "Reporte de ventas taller"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
 
@@ -182,6 +196,8 @@ Public Class frm_reporte_taller
         End If
     End Sub
 
+    Dim Tipo As String = "Taller"
+    Private isClinica As Boolean = False
 
     Private Sub frm_reporte_taller_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         Me.esKatty()
@@ -197,6 +213,16 @@ Public Class frm_reporte_taller
 
         If Me.Obtener_BasedeDatos.ToLower = "mascotas".ToLower Or Me.Obtener_BasedeDatos.ToLower = "clinica".ToLower Then
             Me.Text = "Reporte de ventas Groomer"
+            Me.Tipo = "Groomer"
+
+            Me.Label1.Visible = False
+            Me.cboOpcion.Visible = False
+        End If
+
+        If Me.Obtener_BasedeDatos.ToLower = "clinica".ToLower Then
+            Me.isClinica = True
+        Else
+            Me.isClinica = False
         End If
 
     End Sub
@@ -237,17 +263,59 @@ Public Class frm_reporte_taller
             CrystalReportsConexion.LoadReportViewer(VisorReporte, rpt, , SqlConnection1.ConnectionString)
             VisorReporte.Show()
         Else
+
             If Me.cboOpcion.SelectedIndex = 0 Then
-                Dim rpt As New Reporte_ventas_taller
-                rpt.SetParameterValue(0, Me.FechaInicio.Value)
-                rpt.SetParameterValue(1, Me.FechaFinal.Value)
-                If Me.Katty = False Then
-                    rpt.SetParameterValue(2, IIf(Obtener_BasedeDatos() = "mascotas", "Groomer".ToUpper, "Taller".ToUpper))
+                If Me.isClinica = True Then
+                    If Me.ckMes.Checked = True Then
+                        Dim rpt As New Reporte_ventas_tallerxMes
+                        rpt.SetParameterValue(0, Me.FechaInicio.Value)
+                        rpt.SetParameterValue(1, Me.FechaFinal.Value)
+                        If Me.Katty = False Then
+                            rpt.SetParameterValue(2, Me.Tipo.ToUpper)
+                        Else
+                            rpt.SetParameterValue(2, "Shampoo")
+                        End If
+                        CrystalReportsConexion.LoadReportViewer(VisorReporte, rpt, , SqlConnection1.ConnectionString)
+                        VisorReporte.Show()
+                    Else
+                        Dim rpt As New Reporte_ventas_tallerClinica2
+                        If Me.Katty = False Then
+                            rpt.SetParameterValue(0, Me.Tipo.ToUpper)
+                        Else
+                            rpt.SetParameterValue(0, "Shampoo")
+                        End If
+                        rpt.SetParameterValue(1, Me.FechaInicio.Value)
+                        rpt.SetParameterValue(2, Me.FechaFinal.Value)
+                        CrystalReportsConexion.LoadReportViewer(VisorReporte, rpt, , SqlConnection1.ConnectionString)
+                        VisorReporte.Show()
+                    End If
+                    
                 Else
-                    rpt.SetParameterValue(2, "Shampoo")
+
+                    If Me.ckMes.Checked = True Then
+                        Dim rpt As New Reporte_ventas_tallerxMes
+                        rpt.SetParameterValue(0, Me.FechaInicio.Value)
+                        rpt.SetParameterValue(1, Me.FechaFinal.Value)
+                        If Me.Katty = False Then
+                            rpt.SetParameterValue(2, Me.Tipo.ToUpper)
+                        Else
+                            rpt.SetParameterValue(2, "Shampoo")
+                        End If
+                        CrystalReportsConexion.LoadReportViewer(VisorReporte, rpt, , SqlConnection1.ConnectionString)
+                        VisorReporte.Show()
+                    Else
+                        Dim rpt As New Reporte_ventas_taller
+                        rpt.SetParameterValue(0, Me.FechaInicio.Value)
+                        rpt.SetParameterValue(1, Me.FechaFinal.Value)
+                        If Me.Katty = False Then
+                            rpt.SetParameterValue(2, Me.Tipo.ToUpper)
+                        Else
+                            rpt.SetParameterValue(2, "Shampoo")
+                        End If
+                        CrystalReportsConexion.LoadReportViewer(VisorReporte, rpt, , SqlConnection1.ConnectionString)
+                        VisorReporte.Show()
+                    End If
                 End If
-                CrystalReportsConexion.LoadReportViewer(VisorReporte, rpt, , SqlConnection1.ConnectionString)
-                VisorReporte.Show()
             Else
                 Dim rpt As New rptSerie
                 rpt.Refresh()

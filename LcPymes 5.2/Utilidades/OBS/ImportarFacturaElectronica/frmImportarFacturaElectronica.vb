@@ -200,6 +200,7 @@ Public Class frmImportarFacturaElectronica
                         Me.viewDatos.Item("cCantidadxPresentacion", Index).Value = dt.Rows(0).Item("CANTIDADxPRESENTACION")
                         Me.viewDatos.Item("cSubFamilia", Index).Value = dt.Rows(0).Item("CodFamilia")
                         Me.viewDatos.Item("cFamilia", Index).Value = dt.Rows(0).Item("Familia")
+                        Me.viewDatos.Item("cExistencia", Index).Value = dt.Rows(0).Item("Existencia")
                     Else
                         Me.viewDatos.Item("cId_ArticuloInterno", Index).Value = "0"
                         Me.viewDatos.Item("cCodigoInterno", Index).Value = ""
@@ -211,6 +212,7 @@ Public Class frmImportarFacturaElectronica
                         Me.viewDatos.Item("cPrecioIva2", Index).Value = 0
                         Me.viewDatos.Item("cPrecioIva3", Index).Value = 0
                         Me.viewDatos.Item("cCantidadxPresentacion", Index).Value = "1"
+                        Me.viewDatos.Item("cExistencia", Index).Value = "0"
                     End If
                     Index += 1
 
@@ -380,6 +382,42 @@ Public Class frmImportarFacturaElectronica
         Dim frm As New Familia(Usua)
         frm.ShowDialog()
     End Sub
+
+    Private Sub btnDesvincular_Click(sender As Object, e As EventArgs) Handles btnDesvincular.Click
+        If Me.viewDatos.Rows.Count > 0 Then
+
+
+            Dim db As New OBSoluciones.SQL.Sentencias(CadenaConexionSeePOS)
+            Dim CodigoProveedor As String = Me.viewDatos.Item("cCodigoProveedor", Me.viewDatos.CurrentRow.Index).Value
+            Dim IdArticuloInterno As Integer = Me.viewDatos.Item("cId_ArticuloInterno", Me.viewDatos.CurrentRow.Index).Value
+
+            If IdArticuloInterno > 0 Then
+                db.Ejecutar("delete from articulos_proveedor where CEDULA = '" & Me.txtCedula.Text & "' and CODIGO_PROVEEDOR = '" & CodigoProveedor & "' and ID_ARTICULO = " & IdArticuloInterno, CommandType.Text)
+            End If
+
+            'Me.viewDatos.Item("cId_ArticuloInterno", Me.viewDatos.CurrentRow.Index).Value = "0"
+            'Me.viewDatos.Item("cCodigoInterno", Me.viewDatos.CurrentRow.Index).Value = ""
+            'Me.viewDatos.Item("cDescripcionInterno", Me.viewDatos.CurrentRow.Index).Value = ""
+            'Me.viewDatos.Item("cPresentacion", Me.viewDatos.CurrentRow.Index).Value = ""
+            'Me.viewDatos.Item("cPrecioIva1", Me.viewDatos.CurrentRow.Index).Value = "0"
+            'Me.viewDatos.Item("cPrecioIva2", Me.viewDatos.CurrentRow.Index).Value = "0"
+            'Me.viewDatos.Item("cPrecioIva3", Me.viewDatos.CurrentRow.Index).Value = "0"
+            'Me.viewDatos.Item("cSubFamilia", Me.viewDatos.CurrentRow.Index).Value = "0"
+            'Me.viewDatos.Item("cFamilia", Me.viewDatos.CurrentRow.Index).Value = "0"
+
+            Me.viewDatos.Item("cId_ArticuloInterno", Me.viewDatos.CurrentRow.Index).Value = "0"
+            Me.viewDatos.Item("cCodigoInterno", Me.viewDatos.CurrentRow.Index).Value = ""
+            Me.viewDatos.Item("cDescripcionInterno", Me.viewDatos.CurrentRow.Index).Value = ""
+            Me.viewDatos.Item("cSubFamilia", Me.viewDatos.CurrentRow.Index).Value = ""
+            Me.viewDatos.Item("cFamilia", Me.viewDatos.CurrentRow.Index).Value = ""
+            Me.viewDatos.Item("cPresentacion", Me.viewDatos.CurrentRow.Index).Value = ""
+            Me.viewDatos.Item("cPrecioIva1", Me.viewDatos.CurrentRow.Index).Value = 0
+            Me.viewDatos.Item("cPrecioIva2", Me.viewDatos.CurrentRow.Index).Value = 0
+            Me.viewDatos.Item("cPrecioIva3", Me.viewDatos.CurrentRow.Index).Value = 0
+            Me.viewDatos.Item("cCantidadxPresentacion", Me.viewDatos.CurrentRow.Index).Value = "1"
+
+        End If
+    End Sub
 End Class
 
 Namespace GestionDatos
@@ -472,9 +510,9 @@ Namespace GestionDatos
         Public Function GET_ARTICULOS_PROVEEDOR_x_CODIGO_PROVEEDOR(_Cedula As String, _CodProveedor As String, _DescProveedor As String) As DataTable
             Dim dt As New DataTable
             If _CodProveedor = "" Then
-                cFunciones.Llenar_Tabla_Generico("select ap.ID_ARTICULO, i.Cod_Articulo As CODIGO, i.Descripcion AS DESCRIPCION, s.Codigo as CodFamilia, f.Descripcion + '-' + s.Descripcion as Familia, cast(i.PresentaCant as nvarchar) + ' ' + p.Presentaciones As PRESENTACION, i.Precio_A As PRECIO_IVA1, i.Precio_B As PRECIO_IVA2, i.Precio_C As PRECIO_IVA3, ap.CANTIDADxPRESENTACION from Inventario i inner join Presentaciones p on  i.CodPresentacion = p.CodPres inner join articulos_proveedor ap on ap.ID_ARTICULO = i.Codigo inner join SubFamilias s on i.SubFamilia = s.Codigo inner join Familia f on s.CodigoFamilia = f.Codigo where AP.CEDULA = '" & _Cedula & "' and ap.DESCRIPCION_PROVEEDOR = '" & _DescProveedor & "'", dt, CadenaConexionSeePOS)
+                cFunciones.Llenar_Tabla_Generico("select ap.ID_ARTICULO, i.Cod_Articulo As CODIGO, i.Descripcion AS DESCRIPCION, s.Codigo as CodFamilia, f.Descripcion + '-' + s.Descripcion as Familia, cast(i.PresentaCant as nvarchar) + ' ' + p.Presentaciones As PRESENTACION, i.Precio_A As PRECIO_IVA1, i.Precio_B As PRECIO_IVA2, i.Precio_C As PRECIO_IVA3, ap.CANTIDADxPRESENTACION, i.Existencia from Inventario i inner join Presentaciones p on  i.CodPresentacion = p.CodPres inner join articulos_proveedor ap on ap.ID_ARTICULO = i.Codigo inner join SubFamilias s on i.SubFamilia = s.Codigo inner join Familia f on s.CodigoFamilia = f.Codigo where AP.CEDULA = '" & _Cedula & "' and ap.DESCRIPCION_PROVEEDOR = '" & _DescProveedor & "'", dt, CadenaConexionSeePOS)
             Else
-                cFunciones.Llenar_Tabla_Generico("select ap.ID_ARTICULO, i.Cod_Articulo As CODIGO, i.Descripcion AS DESCRIPCION, s.Codigo as CodFamilia, f.Descripcion + '-' + s.Descripcion as Familia, cast(i.PresentaCant as nvarchar) + ' ' + p.Presentaciones As PRESENTACION, i.Precio_A As PRECIO_IVA1, i.Precio_B As PRECIO_IVA2, i.Precio_C As PRECIO_IVA3, ap.CANTIDADxPRESENTACION from Inventario i inner join Presentaciones p on  i.CodPresentacion = p.CodPres inner join articulos_proveedor ap on ap.ID_ARTICULO = i.Codigo inner join SubFamilias s on i.SubFamilia = s.Codigo inner join Familia f on s.CodigoFamilia = f.Codigo where AP.CEDULA = '" & _Cedula & "' and ap.CODIGO_PROVEEDOR = '" & _CodProveedor & "'", dt, CadenaConexionSeePOS)
+                cFunciones.Llenar_Tabla_Generico("select ap.ID_ARTICULO, i.Cod_Articulo As CODIGO, i.Descripcion AS DESCRIPCION, s.Codigo as CodFamilia, f.Descripcion + '-' + s.Descripcion as Familia, cast(i.PresentaCant as nvarchar) + ' ' + p.Presentaciones As PRESENTACION, i.Precio_A As PRECIO_IVA1, i.Precio_B As PRECIO_IVA2, i.Precio_C As PRECIO_IVA3, ap.CANTIDADxPRESENTACION, i.Existencia from Inventario i inner join Presentaciones p on  i.CodPresentacion = p.CodPres inner join articulos_proveedor ap on ap.ID_ARTICULO = i.Codigo inner join SubFamilias s on i.SubFamilia = s.Codigo inner join Familia f on s.CodigoFamilia = f.Codigo where AP.CEDULA = '" & _Cedula & "' and ap.CODIGO_PROVEEDOR = '" & _CodProveedor & "'", dt, CadenaConexionSeePOS)
             End If
 
             Return dt

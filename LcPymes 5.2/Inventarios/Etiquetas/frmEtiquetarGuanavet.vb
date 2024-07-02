@@ -5,11 +5,12 @@ Imports System.Data
 Imports System.IO
 
 Public Class frmEtiquetarGuanavet
-    Private WithEvents printDocument1 As New System.Drawing.Printing.PrintDocument
+    Public WithEvents printDocument1 As New System.Drawing.Printing.PrintDocument
+    Public CerrarAlTerminar As Boolean = False
 
-    Private I As Integer = 0
+    Public I As Integer = 0
 
-    Private Function GetCuna() As Integer
+    Private Function GetCunaVertical() As Integer
         Dim cuna As String = 0
         Try
             cuna = GetSetting("SeeSOFT", "SeePOs", "cuna")
@@ -23,7 +24,21 @@ Public Class frmEtiquetarGuanavet
         Return CInt(cuna)
     End Function
 
-    Private LineasBarCode As New System.Collections.Generic.List(Of LineaImprecion)
+    Private Function GetCunaHorizontal() As Integer
+        Dim cuna2 As String = 0
+        Try
+            cuna2 = GetSetting("SeeSOFT", "SeePOs", "cuna2")
+            If cuna2 = "" Then
+                SaveSetting("SeeSOFT", "SeePOS", "cuna2", "0")
+            End If
+        Catch ex As Exception
+            SaveSetting("SeeSOFT", "SeePOS", "cuna2", "0")
+            cuna2 = "0"
+        End Try
+        Return CInt(cuna2)
+    End Function
+
+    Public LineasBarCode As New System.Collections.Generic.List(Of LineaImprecion)
     Private ReadOnly Property NCopias As Integer
         Get
             'Return CInt(Me.txtNCopia.Value)
@@ -43,9 +58,10 @@ Public Class frmEtiquetarGuanavet
 
         Dim caption As String = ""
         Dim tamanyo As Integer = 0
+        Dim cuna As Integer = Me.GetCunaVertical
+        Dim cuna2 As Integer = Me.GetCunaHorizontal
         Dim vVertical As Integer = 0
-        Dim vHorisontal As Integer = 20
-        Dim cuna As Integer = Me.GetCuna
+        Dim vHorisontal As Integer = 27 + cuna2
 
         Dim g As Graphics = e.Graphics
         Dim fnt As Font = New Font("Arial", 7)
@@ -56,7 +72,8 @@ Public Class frmEtiquetarGuanavet
 
         vVertical = 27 + cuna
         vVertical = 27 + cuna
-        g.DrawImage(tBarCode, vHorisontal, vVertical, 190, 50)
+        'g.DrawImage(tBarCode, vHorisontal, vVertical, 190, 50)
+        g.DrawImage(tBarCode, vHorisontal, vVertical, 180, 40)
 
         vVertical = 80 + cuna
         caption = "COD: " & tCodArticulo & IIf(Me.IncluirPrecio = True, "     ₡" & tPrecio.ToString("N2"), "")
@@ -67,7 +84,18 @@ Public Class frmEtiquetarGuanavet
         vVertical = 74 + cuna
 
         vVertical = 90 + cuna
-        caption = tPresentacion & "  SUPER VETERINARIA LIBERIA"
+
+        Dim NombreEmpresa As String = ""
+        Select Case Me.Cedula
+            Case "3101696098"
+                NombreEmpresa = "  Guanavet"
+            Case "3101105432"
+                NombreEmpresa = "  SUPER VETERINARIA LIBERIA"
+            Case Else
+                NombreEmpresa = "  " & Me.Empresa
+        End Select
+
+        caption = tPresentacion & NombreEmpresa
         g.DrawString(caption, fnt, System.Drawing.Brushes.Black, vHorisontal, vVertical)
 
         fnt = New Font("Arial", 7)
@@ -75,27 +103,69 @@ Public Class frmEtiquetarGuanavet
         vVertical = 98 + cuna
         caption = Me.Empresa.Replace(", S.A.", "") & " " & "Tel. :" & Me.Telefono & " Cel. :" & Me.Celular
 
-        I += 1
-        e.HasMorePages = I < NCopias
-    End Sub
-
-    Private IncluirPrecio As Boolean = False
-    Private Sub cmdPrint_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles cmdPrint.Click
-        If MsgBox("Desea agregar el precio de venta a la etiqueta.", MsgBoxStyle.Question + MsgBoxStyle.YesNo + MsgBoxStyle.DefaultButton2, "Confirmar Accion.") = MsgBoxResult.Yes Then
-            Me.IncluirPrecio = True
-        Else
-            Me.IncluirPrecio = False
+        e.HasMorePages = I < NCopias        
+        If Me.CerrarAlTerminar = True And e.HasMorePages = False Then
+            Me.Close()
         End If
 
-        Me.I = 0
-        Me.LineasBarCode.Clear()
-        Dim Linea As LineaImprecion
-        For j As Integer = 0 To Me.txtNCopia.Value
-            Linea = New LineaImprecion(Me.txtCodArticulo.Text, Me.txtDescripcion.Text, Me.lblPresentacion.Text, Me.txtPrecio.Text, Me.txtCantidad.Value)
-            Me.LineasBarCode.Add(Linea)
-        Next
+        I += 1
+    End Sub
 
-        printDocument1.Print()
+    Public IncluirPrecio As Boolean = False
+    Dim EtiquetasGuanavet As New rptEtiquetasGuanavetClinica
+    Private Sub cmdPrint_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles cmdPrint.Click
+        If CadenaConexionSeePOS.IndexOf("192.168.0.2") > 0 Then
+            If MsgBox("Desea agregar el precio de venta a la etiqueta.", MsgBoxStyle.Question + MsgBoxStyle.YesNo + MsgBoxStyle.DefaultButton2, "Confirmar Accion.") = MsgBoxResult.Yes Then
+                Me.IncluirPrecio = True
+            Else
+                Me.IncluirPrecio = False
+            End If
+
+
+            Me.I = 0
+            Me.LineasBarCode.Clear()
+            Dim Linea As LineaImprecion
+            For j As Integer = 0 To Me.txtNCopia.Value
+                Linea = New LineaImprecion(Me.txtCodArticulo.Text, Me.txtDescripcion.Text, Me.lblPresentacion.Text, Me.txtPrecio.Text, Me.txtCantidad.Value)
+                Me.LineasBarCode.Add(Linea)
+            Next
+
+            printDocument1.Print()
+        Else
+            '' imprime desde crystal reports
+            Dim vueltas As Integer = 0
+            Dim lineas As Integer = 0
+            Dim dts As New DataSetEtiquetasGuanavetClinica
+
+            While vueltas < Me.txtNCopia.Value
+
+                Dim row As DataRow = dts.DatosEtiquetasAlbaranesCompra_Crystal.NewRow
+                row!idAlbaran = 0
+                row!cantidad = 0
+                row!ImporteUnitario = 0
+                row!descripcion = Me.txtDescripcion.Text '***
+                row!factorConversion = 0
+                row!idArticulo = Me.txtCodArticulo.Text '***
+                row!orden = ""
+                row!PVP1 = 0 '***
+                row!Moneda = 1 '***
+                row!UnidadMedida = ""
+                row!PesoEnvase = ""
+
+                dts.DatosEtiquetasAlbaranesCompra_Crystal.Rows.Add(row)
+                vueltas += 1
+                lineas += 1
+
+                'If lineas >= 2 Then
+                EtiquetasGuanavet.SetDataSource(dts)
+                'EtiquetasGuanavet.ExportToDisk(CrystalDecisions.Shared.ExportFormatType.CrystalReport, "C:\a\algo.rpt")
+                'Me.rptViewer.ReportSource = EtiquetasGuanavet
+                EtiquetasGuanavet.PrintToPrinter(1, True, 1, 1)
+                dts = New DataSetEtiquetasGuanavetClinica
+                lineas = 0
+                'End If
+            End While
+        End If
     End Sub
 
     Public Sub ImprimirColeccion()
@@ -172,19 +242,22 @@ Public Class frmEtiquetarGuanavet
         Me.PonePresentacion()
     End Sub
 
-    Private Empresa, Telefono, Celular As String
+    Private Cedula, Empresa, Telefono, Celular As String
     Private Sub frmEtiquetar_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         Dim dt As New DataTable
-        cFunciones.Llenar_Tabla_Generico("select Empresa, Tel_01, Fax_02, Logo from configuraciones", dt, CadenaConexionSeePOS)
+        cFunciones.Llenar_Tabla_Generico("select RTRIM(REPLACE(cedula,'-','')) as Cedula, Empresa, Tel_01, Fax_02, Logo from configuraciones", dt, CadenaConexionSeePOS)
         If dt.Rows.Count > 0 Then
             Dim data As Byte() = New Byte(-1) {}
             data = CType((dt.Rows(0)("Logo")), Byte())
             Dim mem As MemoryStream = New MemoryStream(data)
             pLogo.Image = Image.FromStream(mem)
+            Me.Cedula = dt.Rows(0).Item("Cedula")
             Me.Empresa = dt.Rows(0).Item("Empresa")
             Me.Telefono = dt.Rows(0).Item("Tel_01")
             Me.Celular = dt.Rows(0).Item("Fax_02")
         End If
+
+        CrystalReportsConexion.LoadReportViewer(Nothing, EtiquetasGuanavet, True)
     End Sub
 
 End Class

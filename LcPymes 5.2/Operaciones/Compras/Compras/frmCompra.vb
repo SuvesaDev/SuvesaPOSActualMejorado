@@ -3418,6 +3418,14 @@ Public Class frmCompra
             ToolBarExcel.Visible = VerificandoAcceso_a_Modulos("frmEtiquetasProductos", "Etiquetas de Artículos", Usua.Cedula, "Inventarios")
             txtClave.Focus()
 
+            If IsClinica() = True Then
+
+                Me.Label35.Text = "W"
+                Me.Label35.BackColor = Color.RoyalBlue
+                Me.Label35.ForeColor = Color.Yellow
+
+            End If
+
         Catch ex As Exception
             MsgBox(ex.Message, MsgBoxStyle.Information, "Atención...")
         End Try
@@ -3570,7 +3578,37 @@ Public Class frmCompra
         End Try
     End Sub
 
+    Private Function DescargaOtro(_Codigo As String, Optional ByVal _msg As Boolean = True) As Boolean
+        If IsClinica() = f Then
+            Return False
+        End If
+        Try
+            Dim dt As New DataTable
+            cFunciones.Llenar_Tabla_Generico("select i.DescargaOtro, id.Cod_Articulo, id.Descripcion from inventario i inner join Inventario id on i.CodigoDescarga = id.Codigo where i.Codigo = " & _Codigo, dt, CadenaConexionSeePOS)
+            If dt.Rows.Count > 0 Then
+                If CBool(dt.Rows(0).Item("DescargaOtro")) = True Then
+                    If _msg = True Then
+                        MsgBox("Use : " & dt.Rows(0).Item("Cod_Articulo") & "  -  " & dt.Rows(0).Item("Descripcion"), MsgBoxStyle.Exclamation, "Este producto descarga de otro producto")
+                        Me.txtCodArticulo.Text = dt.Rows(0).Item("Cod_Articulo")
+                    End If
+                    Return True
+                Else
+                    Return False
+                End If
+            Else
+                Return False
+            End If
+        Catch ex As Exception
+            Return False
+        End Try
+    End Function
+
     Private Sub CargarInformacion_articulos(ByVal codigo As String)
+
+        If DescargaOtro(codigo) = True Then
+            Exit Sub
+        End If
+
         Dim Link As New Conexion
         Dim Articulo As SqlDataReader
         Dim FactorConversion As Decimal
@@ -4437,6 +4475,9 @@ Public Class frmCompra
                 For Each r As DataGridViewRow In frm.viewDatos.Rows
                     If r.Cells("cFlete").Value = False Then
 
+                        If Me.DescargaOtro(r.Cells("cId_ArticuloInterno").Value) Then
+                            Exit Sub
+                        End If
 
                         cant = CDec(r.Cells("cCantidad").Value) * CDec(r.Cells("cCantidadxPresentacion").Value)
                         costo = (CDec(r.Cells("cCosto").Value) * CDec(r.Cells("cCantidad").Value)) / cant
@@ -4527,7 +4568,7 @@ Public Class frmCompra
 
                             'Link.DesConectar(Link.sQlconexion)
 
-                            BindingContext(DataSetCompras, "Compras.Comprasarticulos_comprados").EndCurrentEdit()                          
+                            BindingContext(DataSetCompras, "Compras.Comprasarticulos_comprados").EndCurrentEdit()
                         End If
                     End If
                 Next
@@ -4864,8 +4905,19 @@ Public Class frmCompra
 
     End Sub
 
-
     Private Sub Registrar()
+
+        If ComboTipoF.Text = "CRE" Then
+            If IsNumeric(Me.TxtDias.Text) Then
+                If CDec(TxtDias.Text) <= 0 Then
+                    MsgBox("Debe agreagar los dias de credito de la compra", MsgBoxStyle.Exclamation, "No se puede realizar la operacion.")
+                    Exit Sub
+                End If
+            Else
+                MsgBox("Debe agreagar los dias de credito de la compra", MsgBoxStyle.Exclamation, "No se puede realizar la operacion.")
+                Exit Sub
+            End If
+        End If
 
         If Me.ValidarPrecios() = False Then
             Exit Sub
@@ -5462,6 +5514,18 @@ Public Class frmCompra
             Llenar_Compras(identificador)
             Me.PoneUtilidad()
             TxtDias.Text = DateDiff(DateInterval.Day, DTP_FechaCompra.Value, DTP_FechaVence.Value)
+
+
+            Dim dt As New DataTable
+            cFunciones.Llenar_Tabla_Generico("exec GetDocumentosCompras2 " & identificador, dt, CadenaConexionSeePOS)
+            If dt.Rows.Count > 0 Then
+                If MsgBox("Desea ver los documentos relacionados a esta compra.", MsgBoxStyle.Question + MsgBoxStyle.YesNo, "Confirmar Accion!!!") = MsgBoxResult.Yes Then
+                    Dim frm As New frmDocumentosRelacionados
+                    frm.IdCompra = identificador
+                    frm.ShowDialog()
+                End If
+            End If
+
         Catch ex As SystemException
             MsgBox(ex.Message, MsgBoxStyle.Information, "Atención...")
         End Try
@@ -5704,6 +5768,10 @@ Public Class frmCompra
         End Try
     End Sub
 
+    Private Sub ConsultarMovimientosCompra()
+
+    End Sub
+
 #Region "Etiquetas"
     Private Sub Etiquetas()
         Try
@@ -5716,9 +5784,11 @@ Public Class frmCompra
 
                 For i = 0 To BindingContext(DataSetCompras, "compras.ComprasArticulos_Comprados").Count - 1
                     BindingContext(DataSetCompras, "compras.ComprasArticulos_Comprados").Position = i
+                    'If CDec(TxtCantidad.Text) > 0 Then
                     cod(i) = TxtCodArt.Text
                     can(i) = TxtCantidad.Text
                     CodPro(i) = ComboBoxProvedor.SelectedValue
+                    'End If                    
                 Next i
 
                 Dim frm_Autoetiquetas As New frmEtiquetasProductos(True, cod, can, CodPro)
@@ -6198,6 +6268,14 @@ Public Class frmCompra
         Catch ex As Exception
             MsgBox(ex.Message, MsgBoxStyle.Critical, "No se pudo realizar la operacion.")
         End Try
+    End Sub
+
+    Private Sub Label35_Click(sender As Object, e As EventArgs) Handles Label35.Click
+        If IsClinica() = True Then
+
+
+
+        End If
     End Sub
 End Class
 

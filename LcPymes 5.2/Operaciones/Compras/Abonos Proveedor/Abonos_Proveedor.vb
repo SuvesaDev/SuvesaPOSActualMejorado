@@ -2162,6 +2162,10 @@ Public Class Abonos_Proveedor
         End Try
     End Function
 
+    Private Sub RegistraError()
+
+    End Sub
+
     Function Registrar()
         Dim cx As New Conexion
         Dim i As Integer
@@ -2201,7 +2205,7 @@ Public Class Abonos_Proveedor
 
                     For i = 0 To Me.BindingContext(DataSetAbonosProveedor, "abonocpagar.abonocpagardetalle_abonocpagar").Count - 1
                         Me.BindingContext(DataSetAbonosProveedor, "abonocpagar.abonocpagardetalle_abonocpagar").Position = i
-                        If Me.BindingContext(DataSetAbonosProveedor, "abonocpagar.abonocpagardetalle_abonocpagar").Current("Saldo_Actual") = 0 Then
+                        If CDec(Me.BindingContext(DataSetAbonosProveedor, "abonocpagar.abonocpagardetalle_abonocpagar").Current("Saldo_Actual")) = 0 Then
                             FactTemp = Me.BindingContext(DataSetAbonosProveedor, "abonocpagar.abonocpagardetalle_abonocpagar").Current("Factura")
                             strSQL = "Update Compras set FacturaCancelado = 1 Where Factura =" & FactTemp & " and TipoCompra = 'CRE' and codigoProv = " & Me.txtCodigo.Text & ""
                             trans.Ejecutar(strSQL, CommandType.Text)
@@ -2257,32 +2261,44 @@ Public Class Abonos_Proveedor
 
                     trans.Commit()
 
-                    Me.IdAjuste = 0
-                    GuardarAjuste()
+                    Try
+                        Me.IdAjuste = 0
+                        GuardarAjuste()
 
-                    Me.DataSetAbonosProveedor.abonocpagar.AcceptChanges()
-                    Me.DataSetAbonosProveedor.detalle_abonocpagar.Clear()
-                    Me.DataSetAbonosProveedor.abonocpagar.Clear()
+                        Me.DataSetAbonosProveedor.abonocpagar.AcceptChanges()
+                        Me.DataSetAbonosProveedor.detalle_abonocpagar.Clear()
+                        Me.DataSetAbonosProveedor.abonocpagar.Clear()
 
-                    Me.ToolBar1.Buttons(1).Enabled = True
+                        Me.ToolBar1.Buttons(1).Enabled = True
 
-                    Me.ToolBar1.Buttons(0).Text = "Nuevo"
-                    Me.ToolBar1.Buttons(0).ImageIndex = 0
+                        Me.ToolBar1.Buttons(0).Text = "Nuevo"
+                        Me.ToolBar1.Buttons(0).ImageIndex = 0
 
-                    MsgBox("Datos Guardados Satisfactoriamente", MsgBoxStyle.Information)
-                    Dim ConexionProve As String
-                    ConexionProve = CadenaConexionSeePOS()
-                    Dim abono As New Abonos_Proveedor(usua, ConexionProve)
-                    abono.MdiParent = Me.MdiParent
-                    abono.Show()
-                    Me.Close()
-                    If Tipo = "CHEQUE" Then
+                        MsgBox("Datos Guardados Satisfactoriamente", MsgBoxStyle.Information)
+                        Dim ConexionProve As String
+                        ConexionProve = CadenaConexionSeePOS()
+                        Dim abono As New Abonos_Proveedor(usua, ConexionProve)
+                        abono.MdiParent = Me.MdiParent
+                        abono.Show()
+                        Me.Close()
+                        'If Tipo = "CHEQUE" Then
                         If MessageBox.Show("¿Desea imprimir el cheque?", "Atención...", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1) = DialogResult.Yes Then
                             numero = cx.SlqExecuteScalar(cx.Conectar("Bancos"), "Select Id_Cheque FROM Cheques where Num_Cheque = " & documento & " AND Id_CuentaBancaria=" & num_cuenta)
                             imprimir(Id_AbonocPagar)
                         End If
-                    End If
+                        'End If
+                    Catch ex As Exception
+                    End Try
+
                 Catch ex As Exception
+
+                    Try
+                        Dim db As New OBSoluciones.SQL.Sentencias(CadenaConexionSeePOS)
+                        db.AddParametro("@MSG", ex.Message)
+                        db.Ejecutar("Insert into AbonocPagarError(Fecha,MSG) Values(GetDate(), @MSG)", CommandType.Text)
+                    Catch ex2 As Exception
+                    End Try
+
                     trans.Rollback()
                     MsgBox(ex.Message, MsgBoxStyle.Critical, Text)
                 End Try
@@ -2953,7 +2969,7 @@ Public Class Abonos_Proveedor
         If e.KeyCode = Keys.Enter Then
 
             Try
-                Me.ComboBoxBanco.SelectedIndex = 0
+                'Me.ComboBoxBanco.SelectedIndex = 0
                 Dim Conexion As New Conexion
                 Conexion.Conectar(strModulo)
                 txtSaldoAntGen.Text = Conexion.SQLExeScalar("SELECT ROUND(SUM(dbo.SaldoFacturaCompra(GETDATE(), compras.Factura, compras.CodigoProv) * Moneda.ValorCompra / " & Me.txtTipoCambio.Text & "), 2) AS Saldo FROM compras LEFT OUTER JOIN Moneda ON compras.Cod_MonedaCompra = Moneda.CodMoneda WHERE (FacturaCancelado = 0) AND (TipoCompra = 'CRE') AND  (compras.CodigoProv = " & Me.txtCodigo.Text & ")")
@@ -3116,7 +3132,7 @@ Public Class Abonos_Proveedor
     Private IdAjuste As Long = 0
     Private Function GuardarAjuste() As Boolean
         Me.IdAjuste = 0
-        Dim db As OBSoluciones.SQL.Transaccion
+        Dim Trans As OBSoluciones.SQL.Transaccion
         Try
 
             Dim SaldoAnterior, MontoAjuste, SaldoActual As Decimal
@@ -3126,56 +3142,65 @@ Public Class Abonos_Proveedor
             Next
 
             If MontoAjuste > 0 Then
-                db = New OBSoluciones.SQL.Transaccion(CadenaConexionSeePOS)
+                Trans = New OBSoluciones.SQL.Transaccion(CadenaConexionSeePOS)
                 Dim IdAjuste As Long = 0
                 SaldoAnterior = Me.BindingContext(Me.DataSetAbonosProveedor, "abonocpagar").Current("Saldo_Actual")
-                db.SetParametro("@AjusteNo", Me.BindingContext(Me.DataSetAbonosProveedor, "abonocpagar").Current("Recibo"))
-                db.SetParametro("@Tipo", "CRE")
-                db.SetParametro("@Cod_Proveedor", Me.BindingContext(Me.DataSetAbonosProveedor, "abonocpagar").Current("Cod_Proveedor"))
-                db.SetParametro("@Nombre_Proveedor", Me.txtNombre.Text)
-                db.SetParametro("@Fecha", Me.BindingContext(Me.DataSetAbonosProveedor, "abonocpagar").Current("Fecha"))
+                Trans.SetParametro("@AjusteNo", Me.BindingContext(Me.DataSetAbonosProveedor, "abonocpagar").Current("Recibo"))
+                Trans.SetParametro("@Tipo", "CRE")
+                Trans.SetParametro("@Cod_Proveedor", Me.BindingContext(Me.DataSetAbonosProveedor, "abonocpagar").Current("Cod_Proveedor"))
+                Trans.SetParametro("@Nombre_Proveedor", Me.txtNombre.Text)
+                Trans.SetParametro("@Fecha", Me.BindingContext(Me.DataSetAbonosProveedor, "abonocpagar").Current("Fecha"))
                 '*************************************************************************************************************************************************
                 SaldoActual = CDec(Me.BindingContext(Me.DataSetAbonosProveedor, "abonocpagar").Current("Saldo_Actual")) - MontoAjuste
-                db.SetParametro("@Saldo_Prev", SaldoAnterior)
-                db.SetParametro("@Monto", MontoAjuste)
-                db.SetParametro("@Saldo_Act", SaldoActual)
+                Trans.SetParametro("@Saldo_Prev", SaldoAnterior)
+                Trans.SetParametro("@Monto", MontoAjuste)
+                Trans.SetParametro("@Saldo_Act", SaldoActual)
                 '*************************************************************************************************************************************************
-                db.SetParametro("@Observaciones", Me.BindingContext(Me.DataSetAbonosProveedor, "abonocpagar").Current("Observaciones"))
-                db.SetParametro("@Anula", False)
-                db.SetParametro("@Cod_Usuario", Me.BindingContext(Me.DataSetAbonosProveedor, "abonocpagar").Current("Cedula_Usuario"))
-                db.SetParametro("@Contabilizado", False)
-                db.SetParametro("@Cod_Moneda", Me.BindingContext(Me.DataSetAbonosProveedor, "abonocpagar").Current("cod_Moneda"))
-                db.SetParametro("@Asiento", "")
-                db.SetParametro("@FechaEntrada", Date.Now)
-                IdAjuste = db.EjecutarScalar("Insert Into Ajustescpagar([AjusteNo],[Tipo],[Cod_Proveedor],[Nombre_Proveedor],[Fecha],[Saldo_Prev],[Monto],[Saldo_Act],[Observaciones],[Anula],[Cod_Usuario],[Contabilizado],[Cod_Moneda],[Asiento],[FechaEntrada]) values(@AjusteNo,@Tipo,@Cod_Proveedor,@Nombre_Proveedor,@Fecha,@Saldo_Prev,@Monto,@Saldo_Act,@Observaciones,@Anula,@Cod_Usuario,@Contabilizado,@Cod_Moneda,@Asiento,@FechaEntrada); Select SCOPE_IDENTITY();", CommandType.Text)
+                Trans.SetParametro("@Observaciones", Me.BindingContext(Me.DataSetAbonosProveedor, "abonocpagar").Current("Observaciones"))
+                Trans.SetParametro("@Anula", False)
+                Trans.SetParametro("@Cod_Usuario", Me.BindingContext(Me.DataSetAbonosProveedor, "abonocpagar").Current("Cedula_Usuario"))
+                Trans.SetParametro("@Contabilizado", False)
+                Trans.SetParametro("@Cod_Moneda", Me.BindingContext(Me.DataSetAbonosProveedor, "abonocpagar").Current("cod_Moneda"))
+                Trans.SetParametro("@Asiento", "")
+                Trans.SetParametro("@FechaEntrada", Date.Now)
+                IdAjuste = Trans.EjecutarScalar("Insert Into Ajustescpagar([AjusteNo],[Tipo],[Cod_Proveedor],[Nombre_Proveedor],[Fecha],[Saldo_Prev],[Monto],[Saldo_Act],[Observaciones],[Anula],[Cod_Usuario],[Contabilizado],[Cod_Moneda],[Asiento],[FechaEntrada]) values(@AjusteNo,@Tipo,@Cod_Proveedor,@Nombre_Proveedor,@Fecha,@Saldo_Prev,@Monto,@Saldo_Act,@Observaciones,@Anula,@Cod_Usuario,@Contabilizado,@Cod_Moneda,@Asiento,@FechaEntrada); Select SCOPE_IDENTITY();", CommandType.Text)
                 Dim AjusteFactura As Decimal = 0
+                Dim Factura As String = "0"
+                Dim strSQL As String = ""
                 For index As Integer = 0 To Me.BindingContext(DataSetAbonosProveedor, "abonocpagar.abonocpagardetalle_abonocpagar").Count - 1
                     Me.BindingContext(DataSetAbonosProveedor, "abonocpagar.abonocpagardetalle_abonocpagar").Position = index
                     AjusteFactura = CDec(Me.BindingContext(DataSetAbonosProveedor, "abonocpagar.abonocpagardetalle_abonocpagar").Current("Ajuste"))
                     If AjusteFactura > 0 Then
-                        db.SetParametro("@Id_AjustecPagar", IdAjuste)
-                        db.SetParametro("@Factura", Me.BindingContext(DataSetAbonosProveedor, "abonocpagar.abonocpagardetalle_abonocpagar").Current("Factura"))
-                        db.SetParametro("@Tipo", "CRE")
-                        db.SetParametro("@Monto", Me.BindingContext(DataSetAbonosProveedor, "abonocpagar.abonocpagardetalle_abonocpagar").Current("MontoFactura"))
-                        db.SetParametro("@Saldo_Ant", Me.BindingContext(DataSetAbonosProveedor, "abonocpagar.abonocpagardetalle_abonocpagar").Current("Saldo_Actual"))
-                        db.SetParametro("@Ajuste", AjusteFactura)
-                        db.SetParametro("@Ajuste_SuMoneda", AjusteFactura)
-                        db.SetParametro("@Saldo_Ajustado", CDec(Me.BindingContext(DataSetAbonosProveedor, "abonocpagar.abonocpagardetalle_abonocpagar").Current("Saldo_Actual")) - AjusteFactura)
-                        db.SetParametro("@Observaciones", "")
-                        db.SetParametro("@TipoNota", "CRE")
-                        db.SetParametro("@ID_Compra", Me.BindingContext(DataSetAbonosProveedor, "abonocpagar.abonocpagardetalle_abonocpagar").Current("Id_Compra"))
-                        db.SetParametro("@CuentaContable", "1")
-                        db.SetParametro("@DescripcionCuentaContable", "GENERAL")
-                        db.Ejecutar("Insert Into [dbo].[Detalle_AjustescPagar]([Id_AjustecPagar],[Factura],[Tipo],[Monto],[Saldo_Ant],[Ajuste],[Ajuste_SuMoneda],[Saldo_Ajustado],[Observaciones],[TipoNota],[ID_Compra],[CuentaContable],[DescripcionCuentaContable]) Values(@Id_AjustecPagar,@Factura,@Tipo,@Monto,@Saldo_Ant,@Ajuste,@Ajuste_SuMoneda,@Saldo_Ajustado,@Observaciones,@TipoNota,@ID_Compra,@CuentaContable,@DescripcionCuentaContable)", CommandType.Text)
+
+                        If CDec(Me.BindingContext(DataSetAbonosProveedor, "abonocpagar.abonocpagardetalle_abonocpagar").Current("Saldo_Actual") - AjusteFactura) <= 0 Then
+                            Factura = Me.BindingContext(DataSetAbonosProveedor, "abonocpagar.abonocpagardetalle_abonocpagar").Current("Factura")
+                            strSQL = "Update Compras set FacturaCancelado = 1 Where Factura =" & Factura & " and TipoCompra = 'CRE' and codigoProv = " & Me.txtCodigo.Text & ""
+                            Trans.Ejecutar(strSQL, CommandType.Text)
+                        End If
+
+                        Trans.SetParametro("@Id_AjustecPagar", IdAjuste)
+                        Trans.SetParametro("@Factura", Me.BindingContext(DataSetAbonosProveedor, "abonocpagar.abonocpagardetalle_abonocpagar").Current("Factura"))
+                        Trans.SetParametro("@Tipo", "CRE")
+                        Trans.SetParametro("@Monto", Me.BindingContext(DataSetAbonosProveedor, "abonocpagar.abonocpagardetalle_abonocpagar").Current("MontoFactura"))
+                        Trans.SetParametro("@Saldo_Ant", Me.BindingContext(DataSetAbonosProveedor, "abonocpagar.abonocpagardetalle_abonocpagar").Current("Saldo_Actual"))
+                        Trans.SetParametro("@Ajuste", AjusteFactura)
+                        Trans.SetParametro("@Ajuste_SuMoneda", AjusteFactura)
+                        Trans.SetParametro("@Saldo_Ajustado", CDec(Me.BindingContext(DataSetAbonosProveedor, "abonocpagar.abonocpagardetalle_abonocpagar").Current("Saldo_Actual")) - AjusteFactura)
+                        Trans.SetParametro("@Observaciones", "")
+                        Trans.SetParametro("@TipoNota", "CRE")
+                        Trans.SetParametro("@ID_Compra", Me.BindingContext(DataSetAbonosProveedor, "abonocpagar.abonocpagardetalle_abonocpagar").Current("Id_Compra"))
+                        Trans.SetParametro("@CuentaContable", "1")
+                        Trans.SetParametro("@DescripcionCuentaContable", "GENERAL")
+                        Trans.Ejecutar("Insert Into [dbo].[Detalle_AjustescPagar]([Id_AjustecPagar],[Factura],[Tipo],[Monto],[Saldo_Ant],[Ajuste],[Ajuste_SuMoneda],[Saldo_Ajustado],[Observaciones],[TipoNota],[ID_Compra],[CuentaContable],[DescripcionCuentaContable]) Values(@Id_AjustecPagar,@Factura,@Tipo,@Monto,@Saldo_Ant,@Ajuste,@Ajuste_SuMoneda,@Saldo_Ajustado,@Observaciones,@TipoNota,@ID_Compra,@CuentaContable,@DescripcionCuentaContable)", CommandType.Text)
                     End If
                 Next
-                db.Commit()
+                Trans.Commit()
                 Me.IdAjuste = IdAjuste
             End If
             Return True
         Catch ex As Exception
             Me.IdAjuste = 0
-            db.Rollback()
+            Trans.Rollback()
         End Try
         Return False
     End Function

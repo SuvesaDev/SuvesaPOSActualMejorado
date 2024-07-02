@@ -57,21 +57,20 @@ Public Class frm_reporte_peces
         Me.VisorReporte.AutoScroll = True
         Me.VisorReporte.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.VisorReporte.Cursor = System.Windows.Forms.Cursors.Default
-        Me.VisorReporte.Location = New System.Drawing.Point(0, 74)
+        Me.VisorReporte.Location = New System.Drawing.Point(0, 64)
         Me.VisorReporte.Name = "VisorReporte"
         Me.VisorReporte.ShowCloseButton = False
-        Me.VisorReporte.Size = New System.Drawing.Size(640, 405)
+        Me.VisorReporte.Size = New System.Drawing.Size(640, 415)
         Me.VisorReporte.TabIndex = 101
-        Me.VisorReporte.ToolPanelWidth = 240
         '
         'Label4
         '
         Me.Label4.BackColor = System.Drawing.SystemColors.ControlLight
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.ForeColor = System.Drawing.Color.RoyalBlue
-        Me.Label4.Location = New System.Drawing.Point(163, 18)
+        Me.Label4.Location = New System.Drawing.Point(136, 16)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(115, 19)
+        Me.Label4.Size = New System.Drawing.Size(96, 16)
         Me.Label4.TabIndex = 106
         Me.Label4.Text = "Hasta"
         '
@@ -80,35 +79,35 @@ Public Class frm_reporte_peces
         Me.Label3.BackColor = System.Drawing.SystemColors.ControlLight
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.Color.RoyalBlue
-        Me.Label3.Location = New System.Drawing.Point(29, 18)
+        Me.Label3.Location = New System.Drawing.Point(24, 16)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(115, 19)
+        Me.Label3.Size = New System.Drawing.Size(96, 16)
         Me.Label3.TabIndex = 105
         Me.Label3.Text = "Desde"
         '
         'FechaFinal
         '
         Me.FechaFinal.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.FechaFinal.Location = New System.Drawing.Point(163, 37)
+        Me.FechaFinal.Location = New System.Drawing.Point(136, 32)
         Me.FechaFinal.Name = "FechaFinal"
-        Me.FechaFinal.Size = New System.Drawing.Size(115, 22)
+        Me.FechaFinal.Size = New System.Drawing.Size(96, 20)
         Me.FechaFinal.TabIndex = 103
         Me.FechaFinal.Value = New Date(2006, 4, 19, 0, 0, 0, 0)
         '
         'FechaInicio
         '
         Me.FechaInicio.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.FechaInicio.Location = New System.Drawing.Point(29, 37)
+        Me.FechaInicio.Location = New System.Drawing.Point(24, 32)
         Me.FechaInicio.Name = "FechaInicio"
-        Me.FechaInicio.Size = New System.Drawing.Size(115, 22)
+        Me.FechaInicio.Size = New System.Drawing.Size(96, 20)
         Me.FechaInicio.TabIndex = 102
         Me.FechaInicio.Value = New Date(2006, 4, 10, 0, 0, 0, 0)
         '
         'ButtonMostrar
         '
-        Me.ButtonMostrar.Location = New System.Drawing.Point(454, 32)
+        Me.ButtonMostrar.Location = New System.Drawing.Point(378, 28)
         Me.ButtonMostrar.Name = "ButtonMostrar"
-        Me.ButtonMostrar.Size = New System.Drawing.Size(105, 28)
+        Me.ButtonMostrar.Size = New System.Drawing.Size(88, 24)
         Me.ButtonMostrar.TabIndex = 104
         Me.ButtonMostrar.Text = "Mostrar"
         '
@@ -121,16 +120,16 @@ Public Class frm_reporte_peces
         'ckResumenMensual
         '
         Me.ckResumenMensual.AutoSize = True
-        Me.ckResumenMensual.Location = New System.Drawing.Point(286, 40)
+        Me.ckResumenMensual.Location = New System.Drawing.Point(238, 35)
         Me.ckResumenMensual.Name = "ckResumenMensual"
-        Me.ckResumenMensual.Size = New System.Drawing.Size(151, 21)
+        Me.ckResumenMensual.Size = New System.Drawing.Size(117, 17)
         Me.ckResumenMensual.TabIndex = 107
         Me.ckResumenMensual.Text = "Resumen Mensual "
         Me.ckResumenMensual.UseVisualStyleBackColor = True
         '
         'frm_reporte_peces
         '
-        Me.AutoScaleBaseSize = New System.Drawing.Size(6, 15)
+        Me.AutoScaleBaseSize = New System.Drawing.Size(5, 13)
         Me.ClientSize = New System.Drawing.Size(640, 482)
         Me.Controls.Add(Me.ckResumenMensual)
         Me.Controls.Add(Me.VisorReporte)
@@ -148,6 +147,7 @@ Public Class frm_reporte_peces
 
 #End Region
 
+    Private Tipo As String = "Peces"
     Private Function Obtener_BasedeDatos() As String
         Dim Conexion() As String = CadenaConexionSeePOS.Split(";")
         Dim Texto As String = Conexion(1)
@@ -172,7 +172,8 @@ Public Class frm_reporte_peces
         FechaFinal.Value = Now.Date
         Me.Text = "Reporte de peces"
         If Obtener_BasedeDatos() = "clinica" Then
-            Me.Text = "Reporte de Ultrasonidos"
+            Me.Text = "Reporte de Imagenes"
+            Me.Tipo = "Imagenes"
         End If
     End Sub
 
@@ -181,12 +182,14 @@ Public Class frm_reporte_peces
             Dim rpt As New rptPecesMes
             rpt.SetParameterValue(0, Me.FechaInicio.Value)
             rpt.SetParameterValue(1, Me.FechaFinal.Value)
+            rpt.SetParameterValue(2, Me.Tipo.ToUpper)
             CrystalReportsConexion.LoadReportViewer(VisorReporte, rpt, , SqlConnection1.ConnectionString)
             VisorReporte.Show()
         Else
             Dim rpt As New Reporte_ventas_peces
             rpt.SetParameterValue(0, Me.FechaInicio.Value)
             rpt.SetParameterValue(1, Me.FechaFinal.Value)
+            rpt.SetParameterValue(2, Me.Tipo.ToUpper)
             CrystalReportsConexion.LoadReportViewer(VisorReporte, rpt, , SqlConnection1.ConnectionString)
             VisorReporte.Show()
         End If

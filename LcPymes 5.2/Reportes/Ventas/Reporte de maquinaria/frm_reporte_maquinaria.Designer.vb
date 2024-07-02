@@ -29,6 +29,7 @@ Partial Class frm_reporte_maquinaria
         Me.ButtonMostrar = New DevExpress.XtraEditors.SimpleButton()
         Me.VisorReporte = New CrystalDecisions.Windows.Forms.CrystalReportViewer()
         Me.SqlConnection1 = New System.Data.SqlClient.SqlConnection()
+        Me.ckMes = New System.Windows.Forms.CheckBox()
         Me.SuspendLayout()
         '
         'Label4
@@ -73,7 +74,7 @@ Partial Class frm_reporte_maquinaria
         '
         'ButtonMostrar
         '
-        Me.ButtonMostrar.Location = New System.Drawing.Point(255, 19)
+        Me.ButtonMostrar.Location = New System.Drawing.Point(346, 23)
         Me.ButtonMostrar.Name = "ButtonMostrar"
         Me.ButtonMostrar.Size = New System.Drawing.Size(88, 24)
         Me.ButtonMostrar.TabIndex = 98
@@ -96,14 +97,26 @@ Partial Class frm_reporte_maquinaria
         '
         'SqlConnection1
         '
-        Me.SqlConnection1.ConnectionString = "workstation id=192.168.0.2;packet size=4096;integrated security=SSPI;data source=" & "192.168.0.2;persist security info=False;initial catalog=Seepos"
+        Me.SqlConnection1.ConnectionString = "workstation id=192.168.0.2;packet size=4096;integrated security=SSPI;data source=" & _
+    "192.168.0.2;persist security info=False;initial catalog=Seepos"
         Me.SqlConnection1.FireInfoMessageEventOnUserErrors = False
+        '
+        'ckMes
+        '
+        Me.ckMes.AutoSize = True
+        Me.ckMes.Location = New System.Drawing.Point(221, 27)
+        Me.ckMes.Name = "ckMes"
+        Me.ckMes.Size = New System.Drawing.Size(46, 17)
+        Me.ckMes.TabIndex = 101
+        Me.ckMes.Text = "Mes"
+        Me.ckMes.UseVisualStyleBackColor = True
         '
         'frm_reporte_maquinaria
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(772, 430)
+        Me.Controls.Add(Me.ckMes)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.FechaFinal)
@@ -114,6 +127,7 @@ Partial Class frm_reporte_maquinaria
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Reporte de Maquinaria"
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
 
@@ -124,4 +138,5 @@ Partial Class frm_reporte_maquinaria
     Friend WithEvents ButtonMostrar As DevExpress.XtraEditors.SimpleButton
     Friend WithEvents VisorReporte As CrystalDecisions.Windows.Forms.CrystalReportViewer
     Friend WithEvents SqlConnection1 As Data.SqlClient.SqlConnection
+    Friend WithEvents ckMes As System.Windows.Forms.CheckBox
 End Class
