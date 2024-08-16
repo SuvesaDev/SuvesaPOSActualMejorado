@@ -272,7 +272,7 @@ Public Class frmMensajeReceptor
         Me.ListaXML.Clear()
         Me.Index = 0
         For Each xml As String In My.Computer.FileSystem.GetFiles(Direccion)
-            If xml.IndexOf(".xml") > 0 Then
+            If xml.ToLower.IndexOf(".xml") > 0 Then
                 Me.ObtenerDatos(xml)
             End If
         Next

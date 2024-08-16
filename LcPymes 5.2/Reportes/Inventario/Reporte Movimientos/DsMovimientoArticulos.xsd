@@ -25,6 +25,7 @@
               <xs:element name="Cantidad" msprop:Generator_ColumnVarNameInTable="columnCantidad" msprop:Generator_ColumnPropNameInRow="Cantidad" msprop:Generator_ColumnPropNameInTable="CantidadColumn" msprop:Generator_UserColumnName="Cantidad" type="xs:double" />
               <xs:element name="Precio_Unit" msprop:Generator_ColumnVarNameInTable="columnPrecio_Unit" msprop:Generator_ColumnPropNameInRow="Precio_Unit" msprop:Generator_ColumnPropNameInTable="Precio_UnitColumn" msprop:Generator_UserColumnName="Precio_Unit" type="xs:double" />
               <xs:element name="Id" msprop:Generator_ColumnVarNameInTable="columnId" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_ColumnPropNameInTable="IdColumn" msprop:Generator_UserColumnName="Id" type="xs:string" minOccurs="0" />
+              <xs:element name="Impuesto" msprop:Generator_ColumnVarNameInTable="columnImpuesto" msprop:Generator_ColumnPropNameInRow="Impuesto" msprop:Generator_ColumnPropNameInTable="ImpuestoColumn" msprop:Generator_UserColumnName="Impuesto" type="xs:string" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
@@ -39,6 +40,8 @@
               <xs:element name="CodArticulo" msprop:Generator_ColumnVarNameInTable="columnCodArticulo" msprop:Generator_ColumnPropNameInRow="CodArticulo" msprop:Generator_ColumnPropNameInTable="CodArticuloColumn" msprop:Generator_UserColumnName="CodArticulo" type="xs:string" />
               <xs:element name="Cantidad" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnCantidad" msprop:Generator_ColumnPropNameInRow="Cantidad" msprop:Generator_ColumnPropNameInTable="CantidadColumn" msprop:Generator_UserColumnName="Cantidad" type="xs:double" minOccurs="0" />
               <xs:element name="Total" msprop:Generator_ColumnVarNameInTable="columnTotal" msprop:Generator_ColumnPropNameInRow="Total" msprop:Generator_ColumnPropNameInTable="TotalColumn" msprop:Generator_UserColumnName="Total" type="xs:double" />
+              <xs:element name="Impuesto_P" msprop:Generator_ColumnVarNameInTable="columnImpuesto_P" msprop:Generator_ColumnPropNameInRow="Impuesto_P" msprop:Generator_ColumnPropNameInTable="Impuesto_PColumn" msprop:Generator_UserColumnName="Impuesto_P" type="xs:string" minOccurs="0" />
+              <xs:element name="Id_Compra" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnId_Compra" msprop:Generator_ColumnPropNameInRow="Id_Compra" msprop:Generator_ColumnPropNameInTable="Id_CompraColumn" msprop:Generator_UserColumnName="Id_Compra" type="xs:long" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>

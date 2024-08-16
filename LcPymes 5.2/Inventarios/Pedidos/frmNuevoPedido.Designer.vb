@@ -31,6 +31,12 @@ Partial Class frmNuevoPedido
         Me.Label9 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.viewDatos = New System.Windows.Forms.DataGridView()
+        Me.cCodigo = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.cCodArticulo = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.cDescripcion = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.cCantidad = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.cObservaciones = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.cPrecioUnid = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Label36 = New System.Windows.Forms.Label()
         Me.txtNombreUsuario = New System.Windows.Forms.TextBox()
         Me.txtUsuario = New System.Windows.Forms.TextBox()
@@ -52,12 +58,8 @@ Partial Class frmNuevoPedido
         Me.ToolStripSeparator5 = New System.Windows.Forms.ToolStripSeparator()
         Me.ToolStripButton2 = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripSeparator6 = New System.Windows.Forms.ToolStripSeparator()
-        Me.cCodigo = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.cCodArticulo = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.cDescripcion = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.cCantidad = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.cObservaciones = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.cPrecioUnid = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.cboSolicitarA = New System.Windows.Forms.ComboBox()
         CType(Me.viewDatos, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
         CType(Me.txt_cantidad, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -97,7 +99,7 @@ Partial Class frmNuevoPedido
         Me.txtUsuarioSolicita.Location = New System.Drawing.Point(219, 35)
         Me.txtUsuarioSolicita.Name = "txtUsuarioSolicita"
         Me.txtUsuarioSolicita.ReadOnly = True
-        Me.txtUsuarioSolicita.Size = New System.Drawing.Size(315, 20)
+        Me.txtUsuarioSolicita.Size = New System.Drawing.Size(147, 20)
         Me.txtUsuarioSolicita.TabIndex = 3
         '
         'txt_descripcion
@@ -156,6 +158,44 @@ Partial Class frmNuevoPedido
         Me.viewDatos.Size = New System.Drawing.Size(519, 125)
         Me.viewDatos.TabIndex = 10
         '
+        'cCodigo
+        '
+        Me.cCodigo.HeaderText = "Codigo"
+        Me.cCodigo.Name = "cCodigo"
+        Me.cCodigo.ReadOnly = True
+        Me.cCodigo.Visible = False
+        '
+        'cCodArticulo
+        '
+        Me.cCodArticulo.HeaderText = "Cod Articulo"
+        Me.cCodArticulo.Name = "cCodArticulo"
+        Me.cCodArticulo.ReadOnly = True
+        '
+        'cDescripcion
+        '
+        Me.cDescripcion.HeaderText = "Descripcion"
+        Me.cDescripcion.Name = "cDescripcion"
+        Me.cDescripcion.ReadOnly = True
+        '
+        'cCantidad
+        '
+        Me.cCantidad.HeaderText = "Cantidad"
+        Me.cCantidad.Name = "cCantidad"
+        Me.cCantidad.ReadOnly = True
+        '
+        'cObservaciones
+        '
+        Me.cObservaciones.HeaderText = "Observaciones"
+        Me.cObservaciones.Name = "cObservaciones"
+        Me.cObservaciones.ReadOnly = True
+        '
+        'cPrecioUnid
+        '
+        Me.cPrecioUnid.HeaderText = "PrecioUnid"
+        Me.cPrecioUnid.Name = "cPrecioUnid"
+        Me.cPrecioUnid.ReadOnly = True
+        Me.cPrecioUnid.Visible = False
+        '
         'Label36
         '
         Me.Label36.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
@@ -195,6 +235,8 @@ Partial Class frmNuevoPedido
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.cboSolicitarA)
+        Me.GroupBox1.Controls.Add(Me.Label6)
         Me.GroupBox1.Controls.Add(Me.Label4)
         Me.GroupBox1.Controls.Add(Me.txtObservaciones)
         Me.GroupBox1.Controls.Add(Me.Label3)
@@ -351,43 +393,23 @@ Partial Class frmNuevoPedido
         Me.ToolStripSeparator6.Name = "ToolStripSeparator6"
         Me.ToolStripSeparator6.Size = New System.Drawing.Size(6, 25)
         '
-        'cCodigo
+        'Label6
         '
-        Me.cCodigo.HeaderText = "Codigo"
-        Me.cCodigo.Name = "cCodigo"
-        Me.cCodigo.ReadOnly = True
-        Me.cCodigo.Visible = False
+        Me.Label6.AutoSize = True
+        Me.Label6.Location = New System.Drawing.Point(373, 18)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(59, 13)
+        Me.Label6.TabIndex = 16
+        Me.Label6.Text = "Solicitar a :"
         '
-        'cCodArticulo
+        'cboSolicitarA
         '
-        Me.cCodArticulo.HeaderText = "Cod Articulo"
-        Me.cCodArticulo.Name = "cCodArticulo"
-        Me.cCodArticulo.ReadOnly = True
-        '
-        'cDescripcion
-        '
-        Me.cDescripcion.HeaderText = "Descripcion"
-        Me.cDescripcion.Name = "cDescripcion"
-        Me.cDescripcion.ReadOnly = True
-        '
-        'cCantidad
-        '
-        Me.cCantidad.HeaderText = "Cantidad"
-        Me.cCantidad.Name = "cCantidad"
-        Me.cCantidad.ReadOnly = True
-        '
-        'cObservaciones
-        '
-        Me.cObservaciones.HeaderText = "Observaciones"
-        Me.cObservaciones.Name = "cObservaciones"
-        Me.cObservaciones.ReadOnly = True
-        '
-        'cPrecioUnid
-        '
-        Me.cPrecioUnid.HeaderText = "PrecioUnid"
-        Me.cPrecioUnid.Name = "cPrecioUnid"
-        Me.cPrecioUnid.ReadOnly = True
-        Me.cPrecioUnid.Visible = False
+        Me.cboSolicitarA.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cboSolicitarA.FormattingEnabled = True
+        Me.cboSolicitarA.Location = New System.Drawing.Point(372, 35)
+        Me.cboSolicitarA.Name = "cboSolicitarA"
+        Me.cboSolicitarA.Size = New System.Drawing.Size(162, 21)
+        Me.cboSolicitarA.TabIndex = 17
         '
         'frmNuevoPedido
         '
@@ -451,4 +473,6 @@ Partial Class frmNuevoPedido
     Friend WithEvents cCantidad As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents cObservaciones As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents cPrecioUnid As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents cboSolicitarA As System.Windows.Forms.ComboBox
+    Friend WithEvents Label6 As System.Windows.Forms.Label
 End Class

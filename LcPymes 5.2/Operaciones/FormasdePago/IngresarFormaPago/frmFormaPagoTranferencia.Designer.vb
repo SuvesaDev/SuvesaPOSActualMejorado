@@ -71,7 +71,7 @@ Partial Class frmFormaPagoTranferencia
         'btnAgregar
         '
         Me.btnAgregar.Location = New System.Drawing.Point(424, 67)
-        Me.btnAgregar.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btnAgregar.Margin = New System.Windows.Forms.Padding(2)
         Me.btnAgregar.Name = "btnAgregar"
         Me.btnAgregar.Size = New System.Drawing.Size(85, 39)
         Me.btnAgregar.TabIndex = 49
@@ -82,7 +82,7 @@ Partial Class frmFormaPagoTranferencia
         '
         Me.txtMontoDeposito.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtMontoDeposito.Location = New System.Drawing.Point(100, 85)
-        Me.txtMontoDeposito.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.txtMontoDeposito.Margin = New System.Windows.Forms.Padding(2)
         Me.txtMontoDeposito.Name = "txtMontoDeposito"
         Me.txtMontoDeposito.Size = New System.Drawing.Size(172, 22)
         Me.txtMontoDeposito.TabIndex = 44
@@ -91,7 +91,7 @@ Partial Class frmFormaPagoTranferencia
         '
         Me.txtMoneda.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtMoneda.Location = New System.Drawing.Point(11, 85)
-        Me.txtMoneda.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.txtMoneda.Margin = New System.Windows.Forms.Padding(2)
         Me.txtMoneda.Name = "txtMoneda"
         Me.txtMoneda.ReadOnly = True
         Me.txtMoneda.Size = New System.Drawing.Size(84, 22)
@@ -103,7 +103,7 @@ Partial Class frmFormaPagoTranferencia
         Me.cboCuenta.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cboCuenta.FormattingEnabled = True
         Me.cboCuenta.Location = New System.Drawing.Point(276, 37)
-        Me.cboCuenta.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.cboCuenta.Margin = New System.Windows.Forms.Padding(2)
         Me.cboCuenta.Name = "cboCuenta"
         Me.cboCuenta.Size = New System.Drawing.Size(144, 24)
         Me.cboCuenta.TabIndex = 43
@@ -112,7 +112,7 @@ Partial Class frmFormaPagoTranferencia
         '
         Me.txtNumeroDeposito.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtNumeroDeposito.Location = New System.Drawing.Point(424, 37)
-        Me.txtNumeroDeposito.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.txtNumeroDeposito.Margin = New System.Windows.Forms.Padding(2)
         Me.txtNumeroDeposito.MaxLength = 10
         Me.txtNumeroDeposito.Name = "txtNumeroDeposito"
         Me.txtNumeroDeposito.Size = New System.Drawing.Size(174, 22)
@@ -124,7 +124,7 @@ Partial Class frmFormaPagoTranferencia
         Me.cboBanco.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cboBanco.FormattingEnabled = True
         Me.cboBanco.Location = New System.Drawing.Point(11, 37)
-        Me.cboBanco.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.cboBanco.Margin = New System.Windows.Forms.Padding(2)
         Me.cboBanco.Name = "cboBanco"
         Me.cboBanco.Size = New System.Drawing.Size(261, 24)
         Me.cboBanco.TabIndex = 42
@@ -152,7 +152,7 @@ Partial Class frmFormaPagoTranferencia
         'btnCancelar
         '
         Me.btnCancelar.Location = New System.Drawing.Point(514, 67)
-        Me.btnCancelar.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btnCancelar.Margin = New System.Windows.Forms.Padding(2)
         Me.btnCancelar.Name = "btnCancelar"
         Me.btnCancelar.Size = New System.Drawing.Size(82, 39)
         Me.btnCancelar.TabIndex = 53
@@ -174,9 +174,9 @@ Partial Class frmFormaPagoTranferencia
         Me.cboTipoMovimiento.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cboTipoMovimiento.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cboTipoMovimiento.FormattingEnabled = True
-        Me.cboTipoMovimiento.Items.AddRange(New Object() {"Transferencia", "Sinpe", "PayPal", "EMA"})
+        Me.cboTipoMovimiento.Items.AddRange(New Object() {"Transferencia", "Sinpe", "PayPal", "EMA", "Pagina Web", "Rebajo Recursos Humanos"})
         Me.cboTipoMovimiento.Location = New System.Drawing.Point(275, 85)
-        Me.cboTipoMovimiento.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.cboTipoMovimiento.Margin = New System.Windows.Forms.Padding(2)
         Me.cboTipoMovimiento.Name = "cboTipoMovimiento"
         Me.cboTipoMovimiento.Size = New System.Drawing.Size(144, 24)
         Me.cboTipoMovimiento.TabIndex = 54

@@ -101,6 +101,7 @@ Public Class frmConsultaPedidosBodega
         dt = db.Ejecutar(strConsulta & strFiltro & " Order by CasaComercial", CommandType.Text)
         Me.viewDatos.DataSource = dt
         Me.viewDatos.Columns("IdPedido").Visible = False
+        Me.viewDatos.Columns("IdSolicitara").Visible = False
 
         Me.pone_color("PEDIDO", Drawing.Color.Yellow)
         Me.pone_color("RECIBIDO", Drawing.Color.LightGreen)
@@ -360,14 +361,15 @@ Public Class frmConsultaPedidosBodega
     End Sub
 
     Private Sub txtUsuario_KeyDown(sender As Object, e As KeyEventArgs) Handles txtUsuario.KeyDown
-        Dim dt As New DataTable
-        cFunciones.Llenar_Tabla_Generico("select Id_Usuario, Nombre from Usuarios where Clave_Interna = '" & Me.txtUsuario.Text & "'", dt, CadenaConexionSeePOS)
-
-        If dt.Rows.Count > 0 Then
-            Me.GroupBox1.Enabled = True
-            Me.txtUsuario.Enabled = False
-            Me.IdUsuario = dt.Rows(0).Item("Id_Usuario")
-            Me.lblUsuario.Text = dt.Rows(0).Item("Nombre")
+        If e.KeyCode = Keys.Enter Then
+            Dim dt As New DataTable
+            cFunciones.Llenar_Tabla_Generico("select Id_Usuario, Nombre from Usuarios where Clave_Interna = '" & Me.txtUsuario.Text & "'", dt, CadenaConexionSeePOS)
+            If dt.Rows.Count > 0 Then
+                Me.GroupBox1.Enabled = True
+                Me.txtUsuario.Enabled = False
+                Me.IdUsuario = dt.Rows(0).Item("Id_Usuario")
+                Me.lblUsuario.Text = dt.Rows(0).Item("Nombre")
+            End If
         End If
     End Sub
 

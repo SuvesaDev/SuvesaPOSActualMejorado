@@ -353,14 +353,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Veterinaria.exe" size="27953152">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Veterinaria.exe" size="28085760">
       <assemblyIdentity name="Veterinaria" version="0.0.0.0" language="neutral" processorArchitecture="x86" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>ArdjQeM3gZ4fD2XEne5SRKDrsYKSveLlacMOOXbEzBM=</dsig:DigestValue>
+        <dsig:DigestValue>UgLVYe63QX7V4II3m7vsgOgE8Uhnyv0XGIxV3p3Bi6Q=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -372,7 +372,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>EE1Omxyrxe3hyOfrgJWxB/nYggVx11rc7hlG/gV2t1w=</dsig:DigestValue>
+        <dsig:DigestValue>fbMBP6oAxtKVAa89OWbRCOTwp9lrUUvQuZd0GN/ef8Q=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -384,7 +384,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>aWn6EwhESHkRj0/pGUcegUHbmHvqVd8c+zDafXZ9baE=</dsig:DigestValue>
+        <dsig:DigestValue>hXadBFA/Gtxglyuef0YQRXgZCrn1T75AybyP19Op5kQ=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -874,13 +874,13 @@
       <dsig:DigestValue>H4aNq17gk1DtXcgkv+k8w8vFp1rP3EEpyHtCbolsTU0=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="Reportes\Inventario\Reporte Movimientos\DsMovimientoArticulos.xsd" size="7944">
+  <file name="Reportes\Inventario\Reporte Movimientos\DsMovimientoArticulos.xsd" size="8891">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>Oo/JNYrmAYEN3UT3zVHfyTUWlnc3y9TVFNvWTzGskyc=</dsig:DigestValue>
+      <dsig:DigestValue>viv4uWoHvE4gG8O5pBjda+s4SfB67M+KlE5SGwrUXho=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Reportes\Inventario\Reportes Inventario\DataSetReporteInventario.xsd" size="2242">

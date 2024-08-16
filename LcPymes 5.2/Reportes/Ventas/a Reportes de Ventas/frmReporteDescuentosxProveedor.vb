@@ -41,6 +41,10 @@ Public Class frmReporteDescuentosxProveedor
         End Select
     End Sub
 
+
+
+
+
     Private Sub ButtonMostrar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ButtonMostrar.Click
         If Me.lblProveedor.Text <> "" And Me.txtCodigo.Text <> "" Then
             Dim rpt As New rptArticulosDescuentos

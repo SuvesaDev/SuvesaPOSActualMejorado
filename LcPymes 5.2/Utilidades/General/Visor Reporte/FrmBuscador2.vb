@@ -976,7 +976,7 @@ Public Class FrmBuscador2
                         If _Tabla = "PreVentas" Then
                             SQLString = "Select Id, convert(Varchar, convert(bigint,Num_Factura,0),1) + '-' + TIPO As Factura,Nombre_Cliente AS [Nombre del Cliente],Fecha, Total as Monto  from " & _Tabla & " where Estado = 'PreVenta' Order by Id DESC"
                         Else
-                            SQLString = "Select Id, convert(Varchar, convert(bigint,Num_Factura,0),1) + '-' + TIPO As Factura,Nombre_Cliente AS [Nombre del Cliente],Fecha, Total as Monto, primera  from " & _Tabla & " Order by Id DESC"
+                            SQLString = "Select * from viewVenasRecientes Order by Id DESC"
                         End If
                     Else
                         SQLString = "Select Id, convert(Varchar, convert(bigint,Num_Factura,0),1) + '-' + TIPO As Factura,Nombre_Cliente AS [Nombre del Cliente],Fecha, Total as Monto, primera  from Ventas Order by Id DESC"

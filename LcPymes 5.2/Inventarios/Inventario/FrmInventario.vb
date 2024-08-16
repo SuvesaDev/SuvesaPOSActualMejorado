@@ -61,6 +61,8 @@ Public Class FrmInventario
     Friend WithEvents ckLaboratorio As System.Windows.Forms.CheckBox
     Friend WithEvents btnRelacionados As System.Windows.Forms.Button
     Friend WithEvents ckListaNegra As System.Windows.Forms.CheckBox
+    Friend WithEvents txtCostoTienda As DevExpress.XtraEditors.TextEdit
+    Friend WithEvents Label58 As System.Windows.Forms.Label
 
 #Region " Windows Form Designer generated code "
     Dim dlg As WaitDialogForm
@@ -408,6 +410,7 @@ Public Class FrmInventario
         Me.TxtPrecioVenta_D = New DevExpress.XtraEditors.TextEdit()
         Me.Label23 = New System.Windows.Forms.Label()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.lblUltimaCompra = New System.Windows.Forms.Label()
         Me.Label29 = New System.Windows.Forms.Label()
         Me.Label57 = New System.Windows.Forms.Label()
         Me.TxtUtilidadR_D = New DevExpress.XtraEditors.TextEdit()
@@ -546,7 +549,8 @@ Public Class FrmInventario
         Me.AdapterLote = New System.Data.SqlClient.SqlDataAdapter()
         Me.SqlSelectCommand13 = New System.Data.SqlClient.SqlCommand()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
-        Me.lblUltimaCompra = New System.Windows.Forms.Label()
+        Me.txtCostoTienda = New DevExpress.XtraEditors.TextEdit()
+        Me.Label58 = New System.Windows.Forms.Label()
         Me.ckMAG = New System.Windows.Forms.CheckBox()
         Me.Label54 = New System.Windows.Forms.Label()
         Me.cboTipoImpuesto = New System.Windows.Forms.ComboBox()
@@ -695,6 +699,7 @@ Public Class FrmInventario
         Me.GroupBox5.SuspendLayout()
         Me.GroupBox6.SuspendLayout()
         Me.TabPage1.SuspendLayout()
+        CType(Me.txtCostoTienda.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtcosto_real.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TxtImpuesto.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TxtFlete.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -1089,6 +1094,7 @@ Public Class FrmInventario
         'GroupBox2
         '
         Me.GroupBox2.BackColor = System.Drawing.Color.Beige
+        Me.GroupBox2.Controls.Add(Me.lblUltimaCompra)
         Me.GroupBox2.Controls.Add(Me.Label29)
         Me.GroupBox2.Controls.Add(Me.Label57)
         Me.GroupBox2.Controls.Add(Me.TxtUtilidadR_D)
@@ -1134,6 +1140,17 @@ Public Class FrmInventario
         Me.GroupBox2.TabIndex = 5
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Precio de Venta"
+        '
+        'lblUltimaCompra
+        '
+        Me.lblUltimaCompra.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblUltimaCompra.ForeColor = System.Drawing.Color.Red
+        Me.lblUltimaCompra.Location = New System.Drawing.Point(9, 172)
+        Me.lblUltimaCompra.Name = "lblUltimaCompra"
+        Me.lblUltimaCompra.Size = New System.Drawing.Size(308, 17)
+        Me.lblUltimaCompra.TabIndex = 22
+        Me.lblUltimaCompra.Text = "Ya pasaron mas de 30 dias de la ultima compra"
+        Me.lblUltimaCompra.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'Label29
         '
@@ -2619,7 +2636,8 @@ Public Class FrmInventario
         'TabPage1
         '
         Me.TabPage1.BackColor = System.Drawing.Color.BurlyWood
-        Me.TabPage1.Controls.Add(Me.lblUltimaCompra)
+        Me.TabPage1.Controls.Add(Me.txtCostoTienda)
+        Me.TabPage1.Controls.Add(Me.Label58)
         Me.TabPage1.Controls.Add(Me.ckMAG)
         Me.TabPage1.Controls.Add(Me.Label54)
         Me.TabPage1.Controls.Add(Me.cboTipoImpuesto)
@@ -2649,21 +2667,41 @@ Public Class FrmInventario
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "Último Costo"
         '
-        'lblUltimaCompra
+        'txtCostoTienda
         '
-        Me.lblUltimaCompra.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblUltimaCompra.ForeColor = System.Drawing.Color.Red
-        Me.lblUltimaCompra.Location = New System.Drawing.Point(13, 155)
-        Me.lblUltimaCompra.Name = "lblUltimaCompra"
-        Me.lblUltimaCompra.Size = New System.Drawing.Size(308, 17)
-        Me.lblUltimaCompra.TabIndex = 22
-        Me.lblUltimaCompra.Text = "Ya pasaron mas de 30 dias de la ultima compra"
-        Me.lblUltimaCompra.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.txtCostoTienda.EditValue = "0.00"
+        Me.txtCostoTienda.Location = New System.Drawing.Point(99, 152)
+        Me.txtCostoTienda.Name = "txtCostoTienda"
+        '
+        '
+        '
+        Me.txtCostoTienda.Properties.DisplayFormat.FormatString = "#,#0.00"
+        Me.txtCostoTienda.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric
+        Me.txtCostoTienda.Properties.EditFormat.FormatString = "#,#0.00"
+        Me.txtCostoTienda.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric
+        Me.txtCostoTienda.Properties.Enabled = False
+        Me.txtCostoTienda.Properties.ReadOnly = True
+        Me.txtCostoTienda.Properties.Style = New DevExpress.Utils.ViewStyle("ControlStyle", Nothing, New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte)), "", DevExpress.Utils.StyleOptions.StyleEnabled, True, False, False, DevExpress.Utils.HorzAlignment.[Default], DevExpress.Utils.VertAlignment.Center, Nothing, System.Drawing.SystemColors.Window, System.Drawing.Color.Blue)
+        Me.txtCostoTienda.RightToLeft = System.Windows.Forms.RightToLeft.Yes
+        Me.txtCostoTienda.Size = New System.Drawing.Size(80, 19)
+        Me.txtCostoTienda.TabIndex = 23
+        '
+        'Label58
+        '
+        Me.Label58.BackColor = System.Drawing.Color.Transparent
+        Me.Label58.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold)
+        Me.Label58.ForeColor = System.Drawing.Color.White
+        Me.Label58.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.Label58.Location = New System.Drawing.Point(7, 154)
+        Me.Label58.Name = "Label58"
+        Me.Label58.Size = New System.Drawing.Size(82, 12)
+        Me.Label58.TabIndex = 22
+        Me.Label58.Text = "Costo Tienda"
         '
         'ckMAG
         '
         Me.ckMAG.AutoSize = True
-        Me.ckMAG.Location = New System.Drawing.Point(184, 131)
+        Me.ckMAG.Location = New System.Drawing.Point(196, 131)
         Me.ckMAG.Name = "ckMAG"
         Me.ckMAG.Size = New System.Drawing.Size(130, 17)
         Me.ckMAG.TabIndex = 21
@@ -2686,7 +2724,7 @@ Public Class FrmInventario
         '
         Me.cboTipoImpuesto.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cboTipoImpuesto.FormattingEnabled = True
-        Me.cboTipoImpuesto.Location = New System.Drawing.Point(124, 29)
+        Me.cboTipoImpuesto.Location = New System.Drawing.Point(136, 29)
         Me.cboTipoImpuesto.Name = "cboTipoImpuesto"
         Me.cboTipoImpuesto.Size = New System.Drawing.Size(145, 21)
         Me.cboTipoImpuesto.TabIndex = 19
@@ -2695,7 +2733,7 @@ Public Class FrmInventario
         'txtcosto_real
         '
         Me.txtcosto_real.EditValue = "0.00"
-        Me.txtcosto_real.Location = New System.Drawing.Point(88, 130)
+        Me.txtcosto_real.Location = New System.Drawing.Point(100, 130)
         Me.txtcosto_real.Name = "txtcosto_real"
         '
         '
@@ -2729,7 +2767,7 @@ Public Class FrmInventario
         Me.TxtCostoEquivalente.Enabled = False
         Me.TxtCostoEquivalente.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold)
         Me.TxtCostoEquivalente.ForeColor = System.Drawing.Color.Blue
-        Me.TxtCostoEquivalente.Location = New System.Drawing.Point(184, 116)
+        Me.TxtCostoEquivalente.Location = New System.Drawing.Point(196, 116)
         Me.TxtCostoEquivalente.Name = "TxtCostoEquivalente"
         Me.TxtCostoEquivalente.ReadOnly = True
         Me.TxtCostoEquivalente.Size = New System.Drawing.Size(84, 13)
@@ -2743,7 +2781,7 @@ Public Class FrmInventario
         Me.TxtOtrosCargosEquivalente.Enabled = False
         Me.TxtOtrosCargosEquivalente.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold)
         Me.TxtOtrosCargosEquivalente.ForeColor = System.Drawing.Color.Blue
-        Me.TxtOtrosCargosEquivalente.Location = New System.Drawing.Point(184, 95)
+        Me.TxtOtrosCargosEquivalente.Location = New System.Drawing.Point(196, 95)
         Me.TxtOtrosCargosEquivalente.Name = "TxtOtrosCargosEquivalente"
         Me.TxtOtrosCargosEquivalente.ReadOnly = True
         Me.TxtOtrosCargosEquivalente.Size = New System.Drawing.Size(84, 13)
@@ -2757,7 +2795,7 @@ Public Class FrmInventario
         Me.TxtFleteEquivalente.Enabled = False
         Me.TxtFleteEquivalente.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold)
         Me.TxtFleteEquivalente.ForeColor = System.Drawing.Color.Blue
-        Me.TxtFleteEquivalente.Location = New System.Drawing.Point(184, 76)
+        Me.TxtFleteEquivalente.Location = New System.Drawing.Point(196, 76)
         Me.TxtFleteEquivalente.Name = "TxtFleteEquivalente"
         Me.TxtFleteEquivalente.ReadOnly = True
         Me.TxtFleteEquivalente.Size = New System.Drawing.Size(84, 13)
@@ -2773,7 +2811,7 @@ Public Class FrmInventario
         Me.TextBoxValorMonedaEnCosto.Enabled = False
         Me.TextBoxValorMonedaEnCosto.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold)
         Me.TextBoxValorMonedaEnCosto.ForeColor = System.Drawing.Color.Blue
-        Me.TextBoxValorMonedaEnCosto.Location = New System.Drawing.Point(187, 11)
+        Me.TextBoxValorMonedaEnCosto.Location = New System.Drawing.Point(199, 11)
         Me.TextBoxValorMonedaEnCosto.Name = "TextBoxValorMonedaEnCosto"
         Me.TextBoxValorMonedaEnCosto.ReadOnly = True
         Me.TextBoxValorMonedaEnCosto.Size = New System.Drawing.Size(80, 13)
@@ -2787,7 +2825,7 @@ Public Class FrmInventario
         Me.TxtBaseEquivalente.Enabled = False
         Me.TxtBaseEquivalente.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold)
         Me.TxtBaseEquivalente.ForeColor = System.Drawing.Color.Blue
-        Me.TxtBaseEquivalente.Location = New System.Drawing.Point(184, 55)
+        Me.TxtBaseEquivalente.Location = New System.Drawing.Point(196, 55)
         Me.TxtBaseEquivalente.Name = "TxtBaseEquivalente"
         Me.TxtBaseEquivalente.ReadOnly = True
         Me.TxtBaseEquivalente.Size = New System.Drawing.Size(84, 13)
@@ -2799,7 +2837,7 @@ Public Class FrmInventario
         '
         Me.TxtImpuesto.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.DataSetInventario, "Inventario.IVenta", True))
         Me.TxtImpuesto.EditValue = "0.00"
-        Me.TxtImpuesto.Location = New System.Drawing.Point(88, 30)
+        Me.TxtImpuesto.Location = New System.Drawing.Point(100, 30)
         Me.TxtImpuesto.Name = "TxtImpuesto"
         '
         '
@@ -2842,7 +2880,7 @@ Public Class FrmInventario
         '
         Me.TxtFlete.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.DataSetInventario, "Inventario.Fletes", True))
         Me.TxtFlete.EditValue = "0.00"
-        Me.TxtFlete.Location = New System.Drawing.Point(88, 71)
+        Me.TxtFlete.Location = New System.Drawing.Point(100, 71)
         Me.TxtFlete.Name = "TxtFlete"
         '
         '
@@ -2860,7 +2898,7 @@ Public Class FrmInventario
         '
         Me.TxtOtros.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.DataSetInventario, "Inventario.OtrosCargos", True))
         Me.TxtOtros.EditValue = "0.00"
-        Me.TxtOtros.Location = New System.Drawing.Point(88, 90)
+        Me.TxtOtros.Location = New System.Drawing.Point(100, 90)
         Me.TxtOtros.Name = "TxtOtros"
         '
         '
@@ -2878,7 +2916,7 @@ Public Class FrmInventario
         '
         Me.TxtCosto.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.DataSetInventario, "Inventario.Costo", True))
         Me.TxtCosto.EditValue = "0.00"
-        Me.TxtCosto.Location = New System.Drawing.Point(88, 110)
+        Me.TxtCosto.Location = New System.Drawing.Point(100, 110)
         Me.TxtCosto.Name = "TxtCosto"
         '
         '
@@ -2903,7 +2941,7 @@ Public Class FrmInventario
         Me.ComboBoxMoneda.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ComboBoxMoneda.ForeColor = System.Drawing.Color.Blue
         Me.ComboBoxMoneda.ItemHeight = 13
-        Me.ComboBoxMoneda.Location = New System.Drawing.Point(88, 7)
+        Me.ComboBoxMoneda.Location = New System.Drawing.Point(100, 7)
         Me.ComboBoxMoneda.Name = "ComboBoxMoneda"
         Me.ComboBoxMoneda.Size = New System.Drawing.Size(84, 21)
         Me.ComboBoxMoneda.TabIndex = 1
@@ -2939,7 +2977,7 @@ Public Class FrmInventario
         '
         Me.TxtBase.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.DataSetInventario, "Inventario.PrecioBase", True))
         Me.TxtBase.EditValue = "0.00"
-        Me.TxtBase.Location = New System.Drawing.Point(88, 51)
+        Me.TxtBase.Location = New System.Drawing.Point(100, 51)
         Me.TxtBase.Name = "TxtBase"
         '
         '
@@ -4167,6 +4205,7 @@ Public Class FrmInventario
         Me.GroupBox6.PerformLayout()
         Me.TabPage1.ResumeLayout(False)
         Me.TabPage1.PerformLayout()
+        CType(Me.txtCostoTienda.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.txtcosto_real.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TxtImpuesto.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TxtFlete.Properties, System.ComponentModel.ISupportInitialize).EndInit()
@@ -4327,6 +4366,8 @@ Public Class FrmInventario
         End If
     End Sub
 
+    Public cCodigoTienda As Integer = 0
+
     Private Sub FrmInventario_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         Try
             Me.ckHabilitaFamilia.Checked = False
@@ -4469,6 +4510,10 @@ Public Class FrmInventario
                 Me.Label20.Width = Me.Label20.Width + 4
                 Me.Label20.Left = Me.Label20.Left - 1
 
+            End If
+
+            If Me.cCodigoTienda > 0 Then
+                Me.LlenarInventario(Me.cCodigoTienda)
             End If
 
         Catch ex As SystemException
@@ -4776,6 +4821,8 @@ Public Class FrmInventario
                 Me.ckCredito.Checked = dtPromo.Rows(0).Item("PromoCRE")
                 Me.cboTipoImpuesto.SelectedValue = dtPromo.Rows(0).Item("Id_Impuesto")
             End If
+
+            consultar_costo_real()
             '*************************************************************************************************************************
 16:
             If DataSetInventario.Inventario.Rows.Count() = 0 Then
@@ -6278,9 +6325,10 @@ I:
 
     Sub consultar_costo_real()
         Dim dts As New DataTable
-        cFunciones.Llenar_Tabla_Generico("select round(dbo.precio_final(codigo),2)as costo from inventario where codigo = " & TxtCodigo.Text, dts)
+        cFunciones.Llenar_Tabla_Generico("select round(dbo.precio_final(codigo),2)as costo, round(dbo.precio_finalEcommer(codigo),2)as costoTienda from inventario where codigo = " & TxtCodigo.Text, dts)
         If dts.Rows.Count > 0 Then
-            txtcosto_real.Text = dts.Rows(0).Item("costo")
+            Me.txtcosto_real.Text = dts.Rows(0).Item("costo")
+            Me.txtCostoTienda.Text = dts.Rows(0).Item("costoTienda")
         End If
     End Sub
 

@@ -22,6 +22,7 @@ Partial Class frmConsultaAlbaran
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmConsultaAlbaran))
         Me.viewDatos = New System.Windows.Forms.DataGridView()
         Me.txtCliente = New System.Windows.Forms.TextBox()
@@ -33,6 +34,7 @@ Partial Class frmConsultaAlbaran
         Me.Label3 = New System.Windows.Forms.Label()
         Me.dtpHasta = New System.Windows.Forms.DateTimePicker()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.btnPedidoWeb = New System.Windows.Forms.Button()
         Me.ckFiltrarxFecha = New System.Windows.Forms.CheckBox()
         Me.ckExtranjero = New System.Windows.Forms.CheckBox()
         Me.btnArqueo = New System.Windows.Forms.Button()
@@ -53,6 +55,7 @@ Partial Class frmConsultaAlbaran
         Me.Label5 = New System.Windows.Forms.Label()
         Me.btnGenerarFacturas = New System.Windows.Forms.Button()
         Me.BackgroundWorker1 = New System.ComponentModel.BackgroundWorker()
+        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         CType(Me.viewDatos, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
@@ -197,6 +200,7 @@ Partial Class frmConsultaAlbaran
         Me.Panel1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Panel1.Controls.Add(Me.btnPedidoWeb)
         Me.Panel1.Controls.Add(Me.ckFiltrarxFecha)
         Me.Panel1.Controls.Add(Me.ckExtranjero)
         Me.Panel1.Controls.Add(Me.btnArqueo)
@@ -224,6 +228,17 @@ Partial Class frmConsultaAlbaran
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(1071, 492)
         Me.Panel1.TabIndex = 3
+        '
+        'btnPedidoWeb
+        '
+        Me.btnPedidoWeb.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnPedidoWeb.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnPedidoWeb.Location = New System.Drawing.Point(881, 3)
+        Me.btnPedidoWeb.Name = "btnPedidoWeb"
+        Me.btnPedidoWeb.Size = New System.Drawing.Size(104, 24)
+        Me.btnPedidoWeb.TabIndex = 96
+        Me.btnPedidoWeb.Text = "Pedido Web"
+        Me.btnPedidoWeb.UseVisualStyleBackColor = True
         '
         'ckFiltrarxFecha
         '
@@ -440,6 +455,10 @@ Partial Class frmConsultaAlbaran
         'BackgroundWorker1
         '
         '
+        'Timer1
+        '
+        Me.Timer1.Interval = 60000
+        '
         'frmConsultaAlbaran
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -504,4 +523,6 @@ Partial Class frmConsultaAlbaran
     Friend WithEvents ckExtranjero As System.Windows.Forms.CheckBox
     Friend WithEvents btnExportar As System.Windows.Forms.Button
     Friend WithEvents ckFiltrarxFecha As System.Windows.Forms.CheckBox
+    Friend WithEvents btnPedidoWeb As System.Windows.Forms.Button
+    Friend WithEvents Timer1 As System.Windows.Forms.Timer
 End Class

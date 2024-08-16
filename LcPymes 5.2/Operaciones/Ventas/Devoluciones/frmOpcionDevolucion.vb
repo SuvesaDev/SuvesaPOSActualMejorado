@@ -57,8 +57,7 @@
     End Sub
 
     Private Sub frmOpcionDevolucion_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        If IsClinica() = True Then
-            Me.btnEfectivo.Enabled = False
+        If IsClinica() = True Then            
             Me.FormaDevolucion = Tipo.Deposito
             Me.ckDevolverAlbaran.Enabled = True
             Me.ckDevolverAlbaran.Visible = True
@@ -71,6 +70,7 @@
         End If
         Me.pDeposito.Enabled = True
         Me.pAnticipo.Enabled = True
+        Me.btnEfectivo.Enabled = True
     End Sub
 
     Public isPreDevolucion As Boolean = False

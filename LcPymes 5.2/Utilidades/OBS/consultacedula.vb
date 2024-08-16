@@ -47,6 +47,7 @@ Namespace api.Hacienda
             Return ThisToken
         End Function
 
+
         Public Function Consultar_x_Cedula(_Cedula As String) As Entidad
 
             '*********************************************************************************

@@ -774,8 +774,15 @@ Public Class MovimientoCaja
     End Sub
 
 #Region "Registrar"
+
+    Public ObligaAnticipo As Boolean = False
     Sub Registrar()
         Try
+
+            If Me.ObligaAnticipo = True And Me.ckVincular.Checked = False Then
+                MsgBox("Debe vincular un cliente.", MsgBoxStyle.Exclamation, "No se puede realizar la operacion.")
+                Exit Sub
+            End If
 
             If Me.ckVincular.Checked = True Then
                 If Me.Identificacion = "0" Then

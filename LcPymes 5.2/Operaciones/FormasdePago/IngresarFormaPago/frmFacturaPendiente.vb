@@ -23,12 +23,12 @@ Public Class frmFacturaPendiente
 
     Private Function GetNombre(_Cedula As String) As String
         Dim dt As New DataTable
-        cFunciones.Llenar_Tabla_Generico("Select NOMBRECOMPLETO2 from Cedula.dbo.ENTIDADES_FISICAS where cedula2 = '" & _Cedula & "'", dt, CadenaConexionCedulas)
+        cFunciones.Llenar_Tabla_Generico("Select NOMBRECOMPLETO2 from dbo.ENTIDADES_FISICAS where cedula2 = '" & _Cedula & "'", dt, CadenaConexionCedulas)
         If dt.Rows.Count > 0 Then
             Return dt.Rows(0).Item("NOMBRECOMPLETO2")
         Else
             Dim dt2 As New DataTable
-            cFunciones.Llenar_Tabla_Generico("Select NOMBRE from Cedula.dbo.ENTIDADES_FIRMA where CEDULA = '" & _Cedula & "'", dt2, CadenaConexionCedulas)
+            cFunciones.Llenar_Tabla_Generico("Select NOMBRE from dbo.ENTIDADES_FIRMA where CEDULA = '" & _Cedula & "'", dt2, CadenaConexionCedulas)
             If dt2.Rows.Count > 0 Then
                 Return dt2.Rows(0).Item("NOMBRE")
             Else

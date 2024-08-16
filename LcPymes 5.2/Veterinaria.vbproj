@@ -623,6 +623,9 @@
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>rtpResumenCaja.vb</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="Operaciones\Control de Caja\Movimiento Caja\frmOpcionMovimientoCaja.resx">
+      <DependentUpon>frmOpcionMovimientoCaja.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Operaciones\FormasdePago\Adelantos\frmBuscarAdelantoPendiente.resx">
       <DependentUpon>frmBuscarAdelantoPendiente.vb</DependentUpon>
     </EmbeddedResource>
@@ -901,6 +904,21 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Operaciones\SolicitudPrestamo\frmSolicitudPrestamo.resx">
       <DependentUpon>frmSolicitudPrestamo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Operaciones\TiendaWeb\frmGenerarFichaPedidoWeb.resx">
+      <DependentUpon>frmGenerarFichaPedidoWeb.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Operaciones\TiendaWeb\frmListaPedidos.resx">
+      <DependentUpon>frmListaPedidos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Operaciones\TiendaWeb\frmListaProductosPagina.resx">
+      <DependentUpon>frmListaProductosPagina.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Operaciones\TiendaWeb\frmPedidoWeb.resx">
+      <DependentUpon>frmPedidoWeb.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Operaciones\TiendaWeb\frmSetting.resx">
+      <DependentUpon>frmSetting.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Operaciones\Ventas\Agente de ventas\frmPD.resx">
       <DependentUpon>frmPD.vb</DependentUpon>
@@ -4572,6 +4590,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSet_MovimientoCaja.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Operaciones\Control de Caja\Movimiento Caja\frmOpcionMovimientoCaja.Designer.vb">
+      <DependentUpon>frmOpcionMovimientoCaja.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Operaciones\Control de Caja\Movimiento Caja\frmOpcionMovimientoCaja.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Operaciones\Control de Caja\Movimiento Caja\MovimientoCaja.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -5381,6 +5405,38 @@
     </Compile>
     <Compile Include="Operaciones\SolicitudPrestamo\General.vb" />
     <Compile Include="Operaciones\SolicitudPrestamo\Pedido.vb" />
+    <Compile Include="Operaciones\TiendaWeb\frmGenerarFichaPedidoWeb.Designer.vb">
+      <DependentUpon>frmGenerarFichaPedidoWeb.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Operaciones\TiendaWeb\frmGenerarFichaPedidoWeb.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Operaciones\TiendaWeb\PedidoWeb.vb" />
+    <Compile Include="Operaciones\TiendaWeb\apiTienda.vb" />
+    <Compile Include="Operaciones\TiendaWeb\frmListaPedidos.Designer.vb">
+      <DependentUpon>frmListaPedidos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Operaciones\TiendaWeb\frmListaPedidos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Operaciones\TiendaWeb\frmListaProductosPagina.Designer.vb">
+      <DependentUpon>frmListaProductosPagina.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Operaciones\TiendaWeb\frmListaProductosPagina.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Operaciones\TiendaWeb\frmPedidoWeb.Designer.vb">
+      <DependentUpon>frmPedidoWeb.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Operaciones\TiendaWeb\frmPedidoWeb.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Operaciones\TiendaWeb\frmSetting.Designer.vb">
+      <DependentUpon>frmSetting.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Operaciones\TiendaWeb\frmSetting.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Operaciones\Ventas\Agente de ventas\frmPD.Designer.vb">
       <DependentUpon>frmPD.vb</DependentUpon>
     </Compile>

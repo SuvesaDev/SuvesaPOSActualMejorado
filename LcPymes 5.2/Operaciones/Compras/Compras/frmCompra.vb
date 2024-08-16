@@ -4040,6 +4040,8 @@ Public Class frmCompra
                 Timer1.Start()
             End If
 
+            Me.ValidaExistencia()
+
         Catch ex As SystemException
             MsgBox(ex.Message, MsgBoxStyle.Information, "Atención...")
         End Try
@@ -4905,7 +4907,40 @@ Public Class frmCompra
 
     End Sub
 
+    Private Function ValidaExistencia() As Boolean
+        Dim Resultado = True
+        Dim dt As New DataTable
+
+        For i As Integer = 0 To Me.BindingContext(DataSetCompras, "Compras.Comprasarticulos_comprados").Count - 1
+            Me.BindingContext(DataSetCompras, "Compras.Comprasarticulos_comprados").Position = i
+
+            cFunciones.Llenar_Tabla_Generico("select consignacion, existencia from inventario where codigo = " & Me.BindingContext(DataSetCompras, "Compras.Comprasarticulos_comprados").Current("Codigo"), dt, CadenaConexionSeePOS)
+            If dt.Rows(0).Item("consignacion") = False Then
+                If dt.Rows(0).Item("existencia") < 0 Then
+                    MsgBox("El producto '" & Me.BindingContext(DataSetCompras, "Compras.Comprasarticulos_comprados").Current("Descripcion") & "' tiene existencia menor(" & dt.Rows(0).Item("existencia") & ") que cero, favor revise antes de guardar la compra.")
+                    Resultado = False
+                End If
+            End If
+
+        Next
+
+        'For Each r As DataSetCompras.articulos_compradosRow In Me.DataSetCompras.articulos_comprados
+        '    cFunciones.Llenar_Tabla_Generico("select consignacion, existencia from inventario where codigo = " & r.Codigo, dt, CadenaConexionSeePOS)
+        '    If dt.Rows(0).Item("consignacion") = False Then
+        '        If dt.Rows(0).Item("existencia") < 0 Then
+        '            MsgBox("El producto '" & r.Descripcion & "' tiene existencia menor(" & dt.Rows(0).Item("existencia") & ") que cero, favor revise antes de guardar la compra.")
+        '            Resultado = False
+        '        End If
+        '    End If
+        'Next
+        Return Resultado
+    End Function
+
     Private Sub Registrar()
+
+        If Me.ValidaExistencia = False Then
+            Exit Sub
+        End If
 
         If ComboTipoF.Text = "CRE" Then
             If IsNumeric(Me.TxtDias.Text) Then

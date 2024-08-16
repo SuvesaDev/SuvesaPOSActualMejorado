@@ -1305,7 +1305,7 @@ Public Class Abonos_Proveedor
         '
         'SqlDeleteCommand1
         '
-        Me.SqlDeleteCommand1.CommandText = "DELETE FROM abonocpagar WHERE (Id_Abonocpagar = @Original_Id_Abonocpagar)"
+        Me.SqlDeleteCommand1.CommandText = ""
         Me.SqlDeleteCommand1.Connection = Me.SqlConnection1
         Me.SqlDeleteCommand1.Parameters.AddRange(New System.Data.SqlClient.SqlParameter() {New System.Data.SqlClient.SqlParameter("@Original_Id_Abonocpagar", System.Data.SqlDbType.BigInt, 8, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "Id_Abonocpagar", System.Data.DataRowVersion.Original, Nothing)})
         '
@@ -1342,8 +1342,7 @@ Public Class Abonos_Proveedor
         '
         'SqlDeleteCommand2
         '
-        Me.SqlDeleteCommand2.CommandText = "DELETE FROM detalle_abonocpagar WHERE (Id_Detalle_abonocpagar = @Original_Id_Deta" & _
-    "lle_abonocpagar)"
+        Me.SqlDeleteCommand2.CommandText = ""
         Me.SqlDeleteCommand2.Connection = Me.SqlConnection1
         Me.SqlDeleteCommand2.Parameters.AddRange(New System.Data.SqlClient.SqlParameter() {New System.Data.SqlClient.SqlParameter("@Original_Id_Detalle_abonocpagar", System.Data.SqlDbType.Int, 4, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "Id_Detalle_abonocpagar", System.Data.DataRowVersion.Original, Nothing)})
         '
@@ -2281,24 +2280,14 @@ Public Class Abonos_Proveedor
                         abono.MdiParent = Me.MdiParent
                         abono.Show()
                         Me.Close()
-                        'If Tipo = "CHEQUE" Then
                         If MessageBox.Show("¿Desea imprimir el cheque?", "Atención...", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1) = DialogResult.Yes Then
                             numero = cx.SlqExecuteScalar(cx.Conectar("Bancos"), "Select Id_Cheque FROM Cheques where Num_Cheque = " & documento & " AND Id_CuentaBancaria=" & num_cuenta)
                             imprimir(Id_AbonocPagar)
                         End If
-                        'End If
                     Catch ex As Exception
                     End Try
 
                 Catch ex As Exception
-
-                    Try
-                        Dim db As New OBSoluciones.SQL.Sentencias(CadenaConexionSeePOS)
-                        db.AddParametro("@MSG", ex.Message)
-                        db.Ejecutar("Insert into AbonocPagarError(Fecha,MSG) Values(GetDate(), @MSG)", CommandType.Text)
-                    Catch ex2 As Exception
-                    End Try
-
                     trans.Rollback()
                     MsgBox(ex.Message, MsgBoxStyle.Critical, Text)
                 End Try

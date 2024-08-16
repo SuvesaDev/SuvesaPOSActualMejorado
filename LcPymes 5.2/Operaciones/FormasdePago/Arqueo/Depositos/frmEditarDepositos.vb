@@ -159,9 +159,9 @@ Public Class frmEditarDepositos
         Me.viewDepositos.Rows.Clear()
         Me.IndexDeposito = 0
         Dim dt As New DataTable
-        cFunciones.Llenar_Tabla_Generico("select Id, Banco, Cuenta, Moneda, Numero, Monto, TipoMovimiento, Observaciones from ArqueoDeposito Where Anulado = 0 and IdArqueo = " & _IdArqueo & " And IdApertura = " & Me.IdApertura, dt, CadenaConexionSeePOS)
+        cFunciones.Llenar_Tabla_Generico("select Id, Banco, Cuenta, Moneda, Numero, Monto, TipoMovimiento, Observaciones, Estado from ArqueoDeposito Where Anulado = 0 and IdArqueo = " & _IdArqueo & " And IdApertura = " & Me.IdApertura, dt, CadenaConexionSeePOS)
         For Each r As DataRow In dt.Rows
-            Me.AgregarDeposito(r.Item("Id"), r.Item("Banco"), r.Item("Cuenta"), r.Item("Moneda"), r.Item("Numero"), r.Item("Monto"), r.Item("TipoMovimiento"), r.Item("Observaciones"), False)
+            Me.AgregarDeposito(r.Item("Id"), r.Item("Banco"), r.Item("Cuenta"), r.Item("Moneda"), r.Item("Numero"), r.Item("Monto"), r.Item("TipoMovimiento"), r.Item("Observaciones"), False, r.Item("Estado"))
         Next
     End Sub
 
@@ -200,32 +200,37 @@ Public Class frmEditarDepositos
     End Function
 
 
-    Private Sub AgregarDeposito(_Id As Integer, _Banco As String, _Cuenta As String, _Moneda As String, _Numero As String, _Monto As Decimal, _Tipo As String, _Observaciones As String, _ValidaDuplicado As Boolean)
+    Private Sub AgregarDeposito(_Id As Integer, _Banco As String, _Cuenta As String, _Moneda As String, _Numero As String, _Monto As Decimal, _Tipo As String, _Observaciones As String, _ValidaDuplicado As Boolean, _Estado As String)
         If _ValidaDuplicado = True And _Numero <> "0" Then
             If Me.Duplicado(_Banco, _Cuenta, _Numero) = True Then
                 Exit Sub
             End If
         End If
 
-        Me.viewDepositos.Rows.Add()
-        Me.viewDepositos.Item("cId", Me.IndexDeposito).Value = _Id
-        Me.viewDepositos.Item("cBanco", Me.IndexDeposito).Value = _Banco
-        Me.viewDepositos.Item("cCuenta", Me.IndexDeposito).Value = _Cuenta
-        Me.viewDepositos.Item("cMonedaDeposito", Me.IndexDeposito).Value = _Moneda
-        Me.viewDepositos.Item("cNumero", Me.IndexDeposito).Value = _Numero
-        Me.viewDepositos.Item("cMontoDeposito", Me.IndexDeposito).Value = _Monto
-        Me.viewDepositos.Item("cTipo", Me.IndexDeposito).Value = _Tipo
-        Me.viewDepositos.Item("cObservaciones", Me.IndexDeposito).Value = _Observaciones
+        Try
+            Me.viewDepositos.Rows.Add()
+            Me.viewDepositos.Item("cId", Me.IndexDeposito).Value = _Id
+            Me.viewDepositos.Item("cBanco", Me.IndexDeposito).Value = _Banco
+            Me.viewDepositos.Item("cCuenta", Me.IndexDeposito).Value = _Cuenta
+            Me.viewDepositos.Item("cMonedaDeposito", Me.IndexDeposito).Value = _Moneda
+            Me.viewDepositos.Item("cNumero", Me.IndexDeposito).Value = _Numero
+            Me.viewDepositos.Item("cMontoDeposito", Me.IndexDeposito).Value = _Monto
+            Me.viewDepositos.Item("cTipo", Me.IndexDeposito).Value = _Tipo
+            Me.viewDepositos.Item("cObservaciones", Me.IndexDeposito).Value = _Observaciones
 
-        Me.viewDepositos.Item("cAnulado", Me.IndexDeposito).Value = False
-        Me.viewDepositos.Item("cIdUsuarioAnulacion", Me.IndexDeposito).Value = ""
-        Me.viewDepositos.Item("cMotivoAnulacion", Me.IndexDeposito).Value = ""
+            Me.viewDepositos.Item("cAnulado", Me.IndexDeposito).Value = False
+            Me.viewDepositos.Item("cIdUsuarioAnulacion", Me.IndexDeposito).Value = ""
+            Me.viewDepositos.Item("cMotivoAnulacion", Me.IndexDeposito).Value = ""
+            Me.viewDepositos.Item("cEstado", Me.IndexDeposito).Value = _Estado
 
-        Me.IndexDeposito += 1
-        Me.CalcualarMontosDeposito()
-        Me.txtNumeroDeposito.Text = ""
-        Me.txtMontoDeposito.Text = ""
-        Me.PoneColor()
+            Me.IndexDeposito += 1
+            Me.CalcualarMontosDeposito()
+            Me.txtNumeroDeposito.Text = ""
+            Me.txtMontoDeposito.Text = ""
+            Me.PoneColor()
+        Catch ex As Exception
+
+        End Try
     End Sub
 
     Private Function PasaValidacionMontos(_Moneda As String, _Monto As Decimal) As Boolean
@@ -269,7 +274,7 @@ Public Class frmEditarDepositos
                             Exit Sub
                         End If
 
-                        Me.AgregarDeposito(0, Me.cboBanco.Text, Me.cboCuenta.Text, Me.txtMoneda.Text, txtNumeroDeposito.Text, Me.txtMontoDeposito.Text, Me.cboTipo.Text, Me.txtObservaciones.Text, True)
+                        Me.AgregarDeposito(0, Me.cboBanco.Text, Me.cboCuenta.Text, Me.txtMoneda.Text, txtNumeroDeposito.Text, Me.txtMontoDeposito.Text, Me.cboTipo.Text, Me.txtObservaciones.Text, True, "pendiente")
                     End If
                 End If
             End If
@@ -305,27 +310,48 @@ Public Class frmEditarDepositos
         If e.KeyCode = Keys.Back Or e.KeyCode = Keys.Delete Then
             'Me.viewDepositos.Rows.RemoveAt(Me.viewDepositos.CurrentRow.Index)
             'Me.IndexDeposito -= 1
-            If MsgBox("Desea quitar el deposito", MsgBoxStyle.Question + MsgBoxStyle.YesNo, "Confirmar Accion") = MsgBoxResult.No Then
-                Exit Sub
-            End If
-            If CDec(Me.viewDepositos.Item("cId", Me.viewDepositos.CurrentRow.Index).Value) > 0 Then
-                Dim frm As New frmMorivoAnulacionDeposito
-                If frm.ShowDialog = Windows.Forms.DialogResult.OK Then
+            Dim Estado As String = Me.viewDepositos.Item("cEstado", Me.viewDepositos.CurrentRow.Index).Value
+            If Estado.ToLower = "depositado" Then
+                MsgBox("El deposito ya esta marcado como depositado.", MsgBoxStyle.Exclamation, "No se puede realizar la operacion.")
+            Else
+                If MsgBox("Desea quitar el deposito", MsgBoxStyle.Question + MsgBoxStyle.YesNo, "Confirmar Accion") = MsgBoxResult.No Then
+                    Exit Sub
+                End If
+                If CDec(Me.viewDepositos.Item("cId", Me.viewDepositos.CurrentRow.Index).Value) > 0 Then
+                    Dim frm As New frmMorivoAnulacionDeposito
+                    If frm.ShowDialog = Windows.Forms.DialogResult.OK Then
+                        Me.viewDepositos.Item("cAnulado", Me.viewDepositos.CurrentRow.Index).Value = True
+                        Me.viewDepositos.Item("cIdUsuarioAnulacion", Me.viewDepositos.CurrentRow.Index).Value = frm.txtUsuario.Text
+                        Me.viewDepositos.Item("cMotivoAnulacion", Me.viewDepositos.CurrentRow.Index).Value = frm.txtMotivo.Text
+                        Me.viewDepositos.CurrentRow.Visible = False
+                        Me.CalcualarMontosDeposito()
+                    End If
+                Else
                     Me.viewDepositos.Item("cAnulado", Me.viewDepositos.CurrentRow.Index).Value = True
-                    Me.viewDepositos.Item("cIdUsuarioAnulacion", Me.viewDepositos.CurrentRow.Index).Value = frm.txtUsuario.Text
-                    Me.viewDepositos.Item("cMotivoAnulacion", Me.viewDepositos.CurrentRow.Index).Value = frm.txtMotivo.Text
                     Me.viewDepositos.CurrentRow.Visible = False
                     Me.CalcualarMontosDeposito()
                 End If
-            Else
-                Me.viewDepositos.Item("cAnulado", Me.viewDepositos.CurrentRow.Index).Value = True
-                Me.viewDepositos.CurrentRow.Visible = False
-                Me.CalcualarMontosDeposito()
             End If
         End If
     End Sub
 
     Private Sub btnBuscarArqueo_Click(sender As Object, e As EventArgs) Handles btnBuscarArqueo.Click
         Me.CargarIdApertura()
+    End Sub
+
+    Private Sub cboBanco_KeyDown(sender As Object, e As KeyEventArgs) Handles cboBanco.KeyDown
+        If e.KeyCode = Keys.Enter Then Me.cboCuenta.Focus()
+    End Sub
+
+    Private Sub cboCuenta_KeyDown(sender As Object, e As KeyEventArgs) Handles cboCuenta.KeyDown
+        If e.KeyCode = Keys.Enter Then Me.txtNumeroDeposito.Focus()
+    End Sub
+
+    Private Sub txtMontoDeposito_KeyDown(sender As Object, e As KeyEventArgs) Handles txtMontoDeposito.KeyDown
+        If e.KeyCode = Keys.Enter Then Me.cboTipo.Focus()
+    End Sub
+
+    Private Sub cboTipo_KeyDown(sender As Object, e As KeyEventArgs) Handles cboTipo.KeyDown
+        If e.KeyCode = Keys.Enter Then Me.btnAgregar.Focus()
     End Sub
 End Class

@@ -258,6 +258,9 @@ Public Class MainForm
     Friend WithEvents MenuItem209 As System.Windows.Forms.MenuItem
     Friend WithEvents MenuItem210 As System.Windows.Forms.MenuItem
     Friend WithEvents MenuItem211 As System.Windows.Forms.MenuItem
+    Friend WithEvents MenuItem212 As System.Windows.Forms.MenuItem
+    Friend WithEvents MenuItem213 As System.Windows.Forms.MenuItem
+    Friend WithEvents MenuItem214 As System.Windows.Forms.MenuItem
     Dim SistemaNormal As Boolean = False
 #End Region
 
@@ -617,6 +620,9 @@ Public Class MainForm
         Me.MenuItem57 = New System.Windows.Forms.MenuItem()
         Me.MenuItem67 = New System.Windows.Forms.MenuItem()
         Me.MenuItem125 = New System.Windows.Forms.MenuItem()
+        Me.MenuItem212 = New System.Windows.Forms.MenuItem()
+        Me.MenuItem214 = New System.Windows.Forms.MenuItem()
+        Me.MenuItem213 = New System.Windows.Forms.MenuItem()
         Me.MenuInventarios = New System.Windows.Forms.MenuItem()
         Me.MenuItemInventario_Catalogo = New System.Windows.Forms.MenuItem()
         Me.MenuItem167 = New System.Windows.Forms.MenuItem()
@@ -1044,7 +1050,7 @@ Public Class MainForm
         'MenuOperaciones
         '
         Me.MenuOperaciones.Index = 1
-        Me.MenuOperaciones.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.MenuItemVentas, Me.MenuItemLinea01, Me.MenuItemCuentasXCobrar, Me.MenuItemLinea02, Me.MenuItemCompras, Me.MenuItemLinea03, Me.MenuItemCuentasXPagar, Me.MenuItemLinea04, Me.MenuItemControlCaja, Me.MenuItem82, Me.mnPrestamosBodega, Me.MenuItem99, Me.MenuItem100, Me.MenuItem115, Me.MenuItem109, Me.MenuItem85, Me.MenuItem103, Me.MenuItem104, Me.MenuItem133, Me.MenuItem134, Me.MenuItem138, Me.MenuItem139, Me.MenuItem42, Me.MenuItem125})
+        Me.MenuOperaciones.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.MenuItemVentas, Me.MenuItemLinea01, Me.MenuItemCuentasXCobrar, Me.MenuItemLinea02, Me.MenuItemCompras, Me.MenuItemLinea03, Me.MenuItemCuentasXPagar, Me.MenuItemLinea04, Me.MenuItemControlCaja, Me.MenuItem82, Me.mnPrestamosBodega, Me.MenuItem99, Me.MenuItem100, Me.MenuItem115, Me.MenuItem109, Me.MenuItem85, Me.MenuItem103, Me.MenuItem104, Me.MenuItem133, Me.MenuItem134, Me.MenuItem138, Me.MenuItem139, Me.MenuItem42, Me.MenuItem125, Me.MenuItem212})
         Me.MenuOperaciones.Text = "Operaciones"
         '
         'MenuItemVentas
@@ -1973,6 +1979,25 @@ Public Class MainForm
         Me.menuExtender.SetImageIndex(Me.MenuItem125, -1)
         Me.MenuItem125.Index = 23
         Me.MenuItem125.Text = "Asignar Codigos de Barras"
+        '
+        'MenuItem212
+        '
+        Me.menuExtender.SetImageIndex(Me.MenuItem212, -1)
+        Me.MenuItem212.Index = 24
+        Me.MenuItem212.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.MenuItem214, Me.MenuItem213})
+        Me.MenuItem212.Text = "Pagina"
+        '
+        'MenuItem214
+        '
+        Me.menuExtender.SetImageIndex(Me.MenuItem214, -1)
+        Me.MenuItem214.Index = 0
+        Me.MenuItem214.Text = "Pedidos"
+        '
+        'MenuItem213
+        '
+        Me.menuExtender.SetImageIndex(Me.MenuItem213, -1)
+        Me.MenuItem213.Index = 1
+        Me.MenuItem213.Text = "Lista productos"
         '
         'MenuInventarios
         '
@@ -3066,7 +3091,7 @@ Public Class MainForm
         'StatusBar1
         '
         Me.StatusBar1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.StatusBar1.Location = New System.Drawing.Point(0, 449)
+        Me.StatusBar1.Location = New System.Drawing.Point(0, 428)
         Me.StatusBar1.Name = "StatusBar1"
         Me.StatusBar1.Panels.AddRange(New System.Windows.Forms.StatusBarPanel() {Me.StatusBarPanel1, Me.StatusBarPanel4, Me.StatusBarPanel2, Me.StatusBarPanel3, Me.StatusBarPanel5, Me.sbpTCCompra, Me.sbpTCVenta, Me.sbpVersion})
         Me.StatusBar1.ShowPanels = True
@@ -3124,7 +3149,7 @@ Public Class MainForm
         'sbpVersion
         '
         Me.sbpVersion.Name = "sbpVersion"
-        Me.sbpVersion.Text = "*29Jun2024"
+        Me.sbpVersion.Text = "*06Ago2024"
         Me.sbpVersion.Width = 150
         '
         'ImageList1
@@ -3490,7 +3515,7 @@ Public Class MainForm
         '
         Me.AutoScaleBaseSize = New System.Drawing.Size(5, 13)
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(1480, 463)
+        Me.ClientSize = New System.Drawing.Size(1480, 442)
         Me.Controls.Add(Me.ToolStrip1)
         Me.Controls.Add(Me.PictureBoxFondo)
         Me.Controls.Add(Me.StatusBar1)
@@ -3535,6 +3560,7 @@ Public Class MainForm
             Me.mnClinica.Visible = False
         End If
     End Sub
+
     Private Sub Puede_ver_reporte_clinica()
         Dim puede As String
         Try
@@ -6084,6 +6110,19 @@ Contador:
 
     Private Sub MenuItem211_Click(sender As Object, e As EventArgs) Handles MenuItem211.Click
         Dim frm As New frmReporteVisitaClienteMascota
+        frm.MdiParent = Me
+        frm.Show()
+    End Sub
+
+    Private Sub MenuItem213_Click(sender As Object, e As EventArgs) Handles MenuItem213.Click
+        Dim frm As New frmListaProductosPagina
+        frm.usua = Me.usua
+        frm.MdiParent = Me
+        frm.Show()
+    End Sub
+
+    Private Sub MenuItem214_Click(sender As Object, e As EventArgs) Handles MenuItem214.Click
+        Dim frm As New frmListaPedidos
         frm.MdiParent = Me
         frm.Show()
     End Sub

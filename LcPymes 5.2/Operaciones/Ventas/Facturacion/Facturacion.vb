@@ -384,15 +384,15 @@ Public Class Facturacion
     <System.Diagnostics.DebuggerStepThrough()> Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Facturacion))
-        Dim ColumnFilterInfo19 As DevExpress.XtraGrid.Columns.ColumnFilterInfo = New DevExpress.XtraGrid.Columns.ColumnFilterInfo()
-        Dim ColumnFilterInfo20 As DevExpress.XtraGrid.Columns.ColumnFilterInfo = New DevExpress.XtraGrid.Columns.ColumnFilterInfo()
-        Dim ColumnFilterInfo21 As DevExpress.XtraGrid.Columns.ColumnFilterInfo = New DevExpress.XtraGrid.Columns.ColumnFilterInfo()
-        Dim ColumnFilterInfo22 As DevExpress.XtraGrid.Columns.ColumnFilterInfo = New DevExpress.XtraGrid.Columns.ColumnFilterInfo()
-        Dim ColumnFilterInfo23 As DevExpress.XtraGrid.Columns.ColumnFilterInfo = New DevExpress.XtraGrid.Columns.ColumnFilterInfo()
-        Dim ColumnFilterInfo24 As DevExpress.XtraGrid.Columns.ColumnFilterInfo = New DevExpress.XtraGrid.Columns.ColumnFilterInfo()
-        Dim ColumnFilterInfo25 As DevExpress.XtraGrid.Columns.ColumnFilterInfo = New DevExpress.XtraGrid.Columns.ColumnFilterInfo()
-        Dim ColumnFilterInfo26 As DevExpress.XtraGrid.Columns.ColumnFilterInfo = New DevExpress.XtraGrid.Columns.ColumnFilterInfo()
-        Dim ColumnFilterInfo27 As DevExpress.XtraGrid.Columns.ColumnFilterInfo = New DevExpress.XtraGrid.Columns.ColumnFilterInfo()
+        Dim ColumnFilterInfo1 As DevExpress.XtraGrid.Columns.ColumnFilterInfo = New DevExpress.XtraGrid.Columns.ColumnFilterInfo()
+        Dim ColumnFilterInfo2 As DevExpress.XtraGrid.Columns.ColumnFilterInfo = New DevExpress.XtraGrid.Columns.ColumnFilterInfo()
+        Dim ColumnFilterInfo3 As DevExpress.XtraGrid.Columns.ColumnFilterInfo = New DevExpress.XtraGrid.Columns.ColumnFilterInfo()
+        Dim ColumnFilterInfo4 As DevExpress.XtraGrid.Columns.ColumnFilterInfo = New DevExpress.XtraGrid.Columns.ColumnFilterInfo()
+        Dim ColumnFilterInfo5 As DevExpress.XtraGrid.Columns.ColumnFilterInfo = New DevExpress.XtraGrid.Columns.ColumnFilterInfo()
+        Dim ColumnFilterInfo6 As DevExpress.XtraGrid.Columns.ColumnFilterInfo = New DevExpress.XtraGrid.Columns.ColumnFilterInfo()
+        Dim ColumnFilterInfo7 As DevExpress.XtraGrid.Columns.ColumnFilterInfo = New DevExpress.XtraGrid.Columns.ColumnFilterInfo()
+        Dim ColumnFilterInfo8 As DevExpress.XtraGrid.Columns.ColumnFilterInfo = New DevExpress.XtraGrid.Columns.ColumnFilterInfo()
+        Dim ColumnFilterInfo9 As DevExpress.XtraGrid.Columns.ColumnFilterInfo = New DevExpress.XtraGrid.Columns.ColumnFilterInfo()
         Me.txtCostoBase = New System.Windows.Forms.TextBox()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.btnBuscarFicha = New System.Windows.Forms.Button()
@@ -2828,7 +2828,7 @@ Public Class Facturacion
         '
         Me.colCodigo.Caption = "Codigo"
         Me.colCodigo.FieldName = "CodArticulo"
-        Me.colCodigo.FilterInfo = ColumnFilterInfo19
+        Me.colCodigo.FilterInfo = ColumnFilterInfo1
         Me.colCodigo.Name = "colCodigo"
         Me.colCodigo.Options = CType((((DevExpress.XtraGrid.Columns.ColumnOptions.CanResized Or DevExpress.XtraGrid.Columns.ColumnOptions.CanFocused) _
             Or DevExpress.XtraGrid.Columns.ColumnOptions.ShowInCustomizationForm) _
@@ -2840,7 +2840,7 @@ Public Class Facturacion
         '
         Me.colDescripcion.Caption = "Descripcion"
         Me.colDescripcion.FieldName = "Descripcion"
-        Me.colDescripcion.FilterInfo = ColumnFilterInfo20
+        Me.colDescripcion.FilterInfo = ColumnFilterInfo2
         Me.colDescripcion.Name = "colDescripcion"
         Me.colDescripcion.Options = CType(((((DevExpress.XtraGrid.Columns.ColumnOptions.CanResized Or DevExpress.XtraGrid.Columns.ColumnOptions.[ReadOnly]) _
             Or DevExpress.XtraGrid.Columns.ColumnOptions.CanFocused) _
@@ -2855,7 +2855,7 @@ Public Class Facturacion
         Me.colCantidad.DisplayFormat.FormatString = "#,#0.00"
         Me.colCantidad.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric
         Me.colCantidad.FieldName = "Cantidad"
-        Me.colCantidad.FilterInfo = ColumnFilterInfo21
+        Me.colCantidad.FilterInfo = ColumnFilterInfo3
         Me.colCantidad.Name = "colCantidad"
         Me.colCantidad.Options = CType((((DevExpress.XtraGrid.Columns.ColumnOptions.[ReadOnly] Or DevExpress.XtraGrid.Columns.ColumnOptions.CanFocused) _
             Or DevExpress.XtraGrid.Columns.ColumnOptions.ShowInCustomizationForm) _
@@ -2869,7 +2869,7 @@ Public Class Facturacion
         Me.colPrecio_Unit.DisplayFormat.FormatString = "#,#0.00"
         Me.colPrecio_Unit.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric
         Me.colPrecio_Unit.FieldName = "Precio_Unit"
-        Me.colPrecio_Unit.FilterInfo = ColumnFilterInfo22
+        Me.colPrecio_Unit.FilterInfo = ColumnFilterInfo4
         Me.colPrecio_Unit.Name = "colPrecio_Unit"
         Me.colPrecio_Unit.Options = CType((((DevExpress.XtraGrid.Columns.ColumnOptions.[ReadOnly] Or DevExpress.XtraGrid.Columns.ColumnOptions.CanFocused) _
             Or DevExpress.XtraGrid.Columns.ColumnOptions.ShowInCustomizationForm) _
@@ -2883,7 +2883,7 @@ Public Class Facturacion
         Me.colMonto_Descuento.DisplayFormat.FormatString = "#,#0.00"
         Me.colMonto_Descuento.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric
         Me.colMonto_Descuento.FieldName = "Descuento"
-        Me.colMonto_Descuento.FilterInfo = ColumnFilterInfo23
+        Me.colMonto_Descuento.FilterInfo = ColumnFilterInfo5
         Me.colMonto_Descuento.Name = "colMonto_Descuento"
         Me.colMonto_Descuento.Options = CType((((DevExpress.XtraGrid.Columns.ColumnOptions.[ReadOnly] Or DevExpress.XtraGrid.Columns.ColumnOptions.CanFocused) _
             Or DevExpress.XtraGrid.Columns.ColumnOptions.ShowInCustomizationForm) _
@@ -2899,7 +2899,7 @@ Public Class Facturacion
         Me.colMonto_Impuesto.DisplayFormat.FormatString = "#,#0.00"
         Me.colMonto_Impuesto.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric
         Me.colMonto_Impuesto.FieldName = "Monto_Impuesto"
-        Me.colMonto_Impuesto.FilterInfo = ColumnFilterInfo24
+        Me.colMonto_Impuesto.FilterInfo = ColumnFilterInfo6
         Me.colMonto_Impuesto.Name = "colMonto_Impuesto"
         Me.colMonto_Impuesto.Options = CType((((DevExpress.XtraGrid.Columns.ColumnOptions.[ReadOnly] Or DevExpress.XtraGrid.Columns.ColumnOptions.CanFocused) _
             Or DevExpress.XtraGrid.Columns.ColumnOptions.ShowInCustomizationForm) _
@@ -2914,7 +2914,7 @@ Public Class Facturacion
         Me.colSubtotalGravado.DisplayFormat.FormatString = "#,#0.00"
         Me.colSubtotalGravado.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric
         Me.colSubtotalGravado.FieldName = "SubtotalGravado"
-        Me.colSubtotalGravado.FilterInfo = ColumnFilterInfo25
+        Me.colSubtotalGravado.FilterInfo = ColumnFilterInfo7
         Me.colSubtotalGravado.Name = "colSubtotalGravado"
         Me.colSubtotalGravado.Options = CType((((DevExpress.XtraGrid.Columns.ColumnOptions.[ReadOnly] Or DevExpress.XtraGrid.Columns.ColumnOptions.CanFocused) _
             Or DevExpress.XtraGrid.Columns.ColumnOptions.ShowInCustomizationForm) _
@@ -2928,7 +2928,7 @@ Public Class Facturacion
         Me.colSubTotalExcento.DisplayFormat.FormatString = "#,#0.00"
         Me.colSubTotalExcento.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric
         Me.colSubTotalExcento.FieldName = "SubTotalExcento"
-        Me.colSubTotalExcento.FilterInfo = ColumnFilterInfo26
+        Me.colSubTotalExcento.FilterInfo = ColumnFilterInfo8
         Me.colSubTotalExcento.Name = "colSubTotalExcento"
         Me.colSubTotalExcento.Options = CType((((DevExpress.XtraGrid.Columns.ColumnOptions.[ReadOnly] Or DevExpress.XtraGrid.Columns.ColumnOptions.CanFocused) _
             Or DevExpress.XtraGrid.Columns.ColumnOptions.ShowInCustomizationForm) _
@@ -2942,7 +2942,7 @@ Public Class Facturacion
         Me.colSubTotal.DisplayFormat.FormatString = "#,#0.00"
         Me.colSubTotal.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric
         Me.colSubTotal.FieldName = "SubTotal"
-        Me.colSubTotal.FilterInfo = ColumnFilterInfo27
+        Me.colSubTotal.FilterInfo = ColumnFilterInfo9
         Me.colSubTotal.Name = "colSubTotal"
         Me.colSubTotal.Options = CType((((DevExpress.XtraGrid.Columns.ColumnOptions.[ReadOnly] Or DevExpress.XtraGrid.Columns.ColumnOptions.CanFocused) _
             Or DevExpress.XtraGrid.Columns.ColumnOptions.ShowInCustomizationForm) _
@@ -6399,6 +6399,7 @@ Fin:
             db.AddParametro("@Observaciones", _Observaciones)
             db.AddParametro("@PrecioUnid", _PrecioUnid)
             db.AddParametro("@CantidadPuntos", _CantidadSolicitud)
+            db.AddParametro("@IdSolicitara", 1) 'pordefecto se envia al codigo 1
             db.Ejecutar("Insertar_PedidoBodega")
         End If
     End Sub
@@ -6469,9 +6470,14 @@ Fin:
         End If
         Return False
     End Function
+
     Private Function ValidaPrecio() As Boolean
 
         If IsClinica() = True Then
+            Return True
+        End If
+
+        If tipoprecio > 1 Then
             Return True
         End If
 
@@ -6687,6 +6693,16 @@ Fin:
             If nombre_cliente = "CLIENTE DE CONTADO" Or nombre_cliente.IndexOf("CLIENTE") > 0 Or nombre_cliente.IndexOf("CONTADO") > 0 Or nombre_cliente.Length < 3 Then
                 MsgBox("Debe ingresar un nombre en la factura.", MsgBoxStyle.Critical, Me.Text)
                 Exit Sub
+            End If
+        End If
+
+        If IsClinica() = True Then
+            If nombre_cliente.IndexOf("SEDO") > 0 Then
+                If PV = True Then
+                    MsgBox("La factura debe ser Factura Electronica" & vbCrLf _
+                           & " Precione las teclas (F2 o F4 o F6)", MsgBoxStyle.Information, Me.Text)
+                    Exit Sub
+                End If
             End If
         End If
 
@@ -7027,20 +7043,7 @@ Fin:
                     End If
                 End If
 
-                If Me.AplicaCambioenCaja = True Then
-                    Dim db As New OBSoluciones.SQL.Sentencias(CadenaConexionSeePOS)
-                    db.Ejecutar("Update Preventas set Id_FacturaRemplaza = " & Me.IdFacturaRemplaza & ", Ficha = " & Me.txtFicha.Text & ", Frecuente = " & IIf(Me.ckFrecuente.Checked = False, 0, 1) & " where Id = " & id, CommandType.Text)
-                    Me.txtFicha.Text = ""
-                    Try
-                        If Me.cantidad_cupon > 0 Then
-                            db.Ejecutar("Update Preventas set Cupones = " & Me.cantidad_cupon & " Where Id = " & id, CommandType.Text)
-                        End If
-                    Catch ex As Exception
-                    End Try
-                Else
-                    Dim db As New OBSoluciones.SQL.Sentencias(CadenaConexionSeePOS)
-                    db.Ejecutar("Update ventas set Id_FacturaRemplaza = " & Me.IdFacturaRemplaza & ", Frecuente = " & IIf(Me.ckFrecuente.Checked = False, 0, 1) & " where id = " & id, CommandType.Text)
-                End If
+
 
                 If Tipo = "CRE" Then
                     If Me.AplicaCambioenCaja = True Then
@@ -7049,6 +7052,23 @@ Fin:
                         db.AddParametro("@PuntodeVenta", Me.GetPuntoVenta)
                         db.Ejecutar("PreVenta_Factura")
                     End If
+                Else
+
+                    If Me.AplicaCambioenCaja = True Then
+                        Dim db As New OBSoluciones.SQL.Sentencias(CadenaConexionSeePOS)
+                        db.Ejecutar("Update Preventas set Id_FacturaRemplaza = " & Me.IdFacturaRemplaza & ", Ficha = " & Me.txtFicha.Text & ", Frecuente = " & IIf(Me.ckFrecuente.Checked = False, 0, 1) & " where Id = " & id, CommandType.Text)
+                        Me.txtFicha.Text = ""
+                        Try
+                            If Me.cantidad_cupon > 0 Then
+                                db.Ejecutar("Update Preventas set Cupones = " & Me.cantidad_cupon & " Where Id = " & id, CommandType.Text)
+                            End If
+                        Catch ex As Exception
+                        End Try
+                    Else
+                        Dim db As New OBSoluciones.SQL.Sentencias(CadenaConexionSeePOS)
+                        db.Ejecutar("Update ventas set Id_FacturaRemplaza = " & Me.IdFacturaRemplaza & ", Frecuente = " & IIf(Me.ckFrecuente.Checked = False, 0, 1) & " where id = " & id, CommandType.Text)
+                    End If
+
                 End If
 
                 Me.ToolBar1.Buttons(4).Enabled = True
@@ -8293,7 +8313,6 @@ Fin:
                     End If
 
                 End If
-
 
             Else 'se dio el boton de cancelar o no se selecciono ninguno
 

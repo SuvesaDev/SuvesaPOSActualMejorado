@@ -1,0 +1,7 @@
+﻿
+Hora Inicial: 31/07/2024 08:50:42 am
+Tipo de procedimiento: Ventas
+Cantidad Albaranes: 0
+Se escribió en la bitacora: EMILCE ANGULO
+Hora Final: 31/07/2024 08:50:59 am
+Tiempo Empleado: 00:00:17.29

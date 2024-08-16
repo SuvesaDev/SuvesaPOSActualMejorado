@@ -1,0 +1,7 @@
+﻿
+Hora Inicial: 16/08/2024 03:55:44 pm
+Tipo de procedimiento: Ventas
+Cantidad Albaranes: 0
+Se escribió en la bitacora: SILVIA MENDOZA
+Hora Final: 16/08/2024 03:55:59 pm
+Tiempo Empleado: 00:00:15.28

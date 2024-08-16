@@ -193,10 +193,10 @@ Public Class frmConsultaAlbaran
 
         'viewDatos
 
-        If Me.ckFiltrarxFecha.Checked = False And Me.txtMascota.Text = "" And Me.txtCliente.Text = "" Then
-            MsgBox("Ingrese el nombre del cliente o de la mascotas", MsgBoxStyle.Exclamation, Me.Text)
-            Exit Sub
-        End If
+        'If Me.ckFiltrarxFecha.Checked = False And Me.txtMascota.Text = "" And Me.txtCliente.Text = "" Then
+        '    MsgBox("Ingrese el nombre del cliente o de la mascotas", MsgBoxStyle.Exclamation, Me.Text)
+        '    Exit Sub
+        'End If
 
         Dim dt As New DataTable
         Dim strSQL As String = "Select top 100 Id, Identificacion, Cliente, Mascota, Fecha, Subtotal, Descuento, Impuesto, Total, Facturado, UsuarioClinica as Responsable, cast(0 as bit) as Facturar, cast(0 as bit) as Extranjero from clinica.dbo.viewAlbaran"
@@ -446,7 +446,7 @@ Public Class frmConsultaAlbaran
     Private esTermica As Boolean = False
     Private Sub frmConsultaAlbaran_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Me.dtpDesde.Value = CDate("01/" & Date.Now.Month & "/" & Date.Now.Year)
-        'Me.CargarAlbaranes()
+        Me.CargarAlbaranes()
 
         Try
             If GetSetting("SeeSoft", "SeePOS", "estermica") = "" Then
@@ -459,7 +459,7 @@ Public Class frmConsultaAlbaran
             SaveSetting("SeeSoft", "seepos", "estermica", "false")
             esTermica = False
         End Try
-
+        Me.Timer1.Start()
     End Sub
 
     Private Sub NuevoConsultaAlbaran()
@@ -567,7 +567,9 @@ Public Class frmConsultaAlbaran
     End Sub
 
     Private Sub btnDevoluciones_Click(sender As Object, e As EventArgs) Handles btnDevoluciones.Click
-        CargarForm(New MovimientoCaja(Me.Usuario))
+        Dim frm As New MovimientoCaja(Me.Usuario)
+        frm.ObligaAnticipo = True
+        CargarForm(frm)
     End Sub
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
@@ -645,4 +647,34 @@ Public Class frmConsultaAlbaran
         Me.dtpHasta.Enabled = Me.ckFiltrarxFecha.Checked
     End Sub
 
+    Private Sub btnPedidoWeb_Click(sender As Object, e As EventArgs) Handles btnPedidoWeb.Click
+        Dim frm As New frmListaPedidos
+        frm.SoloLectura = True
+        frm.ShowDialog()
+    End Sub
+
+    Private texto As String = "Pedido Web"
+    Private Async Sub CargarPedidos()
+        Dim cls As New TiendaWeb.apiTienda
+        Dim datos As System.Collections.Generic.List(Of TiendaWeb.Pedidos) = Await cls.AllPedidos(1, "processing")
+        If IsNothing(datos) Then
+            Me.btnPedidoWeb.Text = texto
+            Me.btnPedidoWeb.BackColor = System.Drawing.SystemColors.Control
+            Me.btnPedidoWeb.ForeColor = Color.Black
+        Else
+            If datos.Count > 0 Then
+                Me.btnPedidoWeb.Text = texto + " (" & datos.Count & ") "
+                Me.btnPedidoWeb.BackColor = Color.RoyalBlue
+                Me.btnPedidoWeb.ForeColor = Color.Yellow
+            Else
+                Me.btnPedidoWeb.Text = texto
+                Me.btnPedidoWeb.BackColor = System.Drawing.SystemColors.Control
+                Me.btnPedidoWeb.ForeColor = Color.Black
+            End If
+        End If
+    End Sub
+
+    Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
+        Me.CargarPedidos()
+    End Sub
 End Class

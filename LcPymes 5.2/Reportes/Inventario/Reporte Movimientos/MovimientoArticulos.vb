@@ -6,24 +6,33 @@ Public Class MovimientoArticulos
 
 #Region "Variables"
     Private cConexion As New Conexion
-    Friend WithEvents AdvBandedGridView1 As DevExpress.XtraGrid.Views.BandedGrid.AdvBandedGridView
-    Friend WithEvents GridBand1 As DevExpress.XtraGrid.Views.BandedGrid.GridBand
-    Friend WithEvents colFactura As DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn
-    Friend WithEvents colTipo As DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn
-    Friend WithEvents colFecha As DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn
-    Friend WithEvents colCliente As DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn
-    Friend WithEvents colCantidad As DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn
-    Friend WithEvents colPrecio As DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn
-    Friend WithEvents colId As DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn
-    Friend WithEvents AdvBandedGridView2 As DevExpress.XtraGrid.Views.BandedGrid.AdvBandedGridView
-    Friend WithEvents GridBand2 As DevExpress.XtraGrid.Views.BandedGrid.GridBand
-    Friend WithEvents colFacturaCompra As DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn
-    Friend WithEvents colTipoCompra As DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn
-    Friend WithEvents colFechaCompra As DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn
-    Friend WithEvents colProveedor As DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn
-    Friend WithEvents colCantidadCompra As DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn
-    Friend WithEvents colPrecioCompra As DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn
-    Friend WithEvents colIdCompra As DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn
+    Friend WithEvents viewDatosVentas As System.Windows.Forms.DataGridView
+    Friend WithEvents MovimientoArticuloVentasBindingSource As System.Windows.Forms.BindingSource
+    Friend WithEvents viewDatosCompras As System.Windows.Forms.DataGridView
+    Friend WithEvents MovimientoArticulosCompraBindingSource As System.Windows.Forms.BindingSource
+    Friend WithEvents DsAumento As LcPymes_5._2.dsAumento
+    Friend WithEvents DsAumentoBindingSource As System.Windows.Forms.BindingSource
+    Friend WithEvents FacturaDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents TipoCompraDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents FechaDataGridViewTextBoxColumn1 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents NombreDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents CodigoDataGridViewTextBoxColumn1 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents CodArticuloDataGridViewTextBoxColumn1 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents CantidadDataGridViewTextBoxColumn1 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents TotalDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents ImpuestoPDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents IdCompraDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents NumFacturaDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents TipoDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents FechaDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents NombreClienteDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents CodigoDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents CodArticuloDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DescripcionDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents CantidadDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents PrecioUnitDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents ImpuestoDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents IdDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
     Private sqlConexion As SqlConnection
 #End Region
 
@@ -60,8 +69,6 @@ Public Class MovimientoArticulos
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents txtCodigo As DevExpress.XtraEditors.TextEdit
     Friend WithEvents txtCodArticulo As DevExpress.XtraEditors.TextEdit
-    Friend WithEvents GridCompras As DevExpress.XtraGrid.GridControl
-    Friend WithEvents GridVentas As DevExpress.XtraGrid.GridControl
     Friend WithEvents AdapterVentas As System.Data.SqlClient.SqlDataAdapter
     Friend WithEvents SqlSelectCommand1 As System.Data.SqlClient.SqlCommand
     Friend WithEvents SqlConnection1 As System.Data.SqlClient.SqlConnection
@@ -82,21 +89,14 @@ Public Class MovimientoArticulos
     Friend WithEvents Label6 As System.Windows.Forms.Label
     Friend WithEvents SimpleButton1 As DevExpress.XtraEditors.SimpleButton
     <System.Diagnostics.DebuggerStepThrough()> Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(MovimientoArticulos))
-        Dim ColumnFilterInfo8 As DevExpress.XtraGrid.Columns.ColumnFilterInfo = New DevExpress.XtraGrid.Columns.ColumnFilterInfo()
-        Dim ColumnFilterInfo9 As DevExpress.XtraGrid.Columns.ColumnFilterInfo = New DevExpress.XtraGrid.Columns.ColumnFilterInfo()
-        Dim ColumnFilterInfo10 As DevExpress.XtraGrid.Columns.ColumnFilterInfo = New DevExpress.XtraGrid.Columns.ColumnFilterInfo()
-        Dim ColumnFilterInfo11 As DevExpress.XtraGrid.Columns.ColumnFilterInfo = New DevExpress.XtraGrid.Columns.ColumnFilterInfo()
-        Dim ColumnFilterInfo12 As DevExpress.XtraGrid.Columns.ColumnFilterInfo = New DevExpress.XtraGrid.Columns.ColumnFilterInfo()
-        Dim ColumnFilterInfo13 As DevExpress.XtraGrid.Columns.ColumnFilterInfo = New DevExpress.XtraGrid.Columns.ColumnFilterInfo()
-        Dim ColumnFilterInfo14 As DevExpress.XtraGrid.Columns.ColumnFilterInfo = New DevExpress.XtraGrid.Columns.ColumnFilterInfo()
-        Dim ColumnFilterInfo1 As DevExpress.XtraGrid.Columns.ColumnFilterInfo = New DevExpress.XtraGrid.Columns.ColumnFilterInfo()
-        Dim ColumnFilterInfo2 As DevExpress.XtraGrid.Columns.ColumnFilterInfo = New DevExpress.XtraGrid.Columns.ColumnFilterInfo()
-        Dim ColumnFilterInfo3 As DevExpress.XtraGrid.Columns.ColumnFilterInfo = New DevExpress.XtraGrid.Columns.ColumnFilterInfo()
-        Dim ColumnFilterInfo4 As DevExpress.XtraGrid.Columns.ColumnFilterInfo = New DevExpress.XtraGrid.Columns.ColumnFilterInfo()
-        Dim ColumnFilterInfo5 As DevExpress.XtraGrid.Columns.ColumnFilterInfo = New DevExpress.XtraGrid.Columns.ColumnFilterInfo()
-        Dim ColumnFilterInfo6 As DevExpress.XtraGrid.Columns.ColumnFilterInfo = New DevExpress.XtraGrid.Columns.ColumnFilterInfo()
-        Dim ColumnFilterInfo7 As DevExpress.XtraGrid.Columns.ColumnFilterInfo = New DevExpress.XtraGrid.Columns.ColumnFilterInfo()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.DT_Inicio = New DevExpress.XtraEditors.DateEdit()
@@ -114,47 +114,56 @@ Public Class MovimientoArticulos
         Me.AdapterCompras = New System.Data.SqlClient.SqlDataAdapter()
         Me.SqlSelectCommand2 = New System.Data.SqlClient.SqlCommand()
         Me.GBCompras = New System.Windows.Forms.GroupBox()
-        Me.GridCompras = New DevExpress.XtraGrid.GridControl()
+        Me.viewDatosCompras = New System.Windows.Forms.DataGridView()
+        Me.MovimientoArticulosCompraBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.DsMovimientoArticulos1 = New LcPymes_5._2.DsMovimientoArticulos()
         Me.GBVentas = New System.Windows.Forms.GroupBox()
-        Me.GridVentas = New DevExpress.XtraGrid.GridControl()
-        Me.AdvBandedGridView1 = New DevExpress.XtraGrid.Views.BandedGrid.AdvBandedGridView()
-        Me.GridBand1 = New DevExpress.XtraGrid.Views.BandedGrid.GridBand()
-        Me.colFactura = New DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn()
-        Me.colTipo = New DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn()
-        Me.colFecha = New DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn()
-        Me.colCliente = New DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn()
-        Me.colCantidad = New DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn()
-        Me.colPrecio = New DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn()
-        Me.colId = New DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn()
+        Me.viewDatosVentas = New System.Windows.Forms.DataGridView()
+        Me.MovimientoArticuloVentasBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.txtTotalCompra = New DevExpress.XtraEditors.TextEdit()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.txtTotalVendido = New DevExpress.XtraEditors.TextEdit()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.SimpleButton1 = New DevExpress.XtraEditors.SimpleButton()
-        Me.AdvBandedGridView2 = New DevExpress.XtraGrid.Views.BandedGrid.AdvBandedGridView()
-        Me.colFacturaCompra = New DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn()
-        Me.colTipoCompra = New DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn()
-        Me.colFechaCompra = New DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn()
-        Me.colProveedor = New DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn()
-        Me.colCantidadCompra = New DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn()
-        Me.colPrecioCompra = New DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn()
-        Me.colIdCompra = New DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn()
-        Me.GridBand2 = New DevExpress.XtraGrid.Views.BandedGrid.GridBand()
+        Me.DsAumento = New LcPymes_5._2.dsAumento()
+        Me.DsAumentoBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.FacturaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.TipoCompraDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.FechaDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.NombreDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.CodigoDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.CodArticuloDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.CantidadDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.TotalDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ImpuestoPDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.IdCompraDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.NumFacturaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.TipoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.FechaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.NombreClienteDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.CodigoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.CodArticuloDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DescripcionDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.CantidadDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.PrecioUnitDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ImpuestoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.IdDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         CType(Me.DT_Inicio.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DT_Final.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtCodigo.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtCodArticulo.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtDescripcion.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GBCompras.SuspendLayout()
-        CType(Me.GridCompras, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.viewDatosCompras, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.MovimientoArticulosCompraBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DsMovimientoArticulos1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GBVentas.SuspendLayout()
-        CType(Me.GridVentas, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.AdvBandedGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.viewDatosVentas, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.MovimientoArticuloVentasBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtTotalCompra.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtTotalVendido.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.AdvBandedGridView2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DsAumento, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DsAumentoBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'ImageList
@@ -287,8 +296,7 @@ Public Class MovimientoArticulos
         '
         'SqlConnection1
         '
-        Me.SqlConnection1.ConnectionString = "workstation id=OSCAR;packet size=4096;integrated security=SSPI;data source=OSCAR;" & _
-    "persist security info=False;initial catalog=SeePos"
+        Me.SqlConnection1.ConnectionString = "Data Source=guanaserver; Initial Catalog=SEEPOS; Integrated Security=true;"
         Me.SqlConnection1.FireInfoMessageEventOnUserErrors = False
         '
         'Label2
@@ -354,7 +362,7 @@ Public Class MovimientoArticulos
         Me.GBCompras.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.GBCompras.BackColor = System.Drawing.Color.Transparent
-        Me.GBCompras.Controls.Add(Me.GridCompras)
+        Me.GBCompras.Controls.Add(Me.viewDatosCompras)
         Me.GBCompras.Location = New System.Drawing.Point(8, 80)
         Me.GBCompras.Name = "GBCompras"
         Me.GBCompras.Size = New System.Drawing.Size(736, 160)
@@ -362,23 +370,32 @@ Public Class MovimientoArticulos
         Me.GBCompras.TabStop = False
         Me.GBCompras.Text = "Compras"
         '
-        'GridCompras
+        'viewDatosCompras
         '
-        Me.GridCompras.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.GridCompras.DataMember = "MovimientoArticulosCompra"
-        Me.GridCompras.DataSource = Me.DsMovimientoArticulos1
+        Me.viewDatosCompras.AllowUserToAddRows = False
+        Me.viewDatosCompras.AllowUserToDeleteRows = False
+        Me.viewDatosCompras.AllowUserToResizeColumns = False
+        Me.viewDatosCompras.AllowUserToResizeRows = False
+        Me.viewDatosCompras.AutoGenerateColumns = False
+        Me.viewDatosCompras.BackgroundColor = System.Drawing.Color.White
+        Me.viewDatosCompras.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.viewDatosCompras.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.FacturaDataGridViewTextBoxColumn, Me.TipoCompraDataGridViewTextBoxColumn, Me.FechaDataGridViewTextBoxColumn1, Me.NombreDataGridViewTextBoxColumn, Me.CodigoDataGridViewTextBoxColumn1, Me.CodArticuloDataGridViewTextBoxColumn1, Me.CantidadDataGridViewTextBoxColumn1, Me.TotalDataGridViewTextBoxColumn, Me.ImpuestoPDataGridViewTextBoxColumn, Me.IdCompraDataGridViewTextBoxColumn})
+        Me.viewDatosCompras.DataSource = Me.MovimientoArticulosCompraBindingSource
+        Me.viewDatosCompras.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.viewDatosCompras.Location = New System.Drawing.Point(3, 16)
+        Me.viewDatosCompras.MultiSelect = False
+        Me.viewDatosCompras.Name = "viewDatosCompras"
+        Me.viewDatosCompras.ReadOnly = True
+        Me.viewDatosCompras.RowHeadersVisible = False
+        Me.viewDatosCompras.RowTemplate.Height = 25
+        Me.viewDatosCompras.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.viewDatosCompras.Size = New System.Drawing.Size(730, 141)
+        Me.viewDatosCompras.TabIndex = 0
         '
+        'MovimientoArticulosCompraBindingSource
         '
-        '
-        Me.GridCompras.EmbeddedNavigator.Name = ""
-        Me.GridCompras.Location = New System.Drawing.Point(8, 16)
-        Me.GridCompras.MainView = Me.AdvBandedGridView2
-        Me.GridCompras.Name = "GridCompras"
-        Me.GridCompras.Size = New System.Drawing.Size(720, 136)
-        Me.GridCompras.TabIndex = 81
-        Me.GridCompras.Text = "Compras"
+        Me.MovimientoArticulosCompraBindingSource.DataMember = "MovimientoArticulosCompra"
+        Me.MovimientoArticulosCompraBindingSource.DataSource = Me.DsMovimientoArticulos1
         '
         'DsMovimientoArticulos1
         '
@@ -391,7 +408,7 @@ Public Class MovimientoArticulos
         Me.GBVentas.Anchor = CType(((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.GBVentas.BackColor = System.Drawing.Color.Transparent
-        Me.GBVentas.Controls.Add(Me.GridVentas)
+        Me.GBVentas.Controls.Add(Me.viewDatosVentas)
         Me.GBVentas.Location = New System.Drawing.Point(8, 256)
         Me.GBVentas.Name = "GBVentas"
         Me.GBVentas.Size = New System.Drawing.Size(736, 168)
@@ -399,152 +416,32 @@ Public Class MovimientoArticulos
         Me.GBVentas.TabStop = False
         Me.GBVentas.Text = "Ventas"
         '
-        'GridVentas
+        'viewDatosVentas
         '
-        Me.GridVentas.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.GridVentas.DataMember = "MovimientoArticuloVentas"
-        Me.GridVentas.DataSource = Me.DsMovimientoArticulos1
+        Me.viewDatosVentas.AllowUserToAddRows = False
+        Me.viewDatosVentas.AllowUserToDeleteRows = False
+        Me.viewDatosVentas.AllowUserToResizeColumns = False
+        Me.viewDatosVentas.AllowUserToResizeRows = False
+        Me.viewDatosVentas.AutoGenerateColumns = False
+        Me.viewDatosVentas.BackgroundColor = System.Drawing.Color.White
+        Me.viewDatosVentas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.viewDatosVentas.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.NumFacturaDataGridViewTextBoxColumn, Me.TipoDataGridViewTextBoxColumn, Me.FechaDataGridViewTextBoxColumn, Me.NombreClienteDataGridViewTextBoxColumn, Me.CodigoDataGridViewTextBoxColumn, Me.CodArticuloDataGridViewTextBoxColumn, Me.DescripcionDataGridViewTextBoxColumn, Me.CantidadDataGridViewTextBoxColumn, Me.PrecioUnitDataGridViewTextBoxColumn, Me.ImpuestoDataGridViewTextBoxColumn, Me.IdDataGridViewTextBoxColumn})
+        Me.viewDatosVentas.DataSource = Me.MovimientoArticuloVentasBindingSource
+        Me.viewDatosVentas.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.viewDatosVentas.Location = New System.Drawing.Point(3, 16)
+        Me.viewDatosVentas.MultiSelect = False
+        Me.viewDatosVentas.Name = "viewDatosVentas"
+        Me.viewDatosVentas.ReadOnly = True
+        Me.viewDatosVentas.RowHeadersVisible = False
+        Me.viewDatosVentas.RowTemplate.Height = 25
+        Me.viewDatosVentas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.viewDatosVentas.Size = New System.Drawing.Size(730, 149)
+        Me.viewDatosVentas.TabIndex = 0
         '
+        'MovimientoArticuloVentasBindingSource
         '
-        '
-        Me.GridVentas.EmbeddedNavigator.Name = ""
-        Me.GridVentas.Location = New System.Drawing.Point(8, 16)
-        Me.GridVentas.MainView = Me.AdvBandedGridView1
-        Me.GridVentas.Name = "GridVentas"
-        Me.GridVentas.Size = New System.Drawing.Size(720, 144)
-        Me.GridVentas.TabIndex = 82
-        Me.GridVentas.Text = "Ventas"
-        '
-        'AdvBandedGridView1
-        '
-        Me.AdvBandedGridView1.Bands.AddRange(New DevExpress.XtraGrid.Views.BandedGrid.GridBand() {Me.GridBand1})
-        Me.AdvBandedGridView1.Columns.AddRange(New DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn() {Me.colFactura, Me.colTipo, Me.colFecha, Me.colCliente, Me.colCantidad, Me.colPrecio, Me.colId})
-        Me.AdvBandedGridView1.Name = "AdvBandedGridView1"
-        Me.AdvBandedGridView1.OptionsView.ShowGroupedColumns = False
-        Me.AdvBandedGridView1.OptionsView.ShowGroupPanel = False
-        '
-        'GridBand1
-        '
-        Me.GridBand1.Caption = "GridBand1"
-        Me.GridBand1.Columns.Add(Me.colFactura)
-        Me.GridBand1.Columns.Add(Me.colTipo)
-        Me.GridBand1.Columns.Add(Me.colFecha)
-        Me.GridBand1.Columns.Add(Me.colCliente)
-        Me.GridBand1.Columns.Add(Me.colCantidad)
-        Me.GridBand1.Columns.Add(Me.colPrecio)
-        Me.GridBand1.Name = "GridBand1"
-        Me.GridBand1.Width = 706
-        '
-        'colFactura
-        '
-        Me.colFactura.Caption = "Factura"
-        Me.colFactura.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric
-        Me.colFactura.FieldName = "Num_Factura"
-        Me.colFactura.FilterInfo = ColumnFilterInfo8
-        Me.colFactura.Name = "colFactura"
-        Me.colFactura.Options = CType((((((((DevExpress.XtraGrid.Columns.ColumnOptions.CanFiltered Or DevExpress.XtraGrid.Columns.ColumnOptions.CanMoved) _
-            Or DevExpress.XtraGrid.Columns.ColumnOptions.CanGrouped) _
-            Or DevExpress.XtraGrid.Columns.ColumnOptions.CanResized) _
-            Or DevExpress.XtraGrid.Columns.ColumnOptions.CanSorted) _
-            Or DevExpress.XtraGrid.Columns.ColumnOptions.[ReadOnly]) _
-            Or DevExpress.XtraGrid.Columns.ColumnOptions.ShowInCustomizationForm) _
-            Or DevExpress.XtraGrid.Columns.ColumnOptions.NonEditable), DevExpress.XtraGrid.Columns.ColumnOptions)
-        Me.colFactura.Visible = True
-        '
-        'colTipo
-        '
-        Me.colTipo.Caption = "Tipo"
-        Me.colTipo.FieldName = "Tipo"
-        Me.colTipo.FilterInfo = ColumnFilterInfo9
-        Me.colTipo.Name = "colTipo"
-        Me.colTipo.Options = CType((((((((DevExpress.XtraGrid.Columns.ColumnOptions.CanFiltered Or DevExpress.XtraGrid.Columns.ColumnOptions.CanMoved) _
-            Or DevExpress.XtraGrid.Columns.ColumnOptions.CanGrouped) _
-            Or DevExpress.XtraGrid.Columns.ColumnOptions.CanResized) _
-            Or DevExpress.XtraGrid.Columns.ColumnOptions.CanSorted) _
-            Or DevExpress.XtraGrid.Columns.ColumnOptions.[ReadOnly]) _
-            Or DevExpress.XtraGrid.Columns.ColumnOptions.ShowInCustomizationForm) _
-            Or DevExpress.XtraGrid.Columns.ColumnOptions.NonEditable), DevExpress.XtraGrid.Columns.ColumnOptions)
-        Me.colTipo.Visible = True
-        Me.colTipo.Width = 55
-        '
-        'colFecha
-        '
-        Me.colFecha.Caption = "Fecha"
-        Me.colFecha.DisplayFormat.FormatString = "dd/MM/yyyy"
-        Me.colFecha.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime
-        Me.colFecha.FieldName = "Fecha"
-        Me.colFecha.FilterInfo = ColumnFilterInfo10
-        Me.colFecha.Name = "colFecha"
-        Me.colFecha.Options = CType((((((((DevExpress.XtraGrid.Columns.ColumnOptions.CanFiltered Or DevExpress.XtraGrid.Columns.ColumnOptions.CanMoved) _
-            Or DevExpress.XtraGrid.Columns.ColumnOptions.CanGrouped) _
-            Or DevExpress.XtraGrid.Columns.ColumnOptions.CanResized) _
-            Or DevExpress.XtraGrid.Columns.ColumnOptions.CanSorted) _
-            Or DevExpress.XtraGrid.Columns.ColumnOptions.[ReadOnly]) _
-            Or DevExpress.XtraGrid.Columns.ColumnOptions.ShowInCustomizationForm) _
-            Or DevExpress.XtraGrid.Columns.ColumnOptions.NonEditable), DevExpress.XtraGrid.Columns.ColumnOptions)
-        Me.colFecha.Visible = True
-        Me.colFecha.Width = 90
-        '
-        'colCliente
-        '
-        Me.colCliente.Caption = "Cliente"
-        Me.colCliente.FieldName = "Nombre_Cliente"
-        Me.colCliente.FilterInfo = ColumnFilterInfo11
-        Me.colCliente.Name = "colCliente"
-        Me.colCliente.Options = CType((((((((DevExpress.XtraGrid.Columns.ColumnOptions.CanFiltered Or DevExpress.XtraGrid.Columns.ColumnOptions.CanMoved) _
-            Or DevExpress.XtraGrid.Columns.ColumnOptions.CanGrouped) _
-            Or DevExpress.XtraGrid.Columns.ColumnOptions.CanResized) _
-            Or DevExpress.XtraGrid.Columns.ColumnOptions.CanSorted) _
-            Or DevExpress.XtraGrid.Columns.ColumnOptions.[ReadOnly]) _
-            Or DevExpress.XtraGrid.Columns.ColumnOptions.ShowInCustomizationForm) _
-            Or DevExpress.XtraGrid.Columns.ColumnOptions.NonEditable), DevExpress.XtraGrid.Columns.ColumnOptions)
-        Me.colCliente.Visible = True
-        Me.colCliente.Width = 300
-        '
-        'colCantidad
-        '
-        Me.colCantidad.Caption = "Cantidad"
-        Me.colCantidad.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric
-        Me.colCantidad.FieldName = "Cantidad"
-        Me.colCantidad.FilterInfo = ColumnFilterInfo12
-        Me.colCantidad.Name = "colCantidad"
-        Me.colCantidad.Options = CType((((((((DevExpress.XtraGrid.Columns.ColumnOptions.CanFiltered Or DevExpress.XtraGrid.Columns.ColumnOptions.CanMoved) _
-            Or DevExpress.XtraGrid.Columns.ColumnOptions.CanGrouped) _
-            Or DevExpress.XtraGrid.Columns.ColumnOptions.CanResized) _
-            Or DevExpress.XtraGrid.Columns.ColumnOptions.CanSorted) _
-            Or DevExpress.XtraGrid.Columns.ColumnOptions.[ReadOnly]) _
-            Or DevExpress.XtraGrid.Columns.ColumnOptions.ShowInCustomizationForm) _
-            Or DevExpress.XtraGrid.Columns.ColumnOptions.NonEditable), DevExpress.XtraGrid.Columns.ColumnOptions)
-        Me.colCantidad.SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum
-        Me.colCantidad.Visible = True
-        Me.colCantidad.Width = 71
-        '
-        'colPrecio
-        '
-        Me.colPrecio.Caption = "Precio"
-        Me.colPrecio.DisplayFormat.FormatString = "#,##0.00"
-        Me.colPrecio.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric
-        Me.colPrecio.FieldName = "Precio_Unit"
-        Me.colPrecio.FilterInfo = ColumnFilterInfo13
-        Me.colPrecio.Name = "colPrecio"
-        Me.colPrecio.Options = CType((((((((DevExpress.XtraGrid.Columns.ColumnOptions.CanFiltered Or DevExpress.XtraGrid.Columns.ColumnOptions.CanMoved) _
-            Or DevExpress.XtraGrid.Columns.ColumnOptions.CanGrouped) _
-            Or DevExpress.XtraGrid.Columns.ColumnOptions.CanResized) _
-            Or DevExpress.XtraGrid.Columns.ColumnOptions.CanSorted) _
-            Or DevExpress.XtraGrid.Columns.ColumnOptions.[ReadOnly]) _
-            Or DevExpress.XtraGrid.Columns.ColumnOptions.ShowInCustomizationForm) _
-            Or DevExpress.XtraGrid.Columns.ColumnOptions.NonEditable), DevExpress.XtraGrid.Columns.ColumnOptions)
-        Me.colPrecio.Visible = True
-        Me.colPrecio.Width = 115
-        '
-        'colId
-        '
-        Me.colId.Caption = "IdFactura"
-        Me.colId.FieldName = "Id"
-        Me.colId.FilterInfo = ColumnFilterInfo14
-        Me.colId.Name = "colId"
+        Me.MovimientoArticuloVentasBindingSource.DataMember = "MovimientoArticuloVentas"
+        Me.MovimientoArticuloVentasBindingSource.DataSource = Me.DsMovimientoArticulos1
         '
         'txtTotalCompra
         '
@@ -561,9 +458,9 @@ Public Class MovimientoArticulos
         Me.Label5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.ForeColor = System.Drawing.Color.RoyalBlue
-        Me.Label5.Location = New System.Drawing.Point(432, 240)
+        Me.Label5.Location = New System.Drawing.Point(400, 240)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(120, 16)
+        Me.Label5.Size = New System.Drawing.Size(152, 16)
         Me.Label5.TabIndex = 88
         Me.Label5.Text = "Total Comprado:"
         Me.Label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -583,9 +480,9 @@ Public Class MovimientoArticulos
         Me.Label6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.ForeColor = System.Drawing.Color.RoyalBlue
-        Me.Label6.Location = New System.Drawing.Point(432, 432)
+        Me.Label6.Location = New System.Drawing.Point(400, 432)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(120, 16)
+        Me.Label6.Size = New System.Drawing.Size(152, 16)
         Me.Label6.TabIndex = 90
         Me.Label6.Text = "Total Vendido:"
         Me.Label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -599,140 +496,202 @@ Public Class MovimientoArticulos
         Me.SimpleButton1.TabIndex = 91
         Me.SimpleButton1.Text = "Imprimir"
         '
-        'AdvBandedGridView2
+        'DsAumento
         '
-        Me.AdvBandedGridView2.Bands.AddRange(New DevExpress.XtraGrid.Views.BandedGrid.GridBand() {Me.GridBand2})
-        Me.AdvBandedGridView2.Columns.AddRange(New DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn() {Me.colFacturaCompra, Me.colTipoCompra, Me.colFechaCompra, Me.colProveedor, Me.colCantidadCompra, Me.colPrecioCompra, Me.colIdCompra})
-        Me.AdvBandedGridView2.GroupSummary.AddRange(New DevExpress.XtraGrid.GridSummaryItem() {New DevExpress.XtraGrid.GridGroupSummaryItem(DevExpress.Data.SummaryItemType.Sum, "Cantidad", Me.colCantidadCompra, "c", "total c")})
-        Me.AdvBandedGridView2.Name = "AdvBandedGridView2"
-        Me.AdvBandedGridView2.OptionsView.ShowGroupedColumns = False
-        Me.AdvBandedGridView2.OptionsView.ShowGroupPanel = False
+        Me.DsAumento.DataSetName = "dsAumento"
+        Me.DsAumento.Locale = New System.Globalization.CultureInfo("es-CR")
+        Me.DsAumento.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
-        'colFacturaCompra
+        'DsAumentoBindingSource
         '
-        Me.colFacturaCompra.Caption = "Factura"
-        Me.colFacturaCompra.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric
-        Me.colFacturaCompra.FieldName = "Factura"
-        Me.colFacturaCompra.FilterInfo = ColumnFilterInfo1
-        Me.colFacturaCompra.Name = "colFacturaCompra"
-        Me.colFacturaCompra.Options = CType((((((((DevExpress.XtraGrid.Columns.ColumnOptions.CanFiltered Or DevExpress.XtraGrid.Columns.ColumnOptions.CanMoved) _
-            Or DevExpress.XtraGrid.Columns.ColumnOptions.CanGrouped) _
-            Or DevExpress.XtraGrid.Columns.ColumnOptions.CanResized) _
-            Or DevExpress.XtraGrid.Columns.ColumnOptions.CanSorted) _
-            Or DevExpress.XtraGrid.Columns.ColumnOptions.[ReadOnly]) _
-            Or DevExpress.XtraGrid.Columns.ColumnOptions.ShowInCustomizationForm) _
-            Or DevExpress.XtraGrid.Columns.ColumnOptions.NonEditable), DevExpress.XtraGrid.Columns.ColumnOptions)
-        Me.colFacturaCompra.Visible = True
-        Me.colFacturaCompra.Width = 71
+        Me.DsAumentoBindingSource.DataSource = Me.DsAumento
+        Me.DsAumentoBindingSource.Position = 0
         '
-        'colTipoCompra
+        'FacturaDataGridViewTextBoxColumn
         '
-        Me.colTipoCompra.Caption = "Tipo"
-        Me.colTipoCompra.FieldName = "TipoCompra"
-        Me.colTipoCompra.FilterInfo = ColumnFilterInfo2
-        Me.colTipoCompra.Name = "colTipoCompra"
-        Me.colTipoCompra.Options = CType((((((((DevExpress.XtraGrid.Columns.ColumnOptions.CanFiltered Or DevExpress.XtraGrid.Columns.ColumnOptions.CanMoved) _
-            Or DevExpress.XtraGrid.Columns.ColumnOptions.CanGrouped) _
-            Or DevExpress.XtraGrid.Columns.ColumnOptions.CanResized) _
-            Or DevExpress.XtraGrid.Columns.ColumnOptions.CanSorted) _
-            Or DevExpress.XtraGrid.Columns.ColumnOptions.[ReadOnly]) _
-            Or DevExpress.XtraGrid.Columns.ColumnOptions.ShowInCustomizationForm) _
-            Or DevExpress.XtraGrid.Columns.ColumnOptions.NonEditable), DevExpress.XtraGrid.Columns.ColumnOptions)
-        Me.colTipoCompra.Visible = True
-        Me.colTipoCompra.Width = 57
+        Me.FacturaDataGridViewTextBoxColumn.DataPropertyName = "Factura"
+        Me.FacturaDataGridViewTextBoxColumn.HeaderText = "Factura"
+        Me.FacturaDataGridViewTextBoxColumn.Name = "FacturaDataGridViewTextBoxColumn"
+        Me.FacturaDataGridViewTextBoxColumn.ReadOnly = True
+        Me.FacturaDataGridViewTextBoxColumn.Width = 80
         '
-        'colFechaCompra
+        'TipoCompraDataGridViewTextBoxColumn
         '
-        Me.colFechaCompra.Caption = "Fecha"
-        Me.colFechaCompra.DisplayFormat.FormatString = "dd/MM/yyyy"
-        Me.colFechaCompra.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime
-        Me.colFechaCompra.FieldName = "Fecha"
-        Me.colFechaCompra.FilterInfo = ColumnFilterInfo3
-        Me.colFechaCompra.Name = "colFechaCompra"
-        Me.colFechaCompra.Options = CType((((((((DevExpress.XtraGrid.Columns.ColumnOptions.CanFiltered Or DevExpress.XtraGrid.Columns.ColumnOptions.CanMoved) _
-            Or DevExpress.XtraGrid.Columns.ColumnOptions.CanGrouped) _
-            Or DevExpress.XtraGrid.Columns.ColumnOptions.CanResized) _
-            Or DevExpress.XtraGrid.Columns.ColumnOptions.CanSorted) _
-            Or DevExpress.XtraGrid.Columns.ColumnOptions.[ReadOnly]) _
-            Or DevExpress.XtraGrid.Columns.ColumnOptions.ShowInCustomizationForm) _
-            Or DevExpress.XtraGrid.Columns.ColumnOptions.NonEditable), DevExpress.XtraGrid.Columns.ColumnOptions)
-        Me.colFechaCompra.Visible = True
-        Me.colFechaCompra.Width = 65
+        Me.TipoCompraDataGridViewTextBoxColumn.DataPropertyName = "TipoCompra"
+        Me.TipoCompraDataGridViewTextBoxColumn.HeaderText = "Tipo"
+        Me.TipoCompraDataGridViewTextBoxColumn.Name = "TipoCompraDataGridViewTextBoxColumn"
+        Me.TipoCompraDataGridViewTextBoxColumn.ReadOnly = True
+        Me.TipoCompraDataGridViewTextBoxColumn.Width = 50
         '
-        'colProveedor
+        'FechaDataGridViewTextBoxColumn1
         '
-        Me.colProveedor.Caption = "Proveedor"
-        Me.colProveedor.FieldName = "Nombre"
-        Me.colProveedor.FilterInfo = ColumnFilterInfo4
-        Me.colProveedor.Name = "colProveedor"
-        Me.colProveedor.Options = CType((((((((DevExpress.XtraGrid.Columns.ColumnOptions.CanFiltered Or DevExpress.XtraGrid.Columns.ColumnOptions.CanMoved) _
-            Or DevExpress.XtraGrid.Columns.ColumnOptions.CanGrouped) _
-            Or DevExpress.XtraGrid.Columns.ColumnOptions.CanResized) _
-            Or DevExpress.XtraGrid.Columns.ColumnOptions.CanSorted) _
-            Or DevExpress.XtraGrid.Columns.ColumnOptions.[ReadOnly]) _
-            Or DevExpress.XtraGrid.Columns.ColumnOptions.ShowInCustomizationForm) _
-            Or DevExpress.XtraGrid.Columns.ColumnOptions.NonEditable), DevExpress.XtraGrid.Columns.ColumnOptions)
-        Me.colProveedor.Visible = True
-        Me.colProveedor.Width = 275
+        Me.FechaDataGridViewTextBoxColumn1.DataPropertyName = "Fecha"
+        Me.FechaDataGridViewTextBoxColumn1.HeaderText = "Fecha"
+        Me.FechaDataGridViewTextBoxColumn1.Name = "FechaDataGridViewTextBoxColumn1"
+        Me.FechaDataGridViewTextBoxColumn1.ReadOnly = True
+        Me.FechaDataGridViewTextBoxColumn1.Width = 75
         '
-        'colCantidadCompra
+        'NombreDataGridViewTextBoxColumn
         '
-        Me.colCantidadCompra.Caption = "Cantidad"
-        Me.colCantidadCompra.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric
-        Me.colCantidadCompra.FieldName = "Cantidad"
-        Me.colCantidadCompra.FilterInfo = ColumnFilterInfo5
-        Me.colCantidadCompra.Name = "colCantidadCompra"
-        Me.colCantidadCompra.Options = CType((((((((DevExpress.XtraGrid.Columns.ColumnOptions.CanFiltered Or DevExpress.XtraGrid.Columns.ColumnOptions.CanMoved) _
-            Or DevExpress.XtraGrid.Columns.ColumnOptions.CanGrouped) _
-            Or DevExpress.XtraGrid.Columns.ColumnOptions.CanResized) _
-            Or DevExpress.XtraGrid.Columns.ColumnOptions.CanSorted) _
-            Or DevExpress.XtraGrid.Columns.ColumnOptions.[ReadOnly]) _
-            Or DevExpress.XtraGrid.Columns.ColumnOptions.ShowInCustomizationForm) _
-            Or DevExpress.XtraGrid.Columns.ColumnOptions.NonEditable), DevExpress.XtraGrid.Columns.ColumnOptions)
-        Me.colCantidadCompra.SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum
-        Me.colCantidadCompra.SummaryItem.Tag = "total c"
-        Me.colCantidadCompra.Visible = True
-        Me.colCantidadCompra.Width = 66
+        Me.NombreDataGridViewTextBoxColumn.DataPropertyName = "Nombre"
+        Me.NombreDataGridViewTextBoxColumn.HeaderText = "Proveedor"
+        Me.NombreDataGridViewTextBoxColumn.Name = "NombreDataGridViewTextBoxColumn"
+        Me.NombreDataGridViewTextBoxColumn.ReadOnly = True
+        Me.NombreDataGridViewTextBoxColumn.Width = 275
         '
-        'colPrecioCompra
+        'CodigoDataGridViewTextBoxColumn1
         '
-        Me.colPrecioCompra.Caption = "Precio"
-        Me.colPrecioCompra.DisplayFormat.FormatString = "#,##0.00"
-        Me.colPrecioCompra.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric
-        Me.colPrecioCompra.FieldName = "Total"
-        Me.colPrecioCompra.FilterInfo = ColumnFilterInfo6
-        Me.colPrecioCompra.Name = "colPrecioCompra"
-        Me.colPrecioCompra.Options = CType((((((((DevExpress.XtraGrid.Columns.ColumnOptions.CanFiltered Or DevExpress.XtraGrid.Columns.ColumnOptions.CanMoved) _
-            Or DevExpress.XtraGrid.Columns.ColumnOptions.CanGrouped) _
-            Or DevExpress.XtraGrid.Columns.ColumnOptions.CanResized) _
-            Or DevExpress.XtraGrid.Columns.ColumnOptions.CanSorted) _
-            Or DevExpress.XtraGrid.Columns.ColumnOptions.[ReadOnly]) _
-            Or DevExpress.XtraGrid.Columns.ColumnOptions.ShowInCustomizationForm) _
-            Or DevExpress.XtraGrid.Columns.ColumnOptions.NonEditable), DevExpress.XtraGrid.Columns.ColumnOptions)
-        Me.colPrecioCompra.Visible = True
-        Me.colPrecioCompra.Width = 100
+        Me.CodigoDataGridViewTextBoxColumn1.DataPropertyName = "Codigo"
+        Me.CodigoDataGridViewTextBoxColumn1.HeaderText = "Codigo"
+        Me.CodigoDataGridViewTextBoxColumn1.Name = "CodigoDataGridViewTextBoxColumn1"
+        Me.CodigoDataGridViewTextBoxColumn1.ReadOnly = True
+        Me.CodigoDataGridViewTextBoxColumn1.Visible = False
         '
-        'colIdCompra
+        'CodArticuloDataGridViewTextBoxColumn1
         '
-        Me.colIdCompra.Caption = "BandedGridColumn1"
-        Me.colIdCompra.FieldName = "Id_Compra"
-        Me.colIdCompra.FilterInfo = ColumnFilterInfo7
-        Me.colIdCompra.Name = "colIdCompra"
-        Me.colIdCompra.Visible = True
-        Me.colIdCompra.Width = 72
+        Me.CodArticuloDataGridViewTextBoxColumn1.DataPropertyName = "CodArticulo"
+        Me.CodArticuloDataGridViewTextBoxColumn1.HeaderText = "CodArticulo"
+        Me.CodArticuloDataGridViewTextBoxColumn1.Name = "CodArticuloDataGridViewTextBoxColumn1"
+        Me.CodArticuloDataGridViewTextBoxColumn1.ReadOnly = True
+        Me.CodArticuloDataGridViewTextBoxColumn1.Visible = False
         '
-        'GridBand2
+        'CantidadDataGridViewTextBoxColumn1
         '
-        Me.GridBand2.Caption = "GridBand2"
-        Me.GridBand2.Columns.Add(Me.colFacturaCompra)
-        Me.GridBand2.Columns.Add(Me.colTipoCompra)
-        Me.GridBand2.Columns.Add(Me.colFechaCompra)
-        Me.GridBand2.Columns.Add(Me.colProveedor)
-        Me.GridBand2.Columns.Add(Me.colCantidadCompra)
-        Me.GridBand2.Columns.Add(Me.colPrecioCompra)
-        Me.GridBand2.Columns.Add(Me.colIdCompra)
-        Me.GridBand2.Name = "GridBand2"
-        Me.GridBand2.Width = 706
+        Me.CantidadDataGridViewTextBoxColumn1.DataPropertyName = "Cantidad"
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        DataGridViewCellStyle1.Format = "N2"
+        Me.CantidadDataGridViewTextBoxColumn1.DefaultCellStyle = DataGridViewCellStyle1
+        Me.CantidadDataGridViewTextBoxColumn1.HeaderText = "Cantidad"
+        Me.CantidadDataGridViewTextBoxColumn1.Name = "CantidadDataGridViewTextBoxColumn1"
+        Me.CantidadDataGridViewTextBoxColumn1.ReadOnly = True
+        Me.CantidadDataGridViewTextBoxColumn1.Width = 75
+        '
+        'TotalDataGridViewTextBoxColumn
+        '
+        Me.TotalDataGridViewTextBoxColumn.DataPropertyName = "Total"
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        DataGridViewCellStyle2.Format = "N2"
+        Me.TotalDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle2
+        Me.TotalDataGridViewTextBoxColumn.HeaderText = "Precio"
+        Me.TotalDataGridViewTextBoxColumn.Name = "TotalDataGridViewTextBoxColumn"
+        Me.TotalDataGridViewTextBoxColumn.ReadOnly = True
+        Me.TotalDataGridViewTextBoxColumn.Width = 80
+        '
+        'ImpuestoPDataGridViewTextBoxColumn
+        '
+        Me.ImpuestoPDataGridViewTextBoxColumn.DataPropertyName = "Impuesto_P"
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        DataGridViewCellStyle3.Format = "N2"
+        Me.ImpuestoPDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle3
+        Me.ImpuestoPDataGridViewTextBoxColumn.HeaderText = "Impuesto"
+        Me.ImpuestoPDataGridViewTextBoxColumn.Name = "ImpuestoPDataGridViewTextBoxColumn"
+        Me.ImpuestoPDataGridViewTextBoxColumn.ReadOnly = True
+        Me.ImpuestoPDataGridViewTextBoxColumn.Width = 70
+        '
+        'IdCompraDataGridViewTextBoxColumn
+        '
+        Me.IdCompraDataGridViewTextBoxColumn.DataPropertyName = "Id_Compra"
+        Me.IdCompraDataGridViewTextBoxColumn.HeaderText = "Id_Compra"
+        Me.IdCompraDataGridViewTextBoxColumn.Name = "IdCompraDataGridViewTextBoxColumn"
+        Me.IdCompraDataGridViewTextBoxColumn.ReadOnly = True
+        Me.IdCompraDataGridViewTextBoxColumn.Visible = False
+        '
+        'NumFacturaDataGridViewTextBoxColumn
+        '
+        Me.NumFacturaDataGridViewTextBoxColumn.DataPropertyName = "Num_Factura"
+        Me.NumFacturaDataGridViewTextBoxColumn.HeaderText = "Factura"
+        Me.NumFacturaDataGridViewTextBoxColumn.Name = "NumFacturaDataGridViewTextBoxColumn"
+        Me.NumFacturaDataGridViewTextBoxColumn.ReadOnly = True
+        Me.NumFacturaDataGridViewTextBoxColumn.Width = 80
+        '
+        'TipoDataGridViewTextBoxColumn
+        '
+        Me.TipoDataGridViewTextBoxColumn.DataPropertyName = "Tipo"
+        Me.TipoDataGridViewTextBoxColumn.HeaderText = "Tipo"
+        Me.TipoDataGridViewTextBoxColumn.Name = "TipoDataGridViewTextBoxColumn"
+        Me.TipoDataGridViewTextBoxColumn.ReadOnly = True
+        Me.TipoDataGridViewTextBoxColumn.Width = 50
+        '
+        'FechaDataGridViewTextBoxColumn
+        '
+        Me.FechaDataGridViewTextBoxColumn.DataPropertyName = "Fecha"
+        Me.FechaDataGridViewTextBoxColumn.HeaderText = "Fecha"
+        Me.FechaDataGridViewTextBoxColumn.Name = "FechaDataGridViewTextBoxColumn"
+        Me.FechaDataGridViewTextBoxColumn.ReadOnly = True
+        Me.FechaDataGridViewTextBoxColumn.Width = 75
+        '
+        'NombreClienteDataGridViewTextBoxColumn
+        '
+        Me.NombreClienteDataGridViewTextBoxColumn.DataPropertyName = "Nombre_Cliente"
+        Me.NombreClienteDataGridViewTextBoxColumn.HeaderText = "Cliente"
+        Me.NombreClienteDataGridViewTextBoxColumn.Name = "NombreClienteDataGridViewTextBoxColumn"
+        Me.NombreClienteDataGridViewTextBoxColumn.ReadOnly = True
+        Me.NombreClienteDataGridViewTextBoxColumn.Width = 275
+        '
+        'CodigoDataGridViewTextBoxColumn
+        '
+        Me.CodigoDataGridViewTextBoxColumn.DataPropertyName = "Codigo"
+        Me.CodigoDataGridViewTextBoxColumn.HeaderText = "Codigo"
+        Me.CodigoDataGridViewTextBoxColumn.Name = "CodigoDataGridViewTextBoxColumn"
+        Me.CodigoDataGridViewTextBoxColumn.ReadOnly = True
+        Me.CodigoDataGridViewTextBoxColumn.Visible = False
+        '
+        'CodArticuloDataGridViewTextBoxColumn
+        '
+        Me.CodArticuloDataGridViewTextBoxColumn.DataPropertyName = "CodArticulo"
+        Me.CodArticuloDataGridViewTextBoxColumn.HeaderText = "CodArticulo"
+        Me.CodArticuloDataGridViewTextBoxColumn.Name = "CodArticuloDataGridViewTextBoxColumn"
+        Me.CodArticuloDataGridViewTextBoxColumn.ReadOnly = True
+        Me.CodArticuloDataGridViewTextBoxColumn.Visible = False
+        '
+        'DescripcionDataGridViewTextBoxColumn
+        '
+        Me.DescripcionDataGridViewTextBoxColumn.DataPropertyName = "Descripcion"
+        Me.DescripcionDataGridViewTextBoxColumn.HeaderText = "Descripcion"
+        Me.DescripcionDataGridViewTextBoxColumn.Name = "DescripcionDataGridViewTextBoxColumn"
+        Me.DescripcionDataGridViewTextBoxColumn.ReadOnly = True
+        Me.DescripcionDataGridViewTextBoxColumn.Visible = False
+        '
+        'CantidadDataGridViewTextBoxColumn
+        '
+        Me.CantidadDataGridViewTextBoxColumn.DataPropertyName = "Cantidad"
+        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        DataGridViewCellStyle4.Format = "N2"
+        Me.CantidadDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle4
+        Me.CantidadDataGridViewTextBoxColumn.HeaderText = "Cantidad"
+        Me.CantidadDataGridViewTextBoxColumn.Name = "CantidadDataGridViewTextBoxColumn"
+        Me.CantidadDataGridViewTextBoxColumn.ReadOnly = True
+        Me.CantidadDataGridViewTextBoxColumn.Width = 75
+        '
+        'PrecioUnitDataGridViewTextBoxColumn
+        '
+        Me.PrecioUnitDataGridViewTextBoxColumn.DataPropertyName = "Precio_Unit"
+        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        DataGridViewCellStyle5.Format = "N2"
+        Me.PrecioUnitDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle5
+        Me.PrecioUnitDataGridViewTextBoxColumn.HeaderText = "Precio"
+        Me.PrecioUnitDataGridViewTextBoxColumn.Name = "PrecioUnitDataGridViewTextBoxColumn"
+        Me.PrecioUnitDataGridViewTextBoxColumn.ReadOnly = True
+        Me.PrecioUnitDataGridViewTextBoxColumn.Width = 80
+        '
+        'ImpuestoDataGridViewTextBoxColumn
+        '
+        Me.ImpuestoDataGridViewTextBoxColumn.DataPropertyName = "Impuesto"
+        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        DataGridViewCellStyle6.Format = "N2"
+        Me.ImpuestoDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle6
+        Me.ImpuestoDataGridViewTextBoxColumn.HeaderText = "Impuesto"
+        Me.ImpuestoDataGridViewTextBoxColumn.Name = "ImpuestoDataGridViewTextBoxColumn"
+        Me.ImpuestoDataGridViewTextBoxColumn.ReadOnly = True
+        Me.ImpuestoDataGridViewTextBoxColumn.Width = 70
+        '
+        'IdDataGridViewTextBoxColumn
+        '
+        Me.IdDataGridViewTextBoxColumn.DataPropertyName = "Id"
+        Me.IdDataGridViewTextBoxColumn.HeaderText = "Id"
+        Me.IdDataGridViewTextBoxColumn.Name = "IdDataGridViewTextBoxColumn"
+        Me.IdDataGridViewTextBoxColumn.ReadOnly = True
+        Me.IdDataGridViewTextBoxColumn.Visible = False
         '
         'MovimientoArticulos
         '
@@ -786,14 +745,16 @@ Public Class MovimientoArticulos
         CType(Me.txtCodArticulo.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.txtDescripcion.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GBCompras.ResumeLayout(False)
-        CType(Me.GridCompras, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.viewDatosCompras, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.MovimientoArticulosCompraBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DsMovimientoArticulos1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GBVentas.ResumeLayout(False)
-        CType(Me.GridVentas, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.AdvBandedGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.viewDatosVentas, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.MovimientoArticuloVentasBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.txtTotalCompra.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.txtTotalVendido.Properties, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.AdvBandedGridView2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DsAumento, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DsAumentoBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -1056,62 +1017,30 @@ Public Class MovimientoArticulos
     End Sub
 
     Public usua As Usuario_Logeado
-    Private Sub GridVentas_DoubleClick(sender As Object, e As EventArgs) Handles GridVentas.DoubleClick
+
+    Private Sub viewDatos_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles viewDatosVentas.CellDoubleClick
         Try
-
-            Dim hi As DevExpress.XtraGrid.Views.BandedGrid.ViewInfo.BandedGridHitInfo = _
-                               AdvBandedGridView1.CalcHitInfo(CType(GridVentas, Control).PointToClient(Control.MousePosition))
-
+            Dim Id As String = Me.viewDatosVentas.Item("IdDataGridViewTextBoxColumn", Me.viewDatosVentas.CurrentRow.Index).Value
             If MsgBox("Desea Abrir la factura de Venta", MsgBoxStyle.Question + MsgBoxStyle.YesNo, "Confirmar Accion") = MsgBoxResult.Yes Then
-                Dim data As DataRow
-                Dim factura As String = "0"
-
-                If hi.RowHandle >= 0 Then
-                    data = AdvBandedGridView1.GetDataRow(hi.RowHandle)
-                ElseIf AdvBandedGridView1.FocusedRowHandle >= 0 Then
-                    data = AdvBandedGridView1.GetDataRow(AdvBandedGridView1.FocusedRowHandle)
-                Else
-                    data = Nothing
-                End If
-
-                factura = data("Id")
-
                 Dim frm As New Facturacion
                 frm.MdiParent = Me.ParentForm
                 frm.Show()
-                frm.AbreDesdeAfuera(factura)
+                frm.AbreDesdeAfuera(Id)
             End If
-
         Catch ex As Exception
             MsgBox(ex.Message)
         End Try
     End Sub
 
-    Private Sub GridCompras_DoubleClick(sender As Object, e As EventArgs) Handles GridCompras.DoubleClick
+    Private Sub viewDatosCompras_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles viewDatosCompras.CellDoubleClick
         Try
-            Dim hi As DevExpress.XtraGrid.Views.BandedGrid.ViewInfo.BandedGridHitInfo = _
-                               AdvBandedGridView2.CalcHitInfo(CType(GridCompras, Control).PointToClient(Control.MousePosition))
-
+            Dim Id As String = Me.viewDatosCompras.Item("IdCompraDataGridViewTextBoxColumn", Me.viewDatosCompras.CurrentRow.Index).Value
             If MsgBox("Desea Abrir la Compra", MsgBoxStyle.Question + MsgBoxStyle.YesNo, "Confirmar Accion") = MsgBoxResult.Yes Then
-                Dim data As DataRow
-                Dim factura As String = "0"
-
-                If hi.RowHandle >= 0 Then
-                    data = AdvBandedGridView2.GetDataRow(hi.RowHandle)
-                ElseIf AdvBandedGridView1.FocusedRowHandle >= 0 Then
-                    data = AdvBandedGridView2.GetDataRow(AdvBandedGridView2.FocusedRowHandle)
-                Else
-                    data = Nothing
-                End If
-
-                factura = data("Id_Compra")
-
                 Dim frm As New frmCompra(Me.usua)
                 frm.MdiParent = Me.MdiParent
                 frm.Show()
-                frm.CargarCompradesdeAfuera(factura)
+                frm.CargarCompradesdeAfuera(Id)
             End If
-
         Catch ex As Exception
             MsgBox(ex.Message)
         End Try

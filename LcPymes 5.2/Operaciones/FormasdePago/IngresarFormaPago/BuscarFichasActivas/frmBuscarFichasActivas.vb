@@ -50,11 +50,11 @@ Public Class frmBuscarFichasActivas
     End Sub
 
     Private Sub btnInactivar_Click(sender As Object, e As EventArgs) Handles btnInactivar.Click
-        Try          
+        Try
+            Dim id As String = Me.viewFichasActivas.Item("Id", Me.viewFichasActivas.CurrentRow.Index).Value
             If Me.viewFichasActivas.RowCount > 0 Then
                 Dim frm As New frmVersionCompleta
                 If frm.ShowDialog = Windows.Forms.DialogResult.OK Then
-                    Dim id As String = Me.viewFichasActivas.Item("Id", Me.viewFichasActivas.CurrentRow.Index).Value
                     Dim base As String = Me.viewFichasActivas.Item("BasedeDatos", Me.viewFichasActivas.CurrentRow.Index).Value
                     Dim tipo As String = Me.viewFichasActivas.Item("Tipo", Me.viewFichasActivas.CurrentRow.Index).Value
                     If IsNumeric(id) = True Then

@@ -418,7 +418,7 @@ Partial Class frmAgregarDeposito
         Me.cboTipoDeposito.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cboTipoDeposito.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cboTipoDeposito.FormattingEnabled = True
-        Me.cboTipoDeposito.Items.AddRange(New Object() {"Deposito", "Sinpe", "PayPal", "Ema", "Otros"})
+        Me.cboTipoDeposito.Items.AddRange(New Object() {"Deposito", "Transferencia", "Sinpe", "PayPal", "EMA", "Pagina Web", "Rebajo Recursos Humanos", "Otros"})
         Me.cboTipoDeposito.Location = New System.Drawing.Point(268, 117)
         Me.cboTipoDeposito.Margin = New System.Windows.Forms.Padding(2)
         Me.cboTipoDeposito.Name = "cboTipoDeposito"

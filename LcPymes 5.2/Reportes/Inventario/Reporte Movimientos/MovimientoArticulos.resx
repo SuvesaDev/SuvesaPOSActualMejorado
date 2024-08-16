@@ -125,7 +125,7 @@
         AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
         LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
         ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAADy
-        agAAAk1TRnQBSQFMAgEBCQEAAQ4BAAE8AQABIAEAASABAAT/ARkBEAj/AUIBTQE2BwABNgMAASgDAAGA
+        agAAAk1TRnQBSQFMAgEBCQEAAQ4BAAGEAQABIAEAASABAAT/ARkBEAj/AUIBTQE2BwABNgMAASgDAAGA
         AwABYAMAAQEBAAEYBgABkP8AtwACAQFdAgEBbQIBAXQCAQF0AgEBbQIBAV0CAQFK/wBjAAIBAXQCAAGG
         AgABiQIAAYUCAAGCAgABggIAAYACAAGAAgABgAIAAYICAAGCAgEBbQIBATj/AFQAAgEBeAICAZECAAGL
         AgABhQIAAYUCAAGFAgABhQIAAYYCAAGGAgABhQIAAYICAAGAAgABfwIAAYICAAGFAgEBdAIBATj/AE0A
@@ -611,8 +611,20 @@
   <metadata name="SqlSelectCommand2.CommandDesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
   </metadata>
+  <metadata name="MovimientoArticulosCompraBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>212, 56</value>
+  </metadata>
   <metadata name="DsMovimientoArticulos1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>121, 17</value>
+  </metadata>
+  <metadata name="MovimientoArticuloVentasBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>719, 17</value>
+  </metadata>
+  <metadata name="DsAumento.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>994, 17</value>
+  </metadata>
+  <metadata name="DsAumentoBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 56</value>
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="$this.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">

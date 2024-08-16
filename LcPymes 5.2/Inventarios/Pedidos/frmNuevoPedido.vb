@@ -23,6 +23,23 @@ Public Class frmNuevoPedido
         Return Codigo
     End Function
 
+    Private Sub CargarSolicitara()
+        Try
+            Dim dt As New DataTable
+            cFunciones.Llenar_Tabla_Generico("select id, nombre  from solicitara order by predeterminada desc, nombre", dt, CadenaConexionSeePOS)
+            If dt.Rows.Count = 0 Then
+                Dim db As New OBSoluciones.SQL.Sentencias(CadenaConexionSeePOS)
+                db.Ejecutar("Insert into solicitara(nombre, predeterminada) values('Proveeduria',1)", CommandType.Text)
+                cFunciones.Llenar_Tabla_Generico("select id, nombre  from solicitara order by predeterminada desc, nombre", dt, CadenaConexionSeePOS)
+            End If
+            Me.cboSolicitarA.DataSource = dt
+            Me.cboSolicitarA.DisplayMember = "nombre"
+            Me.cboSolicitarA.ValueMember = "id"
+        Catch ex As Exception
+            MsgBox(ex.Message, MsgBoxStyle.Critical, Me.Text)
+        End Try
+    End Sub
+
     Private CodArticulo As String = ""
     Private PrecioUnit As Decimal = 0
     Private Sub cargar_datos_inventario()
@@ -156,7 +173,6 @@ Public Class frmNuevoPedido
     '***************************************************************************
     '***************************************************************************
     '***************************************************************************
-
     Private Sub InsertarPedidoBodega(_FechaSolicitud As Date, _IdUsuarioSolicitud As String, _Codigo As String, _CantidadSolicitud As Decimal, _Observaciones As String, _PrecioUnid As Decimal)
         db.SetParametro("@fechaSolicitud", _FechaSolicitud)
         db.SetParametro("@IdUsuarioSolicitud", _IdUsuarioSolicitud)
@@ -166,6 +182,7 @@ Public Class frmNuevoPedido
         db.SetParametro("@Observaciones", _Observaciones)
         db.SetParametro("@PrecioUnid", _PrecioUnid)
         db.SetParametro("@CantidadPuntos", 1)
+        db.SetParametro("@IdSolicitara", Me.cboSolicitarA.SelectedValue)
         db.Ejecutar("Insertar_PedidoBodega", Me.Consecutivo, 4)
     End Sub
 
@@ -173,4 +190,7 @@ Public Class frmNuevoPedido
         If Me.viewDatos.RowCount > 0 Then Me.Guardar()
     End Sub
 
+    Private Sub frmNuevoPedido_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Me.CargarSolicitara()
+    End Sub
 End Class

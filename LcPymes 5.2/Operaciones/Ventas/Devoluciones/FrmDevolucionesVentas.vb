@@ -2997,7 +2997,13 @@ Public Class FrmDevolucionesVentas
         Select Case ToolBar1.Buttons.IndexOf(e.Button) + 1
             Case 1 : If Me.ToolBar1.Buttons(0).Text = "Nuevo" Then Agregar() Else Cancelar()
             Case 2 : If PMU.Find Then Me.BuscarDevolucion() Else MsgBox("No tiene permiso para buscar información...", MsgBoxStyle.Information, "Atención...") : Exit Sub
-            Case 3 : If PMU.Update Then Registrar() Else MsgBox("No tiene permiso para registrar o actualizar datos...", MsgBoxStyle.Information, "Atención...") : Exit Sub
+            Case 3
+                If Me.IsPreDevolucion = False Then
+                    If PMU.Update Then Registrar() Else MsgBox("No tiene permiso para registrar o actualizar datos...", MsgBoxStyle.Information, "Atención...") : Exit Sub
+                Else
+                    Registrar()
+                    Exit Sub
+                End If
             Case 4 : If PMU.Delete Then AnularDevolucion() Else MsgBox("No tiene permiso para eliminar datos...", MsgBoxStyle.Information, "Atención...") : Exit Sub
             Case 5 : If PMU.Print Then imprimir(txtNum_Devo.Text) Else MsgBox("No tiene permiso para imprimir datos...", MsgBoxStyle.Information, "Atención...") : Exit Sub
             Case 7 : If MessageBox.Show("¿Desea Cerrar el módulo " & Me.Text & "..?", "Atención...", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1) = DialogResult.Yes Then Me.Close()
@@ -3426,19 +3432,21 @@ Public Class FrmDevolucionesVentas
                     Me.AdapterDetalleDevolucion.Update(Me.DataSetDevolucionVentas1.articulos_ventas_devueltos)
                     '================================================================================
 
-                    Try
-                        '================================================================
-                        'VENTAS
-                        'AdapterVentas.Update(Me.DataSetDevolucionVentas1.Ventas)
-                        '================================================================
+                    If Me.IsPreDevolucion = False Then
+                        Try
+                            '================================================================
+                            'VENTAS
+                            'AdapterVentas.Update(Me.DataSetDevolucionVentas1.Ventas)
+                            '================================================================
 
-                        '================================================================
-                        'VENTAS DETALLE
-                        AdapterDetalleVentas.Update(Me.DataSetDevolucionVentas1.Ventas_Detalle)
-                        '================================================================
-                    Catch ex As Exception
+                            '================================================================
+                            'VENTAS DETALLE
+                            AdapterDetalleVentas.Update(Me.DataSetDevolucionVentas1.Ventas_Detalle)
+                            '================================================================
+                        Catch ex As Exception
 
-                    End Try
+                        End Try
+                    End If
 
                     If IsPreDevolucion = False Then
                         If DevolverAlbaran = True Then
