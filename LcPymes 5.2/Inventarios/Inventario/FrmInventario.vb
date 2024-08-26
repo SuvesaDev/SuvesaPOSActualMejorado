@@ -1849,7 +1849,8 @@ Public Class FrmInventario
         '
         'SqlSelectCommand5
         '
-        Me.SqlSelectCommand5.CommandText = "SELECT Nombre_Bodega, ID_Bodega FROM Bodegas where Inactiva = 0"
+        Me.SqlSelectCommand5.CommandText = "SELECT Nombre_Bodega, ID_Bodega FROM Bodegas where Inactiva = 0 and Consignacion " & _
+    "= 1"
         Me.SqlSelectCommand5.Connection = Me.SqlConnection1
         '
         'DataNavigator1

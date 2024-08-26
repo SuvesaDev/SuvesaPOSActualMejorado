@@ -353,14 +353,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Veterinaria.exe" size="28175872">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Veterinaria.exe" size="28178944">
       <assemblyIdentity name="Veterinaria" version="0.0.0.0" language="neutral" processorArchitecture="x86" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>x0mrfb4/O2QeCWEXdkik+ntCuPw8gguyUHFThj0k3Ew=</dsig:DigestValue>
+        <dsig:DigestValue>cFxkJH3tdOeF25tgagcteFTzMU/vjjPWwViph5rbybA=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -372,7 +372,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>kNW/gs7fvVeYS/11xA7bcsCVymi0I5DNAVVGSerGgRI=</dsig:DigestValue>
+        <dsig:DigestValue>ww4glk//Oj9ONnIzio5REvU5Uqp8ERq23avBxK/KiX4=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -384,7 +384,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>T9ujgO49ii5AUpfNbf25iqGNKvU3ScR0FHqHnwOvpiM=</dsig:DigestValue>
+        <dsig:DigestValue>oxec90i825HZWUy05BleXgnN7PzntAsouLs2uYhuA6s=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -478,13 +478,13 @@
       <dsig:DigestValue>+Z/KVrk8GNiM2ROnu8/dbFoUjAexExuAp70nn8bf4UU=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="Inventarios\Bodegas\DataSetBodegas.xsd" size="7733">
+  <file name="Inventarios\Bodegas\DataSetBodegas.xsd" size="8318">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>uNV2FsLCo/3TxKivCQg+Xs4PPGYcKwEoa35+9QxLYVg=</dsig:DigestValue>
+      <dsig:DigestValue>gY9FYEt8afdjVmU5zZHsdV15f34C+MUic1y41ceTPcE=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Inventarios\Etiquetas\DsEtiquetasArticulos.xsd" size="1946">

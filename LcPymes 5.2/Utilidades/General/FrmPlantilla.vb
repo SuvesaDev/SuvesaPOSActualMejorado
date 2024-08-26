@@ -237,6 +237,7 @@ Public Class FrmPlantilla
             If RecargarAdatador Then Adaptador.Fill(DataSet, Tabla)
             If ActivarNuevo Then ToolBar1.Buttons(0).Text = "Nuevo" : ToolBar1.Buttons(0).ImageIndex = 0
             If VerMsg Then MsgBox("Los datos se actualizaron satisfactoriamente...", MsgBoxStyle.Information, "Atención...")
+            Dim db As New OBSoluciones.SQL.Sentencias(CadenaConexionSeePOS)            
         Catch eEndEdit As System.Exception
             System.Windows.Forms.MessageBox.Show(eEndEdit.Message)
         End Try

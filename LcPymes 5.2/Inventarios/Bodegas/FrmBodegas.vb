@@ -4,6 +4,7 @@ Public Class FrmBodegas
     Inherits FrmPlantilla   'System.Windows.Forms.Form
     Dim Usua As Object
     Friend WithEvents ckInactiva As System.Windows.Forms.CheckBox
+    Friend WithEvents ckConsignacion As System.Windows.Forms.CheckBox
     Dim PMU As New PerfilModulo_Class   'Declara la variable Perfil Modulo Usuario
 
 #Region " Código generado por el Diseñador de Windows Forms "
@@ -63,9 +64,9 @@ Public Class FrmBodegas
 
     <System.Diagnostics.DebuggerStepThrough()> Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmBodegas))
-        Dim ColumnFilterInfo1 As DevExpress.XtraGrid.Columns.ColumnFilterInfo = New DevExpress.XtraGrid.Columns.ColumnFilterInfo()
-        Dim ColumnFilterInfo2 As DevExpress.XtraGrid.Columns.ColumnFilterInfo = New DevExpress.XtraGrid.Columns.ColumnFilterInfo()
-        Dim ColumnFilterInfo3 As DevExpress.XtraGrid.Columns.ColumnFilterInfo = New DevExpress.XtraGrid.Columns.ColumnFilterInfo()
+        Dim ColumnFilterInfo4 As DevExpress.XtraGrid.Columns.ColumnFilterInfo = New DevExpress.XtraGrid.Columns.ColumnFilterInfo()
+        Dim ColumnFilterInfo5 As DevExpress.XtraGrid.Columns.ColumnFilterInfo = New DevExpress.XtraGrid.Columns.ColumnFilterInfo()
+        Dim ColumnFilterInfo6 As DevExpress.XtraGrid.Columns.ColumnFilterInfo = New DevExpress.XtraGrid.Columns.ColumnFilterInfo()
         Me.GridControl1 = New DevExpress.XtraGrid.GridControl()
         Me.DataSetBodegas = New LcPymes_5._2.DataSetBodegas()
         Me.GridView1 = New DevExpress.XtraGrid.Views.Grid.GridView()
@@ -91,6 +92,7 @@ Public Class FrmBodegas
         Me.SqlSelectCommand2 = New System.Data.SqlClient.SqlCommand()
         Me.Label_Id = New System.Windows.Forms.Label()
         Me.ckInactiva = New System.Windows.Forms.CheckBox()
+        Me.ckConsignacion = New System.Windows.Forms.CheckBox()
         CType(Me.GridControl1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataSetBodegas, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.GridView1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -172,7 +174,7 @@ Public Class FrmBodegas
         '
         Me.colCodigo.Caption = "Codigo"
         Me.colCodigo.FieldName = "Cod_Articulo"
-        Me.colCodigo.FilterInfo = ColumnFilterInfo1
+        Me.colCodigo.FilterInfo = ColumnFilterInfo4
         Me.colCodigo.Name = "colCodigo"
         Me.colCodigo.Options = CType((((((((DevExpress.XtraGrid.Columns.ColumnOptions.CanFiltered Or DevExpress.XtraGrid.Columns.ColumnOptions.CanMoved) _
             Or DevExpress.XtraGrid.Columns.ColumnOptions.CanGrouped) _
@@ -188,7 +190,7 @@ Public Class FrmBodegas
         '
         Me.colDescripcion.Caption = "Descripcion"
         Me.colDescripcion.FieldName = "Descripcion"
-        Me.colDescripcion.FilterInfo = ColumnFilterInfo2
+        Me.colDescripcion.FilterInfo = ColumnFilterInfo5
         Me.colDescripcion.Name = "colDescripcion"
         Me.colDescripcion.Options = CType((((((((DevExpress.XtraGrid.Columns.ColumnOptions.CanFiltered Or DevExpress.XtraGrid.Columns.ColumnOptions.CanMoved) _
             Or DevExpress.XtraGrid.Columns.ColumnOptions.CanGrouped) _
@@ -204,7 +206,7 @@ Public Class FrmBodegas
         '
         Me.colExistenciaBodega.Caption = "Existencia"
         Me.colExistenciaBodega.FieldName = "ExistenciaBodega"
-        Me.colExistenciaBodega.FilterInfo = ColumnFilterInfo3
+        Me.colExistenciaBodega.FilterInfo = ColumnFilterInfo6
         Me.colExistenciaBodega.Name = "colExistenciaBodega"
         Me.colExistenciaBodega.Options = CType((((((((DevExpress.XtraGrid.Columns.ColumnOptions.CanFiltered Or DevExpress.XtraGrid.Columns.ColumnOptions.CanMoved) _
             Or DevExpress.XtraGrid.Columns.ColumnOptions.CanGrouped) _
@@ -271,7 +273,7 @@ Public Class FrmBodegas
         '
         'SqlConnection
         '
-        Me.SqlConnection.ConnectionString = "Data Source=192.168.0.2;Initial Catalog=SeePOS;Integrated Security=True"
+        Me.SqlConnection.ConnectionString = "Data Source=.;Initial Catalog=clinica;Integrated Security=True"
         Me.SqlConnection.FireInfoMessageEventOnUserErrors = False
         '
         'SqlDataAdapterBodegas
@@ -279,31 +281,32 @@ Public Class FrmBodegas
         Me.SqlDataAdapterBodegas.DeleteCommand = Me.SqlDeleteCommand1
         Me.SqlDataAdapterBodegas.InsertCommand = Me.SqlInsertCommand1
         Me.SqlDataAdapterBodegas.SelectCommand = Me.SqlSelectCommand1
-        Me.SqlDataAdapterBodegas.TableMappings.AddRange(New System.Data.Common.DataTableMapping() {New System.Data.Common.DataTableMapping("Table", "Bodegas", New System.Data.Common.DataColumnMapping() {New System.Data.Common.DataColumnMapping("ID_Bodega", "ID_Bodega"), New System.Data.Common.DataColumnMapping("Nombre_Bodega", "Nombre_Bodega"), New System.Data.Common.DataColumnMapping("Observaciones", "Observaciones")})})
+        Me.SqlDataAdapterBodegas.TableMappings.AddRange(New System.Data.Common.DataTableMapping() {New System.Data.Common.DataTableMapping("Table", "Bodegas", New System.Data.Common.DataColumnMapping() {New System.Data.Common.DataColumnMapping("ID_Bodega", "ID_Bodega"), New System.Data.Common.DataColumnMapping("Nombre_Bodega", "Nombre_Bodega"), New System.Data.Common.DataColumnMapping("Observaciones", "Observaciones"), New System.Data.Common.DataColumnMapping("Inactiva", "Inactiva"), New System.Data.Common.DataColumnMapping("bloqueada", "bloqueada"), New System.Data.Common.DataColumnMapping("Consignacion", "Consignacion")})})
         Me.SqlDataAdapterBodegas.UpdateCommand = Me.SqlUpdateCommand1
         '
         'SqlDeleteCommand1
         '
-        Me.SqlDeleteCommand1.CommandText = "DELETE FROM Bodegas WHERE (ID_Bodega = @Original_ID_Bodega)"
+        Me.SqlDeleteCommand1.CommandText = "DELETE FROM [Bodegas] WHERE (([ID_Bodega] = @Original_ID_Bodega))"
         Me.SqlDeleteCommand1.Connection = Me.SqlConnection
-        Me.SqlDeleteCommand1.Parameters.AddRange(New System.Data.SqlClient.SqlParameter() {New System.Data.SqlClient.SqlParameter("@Original_ID_Bodega", System.Data.SqlDbType.Int, 4, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "ID_Bodega", System.Data.DataRowVersion.Original, Nothing)})
+        Me.SqlDeleteCommand1.Parameters.AddRange(New System.Data.SqlClient.SqlParameter() {New System.Data.SqlClient.SqlParameter("@Original_ID_Bodega", System.Data.SqlDbType.Int, 0, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "ID_Bodega", System.Data.DataRowVersion.Original, Nothing)})
         '
         'SqlInsertCommand1
         '
         Me.SqlInsertCommand1.CommandText = resources.GetString("SqlInsertCommand1.CommandText")
         Me.SqlInsertCommand1.Connection = Me.SqlConnection
-        Me.SqlInsertCommand1.Parameters.AddRange(New System.Data.SqlClient.SqlParameter() {New System.Data.SqlClient.SqlParameter("@ID_Bodega", System.Data.SqlDbType.Int, 4, "ID_Bodega"), New System.Data.SqlClient.SqlParameter("@Nombre_Bodega", System.Data.SqlDbType.VarChar, 100, "Nombre_Bodega"), New System.Data.SqlClient.SqlParameter("@Observaciones", System.Data.SqlDbType.VarChar, 255, "Observaciones"), New System.Data.SqlClient.SqlParameter("@Inactiva", System.Data.SqlDbType.Bit, 1, "Inactiva")})
+        Me.SqlInsertCommand1.Parameters.AddRange(New System.Data.SqlClient.SqlParameter() {New System.Data.SqlClient.SqlParameter("@ID_Bodega", System.Data.SqlDbType.Int, 0, "ID_Bodega"), New System.Data.SqlClient.SqlParameter("@Nombre_Bodega", System.Data.SqlDbType.VarChar, 0, "Nombre_Bodega"), New System.Data.SqlClient.SqlParameter("@Observaciones", System.Data.SqlDbType.VarChar, 0, "Observaciones"), New System.Data.SqlClient.SqlParameter("@Inactiva", System.Data.SqlDbType.Bit, 0, "Inactiva"), New System.Data.SqlClient.SqlParameter("@bloqueada", System.Data.SqlDbType.Bit, 0, "bloqueada"), New System.Data.SqlClient.SqlParameter("@Consignacion", System.Data.SqlDbType.Bit, 0, "Consignacion")})
         '
         'SqlSelectCommand1
         '
-        Me.SqlSelectCommand1.CommandText = "SELECT ID_Bodega, Nombre_Bodega, Observaciones, Inactiva FROM Bodegas"
+        Me.SqlSelectCommand1.CommandText = "SELECT        ID_Bodega, Nombre_Bodega, Observaciones, Inactiva, bloqueada, Consi" & _
+    "gnacion" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "FROM            Bodegas"
         Me.SqlSelectCommand1.Connection = Me.SqlConnection
         '
         'SqlUpdateCommand1
         '
         Me.SqlUpdateCommand1.CommandText = resources.GetString("SqlUpdateCommand1.CommandText")
         Me.SqlUpdateCommand1.Connection = Me.SqlConnection
-        Me.SqlUpdateCommand1.Parameters.AddRange(New System.Data.SqlClient.SqlParameter() {New System.Data.SqlClient.SqlParameter("@ID_Bodega", System.Data.SqlDbType.Int, 4, "ID_Bodega"), New System.Data.SqlClient.SqlParameter("@Nombre_Bodega", System.Data.SqlDbType.VarChar, 100, "Nombre_Bodega"), New System.Data.SqlClient.SqlParameter("@Observaciones", System.Data.SqlDbType.VarChar, 255, "Observaciones"), New System.Data.SqlClient.SqlParameter("@Inactiva", System.Data.SqlDbType.Bit, 1, "Inactiva"), New System.Data.SqlClient.SqlParameter("@Original_ID_Bodega", System.Data.SqlDbType.Int, 4, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "ID_Bodega", System.Data.DataRowVersion.Original, Nothing)})
+        Me.SqlUpdateCommand1.Parameters.AddRange(New System.Data.SqlClient.SqlParameter() {New System.Data.SqlClient.SqlParameter("@ID_Bodega", System.Data.SqlDbType.Int, 0, "ID_Bodega"), New System.Data.SqlClient.SqlParameter("@Nombre_Bodega", System.Data.SqlDbType.VarChar, 0, "Nombre_Bodega"), New System.Data.SqlClient.SqlParameter("@Observaciones", System.Data.SqlDbType.VarChar, 0, "Observaciones"), New System.Data.SqlClient.SqlParameter("@Inactiva", System.Data.SqlDbType.Bit, 0, "Inactiva"), New System.Data.SqlClient.SqlParameter("@bloqueada", System.Data.SqlDbType.Bit, 0, "bloqueada"), New System.Data.SqlClient.SqlParameter("@Consignacion", System.Data.SqlDbType.Bit, 0, "Consignacion"), New System.Data.SqlClient.SqlParameter("@Original_ID_Bodega", System.Data.SqlDbType.Int, 0, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "ID_Bodega", System.Data.DataRowVersion.Original, Nothing)})
         '
         'ComboBoxMoneda
         '
@@ -382,12 +385,24 @@ Public Class FrmBodegas
         Me.ckInactiva.Text = "Bodega Inactiva"
         Me.ckInactiva.UseVisualStyleBackColor = False
         '
+        'ckConsignacion
+        '
+        Me.ckConsignacion.AutoSize = True
+        Me.ckConsignacion.DataBindings.Add(New System.Windows.Forms.Binding("Checked", Me.DataSetBodegas, "Bodegas.Consignacion", True))
+        Me.ckConsignacion.Location = New System.Drawing.Point(491, 38)
+        Me.ckConsignacion.Name = "ckConsignacion"
+        Me.ckConsignacion.Size = New System.Drawing.Size(90, 17)
+        Me.ckConsignacion.TabIndex = 98
+        Me.ckConsignacion.Text = "Consignacion"
+        Me.ckConsignacion.UseVisualStyleBackColor = True
+        '
         'FrmBodegas
         '
         Me.AutoScaleBaseSize = New System.Drawing.Size(5, 13)
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(221, Byte), Integer), CType(CType(221, Byte), Integer), CType(CType(221, Byte), Integer))
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.ClientSize = New System.Drawing.Size(586, 424)
+        Me.Controls.Add(Me.ckConsignacion)
         Me.Controls.Add(Me.ckInactiva)
         Me.Controls.Add(Me.Label_Id)
         Me.Controls.Add(Me.TextBox1)
@@ -412,6 +427,7 @@ Public Class FrmBodegas
         Me.Controls.SetChildIndex(Me.DataNavigator, 0)
         Me.Controls.SetChildIndex(Me.Label_Id, 0)
         Me.Controls.SetChildIndex(Me.ckInactiva, 0)
+        Me.Controls.SetChildIndex(Me.ckConsignacion, 0)
         CType(Me.GridControl1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DataSetBodegas, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.GridView1, System.ComponentModel.ISupportInitialize).EndInit()
@@ -464,7 +480,10 @@ Public Class FrmBodegas
                                 Exit Sub
                             End If
                         End If
+
+                        BindingContext(Me.DataSetBodegas, Me.DataSetBodegas.Bodegas.ToString).Current("Consignacion") = Me.ckConsignacion.Checked
                         Me.RegistrarDatos(Me.SqlDataAdapterBodegas, Me.DataSetBodegas, Me.DataSetBodegas.Bodegas.ToString, True)
+
                         If MsgBox("Desea agregar una nueva bodega...", MsgBoxStyle.YesNo) = MsgBoxResult.Yes Then NuevaEntrada()
                     Else
                         MsgBox("No tiene permiso para agregar o actualizar datos...", MsgBoxStyle.Information, "Atención...") : Exit Sub

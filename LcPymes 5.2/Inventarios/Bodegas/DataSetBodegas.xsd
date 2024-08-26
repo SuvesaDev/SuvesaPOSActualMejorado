@@ -19,6 +19,8 @@
               <xs:element name="Nombre_Bodega" msprop:Generator_ColumnVarNameInTable="columnNombre_Bodega" msprop:Generator_ColumnPropNameInRow="Nombre_Bodega" msprop:Generator_ColumnPropNameInTable="Nombre_BodegaColumn" msprop:Generator_UserColumnName="Nombre_Bodega" type="xs:string" />
               <xs:element name="Observaciones" msprop:Generator_ColumnVarNameInTable="columnObservaciones" msprop:Generator_ColumnPropNameInRow="Observaciones" msprop:Generator_ColumnPropNameInTable="ObservacionesColumn" msprop:Generator_UserColumnName="Observaciones" type="xs:string" />
               <xs:element name="Inactiva" msprop:Generator_ColumnVarNameInTable="columnInactiva" msprop:Generator_ColumnPropNameInRow="Inactiva" msprop:Generator_ColumnPropNameInTable="InactivaColumn" msprop:Generator_UserColumnName="Inactiva" type="xs:boolean" default="false" minOccurs="0" />
+              <xs:element name="Consignacion" msprop:Generator_ColumnVarNameInTable="columnConsignacion" msprop:Generator_ColumnPropNameInRow="Consignacion" msprop:Generator_ColumnPropNameInTable="ConsignacionColumn" msprop:Generator_UserColumnName="Consignacion" type="xs:boolean" minOccurs="0" />
+              <xs:element name="bloqueada" msprop:Generator_ColumnVarNameInTable="columnbloqueada" msprop:Generator_ColumnPropNameInRow="bloqueada" msprop:Generator_ColumnPropNameInTable="bloqueadaColumn" msprop:Generator_UserColumnName="bloqueada" type="xs:boolean" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
