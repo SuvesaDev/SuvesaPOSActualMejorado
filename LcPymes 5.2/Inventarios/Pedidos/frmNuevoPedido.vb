@@ -26,7 +26,7 @@ Public Class frmNuevoPedido
     Private Sub CargarSolicitara()
         Try
             Dim dt As New DataTable
-            cFunciones.Llenar_Tabla_Generico("select id, nombre  from solicitara order by predeterminada desc, nombre", dt, CadenaConexionSeePOS)
+            cFunciones.Llenar_Tabla_Generico("select 0 as id, 'Seleccione una Opcion' as nombre union select id, nombre  from solicitara ", dt, CadenaConexionSeePOS)
             If dt.Rows.Count = 0 Then
                 Dim db As New OBSoluciones.SQL.Sentencias(CadenaConexionSeePOS)
                 db.Ejecutar("Insert into solicitara(nombre, predeterminada) values('Proveeduria',1)", CommandType.Text)
@@ -47,20 +47,25 @@ Public Class frmNuevoPedido
         Dim codigo As String = Me.BuscarF1
         If codigo <> "" Then
             txt_codigo.Text = ""
-
-            Dim dt As New DataTable
-            cFunciones.Llenar_Tabla_Generico("Select Codigo, Cod_Articulo, Descripcion, Existencia, Precio_A, Prestamo from Inventario where Cod_Articulo = '" & codigo & "'", dt, CadenaConexionSeePOS)
-            If dt.Rows.Count > 0 Then
-
-                Me.CodArticulo = dt.Rows(0).Item("Cod_Articulo")
-                Me.PrecioUnit = dt.Rows(0).Item("Precio_A")
-                Me.txt_codigo.Text = dt.Rows(0).Item("Codigo")
-                Me.txt_descripcion.Text = dt.Rows(0).Item("Descripcion")
-                Me.txt_cantidad.Value = 1
-
-            End If
+            Me.CargarEnter(codigo)            
         End If
     End Sub
+
+    Private Sub CargarEnter(_CodArticulo As String)
+        Dim dt As New DataTable
+        cFunciones.Llenar_Tabla_Generico("Select Codigo, Cod_Articulo, Descripcion, Existencia, Precio_A, Prestamo from Inventario where Cod_Articulo = '" & _CodArticulo & "' or Barras = '" & _CodArticulo & "' or barras2 = '" & _CodArticulo & "' or barras3 = '" & _CodArticulo & "'", dt, CadenaConexionSeePOS)
+        If dt.Rows.Count > 0 Then
+
+            Me.CodArticulo = dt.Rows(0).Item("Cod_Articulo")
+            Me.PrecioUnit = dt.Rows(0).Item("Precio_A")
+            Me.txt_codigo.Text = dt.Rows(0).Item("Codigo")
+            Me.txt_descripcion.Text = dt.Rows(0).Item("Descripcion")
+            Me.txt_cantidad.Value = 1
+            Me.txt_cantidad.Focus()
+
+        End If
+    End Sub
+
 
     Private Sub txt_codigo_KeyDown(sender As Object, e As KeyEventArgs) Handles txt_codigo.KeyDown
         If e.KeyCode = Keys.F1 Then
@@ -69,6 +74,8 @@ Public Class frmNuevoPedido
             Catch ex As Exception
                 MsgBox(ex.ToString)
             End Try
+        ElseIf e.KeyCode = Keys.Enter Then
+            Me.CargarEnter(Me.txt_codigo.Text)
         End If
     End Sub
 
@@ -88,18 +95,18 @@ Public Class frmNuevoPedido
                     End If
                     While rs.Read
                         Try
-
                             Me.ToolStrip1.Enabled = True
                             Me.GroupBox1.Enabled = True
                             Me.IdUsuario = rs("Cedula")
                             Me.txtUsuarioSolicita.Text = rs("Nombre")
+                            Me.txtNombreUsuario.Text = rs("Nombre")                            
 
                             PMU = VSM(rs("Cedula"), "PedidosBodega") 'Carga los privilegios del usuario con el modulo
                             'If PMU.Execute Then  Else MsgBox("No tiene permiso ejecutar el módulo " & Me.Text, MsgBoxStyle.Information, "Atención...") : Exit Sub
 
                             Me.ToolStrip1.Enabled = True
                             Me.GroupBox1.Enabled = True
-
+                            Me.txt_codigo.Focus()
                         Catch ex As SystemException
                             MsgBox(ex.Message, MsgBoxStyle.Information, "Atención...")
                         End Try
@@ -141,15 +148,30 @@ Public Class frmNuevoPedido
                 Me.txt_codigo.Text = ""
                 Me.txt_descripcion.Text = ""
                 Me.txtObservaciones.Text = ""
+                Me.txt_codigo.Focus()
             End If
         Catch ex As Exception
         End Try
     End Sub
 
+    Private Sub Imprimir()
+        Dim ReporteDocumento As New CrystalDecisions.CrystalReports.Engine.ReportDocument
+        ReporteDocumento.PrintOptions.PaperSize = CrystalDecisions.Shared.PaperSize.DefaultPaperSize
+        ReporteDocumento = New rptPedidoBodega
+        ReporteDocumento.SetParameterValue(0, Me.Consecutivo)
+        CrystalReportsConexion.LoadShow(ReporteDocumento, MdiParent, CadenaConexionSeePOS)
+    End Sub
+
     Private Sub Guardar()
+        If Me.cboSolicitarA.SelectedValue = 0 Then
+            MsgBox("Selecciones una opcion", MsgBoxStyle.Exclamation, Me.Text)
+            Me.cboSolicitarA.Focus()
+            Exit Sub
+        End If
+
         Me.db = New OBSoluciones.SQL.Transaccion(CadenaConexionSeePOS)
         Me.Consecutivo = 0
-        Try            
+        Try
 
             For i As Integer = 0 To Me.viewDatos.Rows.Count - 1
                 Me.InsertarPedidoBodega(Me.dtpFechaSolicitud.Value, _
@@ -161,14 +183,15 @@ Public Class frmNuevoPedido
 
             Next
             db.Commit()
+            Me.Imprimir()
             Me.Close()
         Catch ex As Exception
             db.Rollback()
             MsgBox(ex.Message)
         End Try
-    End Sub    
+    End Sub
     Private db As OBSoluciones.SQL.Transaccion
-    Private Consecutivo As Integer
+    Private Consecutivo As Long
 
     '***************************************************************************
     '***************************************************************************
@@ -193,4 +216,60 @@ Public Class frmNuevoPedido
     Private Sub frmNuevoPedido_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Me.CargarSolicitara()
     End Sub
+
+    Private Sub ToolStripButton2_Click(sender As Object, e As EventArgs) Handles ToolStripButton2.Click
+        If Me.Consecutivo > 0 Then
+            Me.Imprimir()
+        End If
+    End Sub
+
+    Private Sub bt_buscar_Click(sender As Object, e As EventArgs) Handles bt_buscar.Click
+        Try
+            Dim frm As New frmBuscarPedido
+            If frm.ShowDialog = Windows.Forms.DialogResult.OK Then
+                Dim dt As New System.Data.DataTable
+                cFunciones.Llenar_Tabla_Generico("select * from viewPedidosBodega where Consecutivo = '" & frm.Consecutivo & "'", dt, CadenaConexionSeePOS)
+                If dt.Rows.Count > 0 Then
+
+                    Me.Consecutivo = frm.Consecutivo
+                    Me.dtpFechaSolicitud.Value = dt.Rows(0).Item("FechaSolicitud")
+                    Me.txtUsuarioSolicita.Text = dt.Rows(0).Item("UsuarioSolicito")
+                    Me.cboSolicitarA.SelectedText = dt.Rows(0).Item("SolicitarA")
+
+                    Me.Index = 0
+                    Me.viewDatos.Rows.Clear()
+                    For Each r As DataRow In dt.Rows
+                        Me.AgregarLinea(r.Item("Cod_Articulo"), r.Item("Cod_Articulo"), r.Item("Descripcion"), r.Item("CantidadSolicitud"), r.Item("Observaciones"), 0)
+                    Next
+
+                End If
+            End If
+        Catch ex As Exception
+            MsgBox(ex.Message, MsgBoxStyle.Critical, Me.Text)
+        End Try
+    End Sub
+
+    Private Sub bt_nuevo_Click(sender As Object, e As EventArgs) Handles bt_nuevo.Click
+        Dim frm As New frmNuevoPedido
+        frm.MdiParent = Me.MdiParent
+        frm.Show()
+        Me.Close()
+    End Sub
+
+    Private Sub txt_cantidad_KeyDown(sender As Object, e As KeyEventArgs) Handles txt_cantidad.KeyDown
+        If e.KeyCode = Keys.Enter Then
+            Me.txtObservaciones.Focus()
+        End If
+    End Sub
+
+    Private Sub txtObservaciones_KeyDown(sender As Object, e As KeyEventArgs) Handles txtObservaciones.KeyDown
+        If e.KeyCode = Keys.Enter Then
+            Me.bt_agregar.Focus()
+        End If
+    End Sub
+
+    Private Sub viewDatos_RowsRemoved(sender As Object, e As DataGridViewRowsRemovedEventArgs) Handles viewDatos.RowsRemoved
+        Me.Index -= 1
+    End Sub
+
 End Class

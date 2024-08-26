@@ -81,19 +81,19 @@ Public Class frmConsultaPedidosBodega
         Dim strFiltro As String = ""
 
         If Me.ckFiltrarxFecha.Checked = True And Me.ckFiltrarxEstado.Checked = True Then
-            strFiltro = " Where Estado In(" & Me.getEstados & ") And dbo.dateonly(FechaSolicitud) >= dbo.dateonly('" & Me.dtpDesde.Value.ToShortDateString & "') and dbo.dateonly(FechaSolicitud) <= dbo.dateonly('" & Me.dtpHasta.Value.ToShortDateString & "')"
+            strFiltro = " Where IdSolicitara = 1 And Estado In(" & Me.getEstados & ") And dbo.dateonly(FechaSolicitud) >= dbo.dateonly('" & Me.dtpDesde.Value.ToShortDateString & "') and dbo.dateonly(FechaSolicitud) <= dbo.dateonly('" & Me.dtpHasta.Value.ToShortDateString & "')"
         End If
 
         If Me.ckFiltrarxFecha.Checked = True And Me.ckFiltrarxEstado.Checked = False Then
-            strFiltro = " Where dbo.dateonly(FechaSolicitud) >= dbo.dateonly('" & Me.dtpDesde.Value.ToShortDateString & "') and dbo.dateonly(FechaSolicitud) <= dbo.dateonly('" & Me.dtpHasta.Value.ToShortDateString & "')"
+            strFiltro = " Where IdSolicitara = 1 And dbo.dateonly(FechaSolicitud) >= dbo.dateonly('" & Me.dtpDesde.Value.ToShortDateString & "') and dbo.dateonly(FechaSolicitud) <= dbo.dateonly('" & Me.dtpHasta.Value.ToShortDateString & "')"
         End If
 
         If Me.ckFiltrarxFecha.Checked = False And Me.ckFiltrarxEstado.Checked = True Then
-            strFiltro = " Where Estado In(" & Me.getEstados & ")"
+            strFiltro = " Where IdSolicitara = 1 And Estado In(" & Me.getEstados & ")"
         End If
 
         If Me.ckFiltrarxFecha.Checked = False And Me.ckFiltrarxEstado.Checked = False Then
-            strFiltro = ""
+            strFiltro = " Where IdSolicitara = 1"
         End If
 
         Dim db As New OBSoluciones.SQL.Sentencias(CadenaConexionSeePOS)
@@ -205,18 +205,18 @@ Public Class frmConsultaPedidosBodega
 
     Private Sub btnRecibido_Click(sender As Object, e As EventArgs) Handles btnRecibido.Click
         Try
+            'If Me.viewDatos.SelectedRows.Count > 1 Then
+            '    MsgBox("Solo puede seleccionar una fila", MsgBoxStyle.Exclamation, Me.Text)
+            '    Exit Sub
+            'End If
 
-            If Me.viewDatos.SelectedRows.Count > 1 Then
-                MsgBox("Solo puede seleccionar una fila", MsgBoxStyle.Exclamation, Me.Text)
-                Exit Sub
-            End If
-
-            Dim Id As String = Me.viewDatos.Item("IdPedido", Me.viewDatos.CurrentRow.Index).Value
             Dim frm As New frmMarcarEstado
             frm.lblEstado.Text = "Cambiar Estado a Recibido"
             If frm.ShowDialog = Windows.Forms.DialogResult.OK Then
                 Dim db As New OBSoluciones.SQL.Sentencias(CadenaConexionSeePOS)
-                db.Ejecutar("Update PedidoBodega  Set Estado = 'RECIBIDO', FechaRecibido = GetDate(), IdUsuarioRecibio = '" & Me.IdUsuario & "' Where IdPedido = " & Id, CommandType.Text)
+                For Each r As DataGridViewRow In Me.viewDatos.SelectedRows
+                    db.Ejecutar("Update PedidoBodega  Set Estado = 'RECIBIDO', FechaRecibido = GetDate(), IdUsuarioRecibio = '" & Me.IdUsuario & "' Where IdPedido = " & r.Cells("IdPedido").Value, CommandType.Text)
+                Next
                 Me.ConsultaBodega()
             End If
         Catch ex As Exception

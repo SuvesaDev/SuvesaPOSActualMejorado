@@ -41,6 +41,8 @@ Partial Class frmNuevoPedido
         Me.txtNombreUsuario = New System.Windows.Forms.TextBox()
         Me.txtUsuario = New System.Windows.Forms.TextBox()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.cboSolicitarA = New System.Windows.Forms.ComboBox()
+        Me.Label6 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.txtObservaciones = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
@@ -58,8 +60,6 @@ Partial Class frmNuevoPedido
         Me.ToolStripSeparator5 = New System.Windows.Forms.ToolStripSeparator()
         Me.ToolStripButton2 = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripSeparator6 = New System.Windows.Forms.ToolStripSeparator()
-        Me.Label6 = New System.Windows.Forms.Label()
-        Me.cboSolicitarA = New System.Windows.Forms.ComboBox()
         CType(Me.viewDatos, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
         CType(Me.txt_cantidad, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -99,7 +99,7 @@ Partial Class frmNuevoPedido
         Me.txtUsuarioSolicita.Location = New System.Drawing.Point(219, 35)
         Me.txtUsuarioSolicita.Name = "txtUsuarioSolicita"
         Me.txtUsuarioSolicita.ReadOnly = True
-        Me.txtUsuarioSolicita.Size = New System.Drawing.Size(147, 20)
+        Me.txtUsuarioSolicita.Size = New System.Drawing.Size(191, 20)
         Me.txtUsuarioSolicita.TabIndex = 3
         '
         'txt_descripcion
@@ -109,7 +109,7 @@ Partial Class frmNuevoPedido
         Me.txt_descripcion.MaxLength = 20
         Me.txt_descripcion.Name = "txt_descripcion"
         Me.txt_descripcion.ReadOnly = True
-        Me.txt_descripcion.Size = New System.Drawing.Size(440, 20)
+        Me.txt_descripcion.Size = New System.Drawing.Size(531, 20)
         Me.txt_descripcion.TabIndex = 9
         '
         'txt_codigo
@@ -133,7 +133,7 @@ Partial Class frmNuevoPedido
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(12, 62)
+        Me.Label5.Location = New System.Drawing.Point(12, 61)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(40, 13)
         Me.Label5.TabIndex = 7
@@ -146,7 +146,9 @@ Partial Class frmNuevoPedido
         Me.viewDatos.AllowUserToOrderColumns = True
         Me.viewDatos.AllowUserToResizeColumns = False
         Me.viewDatos.AllowUserToResizeRows = False
-        Me.viewDatos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.viewDatos.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.viewDatos.BackgroundColor = System.Drawing.Color.White
         Me.viewDatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.viewDatos.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.cCodigo, Me.cCodArticulo, Me.cDescripcion, Me.cCantidad, Me.cObservaciones, Me.cPrecioUnid})
@@ -155,7 +157,9 @@ Partial Class frmNuevoPedido
         Me.viewDatos.Name = "viewDatos"
         Me.viewDatos.ReadOnly = True
         Me.viewDatos.RowHeadersVisible = False
-        Me.viewDatos.Size = New System.Drawing.Size(519, 125)
+        Me.viewDatos.RowTemplate.Height = 28
+        Me.viewDatos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.viewDatos.Size = New System.Drawing.Size(610, 374)
         Me.viewDatos.TabIndex = 10
         '
         'cCodigo
@@ -164,30 +168,35 @@ Partial Class frmNuevoPedido
         Me.cCodigo.Name = "cCodigo"
         Me.cCodigo.ReadOnly = True
         Me.cCodigo.Visible = False
+        Me.cCodigo.Width = 75
         '
         'cCodArticulo
         '
-        Me.cCodArticulo.HeaderText = "Cod Articulo"
+        Me.cCodArticulo.HeaderText = "Codigo"
         Me.cCodArticulo.Name = "cCodArticulo"
         Me.cCodArticulo.ReadOnly = True
+        Me.cCodArticulo.Width = 75
         '
         'cDescripcion
         '
         Me.cDescripcion.HeaderText = "Descripcion"
         Me.cDescripcion.Name = "cDescripcion"
         Me.cDescripcion.ReadOnly = True
+        Me.cDescripcion.Width = 235
         '
         'cCantidad
         '
         Me.cCantidad.HeaderText = "Cantidad"
         Me.cCantidad.Name = "cCantidad"
         Me.cCantidad.ReadOnly = True
+        Me.cCantidad.Width = 75
         '
         'cObservaciones
         '
         Me.cObservaciones.HeaderText = "Observaciones"
         Me.cObservaciones.Name = "cObservaciones"
         Me.cObservaciones.ReadOnly = True
+        Me.cObservaciones.Width = 200
         '
         'cPrecioUnid
         '
@@ -202,39 +211,43 @@ Partial Class frmNuevoPedido
         Me.Label36.BackColor = System.Drawing.Color.RoyalBlue
         Me.Label36.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label36.ForeColor = System.Drawing.Color.White
-        Me.Label36.Location = New System.Drawing.Point(190, 325)
+        Me.Label36.Location = New System.Drawing.Point(193, 560)
         Me.Label36.Name = "Label36"
-        Me.Label36.Size = New System.Drawing.Size(72, 13)
+        Me.Label36.Size = New System.Drawing.Size(72, 19)
         Me.Label36.TabIndex = 15
         Me.Label36.Text = "Usuario->"
         Me.Label36.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'txtNombreUsuario
         '
-        Me.txtNombreUsuario.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.txtNombreUsuario.Anchor = CType(((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.txtNombreUsuario.BackColor = System.Drawing.SystemColors.Control
-        Me.txtNombreUsuario.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.txtNombreUsuario.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtNombreUsuario.Enabled = False
         Me.txtNombreUsuario.ForeColor = System.Drawing.Color.Blue
-        Me.txtNombreUsuario.Location = New System.Drawing.Point(324, 325)
+        Me.txtNombreUsuario.Location = New System.Drawing.Point(324, 560)
         Me.txtNombreUsuario.Name = "txtNombreUsuario"
         Me.txtNombreUsuario.ReadOnly = True
-        Me.txtNombreUsuario.Size = New System.Drawing.Size(222, 13)
+        Me.txtNombreUsuario.Size = New System.Drawing.Size(331, 20)
         Me.txtNombreUsuario.TabIndex = 17
         '
         'txtUsuario
         '
         Me.txtUsuario.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.txtUsuario.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.txtUsuario.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtUsuario.ForeColor = System.Drawing.Color.Blue
-        Me.txtUsuario.Location = New System.Drawing.Point(262, 325)
+        Me.txtUsuario.Location = New System.Drawing.Point(267, 560)
         Me.txtUsuario.Name = "txtUsuario"
         Me.txtUsuario.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.txtUsuario.Size = New System.Drawing.Size(56, 13)
+        Me.txtUsuario.Size = New System.Drawing.Size(56, 20)
         Me.txtUsuario.TabIndex = 16
         '
         'GroupBox1
         '
+        Me.GroupBox1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.GroupBox1.Controls.Add(Me.cboSolicitarA)
         Me.GroupBox1.Controls.Add(Me.Label6)
         Me.GroupBox1.Controls.Add(Me.Label4)
@@ -254,14 +267,32 @@ Partial Class frmNuevoPedido
         Me.GroupBox1.Enabled = False
         Me.GroupBox1.Location = New System.Drawing.Point(12, 31)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(552, 287)
+        Me.GroupBox1.Size = New System.Drawing.Size(643, 525)
         Me.GroupBox1.TabIndex = 18
         Me.GroupBox1.TabStop = False
+        '
+        'cboSolicitarA
+        '
+        Me.cboSolicitarA.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cboSolicitarA.FormattingEnabled = True
+        Me.cboSolicitarA.Location = New System.Drawing.Point(418, 35)
+        Me.cboSolicitarA.Name = "cboSolicitarA"
+        Me.cboSolicitarA.Size = New System.Drawing.Size(206, 21)
+        Me.cboSolicitarA.TabIndex = 17
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Location = New System.Drawing.Point(419, 18)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(56, 13)
+        Me.Label6.TabIndex = 16
+        Me.Label6.Text = "Solicitar a "
         '
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(92, 101)
+        Me.Label4.Location = New System.Drawing.Point(92, 100)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(78, 13)
         Me.Label4.TabIndex = 15
@@ -271,7 +302,7 @@ Partial Class frmNuevoPedido
         '
         Me.txtObservaciones.Location = New System.Drawing.Point(92, 117)
         Me.txtObservaciones.Name = "txtObservaciones"
-        Me.txtObservaciones.Size = New System.Drawing.Size(361, 20)
+        Me.txtObservaciones.Size = New System.Drawing.Size(452, 20)
         Me.txtObservaciones.TabIndex = 14
         '
         'Label3
@@ -298,9 +329,9 @@ Partial Class frmNuevoPedido
         Me.bt_agregar.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.bt_agregar.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.bt_agregar.ForeColor = System.Drawing.Color.White
-        Me.bt_agregar.Location = New System.Drawing.Point(459, 118)
+        Me.bt_agregar.Location = New System.Drawing.Point(550, 114)
         Me.bt_agregar.Name = "bt_agregar"
-        Me.bt_agregar.Size = New System.Drawing.Size(75, 23)
+        Me.bt_agregar.Size = New System.Drawing.Size(75, 24)
         Me.bt_agregar.TabIndex = 11
         Me.bt_agregar.Text = "Agregar"
         Me.bt_agregar.UseVisualStyleBackColor = False
@@ -311,7 +342,7 @@ Partial Class frmNuevoPedido
         Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.bt_nuevo, Me.ToolStripSeparator1, Me.bt_guardar, Me.ToolStripSeparator2, Me.bt_editar, Me.ToolStripSeparator3, Me.bt_buscar, Me.ToolStripSeparator4, Me.ToolStripSeparator5, Me.ToolStripButton2, Me.ToolStripSeparator6})
         Me.ToolStrip1.Location = New System.Drawing.Point(0, 0)
         Me.ToolStrip1.Name = "ToolStrip1"
-        Me.ToolStrip1.Size = New System.Drawing.Size(578, 25)
+        Me.ToolStrip1.Size = New System.Drawing.Size(669, 25)
         Me.ToolStrip1.TabIndex = 19
         Me.ToolStrip1.Text = "ToolStrip1"
         '
@@ -348,6 +379,7 @@ Partial Class frmNuevoPedido
         'bt_editar
         '
         Me.bt_editar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.bt_editar.Enabled = False
         Me.bt_editar.Image = Global.LcPymes_5._2.My.Resources.Resources._002_pen
         Me.bt_editar.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.bt_editar.Name = "bt_editar"
@@ -393,29 +425,11 @@ Partial Class frmNuevoPedido
         Me.ToolStripSeparator6.Name = "ToolStripSeparator6"
         Me.ToolStripSeparator6.Size = New System.Drawing.Size(6, 25)
         '
-        'Label6
-        '
-        Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(373, 18)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(59, 13)
-        Me.Label6.TabIndex = 16
-        Me.Label6.Text = "Solicitar a :"
-        '
-        'cboSolicitarA
-        '
-        Me.cboSolicitarA.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.cboSolicitarA.FormattingEnabled = True
-        Me.cboSolicitarA.Location = New System.Drawing.Point(372, 35)
-        Me.cboSolicitarA.Name = "cboSolicitarA"
-        Me.cboSolicitarA.Size = New System.Drawing.Size(162, 21)
-        Me.cboSolicitarA.TabIndex = 17
-        '
         'frmNuevoPedido
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(578, 345)
+        Me.ClientSize = New System.Drawing.Size(669, 582)
         Me.Controls.Add(Me.ToolStrip1)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.Label36)
@@ -423,7 +437,6 @@ Partial Class frmNuevoPedido
         Me.Controls.Add(Me.txtUsuario)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
         Me.MaximizeBox = False
-        Me.MinimizeBox = False
         Me.Name = "frmNuevoPedido"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Registro Pedido a Bodega"
@@ -467,12 +480,12 @@ Partial Class frmNuevoPedido
     Friend WithEvents bt_agregar As System.Windows.Forms.Button
     Friend WithEvents Label4 As System.Windows.Forms.Label
     Friend WithEvents txtObservaciones As System.Windows.Forms.TextBox
+    Friend WithEvents cboSolicitarA As System.Windows.Forms.ComboBox
+    Friend WithEvents Label6 As System.Windows.Forms.Label
     Friend WithEvents cCodigo As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents cCodArticulo As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents cDescripcion As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents cCantidad As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents cObservaciones As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents cPrecioUnid As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents cboSolicitarA As System.Windows.Forms.ComboBox
-    Friend WithEvents Label6 As System.Windows.Forms.Label
 End Class

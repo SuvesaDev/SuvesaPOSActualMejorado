@@ -22,8 +22,8 @@ Partial Class frmDatosPreVenta
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.txtPuntoVenta = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
@@ -34,19 +34,6 @@ Partial Class frmDatosPreVenta
         Me.txtCliente = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.viewFichas = New System.Windows.Forms.DataGridView()
-        Me.viewDatos = New System.Windows.Forms.DataGridView()
-        Me.btnAtras = New System.Windows.Forms.Button()
-        Me.btnFactura = New System.Windows.Forms.Button()
-        Me.btnTiquete = New System.Windows.Forms.Button()
-        Me.btnReciboDinero = New System.Windows.Forms.Button()
-        Me.btnGeneraAdelanto = New System.Windows.Forms.Button()
-        Me.txtTotalCobro = New System.Windows.Forms.TextBox()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.btnGenerarApartado = New System.Windows.Forms.Button()
-        Me.ckEsElectronica = New System.Windows.Forms.CheckBox()
-        Me.txtTotalPendiente = New System.Windows.Forms.TextBox()
-        Me.Label6 = New System.Windows.Forms.Label()
-        Me.btnCobrar = New System.Windows.Forms.Button()
         Me.cFicha = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.cRenta = New System.Windows.Forms.DataGridViewCheckBoxColumn()
         Me.cPendiente = New System.Windows.Forms.DataGridViewCheckBoxColumn()
@@ -62,6 +49,19 @@ Partial Class frmDatosPreVenta
         Me.cAbono = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.cDocumento = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.cIdDocumento = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.viewDatos = New System.Windows.Forms.DataGridView()
+        Me.btnAtras = New System.Windows.Forms.Button()
+        Me.btnFactura = New System.Windows.Forms.Button()
+        Me.btnTiquete = New System.Windows.Forms.Button()
+        Me.btnReciboDinero = New System.Windows.Forms.Button()
+        Me.btnGeneraAdelanto = New System.Windows.Forms.Button()
+        Me.txtTotalCobro = New System.Windows.Forms.TextBox()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.btnGenerarApartado = New System.Windows.Forms.Button()
+        Me.ckEsElectronica = New System.Windows.Forms.CheckBox()
+        Me.txtTotalPendiente = New System.Windows.Forms.TextBox()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.btnCobrar = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
         CType(Me.viewFichas, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.viewDatos, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -181,182 +181,6 @@ Partial Class frmDatosPreVenta
         Me.viewFichas.Size = New System.Drawing.Size(810, 124)
         Me.viewFichas.TabIndex = 8
         '
-        'viewDatos
-        '
-        Me.viewDatos.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.viewDatos.BackgroundColor = System.Drawing.Color.White
-        Me.viewDatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.viewDatos.Location = New System.Drawing.Point(9, 132)
-        Me.viewDatos.Name = "viewDatos"
-        Me.viewDatos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.viewDatos.Size = New System.Drawing.Size(810, 119)
-        Me.viewDatos.TabIndex = 1
-        '
-        'btnAtras
-        '
-        Me.btnAtras.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.btnAtras.BackColor = System.Drawing.Color.White
-        Me.btnAtras.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnAtras.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnAtras.Image = Global.LcPymes_5._2.My.Resources.Resources.iconfinder_Left_arrow_circle_2202279
-        Me.btnAtras.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnAtras.Location = New System.Drawing.Point(9, 281)
-        Me.btnAtras.Name = "btnAtras"
-        Me.btnAtras.Size = New System.Drawing.Size(150, 68)
-        Me.btnAtras.TabIndex = 2
-        Me.btnAtras.TabStop = False
-        Me.btnAtras.Text = "      Volver Atras    "
-        Me.btnAtras.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btnAtras.UseVisualStyleBackColor = False
-        '
-        'btnFactura
-        '
-        Me.btnFactura.BackColor = System.Drawing.Color.White
-        Me.btnFactura.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnFactura.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnFactura.Location = New System.Drawing.Point(88, 151)
-        Me.btnFactura.Name = "btnFactura"
-        Me.btnFactura.Size = New System.Drawing.Size(102, 68)
-        Me.btnFactura.TabIndex = 3
-        Me.btnFactura.TabStop = False
-        Me.btnFactura.Text = "Factura Electronica 2"
-        Me.btnFactura.UseVisualStyleBackColor = False
-        Me.btnFactura.Visible = False
-        '
-        'btnTiquete
-        '
-        Me.btnTiquete.BackColor = System.Drawing.Color.White
-        Me.btnTiquete.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnTiquete.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnTiquete.Location = New System.Drawing.Point(196, 151)
-        Me.btnTiquete.Name = "btnTiquete"
-        Me.btnTiquete.Size = New System.Drawing.Size(102, 68)
-        Me.btnTiquete.TabIndex = 4
-        Me.btnTiquete.TabStop = False
-        Me.btnTiquete.Text = "Tiquete Electronico 3"
-        Me.btnTiquete.UseVisualStyleBackColor = False
-        Me.btnTiquete.Visible = False
-        '
-        'btnReciboDinero
-        '
-        Me.btnReciboDinero.BackColor = System.Drawing.Color.White
-        Me.btnReciboDinero.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnReciboDinero.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnReciboDinero.Location = New System.Drawing.Point(304, 151)
-        Me.btnReciboDinero.Name = "btnReciboDinero"
-        Me.btnReciboDinero.Size = New System.Drawing.Size(102, 68)
-        Me.btnReciboDinero.TabIndex = 5
-        Me.btnReciboDinero.TabStop = False
-        Me.btnReciboDinero.Text = "Recibo    Dinero 4"
-        Me.btnReciboDinero.UseVisualStyleBackColor = False
-        Me.btnReciboDinero.Visible = False
-        '
-        'btnGeneraAdelanto
-        '
-        Me.btnGeneraAdelanto.BackColor = System.Drawing.Color.White
-        Me.btnGeneraAdelanto.Enabled = False
-        Me.btnGeneraAdelanto.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnGeneraAdelanto.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnGeneraAdelanto.Location = New System.Drawing.Point(412, 151)
-        Me.btnGeneraAdelanto.Name = "btnGeneraAdelanto"
-        Me.btnGeneraAdelanto.Size = New System.Drawing.Size(102, 68)
-        Me.btnGeneraAdelanto.TabIndex = 14
-        Me.btnGeneraAdelanto.TabStop = False
-        Me.btnGeneraAdelanto.Text = "Generar Adelanto 5"
-        Me.btnGeneraAdelanto.UseVisualStyleBackColor = False
-        Me.btnGeneraAdelanto.Visible = False
-        '
-        'txtTotalCobro
-        '
-        Me.txtTotalCobro.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.txtTotalCobro.BackColor = System.Drawing.Color.White
-        Me.txtTotalCobro.Location = New System.Drawing.Point(715, 257)
-        Me.txtTotalCobro.Name = "txtTotalCobro"
-        Me.txtTotalCobro.ReadOnly = True
-        Me.txtTotalCobro.Size = New System.Drawing.Size(104, 20)
-        Me.txtTotalCobro.TabIndex = 16
-        Me.txtTotalCobro.TabStop = False
-        Me.txtTotalCobro.Text = "0.00"
-        Me.txtTotalCobro.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
-        '
-        'Label4
-        '
-        Me.Label4.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(622, 260)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(62, 13)
-        Me.Label4.TabIndex = 15
-        Me.Label4.Text = "Total Cobro"
-        '
-        'btnGenerarApartado
-        '
-        Me.btnGenerarApartado.BackColor = System.Drawing.Color.White
-        Me.btnGenerarApartado.Enabled = False
-        Me.btnGenerarApartado.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnGenerarApartado.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnGenerarApartado.Location = New System.Drawing.Point(520, 151)
-        Me.btnGenerarApartado.Name = "btnGenerarApartado"
-        Me.btnGenerarApartado.Size = New System.Drawing.Size(102, 68)
-        Me.btnGenerarApartado.TabIndex = 17
-        Me.btnGenerarApartado.TabStop = False
-        Me.btnGenerarApartado.Text = "Generar Apartado 6"
-        Me.btnGenerarApartado.UseVisualStyleBackColor = False
-        Me.btnGenerarApartado.Visible = False
-        '
-        'ckEsElectronica
-        '
-        Me.ckEsElectronica.AutoSize = True
-        Me.ckEsElectronica.Enabled = False
-        Me.ckEsElectronica.Location = New System.Drawing.Point(835, 300)
-        Me.ckEsElectronica.Name = "ckEsElectronica"
-        Me.ckEsElectronica.Size = New System.Drawing.Size(94, 17)
-        Me.ckEsElectronica.TabIndex = 18
-        Me.ckEsElectronica.Text = "Es Electronica"
-        Me.ckEsElectronica.UseVisualStyleBackColor = True
-        Me.ckEsElectronica.Visible = False
-        '
-        'txtTotalPendiente
-        '
-        Me.txtTotalPendiente.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.txtTotalPendiente.BackColor = System.Drawing.Color.White
-        Me.txtTotalPendiente.Location = New System.Drawing.Point(497, 255)
-        Me.txtTotalPendiente.Name = "txtTotalPendiente"
-        Me.txtTotalPendiente.ReadOnly = True
-        Me.txtTotalPendiente.Size = New System.Drawing.Size(104, 20)
-        Me.txtTotalPendiente.TabIndex = 21
-        Me.txtTotalPendiente.TabStop = False
-        Me.txtTotalPendiente.Text = "0.00"
-        Me.txtTotalPendiente.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
-        '
-        'Label6
-        '
-        Me.Label6.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(404, 258)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(82, 13)
-        Me.Label6.TabIndex = 20
-        Me.Label6.Text = "Total Pendiente"
-        '
-        'btnCobrar
-        '
-        Me.btnCobrar.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnCobrar.BackColor = System.Drawing.Color.White
-        Me.btnCobrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnCobrar.Font = New System.Drawing.Font("Segoe UI", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnCobrar.Image = Global.LcPymes_5._2.My.Resources.Resources.iconfinder_resolutions_24_897227_2_
-        Me.btnCobrar.Location = New System.Drawing.Point(407, 281)
-        Me.btnCobrar.Name = "btnCobrar"
-        Me.btnCobrar.Size = New System.Drawing.Size(412, 68)
-        Me.btnCobrar.TabIndex = 19
-        Me.btnCobrar.TabStop = False
-        Me.btnCobrar.Text = "Cobrar 2"
-        Me.btnCobrar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.btnCobrar.UseVisualStyleBackColor = False
-        '
         'cFicha
         '
         Me.cFicha.HeaderText = "# Ficha"
@@ -439,10 +263,10 @@ Partial Class frmDatosPreVenta
         '
         'cTotal
         '
-        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        DataGridViewCellStyle1.Format = "N2"
-        DataGridViewCellStyle1.NullValue = Nothing
-        Me.cTotal.DefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        DataGridViewCellStyle3.Format = "N2"
+        DataGridViewCellStyle3.NullValue = Nothing
+        Me.cTotal.DefaultCellStyle = DataGridViewCellStyle3
         Me.cTotal.HeaderText = "Total"
         Me.cTotal.Name = "cTotal"
         Me.cTotal.ReadOnly = True
@@ -450,9 +274,9 @@ Partial Class frmDatosPreVenta
         '
         'cAbono
         '
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        DataGridViewCellStyle2.Format = "N2"
-        Me.cAbono.DefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        DataGridViewCellStyle4.Format = "N2"
+        Me.cAbono.DefaultCellStyle = DataGridViewCellStyle4
         Me.cAbono.HeaderText = "Abono Inicial"
         Me.cAbono.Name = "cAbono"
         Me.cAbono.ReadOnly = True
@@ -474,12 +298,188 @@ Partial Class frmDatosPreVenta
         Me.cIdDocumento.Visible = False
         Me.cIdDocumento.Width = 96
         '
+        'viewDatos
+        '
+        Me.viewDatos.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.viewDatos.BackgroundColor = System.Drawing.Color.White
+        Me.viewDatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.viewDatos.Location = New System.Drawing.Point(9, 132)
+        Me.viewDatos.Name = "viewDatos"
+        Me.viewDatos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.viewDatos.Size = New System.Drawing.Size(810, 270)
+        Me.viewDatos.TabIndex = 1
+        '
+        'btnAtras
+        '
+        Me.btnAtras.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.btnAtras.BackColor = System.Drawing.Color.White
+        Me.btnAtras.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnAtras.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnAtras.Image = Global.LcPymes_5._2.My.Resources.Resources.iconfinder_Left_arrow_circle_2202279
+        Me.btnAtras.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnAtras.Location = New System.Drawing.Point(9, 432)
+        Me.btnAtras.Name = "btnAtras"
+        Me.btnAtras.Size = New System.Drawing.Size(150, 68)
+        Me.btnAtras.TabIndex = 2
+        Me.btnAtras.TabStop = False
+        Me.btnAtras.Text = "      Volver Atras    "
+        Me.btnAtras.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btnAtras.UseVisualStyleBackColor = False
+        '
+        'btnFactura
+        '
+        Me.btnFactura.BackColor = System.Drawing.Color.White
+        Me.btnFactura.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnFactura.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnFactura.Location = New System.Drawing.Point(88, 151)
+        Me.btnFactura.Name = "btnFactura"
+        Me.btnFactura.Size = New System.Drawing.Size(102, 68)
+        Me.btnFactura.TabIndex = 3
+        Me.btnFactura.TabStop = False
+        Me.btnFactura.Text = "Factura Electronica 2"
+        Me.btnFactura.UseVisualStyleBackColor = False
+        Me.btnFactura.Visible = False
+        '
+        'btnTiquete
+        '
+        Me.btnTiquete.BackColor = System.Drawing.Color.White
+        Me.btnTiquete.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnTiquete.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnTiquete.Location = New System.Drawing.Point(196, 151)
+        Me.btnTiquete.Name = "btnTiquete"
+        Me.btnTiquete.Size = New System.Drawing.Size(102, 68)
+        Me.btnTiquete.TabIndex = 4
+        Me.btnTiquete.TabStop = False
+        Me.btnTiquete.Text = "Tiquete Electronico 3"
+        Me.btnTiquete.UseVisualStyleBackColor = False
+        Me.btnTiquete.Visible = False
+        '
+        'btnReciboDinero
+        '
+        Me.btnReciboDinero.BackColor = System.Drawing.Color.White
+        Me.btnReciboDinero.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnReciboDinero.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnReciboDinero.Location = New System.Drawing.Point(304, 151)
+        Me.btnReciboDinero.Name = "btnReciboDinero"
+        Me.btnReciboDinero.Size = New System.Drawing.Size(102, 68)
+        Me.btnReciboDinero.TabIndex = 5
+        Me.btnReciboDinero.TabStop = False
+        Me.btnReciboDinero.Text = "Recibo    Dinero 4"
+        Me.btnReciboDinero.UseVisualStyleBackColor = False
+        Me.btnReciboDinero.Visible = False
+        '
+        'btnGeneraAdelanto
+        '
+        Me.btnGeneraAdelanto.BackColor = System.Drawing.Color.White
+        Me.btnGeneraAdelanto.Enabled = False
+        Me.btnGeneraAdelanto.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnGeneraAdelanto.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnGeneraAdelanto.Location = New System.Drawing.Point(412, 151)
+        Me.btnGeneraAdelanto.Name = "btnGeneraAdelanto"
+        Me.btnGeneraAdelanto.Size = New System.Drawing.Size(102, 68)
+        Me.btnGeneraAdelanto.TabIndex = 14
+        Me.btnGeneraAdelanto.TabStop = False
+        Me.btnGeneraAdelanto.Text = "Generar Adelanto 5"
+        Me.btnGeneraAdelanto.UseVisualStyleBackColor = False
+        Me.btnGeneraAdelanto.Visible = False
+        '
+        'txtTotalCobro
+        '
+        Me.txtTotalCobro.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.txtTotalCobro.BackColor = System.Drawing.Color.White
+        Me.txtTotalCobro.Location = New System.Drawing.Point(715, 408)
+        Me.txtTotalCobro.Name = "txtTotalCobro"
+        Me.txtTotalCobro.ReadOnly = True
+        Me.txtTotalCobro.Size = New System.Drawing.Size(104, 20)
+        Me.txtTotalCobro.TabIndex = 16
+        Me.txtTotalCobro.TabStop = False
+        Me.txtTotalCobro.Text = "0.00"
+        Me.txtTotalCobro.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        '
+        'Label4
+        '
+        Me.Label4.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(622, 411)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(62, 13)
+        Me.Label4.TabIndex = 15
+        Me.Label4.Text = "Total Cobro"
+        '
+        'btnGenerarApartado
+        '
+        Me.btnGenerarApartado.BackColor = System.Drawing.Color.White
+        Me.btnGenerarApartado.Enabled = False
+        Me.btnGenerarApartado.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnGenerarApartado.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnGenerarApartado.Location = New System.Drawing.Point(520, 151)
+        Me.btnGenerarApartado.Name = "btnGenerarApartado"
+        Me.btnGenerarApartado.Size = New System.Drawing.Size(102, 68)
+        Me.btnGenerarApartado.TabIndex = 17
+        Me.btnGenerarApartado.TabStop = False
+        Me.btnGenerarApartado.Text = "Generar Apartado 6"
+        Me.btnGenerarApartado.UseVisualStyleBackColor = False
+        Me.btnGenerarApartado.Visible = False
+        '
+        'ckEsElectronica
+        '
+        Me.ckEsElectronica.AutoSize = True
+        Me.ckEsElectronica.Enabled = False
+        Me.ckEsElectronica.Location = New System.Drawing.Point(835, 300)
+        Me.ckEsElectronica.Name = "ckEsElectronica"
+        Me.ckEsElectronica.Size = New System.Drawing.Size(94, 17)
+        Me.ckEsElectronica.TabIndex = 18
+        Me.ckEsElectronica.Text = "Es Electronica"
+        Me.ckEsElectronica.UseVisualStyleBackColor = True
+        Me.ckEsElectronica.Visible = False
+        '
+        'txtTotalPendiente
+        '
+        Me.txtTotalPendiente.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.txtTotalPendiente.BackColor = System.Drawing.Color.White
+        Me.txtTotalPendiente.Location = New System.Drawing.Point(497, 406)
+        Me.txtTotalPendiente.Name = "txtTotalPendiente"
+        Me.txtTotalPendiente.ReadOnly = True
+        Me.txtTotalPendiente.Size = New System.Drawing.Size(104, 20)
+        Me.txtTotalPendiente.TabIndex = 21
+        Me.txtTotalPendiente.TabStop = False
+        Me.txtTotalPendiente.Text = "0.00"
+        Me.txtTotalPendiente.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        '
+        'Label6
+        '
+        Me.Label6.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label6.AutoSize = True
+        Me.Label6.Location = New System.Drawing.Point(404, 409)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(82, 13)
+        Me.Label6.TabIndex = 20
+        Me.Label6.Text = "Total Pendiente"
+        '
+        'btnCobrar
+        '
+        Me.btnCobrar.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnCobrar.BackColor = System.Drawing.Color.White
+        Me.btnCobrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnCobrar.Font = New System.Drawing.Font("Segoe UI", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnCobrar.Image = Global.LcPymes_5._2.My.Resources.Resources.iconfinder_resolutions_24_897227_2_
+        Me.btnCobrar.Location = New System.Drawing.Point(407, 432)
+        Me.btnCobrar.Name = "btnCobrar"
+        Me.btnCobrar.Size = New System.Drawing.Size(412, 68)
+        Me.btnCobrar.TabIndex = 19
+        Me.btnCobrar.TabStop = False
+        Me.btnCobrar.Text = "Cobrar 2"
+        Me.btnCobrar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.btnCobrar.UseVisualStyleBackColor = False
+        '
         'frmDatosPreVenta
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(830, 354)
+        Me.ClientSize = New System.Drawing.Size(830, 505)
         Me.Controls.Add(Me.viewDatos)
         Me.Controls.Add(Me.txtTotalPendiente)
         Me.Controls.Add(Me.Label6)
@@ -495,10 +495,10 @@ Partial Class frmDatosPreVenta
         Me.Controls.Add(Me.btnGeneraAdelanto)
         Me.Controls.Add(Me.btnReciboDinero)
         Me.Controls.Add(Me.btnTiquete)
-        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
         Me.KeyPreview = True
         Me.MaximizeBox = False
         Me.MinimizeBox = False
+        Me.MinimumSize = New System.Drawing.Size(846, 544)
         Me.Name = "frmDatosPreVenta"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Datos PreVenta"

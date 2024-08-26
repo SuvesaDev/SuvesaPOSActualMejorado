@@ -6342,7 +6342,7 @@ Fin:
         Me.Consecutivo = 0
         Try
             For Each item As PedidoEditado In Me.Pedido
-                Me.InsertarPedidoBodega(Date.Now, Me.Cedula_usuario, item.Codigo, item.Cantidad, "", item.PrecioUnid)
+                Me.InsertarPedidoBodega(Date.Now, Me.Cedula_usuario, item.Codigo, item.Cantidad, "-- pedido automatico --", item.PrecioUnid)
             Next
             Me.Pedido.Clear()
         Catch ex As Exception

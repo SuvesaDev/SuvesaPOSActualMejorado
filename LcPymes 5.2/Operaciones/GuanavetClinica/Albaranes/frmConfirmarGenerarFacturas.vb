@@ -68,8 +68,36 @@ Public Class frmConfirmarGenerarFacturas
         If dt.Rows.Count > 0 Then
             Me.viewDatos.Item("cIdentificacion2", Me.viewDatos.CurrentRow.Index).Value = _Identificacion
             Me.viewDatos.Item("cCliente", Me.viewDatos.CurrentRow.Index).Value = dt.Rows(0).Item("nombre")
+            Me.viewDatos.Item("cSaldoPrepago", Me.viewDatos.CurrentRow.Index).Value = Anticipo(_Identificacion)
         End If
     End Sub
+
+    Private Function Anticipo(_Cedula As String) As Decimal
+        Dim dt As New DataTable
+        Dim cedula2 As String = Me.GetId(_Cedula)
+        cFunciones.Llenar_Tabla_Generico("select IsNull(Sum(debitos - creditos),0) as Saldo from viewMovimientosPrepagos where identificacion = " & _Cedula & " or identificacion = " & cedula2, dt, CadenaConexionSeePOS)
+        If dt.Rows.Count > 0 Then
+            Dim saldo As Decimal = CDec(dt.Rows(0).Item("Saldo"))
+            If saldo > 0 Then
+                Return saldo
+            Else
+                Return 0
+            End If
+        Else
+            Return 0
+        End If
+    End Function
+
+    Private Function GetId(_Cedula As String) As String
+        Dim dt As New DataTable
+        cFunciones.Llenar_Tabla_Generico("select identificacion from Clientes where cedula = '" & _Cedula & "'", dt, CadenaConexionSeePOS)
+        If dt.Rows.Count > 0 Then
+            Return dt.Rows(0).Item("identificacion")
+        Else
+            Return "-1"
+        End If
+    End Function
+
 
     Private Sub BuscarCliente()
         Dim frmBuscarCliente As New frm_buscar_cliente
@@ -184,4 +212,7 @@ Public Class frmConfirmarGenerarFacturas
         Me.CargarCajaDefecto()
     End Sub
 
+    Private Sub viewDatos_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles viewDatos.CellContentClick
+
+    End Sub
 End Class

@@ -261,6 +261,7 @@ Public Class MainForm
     Friend WithEvents MenuItem212 As System.Windows.Forms.MenuItem
     Friend WithEvents MenuItem213 As System.Windows.Forms.MenuItem
     Friend WithEvents MenuItem214 As System.Windows.Forms.MenuItem
+    Friend WithEvents MenuItem215 As System.Windows.Forms.MenuItem
     Dim SistemaNormal As Boolean = False
 #End Region
 
@@ -845,6 +846,7 @@ Public Class MainForm
         Me.btnLaboratorio = New System.Windows.Forms.ToolStripButton()
         Me.TimerSolicitudes = New System.Windows.Forms.Timer(Me.components)
         Me.PictureBoxFondo = New System.Windows.Forms.PictureBox()
+        Me.MenuItem215 = New System.Windows.Forms.MenuItem()
         CType(Me.StatusBarPanel1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.StatusBarPanel4, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.StatusBarPanel2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -1161,7 +1163,7 @@ Public Class MainForm
         Me.menuExtender.SetExtEnable(Me.MenuItem88, True)
         Me.menuExtender.SetImageIndex(Me.MenuItem88, -1)
         Me.MenuItem88.Index = 12
-        Me.MenuItem88.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.MenuItem89, Me.MenuItem90})
+        Me.MenuItem88.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.MenuItem89, Me.MenuItem90, Me.MenuItem215})
         Me.MenuItem88.OwnerDraw = True
         Me.MenuItem88.Text = "Pedidos de Bodega"
         '
@@ -3091,7 +3093,7 @@ Public Class MainForm
         'StatusBar1
         '
         Me.StatusBar1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.StatusBar1.Location = New System.Drawing.Point(0, 428)
+        Me.StatusBar1.Location = New System.Drawing.Point(0, 407)
         Me.StatusBar1.Name = "StatusBar1"
         Me.StatusBar1.Panels.AddRange(New System.Windows.Forms.StatusBarPanel() {Me.StatusBarPanel1, Me.StatusBarPanel4, Me.StatusBarPanel2, Me.StatusBarPanel3, Me.StatusBarPanel5, Me.sbpTCCompra, Me.sbpTCVenta, Me.sbpVersion})
         Me.StatusBar1.ShowPanels = True
@@ -3511,11 +3513,17 @@ Public Class MainForm
         Me.PictureBoxFondo.TabStop = False
         Me.PictureBoxFondo.Visible = False
         '
+        'MenuItem215
+        '
+        Me.menuExtender.SetImageIndex(Me.MenuItem215, -1)
+        Me.MenuItem215.Index = 2
+        Me.MenuItem215.Text = "Entregar Pedidos"
+        '
         'MainForm
         '
         Me.AutoScaleBaseSize = New System.Drawing.Size(5, 13)
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(1480, 442)
+        Me.ClientSize = New System.Drawing.Size(1480, 421)
         Me.Controls.Add(Me.ToolStrip1)
         Me.Controls.Add(Me.PictureBoxFondo)
         Me.Controls.Add(Me.StatusBar1)
@@ -6123,6 +6131,12 @@ Contador:
 
     Private Sub MenuItem214_Click(sender As Object, e As EventArgs) Handles MenuItem214.Click
         Dim frm As New frmListaPedidos
+        frm.MdiParent = Me
+        frm.Show()
+    End Sub
+
+    Private Sub MenuItem215_Click(sender As Object, e As EventArgs) Handles MenuItem215.Click
+        Dim frm As New frmEntregarPedido
         frm.MdiParent = Me
         frm.Show()
     End Sub

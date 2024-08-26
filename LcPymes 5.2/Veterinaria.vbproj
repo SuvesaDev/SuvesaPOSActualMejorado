@@ -389,8 +389,17 @@
     <EmbeddedResource Include="Inventarios\Movimieto\frmMovimientoInventario.resx">
       <DependentUpon>frmMovimientoInventario.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Inventarios\Pedidos\frmBuscarPedido.resx">
+      <DependentUpon>frmBuscarPedido.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Inventarios\Pedidos\frmConsultaPedidosBodega.resx">
       <DependentUpon>frmConsultaPedidosBodega.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventarios\Pedidos\frmEntregarPedido.resx">
+      <DependentUpon>frmEntregarPedido.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventarios\Pedidos\frmEntregarSolicitudPedido.resx">
+      <DependentUpon>frmEntregarSolicitudPedido.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Inventarios\Pedidos\frmMarcarEstado.resx">
       <DependentUpon>frmMarcarEstado.vb</DependentUpon>
@@ -400,6 +409,14 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Inventarios\Pedidos\frmRegistrarPedido.resx">
       <DependentUpon>frmRegistrarPedido.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventarios\Pedidos\rptEntregaBodega.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptEntregaBodega.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventarios\Pedidos\rptPedidoBodega.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptPedidoBodega.vb</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Inventarios\Prestamo\frmPrestamosBodega.resx">
       <DependentUpon>frmPrestamosBodega.vb</DependentUpon>
@@ -4065,6 +4082,36 @@
     </Compile>
     <Compile Include="Inventarios\Movimieto\frmMovimientoInventario.vb">
       <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventarios\Pedidos\frmBuscarPedido.Designer.vb">
+      <DependentUpon>frmBuscarPedido.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Inventarios\Pedidos\frmBuscarPedido.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventarios\Pedidos\frmEntregarPedido.Designer.vb">
+      <DependentUpon>frmEntregarPedido.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Inventarios\Pedidos\frmEntregarPedido.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventarios\Pedidos\frmEntregarSolicitudPedido.Designer.vb">
+      <DependentUpon>frmEntregarSolicitudPedido.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Inventarios\Pedidos\frmEntregarSolicitudPedido.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventarios\Pedidos\rptEntregaBodega.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptEntregaBodega.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Inventarios\Pedidos\rptPedidoBodega.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptPedidoBodega.rpt</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Inventarios\Prestamo\Presentacion\frmMostrarSolicitudes.Designer.vb">
       <DependentUpon>frmMostrarSolicitudes.vb</DependentUpon>

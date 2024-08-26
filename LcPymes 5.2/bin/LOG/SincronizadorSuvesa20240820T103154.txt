@@ -1,0 +1,7 @@
+﻿
+Hora Inicial: 20/08/2024 10:31:54 am
+Tipo de procedimiento: Ventas
+Cantidad Albaranes: 0
+Se escribió en la bitacora: SISTEMA
+Hora Final: 20/08/2024 10:32:17 am
+Tiempo Empleado: 00:00:22.50

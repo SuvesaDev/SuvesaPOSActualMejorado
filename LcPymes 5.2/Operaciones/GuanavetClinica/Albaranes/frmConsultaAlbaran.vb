@@ -272,6 +272,33 @@ Public Class frmConsultaAlbaran
         End Try
     End Sub
 
+
+    Private Function Anticipo(_Cedula As String) As Decimal
+        Dim dt As New DataTable
+        Dim cedula2 As String = Me.GetId(_Cedula)
+        cFunciones.Llenar_Tabla_Generico("select IsNull(Sum(debitos - creditos),0) as Saldo from viewMovimientosPrepagos where identificacion = " & _Cedula & " or identificacion = " & cedula2, dt, CadenaConexionSeePOS)
+        If dt.Rows.Count > 0 Then
+            Dim saldo As Decimal = CDec(dt.Rows(0).Item("Saldo"))
+            If saldo > 0 Then
+                Return saldo
+            Else
+                Return 0
+            End If            
+        Else
+            Return 0
+        End If
+    End Function
+
+    Private Function GetId(_Cedula As String) As String
+        Dim dt As New DataTable
+        cFunciones.Llenar_Tabla_Generico("select identificacion from Clientes where cedula = '" & _Cedula & "'", dt, CadenaConexionSeePOS)
+        If dt.Rows.Count > 0 Then
+            Return dt.Rows(0).Item("identificacion")
+        Else
+            Return "-1"
+        End If
+    End Function
+
     Private Sub GenerarFacturas()
         Dim Identificaciones As New System.Collections.Generic.List(Of String)
         Dim Pendientes As New System.Collections.Generic.List(Of DataGridViewRow)
@@ -314,6 +341,7 @@ Public Class frmConsultaAlbaran
                 frm.viewDatos.Item("cTotal", Index).Value = Total
                 frm.viewDatos.Item("cCaja", Index).Value = 1
                 frm.viewDatos.Item("cTipo", Index).Value = "TIQUETE"
+                frm.viewDatos.Item("cSaldoPrepago", Index).Value = Me.Anticipo(Id)
                 Index += 1
             Next
 
