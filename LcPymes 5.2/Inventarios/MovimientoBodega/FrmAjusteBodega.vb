@@ -118,78 +118,84 @@ Public Class FrmAjusteBodega
     Friend WithEvents lbanulado As System.Windows.Forms.Label
     Friend WithEvents lista As System.Windows.Forms.ListBox
     <System.Diagnostics.DebuggerStepThrough()> Private Sub InitializeComponent()
-        Dim resources As System.Resources.ResourceManager = New System.Resources.ResourceManager(GetType(FrmAjusteBodega))
-        Me.Label1 = New System.Windows.Forms.Label
-        Me.DataSet_Movimiento_Bodega = New LcPymes_5._2.DataSet_Movimiento_Bodega
-        Me.TextBoxId = New System.Windows.Forms.Label
-        Me.Panel1 = New System.Windows.Forms.Panel
-        Me.Label36 = New System.Windows.Forms.Label
-        Me.txtUsuario = New System.Windows.Forms.TextBox
-        Me.txtNombreUsuario = New System.Windows.Forms.Label
-        Me.txtCedulaUsuario = New System.Windows.Forms.TextBox
-        Me.ComboBoxBodegas = New System.Windows.Forms.ComboBox
-        Me.DateTimePicker = New System.Windows.Forms.DateTimePicker
-        Me.Label3 = New System.Windows.Forms.Label
-        Me.RadioButtonSalida = New System.Windows.Forms.RadioButton
-        Me.RadioButtonEntrada = New System.Windows.Forms.RadioButton
-        Me.Label4 = New System.Windows.Forms.Label
-        Me.Label6 = New System.Windows.Forms.Label
-        Me.Label7 = New System.Windows.Forms.Label
-        Me.TextBoxCodigo = New System.Windows.Forms.TextBox
-        Me.TextBoxDescripcion = New System.Windows.Forms.Label
-        Me.Label10 = New System.Windows.Forms.Label
-        Me.GridControl1 = New DevExpress.XtraGrid.GridControl
-        Me.GridView1 = New DevExpress.XtraGrid.Views.Grid.GridView
-        Me.colCodigo = New DevExpress.XtraGrid.Columns.GridColumn
-        Me.colDescripcion = New DevExpress.XtraGrid.Columns.GridColumn
-        Me.colCantidad = New DevExpress.XtraGrid.Columns.GridColumn
-        Me.RepositoryItemTextEdit1 = New DevExpress.XtraEditors.Repository.RepositoryItemTextEdit
-        Me.colTipo_Entrada = New DevExpress.XtraGrid.Columns.GridColumn
-        Me.colTipo_Salida = New DevExpress.XtraGrid.Columns.GridColumn
-        Me.ExistenciaForzada = New DevExpress.XtraGrid.Columns.GridColumn
-        Me.SqlSelectCommand1 = New System.Data.SqlClient.SqlCommand
-        Me.SqlConnection = New System.Data.SqlClient.SqlConnection
-        Me.SqlDataAdapterBodegas = New System.Data.SqlClient.SqlDataAdapter
-        Me.SqlSelectCommand2 = New System.Data.SqlClient.SqlCommand
-        Me.TextBoxCantidad = New System.Windows.Forms.TextBox
-        Me.SqlDataAdapterMovimiento_Bodega = New System.Data.SqlClient.SqlDataAdapter
-        Me.SqlDeleteCommand2 = New System.Data.SqlClient.SqlCommand
-        Me.SqlInsertCommand2 = New System.Data.SqlClient.SqlCommand
-        Me.SqlSelectCommand3 = New System.Data.SqlClient.SqlCommand
-        Me.SqlUpdateCommand2 = New System.Data.SqlClient.SqlCommand
-        Me.SqlDataAdapter_MovimientDetalle = New System.Data.SqlClient.SqlDataAdapter
-        Me.SqlDeleteCommand3 = New System.Data.SqlClient.SqlCommand
-        Me.SqlInsertCommand3 = New System.Data.SqlClient.SqlCommand
-        Me.SqlSelectCommand4 = New System.Data.SqlClient.SqlCommand
-        Me.SqlUpdateCommand3 = New System.Data.SqlClient.SqlCommand
-        Me.Panel2 = New System.Windows.Forms.Panel
-        Me.txtCliente = New System.Windows.Forms.TextBox
-        Me.Label8 = New System.Windows.Forms.Label
-        Me.Check_Anulado = New System.Windows.Forms.CheckBox
-        Me.TextBoxReferencia = New System.Windows.Forms.TextBox
-        Me.Label5 = New System.Windows.Forms.Label
-        Me.Panel3 = New System.Windows.Forms.Panel
-        Me.txtCantVet = New System.Windows.Forms.TextBox
-        Me.lblCantVet = New System.Windows.Forms.Label
-        Me.txtCodigo = New System.Windows.Forms.TextBox
-        Me.LVencimiento = New System.Windows.Forms.Label
-        Me.LNumero = New System.Windows.Forms.Label
-        Me.LNuevoLote = New System.Windows.Forms.Label
-        Me.DTPVencimiento = New System.Windows.Forms.DateTimePicker
-        Me.txtNuevoLote = New System.Windows.Forms.TextBox
-        Me.CBNuevo = New System.Windows.Forms.CheckBox
-        Me.CbNumero = New System.Windows.Forms.ComboBox
-        Me.Label2 = New System.Windows.Forms.Label
-        Me.txtExistencia = New System.Windows.Forms.TextBox
-        Me.lbanulado = New System.Windows.Forms.Label
-        Me.Dt_FechaEntrada = New System.Windows.Forms.DateTimePicker
-        Me.AdapterLotes = New System.Data.SqlClient.SqlDataAdapter
-        Me.SqlDeleteCommand1 = New System.Data.SqlClient.SqlCommand
-        Me.SqlConnectionLote = New System.Data.SqlClient.SqlConnection
-        Me.SqlInsertCommand1 = New System.Data.SqlClient.SqlCommand
-        Me.SqlSelectCommand5 = New System.Data.SqlClient.SqlCommand
-        Me.SqlUpdateCommand1 = New System.Data.SqlClient.SqlCommand
-        Me.lista = New System.Windows.Forms.ListBox
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmAjusteBodega))
+        Dim ColumnFilterInfo1 As DevExpress.XtraGrid.Columns.ColumnFilterInfo = New DevExpress.XtraGrid.Columns.ColumnFilterInfo()
+        Dim ColumnFilterInfo2 As DevExpress.XtraGrid.Columns.ColumnFilterInfo = New DevExpress.XtraGrid.Columns.ColumnFilterInfo()
+        Dim ColumnFilterInfo3 As DevExpress.XtraGrid.Columns.ColumnFilterInfo = New DevExpress.XtraGrid.Columns.ColumnFilterInfo()
+        Dim ColumnFilterInfo4 As DevExpress.XtraGrid.Columns.ColumnFilterInfo = New DevExpress.XtraGrid.Columns.ColumnFilterInfo()
+        Dim ColumnFilterInfo5 As DevExpress.XtraGrid.Columns.ColumnFilterInfo = New DevExpress.XtraGrid.Columns.ColumnFilterInfo()
+        Dim ColumnFilterInfo6 As DevExpress.XtraGrid.Columns.ColumnFilterInfo = New DevExpress.XtraGrid.Columns.ColumnFilterInfo()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.DataSet_Movimiento_Bodega = New LcPymes_5._2.DataSet_Movimiento_Bodega()
+        Me.TextBoxId = New System.Windows.Forms.Label()
+        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Label36 = New System.Windows.Forms.Label()
+        Me.txtUsuario = New System.Windows.Forms.TextBox()
+        Me.txtNombreUsuario = New System.Windows.Forms.Label()
+        Me.txtCedulaUsuario = New System.Windows.Forms.TextBox()
+        Me.ComboBoxBodegas = New System.Windows.Forms.ComboBox()
+        Me.DateTimePicker = New System.Windows.Forms.DateTimePicker()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.RadioButtonSalida = New System.Windows.Forms.RadioButton()
+        Me.RadioButtonEntrada = New System.Windows.Forms.RadioButton()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.TextBoxCodigo = New System.Windows.Forms.TextBox()
+        Me.TextBoxDescripcion = New System.Windows.Forms.Label()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.GridControl1 = New DevExpress.XtraGrid.GridControl()
+        Me.GridView1 = New DevExpress.XtraGrid.Views.Grid.GridView()
+        Me.colCodigo = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.colDescripcion = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.colCantidad = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.RepositoryItemTextEdit1 = New DevExpress.XtraEditors.Repository.RepositoryItemTextEdit()
+        Me.colTipo_Entrada = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.colTipo_Salida = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.ExistenciaForzada = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.SqlSelectCommand1 = New System.Data.SqlClient.SqlCommand()
+        Me.SqlConnection = New System.Data.SqlClient.SqlConnection()
+        Me.SqlDataAdapterBodegas = New System.Data.SqlClient.SqlDataAdapter()
+        Me.SqlSelectCommand2 = New System.Data.SqlClient.SqlCommand()
+        Me.TextBoxCantidad = New System.Windows.Forms.TextBox()
+        Me.SqlDataAdapterMovimiento_Bodega = New System.Data.SqlClient.SqlDataAdapter()
+        Me.SqlDeleteCommand2 = New System.Data.SqlClient.SqlCommand()
+        Me.SqlInsertCommand2 = New System.Data.SqlClient.SqlCommand()
+        Me.SqlSelectCommand3 = New System.Data.SqlClient.SqlCommand()
+        Me.SqlUpdateCommand2 = New System.Data.SqlClient.SqlCommand()
+        Me.SqlDataAdapter_MovimientDetalle = New System.Data.SqlClient.SqlDataAdapter()
+        Me.SqlDeleteCommand3 = New System.Data.SqlClient.SqlCommand()
+        Me.SqlInsertCommand3 = New System.Data.SqlClient.SqlCommand()
+        Me.SqlSelectCommand4 = New System.Data.SqlClient.SqlCommand()
+        Me.SqlUpdateCommand3 = New System.Data.SqlClient.SqlCommand()
+        Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.txtCliente = New System.Windows.Forms.TextBox()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.Check_Anulado = New System.Windows.Forms.CheckBox()
+        Me.TextBoxReferencia = New System.Windows.Forms.TextBox()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.txtCantVet = New System.Windows.Forms.TextBox()
+        Me.lblCantVet = New System.Windows.Forms.Label()
+        Me.txtCodigo = New System.Windows.Forms.TextBox()
+        Me.LVencimiento = New System.Windows.Forms.Label()
+        Me.LNumero = New System.Windows.Forms.Label()
+        Me.LNuevoLote = New System.Windows.Forms.Label()
+        Me.DTPVencimiento = New System.Windows.Forms.DateTimePicker()
+        Me.txtNuevoLote = New System.Windows.Forms.TextBox()
+        Me.CBNuevo = New System.Windows.Forms.CheckBox()
+        Me.CbNumero = New System.Windows.Forms.ComboBox()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.txtExistencia = New System.Windows.Forms.TextBox()
+        Me.lbanulado = New System.Windows.Forms.Label()
+        Me.Dt_FechaEntrada = New System.Windows.Forms.DateTimePicker()
+        Me.AdapterLotes = New System.Data.SqlClient.SqlDataAdapter()
+        Me.SqlDeleteCommand1 = New System.Data.SqlClient.SqlCommand()
+        Me.SqlConnectionLote = New System.Data.SqlClient.SqlConnection()
+        Me.SqlInsertCommand1 = New System.Data.SqlClient.SqlCommand()
+        Me.SqlSelectCommand5 = New System.Data.SqlClient.SqlCommand()
+        Me.SqlUpdateCommand1 = New System.Data.SqlClient.SqlCommand()
+        Me.lista = New System.Windows.Forms.ListBox()
         CType(Me.DataSet_Movimiento_Bodega, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
         CType(Me.GridControl1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -203,6 +209,37 @@ Public Class FrmAjusteBodega
         '
         Me.ToolBarNuevo.Enabled = False
         '
+        'ToolBarRegistrar
+        '
+        Me.ToolBarRegistrar.Enabled = False
+        '
+        'ToolBarEliminar
+        '
+        Me.ToolBarEliminar.Enabled = False
+        Me.ToolBarEliminar.Text = "Anular"
+        '
+        'ToolBarImprimir
+        '
+        Me.ToolBarImprimir.Enabled = False
+        '
+        'ImageList
+        '
+        Me.ImageList.ImageStream = CType(resources.GetObject("ImageList.ImageStream"), System.Windows.Forms.ImageListStreamer)
+        Me.ImageList.Images.SetKeyName(0, "")
+        Me.ImageList.Images.SetKeyName(1, "")
+        Me.ImageList.Images.SetKeyName(2, "")
+        Me.ImageList.Images.SetKeyName(3, "")
+        Me.ImageList.Images.SetKeyName(4, "")
+        Me.ImageList.Images.SetKeyName(5, "")
+        Me.ImageList.Images.SetKeyName(6, "")
+        Me.ImageList.Images.SetKeyName(7, "")
+        Me.ImageList.Images.SetKeyName(8, "")
+        '
+        'ToolBar1
+        '
+        Me.ToolBar1.Location = New System.Drawing.Point(0, 445)
+        Me.ToolBar1.Size = New System.Drawing.Size(584, 52)
+        '
         'DataNavigator
         '
         Me.DataNavigator.Buttons.Append.Visible = False
@@ -210,37 +247,12 @@ Public Class FrmAjusteBodega
         Me.DataNavigator.Buttons.EndEdit.Visible = False
         Me.DataNavigator.Buttons.Remove.Visible = False
         Me.DataNavigator.Location = New System.Drawing.Point(665, 598)
-        Me.DataNavigator.Name = "DataNavigator"
         Me.DataNavigator.Visible = False
-        '
-        'ToolBarRegistrar
-        '
-        Me.ToolBarRegistrar.Enabled = False
-        '
-        'ToolBarImprimir
-        '
-        Me.ToolBarImprimir.Enabled = False
         '
         'TituloModulo
         '
-        Me.TituloModulo.Name = "TituloModulo"
-        Me.TituloModulo.Size = New System.Drawing.Size(594, 32)
+        Me.TituloModulo.Size = New System.Drawing.Size(584, 32)
         Me.TituloModulo.Text = "Ajuste Bodega Inventario"
-        '
-        'ImageList
-        '
-        Me.ImageList.ImageStream = CType(resources.GetObject("ImageList.ImageStream"), System.Windows.Forms.ImageListStreamer)
-        '
-        'ToolBarEliminar
-        '
-        Me.ToolBarEliminar.Enabled = False
-        Me.ToolBarEliminar.Text = "Anular"
-        '
-        'ToolBar1
-        '
-        Me.ToolBar1.Location = New System.Drawing.Point(0, 455)
-        Me.ToolBar1.Name = "ToolBar1"
-        Me.ToolBar1.Size = New System.Drawing.Size(594, 52)
         '
         'Label1
         '
@@ -257,11 +269,12 @@ Public Class FrmAjusteBodega
         '
         Me.DataSet_Movimiento_Bodega.DataSetName = "DataSet_Movimiento_Bodega"
         Me.DataSet_Movimiento_Bodega.Locale = New System.Globalization.CultureInfo("es")
+        Me.DataSet_Movimiento_Bodega.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'TextBoxId
         '
         Me.TextBoxId.BackColor = System.Drawing.Color.White
-        Me.TextBoxId.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.DataSet_Movimiento_Bodega, "MovimientosBodega.Boleta_Movimiento"))
+        Me.TextBoxId.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.DataSet_Movimiento_Bodega, "MovimientosBodega.Boleta_Movimiento", True))
         Me.TextBoxId.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBoxId.ForeColor = System.Drawing.Color.Blue
         Me.TextBoxId.Location = New System.Drawing.Point(1, 16)
@@ -301,10 +314,9 @@ Public Class FrmAjusteBodega
         Me.txtUsuario.ForeColor = System.Drawing.Color.Blue
         Me.txtUsuario.Location = New System.Drawing.Point(64, 0)
         Me.txtUsuario.Name = "txtUsuario"
-        Me.txtUsuario.PasswordChar = Microsoft.VisualBasic.ChrW(42)
+        Me.txtUsuario.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.txtUsuario.Size = New System.Drawing.Size(56, 13)
         Me.txtUsuario.TabIndex = 0
-        Me.txtUsuario.Text = ""
         '
         'txtNombreUsuario
         '
@@ -321,18 +333,17 @@ Public Class FrmAjusteBodega
         Me.txtCedulaUsuario.BackColor = System.Drawing.SystemColors.ControlDark
         Me.txtCedulaUsuario.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtCedulaUsuario.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
-        Me.txtCedulaUsuario.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.DataSet_Movimiento_Bodega, "MovimientosBodega.Usuario"))
+        Me.txtCedulaUsuario.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.DataSet_Movimiento_Bodega, "MovimientosBodega.Usuario", True))
         Me.txtCedulaUsuario.Enabled = False
         Me.txtCedulaUsuario.ForeColor = System.Drawing.Color.Blue
         Me.txtCedulaUsuario.Location = New System.Drawing.Point(211, 16)
         Me.txtCedulaUsuario.Name = "txtCedulaUsuario"
         Me.txtCedulaUsuario.Size = New System.Drawing.Size(72, 13)
         Me.txtCedulaUsuario.TabIndex = 170
-        Me.txtCedulaUsuario.Text = ""
         '
         'ComboBoxBodegas
         '
-        Me.ComboBoxBodegas.DataBindings.Add(New System.Windows.Forms.Binding("SelectedValue", Me.DataSet_Movimiento_Bodega, "MovimientosBodega.Bodega"))
+        Me.ComboBoxBodegas.DataBindings.Add(New System.Windows.Forms.Binding("SelectedValue", Me.DataSet_Movimiento_Bodega, "MovimientosBodega.Bodega", True))
         Me.ComboBoxBodegas.DataSource = Me.DataSet_Movimiento_Bodega
         Me.ComboBoxBodegas.DisplayMember = "Bodegas.Nombre_Bodega"
         Me.ComboBoxBodegas.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
@@ -348,7 +359,7 @@ Public Class FrmAjusteBodega
         '
         Me.DateTimePicker.CalendarForeColor = System.Drawing.Color.Blue
         Me.DateTimePicker.CustomFormat = "dd/MM/yyyy HH:mm"
-        Me.DateTimePicker.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.DataSet_Movimiento_Bodega, "MovimientosBodega.Fecha"))
+        Me.DateTimePicker.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.DataSet_Movimiento_Bodega, "MovimientosBodega.Fecha", True))
         Me.DateTimePicker.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.DateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom
         Me.DateTimePicker.Location = New System.Drawing.Point(448, 40)
@@ -372,7 +383,7 @@ Public Class FrmAjusteBodega
         'RadioButtonSalida
         '
         Me.RadioButtonSalida.BackColor = System.Drawing.Color.Transparent
-        Me.RadioButtonSalida.DataBindings.Add(New System.Windows.Forms.Binding("Checked", Me.DataSet_Movimiento_Bodega, "MovimientosBodega.MovimientosBodegaMovimientosBodega_Detalle.Tipo_Salida"))
+        Me.RadioButtonSalida.DataBindings.Add(New System.Windows.Forms.Binding("Checked", Me.DataSet_Movimiento_Bodega, "MovimientosBodega.MovimientosBodegaMovimientosBodega_Detalle.Tipo_Salida", True))
         Me.RadioButtonSalida.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.RadioButtonSalida.ForeColor = System.Drawing.Color.Blue
         Me.RadioButtonSalida.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -381,12 +392,13 @@ Public Class FrmAjusteBodega
         Me.RadioButtonSalida.Size = New System.Drawing.Size(58, 16)
         Me.RadioButtonSalida.TabIndex = 1
         Me.RadioButtonSalida.Text = "&Salida"
+        Me.RadioButtonSalida.UseVisualStyleBackColor = False
         '
         'RadioButtonEntrada
         '
         Me.RadioButtonEntrada.BackColor = System.Drawing.Color.Transparent
         Me.RadioButtonEntrada.Checked = True
-        Me.RadioButtonEntrada.DataBindings.Add(New System.Windows.Forms.Binding("Checked", Me.DataSet_Movimiento_Bodega, "MovimientosBodega.MovimientosBodegaMovimientosBodega_Detalle.Tipo_Entrada"))
+        Me.RadioButtonEntrada.DataBindings.Add(New System.Windows.Forms.Binding("Checked", Me.DataSet_Movimiento_Bodega, "MovimientosBodega.MovimientosBodegaMovimientosBodega_Detalle.Tipo_Entrada", True))
         Me.RadioButtonEntrada.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.RadioButtonEntrada.ForeColor = System.Drawing.Color.Blue
         Me.RadioButtonEntrada.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -397,6 +409,7 @@ Public Class FrmAjusteBodega
         Me.RadioButtonEntrada.TabStop = True
         Me.RadioButtonEntrada.Text = "&Entrada"
         Me.RadioButtonEntrada.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.RadioButtonEntrada.UseVisualStyleBackColor = False
         '
         'Label4
         '
@@ -437,18 +450,17 @@ Public Class FrmAjusteBodega
         '
         Me.TextBoxCodigo.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.TextBoxCodigo.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
-        Me.TextBoxCodigo.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.DataSet_Movimiento_Bodega, "MovimientosBodega.MovimientosBodegaMovimientosBodega_Detalle.Codigo"))
+        Me.TextBoxCodigo.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.DataSet_Movimiento_Bodega, "MovimientosBodega.MovimientosBodegaMovimientosBodega_Detalle.Codigo", True))
         Me.TextBoxCodigo.ForeColor = System.Drawing.Color.Blue
         Me.TextBoxCodigo.Location = New System.Drawing.Point(-80, 22)
         Me.TextBoxCodigo.Name = "TextBoxCodigo"
         Me.TextBoxCodigo.Size = New System.Drawing.Size(80, 13)
         Me.TextBoxCodigo.TabIndex = 4
-        Me.TextBoxCodigo.Text = ""
         '
         'TextBoxDescripcion
         '
         Me.TextBoxDescripcion.BackColor = System.Drawing.Color.Transparent
-        Me.TextBoxDescripcion.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.DataSet_Movimiento_Bodega, "MovimientosBodega.MovimientosBodegaMovimientosBodega_Detalle.Descripcion"))
+        Me.TextBoxDescripcion.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.DataSet_Movimiento_Bodega, "MovimientosBodega.MovimientosBodegaMovimientosBodega_Detalle.Descripcion", True))
         Me.TextBoxDescripcion.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBoxDescripcion.ForeColor = System.Drawing.Color.Blue
         Me.TextBoxDescripcion.Location = New System.Drawing.Point(71, 6)
@@ -473,7 +485,7 @@ Public Class FrmAjusteBodega
         Me.GridControl1.DataMember = "MovimientosBodega.MovimientosBodegaMovimientosBodega_Detalle"
         Me.GridControl1.DataSource = Me.DataSet_Movimiento_Bodega
         '
-        'GridControl1.EmbeddedNavigator
+        '
         '
         Me.GridControl1.EmbeddedNavigator.Name = ""
         Me.GridControl1.ForeColor = System.Drawing.Color.Blue
@@ -482,12 +494,6 @@ Public Class FrmAjusteBodega
         Me.GridControl1.Name = "GridControl1"
         Me.GridControl1.RepositoryItems.AddRange(New DevExpress.XtraEditors.Repository.RepositoryItem() {Me.RepositoryItemTextEdit1})
         Me.GridControl1.Size = New System.Drawing.Size(584, 200)
-        Me.GridControl1.Styles.AddReplace("SelectedRow", New DevExpress.Utils.ViewStyleEx("SelectedRow", "Grid", New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold), CType((((((DevExpress.Utils.StyleOptions.StyleEnabled Or DevExpress.Utils.StyleOptions.UseBackColor) _
-                            Or DevExpress.Utils.StyleOptions.UseDrawFocusRect) _
-                            Or DevExpress.Utils.StyleOptions.UseFont) _
-                            Or DevExpress.Utils.StyleOptions.UseForeColor) _
-                            Or DevExpress.Utils.StyleOptions.UseImage), DevExpress.Utils.StyleOptions), System.Drawing.SystemColors.HotTrack, System.Drawing.Color.White, System.Drawing.Color.Empty, System.Drawing.Drawing2D.LinearGradientMode.Horizontal))
-        Me.GridControl1.Styles.AddReplace("ColumnFilterButtonActive", New DevExpress.Utils.ViewStyleEx("ColumnFilterButtonActive", "Grid", System.Drawing.SystemColors.Control, System.Drawing.Color.Blue, System.Drawing.SystemColors.ControlLightLight, System.Drawing.Drawing2D.LinearGradientMode.Horizontal))
         Me.GridControl1.TabIndex = 7
         Me.GridControl1.Text = "GridControl"
         '
@@ -504,13 +510,14 @@ Public Class FrmAjusteBodega
         '
         Me.colCodigo.Caption = "Código"
         Me.colCodigo.FieldName = "CodArticulo"
+        Me.colCodigo.FilterInfo = ColumnFilterInfo1
         Me.colCodigo.Name = "colCodigo"
         Me.colCodigo.Options = CType(((((((DevExpress.XtraGrid.Columns.ColumnOptions.CanMoved Or DevExpress.XtraGrid.Columns.ColumnOptions.CanResized) _
-                    Or DevExpress.XtraGrid.Columns.ColumnOptions.CanSorted) _
-                    Or DevExpress.XtraGrid.Columns.ColumnOptions.ReadOnly) _
-                    Or DevExpress.XtraGrid.Columns.ColumnOptions.CanFocused) _
-                    Or DevExpress.XtraGrid.Columns.ColumnOptions.ShowInCustomizationForm) _
-                    Or DevExpress.XtraGrid.Columns.ColumnOptions.NonEditable), DevExpress.XtraGrid.Columns.ColumnOptions)
+            Or DevExpress.XtraGrid.Columns.ColumnOptions.CanSorted) _
+            Or DevExpress.XtraGrid.Columns.ColumnOptions.[ReadOnly]) _
+            Or DevExpress.XtraGrid.Columns.ColumnOptions.CanFocused) _
+            Or DevExpress.XtraGrid.Columns.ColumnOptions.ShowInCustomizationForm) _
+            Or DevExpress.XtraGrid.Columns.ColumnOptions.NonEditable), DevExpress.XtraGrid.Columns.ColumnOptions)
         Me.colCodigo.VisibleIndex = 0
         Me.colCodigo.Width = 62
         '
@@ -518,13 +525,14 @@ Public Class FrmAjusteBodega
         '
         Me.colDescripcion.Caption = "Descripción"
         Me.colDescripcion.FieldName = "Descripcion"
+        Me.colDescripcion.FilterInfo = ColumnFilterInfo2
         Me.colDescripcion.Name = "colDescripcion"
         Me.colDescripcion.Options = CType(((((((DevExpress.XtraGrid.Columns.ColumnOptions.CanMoved Or DevExpress.XtraGrid.Columns.ColumnOptions.CanResized) _
-                    Or DevExpress.XtraGrid.Columns.ColumnOptions.CanSorted) _
-                    Or DevExpress.XtraGrid.Columns.ColumnOptions.ReadOnly) _
-                    Or DevExpress.XtraGrid.Columns.ColumnOptions.CanFocused) _
-                    Or DevExpress.XtraGrid.Columns.ColumnOptions.ShowInCustomizationForm) _
-                    Or DevExpress.XtraGrid.Columns.ColumnOptions.NonEditable), DevExpress.XtraGrid.Columns.ColumnOptions)
+            Or DevExpress.XtraGrid.Columns.ColumnOptions.CanSorted) _
+            Or DevExpress.XtraGrid.Columns.ColumnOptions.[ReadOnly]) _
+            Or DevExpress.XtraGrid.Columns.ColumnOptions.CanFocused) _
+            Or DevExpress.XtraGrid.Columns.ColumnOptions.ShowInCustomizationForm) _
+            Or DevExpress.XtraGrid.Columns.ColumnOptions.NonEditable), DevExpress.XtraGrid.Columns.ColumnOptions)
         Me.colDescripcion.VisibleIndex = 1
         Me.colDescripcion.Width = 331
         '
@@ -535,13 +543,14 @@ Public Class FrmAjusteBodega
         Me.colCantidad.DisplayFormat.FormatString = "#,#0.00"
         Me.colCantidad.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric
         Me.colCantidad.FieldName = "Cantidad"
+        Me.colCantidad.FilterInfo = ColumnFilterInfo3
         Me.colCantidad.Name = "colCantidad"
         Me.colCantidad.Options = CType(((((((DevExpress.XtraGrid.Columns.ColumnOptions.CanMoved Or DevExpress.XtraGrid.Columns.ColumnOptions.CanResized) _
-                    Or DevExpress.XtraGrid.Columns.ColumnOptions.CanSorted) _
-                    Or DevExpress.XtraGrid.Columns.ColumnOptions.ReadOnly) _
-                    Or DevExpress.XtraGrid.Columns.ColumnOptions.CanFocused) _
-                    Or DevExpress.XtraGrid.Columns.ColumnOptions.ShowInCustomizationForm) _
-                    Or DevExpress.XtraGrid.Columns.ColumnOptions.NonEditable), DevExpress.XtraGrid.Columns.ColumnOptions)
+            Or DevExpress.XtraGrid.Columns.ColumnOptions.CanSorted) _
+            Or DevExpress.XtraGrid.Columns.ColumnOptions.[ReadOnly]) _
+            Or DevExpress.XtraGrid.Columns.ColumnOptions.CanFocused) _
+            Or DevExpress.XtraGrid.Columns.ColumnOptions.ShowInCustomizationForm) _
+            Or DevExpress.XtraGrid.Columns.ColumnOptions.NonEditable), DevExpress.XtraGrid.Columns.ColumnOptions)
         Me.colCantidad.VisibleIndex = 2
         Me.colCantidad.Width = 63
         '
@@ -554,13 +563,14 @@ Public Class FrmAjusteBodega
         '
         Me.colTipo_Entrada.Caption = "Entrada"
         Me.colTipo_Entrada.FieldName = "Tipo_Entrada"
+        Me.colTipo_Entrada.FilterInfo = ColumnFilterInfo4
         Me.colTipo_Entrada.Name = "colTipo_Entrada"
         Me.colTipo_Entrada.Options = CType(((((((DevExpress.XtraGrid.Columns.ColumnOptions.CanMoved Or DevExpress.XtraGrid.Columns.ColumnOptions.CanResized) _
-                    Or DevExpress.XtraGrid.Columns.ColumnOptions.CanSorted) _
-                    Or DevExpress.XtraGrid.Columns.ColumnOptions.ReadOnly) _
-                    Or DevExpress.XtraGrid.Columns.ColumnOptions.CanFocused) _
-                    Or DevExpress.XtraGrid.Columns.ColumnOptions.ShowInCustomizationForm) _
-                    Or DevExpress.XtraGrid.Columns.ColumnOptions.NonEditable), DevExpress.XtraGrid.Columns.ColumnOptions)
+            Or DevExpress.XtraGrid.Columns.ColumnOptions.CanSorted) _
+            Or DevExpress.XtraGrid.Columns.ColumnOptions.[ReadOnly]) _
+            Or DevExpress.XtraGrid.Columns.ColumnOptions.CanFocused) _
+            Or DevExpress.XtraGrid.Columns.ColumnOptions.ShowInCustomizationForm) _
+            Or DevExpress.XtraGrid.Columns.ColumnOptions.NonEditable), DevExpress.XtraGrid.Columns.ColumnOptions)
         Me.colTipo_Entrada.VisibleIndex = 3
         Me.colTipo_Entrada.Width = 56
         '
@@ -568,13 +578,14 @@ Public Class FrmAjusteBodega
         '
         Me.colTipo_Salida.Caption = "Salida"
         Me.colTipo_Salida.FieldName = "Tipo_Salida"
+        Me.colTipo_Salida.FilterInfo = ColumnFilterInfo5
         Me.colTipo_Salida.Name = "colTipo_Salida"
         Me.colTipo_Salida.Options = CType(((((((DevExpress.XtraGrid.Columns.ColumnOptions.CanMoved Or DevExpress.XtraGrid.Columns.ColumnOptions.CanResized) _
-                    Or DevExpress.XtraGrid.Columns.ColumnOptions.CanSorted) _
-                    Or DevExpress.XtraGrid.Columns.ColumnOptions.ReadOnly) _
-                    Or DevExpress.XtraGrid.Columns.ColumnOptions.CanFocused) _
-                    Or DevExpress.XtraGrid.Columns.ColumnOptions.ShowInCustomizationForm) _
-                    Or DevExpress.XtraGrid.Columns.ColumnOptions.NonEditable), DevExpress.XtraGrid.Columns.ColumnOptions)
+            Or DevExpress.XtraGrid.Columns.ColumnOptions.CanSorted) _
+            Or DevExpress.XtraGrid.Columns.ColumnOptions.[ReadOnly]) _
+            Or DevExpress.XtraGrid.Columns.ColumnOptions.CanFocused) _
+            Or DevExpress.XtraGrid.Columns.ColumnOptions.ShowInCustomizationForm) _
+            Or DevExpress.XtraGrid.Columns.ColumnOptions.NonEditable), DevExpress.XtraGrid.Columns.ColumnOptions)
         Me.colTipo_Salida.VisibleIndex = 4
         Me.colTipo_Salida.Width = 58
         '
@@ -582,6 +593,7 @@ Public Class FrmAjusteBodega
         '
         Me.ExistenciaForzada.Caption = "Existencia Forzada"
         Me.ExistenciaForzada.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric
+        Me.ExistenciaForzada.FilterInfo = ColumnFilterInfo6
         Me.ExistenciaForzada.Name = "ExistenciaForzada"
         Me.ExistenciaForzada.VisibleIndex = 5
         '
@@ -592,7 +604,8 @@ Public Class FrmAjusteBodega
         'SqlConnection
         '
         Me.SqlConnection.ConnectionString = "workstation id=""SEESOFT-PC"";packet size=4096;integrated security=SSPI;data source" & _
-        "=""192.168.1.2"";persist security info=False;initial catalog=seepos"
+    "=""192.168.1.2"";persist security info=False;initial catalog=seepos"
+        Me.SqlConnection.FireInfoMessageEventOnUserErrors = False
         '
         'SqlDataAdapterBodegas
         '
@@ -601,21 +614,19 @@ Public Class FrmAjusteBodega
         '
         'SqlSelectCommand2
         '
-        Me.SqlSelectCommand2.CommandText = "SELECT ID_Bodega, Nombre_Bodega, Observaciones FROM Bodegas ORDER BY Nombre_Bodeg" & _
-        "a"
+        Me.SqlSelectCommand2.CommandText = "SELECT ID_Bodega, Nombre_Bodega, Observaciones FROM Bodegas where Inactiva = 0 and Consignacion = 1 ORDER BY Nombre_Bodega"
         Me.SqlSelectCommand2.Connection = Me.SqlConnection
         '
         'TextBoxCantidad
         '
         Me.TextBoxCantidad.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.TextBoxCantidad.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
-        Me.TextBoxCantidad.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.DataSet_Movimiento_Bodega, "MovimientosBodega.MovimientosBodegaMovimientosBodega_Detalle.Cantidad"))
+        Me.TextBoxCantidad.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.DataSet_Movimiento_Bodega, "MovimientosBodega.MovimientosBodegaMovimientosBodega_Detalle.Cantidad", True))
         Me.TextBoxCantidad.ForeColor = System.Drawing.Color.Blue
         Me.TextBoxCantidad.Location = New System.Drawing.Point(496, 24)
         Me.TextBoxCantidad.Name = "TextBoxCantidad"
         Me.TextBoxCantidad.Size = New System.Drawing.Size(80, 13)
         Me.TextBoxCantidad.TabIndex = 6
-        Me.TextBoxCantidad.Text = ""
         '
         'SqlDataAdapterMovimiento_Bodega
         '
@@ -628,49 +639,27 @@ Public Class FrmAjusteBodega
         'SqlDeleteCommand2
         '
         Me.SqlDeleteCommand2.CommandText = "DELETE FROM MovimientosBodega WHERE (Boleta_Movimiento = @Original_Boleta_Movimie" & _
-        "nto)"
+    "nto)"
         Me.SqlDeleteCommand2.Connection = Me.SqlConnection
-        Me.SqlDeleteCommand2.Parameters.Add(New System.Data.SqlClient.SqlParameter("@Original_Boleta_Movimiento", System.Data.SqlDbType.BigInt, 8, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "Boleta_Movimiento", System.Data.DataRowVersion.Original, Nothing))
+        Me.SqlDeleteCommand2.Parameters.AddRange(New System.Data.SqlClient.SqlParameter() {New System.Data.SqlClient.SqlParameter("@Original_Boleta_Movimiento", System.Data.SqlDbType.BigInt, 8, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "Boleta_Movimiento", System.Data.DataRowVersion.Original, Nothing)})
         '
         'SqlInsertCommand2
         '
-        Me.SqlInsertCommand2.CommandText = "INSERT INTO MovimientosBodega(Bodega, Fecha, Referencia, Usuario, Anulado, FechaE" & _
-        "ntrada, Cliente) VALUES (@Bodega, @Fecha, @Referencia, @Usuario, @Anulado, @Fech" & _
-        "aEntrada, @Cliente); SELECT Boleta_Movimiento, Bodega, Fecha, Referencia, Usuari" & _
-        "o, Anulado, FechaEntrada, Cliente FROM MovimientosBodega WHERE (Boleta_Movimient" & _
-        "o = @@IDENTITY)"
+        Me.SqlInsertCommand2.CommandText = resources.GetString("SqlInsertCommand2.CommandText")
         Me.SqlInsertCommand2.Connection = Me.SqlConnection
-        Me.SqlInsertCommand2.Parameters.Add(New System.Data.SqlClient.SqlParameter("@Bodega", System.Data.SqlDbType.Int, 4, "Bodega"))
-        Me.SqlInsertCommand2.Parameters.Add(New System.Data.SqlClient.SqlParameter("@Fecha", System.Data.SqlDbType.DateTime, 8, "Fecha"))
-        Me.SqlInsertCommand2.Parameters.Add(New System.Data.SqlClient.SqlParameter("@Referencia", System.Data.SqlDbType.VarChar, 255, "Referencia"))
-        Me.SqlInsertCommand2.Parameters.Add(New System.Data.SqlClient.SqlParameter("@Usuario", System.Data.SqlDbType.VarChar, 255, "Usuario"))
-        Me.SqlInsertCommand2.Parameters.Add(New System.Data.SqlClient.SqlParameter("@Anulado", System.Data.SqlDbType.Bit, 1, "Anulado"))
-        Me.SqlInsertCommand2.Parameters.Add(New System.Data.SqlClient.SqlParameter("@FechaEntrada", System.Data.SqlDbType.DateTime, 8, "FechaEntrada"))
-        Me.SqlInsertCommand2.Parameters.Add(New System.Data.SqlClient.SqlParameter("@Cliente", System.Data.SqlDbType.VarChar, 250, "Cliente"))
+        Me.SqlInsertCommand2.Parameters.AddRange(New System.Data.SqlClient.SqlParameter() {New System.Data.SqlClient.SqlParameter("@Bodega", System.Data.SqlDbType.Int, 4, "Bodega"), New System.Data.SqlClient.SqlParameter("@Fecha", System.Data.SqlDbType.DateTime, 8, "Fecha"), New System.Data.SqlClient.SqlParameter("@Referencia", System.Data.SqlDbType.VarChar, 255, "Referencia"), New System.Data.SqlClient.SqlParameter("@Usuario", System.Data.SqlDbType.VarChar, 255, "Usuario"), New System.Data.SqlClient.SqlParameter("@Anulado", System.Data.SqlDbType.Bit, 1, "Anulado"), New System.Data.SqlClient.SqlParameter("@FechaEntrada", System.Data.SqlDbType.DateTime, 8, "FechaEntrada"), New System.Data.SqlClient.SqlParameter("@Cliente", System.Data.SqlDbType.VarChar, 250, "Cliente")})
         '
         'SqlSelectCommand3
         '
         Me.SqlSelectCommand3.CommandText = "SELECT Boleta_Movimiento, Bodega, Fecha, Referencia, Usuario, Anulado, FechaEntra" & _
-        "da, Cliente FROM MovimientosBodega"
+    "da, Cliente FROM MovimientosBodega"
         Me.SqlSelectCommand3.Connection = Me.SqlConnection
         '
         'SqlUpdateCommand2
         '
-        Me.SqlUpdateCommand2.CommandText = "UPDATE MovimientosBodega SET Bodega = @Bodega, Fecha = @Fecha, Referencia = @Refe" & _
-        "rencia, Usuario = @Usuario, Anulado = @Anulado, FechaEntrada = @FechaEntrada, Cl" & _
-        "iente = @Cliente WHERE (Boleta_Movimiento = @Original_Boleta_Movimiento); SELECT" & _
-        " Boleta_Movimiento, Bodega, Fecha, Referencia, Usuario, Anulado, FechaEntrada, C" & _
-        "liente FROM MovimientosBodega WHERE (Boleta_Movimiento = @Boleta_Movimiento)"
+        Me.SqlUpdateCommand2.CommandText = resources.GetString("SqlUpdateCommand2.CommandText")
         Me.SqlUpdateCommand2.Connection = Me.SqlConnection
-        Me.SqlUpdateCommand2.Parameters.Add(New System.Data.SqlClient.SqlParameter("@Bodega", System.Data.SqlDbType.Int, 4, "Bodega"))
-        Me.SqlUpdateCommand2.Parameters.Add(New System.Data.SqlClient.SqlParameter("@Fecha", System.Data.SqlDbType.DateTime, 8, "Fecha"))
-        Me.SqlUpdateCommand2.Parameters.Add(New System.Data.SqlClient.SqlParameter("@Referencia", System.Data.SqlDbType.VarChar, 255, "Referencia"))
-        Me.SqlUpdateCommand2.Parameters.Add(New System.Data.SqlClient.SqlParameter("@Usuario", System.Data.SqlDbType.VarChar, 255, "Usuario"))
-        Me.SqlUpdateCommand2.Parameters.Add(New System.Data.SqlClient.SqlParameter("@Anulado", System.Data.SqlDbType.Bit, 1, "Anulado"))
-        Me.SqlUpdateCommand2.Parameters.Add(New System.Data.SqlClient.SqlParameter("@FechaEntrada", System.Data.SqlDbType.DateTime, 8, "FechaEntrada"))
-        Me.SqlUpdateCommand2.Parameters.Add(New System.Data.SqlClient.SqlParameter("@Cliente", System.Data.SqlDbType.VarChar, 250, "Cliente"))
-        Me.SqlUpdateCommand2.Parameters.Add(New System.Data.SqlClient.SqlParameter("@Original_Boleta_Movimiento", System.Data.SqlDbType.BigInt, 8, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "Boleta_Movimiento", System.Data.DataRowVersion.Original, Nothing))
-        Me.SqlUpdateCommand2.Parameters.Add(New System.Data.SqlClient.SqlParameter("@Boleta_Movimiento", System.Data.SqlDbType.BigInt, 8, "Boleta_Movimiento"))
+        Me.SqlUpdateCommand2.Parameters.AddRange(New System.Data.SqlClient.SqlParameter() {New System.Data.SqlClient.SqlParameter("@Bodega", System.Data.SqlDbType.Int, 4, "Bodega"), New System.Data.SqlClient.SqlParameter("@Fecha", System.Data.SqlDbType.DateTime, 8, "Fecha"), New System.Data.SqlClient.SqlParameter("@Referencia", System.Data.SqlDbType.VarChar, 255, "Referencia"), New System.Data.SqlClient.SqlParameter("@Usuario", System.Data.SqlDbType.VarChar, 255, "Usuario"), New System.Data.SqlClient.SqlParameter("@Anulado", System.Data.SqlDbType.Bit, 1, "Anulado"), New System.Data.SqlClient.SqlParameter("@FechaEntrada", System.Data.SqlDbType.DateTime, 8, "FechaEntrada"), New System.Data.SqlClient.SqlParameter("@Cliente", System.Data.SqlDbType.VarChar, 250, "Cliente"), New System.Data.SqlClient.SqlParameter("@Original_Boleta_Movimiento", System.Data.SqlDbType.BigInt, 8, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "Boleta_Movimiento", System.Data.DataRowVersion.Original, Nothing), New System.Data.SqlClient.SqlParameter("@Boleta_Movimiento", System.Data.SqlDbType.BigInt, 8, "Boleta_Movimiento")})
         '
         'SqlDataAdapter_MovimientDetalle
         '
@@ -684,59 +673,26 @@ Public Class FrmAjusteBodega
         '
         Me.SqlDeleteCommand3.CommandText = "DELETE FROM MovimientosBodega_Detalle WHERE (Id_Detalle = @Original_Id_Detalle)"
         Me.SqlDeleteCommand3.Connection = Me.SqlConnection
-        Me.SqlDeleteCommand3.Parameters.Add(New System.Data.SqlClient.SqlParameter("@Original_Id_Detalle", System.Data.SqlDbType.Int, 4, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "Id_Detalle", System.Data.DataRowVersion.Original, Nothing))
+        Me.SqlDeleteCommand3.Parameters.AddRange(New System.Data.SqlClient.SqlParameter() {New System.Data.SqlClient.SqlParameter("@Original_Id_Detalle", System.Data.SqlDbType.Int, 4, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "Id_Detalle", System.Data.DataRowVersion.Original, Nothing)})
         '
         'SqlInsertCommand3
         '
-        Me.SqlInsertCommand3.CommandText = "INSERT INTO MovimientosBodega_Detalle(Boleta_Movimiento, Codigo, Descripcion, Can" & _
-        "tidad, Tipo_Entrada, Tipo_Salida, Numero, CodArticulo, ExistenciaForzada, ExistV" & _
-        "eteForzada) VALUES (@Boleta_Movimiento, @Codigo, @Descripcion, @Cantidad, @Tipo_" & _
-        "Entrada, @Tipo_Salida, @Numero, @CodArticulo, @ExistenciaForzada, @ExistVeteForz" & _
-        "ada); SELECT Id_Detalle, Boleta_Movimiento, Codigo, Descripcion, Cantidad, Tipo_" & _
-        "Entrada, Tipo_Salida, Numero, CodArticulo, ExistenciaForzada, ExistVeteForzada F" & _
-        "ROM MovimientosBodega_Detalle WHERE (Id_Detalle = @@IDENTITY)"
+        Me.SqlInsertCommand3.CommandText = resources.GetString("SqlInsertCommand3.CommandText")
         Me.SqlInsertCommand3.Connection = Me.SqlConnection
-        Me.SqlInsertCommand3.Parameters.Add(New System.Data.SqlClient.SqlParameter("@Boleta_Movimiento", System.Data.SqlDbType.BigInt, 8, "Boleta_Movimiento"))
-        Me.SqlInsertCommand3.Parameters.Add(New System.Data.SqlClient.SqlParameter("@Codigo", System.Data.SqlDbType.VarChar, 255, "Codigo"))
-        Me.SqlInsertCommand3.Parameters.Add(New System.Data.SqlClient.SqlParameter("@Descripcion", System.Data.SqlDbType.VarChar, 255, "Descripcion"))
-        Me.SqlInsertCommand3.Parameters.Add(New System.Data.SqlClient.SqlParameter("@Cantidad", System.Data.SqlDbType.Float, 8, "Cantidad"))
-        Me.SqlInsertCommand3.Parameters.Add(New System.Data.SqlClient.SqlParameter("@Tipo_Entrada", System.Data.SqlDbType.Bit, 1, "Tipo_Entrada"))
-        Me.SqlInsertCommand3.Parameters.Add(New System.Data.SqlClient.SqlParameter("@Tipo_Salida", System.Data.SqlDbType.Bit, 1, "Tipo_Salida"))
-        Me.SqlInsertCommand3.Parameters.Add(New System.Data.SqlClient.SqlParameter("@Numero", System.Data.SqlDbType.VarChar, 250, "Numero"))
-        Me.SqlInsertCommand3.Parameters.Add(New System.Data.SqlClient.SqlParameter("@CodArticulo", System.Data.SqlDbType.VarChar, 250, "CodArticulo"))
-        Me.SqlInsertCommand3.Parameters.Add(New System.Data.SqlClient.SqlParameter("@ExistenciaForzada", System.Data.SqlDbType.BigInt, 8, "ExistenciaForzada"))
-        Me.SqlInsertCommand3.Parameters.Add(New System.Data.SqlClient.SqlParameter("@ExistVeteForzada", System.Data.SqlDbType.BigInt, 8, "ExistVeteForzada"))
+        Me.SqlInsertCommand3.Parameters.AddRange(New System.Data.SqlClient.SqlParameter() {New System.Data.SqlClient.SqlParameter("@Boleta_Movimiento", System.Data.SqlDbType.BigInt, 8, "Boleta_Movimiento"), New System.Data.SqlClient.SqlParameter("@Codigo", System.Data.SqlDbType.VarChar, 255, "Codigo"), New System.Data.SqlClient.SqlParameter("@Descripcion", System.Data.SqlDbType.VarChar, 255, "Descripcion"), New System.Data.SqlClient.SqlParameter("@Cantidad", System.Data.SqlDbType.Float, 8, "Cantidad"), New System.Data.SqlClient.SqlParameter("@Tipo_Entrada", System.Data.SqlDbType.Bit, 1, "Tipo_Entrada"), New System.Data.SqlClient.SqlParameter("@Tipo_Salida", System.Data.SqlDbType.Bit, 1, "Tipo_Salida"), New System.Data.SqlClient.SqlParameter("@Numero", System.Data.SqlDbType.VarChar, 250, "Numero"), New System.Data.SqlClient.SqlParameter("@CodArticulo", System.Data.SqlDbType.VarChar, 250, "CodArticulo"), New System.Data.SqlClient.SqlParameter("@ExistenciaForzada", System.Data.SqlDbType.BigInt, 8, "ExistenciaForzada"), New System.Data.SqlClient.SqlParameter("@ExistVeteForzada", System.Data.SqlDbType.BigInt, 8, "ExistVeteForzada")})
         '
         'SqlSelectCommand4
         '
         Me.SqlSelectCommand4.CommandText = "SELECT Id_Detalle, Boleta_Movimiento, Codigo, Descripcion, Cantidad, Tipo_Entrada" & _
-        ", Tipo_Salida, Numero, CodArticulo, ExistenciaForzada, ExistVeteForzada FROM Mov" & _
-        "imientosBodega_Detalle"
+    ", Tipo_Salida, Numero, CodArticulo, ExistenciaForzada, ExistVeteForzada FROM Mov" & _
+    "imientosBodega_Detalle"
         Me.SqlSelectCommand4.Connection = Me.SqlConnection
         '
         'SqlUpdateCommand3
         '
-        Me.SqlUpdateCommand3.CommandText = "UPDATE MovimientosBodega_Detalle SET Boleta_Movimiento = @Boleta_Movimiento, Codi" & _
-        "go = @Codigo, Descripcion = @Descripcion, Cantidad = @Cantidad, Tipo_Entrada = @" & _
-        "Tipo_Entrada, Tipo_Salida = @Tipo_Salida, Numero = @Numero, CodArticulo = @CodAr" & _
-        "ticulo, ExistenciaForzada = @ExistenciaForzada, ExistVeteForzada = @ExistVeteFor" & _
-        "zada WHERE (Id_Detalle = @Original_Id_Detalle); SELECT Id_Detalle, Boleta_Movimi" & _
-        "ento, Codigo, Descripcion, Cantidad, Tipo_Entrada, Tipo_Salida, Numero, CodArtic" & _
-        "ulo, ExistenciaForzada, ExistVeteForzada FROM MovimientosBodega_Detalle WHERE (I" & _
-        "d_Detalle = @Id_Detalle)"
+        Me.SqlUpdateCommand3.CommandText = resources.GetString("SqlUpdateCommand3.CommandText")
         Me.SqlUpdateCommand3.Connection = Me.SqlConnection
-        Me.SqlUpdateCommand3.Parameters.Add(New System.Data.SqlClient.SqlParameter("@Boleta_Movimiento", System.Data.SqlDbType.BigInt, 8, "Boleta_Movimiento"))
-        Me.SqlUpdateCommand3.Parameters.Add(New System.Data.SqlClient.SqlParameter("@Codigo", System.Data.SqlDbType.VarChar, 255, "Codigo"))
-        Me.SqlUpdateCommand3.Parameters.Add(New System.Data.SqlClient.SqlParameter("@Descripcion", System.Data.SqlDbType.VarChar, 255, "Descripcion"))
-        Me.SqlUpdateCommand3.Parameters.Add(New System.Data.SqlClient.SqlParameter("@Cantidad", System.Data.SqlDbType.Float, 8, "Cantidad"))
-        Me.SqlUpdateCommand3.Parameters.Add(New System.Data.SqlClient.SqlParameter("@Tipo_Entrada", System.Data.SqlDbType.Bit, 1, "Tipo_Entrada"))
-        Me.SqlUpdateCommand3.Parameters.Add(New System.Data.SqlClient.SqlParameter("@Tipo_Salida", System.Data.SqlDbType.Bit, 1, "Tipo_Salida"))
-        Me.SqlUpdateCommand3.Parameters.Add(New System.Data.SqlClient.SqlParameter("@Numero", System.Data.SqlDbType.VarChar, 250, "Numero"))
-        Me.SqlUpdateCommand3.Parameters.Add(New System.Data.SqlClient.SqlParameter("@CodArticulo", System.Data.SqlDbType.VarChar, 250, "CodArticulo"))
-        Me.SqlUpdateCommand3.Parameters.Add(New System.Data.SqlClient.SqlParameter("@ExistenciaForzada", System.Data.SqlDbType.BigInt, 8, "ExistenciaForzada"))
-        Me.SqlUpdateCommand3.Parameters.Add(New System.Data.SqlClient.SqlParameter("@ExistVeteForzada", System.Data.SqlDbType.BigInt, 8, "ExistVeteForzada"))
-        Me.SqlUpdateCommand3.Parameters.Add(New System.Data.SqlClient.SqlParameter("@Original_Id_Detalle", System.Data.SqlDbType.Int, 4, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "Id_Detalle", System.Data.DataRowVersion.Original, Nothing))
-        Me.SqlUpdateCommand3.Parameters.Add(New System.Data.SqlClient.SqlParameter("@Id_Detalle", System.Data.SqlDbType.Int, 4, "Id_Detalle"))
+        Me.SqlUpdateCommand3.Parameters.AddRange(New System.Data.SqlClient.SqlParameter() {New System.Data.SqlClient.SqlParameter("@Boleta_Movimiento", System.Data.SqlDbType.BigInt, 8, "Boleta_Movimiento"), New System.Data.SqlClient.SqlParameter("@Codigo", System.Data.SqlDbType.VarChar, 255, "Codigo"), New System.Data.SqlClient.SqlParameter("@Descripcion", System.Data.SqlDbType.VarChar, 255, "Descripcion"), New System.Data.SqlClient.SqlParameter("@Cantidad", System.Data.SqlDbType.Float, 8, "Cantidad"), New System.Data.SqlClient.SqlParameter("@Tipo_Entrada", System.Data.SqlDbType.Bit, 1, "Tipo_Entrada"), New System.Data.SqlClient.SqlParameter("@Tipo_Salida", System.Data.SqlDbType.Bit, 1, "Tipo_Salida"), New System.Data.SqlClient.SqlParameter("@Numero", System.Data.SqlDbType.VarChar, 250, "Numero"), New System.Data.SqlClient.SqlParameter("@CodArticulo", System.Data.SqlDbType.VarChar, 250, "CodArticulo"), New System.Data.SqlClient.SqlParameter("@ExistenciaForzada", System.Data.SqlDbType.BigInt, 8, "ExistenciaForzada"), New System.Data.SqlClient.SqlParameter("@ExistVeteForzada", System.Data.SqlDbType.BigInt, 8, "ExistVeteForzada"), New System.Data.SqlClient.SqlParameter("@Original_Id_Detalle", System.Data.SqlDbType.Int, 4, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "Id_Detalle", System.Data.DataRowVersion.Original, Nothing), New System.Data.SqlClient.SqlParameter("@Id_Detalle", System.Data.SqlDbType.Int, 4, "Id_Detalle")})
         '
         'Panel2
         '
@@ -758,14 +714,13 @@ Public Class FrmAjusteBodega
         '
         Me.txtCliente.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtCliente.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
-        Me.txtCliente.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.DataSet_Movimiento_Bodega, "MovimientosBodega.Cliente"))
+        Me.txtCliente.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.DataSet_Movimiento_Bodega, "MovimientosBodega.Cliente", True))
         Me.txtCliente.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtCliente.ForeColor = System.Drawing.Color.Blue
         Me.txtCliente.Location = New System.Drawing.Point(64, 48)
         Me.txtCliente.Name = "txtCliente"
         Me.txtCliente.Size = New System.Drawing.Size(248, 13)
         Me.txtCliente.TabIndex = 193
-        Me.txtCliente.Text = ""
         '
         'Label8
         '
@@ -780,7 +735,7 @@ Public Class FrmAjusteBodega
         '
         'Check_Anulado
         '
-        Me.Check_Anulado.DataBindings.Add(New System.Windows.Forms.Binding("Checked", Me.DataSet_Movimiento_Bodega, "MovimientosBodega.Anulado"))
+        Me.Check_Anulado.DataBindings.Add(New System.Windows.Forms.Binding("Checked", Me.DataSet_Movimiento_Bodega, "MovimientosBodega.Anulado", True))
         Me.Check_Anulado.Enabled = False
         Me.Check_Anulado.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Check_Anulado.ForeColor = System.Drawing.Color.Red
@@ -794,14 +749,13 @@ Public Class FrmAjusteBodega
         '
         Me.TextBoxReferencia.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.TextBoxReferencia.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
-        Me.TextBoxReferencia.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.DataSet_Movimiento_Bodega, "MovimientosBodega.Referencia"))
+        Me.TextBoxReferencia.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.DataSet_Movimiento_Bodega, "MovimientosBodega.Referencia", True))
         Me.TextBoxReferencia.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBoxReferencia.ForeColor = System.Drawing.Color.Blue
         Me.TextBoxReferencia.Location = New System.Drawing.Point(392, 50)
         Me.TextBoxReferencia.Name = "TextBoxReferencia"
         Me.TextBoxReferencia.Size = New System.Drawing.Size(184, 13)
         Me.TextBoxReferencia.TabIndex = 3
-        Me.TextBoxReferencia.Text = ""
         '
         'Label5
         '
@@ -847,13 +801,12 @@ Public Class FrmAjusteBodega
         '
         Me.txtCantVet.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtCantVet.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
-        Me.txtCantVet.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.DataSet_Movimiento_Bodega, "MovimientosBodega.MovimientosBodegaMovimientosBodega_Detalle.ExistenciaVete"))
+        Me.txtCantVet.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.DataSet_Movimiento_Bodega, "MovimientosBodega.MovimientosBodegaMovimientosBodega_Detalle.ExistenciaVete", True))
         Me.txtCantVet.ForeColor = System.Drawing.Color.Blue
         Me.txtCantVet.Location = New System.Drawing.Point(216, 24)
         Me.txtCantVet.Name = "txtCantVet"
         Me.txtCantVet.Size = New System.Drawing.Size(40, 13)
         Me.txtCantVet.TabIndex = 203
-        Me.txtCantVet.Text = ""
         Me.txtCantVet.Visible = False
         '
         'lblCantVet
@@ -872,13 +825,12 @@ Public Class FrmAjusteBodega
         '
         Me.txtCodigo.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtCodigo.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
-        Me.txtCodigo.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.DataSet_Movimiento_Bodega, "MovimientosBodega.MovimientosBodegaMovimientosBodega_Detalle.CodArticulo"))
+        Me.txtCodigo.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.DataSet_Movimiento_Bodega, "MovimientosBodega.MovimientosBodegaMovimientosBodega_Detalle.CodArticulo", True))
         Me.txtCodigo.ForeColor = System.Drawing.Color.Blue
         Me.txtCodigo.Location = New System.Drawing.Point(8, 24)
         Me.txtCodigo.Name = "txtCodigo"
         Me.txtCodigo.Size = New System.Drawing.Size(57, 13)
         Me.txtCodigo.TabIndex = 201
-        Me.txtCodigo.Text = ""
         '
         'LVencimiento
         '
@@ -921,7 +873,7 @@ Public Class FrmAjusteBodega
         '
         'DTPVencimiento
         '
-        Me.DTPVencimiento.Format = System.Windows.Forms.DateTimePickerFormat.Short
+        Me.DTPVencimiento.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
         Me.DTPVencimiento.Location = New System.Drawing.Point(376, 48)
         Me.DTPVencimiento.Name = "DTPVencimiento"
         Me.DTPVencimiento.Size = New System.Drawing.Size(88, 20)
@@ -935,7 +887,6 @@ Public Class FrmAjusteBodega
         Me.txtNuevoLote.Name = "txtNuevoLote"
         Me.txtNuevoLote.Size = New System.Drawing.Size(72, 20)
         Me.txtNuevoLote.TabIndex = 195
-        Me.txtNuevoLote.Text = ""
         Me.txtNuevoLote.Visible = False
         '
         'CBNuevo
@@ -979,7 +930,6 @@ Public Class FrmAjusteBodega
         Me.txtExistencia.Name = "txtExistencia"
         Me.txtExistencia.Size = New System.Drawing.Size(48, 13)
         Me.txtExistencia.TabIndex = 189
-        Me.txtExistencia.Text = ""
         '
         'lbanulado
         '
@@ -997,10 +947,10 @@ Public Class FrmAjusteBodega
         'Dt_FechaEntrada
         '
         Me.Dt_FechaEntrada.CalendarForeColor = System.Drawing.Color.Blue
-        Me.Dt_FechaEntrada.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.DataSet_Movimiento_Bodega, "MovimientosBodega.FechaEntrada"))
+        Me.Dt_FechaEntrada.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.DataSet_Movimiento_Bodega, "MovimientosBodega.FechaEntrada", True))
         Me.Dt_FechaEntrada.Enabled = False
         Me.Dt_FechaEntrada.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Dt_FechaEntrada.Format = System.Windows.Forms.DateTimePickerFormat.Short
+        Me.Dt_FechaEntrada.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
         Me.Dt_FechaEntrada.Location = New System.Drawing.Point(496, 464)
         Me.Dt_FechaEntrada.Name = "Dt_FechaEntrada"
         Me.Dt_FechaEntrada.Size = New System.Drawing.Size(96, 20)
@@ -1017,80 +967,33 @@ Public Class FrmAjusteBodega
         '
         'SqlDeleteCommand1
         '
-        Me.SqlDeleteCommand1.CommandText = "DELETE FROM Lotes WHERE (Id = @Original_Id) AND (Cant_Actual = @Original_Cant_Act" & _
-        "ual) AND (Cant_Inicial = @Original_Cant_Inicial) AND (Cod_Articulo = @Original_C" & _
-        "od_Articulo) AND (Documento = @Original_Documento) AND (Fecha_Entrada = @Origina" & _
-        "l_Fecha_Entrada) AND (Numero = @Original_Numero) AND (Tipo = @Original_Tipo) AND" & _
-        " (Vencimiento = @Original_Vencimiento)"
+        Me.SqlDeleteCommand1.CommandText = resources.GetString("SqlDeleteCommand1.CommandText")
         Me.SqlDeleteCommand1.Connection = Me.SqlConnectionLote
-        Me.SqlDeleteCommand1.Parameters.Add(New System.Data.SqlClient.SqlParameter("@Original_Id", System.Data.SqlDbType.BigInt, 8, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "Id", System.Data.DataRowVersion.Original, Nothing))
-        Me.SqlDeleteCommand1.Parameters.Add(New System.Data.SqlClient.SqlParameter("@Original_Cant_Actual", System.Data.SqlDbType.Float, 8, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "Cant_Actual", System.Data.DataRowVersion.Original, Nothing))
-        Me.SqlDeleteCommand1.Parameters.Add(New System.Data.SqlClient.SqlParameter("@Original_Cant_Inicial", System.Data.SqlDbType.Float, 8, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "Cant_Inicial", System.Data.DataRowVersion.Original, Nothing))
-        Me.SqlDeleteCommand1.Parameters.Add(New System.Data.SqlClient.SqlParameter("@Original_Cod_Articulo", System.Data.SqlDbType.BigInt, 8, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "Cod_Articulo", System.Data.DataRowVersion.Original, Nothing))
-        Me.SqlDeleteCommand1.Parameters.Add(New System.Data.SqlClient.SqlParameter("@Original_Documento", System.Data.SqlDbType.BigInt, 8, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "Documento", System.Data.DataRowVersion.Original, Nothing))
-        Me.SqlDeleteCommand1.Parameters.Add(New System.Data.SqlClient.SqlParameter("@Original_Fecha_Entrada", System.Data.SqlDbType.DateTime, 8, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "Fecha_Entrada", System.Data.DataRowVersion.Original, Nothing))
-        Me.SqlDeleteCommand1.Parameters.Add(New System.Data.SqlClient.SqlParameter("@Original_Numero", System.Data.SqlDbType.VarChar, 250, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "Numero", System.Data.DataRowVersion.Original, Nothing))
-        Me.SqlDeleteCommand1.Parameters.Add(New System.Data.SqlClient.SqlParameter("@Original_Tipo", System.Data.SqlDbType.VarChar, 3, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "Tipo", System.Data.DataRowVersion.Original, Nothing))
-        Me.SqlDeleteCommand1.Parameters.Add(New System.Data.SqlClient.SqlParameter("@Original_Vencimiento", System.Data.SqlDbType.DateTime, 8, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "Vencimiento", System.Data.DataRowVersion.Original, Nothing))
+        Me.SqlDeleteCommand1.Parameters.AddRange(New System.Data.SqlClient.SqlParameter() {New System.Data.SqlClient.SqlParameter("@Original_Id", System.Data.SqlDbType.BigInt, 8, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "Id", System.Data.DataRowVersion.Original, Nothing), New System.Data.SqlClient.SqlParameter("@Original_Cant_Actual", System.Data.SqlDbType.Float, 8, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "Cant_Actual", System.Data.DataRowVersion.Original, Nothing), New System.Data.SqlClient.SqlParameter("@Original_Cant_Inicial", System.Data.SqlDbType.Float, 8, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "Cant_Inicial", System.Data.DataRowVersion.Original, Nothing), New System.Data.SqlClient.SqlParameter("@Original_Cod_Articulo", System.Data.SqlDbType.BigInt, 8, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "Cod_Articulo", System.Data.DataRowVersion.Original, Nothing), New System.Data.SqlClient.SqlParameter("@Original_Documento", System.Data.SqlDbType.BigInt, 8, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "Documento", System.Data.DataRowVersion.Original, Nothing), New System.Data.SqlClient.SqlParameter("@Original_Fecha_Entrada", System.Data.SqlDbType.DateTime, 8, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "Fecha_Entrada", System.Data.DataRowVersion.Original, Nothing), New System.Data.SqlClient.SqlParameter("@Original_Numero", System.Data.SqlDbType.VarChar, 250, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "Numero", System.Data.DataRowVersion.Original, Nothing), New System.Data.SqlClient.SqlParameter("@Original_Tipo", System.Data.SqlDbType.VarChar, 3, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "Tipo", System.Data.DataRowVersion.Original, Nothing), New System.Data.SqlClient.SqlParameter("@Original_Vencimiento", System.Data.SqlDbType.DateTime, 8, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "Vencimiento", System.Data.DataRowVersion.Original, Nothing)})
         '
         'SqlConnectionLote
         '
         Me.SqlConnectionLote.ConnectionString = "workstation id=DIEGOGAMBOA;packet size=4096;integrated security=SSPI;data source=" & _
-        """."";persist security info=False;initial catalog=SeePos"
+    """."";persist security info=False;initial catalog=SeePos"
+        Me.SqlConnectionLote.FireInfoMessageEventOnUserErrors = False
         '
         'SqlInsertCommand1
         '
-        Me.SqlInsertCommand1.CommandText = "INSERT INTO Lotes(Numero, Vencimiento, Cant_Inicial, Cant_Actual, Fecha_Entrada, " & _
-        "Cod_Articulo, Documento, Tipo) VALUES (@Numero, @Vencimiento, @Cant_Inicial, @Ca" & _
-        "nt_Actual, @Fecha_Entrada, @Cod_Articulo, @Documento, @Tipo); SELECT Id, Numero," & _
-        " Vencimiento, Cant_Inicial, Cant_Actual, Fecha_Entrada, Cod_Articulo, Documento," & _
-        " Tipo FROM Lotes WHERE (Id = @@IDENTITY)"
+        Me.SqlInsertCommand1.CommandText = resources.GetString("SqlInsertCommand1.CommandText")
         Me.SqlInsertCommand1.Connection = Me.SqlConnectionLote
-        Me.SqlInsertCommand1.Parameters.Add(New System.Data.SqlClient.SqlParameter("@Numero", System.Data.SqlDbType.VarChar, 250, "Numero"))
-        Me.SqlInsertCommand1.Parameters.Add(New System.Data.SqlClient.SqlParameter("@Vencimiento", System.Data.SqlDbType.DateTime, 8, "Vencimiento"))
-        Me.SqlInsertCommand1.Parameters.Add(New System.Data.SqlClient.SqlParameter("@Cant_Inicial", System.Data.SqlDbType.Float, 8, "Cant_Inicial"))
-        Me.SqlInsertCommand1.Parameters.Add(New System.Data.SqlClient.SqlParameter("@Cant_Actual", System.Data.SqlDbType.Float, 8, "Cant_Actual"))
-        Me.SqlInsertCommand1.Parameters.Add(New System.Data.SqlClient.SqlParameter("@Fecha_Entrada", System.Data.SqlDbType.DateTime, 8, "Fecha_Entrada"))
-        Me.SqlInsertCommand1.Parameters.Add(New System.Data.SqlClient.SqlParameter("@Cod_Articulo", System.Data.SqlDbType.BigInt, 8, "Cod_Articulo"))
-        Me.SqlInsertCommand1.Parameters.Add(New System.Data.SqlClient.SqlParameter("@Documento", System.Data.SqlDbType.BigInt, 8, "Documento"))
-        Me.SqlInsertCommand1.Parameters.Add(New System.Data.SqlClient.SqlParameter("@Tipo", System.Data.SqlDbType.VarChar, 3, "Tipo"))
+        Me.SqlInsertCommand1.Parameters.AddRange(New System.Data.SqlClient.SqlParameter() {New System.Data.SqlClient.SqlParameter("@Numero", System.Data.SqlDbType.VarChar, 250, "Numero"), New System.Data.SqlClient.SqlParameter("@Vencimiento", System.Data.SqlDbType.DateTime, 8, "Vencimiento"), New System.Data.SqlClient.SqlParameter("@Cant_Inicial", System.Data.SqlDbType.Float, 8, "Cant_Inicial"), New System.Data.SqlClient.SqlParameter("@Cant_Actual", System.Data.SqlDbType.Float, 8, "Cant_Actual"), New System.Data.SqlClient.SqlParameter("@Fecha_Entrada", System.Data.SqlDbType.DateTime, 8, "Fecha_Entrada"), New System.Data.SqlClient.SqlParameter("@Cod_Articulo", System.Data.SqlDbType.BigInt, 8, "Cod_Articulo"), New System.Data.SqlClient.SqlParameter("@Documento", System.Data.SqlDbType.BigInt, 8, "Documento"), New System.Data.SqlClient.SqlParameter("@Tipo", System.Data.SqlDbType.VarChar, 3, "Tipo")})
         '
         'SqlSelectCommand5
         '
         Me.SqlSelectCommand5.CommandText = "SELECT Id, Numero, Vencimiento, Cant_Inicial, Cant_Actual, Fecha_Entrada, Cod_Art" & _
-        "iculo, Documento, Tipo FROM Lotes"
+    "iculo, Documento, Tipo FROM Lotes"
         Me.SqlSelectCommand5.Connection = Me.SqlConnectionLote
         '
         'SqlUpdateCommand1
         '
-        Me.SqlUpdateCommand1.CommandText = "UPDATE Lotes SET Numero = @Numero, Vencimiento = @Vencimiento, Cant_Inicial = @Ca" & _
-        "nt_Inicial, Cant_Actual = @Cant_Actual, Fecha_Entrada = @Fecha_Entrada, Cod_Arti" & _
-        "culo = @Cod_Articulo, Documento = @Documento, Tipo = @Tipo WHERE (Id = @Original" & _
-        "_Id) AND (Cant_Actual = @Original_Cant_Actual) AND (Cant_Inicial = @Original_Can" & _
-        "t_Inicial) AND (Cod_Articulo = @Original_Cod_Articulo) AND (Documento = @Origina" & _
-        "l_Documento) AND (Fecha_Entrada = @Original_Fecha_Entrada) AND (Numero = @Origin" & _
-        "al_Numero) AND (Tipo = @Original_Tipo) AND (Vencimiento = @Original_Vencimiento)" & _
-        "; SELECT Id, Numero, Vencimiento, Cant_Inicial, Cant_Actual, Fecha_Entrada, Cod_" & _
-        "Articulo, Documento, Tipo FROM Lotes WHERE (Id = @Id)"
+        Me.SqlUpdateCommand1.CommandText = resources.GetString("SqlUpdateCommand1.CommandText")
         Me.SqlUpdateCommand1.Connection = Me.SqlConnectionLote
-        Me.SqlUpdateCommand1.Parameters.Add(New System.Data.SqlClient.SqlParameter("@Numero", System.Data.SqlDbType.VarChar, 250, "Numero"))
-        Me.SqlUpdateCommand1.Parameters.Add(New System.Data.SqlClient.SqlParameter("@Vencimiento", System.Data.SqlDbType.DateTime, 8, "Vencimiento"))
-        Me.SqlUpdateCommand1.Parameters.Add(New System.Data.SqlClient.SqlParameter("@Cant_Inicial", System.Data.SqlDbType.Float, 8, "Cant_Inicial"))
-        Me.SqlUpdateCommand1.Parameters.Add(New System.Data.SqlClient.SqlParameter("@Cant_Actual", System.Data.SqlDbType.Float, 8, "Cant_Actual"))
-        Me.SqlUpdateCommand1.Parameters.Add(New System.Data.SqlClient.SqlParameter("@Fecha_Entrada", System.Data.SqlDbType.DateTime, 8, "Fecha_Entrada"))
-        Me.SqlUpdateCommand1.Parameters.Add(New System.Data.SqlClient.SqlParameter("@Cod_Articulo", System.Data.SqlDbType.BigInt, 8, "Cod_Articulo"))
-        Me.SqlUpdateCommand1.Parameters.Add(New System.Data.SqlClient.SqlParameter("@Documento", System.Data.SqlDbType.BigInt, 8, "Documento"))
-        Me.SqlUpdateCommand1.Parameters.Add(New System.Data.SqlClient.SqlParameter("@Tipo", System.Data.SqlDbType.VarChar, 3, "Tipo"))
-        Me.SqlUpdateCommand1.Parameters.Add(New System.Data.SqlClient.SqlParameter("@Original_Id", System.Data.SqlDbType.BigInt, 8, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "Id", System.Data.DataRowVersion.Original, Nothing))
-        Me.SqlUpdateCommand1.Parameters.Add(New System.Data.SqlClient.SqlParameter("@Original_Cant_Actual", System.Data.SqlDbType.Float, 8, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "Cant_Actual", System.Data.DataRowVersion.Original, Nothing))
-        Me.SqlUpdateCommand1.Parameters.Add(New System.Data.SqlClient.SqlParameter("@Original_Cant_Inicial", System.Data.SqlDbType.Float, 8, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "Cant_Inicial", System.Data.DataRowVersion.Original, Nothing))
-        Me.SqlUpdateCommand1.Parameters.Add(New System.Data.SqlClient.SqlParameter("@Original_Cod_Articulo", System.Data.SqlDbType.BigInt, 8, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "Cod_Articulo", System.Data.DataRowVersion.Original, Nothing))
-        Me.SqlUpdateCommand1.Parameters.Add(New System.Data.SqlClient.SqlParameter("@Original_Documento", System.Data.SqlDbType.BigInt, 8, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "Documento", System.Data.DataRowVersion.Original, Nothing))
-        Me.SqlUpdateCommand1.Parameters.Add(New System.Data.SqlClient.SqlParameter("@Original_Fecha_Entrada", System.Data.SqlDbType.DateTime, 8, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "Fecha_Entrada", System.Data.DataRowVersion.Original, Nothing))
-        Me.SqlUpdateCommand1.Parameters.Add(New System.Data.SqlClient.SqlParameter("@Original_Numero", System.Data.SqlDbType.VarChar, 250, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "Numero", System.Data.DataRowVersion.Original, Nothing))
-        Me.SqlUpdateCommand1.Parameters.Add(New System.Data.SqlClient.SqlParameter("@Original_Tipo", System.Data.SqlDbType.VarChar, 3, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "Tipo", System.Data.DataRowVersion.Original, Nothing))
-        Me.SqlUpdateCommand1.Parameters.Add(New System.Data.SqlClient.SqlParameter("@Original_Vencimiento", System.Data.SqlDbType.DateTime, 8, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "Vencimiento", System.Data.DataRowVersion.Original, Nothing))
-        Me.SqlUpdateCommand1.Parameters.Add(New System.Data.SqlClient.SqlParameter("@Id", System.Data.SqlDbType.BigInt, 8, "Id"))
+        Me.SqlUpdateCommand1.Parameters.AddRange(New System.Data.SqlClient.SqlParameter() {New System.Data.SqlClient.SqlParameter("@Numero", System.Data.SqlDbType.VarChar, 250, "Numero"), New System.Data.SqlClient.SqlParameter("@Vencimiento", System.Data.SqlDbType.DateTime, 8, "Vencimiento"), New System.Data.SqlClient.SqlParameter("@Cant_Inicial", System.Data.SqlDbType.Float, 8, "Cant_Inicial"), New System.Data.SqlClient.SqlParameter("@Cant_Actual", System.Data.SqlDbType.Float, 8, "Cant_Actual"), New System.Data.SqlClient.SqlParameter("@Fecha_Entrada", System.Data.SqlDbType.DateTime, 8, "Fecha_Entrada"), New System.Data.SqlClient.SqlParameter("@Cod_Articulo", System.Data.SqlDbType.BigInt, 8, "Cod_Articulo"), New System.Data.SqlClient.SqlParameter("@Documento", System.Data.SqlDbType.BigInt, 8, "Documento"), New System.Data.SqlClient.SqlParameter("@Tipo", System.Data.SqlDbType.VarChar, 3, "Tipo"), New System.Data.SqlClient.SqlParameter("@Original_Id", System.Data.SqlDbType.BigInt, 8, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "Id", System.Data.DataRowVersion.Original, Nothing), New System.Data.SqlClient.SqlParameter("@Original_Cant_Actual", System.Data.SqlDbType.Float, 8, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "Cant_Actual", System.Data.DataRowVersion.Original, Nothing), New System.Data.SqlClient.SqlParameter("@Original_Cant_Inicial", System.Data.SqlDbType.Float, 8, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "Cant_Inicial", System.Data.DataRowVersion.Original, Nothing), New System.Data.SqlClient.SqlParameter("@Original_Cod_Articulo", System.Data.SqlDbType.BigInt, 8, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "Cod_Articulo", System.Data.DataRowVersion.Original, Nothing), New System.Data.SqlClient.SqlParameter("@Original_Documento", System.Data.SqlDbType.BigInt, 8, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "Documento", System.Data.DataRowVersion.Original, Nothing), New System.Data.SqlClient.SqlParameter("@Original_Fecha_Entrada", System.Data.SqlDbType.DateTime, 8, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "Fecha_Entrada", System.Data.DataRowVersion.Original, Nothing), New System.Data.SqlClient.SqlParameter("@Original_Numero", System.Data.SqlDbType.VarChar, 250, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "Numero", System.Data.DataRowVersion.Original, Nothing), New System.Data.SqlClient.SqlParameter("@Original_Tipo", System.Data.SqlDbType.VarChar, 3, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "Tipo", System.Data.DataRowVersion.Original, Nothing), New System.Data.SqlClient.SqlParameter("@Original_Vencimiento", System.Data.SqlDbType.DateTime, 8, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "Vencimiento", System.Data.DataRowVersion.Original, Nothing), New System.Data.SqlClient.SqlParameter("@Id", System.Data.SqlDbType.BigInt, 8, "Id")})
         '
         'lista
         '
@@ -1104,7 +1007,7 @@ Public Class FrmAjusteBodega
         Me.AutoScaleBaseSize = New System.Drawing.Size(5, 13)
         Me.BackColor = System.Drawing.SystemColors.Control
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
-        Me.ClientSize = New System.Drawing.Size(594, 507)
+        Me.ClientSize = New System.Drawing.Size(584, 497)
         Me.Controls.Add(Me.lbanulado)
         Me.Controls.Add(Me.Dt_FechaEntrada)
         Me.Controls.Add(Me.Panel3)
@@ -1135,11 +1038,14 @@ Public Class FrmAjusteBodega
         Me.Controls.SetChildIndex(Me.lbanulado, 0)
         CType(Me.DataSet_Movimiento_Bodega, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel1.ResumeLayout(False)
+        Me.Panel1.PerformLayout()
         CType(Me.GridControl1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.GridView1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RepositoryItemTextEdit1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel2.ResumeLayout(False)
+        Me.Panel2.PerformLayout()
         Me.Panel3.ResumeLayout(False)
+        Me.Panel3.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub

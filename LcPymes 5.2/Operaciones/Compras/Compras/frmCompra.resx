@@ -125,7 +125,7 @@
         AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
         LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
         ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAADy
-        agAAAk1TRnQBSQFMAgEBCQEAAQ4BAAE0AQIBIAEAASABAAT/ARkBEAj/AUIBTQE2BwABNgMAASgDAAGA
+        agAAAk1TRnQBSQFMAgEBCQEAAQ4BAAFcAQIBIAEAASABAAT/ARkBEAj/AUIBTQE2BwABNgMAASgDAAGA
         AwABYAMAAQEBAAEYBgABkP8AtwACAQFdAgEBbQIBAXQCAQF0AgEBbQIBAV0CAQFK/wBjAAIBAXQCAAGG
         AgABiQIAAYUCAAGCAgABggIAAYACAAGAAgABgAIAAYICAAGCAgEBbQIBATj/AFQAAgEBeAICAZECAAGL
         AgABhQIAAYUCAAGFAgABhQIAAYYCAAGGAgABhQIAAYICAAGAAgABfwIAAYICAAGFAgEBdAIBATj/AE0A
@@ -585,10 +585,10 @@
 </value>
   </data>
   <metadata name="DataSetCompras.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 56</value>
+    <value>121, 17</value>
   </metadata>
   <metadata name="AdapterCompras.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 95</value>
+    <value>264, 17</value>
   </metadata>
   <metadata name="SqlDeleteCommand2.DesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
@@ -603,7 +603,7 @@
     <value>DELETE FROM compras WHERE (Id_Compra = @Original_Id_Compra) AND (Asiento = @Original_Asiento) AND (AsientoInve = @Original_AsientoInve) AND (CambioImpuesto = @Original_CambioImpuesto) AND (CedulaUsuario = @Original_CedulaUsuario) AND (Cod_MonedaCompra = @Original_Cod_MonedaCompra) AND (CodigoProv = @Original_CodigoProv) AND (Compra = @Original_Compra) AND (Consignacion = @Original_Consignacion) AND (ContaInve = @Original_ContaInve) AND (Contabilizado = @Original_Contabilizado) AND (Descuento = @Original_Descuento) AND (Factura = @Original_Factura) AND (FacturaCancelado = @Original_FacturaCancelado) AND (Fecha = @Original_Fecha) AND (FechaIngreso = @Original_FechaIngreso) AND (Impuesto = @Original_Impuesto) AND (Mascotas = @Original_Mascotas) AND (MotivoGasto = @Original_MotivoGasto) AND (SubTotalExento = @Original_SubTotalExento) AND (SubTotalGravado = @Original_SubTotalGravado) AND (Taller = @Original_Taller) AND (TipoCompra = @Original_TipoCompra) AND (TotalFactura = @Original_TotalFactura) AND (Vence = @Original_Vence) AND (num_orden = @Original_num_orden OR @Original_num_orden IS NULL AND num_orden IS NULL)</value>
   </data>
   <metadata name="SqlConnection.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 134</value>
+    <value>408, 17</value>
   </metadata>
   <metadata name="SqlInsertCommand2.DesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
@@ -645,7 +645,7 @@ VALUES        (@Factura,@CodigoProv,@SubTotalGravado,@SubTotalExento,@Descuento,
     <value>UPDATE compras SET Factura = @Factura, CodigoProv = @CodigoProv, SubTotalGravado = @SubTotalGravado, SubTotalExento = @SubTotalExento, Descuento = @Descuento, Impuesto = @Impuesto, TotalFactura = @TotalFactura, Fecha = @Fecha, Vence = @Vence, FechaIngreso = @FechaIngreso, MotivoGasto = @MotivoGasto, Compra = @Compra, Contabilizado = @Contabilizado, Consignacion = @Consignacion, Asiento = @Asiento, ContaInve = @ContaInve, AsientoInve = @AsientoInve, TipoCompra = @TipoCompra, CedulaUsuario = @CedulaUsuario, Cod_MonedaCompra = @Cod_MonedaCompra, FacturaCancelado = @FacturaCancelado, CambioImpuesto = @CambioImpuesto, Taller = @Taller, Mascotas = @Mascotas, num_orden = @num_orden WHERE (Id_Compra = @Original_Id_Compra) AND (Asiento = @Original_Asiento) AND (AsientoInve = @Original_AsientoInve) AND (CambioImpuesto = @Original_CambioImpuesto) AND (CedulaUsuario = @Original_CedulaUsuario) AND (Cod_MonedaCompra = @Original_Cod_MonedaCompra) AND (CodigoProv = @Original_CodigoProv) AND (Compra = @Original_Compra) AND (Consignacion = @Original_Consignacion) AND (ContaInve = @Original_ContaInve) AND (Contabilizado = @Original_Contabilizado) AND (Descuento = @Original_Descuento) AND (Factura = @Original_Factura) AND (FacturaCancelado = @Original_FacturaCancelado) AND (Fecha = @Original_Fecha) AND (FechaIngreso = @Original_FechaIngreso) AND (Impuesto = @Original_Impuesto) AND (Mascotas = @Original_Mascotas) AND (MotivoGasto = @Original_MotivoGasto) AND (SubTotalExento = @Original_SubTotalExento) AND (SubTotalGravado = @Original_SubTotalGravado) AND (Taller = @Original_Taller) AND (TipoCompra = @Original_TipoCompra) AND (TotalFactura = @Original_TotalFactura) AND (Vence = @Original_Vence) AND (num_orden = @Original_num_orden OR @Original_num_orden IS NULL AND num_orden IS NULL); SELECT Factura, CodigoProv, SubTotalGravado, SubTotalExento, Descuento, Impuesto, TotalFactura, Fecha, Vence, FechaIngreso, MotivoGasto, Compra, Contabilizado, Consignacion, Asiento, ContaInve, AsientoInve, TipoCompra, CedulaUsuario, Cod_MonedaCompra, Id_Compra, FacturaCancelado, CambioImpuesto, Taller, Mascotas, num_orden FROM compras WHERE (Id_Compra = @Id_Compra)</value>
   </data>
   <metadata name="AdapterProveedores.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 173</value>
+    <value>539, 17</value>
   </metadata>
   <metadata name="SqlSelectCommand2.DesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
@@ -657,7 +657,7 @@ VALUES        (@Factura,@CodigoProv,@SubTotalGravado,@SubTotalExento,@Descuento,
     <value>False</value>
   </metadata>
   <metadata name="AdapterArticulos_Comprados.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 212</value>
+    <value>702, 17</value>
   </metadata>
   <metadata name="SqlDeleteCommand1.DesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
@@ -680,8 +680,8 @@ VALUES        (@Factura,@CodigoProv,@SubTotalGravado,@SubTotalExento,@Descuento,
   <data name="SqlInsertCommand1.CommandText" xml:space="preserve">
     <value>INSERT INTO articulos_comprados
                          (IdCompra, Codigo, Descripcion, Base, Monto_Flete, OtrosCargos, Costo, Cantidad, Gravado, Exento, Descuento, Descuento_P, Impuesto_P, Impuesto, Total, Devoluciones, Precio_A, Precio_B, Precio_C, Precio_D, 
-                         CodMonedaVenta, NuevoCostoBase, Lote, Regalias, CodArticulo, Bonificado, CodigoBonificado, CantidadBonificado, CostoBonificado, SubTotalBonificado, CodArticuloBonificacion, CodCabys)
-VALUES        (@IdCompra,@Codigo,@Descripcion,@Base,@Monto_Flete,@OtrosCargos,@Costo,@Cantidad,@Gravado,@Exento,@Descuento,@Descuento_P,@Impuesto_P,@Impuesto,@Total,@Devoluciones,@Precio_A,@Precio_B,@Precio_C,@Precio_D,@CodMonedaVenta,@NuevoCostoBase,@Lote,@Regalias,@CodArticulo,@Bonificado,@CodigoBonificado,@CantidadBonificado,@CostoBonificado,@SubTotalBonificado,@CodArticuloBonificacion,@CodCabys); 
+                         CodMonedaVenta, NuevoCostoBase, Lote, Regalias, CodArticulo, Bonificado, CodigoBonificado, CantidadBonificado, CostoBonificado, SubTotalBonificado, CodArticuloBonificacion, CodCabys, Id_Bodega)
+VALUES        (@IdCompra,@Codigo,@Descripcion,@Base,@Monto_Flete,@OtrosCargos,@Costo,@Cantidad,@Gravado,@Exento,@Descuento,@Descuento_P,@Impuesto_P,@Impuesto,@Total,@Devoluciones,@Precio_A,@Precio_B,@Precio_C,@Precio_D,@CodMonedaVenta,@NuevoCostoBase,@Lote,@Regalias,@CodArticulo,@Bonificado,@CodigoBonificado,@CantidadBonificado,@CostoBonificado,@SubTotalBonificado,@CodArticuloBonificacion,@CodCabys,@Id_Bodega);  
 SELECT Id_ArticuloComprados, IdCompra, Codigo, Descripcion, Base, Monto_Flete, OtrosCargos, Costo, Cantidad, Gravado, Exento, Descuento, Descuento_P, Impuesto_P, Impuesto, Total, Devoluciones, Precio_A, Precio_B, Precio_C, Precio_D, CodMonedaVenta, NuevoCostoBase, Lote, Regalias, CodArticulo, Bonificado, CodigoBonificado, CantidadBonificado, CostoBonificado, SubTotalBonificado, CodArticuloBonificacion FROM articulos_comprados WHERE (Id_ArticuloComprados = SCOPE_IDENTITY())</value>
   </data>
   <metadata name="SqlSelectCommand3.DesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
@@ -695,7 +695,7 @@ SELECT Id_ArticuloComprados, IdCompra, Codigo, Descripcion, Base, Monto_Flete, O
   </metadata>
   <data name="SqlSelectCommand3.CommandText" xml:space="preserve">
     <value>SELECT        Id_ArticuloComprados, IdCompra, Codigo, Descripcion, Base, Monto_Flete, OtrosCargos, Costo, Cantidad, Gravado, Exento, Descuento, Descuento_P, Impuesto_P, Impuesto, Total, Devoluciones, Precio_A, Precio_B, Precio_C, 
-                         Precio_D, CodMonedaVenta, NuevoCostoBase, Lote, Regalias, CodArticulo, Bonificado, CodigoBonificado, CantidadBonificado, CostoBonificado, SubTotalBonificado, CodArticuloBonificacion
+                         Precio_D, CodMonedaVenta, NuevoCostoBase, Lote, Regalias, CodArticulo, Bonificado, CodigoBonificado, CantidadBonificado, CostoBonificado, SubTotalBonificado, CodArticuloBonificacion, CodCabys, Id_Bodega
 FROM            articulos_comprados</value>
   </data>
   <metadata name="SqlUpdateCommand1.DesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
@@ -713,12 +713,12 @@ SET                IdCompra = @IdCompra, Codigo = @Codigo, Descripcion = @Descri
                          Exento = @Exento, Descuento = @Descuento, Descuento_P = @Descuento_P, Impuesto_P = @Impuesto_P, Impuesto = @Impuesto, Total = @Total, Devoluciones = @Devoluciones, Precio_A = @Precio_A, 
                          Precio_B = @Precio_B, Precio_C = @Precio_C, Precio_D = @Precio_D, CodMonedaVenta = @CodMonedaVenta, NuevoCostoBase = @NuevoCostoBase, Lote = @Lote, Regalias = @Regalias, CodArticulo = @CodArticulo, 
                          Bonificado = @Bonificado, CodigoBonificado = @CodigoBonificado, CantidadBonificado = @CantidadBonificado, CostoBonificado = @CostoBonificado, SubTotalBonificado = @SubTotalBonificado, 
-                         CodArticuloBonificacion = @CodArticuloBonificacion, CodCabys = @CodCabys
-WHERE        (Id_ArticuloComprados = @Original_Id_ArticuloComprados); 
+                         CodArticuloBonificacion = @CodArticuloBonificacion, CodCabys = @CodCabys, Id_Bodega = @Id_Bodega
+WHERE        (Id_ArticuloComprados = @Original_Id_ArticuloComprados);  
 SELECT Id_ArticuloComprados, IdCompra, Codigo, Descripcion, Base, Monto_Flete, OtrosCargos, Costo, Cantidad, Gravado, Exento, Descuento, Descuento_P, Impuesto_P, Impuesto, Total, Devoluciones, Precio_A, Precio_B, Precio_C, Precio_D, CodMonedaVenta, NuevoCostoBase, Lote, Regalias, CodArticulo, Bonificado, CodigoBonificado, CantidadBonificado, CostoBonificado, SubTotalBonificado, CodArticuloBonificacion FROM articulos_comprados WHERE (Id_ArticuloComprados = @Id_ArticuloComprados)</value>
   </data>
   <metadata name="AdapterMoneda.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 251</value>
+    <value>913, 17</value>
   </metadata>
   <metadata name="SqlSelectCommand4.DesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
@@ -730,10 +730,10 @@ SELECT Id_ArticuloComprados, IdCompra, Codigo, Descripcion, Base, Monto_Flete, O
     <value>False</value>
   </metadata>
   <metadata name="ErrorProvider.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 290</value>
+    <value>1054, 17</value>
   </metadata>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>102</value>
+    <value>160</value>
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="GridControlDetalleCompra.EmbeddedNavigator.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
@@ -750,7 +750,7 @@ SELECT Id_ArticuloComprados, IdCompra, Codigo, Descripcion, Base, Monto_Flete, O
 </value>
   </data>
   <metadata name="AdapterMonedaDetalle.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 329</value>
+    <value>17, 56</value>
   </metadata>
   <metadata name="SqlSelectCommand7.DesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
@@ -762,7 +762,7 @@ SELECT Id_ArticuloComprados, IdCompra, Codigo, Descripcion, Base, Monto_Flete, O
     <value>False</value>
   </metadata>
   <metadata name="AdapterUsuarios.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 368</value>
+    <value>196, 56</value>
   </metadata>
   <metadata name="SqlSelectCommand1.DesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
@@ -774,7 +774,7 @@ SELECT Id_ArticuloComprados, IdCompra, Codigo, Descripcion, Base, Monto_Flete, O
     <value>False</value>
   </metadata>
   <metadata name="Adapter_OrdenCompra.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 407</value>
+    <value>338, 56</value>
   </metadata>
   <metadata name="SqlDeleteCommand3.DesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
@@ -825,7 +825,7 @@ SELECT Id_ArticuloComprados, IdCompra, Codigo, Descripcion, Base, Monto_Flete, O
     <value>UPDATE ordencompra SET Proveedor = @Proveedor, Nombre = @Nombre, Fecha = @Fecha, contado = @contado, credito = @credito, diascredito = @diascredito, Plazo = @Plazo, Descuento = @Descuento, Impuesto = @Impuesto, Total = @Total, Observaciones = @Observaciones, Usuario = @Usuario, NombreUsuario = @NombreUsuario, entregar = @entregar, Cod_Moneda = @Cod_Moneda, SubTotalGravado = @SubTotalGravado, SubTotalExento = @SubTotalExento, SubTotal = @SubTotal, Anulado = @Anulado WHERE (Orden = @Original_Orden) AND (Anulado = @Original_Anulado) AND (Cod_Moneda = @Original_Cod_Moneda) AND (Descuento = @Original_Descuento) AND (Fecha = @Original_Fecha) AND (Impuesto = @Original_Impuesto) AND (Nombre = @Original_Nombre) AND (NombreUsuario = @Original_NombreUsuario) AND (Observaciones = @Original_Observaciones) AND (Plazo = @Original_Plazo) AND (Proveedor = @Original_Proveedor) AND (SubTotal = @Original_SubTotal) AND (SubTotalExento = @Original_SubTotalExento) AND (SubTotalGravado = @Original_SubTotalGravado) AND (Total = @Original_Total) AND (Usuario = @Original_Usuario) AND (contado = @Original_contado) AND (credito = @Original_credito) AND (diascredito = @Original_diascredito) AND (entregar = @Original_entregar); SELECT Orden, Proveedor, Nombre, Fecha, contado, credito, diascredito, Plazo, Descuento, Impuesto, Total, Observaciones, Usuario, NombreUsuario, entregar, Cod_Moneda, SubTotalGravado, SubTotalExento, SubTotal, Anulado FROM ordencompra WHERE (Orden = @Orden)</value>
   </data>
   <metadata name="Adapter_DetalleOrdenCompra.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 446</value>
+    <value>516, 56</value>
   </metadata>
   <metadata name="SqlDeleteCommand4.DesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
@@ -876,10 +876,10 @@ SELECT Id_ArticuloComprados, IdCompra, Codigo, Descripcion, Base, Monto_Flete, O
     <value>UPDATE detalle_ordencompra SET Orden = @Orden, Codigo = @Codigo, Descripcion = @Descripcion, CostoUnitario = @CostoUnitario, Cantidad = @Cantidad, TotalCompra = @TotalCompra, Porc_Descuento = @Porc_Descuento, Descuento = @Descuento, Porc_Impuesto = @Porc_Impuesto, impuesto = @impuesto, OtrosCargos = @OtrosCargos, Monto_Flete = @Monto_Flete, Costo = @Costo, Gravado = @Gravado, Exento = @Exento, Vendidos = @Vendidos, Exist_Actual = @Exist_Actual WHERE (Id = @Original_Id) AND (Cantidad = @Original_Cantidad) AND (Codigo = @Original_Codigo) AND (Costo = @Original_Costo) AND (CostoUnitario = @Original_CostoUnitario) AND (Descripcion = @Original_Descripcion) AND (Descuento = @Original_Descuento) AND (Exento = @Original_Exento) AND (Exist_Actual = @Original_Exist_Actual) AND (Gravado = @Original_Gravado) AND (Monto_Flete = @Original_Monto_Flete) AND (Orden = @Original_Orden) AND (OtrosCargos = @Original_OtrosCargos) AND (Porc_Descuento = @Original_Porc_Descuento) AND (Porc_Impuesto = @Original_Porc_Impuesto) AND (TotalCompra = @Original_TotalCompra) AND (Vendidos = @Original_Vendidos) AND (impuesto = @Original_impuesto); SELECT Id, Orden, Codigo, Descripcion, CostoUnitario, Cantidad, TotalCompra, Porc_Descuento, Descuento, Porc_Impuesto, impuesto, OtrosCargos, Monto_Flete, Costo, Gravado, Exento, Vendidos, Exist_Actual FROM detalle_ordencompra WHERE (Id = @Id)</value>
   </data>
   <metadata name="Timer1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 485</value>
+    <value>732, 56</value>
   </metadata>
   <metadata name="AdapterLotes.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 524</value>
+    <value>821, 56</value>
   </metadata>
   <metadata name="SqlDeleteCommand5.DesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>

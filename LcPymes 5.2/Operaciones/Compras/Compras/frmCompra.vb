@@ -39,6 +39,8 @@ Public Class frmCompra
     Friend WithEvents txtCodCabys As ValidText.ValidText
     Friend WithEvents Label54 As System.Windows.Forms.Label
     Friend WithEvents colCodCabys As DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn
+    Friend WithEvents cboBodega As System.Windows.Forms.ComboBox
+    Friend WithEvents Label55 As System.Windows.Forms.Label
     Dim txtComboTipoF As String = ""
 
 #End Region
@@ -274,21 +276,21 @@ Public Class frmCompra
     <System.Diagnostics.DebuggerStepThrough()> Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmCompra))
-        Dim ColumnFilterInfo1 As DevExpress.XtraGrid.Columns.ColumnFilterInfo = New DevExpress.XtraGrid.Columns.ColumnFilterInfo()
-        Dim ColumnFilterInfo2 As DevExpress.XtraGrid.Columns.ColumnFilterInfo = New DevExpress.XtraGrid.Columns.ColumnFilterInfo()
-        Dim ColumnFilterInfo3 As DevExpress.XtraGrid.Columns.ColumnFilterInfo = New DevExpress.XtraGrid.Columns.ColumnFilterInfo()
-        Dim ColumnFilterInfo4 As DevExpress.XtraGrid.Columns.ColumnFilterInfo = New DevExpress.XtraGrid.Columns.ColumnFilterInfo()
-        Dim ColumnFilterInfo5 As DevExpress.XtraGrid.Columns.ColumnFilterInfo = New DevExpress.XtraGrid.Columns.ColumnFilterInfo()
-        Dim ColumnFilterInfo6 As DevExpress.XtraGrid.Columns.ColumnFilterInfo = New DevExpress.XtraGrid.Columns.ColumnFilterInfo()
-        Dim ColumnFilterInfo7 As DevExpress.XtraGrid.Columns.ColumnFilterInfo = New DevExpress.XtraGrid.Columns.ColumnFilterInfo()
-        Dim ColumnFilterInfo8 As DevExpress.XtraGrid.Columns.ColumnFilterInfo = New DevExpress.XtraGrid.Columns.ColumnFilterInfo()
-        Dim ColumnFilterInfo9 As DevExpress.XtraGrid.Columns.ColumnFilterInfo = New DevExpress.XtraGrid.Columns.ColumnFilterInfo()
-        Dim ColumnFilterInfo10 As DevExpress.XtraGrid.Columns.ColumnFilterInfo = New DevExpress.XtraGrid.Columns.ColumnFilterInfo()
-        Dim ColumnFilterInfo11 As DevExpress.XtraGrid.Columns.ColumnFilterInfo = New DevExpress.XtraGrid.Columns.ColumnFilterInfo()
-        Dim ColumnFilterInfo12 As DevExpress.XtraGrid.Columns.ColumnFilterInfo = New DevExpress.XtraGrid.Columns.ColumnFilterInfo()
-        Dim ColumnFilterInfo13 As DevExpress.XtraGrid.Columns.ColumnFilterInfo = New DevExpress.XtraGrid.Columns.ColumnFilterInfo()
-        Dim ColumnFilterInfo14 As DevExpress.XtraGrid.Columns.ColumnFilterInfo = New DevExpress.XtraGrid.Columns.ColumnFilterInfo()
-        Dim ColumnFilterInfo15 As DevExpress.XtraGrid.Columns.ColumnFilterInfo = New DevExpress.XtraGrid.Columns.ColumnFilterInfo()
+        Dim ColumnFilterInfo16 As DevExpress.XtraGrid.Columns.ColumnFilterInfo = New DevExpress.XtraGrid.Columns.ColumnFilterInfo()
+        Dim ColumnFilterInfo17 As DevExpress.XtraGrid.Columns.ColumnFilterInfo = New DevExpress.XtraGrid.Columns.ColumnFilterInfo()
+        Dim ColumnFilterInfo18 As DevExpress.XtraGrid.Columns.ColumnFilterInfo = New DevExpress.XtraGrid.Columns.ColumnFilterInfo()
+        Dim ColumnFilterInfo19 As DevExpress.XtraGrid.Columns.ColumnFilterInfo = New DevExpress.XtraGrid.Columns.ColumnFilterInfo()
+        Dim ColumnFilterInfo20 As DevExpress.XtraGrid.Columns.ColumnFilterInfo = New DevExpress.XtraGrid.Columns.ColumnFilterInfo()
+        Dim ColumnFilterInfo21 As DevExpress.XtraGrid.Columns.ColumnFilterInfo = New DevExpress.XtraGrid.Columns.ColumnFilterInfo()
+        Dim ColumnFilterInfo22 As DevExpress.XtraGrid.Columns.ColumnFilterInfo = New DevExpress.XtraGrid.Columns.ColumnFilterInfo()
+        Dim ColumnFilterInfo23 As DevExpress.XtraGrid.Columns.ColumnFilterInfo = New DevExpress.XtraGrid.Columns.ColumnFilterInfo()
+        Dim ColumnFilterInfo24 As DevExpress.XtraGrid.Columns.ColumnFilterInfo = New DevExpress.XtraGrid.Columns.ColumnFilterInfo()
+        Dim ColumnFilterInfo25 As DevExpress.XtraGrid.Columns.ColumnFilterInfo = New DevExpress.XtraGrid.Columns.ColumnFilterInfo()
+        Dim ColumnFilterInfo26 As DevExpress.XtraGrid.Columns.ColumnFilterInfo = New DevExpress.XtraGrid.Columns.ColumnFilterInfo()
+        Dim ColumnFilterInfo27 As DevExpress.XtraGrid.Columns.ColumnFilterInfo = New DevExpress.XtraGrid.Columns.ColumnFilterInfo()
+        Dim ColumnFilterInfo28 As DevExpress.XtraGrid.Columns.ColumnFilterInfo = New DevExpress.XtraGrid.Columns.ColumnFilterInfo()
+        Dim ColumnFilterInfo29 As DevExpress.XtraGrid.Columns.ColumnFilterInfo = New DevExpress.XtraGrid.Columns.ColumnFilterInfo()
+        Dim ColumnFilterInfo30 As DevExpress.XtraGrid.Columns.ColumnFilterInfo = New DevExpress.XtraGrid.Columns.ColumnFilterInfo()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.TxtTotalFactura = New ValidText.ValidText()
         Me.GroupBoxOpcionesCompras = New System.Windows.Forms.GroupBox()
@@ -319,6 +321,9 @@ Public Class frmCompra
         Me.CheckBox1 = New System.Windows.Forms.CheckBox()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.GroupBoxDetalleArticulo = New System.Windows.Forms.GroupBox()
+        Me.Label55 = New System.Windows.Forms.Label()
+        Me.cboBodega = New System.Windows.Forms.ComboBox()
+        Me.btnLote = New System.Windows.Forms.Button()
         Me.txtCodCabys = New ValidText.ValidText()
         Me.Label54 = New System.Windows.Forms.Label()
         Me.txtCodArticuloBonificacion = New System.Windows.Forms.TextBox()
@@ -350,7 +355,6 @@ Public Class frmCompra
         Me.TxtTotalCompra = New ValidText.ValidText()
         Me.TxtCosto = New ValidText.ValidText()
         Me.Label26 = New System.Windows.Forms.Label()
-        Me.btnLote = New System.Windows.Forms.Button()
         Me.Label43 = New System.Windows.Forms.Label()
         Me.TxtOtros = New ValidText.ValidText()
         Me.TxtFlete = New ValidText.ValidText()
@@ -559,8 +563,8 @@ Public Class frmCompra
         '
         Me.ToolBar1.Buttons.AddRange(New System.Windows.Forms.ToolBarButton() {Me.ToolBarButton1})
         Me.ToolBar1.ButtonSize = New System.Drawing.Size(77, 60)
-        Me.ToolBar1.Location = New System.Drawing.Point(0, 396)
-        Me.ToolBar1.Size = New System.Drawing.Size(1062, 56)
+        Me.ToolBar1.Location = New System.Drawing.Point(0, 534)
+        Me.ToolBar1.Size = New System.Drawing.Size(1287, 56)
         '
         'DataNavigator
         '
@@ -568,11 +572,11 @@ Public Class frmCompra
         Me.DataNavigator.Buttons.CancelEdit.Visible = False
         Me.DataNavigator.Buttons.EndEdit.Visible = False
         Me.DataNavigator.Buttons.Remove.Visible = False
-        Me.DataNavigator.Location = New System.Drawing.Point(920, 424)
+        Me.DataNavigator.Location = New System.Drawing.Point(1145, 562)
         '
         'TituloModulo
         '
-        Me.TituloModulo.Size = New System.Drawing.Size(1062, 32)
+        Me.TituloModulo.Size = New System.Drawing.Size(1287, 32)
         Me.TituloModulo.Text = "Registro de Compras"
         '
         'Label2
@@ -585,7 +589,7 @@ Public Class frmCompra
         Me.Label2.ForeColor = System.Drawing.Color.RoyalBlue
         Me.Label2.Location = New System.Drawing.Point(8, 33)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(468, 14)
+        Me.Label2.Size = New System.Drawing.Size(693, 14)
         Me.Label2.TabIndex = 3
         Me.Label2.Text = "Nombre del Proveedor "
         '
@@ -596,7 +600,7 @@ Public Class frmCompra
         Me.TxtTotalFactura.FieldReference = Nothing
         Me.TxtTotalFactura.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TxtTotalFactura.ForeColor = System.Drawing.Color.Blue
-        Me.TxtTotalFactura.Location = New System.Drawing.Point(322, 122)
+        Me.TxtTotalFactura.Location = New System.Drawing.Point(547, 122)
         Me.TxtTotalFactura.MaskEdit = ""
         Me.TxtTotalFactura.Name = "TxtTotalFactura"
         Me.TxtTotalFactura.RegExPattern = ValidText.ValidText.RegularExpressionModes.Custom
@@ -638,7 +642,7 @@ Public Class frmCompra
         Me.GroupBoxOpcionesCompras.Enabled = False
         Me.GroupBoxOpcionesCompras.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBoxOpcionesCompras.ForeColor = System.Drawing.Color.MidnightBlue
-        Me.GroupBoxOpcionesCompras.Location = New System.Drawing.Point(490, 31)
+        Me.GroupBoxOpcionesCompras.Location = New System.Drawing.Point(715, 31)
         Me.GroupBoxOpcionesCompras.Name = "GroupBoxOpcionesCompras"
         Me.GroupBoxOpcionesCompras.Size = New System.Drawing.Size(564, 81)
         Me.GroupBoxOpcionesCompras.TabIndex = 100
@@ -919,7 +923,7 @@ Public Class frmCompra
         Me.CheckBox1.BackColor = System.Drawing.SystemColors.Control
         Me.CheckBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CheckBox1.ForeColor = System.Drawing.Color.Blue
-        Me.CheckBox1.Location = New System.Drawing.Point(2, 457)
+        Me.CheckBox1.Location = New System.Drawing.Point(2, 595)
         Me.CheckBox1.Name = "CheckBox1"
         Me.CheckBox1.Size = New System.Drawing.Size(114, 14)
         Me.CheckBox1.TabIndex = 15
@@ -939,6 +943,9 @@ Public Class frmCompra
         'GroupBoxDetalleArticulo
         '
         Me.GroupBoxDetalleArticulo.BackColor = System.Drawing.Color.Transparent
+        Me.GroupBoxDetalleArticulo.Controls.Add(Me.Label55)
+        Me.GroupBoxDetalleArticulo.Controls.Add(Me.cboBodega)
+        Me.GroupBoxDetalleArticulo.Controls.Add(Me.btnLote)
         Me.GroupBoxDetalleArticulo.Controls.Add(Me.txtCodCabys)
         Me.GroupBoxDetalleArticulo.Controls.Add(Me.Label54)
         Me.GroupBoxDetalleArticulo.Controls.Add(Me.txtCodArticuloBonificacion)
@@ -970,7 +977,6 @@ Public Class frmCompra
         Me.GroupBoxDetalleArticulo.Controls.Add(Me.TxtTotalCompra)
         Me.GroupBoxDetalleArticulo.Controls.Add(Me.TxtCosto)
         Me.GroupBoxDetalleArticulo.Controls.Add(Me.Label26)
-        Me.GroupBoxDetalleArticulo.Controls.Add(Me.btnLote)
         Me.GroupBoxDetalleArticulo.Controls.Add(Me.Label43)
         Me.GroupBoxDetalleArticulo.Controls.Add(Me.TxtOtros)
         Me.GroupBoxDetalleArticulo.Controls.Add(Me.TxtFlete)
@@ -984,9 +990,42 @@ Public Class frmCompra
         Me.GroupBoxDetalleArticulo.ForeColor = System.Drawing.Color.MidnightBlue
         Me.GroupBoxDetalleArticulo.Location = New System.Drawing.Point(1, 118)
         Me.GroupBoxDetalleArticulo.Name = "GroupBoxDetalleArticulo"
-        Me.GroupBoxDetalleArticulo.Size = New System.Drawing.Size(1053, 90)
+        Me.GroupBoxDetalleArticulo.Size = New System.Drawing.Size(1210, 90)
         Me.GroupBoxDetalleArticulo.TabIndex = 100
         Me.GroupBoxDetalleArticulo.TabStop = False
+        '
+        'Label55
+        '
+        Me.Label55.BackColor = System.Drawing.SystemColors.ControlLight
+        Me.Label55.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label55.ForeColor = System.Drawing.Color.RoyalBlue
+        Me.Label55.Location = New System.Drawing.Point(775, 29)
+        Me.Label55.Name = "Label55"
+        Me.Label55.Size = New System.Drawing.Size(152, 13)
+        Me.Label55.TabIndex = 104
+        Me.Label55.Text = "Bodega "
+        '
+        'cboBodega
+        '
+        Me.cboBodega.DataBindings.Add(New System.Windows.Forms.Binding("SelectedValue", Me.DataSetCompras, "articulos_comprados.Id_Bodega", True))
+        Me.cboBodega.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cboBodega.FormattingEnabled = True
+        Me.cboBodega.Location = New System.Drawing.Point(776, 40)
+        Me.cboBodega.Name = "cboBodega"
+        Me.cboBodega.Size = New System.Drawing.Size(150, 21)
+        Me.cboBodega.TabIndex = 11
+        '
+        'btnLote
+        '
+        Me.btnLote.BackColor = System.Drawing.SystemColors.ControlLight
+        Me.btnLote.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnLote.ForeColor = System.Drawing.Color.RoyalBlue
+        Me.btnLote.Location = New System.Drawing.Point(1164, 27)
+        Me.btnLote.Name = "btnLote"
+        Me.btnLote.Size = New System.Drawing.Size(41, 20)
+        Me.btnLote.TabIndex = 13
+        Me.btnLote.Text = "Lote"
+        Me.btnLote.UseVisualStyleBackColor = False
         '
         'txtCodCabys
         '
@@ -1169,7 +1208,7 @@ Public Class frmCompra
         Me.Label14.ForeColor = System.Drawing.Color.White
         Me.Label14.Location = New System.Drawing.Point(8, 0)
         Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(1043, 15)
+        Me.Label14.Size = New System.Drawing.Size(1200, 15)
         Me.Label14.TabIndex = 0
         Me.Label14.Text = "Artículos en Detalle de Compra"
         Me.Label14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -1200,14 +1239,14 @@ Public Class frmCompra
         Me.TxtImpuesto_Monto.FieldReference = Nothing
         Me.TxtImpuesto_Monto.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TxtImpuesto_Monto.ForeColor = System.Drawing.Color.Blue
-        Me.TxtImpuesto_Monto.Location = New System.Drawing.Point(771, 47)
+        Me.TxtImpuesto_Monto.Location = New System.Drawing.Point(932, 47)
         Me.TxtImpuesto_Monto.MaskEdit = ""
         Me.TxtImpuesto_Monto.Name = "TxtImpuesto_Monto"
         Me.TxtImpuesto_Monto.RegExPattern = ValidText.ValidText.RegularExpressionModes.Custom
         Me.TxtImpuesto_Monto.Required = True
         Me.TxtImpuesto_Monto.ShowErrorIcon = False
         Me.TxtImpuesto_Monto.Size = New System.Drawing.Size(101, 13)
-        Me.TxtImpuesto_Monto.TabIndex = 11
+        Me.TxtImpuesto_Monto.TabIndex = 13
         Me.TxtImpuesto_Monto.Text = "0.00"
         Me.TxtImpuesto_Monto.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         Me.TxtImpuesto_Monto.ValidationMode = ValidText.ValidText.ValidationModes.Numbers
@@ -1219,7 +1258,7 @@ Public Class frmCompra
         Me.txtdescripcion.Enabled = False
         Me.txtdescripcion.Location = New System.Drawing.Point(176, 15)
         Me.txtdescripcion.Name = "txtdescripcion"
-        Me.txtdescripcion.Size = New System.Drawing.Size(824, 13)
+        Me.txtdescripcion.Size = New System.Drawing.Size(819, 13)
         Me.txtdescripcion.TabIndex = 10
         '
         'TxtCodArt
@@ -1300,14 +1339,14 @@ Public Class frmCompra
         Me.TxtImpuesto_Porcentaje.FieldReference = Nothing
         Me.TxtImpuesto_Porcentaje.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TxtImpuesto_Porcentaje.ForeColor = System.Drawing.Color.Blue
-        Me.TxtImpuesto_Porcentaje.Location = New System.Drawing.Point(827, 32)
+        Me.TxtImpuesto_Porcentaje.Location = New System.Drawing.Point(988, 32)
         Me.TxtImpuesto_Porcentaje.MaskEdit = ""
         Me.TxtImpuesto_Porcentaje.Name = "TxtImpuesto_Porcentaje"
         Me.TxtImpuesto_Porcentaje.RegExPattern = ValidText.ValidText.RegularExpressionModes.Custom
         Me.TxtImpuesto_Porcentaje.Required = True
         Me.TxtImpuesto_Porcentaje.ShowErrorIcon = False
         Me.TxtImpuesto_Porcentaje.Size = New System.Drawing.Size(42, 13)
-        Me.TxtImpuesto_Porcentaje.TabIndex = 11
+        Me.TxtImpuesto_Porcentaje.TabIndex = 12
         Me.TxtImpuesto_Porcentaje.Text = "0.00"
         Me.TxtImpuesto_Porcentaje.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         Me.TxtImpuesto_Porcentaje.ValidationMode = ValidText.ValidText.ValidationModes.Numbers
@@ -1350,7 +1389,7 @@ Public Class frmCompra
         Me.TxtTotalCompra.FieldReference = Nothing
         Me.TxtTotalCompra.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TxtTotalCompra.ForeColor = System.Drawing.Color.Blue
-        Me.TxtTotalCompra.Location = New System.Drawing.Point(886, 46)
+        Me.TxtTotalCompra.Location = New System.Drawing.Point(1047, 46)
         Me.TxtTotalCompra.MaskEdit = ""
         Me.TxtTotalCompra.Name = "TxtTotalCompra"
         Me.TxtTotalCompra.ReadOnly = True
@@ -1390,30 +1429,18 @@ Public Class frmCompra
         Me.Label26.BackColor = System.Drawing.SystemColors.ControlLight
         Me.Label26.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label26.ForeColor = System.Drawing.Color.RoyalBlue
-        Me.Label26.Location = New System.Drawing.Point(886, 31)
+        Me.Label26.Location = New System.Drawing.Point(1047, 31)
         Me.Label26.Name = "Label26"
         Me.Label26.Size = New System.Drawing.Size(109, 13)
         Me.Label26.TabIndex = 13
         Me.Label26.Text = "Total de Compra"
-        '
-        'btnLote
-        '
-        Me.btnLote.BackColor = System.Drawing.SystemColors.ControlLight
-        Me.btnLote.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnLote.ForeColor = System.Drawing.Color.RoyalBlue
-        Me.btnLote.Location = New System.Drawing.Point(1001, 27)
-        Me.btnLote.Name = "btnLote"
-        Me.btnLote.Size = New System.Drawing.Size(50, 20)
-        Me.btnLote.TabIndex = 13
-        Me.btnLote.Text = "Lote"
-        Me.btnLote.UseVisualStyleBackColor = False
         '
         'Label43
         '
         Me.Label43.BackColor = System.Drawing.SystemColors.ControlLight
         Me.Label43.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label43.ForeColor = System.Drawing.Color.RoyalBlue
-        Me.Label43.Location = New System.Drawing.Point(771, 32)
+        Me.Label43.Location = New System.Drawing.Point(932, 32)
         Me.Label43.Name = "Label43"
         Me.Label43.Size = New System.Drawing.Size(59, 13)
         Me.Label43.TabIndex = 9
@@ -1609,7 +1636,7 @@ Public Class frmCompra
         Me.GroupBox7.Controls.Add(Me.txtsubgra)
         Me.GroupBox7.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox7.ForeColor = System.Drawing.Color.MidnightBlue
-        Me.GroupBox7.Location = New System.Drawing.Point(310, 344)
+        Me.GroupBox7.Location = New System.Drawing.Point(535, 482)
         Me.GroupBox7.Name = "GroupBox7"
         Me.GroupBox7.Size = New System.Drawing.Size(752, 53)
         Me.GroupBox7.TabIndex = 71
@@ -1824,7 +1851,7 @@ Public Class frmCompra
         Me.ComboBoxProvedor.ItemHeight = 13
         Me.ComboBoxProvedor.Location = New System.Drawing.Point(56, 49)
         Me.ComboBoxProvedor.Name = "ComboBoxProvedor"
-        Me.ComboBoxProvedor.Size = New System.Drawing.Size(420, 20)
+        Me.ComboBoxProvedor.Size = New System.Drawing.Size(645, 20)
         Me.ComboBoxProvedor.TabIndex = 2
         Me.ComboBoxProvedor.ValueMember = "Proveedores.CodigoProv"
         '
@@ -1834,7 +1861,7 @@ Public Class frmCompra
         Me.Label16.BackColor = System.Drawing.SystemColors.ControlLight
         Me.Label16.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label16.ForeColor = System.Drawing.Color.RoyalBlue
-        Me.Label16.Location = New System.Drawing.Point(210, 122)
+        Me.Label16.Location = New System.Drawing.Point(435, 122)
         Me.Label16.Name = "Label16"
         Me.Label16.Size = New System.Drawing.Size(110, 13)
         Me.Label16.TabIndex = 74
@@ -1858,7 +1885,7 @@ Public Class frmCompra
         Me.Panel1.Controls.Add(Me.Label17)
         Me.Panel1.Controls.Add(Me.TxtNombreUsuario)
         Me.Panel1.Controls.Add(Me.txtClave)
-        Me.Panel1.Location = New System.Drawing.Point(728, 457)
+        Me.Panel1.Location = New System.Drawing.Point(953, 595)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(316, 15)
         Me.Panel1.TabIndex = 0
@@ -1891,7 +1918,7 @@ Public Class frmCompra
         '
         'SqlConnection
         '
-        Me.SqlConnection.ConnectionString = "Data Source=.;Initial Catalog=SeePos;Integrated Security=True"
+        Me.SqlConnection.ConnectionString = "Data Source=.;Initial Catalog=Clinica;Integrated Security=True"
         Me.SqlConnection.FireInfoMessageEventOnUserErrors = False
         '
         'SqlInsertCommand2
@@ -1941,7 +1968,7 @@ Public Class frmCompra
         '
         Me.SqlInsertCommand1.CommandText = resources.GetString("SqlInsertCommand1.CommandText")
         Me.SqlInsertCommand1.Connection = Me.SqlConnection
-        Me.SqlInsertCommand1.Parameters.AddRange(New System.Data.SqlClient.SqlParameter() {New System.Data.SqlClient.SqlParameter("@IdCompra", System.Data.SqlDbType.BigInt, 0, "IdCompra"), New System.Data.SqlClient.SqlParameter("@Codigo", System.Data.SqlDbType.BigInt, 0, "Codigo"), New System.Data.SqlClient.SqlParameter("@Descripcion", System.Data.SqlDbType.VarChar, 0, "Descripcion"), New System.Data.SqlClient.SqlParameter("@Base", System.Data.SqlDbType.Float, 0, "Base"), New System.Data.SqlClient.SqlParameter("@Monto_Flete", System.Data.SqlDbType.Float, 0, "Monto_Flete"), New System.Data.SqlClient.SqlParameter("@OtrosCargos", System.Data.SqlDbType.Float, 0, "OtrosCargos"), New System.Data.SqlClient.SqlParameter("@Costo", System.Data.SqlDbType.Float, 0, "Costo"), New System.Data.SqlClient.SqlParameter("@Cantidad", System.Data.SqlDbType.Float, 0, "Cantidad"), New System.Data.SqlClient.SqlParameter("@Gravado", System.Data.SqlDbType.Float, 0, "Gravado"), New System.Data.SqlClient.SqlParameter("@Exento", System.Data.SqlDbType.Float, 0, "Exento"), New System.Data.SqlClient.SqlParameter("@Descuento", System.Data.SqlDbType.Float, 0, "Descuento"), New System.Data.SqlClient.SqlParameter("@Descuento_P", System.Data.SqlDbType.Float, 0, "Descuento_P"), New System.Data.SqlClient.SqlParameter("@Impuesto_P", System.Data.SqlDbType.Float, 0, "Impuesto_P"), New System.Data.SqlClient.SqlParameter("@Impuesto", System.Data.SqlDbType.Float, 0, "Impuesto"), New System.Data.SqlClient.SqlParameter("@Total", System.Data.SqlDbType.Float, 0, "Total"), New System.Data.SqlClient.SqlParameter("@Devoluciones", System.Data.SqlDbType.Float, 0, "Devoluciones"), New System.Data.SqlClient.SqlParameter("@Precio_A", System.Data.SqlDbType.Float, 0, "Precio_A"), New System.Data.SqlClient.SqlParameter("@Precio_B", System.Data.SqlDbType.Float, 0, "Precio_B"), New System.Data.SqlClient.SqlParameter("@Precio_C", System.Data.SqlDbType.Float, 0, "Precio_C"), New System.Data.SqlClient.SqlParameter("@Precio_D", System.Data.SqlDbType.Float, 0, "Precio_D"), New System.Data.SqlClient.SqlParameter("@CodMonedaVenta", System.Data.SqlDbType.Int, 0, "CodMonedaVenta"), New System.Data.SqlClient.SqlParameter("@NuevoCostoBase", System.Data.SqlDbType.Float, 0, "NuevoCostoBase"), New System.Data.SqlClient.SqlParameter("@Lote", System.Data.SqlDbType.VarChar, 0, "Lote"), New System.Data.SqlClient.SqlParameter("@Regalias", System.Data.SqlDbType.Float, 0, "Regalias"), New System.Data.SqlClient.SqlParameter("@CodArticulo", System.Data.SqlDbType.VarChar, 0, "CodArticulo"), New System.Data.SqlClient.SqlParameter("@Bonificado", System.Data.SqlDbType.Bit, 0, "Bonificado"), New System.Data.SqlClient.SqlParameter("@CodigoBonificado", System.Data.SqlDbType.BigInt, 0, "CodigoBonificado"), New System.Data.SqlClient.SqlParameter("@CantidadBonificado", System.Data.SqlDbType.Float, 0, "CantidadBonificado"), New System.Data.SqlClient.SqlParameter("@CostoBonificado", System.Data.SqlDbType.Float, 0, "CostoBonificado"), New System.Data.SqlClient.SqlParameter("@SubTotalBonificado", System.Data.SqlDbType.Float, 0, "SubTotalBonificado"), New System.Data.SqlClient.SqlParameter("@CodArticuloBonificacion", System.Data.SqlDbType.VarChar, 0, "CodArticuloBonificacion"), New System.Data.SqlClient.SqlParameter("@CodCabys", System.Data.SqlDbType.VarChar, 0, "CodCabys")})
+        Me.SqlInsertCommand1.Parameters.AddRange(New System.Data.SqlClient.SqlParameter() {New System.Data.SqlClient.SqlParameter("@IdCompra", System.Data.SqlDbType.BigInt, 8, "IdCompra"), New System.Data.SqlClient.SqlParameter("@Codigo", System.Data.SqlDbType.BigInt, 8, "Codigo"), New System.Data.SqlClient.SqlParameter("@Descripcion", System.Data.SqlDbType.VarChar, 255, "Descripcion"), New System.Data.SqlClient.SqlParameter("@Base", System.Data.SqlDbType.Float, 8, "Base"), New System.Data.SqlClient.SqlParameter("@Monto_Flete", System.Data.SqlDbType.Float, 8, "Monto_Flete"), New System.Data.SqlClient.SqlParameter("@OtrosCargos", System.Data.SqlDbType.Float, 8, "OtrosCargos"), New System.Data.SqlClient.SqlParameter("@Costo", System.Data.SqlDbType.Float, 8, "Costo"), New System.Data.SqlClient.SqlParameter("@Cantidad", System.Data.SqlDbType.Float, 8, "Cantidad"), New System.Data.SqlClient.SqlParameter("@Gravado", System.Data.SqlDbType.Float, 8, "Gravado"), New System.Data.SqlClient.SqlParameter("@Exento", System.Data.SqlDbType.Float, 8, "Exento"), New System.Data.SqlClient.SqlParameter("@Descuento", System.Data.SqlDbType.Float, 8, "Descuento"), New System.Data.SqlClient.SqlParameter("@Descuento_P", System.Data.SqlDbType.Float, 8, "Descuento_P"), New System.Data.SqlClient.SqlParameter("@Impuesto_P", System.Data.SqlDbType.Float, 8, "Impuesto_P"), New System.Data.SqlClient.SqlParameter("@Impuesto", System.Data.SqlDbType.Float, 8, "Impuesto"), New System.Data.SqlClient.SqlParameter("@Total", System.Data.SqlDbType.Float, 8, "Total"), New System.Data.SqlClient.SqlParameter("@Devoluciones", System.Data.SqlDbType.Float, 8, "Devoluciones"), New System.Data.SqlClient.SqlParameter("@Precio_A", System.Data.SqlDbType.Float, 8, "Precio_A"), New System.Data.SqlClient.SqlParameter("@Precio_B", System.Data.SqlDbType.Float, 8, "Precio_B"), New System.Data.SqlClient.SqlParameter("@Precio_C", System.Data.SqlDbType.Float, 8, "Precio_C"), New System.Data.SqlClient.SqlParameter("@Precio_D", System.Data.SqlDbType.Float, 8, "Precio_D"), New System.Data.SqlClient.SqlParameter("@CodMonedaVenta", System.Data.SqlDbType.Int, 4, "CodMonedaVenta"), New System.Data.SqlClient.SqlParameter("@NuevoCostoBase", System.Data.SqlDbType.Float, 8, "NuevoCostoBase"), New System.Data.SqlClient.SqlParameter("@Lote", System.Data.SqlDbType.VarChar, 250, "Lote"), New System.Data.SqlClient.SqlParameter("@Regalias", System.Data.SqlDbType.Float, 8, "Regalias"), New System.Data.SqlClient.SqlParameter("@CodArticulo", System.Data.SqlDbType.VarChar, 250, "CodArticulo"), New System.Data.SqlClient.SqlParameter("@Bonificado", System.Data.SqlDbType.Bit, 1, "Bonificado"), New System.Data.SqlClient.SqlParameter("@CodigoBonificado", System.Data.SqlDbType.BigInt, 8, "CodigoBonificado"), New System.Data.SqlClient.SqlParameter("@CantidadBonificado", System.Data.SqlDbType.Float, 8, "CantidadBonificado"), New System.Data.SqlClient.SqlParameter("@CostoBonificado", System.Data.SqlDbType.Float, 8, "CostoBonificado"), New System.Data.SqlClient.SqlParameter("@SubTotalBonificado", System.Data.SqlDbType.Float, 8, "SubTotalBonificado"), New System.Data.SqlClient.SqlParameter("@CodArticuloBonificacion", System.Data.SqlDbType.VarChar, 250, "CodArticuloBonificacion"), New System.Data.SqlClient.SqlParameter("@CodCabys", System.Data.SqlDbType.NVarChar, 255, "CodCabys"), New System.Data.SqlClient.SqlParameter("@Id_Bodega", System.Data.SqlDbType.BigInt, 8, "Id_Bodega")})
         '
         'SqlSelectCommand3
         '
@@ -1952,7 +1979,7 @@ Public Class frmCompra
         '
         Me.SqlUpdateCommand1.CommandText = resources.GetString("SqlUpdateCommand1.CommandText")
         Me.SqlUpdateCommand1.Connection = Me.SqlConnection
-        Me.SqlUpdateCommand1.Parameters.AddRange(New System.Data.SqlClient.SqlParameter() {New System.Data.SqlClient.SqlParameter("@IdCompra", System.Data.SqlDbType.BigInt, 8, "IdCompra"), New System.Data.SqlClient.SqlParameter("@Codigo", System.Data.SqlDbType.BigInt, 8, "Codigo"), New System.Data.SqlClient.SqlParameter("@Descripcion", System.Data.SqlDbType.VarChar, 255, "Descripcion"), New System.Data.SqlClient.SqlParameter("@Base", System.Data.SqlDbType.Float, 8, "Base"), New System.Data.SqlClient.SqlParameter("@Monto_Flete", System.Data.SqlDbType.Float, 8, "Monto_Flete"), New System.Data.SqlClient.SqlParameter("@OtrosCargos", System.Data.SqlDbType.Float, 8, "OtrosCargos"), New System.Data.SqlClient.SqlParameter("@Costo", System.Data.SqlDbType.Float, 8, "Costo"), New System.Data.SqlClient.SqlParameter("@Cantidad", System.Data.SqlDbType.Float, 8, "Cantidad"), New System.Data.SqlClient.SqlParameter("@Gravado", System.Data.SqlDbType.Float, 8, "Gravado"), New System.Data.SqlClient.SqlParameter("@Exento", System.Data.SqlDbType.Float, 8, "Exento"), New System.Data.SqlClient.SqlParameter("@Descuento", System.Data.SqlDbType.Float, 8, "Descuento"), New System.Data.SqlClient.SqlParameter("@Descuento_P", System.Data.SqlDbType.Float, 8, "Descuento_P"), New System.Data.SqlClient.SqlParameter("@Impuesto_P", System.Data.SqlDbType.Float, 8, "Impuesto_P"), New System.Data.SqlClient.SqlParameter("@Impuesto", System.Data.SqlDbType.Float, 8, "Impuesto"), New System.Data.SqlClient.SqlParameter("@Total", System.Data.SqlDbType.Float, 8, "Total"), New System.Data.SqlClient.SqlParameter("@Devoluciones", System.Data.SqlDbType.Float, 8, "Devoluciones"), New System.Data.SqlClient.SqlParameter("@Precio_A", System.Data.SqlDbType.Float, 8, "Precio_A"), New System.Data.SqlClient.SqlParameter("@Precio_B", System.Data.SqlDbType.Float, 8, "Precio_B"), New System.Data.SqlClient.SqlParameter("@Precio_C", System.Data.SqlDbType.Float, 8, "Precio_C"), New System.Data.SqlClient.SqlParameter("@Precio_D", System.Data.SqlDbType.Float, 8, "Precio_D"), New System.Data.SqlClient.SqlParameter("@CodMonedaVenta", System.Data.SqlDbType.Int, 4, "CodMonedaVenta"), New System.Data.SqlClient.SqlParameter("@NuevoCostoBase", System.Data.SqlDbType.Float, 8, "NuevoCostoBase"), New System.Data.SqlClient.SqlParameter("@Lote", System.Data.SqlDbType.VarChar, 250, "Lote"), New System.Data.SqlClient.SqlParameter("@Regalias", System.Data.SqlDbType.Float, 8, "Regalias"), New System.Data.SqlClient.SqlParameter("@CodArticulo", System.Data.SqlDbType.VarChar, 250, "CodArticulo"), New System.Data.SqlClient.SqlParameter("@Bonificado", System.Data.SqlDbType.Bit, 1, "Bonificado"), New System.Data.SqlClient.SqlParameter("@CodigoBonificado", System.Data.SqlDbType.BigInt, 8, "CodigoBonificado"), New System.Data.SqlClient.SqlParameter("@CantidadBonificado", System.Data.SqlDbType.Float, 8, "CantidadBonificado"), New System.Data.SqlClient.SqlParameter("@CostoBonificado", System.Data.SqlDbType.Float, 8, "CostoBonificado"), New System.Data.SqlClient.SqlParameter("@SubTotalBonificado", System.Data.SqlDbType.Float, 8, "SubTotalBonificado"), New System.Data.SqlClient.SqlParameter("@CodArticuloBonificacion", System.Data.SqlDbType.VarChar, 250, "CodArticuloBonificacion"), New System.Data.SqlClient.SqlParameter("@CodCabys", System.Data.SqlDbType.NVarChar, 255, "CodCabys"), New System.Data.SqlClient.SqlParameter("@Original_Id_ArticuloComprados", System.Data.SqlDbType.BigInt, 8, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "Id_ArticuloComprados", System.Data.DataRowVersion.Original, Nothing), New System.Data.SqlClient.SqlParameter("@Id_ArticuloComprados", System.Data.SqlDbType.BigInt, 8, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "Id_ArticuloComprados", System.Data.DataRowVersion.Original, Nothing)})
+        Me.SqlUpdateCommand1.Parameters.AddRange(New System.Data.SqlClient.SqlParameter() {New System.Data.SqlClient.SqlParameter("@IdCompra", System.Data.SqlDbType.BigInt, 8, "IdCompra"), New System.Data.SqlClient.SqlParameter("@Codigo", System.Data.SqlDbType.BigInt, 8, "Codigo"), New System.Data.SqlClient.SqlParameter("@Descripcion", System.Data.SqlDbType.VarChar, 255, "Descripcion"), New System.Data.SqlClient.SqlParameter("@Base", System.Data.SqlDbType.Float, 8, "Base"), New System.Data.SqlClient.SqlParameter("@Monto_Flete", System.Data.SqlDbType.Float, 8, "Monto_Flete"), New System.Data.SqlClient.SqlParameter("@OtrosCargos", System.Data.SqlDbType.Float, 8, "OtrosCargos"), New System.Data.SqlClient.SqlParameter("@Costo", System.Data.SqlDbType.Float, 8, "Costo"), New System.Data.SqlClient.SqlParameter("@Cantidad", System.Data.SqlDbType.Float, 8, "Cantidad"), New System.Data.SqlClient.SqlParameter("@Gravado", System.Data.SqlDbType.Float, 8, "Gravado"), New System.Data.SqlClient.SqlParameter("@Exento", System.Data.SqlDbType.Float, 8, "Exento"), New System.Data.SqlClient.SqlParameter("@Descuento", System.Data.SqlDbType.Float, 8, "Descuento"), New System.Data.SqlClient.SqlParameter("@Descuento_P", System.Data.SqlDbType.Float, 8, "Descuento_P"), New System.Data.SqlClient.SqlParameter("@Impuesto_P", System.Data.SqlDbType.Float, 8, "Impuesto_P"), New System.Data.SqlClient.SqlParameter("@Impuesto", System.Data.SqlDbType.Float, 8, "Impuesto"), New System.Data.SqlClient.SqlParameter("@Total", System.Data.SqlDbType.Float, 8, "Total"), New System.Data.SqlClient.SqlParameter("@Devoluciones", System.Data.SqlDbType.Float, 8, "Devoluciones"), New System.Data.SqlClient.SqlParameter("@Precio_A", System.Data.SqlDbType.Float, 8, "Precio_A"), New System.Data.SqlClient.SqlParameter("@Precio_B", System.Data.SqlDbType.Float, 8, "Precio_B"), New System.Data.SqlClient.SqlParameter("@Precio_C", System.Data.SqlDbType.Float, 8, "Precio_C"), New System.Data.SqlClient.SqlParameter("@Precio_D", System.Data.SqlDbType.Float, 8, "Precio_D"), New System.Data.SqlClient.SqlParameter("@CodMonedaVenta", System.Data.SqlDbType.Int, 4, "CodMonedaVenta"), New System.Data.SqlClient.SqlParameter("@NuevoCostoBase", System.Data.SqlDbType.Float, 8, "NuevoCostoBase"), New System.Data.SqlClient.SqlParameter("@Lote", System.Data.SqlDbType.VarChar, 250, "Lote"), New System.Data.SqlClient.SqlParameter("@Regalias", System.Data.SqlDbType.Float, 8, "Regalias"), New System.Data.SqlClient.SqlParameter("@CodArticulo", System.Data.SqlDbType.VarChar, 250, "CodArticulo"), New System.Data.SqlClient.SqlParameter("@Bonificado", System.Data.SqlDbType.Bit, 1, "Bonificado"), New System.Data.SqlClient.SqlParameter("@CodigoBonificado", System.Data.SqlDbType.BigInt, 8, "CodigoBonificado"), New System.Data.SqlClient.SqlParameter("@CantidadBonificado", System.Data.SqlDbType.Float, 8, "CantidadBonificado"), New System.Data.SqlClient.SqlParameter("@CostoBonificado", System.Data.SqlDbType.Float, 8, "CostoBonificado"), New System.Data.SqlClient.SqlParameter("@SubTotalBonificado", System.Data.SqlDbType.Float, 8, "SubTotalBonificado"), New System.Data.SqlClient.SqlParameter("@CodArticuloBonificacion", System.Data.SqlDbType.VarChar, 250, "CodArticuloBonificacion"), New System.Data.SqlClient.SqlParameter("@CodCabys", System.Data.SqlDbType.NVarChar, 255, "CodCabys"), New System.Data.SqlClient.SqlParameter("@Id_Bodega", System.Data.SqlDbType.BigInt, 8, "Id_Bodega"), New System.Data.SqlClient.SqlParameter("@Original_Id_ArticuloComprados", System.Data.SqlDbType.BigInt, 8, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "Id_ArticuloComprados", System.Data.DataRowVersion.Original, Nothing), New System.Data.SqlClient.SqlParameter("@Id_ArticuloComprados", System.Data.SqlDbType.BigInt, 8, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "Id_ArticuloComprados", System.Data.DataRowVersion.Original, Nothing)})
         '
         'Panel2
         '
@@ -2506,7 +2533,7 @@ Public Class frmCompra
         Me.CheckBoxUtilidadFija.Enabled = False
         Me.CheckBoxUtilidadFija.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CheckBoxUtilidadFija.ForeColor = System.Drawing.Color.Blue
-        Me.CheckBoxUtilidadFija.Location = New System.Drawing.Point(154, 457)
+        Me.CheckBoxUtilidadFija.Location = New System.Drawing.Point(154, 595)
         Me.CheckBoxUtilidadFija.Name = "CheckBoxUtilidadFija"
         Me.CheckBoxUtilidadFija.Size = New System.Drawing.Size(96, 14)
         Me.CheckBoxUtilidadFija.TabIndex = 2
@@ -2521,7 +2548,7 @@ Public Class frmCompra
         Me.TxtUtilidadFija.FieldReference = Nothing
         Me.TxtUtilidadFija.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TxtUtilidadFija.ForeColor = System.Drawing.Color.Blue
-        Me.TxtUtilidadFija.Location = New System.Drawing.Point(259, 458)
+        Me.TxtUtilidadFija.Location = New System.Drawing.Point(259, 596)
         Me.TxtUtilidadFija.MaskEdit = ""
         Me.TxtUtilidadFija.Name = "TxtUtilidadFija"
         Me.TxtUtilidadFija.ReadOnly = True
@@ -2623,7 +2650,7 @@ Public Class frmCompra
         Me.GridControlDetalleCompra.Location = New System.Drawing.Point(8, 211)
         Me.GridControlDetalleCompra.MainView = Me.BandedGridView1
         Me.GridControlDetalleCompra.Name = "GridControlDetalleCompra"
-        Me.GridControlDetalleCompra.Size = New System.Drawing.Size(1051, 125)
+        Me.GridControlDetalleCompra.Size = New System.Drawing.Size(1276, 263)
         Me.GridControlDetalleCompra.TabIndex = 100
         Me.GridControlDetalleCompra.Text = "GridControl"
         '
@@ -2668,7 +2695,7 @@ Public Class frmCompra
         '
         Me.colCodigo.Caption = "Codigo"
         Me.colCodigo.FieldName = "CodArticulo"
-        Me.colCodigo.FilterInfo = ColumnFilterInfo1
+        Me.colCodigo.FilterInfo = ColumnFilterInfo16
         Me.colCodigo.Name = "colCodigo"
         Me.colCodigo.Options = CType(((((((DevExpress.XtraGrid.Columns.ColumnOptions.CanFiltered Or DevExpress.XtraGrid.Columns.ColumnOptions.CanResized) _
             Or DevExpress.XtraGrid.Columns.ColumnOptions.CanSorted) _
@@ -2684,7 +2711,7 @@ Public Class frmCompra
         Me.colCodCabys.AutoFillDown = True
         Me.colCodCabys.Caption = "Utilidad"
         Me.colCodCabys.FieldName = "Utilidad"
-        Me.colCodCabys.FilterInfo = ColumnFilterInfo2
+        Me.colCodCabys.FilterInfo = ColumnFilterInfo17
         Me.colCodCabys.Name = "colCodCabys"
         Me.colCodCabys.Options = CType(((((((DevExpress.XtraGrid.Columns.ColumnOptions.CanMoved Or DevExpress.XtraGrid.Columns.ColumnOptions.CanGrouped) _
             Or DevExpress.XtraGrid.Columns.ColumnOptions.CanResized) _
@@ -2699,7 +2726,7 @@ Public Class frmCompra
         '
         Me.colDescripcion.Caption = "Descripcion"
         Me.colDescripcion.FieldName = "Descripcion"
-        Me.colDescripcion.FilterInfo = ColumnFilterInfo3
+        Me.colDescripcion.FilterInfo = ColumnFilterInfo18
         Me.colDescripcion.Name = "colDescripcion"
         Me.colDescripcion.Options = CType(((((((DevExpress.XtraGrid.Columns.ColumnOptions.CanMoved Or DevExpress.XtraGrid.Columns.ColumnOptions.CanGrouped) _
             Or DevExpress.XtraGrid.Columns.ColumnOptions.CanResized) _
@@ -2714,7 +2741,7 @@ Public Class frmCompra
         '
         Me.colLote.Caption = "Lote"
         Me.colLote.FieldName = "Lote"
-        Me.colLote.FilterInfo = ColumnFilterInfo4
+        Me.colLote.FilterInfo = ColumnFilterInfo19
         Me.colLote.Name = "colLote"
         Me.colLote.Width = 86
         '
@@ -2724,7 +2751,7 @@ Public Class frmCompra
         Me.colCosto.DisplayFormat.FormatString = "#,#0.00"
         Me.colCosto.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric
         Me.colCosto.FieldName = "Costo"
-        Me.colCosto.FilterInfo = ColumnFilterInfo5
+        Me.colCosto.FilterInfo = ColumnFilterInfo20
         Me.colCosto.Name = "colCosto"
         Me.colCosto.Options = CType(((((((DevExpress.XtraGrid.Columns.ColumnOptions.CanMoved Or DevExpress.XtraGrid.Columns.ColumnOptions.CanGrouped) _
             Or DevExpress.XtraGrid.Columns.ColumnOptions.CanResized) _
@@ -2739,7 +2766,7 @@ Public Class frmCompra
         '
         Me.GridColumn1.Caption = "Nue. Base"
         Me.GridColumn1.FieldName = "NuevoCostoBase"
-        Me.GridColumn1.FilterInfo = ColumnFilterInfo6
+        Me.GridColumn1.FilterInfo = ColumnFilterInfo21
         Me.GridColumn1.Name = "GridColumn1"
         Me.GridColumn1.Visible = True
         Me.GridColumn1.Width = 91
@@ -2750,7 +2777,7 @@ Public Class frmCompra
         Me.colCantidad.DisplayFormat.FormatString = "#,#0.00"
         Me.colCantidad.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric
         Me.colCantidad.FieldName = "Cantidad"
-        Me.colCantidad.FilterInfo = ColumnFilterInfo7
+        Me.colCantidad.FilterInfo = ColumnFilterInfo22
         Me.colCantidad.Name = "colCantidad"
         Me.colCantidad.Options = CType(((((((DevExpress.XtraGrid.Columns.ColumnOptions.CanMoved Or DevExpress.XtraGrid.Columns.ColumnOptions.CanGrouped) _
             Or DevExpress.XtraGrid.Columns.ColumnOptions.CanResized) _
@@ -2767,7 +2794,7 @@ Public Class frmCompra
         Me.colRegalias.DisplayFormat.FormatString = "#,#0.00"
         Me.colRegalias.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric
         Me.colRegalias.FieldName = "Regalias"
-        Me.colRegalias.FilterInfo = ColumnFilterInfo8
+        Me.colRegalias.FilterInfo = ColumnFilterInfo23
         Me.colRegalias.Name = "colRegalias"
         Me.colRegalias.Options = CType(((((((DevExpress.XtraGrid.Columns.ColumnOptions.CanMoved Or DevExpress.XtraGrid.Columns.ColumnOptions.CanGrouped) _
             Or DevExpress.XtraGrid.Columns.ColumnOptions.CanResized) _
@@ -2784,7 +2811,7 @@ Public Class frmCompra
         Me.colGravado.DisplayFormat.FormatString = "#,#0.00"
         Me.colGravado.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric
         Me.colGravado.FieldName = "Gravado"
-        Me.colGravado.FilterInfo = ColumnFilterInfo9
+        Me.colGravado.FilterInfo = ColumnFilterInfo24
         Me.colGravado.Name = "colGravado"
         Me.colGravado.Options = CType(((((((DevExpress.XtraGrid.Columns.ColumnOptions.CanMoved Or DevExpress.XtraGrid.Columns.ColumnOptions.CanGrouped) _
             Or DevExpress.XtraGrid.Columns.ColumnOptions.CanResized) _
@@ -2803,7 +2830,7 @@ Public Class frmCompra
         Me.colExento.DisplayFormat.FormatString = "#,#0.00"
         Me.colExento.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric
         Me.colExento.FieldName = "Exento"
-        Me.colExento.FilterInfo = ColumnFilterInfo10
+        Me.colExento.FilterInfo = ColumnFilterInfo25
         Me.colExento.Name = "colExento"
         Me.colExento.Options = CType(((((((DevExpress.XtraGrid.Columns.ColumnOptions.CanMoved Or DevExpress.XtraGrid.Columns.ColumnOptions.CanGrouped) _
             Or DevExpress.XtraGrid.Columns.ColumnOptions.CanResized) _
@@ -2821,7 +2848,7 @@ Public Class frmCompra
         Me.colDescuento_P.DisplayFormat.FormatString = "#,#0.00"
         Me.colDescuento_P.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric
         Me.colDescuento_P.FieldName = "Descuento_P"
-        Me.colDescuento_P.FilterInfo = ColumnFilterInfo11
+        Me.colDescuento_P.FilterInfo = ColumnFilterInfo26
         Me.colDescuento_P.Name = "colDescuento_P"
         Me.colDescuento_P.Options = CType(((((((DevExpress.XtraGrid.Columns.ColumnOptions.CanMoved Or DevExpress.XtraGrid.Columns.ColumnOptions.CanGrouped) _
             Or DevExpress.XtraGrid.Columns.ColumnOptions.CanResized) _
@@ -2838,7 +2865,7 @@ Public Class frmCompra
         Me.colImpuesto_P.DisplayFormat.FormatString = "#,#0.00"
         Me.colImpuesto_P.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric
         Me.colImpuesto_P.FieldName = "Impuesto_P"
-        Me.colImpuesto_P.FilterInfo = ColumnFilterInfo12
+        Me.colImpuesto_P.FilterInfo = ColumnFilterInfo27
         Me.colImpuesto_P.Name = "colImpuesto_P"
         Me.colImpuesto_P.Options = CType(((((((DevExpress.XtraGrid.Columns.ColumnOptions.CanMoved Or DevExpress.XtraGrid.Columns.ColumnOptions.CanGrouped) _
             Or DevExpress.XtraGrid.Columns.ColumnOptions.CanResized) _
@@ -2855,7 +2882,7 @@ Public Class frmCompra
         Me.colDescuento.DisplayFormat.FormatString = "#,#0.00"
         Me.colDescuento.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric
         Me.colDescuento.FieldName = "Descuento"
-        Me.colDescuento.FilterInfo = ColumnFilterInfo13
+        Me.colDescuento.FilterInfo = ColumnFilterInfo28
         Me.colDescuento.Name = "colDescuento"
         Me.colDescuento.Options = CType((((((DevExpress.XtraGrid.Columns.ColumnOptions.CanMoved Or DevExpress.XtraGrid.Columns.ColumnOptions.CanGrouped) _
             Or DevExpress.XtraGrid.Columns.ColumnOptions.CanResized) _
@@ -2871,7 +2898,7 @@ Public Class frmCompra
         Me.colImpuesto.DisplayFormat.FormatString = "#,#0.00"
         Me.colImpuesto.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric
         Me.colImpuesto.FieldName = "Impuesto"
-        Me.colImpuesto.FilterInfo = ColumnFilterInfo14
+        Me.colImpuesto.FilterInfo = ColumnFilterInfo29
         Me.colImpuesto.Name = "colImpuesto"
         Me.colImpuesto.Options = CType(((((((DevExpress.XtraGrid.Columns.ColumnOptions.CanMoved Or DevExpress.XtraGrid.Columns.ColumnOptions.CanGrouped) _
             Or DevExpress.XtraGrid.Columns.ColumnOptions.CanResized) _
@@ -2888,7 +2915,7 @@ Public Class frmCompra
         Me.colTotal.DisplayFormat.FormatString = "#,#0.00"
         Me.colTotal.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric
         Me.colTotal.FieldName = "Total"
-        Me.colTotal.FilterInfo = ColumnFilterInfo15
+        Me.colTotal.FilterInfo = ColumnFilterInfo30
         Me.colTotal.Name = "colTotal"
         Me.colTotal.Options = CType(((((((DevExpress.XtraGrid.Columns.ColumnOptions.CanMoved Or DevExpress.XtraGrid.Columns.ColumnOptions.CanGrouped) _
             Or DevExpress.XtraGrid.Columns.ColumnOptions.CanResized) _
@@ -2986,7 +3013,7 @@ Public Class frmCompra
         Me.GroupBox1.Enabled = False
         Me.GroupBox1.Location = New System.Drawing.Point(1, 33)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(483, 79)
+        Me.GroupBox1.Size = New System.Drawing.Size(708, 79)
         Me.GroupBox1.TabIndex = 100
         Me.GroupBox1.TabStop = False
         '
@@ -3126,11 +3153,11 @@ Public Class frmCompra
         '
         'StatusBar1
         '
-        Me.StatusBar1.Location = New System.Drawing.Point(0, 452)
+        Me.StatusBar1.Location = New System.Drawing.Point(0, 590)
         Me.StatusBar1.Name = "StatusBar1"
         Me.StatusBar1.Panels.AddRange(New System.Windows.Forms.StatusBarPanel() {Me.StatusBarPanel1, Me.StatusBarPanel2})
         Me.StatusBar1.ShowPanels = True
-        Me.StatusBar1.Size = New System.Drawing.Size(1062, 18)
+        Me.StatusBar1.Size = New System.Drawing.Size(1287, 18)
         Me.StatusBar1.TabIndex = 106
         Me.StatusBar1.Text = "StatusBar1"
         '
@@ -3143,7 +3170,7 @@ Public Class frmCompra
         '
         Me.StatusBarPanel2.AutoSize = System.Windows.Forms.StatusBarPanelAutoSize.Spring
         Me.StatusBarPanel2.Name = "StatusBarPanel2"
-        Me.StatusBarPanel2.Width = 895
+        Me.StatusBarPanel2.Width = 1120
         '
         'Panel3
         '
@@ -3216,7 +3243,7 @@ Public Class frmCompra
         '
         Me.labelCanceladoFactura.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.labelCanceladoFactura.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.labelCanceladoFactura.Location = New System.Drawing.Point(8, 344)
+        Me.labelCanceladoFactura.Location = New System.Drawing.Point(8, 482)
         Me.labelCanceladoFactura.Name = "labelCanceladoFactura"
         Me.labelCanceladoFactura.Size = New System.Drawing.Size(107, 48)
         Me.labelCanceladoFactura.TabIndex = 111
@@ -3226,7 +3253,7 @@ Public Class frmCompra
         'Button1
         '
         Me.Button1.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.Button1.Location = New System.Drawing.Point(479, 396)
+        Me.Button1.Location = New System.Drawing.Point(479, 534)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(189, 55)
         Me.Button1.TabIndex = 194
@@ -3237,7 +3264,7 @@ Public Class frmCompra
         '
         Me.AutoScaleBaseSize = New System.Drawing.Size(6, 14)
         Me.BackColor = System.Drawing.SystemColors.Control
-        Me.ClientSize = New System.Drawing.Size(1062, 470)
+        Me.ClientSize = New System.Drawing.Size(1287, 608)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.GridControlDetalleCompra)
@@ -3267,7 +3294,7 @@ Public Class frmCompra
         Me.ForeColor = System.Drawing.SystemColors.ControlText
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Sizable
         Me.Name = "frmCompra"
-        Me.Text = "Registro de Compras"
+        Me.Text = "-------------------"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.Controls.SetChildIndex(Me.GroupBoxOpcionesCompras, 0)
         Me.Controls.SetChildIndex(Me.Label44, 0)
@@ -3426,6 +3453,7 @@ Public Class frmCompra
 
             End If
 
+            Me.CargarBodegas()
         Catch ex As Exception
             MsgBox(ex.Message, MsgBoxStyle.Information, "Atención...")
         End Try
@@ -3603,6 +3631,14 @@ Public Class frmCompra
         End Try
     End Function
 
+    Private Sub CargarBodegas()
+        Dim dt As New DataTable
+        cFunciones.Llenar_Tabla_Generico("Select ID_Bodega, Nombre_Bodega as Nombre from Bodegas where Inactiva = 0 and Consignacion = 0", dt, CadenaConexionSeePOS)
+        Me.cboBodega.DataSource = dt
+        Me.cboBodega.ValueMember = "ID_Bodega"
+        Me.cboBodega.DisplayMember = "Nombre"
+    End Sub
+
     Private Sub CargarInformacion_articulos(ByVal codigo As String)
 
         If DescargaOtro(codigo) = True Then
@@ -3618,6 +3654,8 @@ Public Class frmCompra
             Exit Sub
         End If
 
+
+        'Id_Bodega
         Articulo = Link.GetRecorset(Link.Conectar, "SELECT Inventario.Codigo, Inventario.Cod_Articulo, Inventario.Barras, Inventario.Descripcion, Inventario.PrecioBase, Inventario.Fletes, Inventario.OtrosCargos, Inventario.Costo,  Inventario.MonedaVenta, Inventario.IVenta, Inventario.Precio_A, Inventario.Precio_B, Inventario.Precio_C, Inventario.Precio_D, Moneda.ValorCompra AS TipoCambio, Inventario.Lote, Inventario.CodCabys FROM Inventario INNER JOIN Moneda ON Inventario.MonedaVenta = Moneda.CodMoneda where (cast(Cod_Articulo as varchar) = '" & codigo & "' or  Barras = '" & codigo & "')" & "and  Servicio = 0")
 
         Try
@@ -4025,6 +4063,7 @@ Public Class frmCompra
 
             GuardaLote()
 
+            BindingContext(DataSetCompras, "compras.ComprasArticulos_Comprados").Current("Id_Bodega") = Me.cboBodega.SelectedValue
             BindingContext(DataSetCompras, "compras.ComprasArticulos_Comprados").EndCurrentEdit()
             BindingContext(DataSetCompras, "compras.ComprasArticulos_Comprados").AddNew()
             BindingContext(DataSetCompras, "compras.ComprasArticulos_Comprados").CancelCurrentEdit()
@@ -6310,6 +6349,12 @@ Public Class frmCompra
 
 
 
+        End If
+    End Sub
+
+    Private Sub cboBodega_KeyDown(sender As Object, e As KeyEventArgs) Handles cboBodega.KeyDown
+        If e.KeyCode = Keys.Enter Then
+            SendKeys.Send("{Tab}")
         End If
     End Sub
 End Class

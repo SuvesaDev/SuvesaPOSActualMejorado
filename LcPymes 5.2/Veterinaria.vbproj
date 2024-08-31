@@ -4504,6 +4504,9 @@
     <Compile Include="Operaciones\Compras\Bonificacion\frmRegistroBonificacion.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Operaciones\Compras\Compras\DataSetCompras.vb">
+      <DependentUpon>DataSetCompras.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Operaciones\Compras\Compras\frmAsignarCabysCompra.Designer.vb">
       <DependentUpon>frmAsignarCabysCompra.vb</DependentUpon>
     </Compile>

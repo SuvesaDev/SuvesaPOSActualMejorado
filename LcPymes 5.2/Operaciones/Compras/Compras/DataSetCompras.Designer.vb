@@ -16,44 +16,44 @@ Option Explicit On
 '''<summary>
 '''Represents a strongly typed in-memory cache of data.
 '''</summary>
-<Global.System.Serializable(), _
- Global.System.ComponentModel.DesignerCategoryAttribute("code"), _
- Global.System.ComponentModel.ToolboxItem(True), _
- Global.System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema"), _
- Global.System.Xml.Serialization.XmlRootAttribute("DataSetCompras"), _
- Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")> _
+<Global.System.Serializable(),  _
+ Global.System.ComponentModel.DesignerCategoryAttribute("code"),  _
+ Global.System.ComponentModel.ToolboxItem(true),  _
+ Global.System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema"),  _
+ Global.System.Xml.Serialization.XmlRootAttribute("DataSetCompras"),  _
+ Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")>  _
 Partial Public Class DataSetCompras
     Inherits Global.System.Data.DataSet
-
+    
     Private tableUsuarios As UsuariosDataTable
-
+    
     Private tableMonedas As MonedasDataTable
-
+    
     Private tableordencompra As ordencompraDataTable
-
+    
     Private tabledetalle_ordencompra As detalle_ordencompraDataTable
-
+    
     Private tableMoneda As MonedaDataTable
-
+    
     Private tableProveedores As ProveedoresDataTable
-
+    
     Private tableLotes As LotesDataTable
-
+    
     Private tablearticulos_comprados As articulos_compradosDataTable
-
+    
     Private tablecompras As comprasDataTable
-
+    
     Private relationordencompradetalle_ordencompra As Global.System.Data.DataRelation
+    
+    Private relationMonedasarticulos_comprados As Global.System.Data.DataRelation
 
     Private relationcomprasarticulos_comprados As Global.System.Data.DataRelation
 
-    Private relationMonedasarticulos_comprados As Global.System.Data.DataRelation
-
-    Private relationUsuarioscompras As Global.System.Data.DataRelation
+    Private relationProveedorescompras As Global.System.Data.DataRelation
 
     Private relationMonedacompras As Global.System.Data.DataRelation
 
-    Private relationProveedorescompras As Global.System.Data.DataRelation
+    Private relationUsuarioscompras As Global.System.Data.DataRelation
 
     Private _schemaSerializationMode As Global.System.Data.SchemaSerializationMode = Global.System.Data.SchemaSerializationMode.IncludeSchema
 
@@ -399,11 +399,11 @@ Partial Public Class DataSetCompras
             End If
         End If
         Me.relationordencompradetalle_ordencompra = Me.Relations("ordencompradetalle_ordencompra")
-        Me.relationcomprasarticulos_comprados = Me.Relations("comprasarticulos_comprados")
         Me.relationMonedasarticulos_comprados = Me.Relations("Monedasarticulos_comprados")
-        Me.relationUsuarioscompras = Me.Relations("Usuarioscompras")
-        Me.relationMonedacompras = Me.Relations("Monedacompras")
+        Me.relationcomprasarticulos_comprados = Me.Relations("comprasarticulos_comprados")
         Me.relationProveedorescompras = Me.Relations("Proveedorescompras")
+        Me.relationMonedacompras = Me.Relations("Monedacompras")
+        Me.relationUsuarioscompras = Me.Relations("Usuarioscompras")
     End Sub
 
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(), _
@@ -439,17 +439,17 @@ Partial Public Class DataSetCompras
         fkc.AcceptRejectRule = Global.System.Data.AcceptRejectRule.None
         fkc.DeleteRule = Global.System.Data.Rule.Cascade
         fkc.UpdateRule = Global.System.Data.Rule.Cascade
-        fkc = New Global.System.Data.ForeignKeyConstraint("comprasarticulos_comprados", New Global.System.Data.DataColumn() {Me.tablecompras.Id_CompraColumn}, New Global.System.Data.DataColumn() {Me.tablearticulos_comprados.IdCompraColumn})
-        Me.tablearticulos_comprados.Constraints.Add(fkc)
-        fkc.AcceptRejectRule = Global.System.Data.AcceptRejectRule.None
-        fkc.DeleteRule = Global.System.Data.Rule.Cascade
-        fkc.UpdateRule = Global.System.Data.Rule.Cascade
         fkc = New Global.System.Data.ForeignKeyConstraint("Monedasarticulos_comprados", New Global.System.Data.DataColumn() {Me.tableMonedas.CodMonedaColumn}, New Global.System.Data.DataColumn() {Me.tablearticulos_comprados.CodMonedaVentaColumn})
         Me.tablearticulos_comprados.Constraints.Add(fkc)
         fkc.AcceptRejectRule = Global.System.Data.AcceptRejectRule.None
         fkc.DeleteRule = Global.System.Data.Rule.Cascade
         fkc.UpdateRule = Global.System.Data.Rule.Cascade
-        fkc = New Global.System.Data.ForeignKeyConstraint("Usuarioscompras", New Global.System.Data.DataColumn() {Me.tableUsuarios.CedulaColumn}, New Global.System.Data.DataColumn() {Me.tablecompras.CedulaUsuarioColumn})
+        fkc = New Global.System.Data.ForeignKeyConstraint("comprasarticulos_comprados", New Global.System.Data.DataColumn() {Me.tablecompras.Id_CompraColumn}, New Global.System.Data.DataColumn() {Me.tablearticulos_comprados.IdCompraColumn})
+        Me.tablearticulos_comprados.Constraints.Add(fkc)
+        fkc.AcceptRejectRule = Global.System.Data.AcceptRejectRule.None
+        fkc.DeleteRule = Global.System.Data.Rule.Cascade
+        fkc.UpdateRule = Global.System.Data.Rule.Cascade
+        fkc = New Global.System.Data.ForeignKeyConstraint("Proveedorescompras", New Global.System.Data.DataColumn() {Me.tableProveedores.CodigoProvColumn}, New Global.System.Data.DataColumn() {Me.tablecompras.CodigoProvColumn})
         Me.tablecompras.Constraints.Add(fkc)
         fkc.AcceptRejectRule = Global.System.Data.AcceptRejectRule.None
         fkc.DeleteRule = Global.System.Data.Rule.Cascade
@@ -459,23 +459,23 @@ Partial Public Class DataSetCompras
         fkc.AcceptRejectRule = Global.System.Data.AcceptRejectRule.None
         fkc.DeleteRule = Global.System.Data.Rule.Cascade
         fkc.UpdateRule = Global.System.Data.Rule.Cascade
-        fkc = New Global.System.Data.ForeignKeyConstraint("Proveedorescompras", New Global.System.Data.DataColumn() {Me.tableProveedores.CodigoProvColumn}, New Global.System.Data.DataColumn() {Me.tablecompras.CodigoProvColumn})
+        fkc = New Global.System.Data.ForeignKeyConstraint("Usuarioscompras", New Global.System.Data.DataColumn() {Me.tableUsuarios.CedulaColumn}, New Global.System.Data.DataColumn() {Me.tablecompras.CedulaUsuarioColumn})
         Me.tablecompras.Constraints.Add(fkc)
         fkc.AcceptRejectRule = Global.System.Data.AcceptRejectRule.None
         fkc.DeleteRule = Global.System.Data.Rule.Cascade
         fkc.UpdateRule = Global.System.Data.Rule.Cascade
         Me.relationordencompradetalle_ordencompra = New Global.System.Data.DataRelation("ordencompradetalle_ordencompra", New Global.System.Data.DataColumn() {Me.tableordencompra.OrdenColumn}, New Global.System.Data.DataColumn() {Me.tabledetalle_ordencompra.OrdenColumn}, False)
         Me.Relations.Add(Me.relationordencompradetalle_ordencompra)
-        Me.relationcomprasarticulos_comprados = New Global.System.Data.DataRelation("comprasarticulos_comprados", New Global.System.Data.DataColumn() {Me.tablecompras.Id_CompraColumn}, New Global.System.Data.DataColumn() {Me.tablearticulos_comprados.IdCompraColumn}, False)
-        Me.Relations.Add(Me.relationcomprasarticulos_comprados)
         Me.relationMonedasarticulos_comprados = New Global.System.Data.DataRelation("Monedasarticulos_comprados", New Global.System.Data.DataColumn() {Me.tableMonedas.CodMonedaColumn}, New Global.System.Data.DataColumn() {Me.tablearticulos_comprados.CodMonedaVentaColumn}, False)
         Me.Relations.Add(Me.relationMonedasarticulos_comprados)
-        Me.relationUsuarioscompras = New Global.System.Data.DataRelation("Usuarioscompras", New Global.System.Data.DataColumn() {Me.tableUsuarios.CedulaColumn}, New Global.System.Data.DataColumn() {Me.tablecompras.CedulaUsuarioColumn}, False)
-        Me.Relations.Add(Me.relationUsuarioscompras)
-        Me.relationMonedacompras = New Global.System.Data.DataRelation("Monedacompras", New Global.System.Data.DataColumn() {Me.tableMoneda.CodMonedaColumn}, New Global.System.Data.DataColumn() {Me.tablecompras.Cod_MonedaCompraColumn}, False)
-        Me.Relations.Add(Me.relationMonedacompras)
+        Me.relationcomprasarticulos_comprados = New Global.System.Data.DataRelation("comprasarticulos_comprados", New Global.System.Data.DataColumn() {Me.tablecompras.Id_CompraColumn}, New Global.System.Data.DataColumn() {Me.tablearticulos_comprados.IdCompraColumn}, False)
+        Me.Relations.Add(Me.relationcomprasarticulos_comprados)
         Me.relationProveedorescompras = New Global.System.Data.DataRelation("Proveedorescompras", New Global.System.Data.DataColumn() {Me.tableProveedores.CodigoProvColumn}, New Global.System.Data.DataColumn() {Me.tablecompras.CodigoProvColumn}, False)
         Me.Relations.Add(Me.relationProveedorescompras)
+        Me.relationMonedacompras = New Global.System.Data.DataRelation("Monedacompras", New Global.System.Data.DataColumn() {Me.tableMoneda.CodMonedaColumn}, New Global.System.Data.DataColumn() {Me.tablecompras.Cod_MonedaCompraColumn}, False)
+        Me.Relations.Add(Me.relationMonedacompras)
+        Me.relationUsuarioscompras = New Global.System.Data.DataRelation("Usuarioscompras", New Global.System.Data.DataColumn() {Me.tableUsuarios.CedulaColumn}, New Global.System.Data.DataColumn() {Me.tablecompras.CedulaUsuarioColumn}, False)
+        Me.Relations.Add(Me.relationUsuarioscompras)
     End Sub
 
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(), _
@@ -3363,6 +3363,8 @@ Partial Public Class DataSetCompras
 
         Private columnUtilidad As Global.System.Data.DataColumn
 
+        Private columnId_Bodega As Global.System.Data.DataColumn
+
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(), _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")> _
         Public Sub New()
@@ -3671,6 +3673,14 @@ Partial Public Class DataSetCompras
         End Property
 
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(), _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")> _
+        Public ReadOnly Property Id_BodegaColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnId_Bodega
+            End Get
+        End Property
+
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(), _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"), _
          Global.System.ComponentModel.Browsable(False)> _
         Public ReadOnly Property Count() As Integer
@@ -3740,9 +3750,10 @@ Partial Public Class DataSetCompras
                     ByVal SubTotalBonificado As Double, _
                     ByVal CodArticuloBonificacion As String, _
                     ByVal CodCabys As String, _
-                    ByVal Utilidad As String) As articulos_compradosRow
+                    ByVal Utilidad As String, _
+                    ByVal Id_Bodega As Long) As articulos_compradosRow
             Dim rowarticulos_compradosRow As articulos_compradosRow = CType(Me.NewRow, articulos_compradosRow)
-            Dim columnValuesArray() As Object = New Object() {Nothing, Nothing, Codigo, Descripcion, Base, Monto_Flete, OtrosCargos, Costo, Cantidad, Gravado, Exento, Descuento, Descuento_P, Impuesto_P, Impuesto, Total, Devoluciones, Precio_A, Precio_B, Precio_C, Precio_D, Nothing, NuevoCostoBase, Lote, Regalias, CodArticulo, Bonificado, CodigoBonificado, CantidadBonificado, CostoBonificado, SubTotalBonificado, CodArticuloBonificacion, CodCabys, Utilidad}
+            Dim columnValuesArray() As Object = New Object() {Nothing, Nothing, Codigo, Descripcion, Base, Monto_Flete, OtrosCargos, Costo, Cantidad, Gravado, Exento, Descuento, Descuento_P, Impuesto_P, Impuesto, Total, Devoluciones, Precio_A, Precio_B, Precio_C, Precio_D, Nothing, NuevoCostoBase, Lote, Regalias, CodArticulo, Bonificado, CodigoBonificado, CantidadBonificado, CostoBonificado, SubTotalBonificado, CodArticuloBonificacion, CodCabys, Utilidad, Id_Bodega}
             If (Not (parentcomprasRowBycomprasarticulos_comprados) Is Nothing) Then
                 columnValuesArray(1) = parentcomprasRowBycomprasarticulos_comprados(20)
             End If
@@ -3811,6 +3822,7 @@ Partial Public Class DataSetCompras
             Me.columnCodArticuloBonificacion = MyBase.Columns("CodArticuloBonificacion")
             Me.columnCodCabys = MyBase.Columns("CodCabys")
             Me.columnUtilidad = MyBase.Columns("Utilidad")
+            Me.columnId_Bodega = MyBase.Columns("Id_Bodega")
         End Sub
 
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(), _
@@ -3884,6 +3896,8 @@ Partial Public Class DataSetCompras
             MyBase.Columns.Add(Me.columnCodCabys)
             Me.columnUtilidad = New Global.System.Data.DataColumn("Utilidad", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnUtilidad)
+            Me.columnId_Bodega = New Global.System.Data.DataColumn("Id_Bodega", GetType(Long), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnId_Bodega)
             Me.Constraints.Add(New Global.System.Data.UniqueConstraint("Constraint1", New Global.System.Data.DataColumn() {Me.columnId_ArticuloComprados}, True))
             Me.columnId_ArticuloComprados.AutoIncrement = True
             Me.columnId_ArticuloComprados.AllowDBNull = False
@@ -3921,6 +3935,7 @@ Partial Public Class DataSetCompras
             Me.columnSubTotalBonificado.AllowDBNull = False
             Me.columnCodArticuloBonificacion.AllowDBNull = False
             Me.columnCodArticuloBonificacion.MaxLength = 250
+            Me.columnId_Bodega.DefaultValue = CType(0, Long)
         End Sub
 
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(), _
@@ -5987,12 +6002,16 @@ Partial Public Class DataSetCompras
 
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(), _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")> _
-        Public Property comprasRow() As comprasRow
+        Public Property Id_Bodega() As Long
             Get
-                Return CType(Me.GetParentRow(Me.Table.ParentRelations("comprasarticulos_comprados")), comprasRow)
+                Try
+                    Return CType(Me(Me.tablearticulos_comprados.Id_BodegaColumn), Long)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'Id_Bodega' de la tabla 'articulos_comprados' es DBNull.", e)
+                End Try
             End Get
-            Set(value As comprasRow)
-                Me.SetParentRow(value, Me.Table.ParentRelations("comprasarticulos_comprados"))
+            Set(value As Long)
+                Me(Me.tablearticulos_comprados.Id_BodegaColumn) = value
             End Set
         End Property
 
@@ -6004,6 +6023,17 @@ Partial Public Class DataSetCompras
             End Get
             Set(value As MonedasRow)
                 Me.SetParentRow(value, Me.Table.ParentRelations("Monedasarticulos_comprados"))
+            End Set
+        End Property
+
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(), _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")> _
+        Public Property comprasRow() As comprasRow
+            Get
+                Return CType(Me.GetParentRow(Me.Table.ParentRelations("comprasarticulos_comprados")), comprasRow)
+            End Get
+            Set(value As comprasRow)
+                Me.SetParentRow(value, Me.Table.ParentRelations("comprasarticulos_comprados"))
             End Set
         End Property
 
@@ -6029,6 +6059,18 @@ Partial Public Class DataSetCompras
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")> _
         Public Sub SetUtilidadNull()
             Me(Me.tablearticulos_comprados.UtilidadColumn) = Global.System.Convert.DBNull
+        End Sub
+
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(), _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")> _
+        Public Function IsId_BodegaNull() As Boolean
+            Return Me.IsNull(Me.tablearticulos_comprados.Id_BodegaColumn)
+        End Function
+
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(), _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")> _
+        Public Sub SetId_BodegaNull()
+            Me(Me.tablearticulos_comprados.Id_BodegaColumn) = Global.System.Convert.DBNull
         End Sub
     End Class
 
@@ -6354,12 +6396,12 @@ Partial Public Class DataSetCompras
 
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(), _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")> _
-        Public Property UsuariosRow() As UsuariosRow
+        Public Property ProveedoresRow() As ProveedoresRow
             Get
-                Return CType(Me.GetParentRow(Me.Table.ParentRelations("Usuarioscompras")), UsuariosRow)
+                Return CType(Me.GetParentRow(Me.Table.ParentRelations("Proveedorescompras")), ProveedoresRow)
             End Get
-            Set(value As UsuariosRow)
-                Me.SetParentRow(value, Me.Table.ParentRelations("Usuarioscompras"))
+            Set(value As ProveedoresRow)
+                Me.SetParentRow(value, Me.Table.ParentRelations("Proveedorescompras"))
             End Set
         End Property
 
@@ -6376,12 +6418,12 @@ Partial Public Class DataSetCompras
 
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(), _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")> _
-        Public Property ProveedoresRow() As ProveedoresRow
+        Public Property UsuariosRow() As UsuariosRow
             Get
-                Return CType(Me.GetParentRow(Me.Table.ParentRelations("Proveedorescompras")), ProveedoresRow)
+                Return CType(Me.GetParentRow(Me.Table.ParentRelations("Usuarioscompras")), UsuariosRow)
             End Get
-            Set(value As ProveedoresRow)
-                Me.SetParentRow(value, Me.Table.ParentRelations("Proveedorescompras"))
+            Set(value As UsuariosRow)
+                Me.SetParentRow(value, Me.Table.ParentRelations("Usuarioscompras"))
             End Set
         End Property
 
@@ -6419,324 +6461,324 @@ Partial Public Class DataSetCompras
             End If
         End Function
     End Class
-
+    
     '''<summary>
     '''Row event argument class
     '''</summary>
-    <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")> _
+    <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
     Public Class UsuariosRowChangeEvent
         Inherits Global.System.EventArgs
-
+        
         Private eventRow As UsuariosRow
-
+        
         Private eventAction As Global.System.Data.DataRowAction
-
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(), _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")> _
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Sub New(ByVal row As UsuariosRow, ByVal action As Global.System.Data.DataRowAction)
-            MyBase.New()
+            MyBase.New
             Me.eventRow = row
             Me.eventAction = action
         End Sub
-
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(), _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")> _
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public ReadOnly Property Row() As UsuariosRow
             Get
                 Return Me.eventRow
             End Get
         End Property
-
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(), _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")> _
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public ReadOnly Property Action() As Global.System.Data.DataRowAction
             Get
                 Return Me.eventAction
             End Get
         End Property
     End Class
-
+    
     '''<summary>
     '''Row event argument class
     '''</summary>
-    <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")> _
+    <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
     Public Class MonedasRowChangeEvent
         Inherits Global.System.EventArgs
-
+        
         Private eventRow As MonedasRow
-
+        
         Private eventAction As Global.System.Data.DataRowAction
-
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(), _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")> _
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Sub New(ByVal row As MonedasRow, ByVal action As Global.System.Data.DataRowAction)
-            MyBase.New()
+            MyBase.New
             Me.eventRow = row
             Me.eventAction = action
         End Sub
-
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(), _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")> _
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public ReadOnly Property Row() As MonedasRow
             Get
                 Return Me.eventRow
             End Get
         End Property
-
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(), _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")> _
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public ReadOnly Property Action() As Global.System.Data.DataRowAction
             Get
                 Return Me.eventAction
             End Get
         End Property
     End Class
-
+    
     '''<summary>
     '''Row event argument class
     '''</summary>
-    <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")> _
+    <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
     Public Class ordencompraRowChangeEvent
         Inherits Global.System.EventArgs
-
+        
         Private eventRow As ordencompraRow
-
+        
         Private eventAction As Global.System.Data.DataRowAction
-
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(), _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")> _
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Sub New(ByVal row As ordencompraRow, ByVal action As Global.System.Data.DataRowAction)
-            MyBase.New()
+            MyBase.New
             Me.eventRow = row
             Me.eventAction = action
         End Sub
-
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(), _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")> _
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public ReadOnly Property Row() As ordencompraRow
             Get
                 Return Me.eventRow
             End Get
         End Property
-
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(), _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")> _
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public ReadOnly Property Action() As Global.System.Data.DataRowAction
             Get
                 Return Me.eventAction
             End Get
         End Property
     End Class
-
+    
     '''<summary>
     '''Row event argument class
     '''</summary>
-    <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")> _
+    <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
     Public Class detalle_ordencompraRowChangeEvent
         Inherits Global.System.EventArgs
-
+        
         Private eventRow As detalle_ordencompraRow
-
+        
         Private eventAction As Global.System.Data.DataRowAction
-
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(), _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")> _
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Sub New(ByVal row As detalle_ordencompraRow, ByVal action As Global.System.Data.DataRowAction)
-            MyBase.New()
+            MyBase.New
             Me.eventRow = row
             Me.eventAction = action
         End Sub
-
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(), _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")> _
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public ReadOnly Property Row() As detalle_ordencompraRow
             Get
                 Return Me.eventRow
             End Get
         End Property
-
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(), _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")> _
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public ReadOnly Property Action() As Global.System.Data.DataRowAction
             Get
                 Return Me.eventAction
             End Get
         End Property
     End Class
-
+    
     '''<summary>
     '''Row event argument class
     '''</summary>
-    <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")> _
+    <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
     Public Class MonedaRowChangeEvent
         Inherits Global.System.EventArgs
-
+        
         Private eventRow As MonedaRow
-
+        
         Private eventAction As Global.System.Data.DataRowAction
-
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(), _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")> _
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Sub New(ByVal row As MonedaRow, ByVal action As Global.System.Data.DataRowAction)
-            MyBase.New()
+            MyBase.New
             Me.eventRow = row
             Me.eventAction = action
         End Sub
-
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(), _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")> _
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public ReadOnly Property Row() As MonedaRow
             Get
                 Return Me.eventRow
             End Get
         End Property
-
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(), _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")> _
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public ReadOnly Property Action() As Global.System.Data.DataRowAction
             Get
                 Return Me.eventAction
             End Get
         End Property
     End Class
-
+    
     '''<summary>
     '''Row event argument class
     '''</summary>
-    <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")> _
+    <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
     Public Class ProveedoresRowChangeEvent
         Inherits Global.System.EventArgs
-
+        
         Private eventRow As ProveedoresRow
-
+        
         Private eventAction As Global.System.Data.DataRowAction
-
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(), _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")> _
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Sub New(ByVal row As ProveedoresRow, ByVal action As Global.System.Data.DataRowAction)
-            MyBase.New()
+            MyBase.New
             Me.eventRow = row
             Me.eventAction = action
         End Sub
-
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(), _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")> _
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public ReadOnly Property Row() As ProveedoresRow
             Get
                 Return Me.eventRow
             End Get
         End Property
-
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(), _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")> _
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public ReadOnly Property Action() As Global.System.Data.DataRowAction
             Get
                 Return Me.eventAction
             End Get
         End Property
     End Class
-
+    
     '''<summary>
     '''Row event argument class
     '''</summary>
-    <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")> _
+    <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
     Public Class LotesRowChangeEvent
         Inherits Global.System.EventArgs
-
+        
         Private eventRow As LotesRow
-
+        
         Private eventAction As Global.System.Data.DataRowAction
-
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(), _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")> _
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Sub New(ByVal row As LotesRow, ByVal action As Global.System.Data.DataRowAction)
-            MyBase.New()
+            MyBase.New
             Me.eventRow = row
             Me.eventAction = action
         End Sub
-
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(), _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")> _
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public ReadOnly Property Row() As LotesRow
             Get
                 Return Me.eventRow
             End Get
         End Property
-
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(), _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")> _
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public ReadOnly Property Action() As Global.System.Data.DataRowAction
             Get
                 Return Me.eventAction
             End Get
         End Property
     End Class
-
+    
     '''<summary>
     '''Row event argument class
     '''</summary>
-    <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")> _
+    <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
     Public Class articulos_compradosRowChangeEvent
         Inherits Global.System.EventArgs
-
+        
         Private eventRow As articulos_compradosRow
-
+        
         Private eventAction As Global.System.Data.DataRowAction
-
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(), _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")> _
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Sub New(ByVal row As articulos_compradosRow, ByVal action As Global.System.Data.DataRowAction)
-            MyBase.New()
+            MyBase.New
             Me.eventRow = row
             Me.eventAction = action
         End Sub
-
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(), _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")> _
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public ReadOnly Property Row() As articulos_compradosRow
             Get
                 Return Me.eventRow
             End Get
         End Property
-
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(), _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")> _
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public ReadOnly Property Action() As Global.System.Data.DataRowAction
             Get
                 Return Me.eventAction
             End Get
         End Property
     End Class
-
+    
     '''<summary>
     '''Row event argument class
     '''</summary>
-    <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")> _
+    <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
     Public Class comprasRowChangeEvent
         Inherits Global.System.EventArgs
-
+        
         Private eventRow As comprasRow
-
+        
         Private eventAction As Global.System.Data.DataRowAction
-
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(), _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")> _
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Sub New(ByVal row As comprasRow, ByVal action As Global.System.Data.DataRowAction)
-            MyBase.New()
+            MyBase.New
             Me.eventRow = row
             Me.eventAction = action
         End Sub
-
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(), _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")> _
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public ReadOnly Property Row() As comprasRow
             Get
                 Return Me.eventRow
             End Get
         End Property
-
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(), _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")> _
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public ReadOnly Property Action() As Global.System.Data.DataRowAction
             Get
                 Return Me.eventAction
